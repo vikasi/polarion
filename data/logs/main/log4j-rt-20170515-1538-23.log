@@ -1,0 +1,15 @@
+2017-05-15 15:39:12,750 [localhost-startStop-1] INFO  com.siemens.polarion.rt.config.RtAppConfig  - RT server config is created
+2017-05-15 15:39:14,027 [localhost-startStop-1] INFO  com.siemens.polarion.rt.parsers.RtParserProviderImpl  - Initialization of RT parsers...
+2017-05-15 15:39:14,027 [localhost-startStop-1] INFO  com.siemens.polarion.rt.parsers.RtParserProviderImpl  - Found parser com.siemens.polarion.rt.parsers.c (contributed by 'com.siemens.polarion.rt.parsers.c')
+2017-05-15 15:39:14,043 [localhost-startStop-1] INFO  com.siemens.polarion.rt.parsers.RtParserProviderImpl  - Found parser com.siemens.polarion.rt.parsers.java (contributed by 'com.siemens.polarion.rt')
+2017-05-15 15:39:14,043 [localhost-startStop-1] INFO  com.siemens.polarion.rt.parsers.RtParserProviderImpl  - Found parser com.siemens.polarion.rt.parsers.xml (contributed by 'com.siemens.polarion.rt')
+2017-05-15 15:39:14,043 [localhost-startStop-1] INFO  com.siemens.polarion.rt.collectors.RtCollectorProviderImpl  - Initialization of RT collectors...
+2017-05-15 15:39:14,043 [localhost-startStop-1] INFO  com.siemens.polarion.rt.collectors.RtCollectorProviderImpl  - Found collector for git (contributed by 'com.siemens.polarion.rt.collectors.git')
+2017-05-15 15:39:14,043 [localhost-startStop-1] INFO  com.siemens.polarion.rt.collectors.RtCollectorProviderImpl  - Found collector for subversion (contributed by 'com.siemens.polarion.rt')
+2017-05-15 15:39:15,606 [taskScheduler-1] INFO  com.siemens.polarion.rt.collectors.RtCollectChangedFilesTask  - Collection STARTED for repository first_category/default (subversion)
+2017-05-15 15:39:15,684 [taskScheduler-1] INFO  com.siemens.polarion.rt.collectors.svn.RtSvnCollector  - Finished processing of head revision 1 for Location[repository default, path /Demo Projects/elibrary/branches/0.9]
+2017-05-15 15:39:15,902 [taskScheduler-1] INFO  com.siemens.polarion.rt.collectors.svn.RtSvnCollector  - Finished processing of head revision 1 for Location[repository default, path /Demo Projects/elibrary/branches/1.0]
+2017-05-15 15:39:15,949 [taskScheduler-1] INFO  com.siemens.polarion.rt.collectors.RtCollectChangedFilesTask  - Collection FINISHED for repository first_category/default (subversion)
+2017-05-15 15:39:27,651 [main | u:p] INFO  com.siemens.polarion.rt.communication.connection.RtNotifier  - RT server was successfully notified of configuration change.
+2017-05-15 15:39:27,651 [main | u:p] INFO  com.siemens.polarion.rt.communication.connection.RtNotificationStartup  - Rt notification service is started
+2017-05-15 17:11:42,786 [localhost-startStop-2] INFO  com.siemens.polarion.rt.config.RtClosingApplicationListener  - Rt closing event received
