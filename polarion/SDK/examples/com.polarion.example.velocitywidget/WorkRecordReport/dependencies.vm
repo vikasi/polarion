@@ -1,0 +1,12 @@
+#set($userStoryParameter = $parameters.userStory)
+#set($linkRoleParameter = $parameters.linkRole)
+
+#set($workItem = $userStoryParameter.value)
+
+#if (!$workItem)
+	#set($scope = $null)
+#else
+	#set($scope = $workItem.getReference().scope())
+#end
+
+$linkRoleParameter.set().scope($scope)

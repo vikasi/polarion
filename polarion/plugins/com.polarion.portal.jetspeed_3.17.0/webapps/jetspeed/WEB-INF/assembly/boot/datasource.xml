@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>		
+  <!-- 
+      Creates a JNDI-based datasource bean name "JetspeedDS". The information
+      provided here is merged with the basic configuration for the 
+      jdbc-connection-descriptor with the matching jcd-alias property
+      ("JetspeedDS") located under /etc/db-ojb/repository_database.xml in the
+      source tree.
+
+      Another requirement for this to work is to have the 
+      ConnectionFactoryClass=org.apache.ojb.broker.accesslayer.ConnectionFactoryManagedImpl
+      or to have
+      ConnectionManagerClass=org.apache.jetspeed.components.rdbms.ojb.ConnectionManagerImpl.
+      (either will do, both are recommended, see comments in configuration file).
+      These properties are located in /etc/db-ojb/OJB.properties in the source tree.
+          
+      FYI: The two OJB configuration files mentioned above are currently already setup this way 
+      in the default Jetspeed implementation.  
+          
+      However, if you need to locate/modify these files in a running instance of jetspeed,
+      they will be located under /WEB-INF/classes.
+     -->
+  <bean id="JetspeedDS" class="org.apache.jetspeed.components.rdbms.ojb.ConnectionRepositoryEntry">
+    <property name="jndiName">
+      <value>java:comp/env/jdbc/jetspeed</value>
+    </property>
+    <property name="jetspeedEngineScoped">
+      <value>false</value>
+    </property>
+  </bean>     
+  
+  <!-- If would like use a commons DBCP Pooled datasource as opposed to the default 
+       JNDI one above you can uncomment the configuration below and fill in 
+       the datasource information as it relates to your environment.
+
+       A requirement for this to work is to have the 
+       ConnectionFactoryClass=org.apache.ojb.broker.accesslayer.ConnectionFactoryDBCPImpl
+       or to have
+       ConnectionManagerClass=org.apache.jetspeed.components.rdbms.ojb.ConnectionManagerImpl
+       This property is located in /etc/db-ojb/OJB.properties in the source tree.
+    -->
+	<!--
+    <bean id="JetspeedDS" class="org.apache.jetspeed.components.rdbms.ojb.ConnectionRepositoryEntry">
+    <property name="driverClassName">
+      <value>{my.drivers.class.name}</value>
+    </property>
+    <property name="url">
+      <value>{URL to my DB}</value>
+     </property>
+     <property name="username">
+       <value>{username}</value>
+     </property>
+     <property name="password">
+       <value>{password}</value>
+     </property>
+   </bean>      
+   -->
+  
+</beans>

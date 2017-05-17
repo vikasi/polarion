@@ -1,0 +1,140 @@
+<form id='template' name='template' method='post' onsubmit='return false;' >
+  <table cellpadding='0' cellspacing='0' style='width:502px; height:402px; border: 1px solid #3E5F80; margin: 0;'>
+    <tr>
+      <td>
+        <table valign='top' cellpadding='0' cellspacing='0' width='100%' style='border-top:1px solid #E9F6FF;border-left:1px solid #E9F6FF; border-bottom:0px solid #3E5F80; cursor: pointer;'>
+          <tr>
+            <td class='popupwindowheaderNew'>$localization.getValue("dialog.exportToPDF.PDFExportWizard")</td>
+            <td class='popupwindowheaderNewx'></td>
+            <td class='popupwindowheaderNewx1'>
+            <a href='javascript:end();'><img src='$xwiki.getSkinFile("images/popup_close.gif")' border='0'></a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class='popupwindow7'>
+        <table cellpadding='0' cellspacing='0' width='100%' style='border: 2px solid #5D82A6; cursor: default;'>
+          <tr>
+            <td class='popupwindow7'>
+              <table cellpadding='0' cellspacing='0' width='100%' style='border: 0px solid green;'>
+                <tr>
+                  <td class='popupwindow1' width='10'></td>
+                  <td class='popupwindow1' align='left' valign='middle' width='497'>$localization.getValue("dialog.exportToPDF")</td>
+                </tr>
+                <tr>
+                  <td class='popupwindow7' width='10'></td>
+                  <td class='popupwindow7'>
+                  	<div id="exportInfo" style="display:none;padding:5px;background-color:#edf5fe;color:black;font-size:10px;"> 
+						$localization.getValue("dialog.exportToPDF.message.quicklyReexport")
+					</div>
+				  </td>
+                </tr>
+              </table>
+            </td>
+            <td class='popupwindow7'style='height: 80'><img valign='middle'align='right' alt='PDF icon' title='PDF icon' src='/polarion/ria/images/wizards/pdf.png' border='0'></td>
+          <tr> 
+        </table>
+      </td>
+    </tr>
+    <tr>
+   <td style='height:251px;'>
+   
+   <!-- BEGIN BODY -->
+   <div style="padding:5px;">
+		<input type="hidden" name="wikiSize" value="$width" />
+		<div id="pdfExportLink2" style="display:none;">$newurl</div>
+		<input type="hidden"  value="$newurl" />
+		<input type="hidden" name="tempDirName" value="$tempdir" />
+		<input type="hidden" name="closeLink" value="$closeurl" />
+		<input type="hidden" name="pageWidth" value="8.26" />
+		<input type="hidden" name="pageHeight" value="11" />
+		<input type="hidden" name="scale" value="1" />
+		<input type="hidden" name="recScale" value="1" />
+		<input type="hidden" name="pdfRev" value="$pdfRev" />
+		
+		
+		<div style="background-color:white;color:black;padding:5px;">
+		<table cellpadding="2" cellspacing="2">
+			<tr>
+				<td align="right" style="color: rgb(94, 131, 167);font-size:11px;"><b>$localization.getValue("dialog.exportToPDF.label.paperSize")</b>:</td>
+				<td><select id="paper" name="paper" style="width:200px" onChange="refreshSizes()">
+						<option value="A4">$localization.getValue("dialog.exportToPDF.aFour")</option>
+						<option value="A3">$localization.getValue("dialog.exportToPDF.aThree")</option>
+						<option value="letter">$localization.getValue("dialog.exportToPDF.letter")</option>
+						<option value="legal">$localization.getValue("dialog.exportToPDF.legal")</option>
+						<option value="tabloid">$localization.getValue("dialog.exportToPDF.tabloid")</option>						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right"  style="color: rgb(94, 131, 167);font-size:11px;"><b>$localization.getValue("dialog.exportToPDF.label.orientation")</b>:</td>
+				<td><select id="orientation" name="orientation" style="width:200px">
+						<option value="portrait">$localization.getValue("dialog.exportToPDF.portrait")</option>
+						<option value="landscape">$localization.getValue("dialog.exportToPDF.landscape")</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right"  style="color: rgb(94, 131, 167);font-size:11px;"><b>$localization.getValue("dialog.exportToPDF.label.fitToPageWidth")</b>:</td>
+				<td><input id="fitpage" name="fitpage" type="checkbox" checked="true"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" style="color: rgb(94, 131, 167);font-size:11px;"><b>$localization.getValue("dialog.exportToPDF.label.generateBookmarks")</b>:</td>
+				<td><input id="bookmarks" name="bookmarks" type="checkbox" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right"  style="color: rgb(94, 131, 167);font-size:11px;"><b>$localization.getValue("dialog.exportToPDF.label.includeHeaderAndFooter")</b>:</td>
+				<td><input id="headerfooter" name="headerfooter" type="checkbox" checked="true"/>
+				</td>
+			</tr>
+		</table>
+
+		<br/>
+		<iframe name="loadingPDF" frameborder="0" style="height:0px;"></iframe>
+		<div id="pdfLoadingFrame" style="margin-top:10px;display:none;">
+			<table><tr><td>
+			<img id="pdfLoadingFrameIcon" src="/polarion/wiki/skins/sidecar/progress.gif"/>
+			</td><td style="font-size: 10px;padding-left:10px;padding-top:5px;" valign="top">
+			$localization.getValue("dialog.exportToPDF.message.waitForExportProcess")
+			</td></tr></table>
+		</div>
+	</div>
+		
+   <!-- END BODY -->
+   
+     	
+   </td>
+  </tr>
+  <tr>
+    <td>
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+        <tr>
+          <td width='311' class='popupwindow3'></td>
+          <td width='2'  class='popupwindow3'></td>
+          <td width='30' class='popupwindow4' align='center' onClick='export2pdf();'><img src='$xwiki.getSkinFile("images/popup_finish.gif")' border='0'></td>
+          <td width='55' class='popupwindow5'><a class='popupwindowA' id="ExportElement" href='javascript:export2pdf();'>$localization.getValue("definition.export")</a></td>
+          <td width='2'  class='popupwindow3'><img src='$xwiki.getSkinFile("images/popup_btn_separator.gif")'border='0'></td>
+          <td width='30' class='popupwindow4' align='center' onClick='confirmClose();'><img src='$xwiki.getSkinFile("images/popup_cancel.gif")'border='0'></td>
+          <td width='55' class='popupwindow5'><a class='popupwindowA' href='javascript:confirmClose();;'>$localization.getValue("definition.close")</a></td>
+          <td width='13' class='popupwindow3'></td>
+        </tr>
+      </table>
+    </td>
+   </tr>
+ <tr>
+   <td>
+    <table border='0' cellpadding='0' cellspacing='0' width='100%' style='border-bottom: 0px solid red;'>
+     <tr>
+       <td width='477' style='background-color:#778CA5;'></td>
+       <td class='popupwindow2'></td>
+     </tr>
+    </table>
+  </td>
+ </tr>
+</table>
+
+
+</form>

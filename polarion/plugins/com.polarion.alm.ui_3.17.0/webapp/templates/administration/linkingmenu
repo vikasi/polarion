@@ -1,0 +1,123 @@
+<a style="cursor:pointer;" onclick="navigateFromFrame('#page:workitems/formmenus')" ><< Return to Form Menus Configuration</a>
+
+1 Linking Work Item Menu Configuration
+
+*View:* [hatName]
+\\
+*Work Item Type:* [typeName]
+
+{xmleditor:create-linking-menu|view=[hatId]|type=[typeId]}
+
+ 1.1 Quick Help
+While focused on any Work Item, users can use the ~~Actions~~ menu of the Work Item detail form to quickly create a new Work Item and a link, all in a single operation. The configuration above is for 
+the ~~Create Linking Work Item:~~ menu which creates a new Work Item and an ~~incoming~~ link ~~to~~ the current item from the new item.
+
+1.1.1 Available Fields
+* title
+* type
+* description
+* resolution
+* categories
+* timePoint
+* approvals
+* assignee
+* author
+* comments
+* attachments
+* linkedWorkItems
+* workRecords
+* hyperlinks
+* planningConstraints
+* status
+* severity
+* priority
+* previousStatus
+* dueDate
+* initialEstimate
+* timeSpent
+* remainingEstimate
+* plannedStart
+* plannedEnd
+* linkedRevisions
+#info("A list of available custom fields is defined in Administration &gt; Work Items &gt; Custom Fields, *{hyperlink:/administration/workitems/customfields}*.")
+\\
+
+1.1.1 Tags and Attributes
+The following shows the basic structure of a linked/linking menu configuration file for a View: \\
+<tt>
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;<br>
+&lt;menu&gt;<br> 
+&nbsp;&nbsp;&nbsp;&lt;item&gt;Item 1&lt;/item&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;item&gt;Item 2&lt;/item&gt; <br>
+&nbsp;&nbsp;&nbsp;&lt;separator/&gt; <br>
+&nbsp;&nbsp;&nbsp;&lt;item&gt;Item 3&lt;/item&gt; <br>
+&nbsp;&nbsp;&nbsp;&lt;item&gt;Item 4&lt;/item&gt; <br>
+&lt;/menu&gt;     
+</tt>
+
+The <tt>&lt;item&gt;</tt> tag can take the following attributes, and at least one of <tt>~~label, role, type~~</tt> and <tt>~~childInDocument~~</tt> must be defined.
+
+
+{table:width=90%}
+ Attribute| Description
+ label| Defines the label of the menu item. If it is not defined, and <tt>childInDocument=true</tt>, then the label is "Child in Document". Otherwise the labels of the objects defined by other parameters are used in this way: \[role\], \[type\] in \[project\]/\[document\].
+ role| Defines the Work Items link role to be used. When <tt>role</tt> is not defined and <tt>type</tt> is defined, and more than one link role is allowed by link role rules for the type, then this item will open a sub-menu listing the roles allowed by the link role rules. When only one role is allowed for the type, then the item will directly create a new Work Items.
+ type| Defines the Work Items type to be used. When not defined, and <tt>role</tt> is defined, and more then one type is allowed by link role rules for the role, then this item will open sub-menu listing the types allowed by the link role rules. When only one type is allowed for the role, then the item will directly create a new Work Item.
+ project| Defines in which project a new linked/linking Work Items will be created. When not defined, it will be created in the current project. Value is the ID of the target project.
+ document| Defines in which Document a new linked/linking Work Items will be created. When <tt>project</tt> is defined, then module specifies a Document in the project specified in <tt>project</tt>.
+ inSameContainer="true"| Defines that the linked/linking Work Items should be created in same container (i.e. Document). When set to "true", and the container (<tt>document</tt>) does not allow creation of the defined type or role, then this <tt>&lt;item&gt;</tt> will not appear in the menu.
+ childInDocument="true"| This attribute can be used only in the <tt>*create-linking-menu.xml*</tt> file. It defines a menu item to create a child Work Items in the Document specified in <tt>document</tt>. This item is shown only when the current Work Items (the one a user is currently viewing and from which is invoking a new linked/linking Work Items) is in a Document.
+ titlePrefix| Defines a prefix for the title of the new linked/linking Work Items. When specified, even as an empty string, then the new linked/linking Work Items will contain the value specified in <tt>titlePrefix</tt> plus the title of the original Work Items. This attribute can be used together with <tt>titleSuffix</tt>.
+ titleSuffix| Defines a suffix for the title of the new linked/linking Work Items. When specified, even as an empty string, then the new linked/linking Work Items will contain the title of the original Work Items plus the value specified in <tt>titleSuffix</tt>. This attribute can be used together with <tt>titlePrefix</tt>.
+ copyFields|A comma-separated list of fields (i.e. field IDs) to be copied from the original Work Items to the new linked/linking Work Items. If also specified, then attributes <tt>titlePrefix</tt> and/or <tt>titleSuffix</tt> override <tt>copyFields</tt> if <tt>copyFields</tt> specifies the ~~title~~ field.
+{table}
+<hr>
+#message("*NOTE:* <tt>&lt;item&gt;</tt> tags which do not have the result type and role fully specified (either directly in them or in parent item tags) can have child <tt>&lt;item&gt;</tt> tags containing the specification of the missing parameters, thereby creating a submenu.")
+<hr>
+
+1.1.1 Examples
+<tt>*tracker/create-linked-menu.xml:*</tt>
+\\
+<tt>
+&lt;menu&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;item label="Parent" role="parent"/&gt;<br>
+&lt;/menu&gt; 
+</tt>
+\\
+<tt>*tracker/improvemnt-create-linked-menu.xml:*</tt>
+\\
+<tt>
+&lt;menu&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;item label="Parent" role="parent"/&gt; &lt;!\-\- needed to list here, because not merged with menu in previous example \-\-&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;item label="Implemented User Story" role="implements" type="userstory"/&gt;<br>    
+&lt;/menu&gt;
+</tt>
+\\
+<tt>*tracker/create-linking-menu.xml:*</tt>
+\\
+<tt>
+&lt;menu&gt;<br>
+    &nbsp;&nbsp;&nbsp;&lt;item label="Child" role="parent"/&gt;<br>
+&lt;/menu&gt;
+</tt>
+\\
+<tt>*tracker/userstory-create-linking-menu.xml:*</tt>
+\\
+<tt>
+&lt;menu&gt;<br>
+    &nbsp;&nbsp;&nbsp;&lt;item label="Implementing Improvement" role="implements" type="improvement"titlePrefix="Implement: " copyFields="categories,timePoint"/&gt; <br>
+    &nbsp;&nbsp;&nbsp;&lt;item label="Implementing ..." role="implements"&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;item type="task"/&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;item type="defect"/&gt; <br>
+    &nbsp;&nbsp;&nbsp;&lt;/item&gt; <br>
+    &nbsp;&nbsp;&nbsp;&lt;separator/&gt; <br>
+    &nbsp;&nbsp;&nbsp;&lt;item type="defect"&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;item label="Related" role="relates_to"/&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;item label="Implementing" role="implements"/&gt; <br>
+    &nbsp;&nbsp;&nbsp;&lt;/item&gt; <br>
+    &nbsp;&nbsp;&nbsp;&lt;item label="Other"&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;item label="Test Case" type="testcase"/&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;item label="Child" role="parent"/&gt; <br>
+    &nbsp;&nbsp;&nbsp;&lt;/item&gt; <br>
+&lt;/menu&gt;
+</tt>

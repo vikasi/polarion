@@ -1,0 +1,131 @@
+#set ( $items = $workitem.getWorkItems() )
+#set ( $fields = $workitem.getFields() )
+#set ( $workItemLink = $workitem.getWorkItemLink() )
+
+
+#if ( ($workItemLink.getOutputType() == "table") && ($workitem.getSize() > 0) )
+
+   <table id="itemTable_$workitem.getId()"  cellspacing="0" cellpadding="0" border="1" >
+   <tr>
+     <td colspan="$workitem.getCollCount()" valign="middle" class="xwikipaneltitle1">#if ( ($workitem.getItem()) == "query") $workitem.getQueryProject()$workitem.getQuery() #else $workitem.getProject()$workitem.getItem()#end</td>
+   </tr>
+   <tr>
+   #foreach($fild in $fields)
+    <th>$workitem.getRealNameField($fild)</th>
+   #end
+   </tr>
+
+   #foreach($item in $items)
+    <tr>
+    #foreach($fild in $fields)
+     #if ($fild == "id")
+     	<td>
+     	<a target="_blank"   href="$workitem.getWorkItemURLPdf($item)"><b style="font-weight: normal; color: #00425E; #if ( $workitem.getValue('resolution', $item) != "" )text-decoration:line-through;#end">$workitem.getValue($fild, $item)</b></a>
+     	</td>
+     #else
+        #if ($fild == "description")
+	  <td>$workitem.getValueDescriptionPDF($item)</td>
+        #elseif ($fild == "comments")	
+	  <td>$workitem.getValueComments($item, true)</td>
+        #else
+          <td>$workitem.EncodeTextPDF($workitem.getValue( $fild, $item))</td>
+        #end
+     #end
+    #end
+    </tr>
+   #end
+
+<tr>
+<td colspan="$workitem.getCollCount()">
+##<div style="width:100%; margin-bottom: 5px; margin-right: 0px;">
+<div><b>
+#if( ( $workitem.getTotal() < $workitem.getTop() ) || ($workitem.getTop()== 0) )
+ &nbsp;$workitem.getTotal()&nbsp; $msg.get("itemsfoundwi") 
+#else
+ $msg.get("showingwi") $workitem.getTop() $msg.get("itemsofwi") $workitem.getTotal() $msg.get("foundwi")
+#end
+</b></div>
+##</div>
+</td>
+</tr>
+
+</table>
+
+
+#elseif ( ($workItemLink.getOutputType() == "list") && ($workitem.getSize() > 0))
+
+#foreach($itm in $items)
+
+<table style="width: $workItemLink.getTableWidth(); border: 0px solid #BED8E8;">
+<tr>
+<td><a style="color: #000000;font-size:11px" target="_blank" href="$workitem.getWorkItemURLPdf($itm)"><b style="color: #AA0000; #if ( $workitem.getValue('resolution', $itm) != "" )text-decoration:line-through;#end">$workitem.getValueIDPdf($itm)</b><b>- $workitem.getValue('title', $itm)</b></a></td>
+</tr>
+<tr>
+<td class="table" style="font-size:11px">
+    #foreach($fild in $fields)
+      #if ($fild == "description")
+        <b>$workitem.getRealNameField($fild): </b>$workitem.getValueDescriptionPDF($itm)<br/>
+      #else
+        <b>$workitem.getRealNameField($fild): </b>$workitem.EncodeTextPDF($workitem.getValue( $fild, $itm))<br/>
+      #end
+    #end
+</td>
+</tr>
+</table>
+
+#end
+
+#elseif ( ($workItemLink.getOutputType() == "single") && ($workitem.getSize() > 0) )
+#foreach($itm in $items)
+<a style="color: #000000;font-size:11px" title='' target="_blank" href="$workitem.getWorkItemURLPdf($itm)">
+#if ($workitem.getDisplay() == "long")
+<b style="color: #AA0000; #if ( $workitem.getValue('resolution', $itm) != "" )text-decoration:line-through;#end">$workitem.getValueIDPdf($itm)</b><b> - $workitem.getValue('title', $itm)</b>
+#else 
+<b style="color: #AA0000; #if ( $workitem.getValue('resolution', $itm) != "" )text-decoration:line-through;#end">$workitem.getValueIDPdf($itm)</b>
+#end
+</a>
+#end
+#end
+
+
+#if ( ($workitem.getSize() == 0) && ($workItemLink.getOutputType() != "table") )
+
+#if ( ($workitem.getItem()) == "query") <a class="wiItem" target="_blank" href="$workitem.getWorkItemMorePdf()">$workitem.getQueryProject()$workitem.getQuery()</a>#else <a class="wiItem" target="_blank" href="$workitem.getWorkItemMorePdf()">$workitem.getProject()$workitem.getItem()</a>#end
+
+#elseif ( ($workitem.getSize() == 0) && ($workItemLink.getOutputType() == "table") )
+
+   <table id="itemTable_$workitem.getId()"  cellspacing="0" cellpadding="0" border="1" >
+   <tr>
+     <td colspan="$workitem.getCollCount()" valign="middle" class="xwikipaneltitle1">#if ( ($workitem.getItem()) == "query") $workitem.getQueryProject()$workitem.getQuery() #else $workitem.getProject()$workitem.getItem()#end</td>
+   </tr>
+   <tr>
+   #foreach($fild in $fields)
+    <th>$workitem.getRealNameField($fild)</th>
+   #end
+   </tr>
+
+    <tr>
+    #foreach($fild in $fields)
+        <td>&nbsp;</td>
+    #end
+    </tr>
+
+
+<tr>
+<td colspan="$workitem.getCollCount()">
+##<div style="width:100%; margin-bottom: 5px; margin-right: 0px;">
+<div><b class="wifooter">
+#if( $workitem.getTotal() < $workitem.getTop() )
+  0 $msg.get("itemsfoundwi")
+#else
+  0 $msg.get("itemsfoundwi")
+#end
+</b></div>
+##</div>
+</td>
+</tr>
+
+</table>
+
+
+#end

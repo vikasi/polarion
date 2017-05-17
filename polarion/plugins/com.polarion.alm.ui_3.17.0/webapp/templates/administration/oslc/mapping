@@ -1,0 +1,36 @@
+1 OSLC Mapping
+
+1.1 Configuration
+{xmleditor:oslc-mapping}
+
+1.1 Quick Help
+
+1.1.1 Type Mappings
+
+Type Mappings are defined using the <tt>type-mapping</tt> tags found within a <tt>type-mappings</tt> tag.
+They are configured using the following attributes:
+
+1.1.1.1.1.1 Attribute: ~~polarionType~~ {style:type=span|border=none|color=red}(Required){style}
+
+The id of the Polarion Work Item type.
+
+1.1.1.1.1.1 Attribute: ~~oslcType~~  {style:type=span|border=none|color=red}(Required){style}
+
+The OSLC type. This value is typically prefixed with a namespace prefix that is defined in the <a href="/polarion/#/administration/oslc/semantics" style="text-decoration:underline">OSLC semantic configuration</a> section.
+
+1.1.1.1.1.1 Attribute: ~~oslcUsage~~ {style:type=span|border=none|color=darkblue}(Optional){style}
+
+The OSLC usage. This value is typically prefixed with a namespace prefix that is defined in the <a href="/polarion/#/administration/oslc/semantics" style="text-decoration:underline">OSLC semantic configuration</a> section.
+
+1.1.1 Link Role Mappings
+
+Link roles are mapped using <tt>link-role-mapping</tt> tags found within in a <tt>link-role-mappings</tt> tag. 
+They are configured using the following attributes:
+
+1.1.1.1.1.1 Attribute: ~~linkRole~~ {style:type=span|border=none|color=red}(Required){style}
+
+The id of the Polarion link role.
+
+1.1.1.1.1.1 Attribute: ~~oslcLinkProperty~~ {style:type=span|border=none|color=red}(Required){style}
+
+The OSLC property name for the link role. This value is typically prefixed with a namespace prefix that is defined in the <a href="/polarion/#/administration/oslc/semantics" style="text-decoration:underline">OSLC semantic configuration</a> section.

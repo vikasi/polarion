@@ -1,0 +1,98 @@
+<table width=100%>
+<tr>
+<td colspan="6">
+
+     <table bgcolor="#C0DAEA" style="width: 100%; height: 20px; border: 2px solid #74A7E1;">
+     <tr>
+     <td class="normalTD">&nbsp;<b>Attachments:</b></td>
+     </tr>
+     </table>
+
+</td>
+</tr>
+
+
+<tr>
+<td colspan=3 style="border-right: 1px solid #C0DAEA;" width=500>
+
+         <div style="width: 100%; height: 100%; border: 0px solid red; overflow-y: auto; overflow-x: auto;" onscroll="scrollAL();" id="viewattachL">
+
+         #set($attachments = $origdoc.attachmentList)
+         <table style="width: 100%; border: 0px solid #C0DAEA;">
+         <tr>
+           <td style="background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA; width:10px;" ></td>
+           <td style="background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA; width:10px;"></td>
+           <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;" width=80><b>$msg.get("titlefield")</b></td>
+           <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;"><b>$msg.get("filename")</b></td>
+           <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;" width=100><b>$msg.get("length")</b></td>          
+           <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;" width=150><b>$msg.get("author")</b></td>
+           <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;"  width=100><b>$msg.get("created")</b></td>          
+         </tr>
+
+         #set ($n = 1)
+         #foreach ($attach in $attachments)
+         <tr>
+         <td style="width: 16px;!important;font-family: Arial;font-size:11px;background: #E9F3FA;padding-left: 2px;padding-right: 2px;border-bottom: 1px solid #C0DAEA;border-right: 1px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=16 height=1></td>
+         <td style="width: 16px;!important;font-family: Arial;font-size:11px;background: #E9F3FA;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom: 1px solid #C0DAEA;border-right: 1px solid #C0DAEA; color: #0000BB;">$n</td>
+
+                   <td nowrap class="attachTD">$attach.getTitle().toLowerCase()</td>
+                   <td nowrap class="attachTD">#packName($attach.filename)</td>
+                   <td nowrap class="attachTD">$attach.filesize</td>
+                   <td nowrap class="attachTD">$xwiki.getLocalUserName($attach.author)</td>
+                   <td nowrap class="attachTD">$!xwiki.formatDate($attach.date, "yyyy-MM-dd HH:mm")</td>
+
+         </tr>
+         #set ($n = $n + 1)
+         #end
+         </table>
+         </div>
+
+</td>
+
+<td colspan=3>
+              <div style="width: 100%; height: 100%; border: 0px solid red; overflow-y: auto; overflow-x: auto;" onscroll="scrollAR();" id="viewattachR">
+
+
+              #set($attachments = $newdoc.attachmentList)
+              <table style="width: 100%; border: 0px solid #C0DAEA;">
+              <tr>
+                <td nowrap style="background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;  width:10px;"></td>
+                <td nowrap style="background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;  width:10px;"></td>
+                <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;" width=80><b>$msg.get("titlefield")</b></td>
+                <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;"><b>$msg.get("filename")</b></td>
+                <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;" width=100><b>$msg.get("length")</b></td>          
+                <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;" width=150><b>$msg.get("author")</b></td>
+                <td nowrap style="font-family: Arial;font-size:11px; background: #E9F3FA;border-bottom: 2px solid #C0DAEA;border-right: 1px solid #C0DAEA;"  width=100><b>$msg.get("created")</b></td>          
+              </tr>
+
+              #set ($n = 1)
+              #foreach ($attach in $attachments)
+
+
+              <tr>
+              <td style="width: 16px;!important;font-family: Arial;font-size:11px;background: #E9F3FA;padding-left: 2px;padding-right: 2px;border-bottom: 1px solid #C0DAEA;border-right: 1px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=16 height=1></td>
+              <td style="width: 16px;!important;font-family: Arial;font-size:11px;background: #E9F3FA;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom: 1px solid #C0DAEA;border-right: 1px solid #C0DAEA; color: #0000BB;">$n</td>
+                        <td nowrap class="attachTD">$attach.getTitle().toLowerCase()</td>
+                        <td nowrap class="attachTD">#packName($attach.filename)</td>
+                        <td nowrap class="attachTD">$attach.filesize</td>
+                        <td nowrap class="attachTD">$xwiki.getLocalUserName($attach.author)</td>
+                        <td nowrap class="attachTD">$!xwiki.formatDate($attach.date, "yyyy-MM-dd HH:mm")</td>
+              </tr>
+              #set ($n = $n + 1)
+              #end
+              </table>
+              </div>
+</td>
+</tr>
+
+<tr>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=5 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=5 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=190 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=5 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=5 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=190 height=1></td>
+</tr>
+
+</table>
+

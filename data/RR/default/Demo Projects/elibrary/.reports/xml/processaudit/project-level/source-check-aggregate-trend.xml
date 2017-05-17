@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="elibrary" id="processaudit/project-level/source-check-aggregate-trend" tag="trend">
+    <structure-element id="root" provider="root" type="root">
+        <trend-value-fact-element id="test-coverage.number-of-covered-lines" provider="source-check-aggregate" type="test-coverage.number-of-covered-lines">
+            <trend>
+                <value tag="2017-05-15" type="java.lang.Integer">0</value>
+            </trend>
+            <properties>
+                <property id="label">
+                    <value>Covered Lines</value>
+                </property>
+            </properties>
+        </trend-value-fact-element>
+        <trend-value-fact-element id="test-coverage.number-of-valid-lines" provider="source-check-aggregate" type="test-coverage.number-of-valid-lines">
+            <trend>
+                <value tag="2017-05-15" type="java.lang.Integer">0</value>
+            </trend>
+            <properties>
+                <property id="label">
+                    <value>Valid Lines</value>
+                </property>
+            </properties>
+        </trend-value-fact-element>
+        <trend-value-fact-element id="test-coverage.ratio" provider="source-check-aggregate" type="test-coverage.ratio">
+            <trend>
+                <value tag="2017-05-02" type="java.lang.Double">35.0</value>
+                <value tag="2017-05-03" type="java.lang.Double">39.0</value>
+                <value tag="2017-05-04" type="java.lang.Double">39.0</value>
+                <value tag="2017-05-05" type="java.lang.Double">40.0</value>
+                <value tag="2017-05-06" type="java.lang.Double">40.0</value>
+                <value tag="2017-05-07" type="java.lang.Double">41.0</value>
+                <value tag="2017-05-08" type="java.lang.Double">43.0</value>
+                <value tag="2017-05-09" type="java.lang.Double">46.0</value>
+                <value tag="2017-05-10" type="java.lang.Double">45.0</value>
+                <value tag="2017-05-11" type="java.lang.Double">48.0</value>
+                <value tag="2017-05-12" type="java.lang.Double">52.0</value>
+                <value tag="2017-05-13" type="java.lang.Double">53.0</value>
+                <value tag="2017-05-14" type="java.lang.Double">55.0</value>
+                <value tag="2017-05-15" type="java.lang.Double">NaN</value>
+            </trend>
+            <properties>
+                <property id="label">
+                    <value>Unit Test Coverage</value>
+                </property>
+            </properties>
+        </trend-value-fact-element>
+        <trend-value-fact-element id="test-sucess-ratio.testsCount" provider="source-check-aggregate" type="test-sucess-ratio.testsCount">
+            <trend>
+                <value tag="2017-05-15" type="java.lang.Integer">5</value>
+            </trend>
+            <properties>
+                <property id="label">
+                    <value>Tests Count</value>
+                </property>
+            </properties>
+        </trend-value-fact-element>
+        <trend-value-fact-element id="test-sucess-ratio.errorsCount" provider="source-check-aggregate" type="test-sucess-ratio.errorsCount">
+            <trend>
+                <value tag="2017-05-15" type="java.lang.Integer">1</value>
+            </trend>
+            <properties>
+                <property id="label">
+                    <value>Errors Count</value>
+                </property>
+            </properties>
+        </trend-value-fact-element>
+        <trend-value-fact-element id="test-sucess-ratio.failuresCount" provider="source-check-aggregate" type="test-sucess-ratio.failuresCount">
+            <trend>
+                <value tag="2017-05-15" type="java.lang.Integer">1</value>
+            </trend>
+            <properties>
+                <property id="label">
+                    <value>Failures Count</value>
+                </property>
+            </properties>
+        </trend-value-fact-element>
+        <trend-value-fact-element id="test-sucess-ratio.ratio" provider="source-check-aggregate" type="test-sucess-ratio.ratio">
+            <trend>
+                <value tag="2017-05-15" type="java.lang.Double">60.0</value>
+            </trend>
+            <properties>
+                <property id="label">
+                    <value>Unit Test Success Ratio</value>
+                </property>
+            </properties>
+        </trend-value-fact-element>
+    </structure-element>
+</factbase>

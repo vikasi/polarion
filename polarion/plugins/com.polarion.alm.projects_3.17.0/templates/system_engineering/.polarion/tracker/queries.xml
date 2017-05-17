@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<queries>
+    <query name="Awaiting Review" query="status:draft"/>
+    <query name="Not (Heading Task)" query="NOT HAS_VALUE:resolution AND NOT type:(heading task)"/>
+    <query name="Planned for Version 1.0" query="PLAN:(%project-id%/Version_1_0)"/>
+    <query name="Design Requirements Waiting for Approval" query="type:(electricalRequirement mechanicalRequirement softwareRequirement) AND approvals:fullxxxwaitingxxx* AND status:inReview"/>
+</queries>

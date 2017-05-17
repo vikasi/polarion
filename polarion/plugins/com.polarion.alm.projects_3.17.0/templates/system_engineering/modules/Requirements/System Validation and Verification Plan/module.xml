@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2013-01-09 22:56:36.682 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-120"></h1><p id="polarion_merged_0">
+  <span style="font-style: italic;"><span style="font-weight: bold;">NOTE TO AUTHOR: </span> Highlighted, italicized text throughout this template is provided solely as background information to assist you in creating this document.  Please delete all such text, as well as the instructions in each section, prior to submitting this document.  <span style="font-weight: bold;">ONLY YOUR PROJECT-SPECIFIC INFORMATION SHOULD APPEAR IN THE FINAL VERSION OF THIS DOCUMENT.</span></span>
+</p><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-121"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-122"></h3><p id="polarion_merged_5">
+  <span style="font-style: italic;">INFO: The System Validation and Verification Plan (SysVVP) document outlines the planned tasks and expectations for validation and verification of the system.</span>
+</p><ul id="polarion_new_1">
+  <ul>
+    <li><span style="font-style: italic;">WHO will be responsible for completion, review, and approval of these tasks.</span></li>
+    <li><span style="font-style: italic;">HOW the verification will be performed including failure resolution.<br/>
+        </span></li>
+    <li><span style="font-style: italic;">WHAT documentation/deliverables will be generated.</span></li>
+  </ul>
+</ul><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-124"></h3><p id="polarion_merged_2">
+  <span style="font-style: italic;">TO DO: List any other documents or Web addresses to which this document refers. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-125"></h2><p id="polarion_merged_19">
+  <span style="font-weight: bold;">Verification and Validation</span> are independent procedures that are used together for checking that  system meets requirements and specifications and that it fulfills its intended purpose. These are critical components of a quality management system. 
+</p><ul id="polarion_merged_24" style="margin-left: 1.6em;">
+  <li>&quot;<span style="font-weight: bold;">Validation.</span> The assurance that a product, service, or system meets the needs of the customer and other identified stakeholders. It often involves acceptance and suitability with external customers. Contrast with verification.&quot;</li>
+  <li>&quot;<span style="font-weight: bold;">Verification</span>. The evaluation of whether or not a product, service, or system complies with a regulation, requirement, specification, or imposed condition. It is often an internal process. Contrast with validation.&quot;</li>
+</ul><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-126"></h3><p id="polarion_new_21">
+  <span style="font-style: italic;">A description of the participating organizations and personnel and identification of their roles and responsibilities. This may include for example, the operators, an event recorder, witnesses, and/or engineering support.  Some agencies prefer to have contractors not around during validation, others want access to them in case questions or problems arise.<br/>
+    </span>
+</p><p id="polarion_new_22">
+  <span style="font-style: italic;">Identification of the location of the activity, that is, the place, or places, where the progress must be observed. </span>
+</p><p id="polarion_new_23">
+  <span style="font-style: italic;">The schedule of when Validation will occur including a sequencing of the events that make up the Validation activity.</span>
+</p><p id="polarion_new_24">
+  <span style="font-style: italic;">The system configuration for all of the activities, including the main system hardware and software and any supporting equipment, software, or external systems.  Several configurations may be used depending on the type of system and type of development that was just completed.  </span>
+</p><p id="polarion_new_25">
+  <span style="font-style: italic;">Identification of the documents to be prepared to support the validation, including any special scenarios, a Validation Report and descriptions of special test equipment and software.</span>
+</p><p id="polarion_new_26">
+  <span style="font-style: italic;">Details on the actual conduct of the activity, including:</span>
+</p><p id="polarion_new_27">
+  <span style="font-style: italic;">-  Notification of participants</span>
+</p><p id="polarion_new_28">
+  <span style="font-style: italic;">-  Emphasis on the management role of the operators</span>
+</p><p id="polarion_new_29">
+  <span style="font-style: italic;">-  Procedures for approving last minute changes to the scenarios</span>
+</p><p id="polarion_new_17">
+  <span style="font-style: italic;">The processes for handling anomalies, including recording of critical information, resolution of the cause of a failure [e.g. fix the software, reset the system, record potential future changes], and determination of any retesting activities necessary.</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-127"></h4><p id="polarion_new_32">
+  <span style="font-style: italic;">TO DO: Identify the set of tasks necessary to prepare for and perform validation. Identify all inter-task dependencies and any special skills required.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-128"></h3><p id="polarion_new_16">
+  <span style="font-style: italic;">INFO: A description of the participating organizations and personnel and identification of their roles and responsibilities.<br/>
+    </span>
+</p><p id="polarion_new_33">
+  <span style="font-style: italic;">Identification of the location of the activity, that is, the place, or places, where the progress must be observed. </span>
+</p><p id="polarion_new_34">
+  <span style="font-style: italic;">The schedule of when Verification will occur including a sequencing of the events that make up the Verification activity.</span>
+</p><p id="polarion_new_35">
+  <span style="font-style: italic;">Identification of the documents to be prepared to support the Verification, including any special scenarios, a Verification Report and descriptions of special test equipment and software.<br/>
+    </span>
+</p><p id="polarion_new_37">
+  <span style="font-style: italic;">Details on the actual conduct of the activity, including:</span>
+</p><p id="polarion_new_38">
+  <span style="font-style: italic;">-  Notification of participants</span>
+</p><p id="polarion_new_39">
+  <span style="font-style: italic;">-  Emphasis on the management role of the operators</span>
+</p><p id="polarion_new_40">
+  <span style="font-style: italic;">-  Procedures for approving last minute changes to the scenarios</span>
+</p><p id="polarion_new_41">
+  <span style="font-style: italic;">The processes for handling anomalies, including recording of critical information, resolution of the cause of a failure [e.g. fix the software, reset the system, record potential future changes], and determination of any retesting activities necessary. </span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-129"></h4><p id="polarion_new_45">
+  <span style="font-style: italic;">TO DO: Identify the set of tasks necessary to prepare for and perform validation. Identify all inter-task dependencies and any special skills required.</span>
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Task</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">task</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">generic</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

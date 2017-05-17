@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.polarion.maven.processaudit</groupId>
+  <artifactId>cobertura-runtime</artifactId>
+  <packaging>pom</packaging>
+  <version>3.17.0</version>
+  <description>Cobertura fake artifact to prevent unneeded dependencies at runtime</description>
+  <dependencies>
+    <dependency>
+      <groupId>com.polarion.maven.processaudit</groupId>
+      <artifactId>cobertura</artifactId>
+      <version>3.17.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>oro</artifactId>
+          <groupId>oro</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>asm</artifactId>
+          <groupId>asm</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>ccl</artifactId>
+          <groupId>javancss</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>javancss</artifactId>
+          <groupId>javancss</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>polarion-shared</id>
+      <url>file:///opt/polarion/data/multi-instance/cns/shared/data/shared-maven-repo</url>
+    </repository>
+  </distributionManagement>
+</project>

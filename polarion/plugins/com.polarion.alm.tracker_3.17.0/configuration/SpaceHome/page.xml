@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2016-06-24 10:19:00.574 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client2" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h1&gt;$page.label&lt;/h1&gt;</sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 75%;">
+  <p id="polarion_client16">
+    <span style="font-weight: normal;">Welcome to the Home page of the <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+        <span class="polarion-rp-widget-parameters">
+          <sub id="script">
+            <sub style="white-space:pre;" id="script">&lt;i class:&quot;italic&quot;&gt;$page.fields().spaceId().spaceLabel()&lt;/i&gt;</sub>
+          </sub>
+        </span>
+      </span> space.</span>
+  </p>
+  <p id="polarion_client18">
+    The <span style="font-style: italic;">Documents &amp; Pages</span> area is organized into <span style="font-style: italic;">spaces</span> (represented by folder icons in Navigation). Spaces in projects can contain LiveDoc Documents and Pages. In the Repository scope, spaces can contain only Pages.
+  </p>
+  <p id="polarion_client20">
+    Every space has its own Home page (accessed by clicking the space name). Each space also has an <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+      <span style="display: none;" class="polarion-rp-widget-parameters">
+        <sub id="script">
+          <sub style="white-space:pre;" id="script">&lt;a href=&quot;$page.getReference.spaceReference.createLink($transaction.context).index&quot;&gt;Index page&lt;/a&gt;</sub>
+        </sub>
+      </span>
+    </span> where you can access the existing content of the space and create new content.
+  </p>
+  <h2 id="polarion_client14">Recently Updated</h2>
+  <p id="polarion_client7">
+    <span style="color: #999999;">Here is a listing of up to 20 of the most recently modified Documents and Pages in this space. Click any Title to open the content.<br/>
+      </span>
+  </p>
+  <div id="polarion_client9" class="polarion-rp-widget-part" data-widget="com.polarion.spaceIndexWidget">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="scope"></sub><sub id="space" data-inherit="space"></sub>
+      <sub id="advanced">
+        <sub id="top">20</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client4"></p>
+  <p id="polarion_client10">
+    <span style="font-style: italic;color: #999999;"><span style="font-weight: bold;">TIPS FOR GETTING STARTED</span> <br/>
+      You can change this content (and any other content on this Page) to make it into a useful Home page for the <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+        <span class="polarion-rp-widget-parameters">     
+          <sub id="script">
+            <sub id="script" style="white-space: pre;">$page.fields().spaceId().spaceLabel()</sub>
+          </sub>
+        </span>
+      </span> space. For example, you might want to write some documentation about the space and provide links to important content in the space. </span>
+  </p>
+  <p id="polarion_client5">
+    <span style="font-style: italic;color: #999999;">Whenever you&#39;re ready to make changes, click Expand Tools (above) to expose the page toolbar. Then click the Edit button to open Page Editor. See <a href="/polarion/help/topic/com.polarion.xray.doc.user/ugchPages.html" target="_top" class="descriptionLink">Help</a> on how to work with Pages. </span>
+  </p>
+  <p id="polarion_client6">
+    <span style="font-style: italic;color: #999999;">To create new content in this space from this page, click: Expand Tools &gt; Operations &gt; Create New...<br/>
+      </span>
+  </p>
+</div>
+<div class="polarion-rp-column" style="width: 25%;">
+  <p id="polarion_client22" style="text-align: center;">
+    <span class="polarion-rp-inline-widget" data-widget="com.polarion.genericButton">
+      <span class="polarion-rp-widget-parameters">
+        <sub id="label">Create New...</sub>
+        <sub id="sublabel">
+          <sub style="white-space:pre;" id="script">Document or Page</sub>
+        </sub>
+        <sub id="action">
+          <sub style="white-space:pre;" id="script">$renderingContext.createJsActionsBuilder().createNewArtifact()</sub>
+        </sub>
+        <sub id="url"></sub>
+        <sub id="advanced">
+          <sub id="labelColor"></sub>
+          <sub id="disabled">
+            <sub style="white-space:pre;" id="script"></sub>
+          </sub>
+        </sub>
+      </span>
+    </span>
+  </p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<pre id="polarion-rp-page-script">#set($space = $page.reference.spaceReference.spacePath)
+
+$!scriptedPageParameters.put(&quot;space&quot;, $factory.string(&quot;Space&quot;).value($space).build())</pre>]]></field>
+    <field id="title">Home Space Built-in</field>
+</rich-page>

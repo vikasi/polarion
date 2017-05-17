@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.platform;singleton:=true
+Export-Package: com.polarion.platform,com.polarion.platform.announce,c
+ om.polarion.platform.announce.spi,com.polarion.platform.config,com.po
+ larion.platform.context,com.polarion.platform.core,com.polarion.platf
+ orm.i18n,com.polarion.platform.internal,com.polarion.platform.interna
+ l.announce;x-friends:="com.polarion.platform.tests,com.polarion.psvn.
+ launcher",com.polarion.platform.internal.cache,com.polarion.platform.
+ internal.config;x-friends:="com.polarion.platform.tests",com.polarion
+ .platform.internal.rpc,com.polarion.platform.internal.security,com.po
+ larion.platform.internal.security.auth;x-friends:="com.polarion.platf
+ orm.tests",com.polarion.platform.internal.security.auth.tcss; x-frien
+ ds:="com.polarion.platform.tests,  com.polarion.alm.ws,  com.polarion
+ .portal.tomcat.tests,  com.polarion.alm.tracker.web.tests",com.polari
+ on.platform.internal.startup,com.polarion.platform.postcommit,com.pol
+ arion.platform.security,com.polarion.platform.security.auth,com.polar
+ ion.platform.shutdown,com.polarion.platform.spi.cache,com.polarion.pl
+ atform.spi.security,com.polarion.platform.spi.shutdown,com.polarion.p
+ latform.startup,com.teamcenter.ss;x-friends:="com.polarion.platform.t
+ ests",javax.mail;x-friends:="com.polarion.scripting,com.polarion.scri
+ pting.servlet,com.polarion.alm.wiki",javax.mail.search;x-friends:="co
+ m.polarion.scripting,com.polarion.scripting.servlet,com.polarion.alm.
+ wiki"
+Bundle-Name: Polarion Service Platform Core
+Bundle-Version: 3.17.0
+Bundle-ClassPath: platform.jar,shutdown.jar,lib/activation.jar,lib/mai
+ l.jar,lib/teamcenter_sso_applib.jar,lib/teamcenter_sso_common.jar
+Require-Bundle: com.polarion.subterra.base;visibility:=reexport,javax.
+ transaction;visibility:=reexport,org.objectweb.jotm,com.polarion.core
+ .boot;visibility:=reexport,org.eclipse.core.runtime,org.apache.hivemi
+ nd,net.sf.ehcache;visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+
+

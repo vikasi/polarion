@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.subterra.index
+Export-Package: com.polarion.subterra.index,com.polarion.subterra.inde
+ x.config,com.polarion.subterra.index.ext,com.polarion.subterra.index.
+ functions,com.polarion.subterra.index.impl,com.polarion.subterra.inde
+ x.impl.analyzer;x-friends:="com.polarion.subterra.index.tests",com.po
+ larion.subterra.index.impl.query,com.polarion.subterra.index.impl.que
+ ry.processing,org.apache.lucene.analysis,org.apache.lucene.analysis.c
+ ore,org.apache.lucene.analysis.standard,org.apache.lucene.analysis.ut
+ il,org.apache.lucene.document,org.apache.lucene.index,org.apache.luce
+ ne.search,org.apache.lucene.store
+Bundle-Name: %pluginName
+Bundle-Version: 5.17.0
+Bundle-Localization: plugin
+Bundle-ClassPath: index.jar,lib/lucene-core-4.7.0.jar,lib/lucene-query
+ parser-4.7.0.jar,lib/lucene-analyzers-common-4.7.0.jar
+Require-Bundle: com.polarion.subterra.base,org.apache.log4j,com.polari
+ on.platform,com.polarion.platform.guice,com.polarion.subterra.persist
+ ence,com.polarion.platform.jobs;bundle-version="3.5.2",com.polarion.c
+ luster
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+
+

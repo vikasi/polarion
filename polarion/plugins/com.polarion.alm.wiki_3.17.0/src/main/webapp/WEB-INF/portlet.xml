@@ -1,0 +1,27 @@
+<portlet-app version="1.0"
+	id="com.polarion.xray.web.tracker" 
+  xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+
+  <portlet>
+    <portlet-name>WikiPortlet</portlet-name>
+    <display-name xml:lang="EN">Example Portlet</display-name>
+    <portlet-class>com.polarion.wiki.portlet.WikiPortlet</portlet-class>
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>view</portlet-mode> 
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Example Portlet</title>
+      <short-title>Example Portlet</short-title>
+      <keywords>Example Portlet</keywords>
+    </portlet-info>
+    <init-param>
+      <name>view-jsp</name>
+      <value>/wikiPortlet.jsp</value>
+    </init-param>    
+  </portlet>
+</portlet-app>

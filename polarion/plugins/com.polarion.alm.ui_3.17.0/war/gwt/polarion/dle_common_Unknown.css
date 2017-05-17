@@ -1,0 +1,5320 @@
+.polarion-LinkDialog-urlInput, .polarion-LinkDialog-labelInputSection-input, .polarion-PlanProgressMacro-mainDiv, .polarion-PlanProgressMacro-mainRelativeDiv {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.polarion-dle-SplitPanel, .polarion-LinkPopup-contentContainer, .polarion-HistoryTable-mainPanel {
+  position: absolute !important;
+  left: 0px;
+  right: 0px;
+}
+
+.polarion-dle-SplitPanel, .polarion-LinkPopup-contentContainer, .polarion-HistoryTable-mainPanel {
+  position: absolute !important;
+  top: 0px;
+  bottom: 0px;
+}
+
+.linkingPanel-stop-transition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+.polarion-editors-ContextActionsContainer {
+  background-color: white;
+  padding: 0px;
+  font-size: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  height: 34px;
+}
+
+.polarion-editors-ContextActionsContainer-item {
+  color: #369;
+  padding: 0px 13px;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.polarion-editors-ContextActionsContainer-separator {
+  color: #e0e0e0;
+  padding: 0px 0px 2px 0px;
+}
+
+.polarion-Document-table tr th {
+  background-color: #EEE;
+}
+
+.polarion-dle-Container {
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.polarion-dle-Wrapper {
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.polarion-dle-RpcPanel {
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: auto !important;
+}
+
+.polarion-dle-MainDockPanel {
+  position: absolute !important;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #F5F5F5;
+}
+
+.polarion-dle-NotReadable {
+  padding: 20px;
+}
+
+.polarion-mac-ForceBrowserRedraw {
+  border: solid 1px transparent;
+}
+
+.polarion-dle-RichTextArea {
+  width: 100%;
+  height: 100%;
+}
+
+.polarion-dle-SplitPanel .gwt-SplitLayoutPanel-HDragger {
+  background: #e7e7e7;
+  cursor: col-resize;
+}
+
+.polarion-dle-SplitPanel-disabled .gwt-SplitLayoutPanel-HDragger {
+  cursor: pointer;
+  width: 0px !important;
+}
+
+.polarion-dle-ToolbarPanel {
+  background: whiteSmoke;
+  border-bottom: 1px solid #DEDEDE;
+  height: 46px;
+  padding-left: 8px;
+  vertical-align: middle;
+  width: 100%;
+  color: #595959;
+  border-collapse: separate;
+  border-spacing: 4px;
+  z-index: 1;
+}
+
+.polarion-dle-ToolbarPanel-popup {
+  padding-right: 8px;
+  border-right: 1px solid #DEDEDE;
+  border-left: 1px solid #DEDEDE;
+  margin-top: 9px;
+  height: 44px;
+}
+
+.polarion-dle-toolbar-GroupItem-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.polarion-dle-toolbar-GroupItem {
+  border-top: 1px solid #DEDEDE;
+  border-bottom: 1px solid #DEDEDE;
+  border-left: 1px solid #DEDEDE;
+}
+
+.polarion-dle-toolbar-GroupItem-last {
+  border-right: 1px solid #DEDEDE;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.polarion-dle-toolbar-Button {
+  color: #595959;
+  cursor: pointer;
+  height: 20px;
+  text-align: right;
+  vertical-align: middle;
+  padding-top: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.polarion-dle-toolbar-Button-Steady {
+  color: #595959;
+  cursor: pointer;
+  height: 20px;
+  text-align: right;
+  vertical-align: middle;
+  padding-top: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.polarion-dle-toolbar-Button-Steady-Toggled {
+  background: url(/polarion/ria/images/backgrounds/btnToggleBg.png) repeat-x top left;
+}
+
+.polarion-dle-toolbar-ButtonWithLabel {
+  color: #595959;
+  cursor: pointer;
+  height: 27px;
+  text-align: right;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: white 1px 1px 0.01em;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 1px solid #DEDEDE;
+  border-radius: 2px;
+}
+
+.polarion-dle-toolbar-ButtonWithLabel-disabled {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.polarion-dle-toolbar-ButtonWithMenu img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.polarion-dle-toolbar-ButtonWithMenu:hover img {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.polarion-MenuButton-Menu-PopupWithIcons img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.polarion-MenuButton-Menu-PopupWithIcons .polarion-MenuButton-selected img {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.polarion-MenuButton-Menu-PopupWithIcons.polarion-MenuButton-selected img {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.polarion-dle-toolbar-Button-disabled img {
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+.polarion-dle-toolbar-Button-enabled img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.polarion-dle-toolbar-Button-enabled:hover img {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.polarion-dle-toolbar-Button-Toggled img {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.polarion-dle-toolbar-ArrowButton img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.polarion-dle-toolbar-ArrowButton:hover img {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.polarion-dle-toolbar-combo .polarion-Button-GridImpl-ImageCell img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.polarion-dle-toolbar-combo:hover .polarion-Button-GridImpl-ImageCell img {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.polarion-dle-toolbar-ButtonWithMenu-WithSeparator .polarion-MenuButton-ArrowCell {
+  border-left: 1px solid #DEDEDE;
+}
+
+.polarion-dle-toolbar-FontName-menu {
+  padding-left: 6px !important;
+}
+
+.polarion-dle-ToolbarPanel .polarion-dle-toolbar-Button {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.polarion-dle-ToolbarPanel .polarion-dle-toolbar-ButtonWithMenu {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.polarion-dle-ToolbarPanel .polarion-dle-toolbar-ButtonWithLabel {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.polarion-dle-ToolbarPanel .polarion-dle-toolbar-ButtonWithMenu .polarion-MenuButton-IconCell {
+  padding-left: 2px;
+  padding-right: 3px;
+}
+
+.polarion-dle-ToolbarPanel .polarion-dle-toolbar-ButtonWithMenu .polarion-MenuButton-ArrowCell {
+  padding-left: 2px;
+  padding-right: 3px;
+}
+
+.polarion-dle-toolbar-CurrentRevisionButton {
+  height: 28px !important;
+}
+
+.polarion-dle-toolbar-ArrowButton {
+  color: #595959;
+  cursor: pointer;
+  height: 25px;
+  text-align: right;
+  padding-left: 1px;
+  border-top: 1px solid #DEDEDE;
+  border-bottom: 1px solid #DEDEDE;
+  border-left: 1px solid #DEDEDE;
+}
+
+.polarion-dle-toolbar-ButtonWithMenu {
+  color: #595959;
+  cursor: pointer;
+  text-align: right;
+  vertical-align: middle;
+  height: 25px;
+}
+
+.polarion-dle-toolbar-ButtonWithMenu-Steady {
+  color: #595959;
+  cursor: pointer;
+  text-align: right;
+  vertical-align: middle;
+  padding-left: 2px;
+  height: 25px;
+}
+
+.polarion-MenuButton-disabled {
+  opacity: 0.30;
+  filter: alpha(opacity=30);
+}
+
+.polarion-dle-toolbar-ArrowButton-left {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.polarion-dle-toolbar-ArrowButton-right {
+  border-right: 1px solid #DEDEDE;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.polarion-dle-toolbar-Button-Toggled {
+  background: url(/polarion/ria/images/backgrounds/btnToggleBg.png) repeat-x top left;
+}
+
+.polarion-dle-ToolbarPanel-separator {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.polarion-MenuButton-IconCell {
+  padding-right: 4px;
+  padding-left: 3px;
+}
+
+.polarion-MenuButton-ArrowCell {
+  padding-left: 1px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 5px;
+}
+
+.polarion-MenuButton-IconCell img {
+  vertical-align: middle;
+}
+
+.polarion-dle-toolbar-ButtonWithMenu-Steady .polarion-MenuButton-Grid {
+  border-collapse: collapse;
+  height: 26px;
+}
+
+.polarion-dle-toolbar-ButtonWithMenu-Steady .polarion-MenuButton-IconCell {
+  vertical-align: middle;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.polarion-dle-toolbar-ButtonWithMenu-Steady .polarion-MenuButton-ArrowCell {
+  padding-left: 4px;
+  padding-right: 5px;
+}
+
+.polarion-dle-markWorkItem-menuItem-highlighted {
+  background-color: #FFCC00;
+}
+
+.polarion-dle-toolbar-Padding {
+  width: 5px;
+}
+
+.polarion-dle-toolbar-Label {
+  padding-left: 10px;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+
+.polarion-dle-toolbar-BubblePanel {
+  height: 26px;
+  border: 1px solid #C9C9C9;
+  border-radius: 2px;
+}
+
+.polarion-dle-SaveReportDialog-link {
+  text-decoration: underline;
+  font-weight: normal;
+  color: #004580;
+  white-space: nowrap;
+  cursor: pointer;
+  padding-left: 0.75ex;
+}
+
+.polarion-dle-TypeIconContextMenu {
+  padding: 6px;
+}
+
+.polarion-toolbar-Style-combo {
+  width: 93px;
+  height: 25px;
+  outline: 0px;
+}
+
+.polarion-dle-toolbar-FontSize-combo {
+  width: 40px;
+  height: 25px;
+  outline: 0px;
+}
+
+.polarion-dle-toolbar-FontName-popupWindow .polarion-MenuButton-selected {
+  background-color: #FFCC00;
+}
+
+.polarion-dle-toolbar-FontName-popupWindow .polarion-MenuButton-Menu-vertical {
+  color: black;
+}
+
+.polarion-dle-toolbar-FontName-menu {
+  width: 100px;
+  text-align: left;
+}
+
+.polarion-dle-toolbar-FontName-menu .polarion-MenuButton-LabelCell div {
+  width: 88px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.polarion-dle-toolbar-combo .polarion-Combo-Grid {
+  height: 25px;
+  border: none;
+}
+
+.polarion-dle-toolbar-combo .polarion-Combo-DropDownButton {
+  height: 25px;
+}
+
+.polarion-dle-toolbar-combo * input {
+  background: whiteSmoke;
+}
+
+.polarion-dle-toolbar-combo .polarion-Combo-SelectedItemPanel .polarion-Combo-ListBox-Item {
+  font-weight: normal !important;
+}
+
+.polarion-dle-SidebarComments-MainVerticalPanel {
+  width: 100%;
+}
+
+.polarion-dle-SidebarComments-Grid {
+  border-spacing: 0px;
+  width: 100%;
+}
+
+.polarion-dle-SidebarComments-UnreferencedHeader {
+  border-spacing: 10px;
+  width: 100%;
+}
+
+.polarion-dle-SidebarCommentContainer {
+  padding: 5px 10px 5px 10px;
+}
+
+.polarion-dle-SidebarComment {
+  position: relative;
+  overflow: visible;
+  height: auto;
+  width: auto;
+  padding: 4px;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.polarion-dle-SidebarComment-bare {
+  border: 1px solid #CCCCCC;
+  background: #FFFFFF;
+}
+
+.polarion-dle-SidebarComment-resolved {
+  border: 1px solid #CCCCCC;
+  background: #F5F5F5;
+}
+
+.polarion-dle-SidebarComment-signed {
+  border: 1px solid #A4D862;
+  background: #F3FDE2;
+}
+
+.polarion-dle-SidebarComment-declined {
+  border: 1px solid #FF9D9D;
+  background: #FCEBEB;
+}
+
+.polarion-dle-SidebarComment-pending {
+  border: 1px solid #CCCCCC;
+  background: #FFFFFF;
+}
+
+.polarion-dle-SidebarComment-signature-td {
+  vertical-align: bottom;
+  padding-right: 3px;
+}
+
+.polarion-dle-SidebarComment-signature {
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.polarion-dle-SidebarComment.level-0 {
+  margin-left: 0px;
+}
+
+.polarion-dle-SidebarComment.level-1 {
+  margin-left: 10px;
+}
+
+.polarion-dle-SidebarComment.level-2 {
+  margin-left: 20px;
+}
+
+.polarion-dle-SidebarComment.level-3 {
+  margin-left: 30px;
+}
+
+.polarion-dle-SidebarComment.level-4 {
+  margin-left: 40px;
+}
+
+.polarion-dle-SidebarComment.level-5 {
+  margin-left: 50px;
+}
+
+.polarion-dle-SidebarComment.level-6 {
+  margin-left: 60px;
+}
+
+.polarion-dle-SidebarComment.level-7 {
+  margin-left: 70px;
+}
+
+.polarion-dle-SidebarComment.level-8 {
+  margin-left: 80px;
+}
+
+.polarion-dle-SidebarComment.level-9 {
+  margin-left: 90px;
+}
+
+.polarion-dle-SidebarComment.level-10 {
+  margin-left: 100px;
+}
+
+.polarion-dle-SidebarComment.level-11 {
+  margin-left: 110px;
+}
+
+.polarion-dle-SidebarComment.level-12 {
+  margin-left: 120px;
+}
+
+.polarion-dle-SidebarComment.level-13 {
+  margin-left: 130px;
+}
+
+.polarion-dle-SidebarComment.level-14 {
+  margin-left: 140px;
+}
+
+.polarion-dle-SidebarComment.level-15 {
+  margin-left: 150px;
+}
+
+.polarion-dle-SidebarComment.level-16 {
+  margin-left: 160px;
+}
+
+.polarion-dle-SidebarComment.level-17 {
+  margin-left: 170px;
+}
+
+.polarion-dle-SidebarComment.level-18 {
+  margin-left: 180px;
+}
+
+.polarion-dle-SidebarComment.level-19 {
+  margin-left: 190px;
+}
+
+.polarion-dle-SidebarComment.level-20 {
+  margin-left: 200px;
+}
+
+.polarion-dle-SidebarComment.level-21 {
+  margin-left: 210px;
+}
+
+.polarion-dle-SidebarComment.level-22 {
+  margin-left: 220px;
+}
+
+.polarion-dle-SidebarComment.level-23 {
+  margin-left: 230px;
+}
+
+.polarion-dle-SidebarComment.level-24 {
+  margin-left: 240px;
+}
+
+.polarion-dle-SidebarComment.level-25 {
+  margin-left: 250px;
+}
+
+.polarion-dle-SidebarComment.level-26 {
+  margin-left: 260px;
+}
+
+.polarion-dle-SidebarComment.level-27 {
+  margin-left: 270px;
+}
+
+.polarion-dle-SidebarComment.level-28 {
+  margin-left: 280px;
+}
+
+.polarion-dle-SidebarComment.level-29 {
+  margin-left: 290px;
+}
+
+.polarion-dle-SidebarComment.level-30 {
+  margin-left: 300px;
+}
+
+.polarion-dle-InfoPanel {
+  height: 29px;
+  background-color: #FFFFCE;
+  border-bottom: 1px solid #E8D480;
+  cursor: pointer;
+}
+
+.polarion-dle-InfoPanel-Table {
+  height: 29px;
+}
+
+.polarion-dle-InfoPanel-Icon {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.polarion-dle-InfoPanel-Message {
+  white-space: nowrap;
+  padding-right: 5px;
+}
+
+.polarion-dle-InfoPanel-Button {
+  padding: 5px;
+  white-space: nowrap;
+}
+
+.polarion-dle-ValidationPanel {
+  width: 100%;
+}
+
+.polarion-dle-SidebarComment-Selected {
+  border-color: #FFCC00 !important;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-outer-bare {
+  position: absolute;
+  right: 17px;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #cccccc;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-inner-bare {
+  position: absolute;
+  right: 17px;
+  bottom: -7px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-outer-resolved {
+  position: absolute;
+  right: 17px;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #cccccc;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-inner-resolved {
+  position: absolute;
+  right: 17px;
+  bottom: -7px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid whitesmoke;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-outer-pending {
+  position: absolute;
+  right: 17px;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #cccccc;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-inner-pending {
+  position: absolute;
+  right: 17px;
+  bottom: -7px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-outer-signed {
+  position: absolute;
+  right: 17px;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #a4d862;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-inner-signed {
+  position: absolute;
+  right: 17px;
+  bottom: -7px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #f3fde2;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-outer-declined {
+  position: absolute;
+  right: 17px;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ff9d9d;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-inner-declined {
+  position: absolute;
+  right: 17px;
+  bottom: -7px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fcebeb;
+}
+
+.polarion-dle-SidebarComment-BubbleBit-arrow-outer-selected {
+  position: absolute;
+  right: 17px;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ffcc00;
+}
+
+.polarion-dle-SidebarComment-TextArea {
+  background-color: white;
+  border: 1px solid #C9C9C9;
+  color: black;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  resize: none;
+}
+
+.polarion-dle-SidebarComment-CommentActionsPanel {
+  height: 25px;
+  width: 100%;
+  border-top: 1px dotted #898989;
+  margin-top: 5px;
+}
+
+.polarion-button-ImageWithLabel {
+  padding-right: 4px;
+}
+
+.polarion-dle-SidebarComment-CommentButton {
+  color: black;
+  cursor: pointer;
+  height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.polarion-dle-SidebarComment-Footer-td {
+  width: 100%;
+}
+
+.polarion-dle-SidebarComment-Footer {
+  color: #898989;
+}
+
+.polarion-dle-Sidebar-CustomTabs {
+  width: 100%;
+  padding: 2px;
+  background-color: #f5f5f5;
+}
+
+.polarion-dle-Sidebar-Divider {
+  width: 100%;
+  height: 20px;
+  background: transparent url("/polarion/ria/images/backgrounds/sidebar_divider_bckg.gif") top left repeat-x;
+}
+
+.polarion-dle-SidebarScrollPanel {
+  height: 100%;
+  overflow: auto;
+  width: auto;
+  background-color: #f5f5f5;
+}
+
+.polarion-dle-SidebarSectioned-WithDock {
+  position: static !important;
+}
+
+.polarion-dle-SidebarBackground {
+  background-color: #f5f5f5;
+}
+
+.polarion-dle-Sidebar-RpcPanel {
+  position: absolute !important;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.polarion-dle-SidebarButton-disabled {
+  opacity: 0.30;
+  filter: alpha(opacity=30);
+}
+
+.polarion-dle-SidebarContainer {
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.polarion-dle-TocSidebar-scrollPanel {
+  position: absolute !important;
+  overflow: auto !important;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.polarion-dle-TreeFilterInput {
+  padding: 3px;
+}
+
+.polarion-dle-TreeRefreshButton {
+  margin-top: 3px;
+  margin-right: 3px;
+  text-align: center;
+}
+
+.polarion-dle-SidebarWorkItem-Wraper {
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.polarion-dle-Sidebar-Header {
+  width: 100%;
+}
+
+.polarion-dle-SidebarFilter {
+  background-color: white;
+  margin-right: 3px;
+  width: 100%;
+}
+
+.polarion-dle-SidebarSection {
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 15px;
+}
+
+.polarion-dle-SidebarSectionHeaderTitle {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 13px;
+  margin-right: 5px;
+  color: #454545;
+}
+
+.gwt-MenuItemSeparator {
+  background: url("/polarion/ria/images/contextmenusplitter.gif") repeat-x left;
+  height: 5px;
+}
+
+.polarion-dle-WikiBlockDialog-Area {
+  width: 95%;
+  height: 95%;
+}
+
+.polarion-dle-ConflictDialog-Attachments {
+  width: 100%;
+  height: 85px;
+  overflow: auto;
+}
+
+.polarion-dle-ConflictDialog-Attachments table {
+  width: 90%;
+}
+
+.polarion-dle-ConflictDialog-Attachments table td {
+  text-align: center;
+}
+
+.polarion-dle-ConflictDialog-Attachments table th {
+  text-align: center;
+}
+
+.polarion-dle-SidebarRecycleBin-Grid {
+  width: 100%;
+}
+
+.polarion-dle-SidebarRecycleBin-Grid tr:hover {
+  background-color: #ffefc4;
+}
+
+.polarion-dle-SidebarRecycleBin-Grid-label {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.polarion-dle-SidebarRecycleBin-Grid-CheckBoxCell {
+  height: 21px;
+  vertical-align: top;
+}
+
+.polarion-dle-SidebarRecycleBin-Grid-insertButtonCell {
+  height: 21px;
+  vertical-align: top;
+}
+
+.polarion-dle-SidebarRecycleBin-Grid-insertButton {
+  background-image: url("/polarion/ria/images/actions/insert.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  height: 20px;
+  width: 20px;
+  text-align: left;
+}
+
+.polarion-Button-GridImpl-ImageCell, .polarion-Button-GridImpl-TextCell {
+  padding-left: 3px;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+.polarion-Button-GridImpl-ImageCell img, .polarion-Button-GridImpl-TextCell div {
+  vertical-align: middle;
+}
+
+.polarion-dle-SidebarButton, .polarion-LinkDialog-urlNextButton {
+  background: url(/polarion/ria/images/backgrounds/btn_back.png) repeat-x top left;
+  border: 1px solid #C5C5C5;
+  border-radius: 2px 2px 2px 2px;
+  color: #595959;
+  cursor: pointer;
+  height: 20px;
+  white-space: nowrap;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.polarion-MenuButton-Grid {
+  min-width: 13px;
+  height: 26px;
+}
+
+.polarion-dle-SidebarDocumentProperties {
+  width: 99%;
+  margin-left: 2px;
+}
+
+.polarion-dle-SidebarDocumentProperties-Section {
+  width: 100%;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  margin-top: 2px;
+}
+
+.polarion-dle-SidebarDocumentProperties-Section-Link, .polarion-dle-SidebarDocumentProperties-Section-Link:link, .polarion-dle-SidebarDocumentProperties-Section-Link:VISITED {
+  color: #898989;
+  text-decoration: underline;
+  outline: none;
+}
+
+.polarion-dle-Sidebar-AlertBox {
+  background: #ffffce;
+  border: 1px solid #e8d480;
+  width: 99%;
+  margin: 3px;
+  padding: 5px;
+}
+
+.polarion-dle-Sidebar-AlertBox-IconCell {
+  padding-right: 5px;
+}
+
+.polarion-dle-Sidebar-AlertBox-LabelCell {
+  width: 100%;
+}
+
+.polarion-dle-SidebarDocumentProperties-Section .content {
+  width: 99%;
+}
+
+.polarion-dle-SidebarDocumentProperties-Document-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+.polarion-dle-SidebarDocumentProperties-Document-shadow {
+  color: #898989;
+  line-height: 1.7em;
+  margin-bottom: 5px;
+}
+
+.polarion-dle-SidebarDocumentProperties-Document-bold {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.polarion-dle-SidebarDocumentProperties-Document-link,
+.polarion-dle-SidebarDocumentProperties-Document-link:link,
+.polarion-dle-SidebarDocumentProperties-Document-link:visited {
+  color: #454545 !important;
+  text-decoration: underline !important;
+  padding-left: 2px;
+  padding-right: 2px;
+  white-space: nowrap;
+}
+
+.polarion-dle-SidebarDocumentProperties-Document-softLink,
+.polarion-dle-SidebarDocumentProperties-Document-softLink:visited {
+  color: #454545 !important;
+  text-decoration: none !important;
+}
+
+.polarion-dle-SidebarDocumentProperties-Document-link-disabled {
+  color: #8a989f;
+  text-decoration: none;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.polarion-dle-SidebarDocumentProperties-Document {
+  margin: 4px;
+}
+
+.polarion-dle-SidebarDocumentProperties-DocumentInfo-Updated * td, .polarion-dle-SidebarDocumentProperties-DocumentInfo-Author * td,
+.polarion-dle-SidebarDocumentProperties-DocumentInfo-Type * td, .polarion-dle-SidebarDocumentProperties-DocumentInfo-Location * td,
+.polarion-dle-SidebarDocumentProperties-DocumentInfo-Branched * td, .polarion-dle-SidebarDocumentProperties-DocumentInfo-Derived * td {
+  padding: 2px;
+  line-height: 2em;
+}
+
+.polarion-dle-SidebarDocumentProperties-DocumentInfo-Location span {
+  font-weight: normal;
+}
+
+.polarion-dle-SidebarDocumentProperties-DocumentInfo-Type img {
+  vertical-align: text-bottom;
+}
+
+.polarion-dle-SidebarDocumentProperties-DocumentInfo-Updated-Branched-QueryImage {
+  vertical-align: text-bottom;
+  cursor: help;
+}
+
+.polarion-dle-SidebarDocumentProperties-Label {
+  white-space: nowrap;
+}
+
+.polarion-dle-SidebarDocumentProperties-WidgetGrid-Button {
+  background-image: url(/polarion/ria/images/actions/buttonDisabled.png);
+  background-repeat: repeat-x;
+  border: 1px solid #989898;
+  font-size: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0.01em white;
+  color: #656565;
+  cursor: pointer;
+  padding-top: 1px;
+  line-height: 17px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+.polarion-dle-SidebarDocumentProperties-WidgetGrid-Button-Toggled {
+  background-image: url(/polarion/ria/images/actions/buttonActive.png);
+  background-repeat: repeat-x;
+  border: 1px solid #e1b639;
+  font-size: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0.01em white;
+  color: #7c5c00;
+}
+
+.polarion-dle-SidebarDocumentProperties-PrefixWidget {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.polarion-dle-SidebarDocumentProperties-WidgetGrid {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.polarion-dle-SidebarDocumentProperties-WidgetGrid > tbody > tr > td:first-child {
+  padding-left: 4px;
+}
+
+.polarion-dle-SidebarDocumentProperties-PrefixWidget-TextField {
+  margin-top: 5px;
+  margin-left: 4px;
+}
+
+.polarion-dle-SidebarDocumentProperties-PrefixWidget-TextField-Input {
+  border: 1px solid #c9c9c9;
+  height: 18px;
+  margin: 0;
+  margin-left: 4px;
+}
+
+.polarion-dle-SidebarDocumentProperties-Template-DownloadUpload {
+  width: 100%;
+}
+
+.polarion-dle-SidebarDocumentProperties-Template-DownloadUpload img {
+  padding-left: 4px;
+  padding-right: 2px;
+}
+
+.polarion-dle-SidebarDocumentProperties-Template-DownloadUpload-RemoveComposite {
+  width: 100%;
+  text-align: right;
+}
+
+.polarion-dle-changeDocumentType-typeLabel {
+  font-weight: bold;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+
+.polarion-dle-changeDocumentType-help {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.polarion-dle-printDialog {
+  min-width: 450px;
+  min-height: 470px;
+}
+
+.polarion-dle-printDialog-button {
+  color: #595959;
+  cursor: pointer;
+  height: 28px;
+  border: 1px solid #dedede;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.polarion-dle-printDialog-button-Over {
+  color: #595959;
+  background: #f7f7f7;
+  cursor: pointer;
+  height: 28px;
+  border: 1px solid #cecece;
+  -webkit-box-shadow: 0 0 2px #e0dede;
+  box-shadow: 0 0 2px #e0dede;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.polarion-dle-printDialog-button div, .polarion-dle-printDialog-button-Over div {
+  font-size: 12px;
+  font-family: arial;
+  font-weight: bold;
+  padding-left: 6px;
+  padding-right: 6px;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  text-shadow: white 1px 1px 0.01em;
+}
+
+.polarion-dle-printDialog-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.polarion-dle-printDialog-panel {
+  width: 100%;
+  height: 100%;
+}
+
+.polarion-dle-printDialog-header {
+  height: 32px;
+}
+
+.polarion-dle-printDialog-text {
+  padding: 4px;
+}
+
+.polarion-dle-pdfExportConfigurationDialog-content {
+  min-width: 470px;
+  min-height: 430px;
+}
+
+.polarion-dle-pdfExportConfigurationDialog-frame {
+  width: 99%;
+  height: 98%;
+  border: none;
+  border: 1px solid #C9C9C9;
+  font-family: monospace;
+}
+
+.polarion-dle-pdfExportConfigurationDialog-configure {
+  border: 0px;
+  background: none;
+  color: #369;
+  font-size: 11px;
+  cursor: pointer;
+  margin-top: 1px;
+  white-space: nowrap;
+}
+
+.polarion-dle-pdfExportConfigurationDialog-configure-over {
+  border: 0px;
+  background: none;
+  color: #369;
+  font-size: 11px;
+  cursor: pointer;
+  margin-top: 1px;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.polarion-dle-pdfExportConfigurationDialog-panel {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+}
+
+.polarion-dle-pdfExportConfigurationDialog-header {
+  height: 32px;
+}
+
+.polarion-dle-pdfExportConfigurationDialog-text {
+  padding: 4px;
+}
+
+.polarion-dle-preview-highlightTable-start {
+  box-shadow: 0px 0px 6px  #FFB400;
+}
+
+.polarion-dle-preview-highlightTable-end {
+  box-shadow: 0px 0px 6px  transparent;
+  transition: box-shadow 2s linear;
+}
+
+/* duplicated in ModuleHomeServlet - START */
+.polarion-LinkAction {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  /* For IE8 and earlier */
+}
+
+.polarion-LinkAction:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+}
+
+.polarion-LinkAction-linked {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+}
+
+/* duplicated in ModuleHomeServlet - END */
+.polarion-LinkPanel-popup {
+  text-align: left;
+  background: #F5F5F5;
+  border: 1px solid #C6C6C6;
+  box-shadow: 0px 0px 6px  #E0DEDE;
+  border-radius: 6px;
+  width: 380px;
+  visibility: visible;
+  opacity: 1;
+  min-height: 148px;
+  transition: box-shadow 2s linear;
+}
+
+.polarion-LinkPanel-popup-initial {
+  box-shadow: 0px 0px 40px  #FFB400;
+}
+
+.polarion-LinkPanel-popupContainer {
+  width: 100%;
+}
+
+.polarion-LinkPanel-popup .popupContent {
+  height: 100%;
+}
+
+.polarion-LinkPanel-popup-done {
+  background: #E1F0FF;
+  border: 1px solid #B0CAE4;
+}
+
+.polarion-LinkPanel-popup-saved {
+  background: #E1F0FF;
+  border: 1px solid #B0CAE4;
+}
+
+.polarion-LinkPanel-popup-savedFully {
+  background: #ECFFD6;
+  border: 1px solid #B9DB90;
+}
+
+.linkingPanel-hide-slowly {
+  opacity: 0;
+  visibility: hidden;
+  -o-transition: visibility 0s 7s, opacity 2s linear 5s;
+  -ms-transition: visibility 0s 7s, opacity 2s linear 5s;
+  transition: visibility 0s 7s, opacity 2s linear 5s;
+}
+
+.linkingPanel-stop-transition {
+  opacity: 1;
+  visibility: visible;
+}
+
+.linkingPanel-hidden {
+  opacity: 0;
+  visibility: hidden;
+  -o-transition: visibility 0s 5s, opacity 5s linear 0s;
+  -ms-transition: visibility 0s 5s, opacity 5s linear 0s;
+  transition: visibility 0s 5s, opacity 5s linear 0s;
+}
+
+.polarion-LinkPanel-superContainer {
+  width: 100%;
+}
+
+.polarion-LinkPanel-closeButton {
+  width: 18px;
+  text-align: right;
+  height: 12px;
+  padding: 2px 2px 0px 0px;
+}
+
+.polarion-LinkPanel-container {
+  width: 100%;
+  padding: 15px 0px 15px 15px;
+}
+
+.polarion-LinkPanel-topContainer {
+  width: 100%;
+}
+
+.polarion-LinkPanel-linkAreaContainer {
+  width: 100%;
+}
+
+.polarion-LinkPanel-title {
+  font-size: 16px;
+  color: #565656;
+  text-shadow: 1px 1px 0 white;
+  font-weight: bold;
+  width: 100%;
+  padding-left: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
+}
+
+.polarion-LinkPanel-popup-savedFully .polarion-LinkPanel-title {
+  color: #006400;
+}
+
+.polarion-LinkPanel-popup-saved .polarion-LinkPanel-title {
+  color: #0E4A90;
+}
+
+.polarion-LinkPanel-popup-done .polarion-LinkPanel-title {
+  color: #0E4A90;
+}
+
+.polarion-LinkPanel-sourcePanel {
+  padding: 2px 2px 4px 2px;
+  width: 100%;
+}
+
+.polarion-LinkPanel-fromLabel {
+  font-size: 11px;
+  color: #888888;
+  padding-left: 5px;
+  padding-top: 2px;
+  min-height: 21px;
+}
+
+.polarion-LinkPanel-button {
+  padding-top: 1px;
+  padding-left: 5px;
+}
+
+.polarion-LinkPanel-button-disabled {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.polarion-LinkPanel-hintContainer {
+  padding-top: 2px;
+}
+
+.polarion-LinkPanel-hint {
+  font-size: 11px;
+  font-style: italic;
+  color: #888888;
+  padding-left: 10px;
+}
+
+.polarion-LinkPanel-linkContainer {
+  height: 30px;
+  width: 100%;
+}
+
+.polarion-LinkPanel-linkDetailsContainer {
+  padding-top: 5px;
+  width: 100%;
+}
+
+.polarion-LinkPanel-linkArrow {
+  padding-right: 5px;
+  padding-left: 2px;
+  vertical-align: top;
+  width: 26px;
+}
+
+.polarion-LinkPanel-targetTypeIcon {
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 2px;
+}
+
+.polarion-LinkPanel-targetLink {
+  color: #565656;
+  font-weight: bold;
+  width: 97px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.polarion-LinkPanel-roleCombo {
+  width: 150px;
+  background: white;
+}
+
+.polarion-LinkPanel-infoContainer {
+  font-size: 11px;
+  background: #D1E8FF;
+  border: 1px solid #D1E8FF;
+  border-radius: 6px;
+  color: #0E4A90;
+  padding: 7px;
+  width: 100%;
+}
+
+.polarion-LinkPanel-infoContainerParent {
+  padding: 15px 0px 0px 15px;
+  width: 100%;
+}
+
+.polarion-LinkPanel-infoIcon {
+  padding-right: 7px;
+  padding-left: 5px;
+}
+
+.polarion-LinkPanel-problemContainer {
+  font-weight: bold;
+  background: #FFE599;
+  border: 1px solid #D7B960;
+  border-radius: 6px;
+  color: #996F11;
+  padding: 7px;
+  width: 100%;
+}
+
+.polarion-LinkPanel-problemContainerParent {
+  padding: 15px 0px 0px 15px;
+  width: 100%;
+}
+
+.polarion-LinkPanel-problemIcon {
+  padding-right: 7px;
+  padding-left: 5px;
+}
+
+.polarion-LinkPanel-savedLinksContainer {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.polarion-LinkPanel-savedLinksPanel {
+  padding-left: 2px;
+  padding-top: 2px;
+}
+
+.polarion-LinkPanel-savedLinksTypeIcon {
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 2px;
+}
+
+.polarion-PortalLink {
+  text-decoration: underline;
+}
+
+.polarion-LinkDialog-width100pct {
+  width: 100%;
+}
+
+.polarion-LinkDialog-urlSection {
+  width: 100%;
+  padding-bottom: 1px;
+  background-color: #f7f7f7;
+}
+
+.polarion-LinkDialog-urlLabel {
+  font-weight: bold;
+  padding: 18px 11px;
+  white-space: nowrap;
+}
+
+.polarion-LinkDialog-urlPanel {
+  width: 100%;
+}
+
+.polarion-LinkDialog-urlPanel .polarion-LinkDialog-urlInput {
+  margin-top: 16px;
+}
+
+.polarion-LinkDialog-urlInput {
+  width: 100%;
+}
+
+.polarion-LinkDialog-linkCell {
+  padding-top: 2px;
+}
+
+.polarion-LinkDialog-insertExistingLink {
+  color: #0277BB !important;
+}
+
+.polarion-LinkDialog-urlNextButton {
+  margin-left: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-right: 6px;
+}
+
+.polarion-LinkDialog-urlNextButton-disabled {
+  opacity: 0.6;
+  filter: alpha(opacity=50);
+  /* For IE8 and earlier */
+}
+
+.polarion-LinkDialog-contentSection {
+  padding-left: 11px;
+  min-height: 260px;
+  position: relative;
+}
+
+.polarion-LinkDialog-contentSection .polarion-RpcPanel-Progress {
+  position: absolute;
+}
+
+.polarion-LinkDialog-contentSection .polarion-LinkDialog-hint {
+  color: #BFBFBF;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.polarion-LinkDialog-labelInputSection {
+  margin-top: 10px;
+}
+
+.polarion-LinkDialog-labelInputSection-label {
+  padding: 12px 8px 12px 0px;
+  white-space: nowrap;
+}
+
+.polarion-LinkDialog-labelInputSection-input {
+  width: 100%;
+}
+
+.polarion-LinkDialog-optionSection {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.polarion-LinkDialog-optionSection-label {
+  color: #666666;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.polarion-LinkDialog-optionSection-optionsCell {
+  padding-top: 7px;
+  padding-left: 20px;
+}
+
+.polarion-LinkDialog-optionSection-options {
+  width: 100%;
+}
+
+.polarion-LinkDialog-optionSection-optionPanel {
+  width: 100%;
+}
+
+.polarion-LinkDialog-optionSection-optionPanel .polarion-RadioButton > input {
+  margin-top: 0px;
+}
+
+.polarion-LinkPanel-popup .polarion-LinkDialog-optionSection-optionPanel .polarion-RadioButton {
+  display: table !important;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.polarion-LinkPanel-popup .polarion-LinkDialog-optionSection-optionPanel * {
+  white-space: nowrap !important;
+}
+
+.polarion-LinkPanel-popup .polarion-LinkDialog-optionSection-optionPanel .polarion-RadioButton > label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+.polarion-LinkDialog-customOption {
+  white-space: nowrap;
+}
+
+.polarion-LinkDialog-customOption > label {
+  padding-right: 8px;
+}
+
+.polarion-LinkPopup-rpcPanel {
+  position: relative;
+  height: 166px;
+}
+
+.polarion-LinkPopup-contentContainer {
+  padding-left: 15px;
+}
+
+.polarion-LinkPopup-showAdvanced {
+  position: absolute;
+  bottom: 15px;
+  right: 0px;
+  color: #0277BB;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.polarion-oslc-popup-panel-content {
+  background-color: white;
+  position: fixed;
+  box-shadow: -10px -1px 10px 0px rgba(200, 200, 200, 0.9);
+}
+
+a.polarion-oslc-config-friend:visited {
+  text-decoration: underline !important;
+  color: red !important;
+  padding-left: 10px;
+}
+
+a.polarion-oslc-config-friend:hover {
+  text-decoration: underline !important;
+  color: red !important;
+  padding-left: 10px;
+}
+
+a.polarion-oslc-config-friend:active {
+  text-decoration: underline !important;
+  color: red !important;
+  padding-left: 10px;
+}
+
+a.polarion-oslc-config-friend:link {
+  text-decoration: underline !important;
+  color: red !important;
+  padding-left: 10px;
+}
+
+.polarion-oslc-label-critical {
+  color: #ff0000;
+  padding-left: 5px;
+}
+
+.polarion-oslc-link-login-hint {
+  font-style: italic;
+  color: #888888;
+  padding-left: 10px;
+}
+
+.polarion-oslc-link-login-hint {
+  font-style: italic;
+  color: #888888;
+  padding-left: 10px;
+}
+
+.polarion-oslc-icon {
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+  border: 0px;
+  margin-left: 0px;
+  margin-right: 6px;
+}
+
+.polarion-Approvals-mainPanel {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.polarion-Approvals-statisticsPanel {
+  width: 100%;
+  align: center;
+  text-shadow: 1px 1px 0 white;
+  height: 86px;
+}
+
+.polarion-Approvals-disabledText {
+  color: #888888;
+}
+
+.polarion-Approvals-centralPanel {
+  width: 100%;
+}
+
+.polarion-Approvals-invitePanel {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 6px;
+}
+
+.polarion-Approvals-invite {
+  color: #888888;
+  cursor: pointer;
+  height: 18px;
+  text-align: center;
+  text-shadow: 1px 1px 0 white;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-top: 1px solid #DEDEDE;
+  border-bottom: 1px solid #DEDEDE;
+  border-left: 1px solid #DEDEDE;
+  border-right: 1px solid #DEDEDE;
+  width: 170px;
+  white-space: nowrap;
+}
+
+.polarion-Approvals-invite img {
+  margin-right: 5px;
+}
+
+.polarion-Approvals-inviteUrlTextArea {
+  margin-top: 20px;
+  width: 100%;
+  height: 45px;
+  border: 1px solid lightgrey;
+}
+
+.polarion-Approvals-statistics-big {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.polarion-Approvals-statistics-small {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.polarion-Approvals-statistics-bigButton {
+  text-shadow: 1px 1px 0 white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 36px;
+  font-weight: bold;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.polarion-Approvals-statistics-bigButton img {
+  vertical-align: bottom;
+  padding-bottom: 4px;
+}
+
+.polarion-Approvals-statistics-bigButtonText {
+  font-size: 12px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.polarion-Approvals-statistics-smallNum {
+  text-shadow: 1px 1px 0 white;
+  vertical-align: middle;
+  font-size: 24px;
+  font-weight: bold;
+  padding-right: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: right;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.polarion-Approvals-statistics-smallText {
+  text-shadow: 1px 1px 0 white;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 10px;
+  font-weight: bold;
+  margin-left: 2px;
+  margin-right: 4px;
+}
+
+.polarion-Approvals-statistics-bigText .polarion-MenuButton-ArrowCell {
+  padding-left: 4px;
+}
+
+.polarion-Approvals-statistics-smallText .polarion-MenuButton-ArrowCell {
+  padding-left: 4px;
+}
+
+.approvalsApproved {
+  color: #3ca53c;
+}
+
+.approvalsDisapproved {
+  color: #a73c3c;
+}
+
+.approvalsWaiting {
+  color: #00c4c4;
+}
+
+.approvalsLeft {
+  color: #888888;
+}
+
+.polarion-Approvals-buttonsPanel {
+  margin: 5px 0px 5px 10px;
+  text-align: center;
+  vertical-align: middle;
+  width: 250px;
+}
+
+.polarion-Approvals-approveButton {
+  outline: none;
+  padding: 12px;
+  margin-right: 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #C1C1C1;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: bold;
+  color: #5E5E5E;
+  text-shadow: 1px 1px 0 white;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  width: auto;
+  background: #E3E3E3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#d7d7d7));
+  background: -moz-linear-gradient(top, #f0f0f0, #d7d7d7);
+  background: -ms-linear-gradient(top, #f0f0f0, #d7d7d7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0F0F0', endColorstr='#D7D7D7');
+  /* IE8 + IE9 */
+}
+
+.polarion-Approvals-approveButton .smallLabel {
+  font-size: 10px;
+}
+
+.polarion-Approvals-approveButton-disabled {
+  /*	opacity: 0.5;
+  	filter: alpha(opacity = 50);*/
+}
+
+.polarion-Approvals-approveButton-pushed {
+  color: whiteSmoke;
+  text-shadow: #519000 1px 1px;
+  border: 1px solid #347f08;
+  background: #3ca53c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#309830), to(#50b750));
+  background: -moz-linear-gradient(top, #309830, #50b750);
+  background: -ms-linear-gradient(top, #309830, #50b750);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#309830', endColorstr='#50b750');
+  /* IE8 + IE9 */
+}
+
+.polarion-Approvals-approveButton-lineCenter {
+  padding-top: 18px;
+  padding-bottom: 20px;
+}
+
+.polarion-Approvals-approveButton-pushed-ie-disabled {
+  color: whiteSmoke;
+  text-shadow: #519000 1px 1px;
+  border: 1px solid #347f08;
+  background: #3ca53c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#309830), to(#50b750));
+  background: -moz-linear-gradient(top, #309830, #50b750);
+  background: -ms-linear-gradient(top, #309830, #50b750);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#309830', endColorstr='#50b750');
+  /* IE8 + IE9 */
+}
+
+.polarion-Approvals-disapproveButton {
+  outline: none;
+  padding: 12px;
+  margin-left: 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-left: 0px;
+  border-color: #C1C1C1;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: bold;
+  color: #5E5E5E;
+  text-shadow: 1px 1px 0 white;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  width: auto;
+  background: #E3E3E3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#d7d7d7));
+  background: -moz-linear-gradient(top, #f0f0f0, #d7d7d7);
+  background: -ms-linear-gradient(top, #f0f0f0, #d7d7d7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0F0F0', endColorstr='#D7D7D7');
+  /* IE8 + IE9 */
+}
+
+.polarion-Approvals-disapproveButton .smallLabel {
+  font-size: 10px;
+}
+
+.polarion-Approvals-disapproveButton-pushed {
+  color: whiteSmoke;
+  text-shadow: #9C0000 1px 1px;
+  border: 1px solid #891717;
+  background: #a73c3c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a73c3c), to(#c94949));
+  background: -moz-linear-gradient(top, #a73c3c, #c94949);
+  background: -ms-linear-gradient(top, #a73c3c, #c94949);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a73c3c', endColorstr='#c94949');
+  /* IE8 + IE9 */
+}
+
+.polarion-Approvals-disapproveButton-lineCenter {
+  padding-top: 18px;
+  padding-bottom: 20px;
+}
+
+.polarion-Approvals-disapproveButton-pushed-ie-disabled {
+  color: whiteSmoke;
+  text-shadow: #9C0000 1px 1px;
+  border: 1px solid #891717;
+  background: #a73c3c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a73c3c), to(#c94949));
+  background: -moz-linear-gradient(top, #a73c3c, #c94949);
+  background: -ms-linear-gradient(top, #a73c3c, #c94949);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a73c3c', endColorstr='#c94949' );
+  /* IE8 + IE9 */
+}
+
+.polarion-Approvals-commentButton {
+  outline: none;
+  padding: 11px 6px 3px 7px;
+  vertical-align: middle;
+  margin-left: 8px;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #C1C1C1;
+  border-radius: 8px;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: bold;
+  color: #5E5E5E;
+  text-shadow: 1px 1px 0 white;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  width: 32px;
+  background: #E3E3E3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#d7d7d7));
+  background: -moz-linear-gradient(top, #f0f0f0, #d7d7d7);
+  background: -ms-linear-gradient(top, #f0f0f0, #d7d7d7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0F0F0', endColorstr='#D7D7D7' );
+  /* IE8 + IE9 */
+}
+
+.polarion-Approvals-commentButton-disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.polarion-Approvals-commentButtonBig {
+  outline: none;
+  padding: 11px 15px 7px 15px;
+  vertical-align: middle;
+  margin-left: 8px;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #C1C1C1;
+  border-radius: 8px;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: bold;
+  color: #5E5E5E;
+  text-shadow: 1px 1px 0 white;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: #E3E3E3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#d7d7d7));
+  background: -moz-linear-gradient(top, #f0f0f0, #d7d7d7);
+  background: -ms-linear-gradient(top, #f0f0f0, #d7d7d7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0F0F0', endColorstr='#D7D7D7' );
+  /* IE8 + IE9 */
+}
+
+.polarion-Approvals-commentButtonBig-disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.polarion-Approvals-commentButtonBig img {
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.polarion-Approvals-saveButton {
+  outline: none;
+  padding: 12px;
+  padding-left: 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #DBAF31;
+  border-radius: 8px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #854B17;
+  text-shadow: 1px 1px 0 white;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: #F6CB51;
+  background: -webkit-gradient(linear, left top, left bottom, from(#feda72), to(#f0bf38));
+  background: -moz-linear-gradient(top, #feda72, #f0bf38);
+  background: -ms-linear-gradient(top, #feda72, #f0bf38);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEDA72', endColorstr='#F0BF38');
+  /* IE8 + IE9 */
+  margin: 16px;
+  white-space: nowrap;
+}
+
+.polarion-Approvals-saveButton-disabled {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.polarion-Approvals-saveButton img {
+  padding-right: 12px;
+}
+
+.polarion-Approvals-statisticsButtonSeparator {
+  border-style: solid;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-bottom-width: 0px;
+  border-color: #DEDEDE;
+  width: 2px;
+  height: 63px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.polarion-Approvals-detailsContainerPanel {
+  width: 100%;
+  height: 100px;
+  padding: 8px 0px 7px 0px;
+}
+
+.polarion-Approvals-detailsParentPanel {
+  width: 100%;
+  height: 100px;
+  padding: 0px;
+  overflow: auto;
+}
+
+.polarion-Approvals-detailsPanel {
+  width: 100%;
+  /*	table-layout: fixed;*/
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.polarion-Approvals-detailsLabel {
+  text-shadow: 1px 1px 0 white;
+  text-align: right;
+  vertical-align: top;
+  font-size: 12px;
+  font-weight: bold;
+  padding-right: 12px;
+  padding-top: 1px;
+}
+
+.polarion-approvals-detailsLabelCell {
+  width: 110px;
+}
+
+.polarion-approvals-detailsNamesCell {
+  text-align: left;
+}
+
+.polarion-approvals-detailsResetCell {
+  vertical-align: top;
+  width: 16px;
+  height: 19px;
+}
+
+.polarion-approvals-detailsResetButton img {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.polarion-approvals-detailsResetButton img:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.polarion-approvals-detailsResetButtonDisabled img {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.polarion-Approvals-detailsRow {
+  width: 100%;
+}
+
+.polarion-Approvals-detailsNames {
+  width: 100%;
+}
+
+.polarion-Approvals-detailsNames-empty {
+  font-style: italic;
+}
+
+.polarion-Approvals-detailsNames-count {
+  font-weight: bold;
+}
+
+.polarion-Approvals-detailsMoreButton {
+  color: #888888;
+  text-decoration: underline;
+}
+
+.polarion-Approvals-selectedWIPanel {
+  width: 100%;
+  padding-top: 8px;
+  color: #888888;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 white;
+}
+
+.polarion-Approvals-wiLabel {
+  margin-left: 12px;
+  margin-right: 6px;
+  white-space: nowrap;
+}
+
+.polarion-Approvals-hLine {
+  border-style: solid;
+  border-top-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-color: #DEDEDE;
+  margin-left: 5px;
+  margin-right: 12px;
+}
+
+.polarion-Approvals-revertPanel {
+  padding-top: 10px;
+  padding-bottom: 4px;
+  width: 100%;
+  height: 34px;
+}
+
+.polarion-Approvals-revertButton {
+  color: #888888;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 white;
+  white-space: nowrap;
+}
+
+.polarion-Approvals-revertButton img {
+  margin-right: 5px;
+  opacity: 0.5;
+}
+
+.polarion-Approvals-revertButton:hover {
+  text-decoration: underline;
+}
+
+.polarion-Approvals-SidebarComments-MainGrid {
+  border-spacing: 10px;
+  width: 100%;
+}
+
+.polarion-Approvals-SidebarComments-MultiCommentParent {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.polarion-Approvals-SidebarComments-Grid {
+  width: 100%;
+}
+
+.polarion-Approvals-SidebarComment {
+  position: relative;
+  overflow: visible;
+  height: auto;
+  width: auto;
+  margin-right: 1px;
+  margin-bottom: 10px;
+  padding: 4px;
+  cursor: pointer;
+  border: 1px solid #CCCCCC;
+  background: #FFFFFF;
+  line-height: 20px;
+}
+
+.polarion-Approvals-SidebarComment.resolved {
+  background: whitesmoke;
+}
+
+.polarion-Approvals-SidebarComment.level-0 {
+  margin-left: 0px;
+}
+
+.polarion-Approvals-SidebarComment.level-1 {
+  margin-left: 10px;
+}
+
+.polarion-Approvals-SidebarComment.level-2 {
+  margin-left: 20px;
+}
+
+.polarion-Approvals-SidebarComment.level-3 {
+  margin-left: 30px;
+}
+
+.polarion-Approvals-SidebarComment.level-4 {
+  margin-left: 40px;
+}
+
+.polarion-Approvals-SidebarComment.level-5 {
+  margin-left: 50px;
+}
+
+.polarion-Approvals-SidebarComment.level-6 {
+  margin-left: 60px;
+}
+
+.polarion-Approvals-SidebarComment.level-7 {
+  margin-left: 70px;
+}
+
+.polarion-Approvals-SidebarComment.level-8 {
+  margin-left: 80px;
+}
+
+.polarion-Approvals-SidebarComment.level-9 {
+  margin-left: 90px;
+}
+
+.polarion-Approvals-SidebarComment.level-10 {
+  margin-left: 100px;
+}
+
+.polarion-Approvals-SidebarComment.level-11 {
+  margin-left: 110px;
+}
+
+.polarion-Approvals-SidebarComment.level-12 {
+  margin-left: 120px;
+}
+
+.polarion-Approvals-SidebarComment.level-13 {
+  margin-left: 130px;
+}
+
+.polarion-Approvals-SidebarComment.level-14 {
+  margin-left: 140px;
+}
+
+.polarion-Approvals-SidebarComment.level-15 {
+  margin-left: 150px;
+}
+
+.polarion-Approvals-SidebarComment.level-16 {
+  margin-left: 160px;
+}
+
+.polarion-Approvals-SidebarComment.level-17 {
+  margin-left: 170px;
+}
+
+.polarion-Approvals-SidebarComment.level-18 {
+  margin-left: 180px;
+}
+
+.polarion-Approvals-SidebarComment.level-19 {
+  margin-left: 190px;
+}
+
+.polarion-Approvals-SidebarComment.level-20 {
+  margin-left: 200px;
+}
+
+.polarion-Approvals-SidebarComment.level-21 {
+  margin-left: 210px;
+}
+
+.polarion-Approvals-SidebarComment.level-22 {
+  margin-left: 220px;
+}
+
+.polarion-Approvals-SidebarComment.level-23 {
+  margin-left: 230px;
+}
+
+.polarion-Approvals-SidebarComment.level-24 {
+  margin-left: 240px;
+}
+
+.polarion-Approvals-SidebarComment.level-25 {
+  margin-left: 250px;
+}
+
+.polarion-Approvals-SidebarComment.level-26 {
+  margin-left: 260px;
+}
+
+.polarion-Approvals-SidebarComment.level-27 {
+  margin-left: 270px;
+}
+
+.polarion-Approvals-SidebarComment.level-28 {
+  margin-left: 280px;
+}
+
+.polarion-Approvals-SidebarComment.level-29 {
+  margin-left: 290px;
+}
+
+.polarion-Approvals-SidebarComment.level-30 {
+  margin-left: 300px;
+}
+
+.polarion-Approvals-PositionFix {
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  position: absolute !important;
+}
+
+.polarion-Approvals-actionApprovedCount {
+  color: #3ca53c;
+  font-weight: bold;
+}
+
+.polarion-Approvals-actionDisapprovedCount {
+  color: #a73c3c;
+  font-weight: bold;
+}
+
+.polarion-Approvals-actionWaitingCount {
+  color: #00c4c4;
+  font-weight: bold;
+}
+
+.polarion-Approvals-actionZeroCount {
+  color: #D8D8D8;
+  font-weight: bold;
+}
+
+.polarion-Approvals-action {
+  display: block;
+  height: 16px;
+  width: 16px;
+}
+
+.polarion-Approvals-action.on {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+}
+
+.polarion-Approvals-action.off {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* For IE8 and earlier */
+}
+
+.polarion-Approvals-action.disabled {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* For IE8 and earlier */
+}
+
+.polarion-Approvals-action.on.approve {
+  background-image: url("/polarion/ria/images/actions/tick.png");
+}
+
+.polarion-Approvals-action.off.approve {
+  background-image: url("/polarion/ria/images/actions/tick_grey.png");
+}
+
+.polarion-Approvals-action.off.approve:not(.nohover):hover {
+  background-image: url("/polarion/ria/images/actions/tick.png");
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+}
+
+.polarion-Approvals-action.on.disapprove {
+  background-image: url("/polarion/ria/images/actions/cross.png");
+}
+
+.polarion-Approvals-action.off.disapprove {
+  background-image: url("/polarion/ria/images/actions/cross_grey.png");
+}
+
+.polarion-Approvals-action.off.disapprove:not(.nohover):hover {
+  background-image: url("/polarion/ria/images/actions/cross.png");
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+}
+
+.polarion-Approvals-action.on.comment {
+  background-image: url("/polarion/ria/images/actions/comment_decoration.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.polarion-Approvals-action.off.comment {
+  background-image: url("/polarion/ria/images/actions/comment_decoration_grey.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.polarion-Approvals-action.off.comment:hover {
+  background-image: url("/polarion/ria/images/actions/comment_decoration.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+}
+
+.polarion-dle-wiki-block {
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  line-height: 1.7em;
+  position: relative;
+  left: -40px;
+  width: 754px;
+  border-left: 6px dotted #DDDDDD;
+  padding-left: 34px;
+}
+
+.polarion-dle-wiki-block-icon {
+  cursor: pointer !important;
+  position: absolute;
+  margin-left: -60px;
+}
+
+.polarion-dle-wiki-block-source {
+  position: absolute;
+  margin-left: -100000px;
+  display: none;
+}
+
+.polarion-dle-workitem-title {
+  font-weight: bold;
+}
+
+.polarion-dle-workitem-fields-start {
+  font-weight: bold;
+}
+
+.polarion-dle-workitem-fields-end-table {
+  border-collapse: collapse;
+  border: 1px solid #CCCCCC;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.polarion-dle-workitem-fields-end-table-label {
+  padding: 4px;
+  padding-right: 20px;
+  border: 1px solid #CCCCCC;
+}
+
+.polarion-dle-workitem-fields-end-table-value {
+  padding: 4px;
+  padding-right: 20px;
+  border: 1px solid #CCCCCC;
+}
+
+.polarion-dle-captionContainer {
+  text-align: center;
+}
+
+.polarion-dle-captionContainer-caption {
+  text-align: center;
+}
+
+.polarion-dle-tableCaptionContainer-caption {
+  text-align: center;
+}
+
+.polarion-rte-caption-paragraph {
+  font-style: italic;
+  font-size: 8pt;
+}
+
+.polarion-dle-tof-link {
+  color: black;
+}
+
+.heading-7, .heading-8, .heading-9, .heading-10, .heading-11, .heading-12, .heading-13, .heading-14, .heading-15, .heading-16, .heading-17, .heading-18, .heading-19, .heading-20, .heading-21, .heading-22, .heading-23, .heading-24, .heading-25, .heading-26, .heading-27, .heading-28, .heading-29, .heading-30, .heading-31 {
+  margin: 0.83em 0 0.41em;
+  font-size: 10pt;
+  line-height: 1.5;
+  color: black;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.polarion-rpw-table-main {
+  width: 100%;
+}
+
+.polarion-rpw-table-content {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.polarion-rpw-table-header-row > th {
+  vertical-align: top;
+  text-align: left;
+  padding: 0px 4px;
+  height: 28px;
+  color: #757575;
+  font-weight: normal;
+  border-bottom: 1px solid #D2D7DA;
+}
+
+.polarion-rpw-table-content-row > td {
+  vertical-align: top;
+  padding: 9px 14px 9px 4px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.polarion-rpw-table-not-readable-cell {
+  font-style: italic;
+}
+
+.polarion-rpw-table-footer {
+  text-align: center;
+  font-style: italic;
+  width: 100%;
+  vertical-align: top;
+}
+
+.polarion-rpw-table-counts {
+  display: inline-block;
+  padding: 0 7px;
+  vertical-align: middle;
+}
+
+.polarion-rpw-table-open-in-table {
+  display: inline-block;
+  color: #1D5696 !important;
+  padding: 0px 7px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.polarion-rpw-table-open-in-table > a > img {
+  border: 0px;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.polarion-rpw-table-open-in-table > a > img:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.polarion-rpw-table-show-query {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.polarion-rpw-table-show-query:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.polarion-rpw-table-query {
+  display: none;
+  padding-top: 5px;
+  color: #717171;
+}
+
+.polarion-errormessage, .polarion-warningmessage, .polarion-infomessage, .polarion-infomessage-noSideMargin, .polarion-plainmessage {
+  text-align: left;
+  margin: 4px 5px;
+  padding: 16px 4px 16px 36px;
+  background: whitesmoke url("/polarion/wiki/skins/sidecar/msg.png") 10px 18px no-repeat;
+}
+
+.polarion-infomessage, .polarion-infomessage-noSideMargin {
+  background-image: url("/polarion/wiki/skins/sidecar/images/msginfo.png");
+  background-color: #D8E4F1;
+}
+
+.polarion-infomessage-noSideMargin {
+  margin: 4px 0px;
+}
+
+.polarion-warningmessage {
+  background-image: url("/polarion/wiki/skins/sidecar/images/msgwarning.png");
+  background-color: #FFFFCE;
+}
+
+.polarion-errormessage {
+  background-image: url("/polarion/wiki/skins/sidecar/images/msgerror.png");
+  background-color: #FFCCCC;
+}
+
+.polarion-plainmessage {
+  background-image: none;
+}
+
+.polarion-dle-clipboard-container {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  left: 1px;
+}
+
+.polarion-rpe-content {
+  padding: 5px;
+  font-size: 10pt;
+}
+
+.polarion-dle-document p, .polarion-rpe-content p {
+  line-height: 1.5;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.polarion-rpe-content a {
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+.polarion-rpe-content a:hover {
+  text-decoration: underline !important;
+}
+
+.polarion-TestRecordsTable {
+  width: 100%;
+}
+
+.polarion-rte-link a, .polarion-TestRecordsTable a {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+.polarion-rte-link a:visited, .polarion-TestRecordsTable a:visited {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+.polarion-rte-link a:hover, .polarion-TestRecordsTable a:hover {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: underline !important;
+}
+
+.polarion-TestRecordsTable tr.arrow:hover {
+  cursor: pointer !important;
+}
+
+a.descriptionLink {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+a.descriptionLink:visited {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+a.descriptionLink:hover {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: underline !important;
+}
+
+a.polarion-dle-toc-link:link {
+  cursor: pointer !important;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+a.polarion-dle-toc-link:visited {
+  cursor: pointer !important;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+a.polarion-dle-toc-link:hover {
+  cursor: pointer !important;
+  color: black !important;
+  text-decoration: underline !important;
+}
+
+.polarion-BurnMacro-warning {
+  background-color: #ffffce;
+  padding: 10px;
+  text-align: left;
+}
+
+.polarion-dle-document .polarion-PlanLabelMacro-mainAnchor,
+.polarion-dle-document .polarion-PlanLabelMacro-mainAnchor:link,
+.polarion-dle-document .polarion-PlanLabelMacro-mainAnchor:visited,
+.polarion-dle-document .polarion-PlanLabelMacro-mainAnchor:hover,
+.polarion-dle-document .polarion-PlanLabelMacro-anchor,
+.polarion-dle-document .polarion-PlanLabelMacro-anchor:link,
+.polarion-dle-document .polarion-PlanLabelMacro-anchor:hover,
+.polarion-dle-document .polarion-PlanLabelMacro-anchor:visited {
+  color: #0F4B8F !important;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.polarion-PlanLabelMacro-mainAnchor i, .polarion-PlanLabelMacro-anchor i, .polarion-PlanningSidebar-label i, .polarion-PlanningSidebar-treeNodeButton i, .dataCell .fa {
+  padding-right: 0.3em;
+}
+
+.polarion-PlanLabelMacro-container, .polarion-TestRunLabelWidget-container {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #E1F0FF;
+}
+
+.polarion-PlanLabelMacro-container a, .polarion-TestRunLabelWidget-container a {
+  color: #0E4A90 !important;
+}
+
+.polarion-PlanLabelMacro-mainLabel, .polarion-TestRunLabelWidget-container {
+  font-weight: bold;
+  font-size: 30px !important;
+  line-height: 50px;
+}
+
+.polarion-PlanLabelMacro-parents {
+  font-size: 12px;
+  padding-bottom: 7px;
+}
+
+.polarion-PlanLabelMacro-childrenTable {
+  table-layout: fixed;
+}
+
+.polarion-PlanLabelMacro-children {
+  font-size: 12px;
+  padding-top: 7px;
+}
+
+.polarion-PlanLabelMacro-createChild {
+  cursor: pointer;
+}
+
+.polarion-PlanLabelMacro-parentsSeparator {
+  color: #777777;
+  margin-right: 10px;
+}
+
+.polarion-PlanLabelMacro-planFinishedDivGreen {
+  color: #FFFFFF;
+  font-size: 15px;
+  padding: 17px;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+.polarion-PlanLabelMacro-planFinishedDivGreen {
+  background: #27AE60;
+}
+
+.polarion-PlanLabelMacro-planFinishedDivGreen:hover {
+  background: #009248;
+}
+
+.polarion-PlanLabelMacro-planFinishedNormalSpan, .polarion-PlanLabelMacro-planFinishedBoldSpan, .polarion-PlanLabelMacro-planFinishedDotSpan {
+  vertical-align: middle;
+}
+
+.polarion-PlanLabelMacro-planFinishedBoldSpan {
+  font-weight: bold;
+}
+
+.polarion-PlanLabelMacro-planFinishedNormalSpan {
+  text-decoration: underline;
+}
+
+.polarion-PlanProgressMacro-mainDiv, .polarion-PlanProgressMacro-mainRelativeDiv {
+  padding-left: 10px;
+  width: 100%;
+}
+
+.polarion-PlanProgressMacro-mainRelativeDiv {
+  position: relative;
+  height: 75px;
+}
+
+/* width is defined as inline style for the div*/
+.polarion-PlanProgressMacro-mainRelativeDiv > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.polarion-PlanProgressMacro-mainTable {
+  border-width: 0px;
+  margin-right: 10px;
+}
+
+.polarion-PlansMacro-mainTable {
+  border-width: 0px;
+  margin-right: 23px;
+  height: 48px;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowTopRight, .polarion-PlanProgressMacro-arrowBottomLeft, .polarion-PlanProgressMacro-arrowBottomLeftAligned, .polarion-PlanProgressMacro-arrowBottomRight {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  pd4ml-display: none;
+}
+
+.polarion-PlansMacro-arrowTopLeft, .polarion-PlansMacro-arrowTopRight {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  pd4ml-display: none;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowTopRight, .polarion-PlansMacro-arrowTopLeft, .polarion-PlansMacro-arrowTopRight {
+  border-top-color: #3A7523;
+  border-top-style: solid;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowTopRight {
+  top: -6px;
+}
+
+.polarion-PlansMacro-arrowTopLeft, .polarion-PlansMacro-arrowTopRight {
+  top: -5px;
+}
+
+.polarion-PlanProgressMacro-arrowBottomRight {
+  border-bottom-color: #DE6768;
+}
+
+.polarion-PlanProgressMacro-arrowBottomLeft, .polarion-PlanProgressMacro-arrowBottomLeftAligned {
+  border-bottom-color: #3A7523;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowTopRight {
+  border-top-width: 11px;
+}
+
+.polarion-PlansMacro-arrowTopLeft, .polarion-PlansMacro-arrowTopRight {
+  border-top-width: 8px;
+}
+
+.polarion-PlanProgressMacro-arrowBottomLeft, .polarion-PlanProgressMacro-arrowBottomLeftAligned, .polarion-PlanProgressMacro-arrowBottomRight {
+  border-bottom-width: 11px;
+  border-bottom-style: solid;
+  bottom: -26px;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowBottomLeft {
+  left: -8px;
+}
+
+.polarion-PlansMacro-arrowTopLeft {
+  left: -6px;
+}
+
+.polarion-PlanProgressMacro-arrowBottomLeftAligned {
+  left: -6px;
+}
+
+.polarion-PlanProgressMacro-arrowTopRight, .polarion-PlanProgressMacro-arrowBottomRight {
+  right: -8px;
+}
+
+.polarion-PlansMacro-arrowTopRight {
+  right: -6px;
+}
+
+.polarion-PlanProgressMacro-leftCellGrey, .polarion-PlanProgressMacro-leftCellGreen, .polarion-PlanProgressMacro-leftCellRed, .polarion-PlanProgressMacro-rightCell, .polarion-PlanProgressMacro-leftCellBlack {
+  border-width: 0px;
+}
+
+.polarion-PlanProgressMacro-leftCellGrey, .polarion-PlanProgressMacro-leftCellGreen, .polarion-PlanProgressMacro-leftCellRed, .polarion-PlanProgressMacro-leftCellBlack {
+  vertical-align: middle;
+  font-family: helvetica;
+  font-size: 28px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+
+.polarion-PlansMacro-leftCellGrey {
+  vertical-align: middle;
+  font-family: helvetica;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+
+.polarion-PlanProgressMacro-leftCellGrey, .polarion-PlansMacro-leftCellGrey {
+  color: #888888;
+}
+
+.polarion-PlanProgressMacro-leftCellGreen {
+  color: #3A7523;
+}
+
+.polarion-PlanProgressMacro-leftCellRed {
+  color: #CA0814;
+}
+
+.polarion-PlanProgressMacro-rightCell {
+  width: 100%;
+}
+
+.polarion-PlanProgressMacro-infoDoneDiv, .polarion-PlanProgressMacro-infoIdealDiv {
+  min-height: 10px;
+}
+
+.polarion-PlansMacro-infoDoneDiv {
+  max-height: 11px;
+  min-height: 11px;
+}
+
+.polarion-PlansMacro-infoIdealDiv {
+  min-height: 11px;
+}
+
+.polarion-PlanProgressMacro-progressBarDiv, .polarion-PlansMacro-progressBarDiv {
+  border-color: #CCCCCC;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2px;
+}
+
+.polarion-PlansMacro-progressBarDiv {
+  padding: 1px;
+}
+
+.polarion-PlanProgressMacro-progressBarInnerTable, .polarion-PlanProgressMacro-infoInnerTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.polarion-PlanProgressMacro-progressBarInnerTable {
+  height: 16px;
+}
+
+.polarion-PlanProgressMacro-leftProgressBar, .polarion-PlanProgressMacro-centerProgressBar, .polarion-PlanProgressMacro-centerProgressBarOutpaced, .polarion-PlanProgressMacro-rightProgressBar {
+  border-style: solid;
+  border-width: 0 0 20px;
+}
+
+.polarion-PlansMacro-leftProgressBar, .polarion-PlansMacro-centerProgressBar, .polarion-PlansMacro-centerProgressBarOutpaced, .polarion-PlansMacro-rightProgressBar {
+  border-style: solid;
+  border-width: 0 0 14px;
+}
+
+.polarion-PlanProgressMacro-leftProgressBar, .polarion-PlansMacro-leftProgressBar, .polarion-PlansMacro-centerProgressBarOutpaced {
+  background-color: #AED77E;
+  border-color: #AED77E;
+}
+
+.polarion-PlanProgressMacro-centerProgressBar {
+  background-color: #FFD8D9;
+  border-color: #FFD8D9;
+}
+
+.polarion-PlanProgressMacro-centerProgressBarOutpaced {
+  background-color: #86C142;
+  border-color: #86C142;
+}
+
+.polarion-PlanProgressMacro-rightProgressBar, .polarion-PlansMacro-rightProgressBar, .polarion-PlansMacro-centerProgressBar {
+  background-color: #F1F1F1;
+  border-color: #F1F1F1;
+}
+
+.polarion-PlanProgressMacro-infoMiddleCell {
+  width: 1%;
+}
+
+.polarion-PlanProgressMacro-infoDivGreen, .polarion-PlanProgressMacro-infoDivRed, .polarion-PlansMacro-infoDivGreen, .polarion-PlansMacro-infoDivRed {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.polarion-PlanProgressMacro-infoDivGreen, .polarion-PlanProgressMacro-infoDivRed {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.polarion-PlansMacro-infoDivGreen {
+  font-size: 9px;
+  line-height: 1em;
+  font-family: helvetica;
+}
+
+.polarion-PlanProgressMacro-infoDivGreen, .polarion-PlansMacro-infoDivGreen {
+  color: #3A7523;
+}
+
+.polarion-PlanProgressMacro-infoDivRed {
+  color: #DE6768;
+}
+
+.polarion-PlanProgressMacro-relativeDivContainer {
+  position: relative;
+}
+
+.polarion-PlanProgressMacro-displayNone {
+  display: none;
+}
+
+.polarion-PlansMacro-smallCirle {
+  background: none repeat scroll 0 0 #E1F0FF;
+  border-radius: 50%;
+  height: 16px;
+  left: 4px;
+  top: 18px;
+  position: absolute;
+  width: 16px;
+}
+
+.polarion-PlansMacro-smallPlus {
+  height: 16px;
+  left: 7px;
+  top: 2px;
+  position: absolute;
+  width: 16px;
+}
+
+.polarion-PlansMacro-contentTable {
+  border-radius: 6px;
+  background-color: #F5F5F5;
+  width: 100%;
+  border-collapse: separate;
+  height: 54px;
+}
+
+.polarion-PlansMacro-plansTable {
+  width: 100%;
+  max-width: 800px;
+}
+
+.polarion-PlansMacro-leftCell {
+  width: 30px;
+  min-width: 30px;
+}
+
+.polarion-PlansMacro-leftCell, .polarion-PlansMacro-rightCell {
+  border-bottom: 12px solid white;
+}
+
+.polarion-PlansMacro-errorDiv {
+  color: #888888;
+  float: right;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.polarion-PlansMacro-noPlansSpan {
+  color: #888888;
+  float: left;
+  font-weight: bold;
+}
+
+.polarion-PlansMacro-errorInvalidPlans {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.polarion-PlansMacro-progressBarCell {
+  width: 50%;
+  vertical-align: middle;
+}
+
+.polarion-PlansMacro-planNameCell, .polarion-PlansMacro-planNewTable {
+  font-size: 15px;
+  color: #0F4B8F;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.polarion-PlansMacro-planNewTable:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.polarion-PlansMacro-planNameCell {
+  padding-left: 13px;
+  max-width: 200px;
+  vertical-align: middle;
+}
+
+.polarion-PlansMacro-planNameDiv, .polarion-PlansMacro-planNameDivStriked {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.polarion-PlansMacro-planNameDivStriked {
+  text-decoration: line-through;
+}
+
+.polarion-PlansMacro-planNameDiv i, .polarion-PlansMacro-planNameDivStriked i {
+  margin-right: 10px;
+  vertical-align: -5px;
+}
+
+.polarion-PlansMacro-contentRow {
+  height: 50px;
+  background-color: #F5F5F5;
+}
+
+.polarion-PlansMacro-contentRow .polarion-PlanProgressMacro-mainRelativeDiv {
+  height: 50px;
+}
+
+.polarion-PlansMacro-verticalLine, .polarion-PlansMacro-verticalLineShort {
+  border-right: 2px solid #E1F0FF;
+  position: absolute;
+  left: 11px;
+  top: 32px;
+}
+
+.polarion-PlansMacro-verticalLine {
+  height: 58px;
+}
+
+.polarion-PlansMacro-verticalLineShort {
+  height: 36px;
+}
+
+.polarion-PlansMacro-figuresContainer {
+  position: absolute;
+}
+
+.polarion-WorkItemsBoardMacro-Table {
+  border-collapse: separate;
+  border-spacing: 0px;
+  table-layout: fixed;
+  cellspacing: 0px;
+}
+
+.polarion-WorkItemsBoardMacro-BorderSmallCell {
+  min-width: 4px;
+}
+
+.polarion-WorkItemsBoardMacro-MiddleEmptyCell {
+  min-width: 16px;
+}
+
+.polarion-WorkItemsBoardMacro-HeaderCell {
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ecf0f1;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.polarion-WorkItemsBoardMacro-FooterCell {
+  height: 15px;
+  border-radius: 0 0 10px 10px;
+  background-color: #ecf0f1;
+}
+
+.polarion-WorkItemsBoardMacro-LeftSmallCell {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.polarion-WorkItemsBoardMacro-RightSmallCell {
+  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #eeeeee;
+}
+
+.polarion-WorkItemsBoardMacro-TopLeveWICell {
+  padding: 2px;
+  border: solid #eeeeee;
+  border-width: 1px 1px 1px 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  vertical-align: middle;
+  background-color: white;
+}
+
+.polarion-WorkItemsBoardMacro-TopLeveWICell tr,
+.polarion-WorkItemsBoardMacro-ChildWiCell tr,
+.polarion-WorkItemsBoardMacro-ChildWiCell-compact tr {
+  page-break-inside: avoid;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-WorkitemTable, .polarion-WorkItemsBoardMacro-ChildWiCell-WiTable {
+  height: 38px;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-WorkitemTable,
+.polarion-WorkItemsBoardMacro-ChildWiCell-WiTable,
+.polarion-WorkItemsBoardMacro-ChildWiCell-WiTable-compact {
+  border-spacing: 2px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Class for tables cells. It prevents changing sizes(extending) of parent table column, in case if cell contains some long text wit out spaces. */
+.polarion-WorkItemsBoardMacro-NonExtendable, .polarion-WorkItemsBoardMacro-TopLevelWICell-Workitem, .polarion-WorkItemsBoardMacro-TopLevelWICell-CustomFieldBasedEstimate, .polarion-WorkItemsBoardMacro-ChildWiCell-RemainingEstimate,
+.polarion-WorkItemsBoardMacro-ChildWiCell-CompactInfo {
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-Workitem {
+  font-size: 15px;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-WorkitemTable a {
+  white-space: nowrap;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-CustomFieldBasedEstimate {
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.polarion-WorkItemsBoardMacro-EmptyTableCell {
+  padding: 5px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  font-size: 15px;
+  font-weight: bold;
+  color: #a2a2a2;
+}
+
+.polarion-WorkItemsBoardMacro-ChildCell {
+  background-color: #ecf0f1;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell, .polarion-WorkItemsBoardMacro-ChildWiCell-compact {
+  border-radius: 5px;
+  border-left: 5px solid;
+  border-right: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  background-color: white;
+  position: relative;
+  margin: 5px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell {
+  padding: 7px 3px 3px 7px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-compact {
+  padding: 2px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell img, .polarion-WorkItemsBoardMacro-ChildWiCell a {
+  vertical-align: middle;
+}
+
+.polarion-WorkItemsBoardMacro-AvatarContainer {
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  position: relative;
+  padding: 2px;
+}
+
+.polarion-WorkItemsBoardMacro-AvatarContainer-Avatar {
+  width: 36px;
+  height: 36px;
+  float: right;
+  border-radius: 18px;
+}
+
+.polarion-WorkItemsBoardMacro-NumberDecorator, .polarion-WorkItemsBoardMacro-NumberDecorator-pdf {
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+  color: white;
+  border: solid 1px white;
+  background-color: grey;
+  position: absolute;
+  overflow: hidden;
+}
+
+.polarion-WorkItemsBoardMacro-NumberDecorator {
+  border-radius: 6px;
+  line-height: 12px;
+  font-size: 9px;
+  text-align: center;
+  top: 26px;
+  left: 26px;
+  height: 12px;
+  width: 12px;
+}
+
+.polarion-WorkItemsBoardMacro-NumberDecorator-pdf {
+  line-height: 9px;
+  font-size: 8px;
+  text-align: right;
+  top: 28px;
+  left: 28px;
+  height: 10px;
+  width: 10px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-NumberDecorator > span {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-Title {
+  vertical-align: top;
+  overflow: hidden;
+  font-size: 12px;
+  color: #0e4a90;
+  padding: 2px 4px 0px 2px;
+  position: relative;
+  line-height: 15px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-Title-nonForPdf {
+  height: 38px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-RemainingEstimate,
+.polarion-WorkItemsBoardMacro-ChildWiCell-CompactInfo,
+.polarion-WorkItemsBoardMacro-TopLevelWICell-CustomFieldBasedEstimate {
+  font-size: 11px;
+  color: #a2a2a2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 4px;
+}
+
+.polarion-WorkItemsBoardMacro-currentUser {
+  font-weight: bold;
+}
+
+.polarion-WorkItemsBoardMacro-gradient {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#FFFFFFFF',GradientType=0 );
+  bottom: 0px;
+  cursor: pointer;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+}
+
+.polarion-WorkItemsBoardMacro-TimeSpentProgressValue {
+  height: 16px;
+  background-color: #acd879;
+}
+
+.polarion-WorkItemsBoardMacro-RemainingEstimateProgressValue {
+  height: 16px;
+  background-color: #e5e5e5;
+}
+
+.polarion-padded-font-icon-16 {
+  font-size: 16px;
+  padding-right: 6px;
+}
+
+.polarion-plain-font-icon-16 {
+  font-size: 16px;
+}
+
+.polarion-font-icon-16 {
+  font-size: 16px;
+  text-shadow: 1px 1px 0 white;
+}
+
+.polarion-font-icon-24 {
+  font-size: 24px;
+  text-shadow: 1px 1px 0 white;
+  vertical-align: -0.115384em;
+}
+
+.polarion-font-icon-32 {
+  font-size: 32px;
+  text-shadow: 1px 1px 0 white;
+}
+
+.polarion-font-icon-topicTree {
+  font-size: 25px;
+  text-shadow: 1px 1px 0 white;
+  margin: 2px;
+}
+
+.polarion-font-icon-relative {
+  font-size: 1.230769em;
+  vertical-align: -0.115384em;
+  text-shadow: 1px 1px 0 white;
+  padding-right: 0.3em;
+}
+
+.polarion-font-icon-relative-ActivityStream {
+  font-size: 1.230769em;
+  vertical-align: -0.115384em;
+  text-shadow: 1px 1px 0 white;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+.polarion-font-icon-combo {
+  font-size: 13px;
+  text-shadow: 1px 1px 0 white;
+  padding-right: 4px;
+}
+
+.polarion-dle-document h1, .polarion-dle-document h2, .polarion-dle-document h3, .polarion-dle-document h4, .polarion-dle-document h5, .polarion-dle-document h6 {
+  color: #003366;
+  font-weight: bold;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.83em 0 0.41em;
+}
+
+.polarion-dle-document h1 {
+  border-bottom: 1px solid lightgrey;
+  font-size: 26pt;
+  padding-bottom: 5px;
+}
+
+.polarion-dle-document h2 {
+  font-size: 22pt;
+}
+
+.polarion-dle-document h3 {
+  font-size: 18pt;
+}
+
+.polarion-dle-document h4 {
+  font-size: 14pt;
+}
+
+.polarion-dle-document h5 {
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+.polarion-dle-document h6 {
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+.polarion-rpe-content h1, .polarion-rpe-content h2, .polarion-rpe-content h3, .polarion-rpe-content h4, .polarion-rpe-content h5, .polarion-rpe-content h6 {
+  color: #0E4A90;
+  text-shadow: 1px 1px 0.01em white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+.polarion-rpe-content h1 {
+  font-size: 30px;
+  line-height: 50px;
+  border-bottom: 4px solid #E1F0FF;
+}
+
+.polarion-rpe-pdf.polarion-rpe-content h1 {
+  border-bottom: none !important;
+}
+
+.polarion-rpe-content h2 {
+  font-size: 23px;
+  background-color: #E1F0FF;
+  padding: 8px 14px 8px 14px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.polarion-rpe-content h3 {
+  font-size: 23px;
+}
+
+.polarion-rpe-content h4 {
+  font-size: 15px;
+  line-height: normal;
+  padding: 0px;
+}
+
+.polarion-rpe-content h5 {
+  font-size: 13px;
+  line-height: normal;
+  color: black;
+  padding: 0px;
+}
+
+.polarion-rpe-content h6 {
+  font-size: 13px;
+  line-height: normal;
+  color: black;
+  padding: 0px;
+}
+
+.heading-7, .heading-8, .heading-9, .heading-10, .heading-11, .heading-12, .heading-13, .heading-14, .heading-15, .heading-16, .heading-17, .heading-18, .heading-19, .heading-20, .heading-21, .heading-22, .heading-23, .heading-24, .heading-25, .heading-26, .heading-27, .heading-28, .heading-29, .heading-30, .heading-31 {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #003366;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.polarion-rp-column-layout {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.polarion-rpw-table-content-row a {
+  color: black;
+}
+
+.polarion-rp-column-layout-cell {
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.polarion-rpe-view .polarion-rp-column-layout-cell > :last-child {
+  margin-bottom: 0px;
+}
+
+.polarion-dle-toc-pdf-compare {
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+
+.polarion-rpe-edit .polarion-rp-parameters-view {
+  margin-top: 1px;
+}
+
+.polarion-rp-parameters-view {
+  border: 1px solid #BDC3C7;
+  padding: 15px;
+  line-height: 1.5;
+}
+
+.polarion-rp-parameters-view-cell {
+  vertical-align: top;
+}
+
+.polarion-rp-parameters-scope-icon img {
+  vertical-align: bottom;
+  padding-right: 3px;
+}
+
+.polarion-rp-parameters-view-title, .polarion-rpe-pageParametersForm-title, .polarion-rp-parameters-view-value {
+  font-weight: bold;
+}
+
+.polarion-rpe-pageParametersForm-title {
+  margin-bottom: 10px;
+}
+
+#polarion-rp-parameters, #polarion-rp-page-script {
+  display: none;
+}
+
+.polarion-rp-widget-parameters {
+  display: none;
+}
+
+.polarion-HistoryTable-mainPanel {
+  background-color: #FFF;
+}
+
+.polarion-HistoryTable-table {
+  width: 100%;
+}
+
+.polarion-HistoryTable-headerCell {
+  background: url("/polarion/ria/images/backgrounds/table_header.gif") repeat scroll 0 0 transparent;
+  border-bottom: 1px solid #D5D6DA;
+  color: #595959;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0.01em white;
+  height: 24px;
+  padding: 8px;
+}
+
+.polarion-HistoryTable-cell {
+  padding: 8px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.polarion-HistoryTable-cell a {
+  cursor: pointer !important;
+  color: #369 !important;
+  text-decoration: underline !important;
+}
+
+.polarion-HistoryTable-cell.actualBaseline {
+  background-color: #ffeb8f;
+}
+
+.polarion-HistoryTable-cell.baseline {
+  background-color: #d9f7c0;
+}
+
+.polarion-HistoryTable-table tr:hover > .polarion-HistoryTable-cell {
+  background-color: #F5F5F5 !important;
+}
+
+.polarion-rp-widget-info, .polarion-rp-widget-warning, .polarion-rp-widget-error {
+  position: relative;
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 12px;
+  padding-left: 30px;
+  border-radius: 5px;
+}
+
+.polarion-rpe-pdf .polarion-rp-widget-info,
+.polarion-rpe-pdf .polarion-rp-widget-warning,
+.polarion-rpe-pdf .polarion-rp-widget-error {
+  padding-left: 12px;
+}
+
+.polarion-rp-inline-widget .polarion-rp-widget-info,
+.polarion-rp-inline-widget .polarion-rp-widget-warning,
+.polarion-rp-inline-widget .polarion-rp-widget-error {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: left;
+}
+
+.polarion-rp-widget-info {
+  color: #00529B;
+  background-color: #BDE5F8;
+}
+
+.polarion-rp-widget-warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+
+.polarion-rp-widget-error {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.polarion-rp-widget-info i,
+.polarion-rp-widget-warning i,
+.polarion-rp-widget-error i {
+  position: absolute;
+  margin: auto;
+  left: 10px;
+  top: calc(50% - 6px);
+  bottom: 0;
+  right: 0;
+}
+
+.polarion-htmlTooltip-content .polarion-rp-widget-info,
+.polarion-htmlTooltip-content .polarion-rp-widget-warning,
+.polarion-htmlTooltip-content .polarion-rp-widget-error {
+  display: block;
+}
+
+.polarion-StatusButtonExtension-buttonsPanel {
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+.polarion-StatusButtonExtension-tableRow td {
+  padding: 0px;
+}
+
+.polarion-StatusButtonExtension-buttons {
+  width: 100px !important;
+  table-layout: fixed;
+  font-size: 18px;
+  font-family: Arial;
+  cursor: pointer;
+  height: 50px;
+  text-align: center;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  padding-left: 2px;
+  padding-right: 2px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.polarion-StatusButtonExtension-buttons-readOnly {
+  cursor: default;
+}
+
+.polarion-StatusButtonExtension-buttons-isFirst {
+  border-left: 1px solid;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.polarion-StatusButtonExtension-buttons-isLast {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.polarion-StatusButtonExtension-buttons-standAlone {
+  border-left: 1px solid;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.polarion-StatusButtonExtension-buttons-print {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.polarion-StatusButtonExtension-buttons-pdf {
+  border: 1px solid;
+  width: 100px !important;
+  table-layout: fixed;
+  font-size: 18px;
+  font-family: Arial;
+  height: 50px;
+  text-align: center;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin: 1px;
+}
+
+.polarion-StatusButtonExtension-buttons-content {
+  border-collapse: collapse;
+  padding: 0px;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.polarion-StatusButtonExtension-buttons-content-labelCell {
+  vertical-align: bottom;
+  line-height: 1;
+  text-align: center;
+  height: 65%;
+}
+
+.polarion-StatusButtonExtension-buttons-content-dateCell {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.polarion-StatusButtonExtension-buttons-labelText {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial, Helvetica;
+  white-space: normal;
+}
+
+.polarion-StatusButtonExtension-buttons-labelText-small {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica;
+  white-space: normal;
+}
+
+.polarion-StatusButtonExtension-buttons-dateText {
+  font-size: 10px;
+  font-family: Arial, Helvetica;
+  white-space: nowrap;
+}
+
+.polarion-rte-caption-paragraph {
+  font-style: italic;
+  font-size: 8pt;
+}
+
+.polarion-rte-caption {
+  font-style: italic;
+  font-size: 8pt;
+}
+
+.polarion-TestsExecutionButton-buttonPanel {
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  /*width:213px;
+  height:75px*/
+}
+
+.polarion-TestsExecutionButton-button {
+  margin: 5px;
+}
+
+.polarion-TestsExecutionButton-link a:hover {
+  text-decoration: none !important;
+}
+
+.polarion-TestsExecutionButton-buttons.polarion-TestsExecutionButton-buttons-defaultCursor {
+  cursor: default;
+}
+
+.polarion-TestsExecutionButton-buttons, .polarion-TestsExecutionButton-buttons-pdf {
+  table-layout: fixed;
+  font-size: 18px;
+  font-family: Arial;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 6px;
+  padding-left: 2px;
+  padding-right: 2px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.polarion-TestsExecutionButton-buttons-pdf {
+  width: 213px;
+  box-shadow: none;
+  border: 1px solid;
+  padding: 0px;
+}
+
+.polarion-TestsExecutionButton-buttons-content {
+  border-collapse: collapse;
+  padding: 0px;
+  table-layout: fixed;
+  min-width: 213px;
+}
+
+.polarion-TestsExecutionButton-buttons-content-labelCell {
+  vertical-align: middle;
+  line-height: 1;
+  text-align: center;
+  padding: 20px 10px 6px;
+}
+
+.polarion-TestsExecutionButton-buttons-content-labelCell-noSumText {
+  padding-bottom: 10px;
+}
+
+.polarion-TestsExecutionButton-labelTextNew, .polarion-TestsExecutionButton-labelText {
+  font-size: 26px;
+  font-weight: bold;
+  color: #43a134;
+  font-family: Arial;
+  text-align: center;
+  text-shadow: 1px 1px 0 white;
+  padding-bottom: 1px;
+}
+
+.polarion-TestsExecutionButton-labelText {
+  padding-bottom: 7px;
+}
+
+.polarion-TestsExecutionButton-sumText {
+  font-size: 11px;
+  color: #5f5f5f;
+  font-family: Arial;
+  text-align: center;
+  text-shadow: 1px 1px 0 white;
+  padding: 0 10px 7px;
+}
+
+.polarion-activity_stream_editMode .polarion-activity_stream_showmore, .polarion-activity_stream_filterbutton {
+  cursor: default;
+}
+
+.polarion-activity_stream_editMode a:HOVER {
+  text-decoration: none !important;
+}
+
+.polarion-activity_stream {
+  font-family: Arial;
+  font-size: 11px;
+}
+
+.polarion-activity_stream a, .polarion-activity_stream p, .polarion-activity_stream table, .polarion-activity_stream tr, .polarion-activity_stream td, .polarion-activity_stream textarea, .polarion-activity_stream input, .polarion-activity_stream div {
+  font-family: Arial;
+  font-size: 11px;
+  zoom: 1;
+}
+
+.polarion-activity_stream td {
+  font-size: 11px;
+}
+
+.polarion-activity_stream span {
+  font-family: Arial;
+  font-size: 11px;
+}
+
+.polarion-activity_stream_mainContent {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  min-width: 300px;
+}
+
+.polarion-activity_stream_imageCol {
+  padding-right: 9px;
+  padding-left: 5px;
+  width: 50px;
+  float: left;
+}
+
+.polarion-activity_stream_image {
+  width: 50px;
+  height: 50px;
+}
+
+.polarion-activity_stream_content {
+  margin-left: 65px;
+}
+
+.polarion-activity_stream_label {
+  height: 16px;
+  width: 100%;
+  color: gray;
+}
+
+.polarion-activity_stream_label span {
+  white-space: nowrap;
+}
+
+.polarion-activity_stream_user {
+  color: #3B5998;
+}
+
+.polarion-activity_stream_item_content, .polarion-activity_stream_item_content SPAN, .polarion-activity_stream_item_content A, .polarion-activity_stream_item_content DIV {
+  font-size: 11px;
+}
+
+.polarion-activity_item_content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.polarion-activity_stream_norecentactivity {
+  font-style: italic;
+}
+
+.polarion-activity_stream_activity:hover,
+.polarion-activity_stream_activity_collapsed:hover,
+.polarion-activity_stream_activity_expanded:hover,
+.polarion-activity_stream_activity:hover,
+.polarion-activity_stream_activity_collapsed:hover {
+  border-bottom: 1px solid #E9E9E9;
+  background-color: #FFF68A;
+  padding-top: 1px;
+}
+
+.polarion-activity_stream_activity-contentCell {
+  width: 100%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.polarion-activity_stream_item {
+  width: auto;
+  margin-top: 5px;
+  line-height: 20px !important;
+}
+
+.polarion-activity_stream_dots {
+  color: #3B5998;
+  font-size: 10px !important;
+  cursor: pointer;
+  text-align: left;
+  padding-top: 1px;
+  line-height: 20px;
+  display: block;
+}
+
+.polarion-activity_stream_activity_expanded, .polarion-activity_stream_activity, .polarion-activity_stream_activity_collapsed {
+  border-bottom: 1px solid #E9E9E9;
+  padding-top: 1px;
+  position: relative;
+  line-height: 20px;
+  min-height: 64px;
+  overflow: hidden;
+}
+
+.polarion-activity_stream_activity {
+  max-height: 92px;
+}
+
+.polarion-activity_stream_activity .polarion-activity_stream_dots {
+  display: none;
+}
+
+.polarion-activity_stream_activity_collapsed {
+  max-height: 92px;
+}
+
+.polarion-activity_stream_activity_collapsed .polarion-activity_stream_dots {
+  display: block !important;
+}
+
+.polarion-activity_stream_activity_collapsed .polarion-activity_stream_activity-contentCell {
+  height: 38px;
+}
+
+.polarion-activity_stream_activity_expanded .polarion-activity_stream_dots, .polarion-activity_stream_activity .polarion-activity_stream_dots, .polarion-activity_stream_activity_collapsed .polarion-activity_stream_dots {
+  display: none;
+}
+
+.polarion-activity_stream_showmore {
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #E9E9E9;
+  text-decoration: underline;
+  color: #3B5998;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+.polarion-activity_stream_showmore_loading {
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #E9E9E9;
+  color: #3B5998;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.polarion-activity_stream_topArea {
+  position: relative;
+  height: 32px;
+  margin-bottom: 2px;
+}
+
+.polarion-activity_stream_filter_wrap {
+  position: absolute;
+  left: 0px;
+  right: 28px;
+}
+
+.polarion-activity_stream_button_wrap {
+  width: 20px;
+  position: absolute;
+  float: right;
+  top: 0px;
+  right: 0px;
+}
+
+.polarion-activity_stream_filterbutton {
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 4px;
+}
+
+.polarion-activity_stream_progressBar {
+  position: absolute;
+  top: 7px;
+  right: 4px;
+  display: none;
+}
+
+.polarion-activity_stream_filterField {
+  border: 1px solid #c9c9c9;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 1px 2px #F2F2F2 inset;
+  -webkit-box-shadow: 1px 2px #F2F2F2 inset;
+  box-shadow: 1px 2px #F2F2F2 inset;
+  height: 28px;
+  padding: 1px;
+  padding-left: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.polarion-activity_stream_filterField_input {
+  position: relative;
+  border: 0px;
+  height: 28px;
+  outline: none;
+  background-color: transparent;
+  z-index: 5;
+  width: 100%;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.polarion-activity_stream_filterField_input::-ms-clear {
+  display: none;
+}
+
+.polarion-activity_stream_filterField_clear {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 2px;
+  top: 7px;
+  z-index: 10;
+}
+
+.polarion-activity_stream_overlayColumn {
+  max-width: 0px;
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  z-index: 2;
+}
+
+.polarion-activity_stream_overlayPanel {
+  overflow: visible;
+  width: 50px;
+  cursor: text;
+}
+
+.polarion-activity_stream_overlayText {
+  color: #cfcfcf;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 2px;
+  left: 15px;
+  white-space: nowrap;
+}
+
+.polarion-rpw-recentlyUpdatedPages-misc {
+  color: gray;
+  font-size: 11px;
+}
+
+.polarion-TestRunLabelWidget-templateLabel {
+  font-weight: normal;
+}
+
+.polarion-TestRunImportTestResultsWidget-link,
+.polarion-TestRunExportTestResultsWidget-link {
+  cursor: pointer;
+}
+
+.polarion-TestRunOverviewWidget-linkContainer {
+  width: 96px;
+}
+
+.polarion-TestRunOverviewWidget-linkContainer a:hover {
+  text-decoration: none !important;
+}
+
+.polarion-TestRunOverviewWidget-linkContent {
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-image: url("/polarion/ria/images/backgrounds/btnTesting.png");
+}
+
+.polarion-TestRunOverviewWidget-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.polarion-TestRunOverviewWidget-buttonsContainer {
+  width: 100%;
+  overflow: auto;
+}
+
+.polarion-TestRunOverviewWidget-count {
+  line-height: 0;
+  font-weight: bold;
+  font-family: Arial;
+  text-align: center;
+}
+
+.polarion-TestRunOverviewWidget-buttonName {
+  line-height: 1em;
+  font-size: 11px;
+  font-family: Arial;
+  text-align: center;
+}
+
+.polarion-TestRunStatusButtonWidget-content {
+  display: inline-block;
+  padding: 12px 10px;
+  cursor: pointer;
+  line-height: 1 !important;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: bottom;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  min-width: 190px;
+}
+
+.polarion-TestRunStatusButtonWidget-content-light {
+  color: #fff !important;
+}
+
+.polarion-TestRunStatusButtonWidget-content-dark {
+  color: #333 !important;
+}
+
+.polarion-TestRunStatusButtonWidget-content-disabled {
+  cursor: default;
+}
+
+.polarion-TestRunStatusButtonWidget-content-tall {
+  padding: 18px 0 19px;
+}
+
+.polarion-TestRunStatusButtonWidget-content-pdf {
+  display: inline-block;
+  padding: 12px 10px;
+  cursor: pointer;
+  line-height: 1.5 !important;
+  border-radius: 6px;
+  text-align: center;
+  vertical-align: bottom;
+  text-decoration: none !important;
+  box-shadow: none;
+  width: 190px;
+}
+
+.polarion-TestRunStatusButtonWidget-icon {
+  vertical-align: bottom;
+  padding-bottom: 2px;
+}
+
+.polarion-TestRunStatusButtonWidget-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.polarion-TestRunStatusButtonWidget-description {
+  font-size: 10px;
+}
+
+.polarion-TestRunWidgets-disabled-label {
+  color: gray;
+}
+
+.polarion-TestRunSignaturesWidget-table {
+  width: 100%;
+}
+
+.polarion-TestRunSignaturesWidget-tableHeader {
+  border-bottom: thin solid lightgray;
+  height: 40px;
+  font-size: 15px;
+  vertical-align: bottom;
+}
+
+.polarion-TestRunSignaturesWidget-statusImage {
+  height: 16px;
+  padding-right: 5px;
+  margin-bottom: -1px;
+}
+
+.polarion-TestRunSignaturesWidget-imageCell {
+  width: 20px;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.polarion-TestRunSignaturesWidget-image {
+  height: 16px;
+}
+
+.polarion-TestRunSignaturesWidget-userCell {
+  vertical-align: middle;
+}
+
+.polarion-TestRunSignaturesWidget-signerRole {
+  font-size: 11px;
+}
+
+.polarion-TestRunSignaturesWidget-verdictCell {
+  width: 100px;
+  vertical-align: middle;
+}
+
+.polarion-TestRunSignaturesWidget-dateCell {
+  width: 150px;
+  vertical-align: middle;
+}
+
+.polarion-TestRunSignaturesWidget-noSignatures {
+  color: #888888;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.polarion-TestRunSignaturesWidget-link {
+  font-size: 12px;
+}
+
+.polarion-rt-linkblock-headpart {
+  padding-left: 2px;
+  padding-bottom: 2px;
+}
+
+.polarion-rt-linkblock-element {
+  color: #666666;
+  font-weight: bold;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.polarion-rt-linkblock-role {
+  display: inline-block;
+  color: #999999;
+  font-weight: bold;
+}
+
+.polarion-rt-linkblock-category, .polarion-rt-linkblock-repository, .polarion-rt-linkblock-parser {
+  color: #666666;
+  font-size: 11px;
+  display: inline-block;
+}
+
+.polarion-rt-linkblock-linkstable td {
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.polarion-rt-linkblock-branch {
+  color: #666666;
+}
+
+.polarion-rt-linkblock-link {
+  padding-left: 5px;
+}
+
+.polarion-rt-linkblock-revision {
+  padding: 2px 0 2px 0;
+  color: #999999;
+  font-size: 11px;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.polarion-rt-linkblock-revision div {
+  float: left;
+  margin-right: 5px;
+}
+
+.polarion-rt-linkblock-message {
+  padding: 2px 0 2px 0;
+  color: #999999;
+  font-size: 11px;
+  font-style: italic;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.polarion-rt-linkblock-line {
+  display: inline-block;
+  padding-left: 5px;
+  color: #999999;
+}
+
+.polarion-rt-linkblock-warning {
+  margin-top: 5px;
+}
+
+.polarion-dle-teststeps-separator {
+  background: white url(/polarion/ria/images/documents/teststepssplitter.png) no-repeat;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial,helvetica;
+  color: #D1D1D1;
+  height: 18px;
+}
+
+.polarion-dle-document-paper {
+  margin: 0 auto;
+  width: 754px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid #CCCCCC;
+  border-right: 2px solid #CCCCCC;
+  border-bottom: 2px solid #CCCCCC;
+}
+
+.polarion-dle-document {
+  font-size: 10pt;
+  line-height: 1.5;
+  cursor: text;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #FFFFFF;
+}
+
+.polarion-Document-table tr th {
+  background-color: #EEE;
+}
+
+.polarion-dle-document a:link {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+.polarion-dle-document a:visited {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+.polarion-dle-document a:hover {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: underline !important;
+}
+
+a.polarion-dle-toc-link:link {
+  cursor: pointer !important;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+a.polarion-dle-toc-link:visited {
+  cursor: pointer !important;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+a.polarion-dle-toc-link:hover {
+  cursor: pointer !important;
+  color: black !important;
+  text-decoration: underline !important;
+}
+
+.polarion-dle-workitem-basic-0 {
+  left: -40px;
+  margin-right: -40px;
+  padding-left: 34px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-1 {
+  left: -34px;
+  margin-right: -34px;
+  padding-left: 48px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-2 {
+  left: -28px;
+  margin-right: -28px;
+  padding-left: 62px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-3 {
+  left: -22px;
+  margin-right: -22px;
+  padding-left: 76px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-4 {
+  left: -16px;
+  margin-right: -16px;
+  padding-left: 90px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-5 {
+  left: -10px;
+  margin-right: -10px;
+  padding-left: 104px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-6 {
+  left: -4px;
+  margin-right: -4px;
+  padding-left: 118px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-7 {
+  left: 2px;
+  margin-right: 2px;
+  padding-left: 132px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-8 {
+  left: 8px;
+  margin-right: 8px;
+  padding-left: 146px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-9 {
+  left: 14px;
+  margin-right: 14px;
+  padding-left: 160px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-10 {
+  left: 20px;
+  margin-right: 20px;
+  padding-left: 174px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-11 {
+  left: 26px;
+  margin-right: 26px;
+  padding-left: 188px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-12 {
+  left: 32px;
+  margin-right: 32px;
+  padding-left: 202px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-13 {
+  left: 38px;
+  margin-right: 38px;
+  padding-left: 216px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-14 {
+  left: 44px;
+  margin-right: 44px;
+  padding-left: 230px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-15 {
+  left: 50px;
+  margin-right: 50px;
+  padding-left: 244px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-16 {
+  left: 56px;
+  margin-right: 56px;
+  padding-left: 258px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-17 {
+  left: 62px;
+  margin-right: 62px;
+  padding-left: 272px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-18 {
+  left: 68px;
+  margin-right: 68px;
+  padding-left: 286px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-19 {
+  left: 74px;
+  margin-right: 74px;
+  padding-left: 300px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-20 {
+  left: 80px;
+  margin-right: 80px;
+  padding-left: 314px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-21 {
+  left: 86px;
+  margin-right: 86px;
+  padding-left: 328px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-22 {
+  left: 92px;
+  margin-right: 92px;
+  padding-left: 342px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-23 {
+  left: 98px;
+  margin-right: 98px;
+  padding-left: 356px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-24 {
+  left: 104px;
+  margin-right: 104px;
+  padding-left: 370px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-25 {
+  left: 110px;
+  margin-right: 110px;
+  padding-left: 384px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-26 {
+  left: 116px;
+  margin-right: 116px;
+  padding-left: 398px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-27 {
+  left: 122px;
+  margin-right: 122px;
+  padding-left: 412px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-28 {
+  left: 128px;
+  margin-right: 128px;
+  padding-left: 426px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-29 {
+  left: 134px;
+  margin-right: 134px;
+  padding-left: 440px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-30 {
+  left: 140px;
+  margin-right: 140px;
+  padding-left: 454px;
+  white-space: normal;
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  clear: both;
+}
+
+.polarion-dle-workitem-basic-internal {
+  border-left: 6px solid #DDDDDD;
+}
+
+.polarion-dle-workitem-basic-external {
+  border-left: 6px dotted #DDDDDD;
+}
+
+.polarion-dle-workitem-icon-container {
+  display: block;
+  text-align: right;
+  width: 100px;
+  position: absolute;
+  margin-left: -144px;
+  -webkit-user-select: none;
+  -moz-user-select: initial;
+}
+
+.polarion-dle-workitem-icon-container-decorations {
+  display: block;
+  text-align: right;
+  width: 100px;
+  height: 0px;
+  margin-left: -144px;
+  -webkit-user-select: none;
+  -moz-user-select: initial;
+}
+
+.polarion-dle-workitem-icon-container img {
+  margin-left: 4px;
+}
+
+.polarion-dle-workitem-icon-container-decorations img {
+  margin-left: 4px;
+}
+
+.polarion-dle-heading-icon {
+  margin-top: 2px;
+  cursor: pointer !important;
+}
+
+.polarion-dle-workitem-basic-0 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-0 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -144px;
+}
+
+.polarion-dle-workitem-basic-1 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-1 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -164px;
+}
+
+.polarion-dle-workitem-basic-2 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-2 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -184px;
+}
+
+.polarion-dle-workitem-basic-3 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-3 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -204px;
+}
+
+.polarion-dle-workitem-basic-4 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-4 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -224px;
+}
+
+.polarion-dle-workitem-basic-5 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-5 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -244px;
+}
+
+.polarion-dle-workitem-basic-6 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-6 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -264px;
+}
+
+.polarion-dle-workitem-basic-7 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-7 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -284px;
+}
+
+.polarion-dle-workitem-basic-8 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-8 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -304px;
+}
+
+.polarion-dle-workitem-basic-9 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-9 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -324px;
+}
+
+.polarion-dle-workitem-basic-10 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-10 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -344px;
+}
+
+.polarion-dle-workitem-basic-11 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-11 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -364px;
+}
+
+.polarion-dle-workitem-basic-12 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-12 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -384px;
+}
+
+.polarion-dle-workitem-basic-13 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-13 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -404px;
+}
+
+.polarion-dle-workitem-basic-14 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-14 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -424px;
+}
+
+.polarion-dle-workitem-basic-15 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-15 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -444px;
+}
+
+.polarion-dle-workitem-basic-16 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-16 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -464px;
+}
+
+.polarion-dle-workitem-basic-17 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-17 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -484px;
+}
+
+.polarion-dle-workitem-basic-18 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-18 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -504px;
+}
+
+.polarion-dle-workitem-basic-19 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-19 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -524px;
+}
+
+.polarion-dle-workitem-basic-20 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-20 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -544px;
+}
+
+.polarion-dle-workitem-basic-21 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-21 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -564px;
+}
+
+.polarion-dle-workitem-basic-22 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-22 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -584px;
+}
+
+.polarion-dle-workitem-basic-23 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-23 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -604px;
+}
+
+.polarion-dle-workitem-basic-24 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-24 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -624px;
+}
+
+.polarion-dle-workitem-basic-25 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-25 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -644px;
+}
+
+.polarion-dle-workitem-basic-26 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-26 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -664px;
+}
+
+.polarion-dle-workitem-basic-27 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-27 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -684px;
+}
+
+.polarion-dle-workitem-basic-28 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-28 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -704px;
+}
+
+.polarion-dle-workitem-basic-29 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-29 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -724px;
+}
+
+.polarion-dle-workitem-basic-30 .polarion-dle-workitem-icon-container,
+.polarion-dle-workitem-basic-30 .polarion-dle-workitem-icon-container-decorations {
+  margin-left: -744px;
+}
+
+.polarion-dle-workitem-fields-start {
+  font-weight: bold;
+  display: inline-block !important;
+}
+
+.polarion-dle-workitem-fields-end {
+  width: 1px;
+}
+
+.polarion-dle-workitem-fields-end-inner {
+  float: right;
+  padding-left: 30px;
+}
+
+.polarion-dle-workitem-fields-end-clear {
+  clear: both;
+  width: 1px;
+  height: 1px;
+}
+
+.polarion-dle-workitem-fields-end-table-label {
+  font-weight: bold;
+}
+
+.polarion-dle-workitem-fields-message {
+  font-style: italic;
+}
+
+.polarion-dle-comment-icon {
+  cursor: pointer !important;
+  vertical-align: bottom;
+}
+
+.polarion-dle-comment-resolved-icon {
+  cursor: pointer !important;
+  display: none;
+  vertical-align: bottom;
+}
+
+.withResolvedComments .polarion-dle-comment-resolved-icon {
+  display: inline;
+}
+
+.withSignatureCommentsOnly .polarion-dle-comment-icon {
+  display: none;
+}
+
+.withSignatureCommentsOnly .polarion-dle-comment-resolved-icon {
+  display: none;
+}
+
+.withSignatureCommentsOnly .polarion-dle-comment-signature {
+  display: inline;
+}
+
+.withSignatureCommentsOnly .polarion-dle-comment-signature-resolved {
+  display: none;
+}
+
+.withSignatureCommentsOnly.withResolvedComments .polarion-dle-comment-signature-resolved {
+  display: inline;
+}
+
+.polarion-dle-toc {
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  left: -40px;
+  border-left: 6px dotted #dddddd;
+  padding-left: 34px;
+}
+
+.polarion-dle-tof {
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  position: relative;
+  left: -40px;
+  border-left: 6px dotted #dddddd;
+  padding-left: 34px;
+}
+
+.polarion-dle-toc-icon {
+  cursor: pointer;
+  position: absolute;
+  margin-left: -60px;
+}
+
+.polarion-dle-tof-icon {
+  cursor: pointer;
+  position: absolute;
+  margin-left: -60px;
+}
+
+.polarion-dle-pageBreak {
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  height: 20px;
+  position: relative;
+  left: -34px;
+  padding-left: 34px;
+}

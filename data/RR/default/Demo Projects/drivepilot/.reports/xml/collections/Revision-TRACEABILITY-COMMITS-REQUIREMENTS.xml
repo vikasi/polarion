@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<collection id="TRACEABILITY-COMMITS-REQUIREMENTS" prototype="Revision">
+    <data>
+        <value type="commits-traceability">
+                <links>
+                    <link backLink="false" id=".*"/>
+                    <link backLink="true" id=".*"/>
+                </links> 
+                <coverageQuery/>
+            </value>
+    </data>
+    <item id="/default/$1"/>
+</collection>

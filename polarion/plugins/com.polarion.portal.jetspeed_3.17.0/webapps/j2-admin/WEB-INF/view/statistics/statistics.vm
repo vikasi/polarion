@@ -1,0 +1,162 @@
+<h3 class="portlet-section-header">Portal Statistics</h3>
+
+<script language="JavaScript" type="text/javascript">
+    <!--
+
+	function checkAndSubmit() {
+		// should check that listsize is valid
+		//document.criteriaForm.listsize.value;
+		document.criteriaForm.submit();
+	}
+	
+    //-->
+</script>
+
+<div id="StatisticsPortlet"  class="portlet-section-text"> 
+	<form name="criteriaForm" action="$renderResponse.createActionURL()" method="post">
+	<table>
+	<tr><td align="center">
+	total sessions in progress: $!totalsessions
+	</td></tr>
+	<tr><td>
+	<table class="portlet-section-body">
+	<tr  class="portlet-section-subheader"><td>
+	 statistics are for
+	 </td></tr>
+	 <tr class="portlet-section-alternate"><td>
+	 <SELECT name="queryType" onChange="criteriaForm.submit();">
+	 <OPTION 
+		#if($criteria.queryType == "user")
+	 		SELECTED
+	 	#end
+	 	value="user"
+	 	 >users
+	 <OPTION 
+		#if($criteria.queryType == "page")
+	 		SELECTED
+	 	#end
+	 	value="page"
+	 	 >pages
+	 <OPTION 
+		#if($criteria.queryType == "portlet")
+	 		SELECTED
+	 	#end
+	 	value="portlet"
+	 	 >portlets
+	 </SELECT>
+	 </td></tr>
+	 </table>
+	 </td><td>
+ 
+	 <table class="portlet-section-body">
+	 <tr class="portlet-section-subheader"><th colspan="2" align="center" >for time periods </th></tr>
+	 <tr class="portlet-section-alternate"><td>
+	 		<input type="radio" name="timeperiod" value="1" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "1")
+	 				CHECKED
+	 			#end		
+	 		>last 1 minutes</td>
+	 	<td>
+	 		<input type="radio" name="timeperiod" value="1d" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "1d")
+	 				CHECKED
+	 			#end		
+	 		>last 24 hours</td></tr>
+	 <tr class="portlet-section-body"><td>
+	 		<input type="radio" name="timeperiod" value="5" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "5")
+	 				CHECKED
+	 			#end		
+	 		>last 5 minutes</td>
+	 	<td>
+	 		<input type="radio" name="timeperiod" value="7d" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "7d")
+	 				CHECKED
+	 			#end		
+	 		>last 7 days</td></tr>
+	 <tr class="portlet-section-alternate"><td>
+	 		<input type="radio" name="timeperiod" value="30" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "30")
+	 				CHECKED
+	 			#end		
+	 		>last 30 minutes</td>
+	 	<td>
+	 		<input type="radio" name="timeperiod" value="1m" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "1m")
+	 				CHECKED
+	 			#end		
+	 		>last 1 month</td></tr>
+	 <tr class="portlet-section-body"><td>
+	 		<input type="radio" name="timeperiod" value="60" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "60")
+	 				CHECKED
+	 			#end		
+	 		>last 1 hour</td>
+	 	<td>
+	 		<input type="radio" name="timeperiod" value="12m" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "12m")
+	 				CHECKED
+	 			#end		
+	 		>last 1 year</td></tr>
+	 <tr class="portlet-section-alternate"><td>
+	 		<input type="radio" name="timeperiod" value="360" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "360")
+	 				CHECKED
+	 			#end		
+	 		>last 6 hours</td>
+	 	<td><input type="radio" name="timeperiod" value="all" onclick="criteriaForm.submit();"
+	 			#if($criteria.timePeriod == "all")
+	 				CHECKED
+	 			#end		
+	 		>all time</td></tr>
+	 
+	 </table>
+	 
+	 <td></tr>
+	 <tr><td align="center">
+	 
+	 
+	</td></tr>
+	</table>
+	<table><tr><td>
+	<center>stats for all ${criteria.queryType}s</center>
+    <table class="portlet-section-body" >
+	<tr class="portlet-section-subheader"><TH><b>stat name</b></TH><TH><b align="right" >value</b></TH></TR>
+	<tr class="portlet-section-alternate"><TD>total hits</TD><TD align="right" >$!results.hitCount</TD></TR>
+	<tr class="portlet-section-body"><TD>max time</TD><TD align="right" >$!results.maxProcessingTime</TD></TR>
+	<tr class="portlet-section-alternate"><TD>avg time</TD><TD align="right" >$!results.avgProcessingTime</TD></TR>
+	<tr class="portlet-section-body"><TD>min time</TD><TD align="right" >$!results.minProcessingTime</TD></TR>
+    </table>
+    </td><td>
+    <center>Top <input type="text" size="3" name="listsize" onchange="checkAndSubmit(); " value="$criteria.listsize" /> ${criteria.queryType}s sorted by $criteria.sorttype $criteria.sortorder</center>
+    <table class="portlet-section-body" >
+	<tr class="portlet-section-subheader">
+		<TH><b>$criteria.queryType</b>
+			</TH><TH><b>count</b></TH>
+			<TH><b>max Time</b></TH>
+			<TH><b>avg Time</b></TH>
+			<TH><b>min Time</b></TH>
+		</TR>
+	#foreach ( $row in $results.statlist )
+  		<tr>
+  			<td> $row.get("groupColumn") </td>
+  			<td align="right" > $row.get("count") </td>
+  			<td align="right" > $row.get("max") </td>
+  			<td align="right" > $row.get("avg") </td>
+  			<td align="right" > $row.get("min") </td>  			
+  		</tr>
+  		
+  	#end
+    </table>
+    </td></tr>
+    <tr><td colspan="2" align="center"> <font size="-1" >
+    #if($criteria.queryType == "user") 
+    	all times in minutes
+    #else
+    	all times in milliseconds
+    #end
+    </font></td></tr>
+    </table>
+    </form>
+	
+</div>

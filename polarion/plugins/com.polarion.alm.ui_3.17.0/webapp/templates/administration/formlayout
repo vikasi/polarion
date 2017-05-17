@@ -1,0 +1,109 @@
+<a style="cursor:pointer;" onclick="navigateFromFrame('#page:workitems/form')" ><< Return to Form Configuration</a>
+
+1 Form Layout Configuration
+
+*View:* [hatName]
+\\
+*Work Item Type:* [typeName]
+
+{xmleditor:form-layout|view=[hatId]|type=[typeId]}
+
+1.1 Quick Help
+A *Layout* consists of two types of components:
+1. complex components that can contain other components
+1. primitive components that cannot contain other components
+
+Work item form fields can be situated inside complex or primitive components.
+
+*NOTE*: Fields can only be shown once in the form! 
+ 
+1.1.1.1.1 Complex Components
+
+1.1.1.1.1.1 Horizontal
+* <tt>&lt;horizontal&gt; &lt;/horizontal&gt;</tt>
+* Add components on a horizontal row, each component is in a new column
+1.1.1.1.1.1 Vertical
+* <tt>&lt;vertical&gt; &lt;/vertical&gt;</tt>
+* Add components into one vertical column, each component is in a new row
+* Used as default on the top level <tt>&lt;formLayout&gt;</tt> element
+
+1.1.1.1.1 Primitive Components 
+1.1.1.1.1.1 Field
+* <tt>&lt;field id="nameOfField1,nameOfField2" readOnly="true|__false__(default)"/&gt;</tt>
+* Create an editor widget used for the specified field, or custom field.
+* If ~~nameOfField~~ represents a complex field, it creates a complex widget.\\Note: If a complex field is placed inside a section, it is shown as a simple text, because there is not enough space to create a complex widget.
+* The ~~readOnly~~ attribute can restrict modification of the field, preventing accidental changes by the end user.
+
+There are two types of restriction:
+* Inside layout (Cannot be disabled by disengaging the applied filter. The Filter's read only fields appear above the layout's read-only fields)
+* Inside status or action filter. (Can be turned off/on by the user only)
+
+For *custom fields*, you can use special notation language:
+* all custom fields except risk = <tt>&lt;field id="@allCustomFields,-risk"/&gt;</tt>
+* risk custom field = <tt>&lt;field id="risk"/&gt;</tt>
+
+1.1.1.1.1.1 Test Execution (Manual)
+The following can be included in the layout configuration to provide a panel in the Work Item detail for logging execution of a manual test. Typically this 
+would only be configured for the ~~Test Case~~ Work Item type (or other item analogous to a test case in a customized configuration).
+<tt>&lt;extension id="execute-test" label="Execute Test" query="type:manual" maxTestRuns="10" /&gt;</tt>
+
+The ~~maxTestRuns~~ parameter can extend or reduce the number of Test Runs that users (testers) can select in the ~~Execute Test~~ panel. The default value is 10.
+
+By default, each Test Step displays the ~~Recent~~ drop-down box, which lists the Actual Result values from the most recent execution of the step during a Test Run. The ~~Test Case Verdict~~ field displays a similar drop-down with the values of the most recent verdicts. Users can select one of the listed previous results as the result of the current step execution or current Test Case verdict. 
+
+Administrators can define the maximum number of test records to analyze by adding the following property in the <tt>polarion.properties</tt> file:  
+
+<tt>com.polarion.alm.ui.forms.extensions.testExtensionRecordsLimit = 20</tt> 
+(The default value is 20)
+
+Polarion starts with the ~~testExtensionRecordsLimit~~ value, eliminates any duplicates or empty results, then displays the maximum number of results defined in the ~~maxRecentItems~~ property.
+
+e.g <tt>&lt;extension id="execute-test" label="Execute Test" maxRecentItems="10"/&gt;</tt> 
+
+Test Execution form extension automatically recognizes if a custom field of type Test Steps is configured for the current Work Item. If so, table of Test Steps is rendered during execution of Test Cases
+ for a Test Run. Users are able to mark individual test steps as passed, failed, or blocked, in addition to marking the overall result of executing the Test Case.
+
+1.1.1.1.1.1 Section
+* <tt>&lt;section&gt; &lt;/section&gt;</tt>
+* Group of fields with blue background. Sub-elements can be only fields.
+* It is recommended to add only fields based on simple values.
+* Complex fields such as comments or linkedWorkItems should not be inside a section because there is no space for them.  
+
+1.1.1.1.1.1 Panel
+* <tt>&lt;panel description="My panel with Custom Fields"&gt; &lt;/panel&gt;</tt>
+* Blue bordered panel. Only fields can be here.
+* Description is mandatory.
+
+1.1.1.1.1 Available Fields
+* _document
+* _space
+* approvals
+* assignee
+* attachments
+* author
+* categories
+* comments
+* description
+* dueDate
+* hyperlinks
+* initialEstimate
+* linkedWorkItems
+* linkedRevisions
+* plannedEnd
+* plannedIn
+* plannedStart
+* planningConstraints
+* previousStatus
+* priority
+* project
+* remainingEstimate
+* resolution
+* severity
+* status
+* timePoint
+* timeSpent
+* title
+* type
+* workRecords
+#info("A list of available custom fields is defined in Administration &gt; Work Items &gt; Custom Fields, *{hyperlink:/administration/workitems/customfields}*.")
+\\

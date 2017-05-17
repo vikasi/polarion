@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/wiki_export.psml" hidden="false">
+    <title>Wixi Pdf Export</title>
+    <short-title>Wixi Pdf Export</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_wiki_export_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_wiki_export_portlet" type="portlet" name="webui::FileConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+	     <value>.polarion/wiki/export.xml</value>
+	  </preference>
+	</fragment>
+    </fragment>
+</page>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130110201433</created>
+<type>content</type>
+<content><![CDATA[1 Fix Time
+
+
+The graph shows number of issues fixed in NUM weeks after the creation.
+I.e. items where ResolvedOn-CreatedOn = X weeks
+
+
+#set($sqlHi="SELECT WI.C_PK FROM WORKITEM WI, PROJECT PROJECT WHERE WI.C_TYPE='issue'  AND ( WI.C_SEVERITY='blocker' OR WI.C_SEVERITY='critical') AND WI.C_STATUS='verified-done'  AND WI.FK_URI_PROJECT = PROJECT.C_URI AND PROJECT.C_ID = '$page.project'")
+#set($sqlOther="SELECT WI.C_PK FROM WORKITEM WI, PROJECT PROJECT WHERE WI.C_TYPE='issue'  AND NOT ( WI.C_SEVERITY='blocker' OR WI.C_SEVERITY='critical') AND WI.C_STATUS='verified-done'  AND WI.FK_URI_PROJECT = PROJECT.C_URI AND PROJECT.C_ID = '$page.project'")
+
+#set($hiAll = $trackerService.dataService.sqlSearch($sqlHi).size())
+#set($hiOther = $trackerService.dataService.sqlSearch($sqlOther).size())
+
+
+Critical and Blocker: $hiAll\\
+Other: $hiOther
+
+#if($hiAll==0 && $hiOther==0)
+#info("No issues tracked")
+#else
+
+#set($blockerCriticalPer="0")
+#set($otherPer="0")
+#set($blockerCritical="0")
+#set($other="0")
+#set($category="0")
+
+#macro (searchInWeeks $weeks) 
+#set($days = ($weeks * 7))
+#set($daysBefore = $days - 8)
+#set($sqlDatePart="AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))<$days AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))>$daysBefore")
+#set($num = $trackerService.dataService.sqlSearch("$sqlHi $sqlDatePart").size())
+#set($blockerCritical = "$!blockerCritical:$num")
+#set($fl = $num * 100 / $hiAll )
+#set($blockerCriticalPer = "$!blockerCriticalPer:$fl")
+#set($num = $trackerService.dataService.sqlSearch("$sqlOther $sqlDatePart").size())
+#set($other= "$!other:$num")
+#set($fl = $num * 100 / $hiOther )
+#set($otherPer= "$!otherPer:$fl")
+#set($category = "$!category:$weeks week(s) ")
+#end
+
+#macro (searchInDays $d) 
+#set($days = $d + 1)
+#set($daysBefore = $days - 2)
+#set($sqlDatePart="AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))<$days AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))>$daysBefore")
+#set($num = $trackerService.dataService.sqlSearch("$sqlHi $sqlDatePart").size())
+#set($blockerCritical = "$!blockerCritical:$num")
+#set($fl = $num * 100 / $hiAll )
+#set($blockerCriticalPer = "$!blockerCriticalPer:$fl")
+#set($num = $trackerService.dataService.sqlSearch("$sqlOther $sqlDatePart").size())
+#set($other= "$!other:$num")
+#set($fl = $num * 100 / $hiOther )
+#set($otherPer= "$!otherPer:$fl")
+#set($category = "$!category:$d days(s)")
+#end
+
+#macro (searchMoreWeeks $weeks)
+#set($days = ($weeks * 7) )
+#set($sqlDatePart="AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))>$days")
+#set($num = $trackerService.dataService.sqlSearch("$sqlHi $sqlDatePart").size())
+#set($blockerCritical = "$!blockerCritical:$num")
+#set($num = $num * 100 / $hiAll)
+#set($blockerCriticalPer = "$!blockerCriticalPer:$num")
+#set($num = $trackerService.dataService.sqlSearch("$sqlOther $sqlDatePart").size())
+#set($other= "$!other:$num")
+#set($num = $num * 100 / $hiOther)
+#set($otherPer = "$!otherPer:$num")
+#set($category = "$!category:More")
+#end
+
+#set($maxWeeks = 20)
+
+#foreach($i  in [1..$maxWeeks]) 
+#searchInWeeks($i) 
+#end
+#searchMoreWeeks($maxWeeks) 
+
+#highchartStart("Percentage of defects fixed in weeks" "areaspline" 800 500)
+#set($highchartColors = ["FF5904","99cc99"])
+#setHighchartCategories("$category")
+#if($hiAll!=0)#addHighchartDataSet("Blocker or Critical Defects" "$blockerCriticalPer")#end
+#if($hiOther!=0)#addHighchartDataSet("Other Defects" "$otherPer")#end
+#addHighchartAdditionalOptions("options.plotOptions ={areaspline: {animation: false}};")
+#addHighchartAdditionalOptions("options.xAxis.labels = {rotation: -30, y: 10, style:{fontSize:'9px'}};")
+#addHighchartAdditionalOptions("options.yAxis = {min:0,title:{text:'Percentage'}};")
+#highchartEnd()
+
+
+#highchartStart("Num of defects fixed in weeks" "areaspline" 800 500)
+#set($highchartColors = ["FF5904","99cc99"])
+#setHighchartCategories("$category")
+#if($hiAll!=0)#addHighchartDataSet("Blocker or Critical Defects" "$blockerCritical")#end
+#if($hiOther!=0)#addHighchartDataSet("Other Defects" "$other")#end
+#addHighchartAdditionalOptions("options.plotOptions ={areaspline: {animation: false}};")
+#addHighchartAdditionalOptions("options.xAxis.labels = {rotation: -20, y: 10, style:{fontSize:'9px'}};")
+#addHighchartAdditionalOptions("options.yAxis = {min:0,title:{text:'Number of defects'}};")
+#highchartEnd()
+
+
+#end]]></content>
+</wiki-page>

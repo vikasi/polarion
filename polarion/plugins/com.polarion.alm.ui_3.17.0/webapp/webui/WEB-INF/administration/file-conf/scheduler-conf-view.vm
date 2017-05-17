@@ -1,0 +1,160 @@
+##<link href="${clink}css/xray/xray-default.css" type="text/css" rel="stylesheet"/>
+##<link href="${clink}css/xray/xray-table.css" type="text/css" rel="stylesheet"/>
+##<link href="${clink}css/xray/xray-preferences.css" type="text/css" rel="stylesheet"/>
+##<link href="${clink}css/xray/xray-detail.css" type="text/css" rel="stylesheet"/>
+##<script type="text/javascript" src="/webui/WEB-INF/velocity/resize.js"></script>
+
+
+#if($canRead)
+
+<table class="toolbar_off" width="100%"  cellpadding="0" cellspacing="0">
+			<tr>
+    			<td height="100%" style="padding-top:2px;padding-left:5px;">
+				#set($startStopUrl = $renderResponse.createActionURL())
+    			#if($schedulerOn)
+					#set($startStopTitle = "Stop Scheduler")
+        			$startStopUrl.setParameter("doStopScheduler","doStopScheduler")
+    			#else
+					#set($startStopTitle = "Start Scheduler")
+        			$startStopUrl.setParameter("doStartScheduler","doStartScheduler")
+    			#end
+    			#if($canChange)
+	    			<form  name="startStopForm" action="$startStopUrl" method="post">
+    					<input type="submit" value="$startStopTitle" class="actionButtonBig" />
+					</form>    			
+    			#else
+    				<input type="button" value="$startStopTitle" disabled  class="actionButtonBig" />
+				#end
+			</tr>
+</table>
+
+<table width="100%"  cellspacing="0" cellpadding="0">
+	#if($message)
+		<tr>
+			<td style="padding:10">
+				$!message
+				<br/>
+		</td>
+	</tr>
+	#end
+	<tr>
+		<td style="padding:10">
+		    #if(!$title)
+		      #set($title = "Configuration")
+		    #end
+			#panel("configuration_$portlet.getID()" $title $helpContext true true false)
+				<br/>
+				#if($globalFileURL)
+        			Project configuration: 
+				#end
+				<table>
+					<tr >
+						<td class="featureLabel">
+							File:
+						</td>
+						<td class="featureValue">
+                    		#if($exists_fileURL)
+                    			#set($svnUrl = $svnUrlTool.getDownloadUrl($fileURLRelative))
+                    			<a  class="conffile" href="$svnUrl" target="_blank">$fileURL
+                    			</a>
+                    		#else
+            					<span  style="notconffile">$fileURL (not available)</span>
+							#end
+						</td>
+					</tr>
+				</table>
+        		#if($globalFileURL)
+        			<br>
+        			Global configuration:
+    				<table>
+    					<tr >
+    						<td class="featureLabel">
+    							File:
+    						</td>
+    						<td class="featureValue">
+                    			#if($exists_globalFileURL)
+	                    			#set($svnUrl = $svnUrlTool.getDownloadUrl($globalFileURLRelative))
+                    				<a  class="conffile" href="$svnUrl" target="_blank">$globalFileURL
+                    				</a>
+                    			#else
+            						<span  style="notconffile">$globalFileURL (not available)</span>
+                    			#end
+    						</td>
+    					</tr>
+    				</table>
+        		#end
+				<br/>
+	        #endPanel()
+		</td>
+	</tr>
+	#if($canChange)
+        <tr>
+        	<td style="padding:10">
+    				#if($globalFileURL) 
+    					#panel("uploadGlobal_$portlet.getID()" "Upload New Project Configuration" $helpContext true true false)
+        			#else 
+    					#panel("uploadGlobal_$portlet.getID()" "Upload New Global Configuration" $helpContext true true false)
+    				#end					
+        			<br/>
+        			#set($actionUrl = $renderResponse.createActionURL())
+        			$actionUrl.setParameter("doUpload","doUpload")
+        			<form enctype="multipart/form-data" name="importForm" action="$actionUrl" method="post">
+						<input type="hidden" name="mode" value="upload">
+						<table>
+        					<tr>
+        						<td class="featureLabel"><label for="file" ACCESSKEY=f> <u>F</u>ile: </label></td>
+        						<td><input id="file" size=100 type="file" name="file"/></td>
+        					</tr>
+							<tr>
+								<td align="left" colspan="2" style="padding-top:10">
+									<input type="submit" name="doUpload" value="Upload" class="actionButtonSmall"/>
+								</td>
+							</tr>
+						</table>
+        			</form>
+                #endPanel()
+        	</td>
+        </tr>
+        <tr>
+        	<td >
+    				#if($globalFileURL) 
+    					#panel("upload_$portlet.getID()" "Edit Project Configuration" $helpContext true true false)
+        			#else 
+    					#panel("upload_$portlet.getID()" "Edit Global Configuration" $helpContext true true false)
+    				#end					
+        			
+        			#set($actionUrl = $renderResponse.createActionURL())
+        			<form name="editForm" action="$actionUrl" method="post">
+						<input type="hidden" name="mode" value="edit">
+						<table style="width:100%">
+							#if($globalFileURL && !$fileContent) 
+							<tr>
+								<td align="left" colspan="2" >
+									<input type="button" onclick="pasteGlobal()"  value="Paste global configuration" class="actionButtonMega"/>
+								</td>
+							</tr>
+							#end	
+        					<tr>
+        							<td><textarea id="editArea" name="editArea" rows="14" style="width:99%;overflow:auto;">$!fileContent</textarea></td>
+        					</tr>
+							<tr>
+								<td align="left" colspan="2">
+									<input type="submit" name="doEdit" value="Save" class="actionButtonSmall"/>
+								</td>
+							</tr>
+						</table>
+        			</form>
+                #endPanel()
+        	</td>
+        </tr>		
+	#end
+</table>
+<script>
+function pasteGlobal(){
+	document.getElementById("editArea").value = "#escapeForJavascriptString($globalFileContent)";
+}
+
+</script>
+#else
+  Cannot read - security restriction.
+#end

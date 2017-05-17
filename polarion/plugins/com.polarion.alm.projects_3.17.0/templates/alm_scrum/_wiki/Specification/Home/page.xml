@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20101125125554</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.macros}
+{section:width=100%}
+{column}
+1 Specification
+
+1.1 Product Backlog
+{document:Product Specification}
+
+1.1 Detailed Specifications
+{pages:space=Specification|query=NOT type:(active content portal) AND NOT id:"Product Specification"|fields=pageLink,updatedBy, updated}
+
+1.1 Work Items by Status
+{table:header=no}
+#scoreEntry("Draft" "status:draft" "req_status_draft.gif")
+#scoreEntry("Reviewed" "status:reviewed" "req_status_reviewed.gif")
+#scoreEntry("Rejected" "status:rejected" "req_status_rejected.gif")
+{table}
+
+1.1 Test Coverage
+
+* {portallink:/workitems?query=type:userstory&table_mode=tree&link_role=verifies&tab=table|addcontext=yes}User Stories/Test Cases Tree View{portallink} - browse test cases related to user stories
+* *[Test Case Traceability Table>Testing.Test Case Traceability]* - review how well are the user stories covered by test cases
+{column}
+{column:width=2px}
+{column}
+{column:width=300px}
+{regiontitle}Import{regiontitle}
+{style:type=div|class=regiondescription}
+Import Microsoft Word .docx document and configure what elements should be tagged as Work Items.
+{style}
+
+<a href="javascript:top.importDocument('Specification','$page.space.projectId')">
+{image:import.png}
+</a>
+
+{regiontitle}Workflow{regiontitle}
+{table:header=no|border=no}
+<a href="../Workflow Schema">{image:user_story_specification.png}</a>
+{table}
+
+{column}
+{section}]]></content>
+</wiki-page>

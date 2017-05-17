@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factbase artifact="library" id="source-check-integration" tag="20081028_2110">
+<structure-element id="root" provider="root" type="root">
+<value-fact-element id="source-code-integration" provider="SensorTest" type="source-code-integration">
+<value/>
+<properties>
+<property id="has-source-directories">
+<value>false</value>
+</property>
+</properties>
+</value-fact-element>
+<value-fact-element id="source-code-existence" provider="SensorTest" type="source-code-existence">
+<value>false</value>
+</value-fact-element>
+</structure-element>
+</factbase>

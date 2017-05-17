@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20150325175343</created>
+<title>Variants</title>
+<type>content</type>
+<content><![CDATA[{section}
+{column:width=68%}
+1 $page.title
+A ~~Variant~~ describes one product from a product line (i.e. a group of similar products with some features in common). In this space you can define Variants and manage their ~~Variant Specification Documents~~.
+
+A Variant Specification Document is a specification Document generated for a Variant after its ~~Features~~ have been selected from the superset of all possible product Features, and the selection is valid according to configured ~~Restrictions~~. Variant Specification Documents can then be generated from ~~Master Specifications~~. They include only specifications that are relevant for one Variant, providing a complete specification for one product in a product line.
+
+#info("Define a new Variant via the Variants sidebar. Include/exclude Features, and ensure that the Feature selection is valid.") 
+
+1.1.1 OBJECTIVE
+Manage the Variant Specification Documents for different Variants.
+
+1.1.1  INPUT
+
+[Master Specifications > Master Specifications.Home] - are Documents that contain all component specifications (for all the products in a product line).
+
+ {portallink:/wiki/Features/Feature%20Model | addcontext=yes}Feature Model{portallink} - The Master Specifications are constrained to Features.
+
+
+1.1.1 OUTPUT - VARIANTS
+This section lists the Variants currently tracked in the system:
+
+#foreach($v in $trackerService.queryWorkItems("type:variant AND (project.id:$page.project OR definitionProject:$page.project)","id"))
+* {portallink:/wiki/Variants/Variant Report?variant=$v.project.id/$v.id|addcontext=yes} $v.id - $v.title {portallink} &nbsp;
+#end
+
+{column}
+
+
+{column:width=32%}
+
+{regiontitle}Actions{regiontitle}
+{style:class=regiondescription}
+
+<div>
+{portallink:/workitem?form_mode=create&form_field_type=variant|addcontext=yes}<img src="/polarion/ria/images/wiki/NewVariant.png"/>{portallink}
+</div>
+
+{regiontitle}Guide{regiontitle}
+{style:class=regiondescription}
+Steps to define one product Variant in a product line:
+{style}
+
+1. *Create New Variant* \\ Create a new Work Item of type ~~Variant~~
+1. *Select Features* \\ Select a Variant item and click the {Select Features} button. Make sure selection is valid by selecting Features based on their Variation Type.
+1. *Generate Variant Specification Document* \\ Select Variant item and click the {Generate Documents} button. Select ~~Master Specification~~ as input and save result to the Variants space.
+{column}
+{section}]]></content>
+</wiki-page>

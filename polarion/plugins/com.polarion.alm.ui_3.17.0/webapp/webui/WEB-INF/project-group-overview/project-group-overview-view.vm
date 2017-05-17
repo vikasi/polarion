@@ -1,0 +1,44 @@
+<table cellpadding="0" cellspacing="3">
+	<tr>
+		<td class="featureLabel pr" nowrap="nowrap" valign"top">Projects: </td>
+		<td class="featureValue" nowrap="nowrap" width="*">
+			$!projects project(s)
+			#if($!projects!=$!allProjects)
+			<br/>
+			 ($!allProjects projects together with the child project groups projects)</td>
+			#end
+	</tr>
+	<tr>
+		<td class="featureLabel pr" nowrap="nowrap">Users:</td>
+		<td class="featureValue" nowrap="nowrap">
+			#set($projectUsers = $!repoAnalysisFactBase.findElement("NOU").value)
+			#if($projectUsers)
+				#if($projectUsers==0)
+					no project users,						
+				#else
+					$!repoAnalysisFactBase.findElement("NOU").value project user(s),					
+				#end
+			#end
+			$users system user(s) 
+		</td>
+	</tr>
+	<tr>
+		<td class="featureLabel pr" nowrap="nowrap">Files:</td>
+		<td class="featureValue" nowrap="nowrap">
+			$!repoAnalysisFactBase.findElement("NOF").value
+		</td>
+	</tr>
+	<tr>
+	    <td class="featureLabel pr" nowrap="nowrap">Repository URL:</td>
+		<td class="featureValue" nowrap="nowrap">		
+			#if($projectGroupId)
+					  <a href='/polarion/#/group/$projectGroupId/repository' target="_top">$!svnUrl</a>			
+			#else
+				  <a href='/polarion/#/repository' target="_top">$!svnUrl</a>
+			#end
+		</td>
+	</tr>
+	<tr>
+	    <td height="*"></td>
+	</tr>
+</table>

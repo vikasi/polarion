@@ -1,0 +1,58 @@
+$set($hascreate = $xwiki.hasPermission("create"))
+#set($tocreate=$request.getParameter("tocreate"))
+#set($title = $request.getParameter("title"))
+#set($template = "")
+#set($template = $request.getParameter("template"))
+#set($parent = "")
+#set($parent=$request.getParameter("parent"))
+#set($auxparams="")
+#set($auxparams=$request.getParameter("auxparams"))
+##
+## Create panel
+##
+#if($tocreate=="panel")
+#set($docname=$title.replaceAll("/", "%2F"))
+#if(!$template || $template == "")
+#set($template="Panels.PanelTemplate")
+#end
+#set($newdoc=$xwiki.getDocument($docname))
+#if($newdoc.isNew())
+#set($pcontent = "#")
+#set($pcontent = $pcontent.concat("panelheader('${title}')${xwiki.getNl()}${xwiki.getNl()}#"))
+#set($pcontent = $pcontent.concat("panelfooter()"))
+#set($pcontent = $xwiki.getURLEncoded($pcontent))
+$response.sendRedirect($newdoc.getURL("inline", "template=${template}&Panels.PanelClass_0_name=${title}&Panels.PanelClass_0_content=$pcontent"))
+#else
+$response.sendRedirect($newdoc.getURL("view", "xpage=docalreadyexists"))
+#end
+##
+## Create page
+##
+#elseif($tocreate=="page")
+#set($docname=$title.replaceAll("/", "."))
+##
+## Create space
+##
+#elseif($tocreate=="space")
+#set($title=$title.replaceAll(" \\.\\/", ""))
+#set($docname="${title}.Home")
+##
+## Create blog post
+##
+#elseif($tocreate=="post")
+#set($docname="Blog.${title.replaceAll(' ', '')}")
+#end
+##
+## Send redirect
+##
+#set($newdoc=$xwiki.getDocument($docname))
+##$newdoc.getURL("edit", "template=${template}&parent=${parent}$auxparams"))
+#if($newdoc.isNew())
+#if($tocreate == "post")
+$response.sendRedirect($newdoc.getURL("inline", "parent=Blog.Home&template=XWiki.ArticleClassTemplate&XWiki.ArticleClass_0_title=$title"))
+#else
+$response.sendRedirect($newdoc.getURL("edit", "template=${template}&parent=${parent}${auxparams}&title=$title"))
+#end
+#else
+$response.sendRedirect($newdoc.getURL("view", "xpage=docalreadyexists"))
+#end

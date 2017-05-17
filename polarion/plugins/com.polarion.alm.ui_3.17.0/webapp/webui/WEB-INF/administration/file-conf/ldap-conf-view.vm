@@ -1,0 +1,188 @@
+##<link href="${clink}css/xray/xray-default.css" type="text/css" rel="stylesheet"/>
+##<link href="${clink}css/xray/xray-table.css" type="text/css" rel="stylesheet"/>
+##<link href="${clink}css/xray/xray-preferences.css" type="text/css" rel="stylesheet"/>
+##<link href="${clink}css/xray/xray-detail.css" type="text/css" rel="stylesheet"/>
+##<script type="text/javascript" src="/webui/WEB-INF/velocity/resize.js"></script>
+
+#macro(renderMessage $text $severity)
+	<tr>
+	    #if($severity == 0)
+		    #set($color = "green")
+	    #end
+	    #if($severity == 1)
+		    #set($color = "blue")
+	    #end
+	    #if($severity == 2)
+		    #set($color = "red")
+	    #end
+	    #set($style = "font-weight: bold; color: $color")
+		<td class="severity" style="$style">
+        	$reportHelper.severityToString($severity)
+        </td>
+        <td>
+            $text
+        </td>
+    </tr>
+#end
+
+#if($canRead)
+<table width="100%"  cellspacing="0" cellpadding="0">
+	#if($message)
+		<tr>
+			<td style="padding:10">
+				$!message
+				<br/>
+		    </td>
+    	</tr>
+	#end
+	#if($report)
+		<tr>
+			<td style="padding:10">
+				<style type="text/css">
+					table.messages {border: 1px outset lightgray; border-collapse: collapse}
+					table.messages td {border: 1px outset lightgray; padding: 5px}
+					table.messages td.severity {vertical-align: top}
+				</style>
+                <div style="font-weight: bold">Synchronization report</div><br>
+				<table class="messages">
+					#set($count = 0)
+					#if($report.getCreatedUsers())
+						#set($count = $report.getCreatedUsers().size())
+					#end
+					#renderMessage("$count users created<br><i>$reportHelper.renderUsers($report.getCreatedUsers())</i>" 0)
+	
+					#set($count = 0)
+					#if($report.getUpdatedUsers())
+						#set($count = $report.getUpdatedUsers().size())
+					#end
+					#renderMessage("$count users updated<br><i>$reportHelper.renderUsers($report.getUpdatedUsers())</i>" 0)
+	
+					#set($count = 0)
+					#if($report.getPolarionUsersNotInLDAP())
+						#set($count = $report.getPolarionUsersNotInLDAP().size())
+					#end
+					#renderMessage("$count Polarion users not found in LDAP<br><i>$reportHelper.renderUsers($report.getPolarionUsersNotInLDAP())</i>" 0)
+					
+					#foreach($msg in $report.getMessages())
+						#renderMessage($msg.getText() $msg.getSeverity())
+					#end
+				</table>
+		    </td>
+		</tr>	
+	#end
+	<tr>
+		<td style="padding:10">
+		    #if(!$title)
+		      #set($title = "Configuration")
+		    #end
+			#panel("configuration_$portlet.getID()" $title $helpContext true true false)
+				<br/>
+				#if($globalFileURL)
+        			Project configuration: 
+				#end
+				<table>
+					<tr >
+						<td class="featureLabel">
+							File:
+						</td>
+						<td class="featureValue">
+                    		#if($exists_fileURL)
+                    			#set($svnUrl = $svnUrlTool.getDownloadUrl($fileURLRelative))
+                    			<a  class="conffile" href="$svnUrl" target="_blank">$fileURL
+                    			</a>
+                    		#else
+            					<span  style="notconffile">$fileURL (not available)</span>
+							#end
+						</td>
+					</tr>
+				</table>
+        		#if($globalFileURL)
+        			<br>
+        			Global configuration:
+    				<table>
+    					<tr >
+    						<td class="featureLabel">
+    							File:
+    						</td>
+    						<td class="featureValue">
+                    			#if($exists_globalFileURL)
+	                    			#set($svnUrl = $svnUrlTool.getDownloadUrl($globalFileURLRelative))
+                    				<a  class="conffile" href="$svnUrl" target="_blank">$globalFileURL
+                    				</a>
+                    			#else
+            						<span  style="notconffile">$globalFileURL (not available)</span>
+                    			#end
+    						</td>
+    					</tr>
+    				</table>
+        		#end
+				<br/>
+	        #endPanel()
+		</td>
+	</tr>
+	#if($canChange)
+        <tr>
+        	<td style="padding:10">
+    				#if($globalFileURL) 
+    					#panel("upload_$portlet.getID()" "Upload New Project Configuration" $helpContext true true false)
+        			#else 
+    					#panel("upload_$portlet.getID()" "Upload New Global Configuration" $helpContext true true false)
+    				#end					
+        			<br/>
+        			#set($actionUrl = $renderResponse.createActionURL())
+        			$actionUrl.setParameter("doUpload","doUpload")
+        			<form enctype="multipart/form-data" name="importForm" action="$actionUrl" method="post">
+						<table>
+        					<tr>
+        						<td class="featureLabel"><label for="file" ACCESSKEY=f> <u>F</u>ile: </label></td>
+        						<td><input id="file" size=100 type="file" name="file"/></td>
+        					</tr>
+							<tr>
+								<td align="left" colspan="2" style="padding-top:10">
+									<input type="submit" name="doUpload" value="Upload" class="actionButtonSmall"/>
+								</td>
+							</tr>
+						</table>
+        			</form>
+                #endPanel()
+        	</td>
+        </tr>
+	#end
+    <tr>
+   		<td style="padding:10">
+			#panel("ldapsync_$portlet.getID()" "Synchronize Users" $helpContext true true false)        		
+        		<br/>
+	        	#if(!$canChange)
+        			<div style="padding: 5px">You cannot synchronize users - security restriction</div>
+    	    		<br/>
+    	    	#elseif(!$enabled)
+        			<div style="padding: 5px">LDAP users synchronization is not enabled</div>
+	        		<br/>
+    	    	#else
+	    	   		#set($actionUrl = $renderResponse.createActionURL())
+		        	$actionUrl.setParameter("doSync","doSync")
+		        	<form name="syncForm" action="$actionUrl" method="post">
+						<table>
+		        			<tr>
+	    	    				<td class="featureLabel" style="text-align: right">Update existing users:</td>
+	        					<td><input id="update" size=100 type="checkbox" name="update"/></td>
+	        				</tr>
+		        			<tr>
+		        				<td class="featureLabel" style="text-align: right">Create missing users:</td>
+	    	    				<td><input id="create" size=100 type="checkbox" name="create"/></td>
+	        				</tr>
+							<tr>
+								<td align="left" colspan="2" style="padding-top:10">
+									<input type="submit" name="doSync" value="Start" class="actionButtonSmall"/>
+								</td>
+							</tr>
+						</table>
+		        	</form>
+        		#end
+            #endPanel()
+      	</td>
+    </tr>
+</table>
+#else
+  Cannot read - security restriction.
+#end

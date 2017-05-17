@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<notification-config>
+    <plan-workitem-added>
+        <current-author/>
+        <current-user/>
+    </plan-workitem-added>
+
+    <plan-workitem-removed>
+        <current-author/>
+        <current-user/>
+    </plan-workitem-removed>
+
+    <plan-created>
+        <current-author/>
+        <current-user/>
+    </plan-created>
+
+    <plan-deleted>
+        <current-author/>
+        <current-user/>
+    </plan-deleted>
+
+    <plan-updated>
+        <current-author/>
+        <current-user/>
+    </plan-updated>
+
+    <plan-status-changed>
+        <current-author/>
+        <current-user/>
+    </plan-status-changed>
+</notification-config>

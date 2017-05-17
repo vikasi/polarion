@@ -1,0 +1,2513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Polarion&reg; ALM&trade; Version History</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+    body {
+    text-align:center;
+    }
+    #container {
+    margin:0px auto 0px auto;
+    width:800px;
+    text-align:left;
+    font-family: arial;
+    }
+    html body {
+      color:Black;
+      font-family:Arial,Helvetica,Verdana,Geneva,sans-serif;
+      font-size:80%;
+      margin:0;
+      padding:0;
+      line-height:145%;
+    }
+    code {
+      font-size:130%; font-weight: bold;
+    }
+    a.small {
+      font-size:8pt;
+    }
+    div#hdr {
+      // background-image:url(http://www.polarion.com/img/banners/readme_header_logo.gif);
+      // background-position:left center;
+      // background-repeat:no-repeat;
+      color:white;
+      font-family:arial black,helvetica;
+      font-weight:bold;
+      height:70px;
+      line-height:30px;
+      vertical-align:middle;
+      text-align:left;
+      margin-left: -37px;
+    }
+    div#hdr h1 {
+      font-size:170%;
+      font-weight:bold;
+      margin:0;
+      padding:20px 0 0 38px;
+    }
+    div#hdr span.tl {
+      font-size:12px;
+      font-style:italic;
+      padding-left:42px;
+    }
+    div#hdr sup {
+      font-size:12px;
+      font-weight:normal;
+    }
+    div#nav {
+      background-color:inherit;
+      color:#191970;
+      font-size:90%;
+      margin-top: 19px; margin-bottom: 19px;      
+    }
+    div#nav ul {
+      display:block;
+      list-style-image:none;
+      list-style-position:outside;
+      list-style-type:none;
+      margin:0;
+      padding:0;
+    }
+    div#nav ul li {
+      display:inline;
+      padding-right:12px;
+    }
+    div#nav a, div#nav a:link, div#nav a:visited, div#nav a:hover {
+      // background-color:#00AEEF;
+      background-color:#55a0b9;
+      color:white;
+      font-weight:bold;
+      padding:5px 10px 5px 10px;
+      text-decoration:none;
+    }
+    div#nav a:hover {
+      // background-color:#03dede;
+      background-color: #307389;
+      color:white;
+      font-weight: bold;
+    }
+    div#cont {
+      width: 800px;
+      background-color:White;
+      color:inherit;
+    }
+    div#cont h1 {
+      background-color:inherit;
+      border-bottom:1px solid #CCCCCC;
+      font-size:160%;
+      padding-bottom:4px;
+    }
+    div#cont h2, div#cont h3 {
+      background-color:inherit;
+      color:black;
+      font-size:135%;
+
+      font-weight:bold;
+      margin:18px 16px 2px;
+      padding:0;
+    }
+    div#cont h3 {
+      font-size:115%;
+      font-style:normal;
+    }
+    div#cont p {
+      margin:0 16px 8px;
+      padding:0;
+    }
+    div#cont p.top {
+      font-size:80%;
+      font-weight:bold;
+      text-align:right;
+    }
+    div#cont p.procHdr {
+      font-style:italic;
+      margin-bottom:2px;
+    }
+
+    div#cont ul, div#cont ol {
+      margin:0 1em;
+      padding-left:1em;
+    }
+    div#cont ul li {
+      list-style-image:none;
+      list-style-position:outside;
+      list-style-type:square;
+      margin:0 28px 8px;
+    }
+    div#cont ol li {
+      margin:0 28px 8px;
+    }
+    div#cont a:link, div#cont a:visited {
+      background-color:inherit;
+      border-bottom:1px dotted #135E83;
+      // color:#00AEEF;
+      color: #55a0b9;
+      text-decoration:none;
+      font-weight: bold;
+    }
+    div#cont a:hover {
+      // background-color:#FFFFE0;
+      background-color: #307389;
+      border-bottom:1px dotted #307389;
+      color:#FFF;
+      font-weight: bold;
+    }
+    
+    div#ftr {
+      // background-color:#00AEEF;
+      background-color: #55a0b9;
+      background-position:left center;
+      background-repeat:no-repeat;
+      color:white;
+      font-size:13px;
+      height:70px;
+      margin:0 0 6px;
+      padding:0 1em 0 8px;
+      text-align:right;
+    }
+    div#ftr p {
+      padding:0 18px 0 0;
+    }
+    div.note {
+      background-color:#EEEEEE;
+      border-color:#CCCCCC #999999 #999999 #CCCCCC;
+      border-style:solid;
+      border-width:1px 2px 2px 1px;
+      margin:18px 5%;
+    }
+    div#cont div.note h2 {
+      background-color:inherit;
+      color:Blue;
+      margin-top:6px;
+    }
+    table {
+      background-color:#FFFFFF;
+      border:1px solid #CCCCCC;
+      margin:18px 12px;
+    }
+    th, td {
+      border:1px solid #EEEEEE;
+      padding:4px 1em;
+      text-align:left;
+    }
+    th {
+      background-color:#CCCCCC;
+    }
+    .shad {
+      background-color:#F9F9F9;
+    }
+    .ctr {text-align:center;}
+    .sm {font-size:smaller;}
+	</style>
+</head>
+
+<body>
+	<div style="width: 100%; background-color:#55a0b9; height: 70px">
+	<div id="container">
+	<a name="top"></a>
+	<div id="hdr">
+		<h1>Version history: Polarion<sup>&reg;</sup>&nbsp;ALM&trade;</h1>
+	</div>
+	<div id="nav">
+		<ul>
+			<li><a href="#SEVENTEEN-GA">Version&nbsp;17</a></li>
+			<li><a href="#TWENTYSIXTEEN-SR-THREE">Version&nbsp;2016</a></li>
+			<li><a href="#TWENTYFIFTEEN-SR-THREE">Version&nbsp;2015</a></li>
+			<li><a href="#TWENTYFOURTEEN-THREE">Version&nbsp;2014</a></li>
+			<li><a href="#olderVersions">OLDER</a></li>
+		</ul>
+	</div>
+	<div id="cont">
+		<p style="margin-top: 8px;">This document contains a history of Polarion ALM releases from v. 2.6.5 through the current release.</p>
+		
+		<div id="SEVENTEEN-GA">
+			<h1>Version 17</h1>
+			<p>
+				This is a major version release with new features, improvements, and enhancements as well as issue fixes. Through our Enterprise Agile development process, some features  
+				have already been introduced to customers in service releases and improved throughout the release development cycle. The aggregation of these features, plus some previously 
+				unreleased features comprise the version 17 GA (General Availability) release. 
+			</p>
+			<p>
+				With this release, the product version numbering was changed to be consistent with other products in the Siemens PLM Software product line. Information about what is 
+				delivered in the release is available online in the <strong>blog article</strong>  
+				<a href="http://blog.polarion.com/polarion-alm-17-whats-new-and-noteworthy/">Polarion ALM 17 &ndash; What's New and Noteworthy</a>. 
+			</p>
+		</div>
+		
+		<div id="TWENTYSIXTEEN-SR-THREE">
+			<h1>Version 2016 SR3</h1>
+			<p> This release added document styling and loading improvements, API Enhancements and more.
+							Detailed information about what is delivered in the release is available
+							online in the <strong>Polarion blog</strong> article <a
+								href="http://blog.polarion.com/polarion-alm-2016-sr3-whats-new-and-noteworthy/"
+								>Polarion ALM 2016 SR3 &ndash; What's New and Noteworthy</a>. </p>
+		</div>
+		
+		
+		
+		<div id="TWENTYSIXTEEN-SR-TWO">
+			<h1>Version 2016 SR2</h1>
+			<p>
+				This is the first release of Polarion ALM under the Siemens brand, and the second planned Service Release for version 2016 of the Polarion product line. 
+				This release concentrates on improvements and enhancements to features introduced in the previous 2016 releases, and more improvements in performance and scalability.
+				Information about what is delivered in the release is available online in the <strong>Polarion blog</strong> article 
+				<a href="http://blog.polarion.com/polarion-alm-2016-sr2-whats-new-and-noteworthy/">Polarion ALM 2016 SR2 &ndash; What's New and Noteworthy</a>.
+			</p>
+		</div>
+		
+		<div id="TWENTYSIXTEEN-SR-ONE">
+			<h1>Version 2016 SR1</h1>
+			<p>
+				This is the first planned Service Release for version 2016 of all Polarion platform-based products. This release concentrates on improvements and enhancements to 
+				features introduced in the previous (GA) release, performance and scalability. Information about what is delivered in the release is available online in the  
+				<strong>Polarion blog</strong> article <a href="http://blog.polarion.com/polarion-2016-sr1-whats-new-and-noteworthy/">Polarion 2016 &ndash; What's New and Noteworthy</a>.
+			</p>
+		</div>
+		
+		<div id="TWENTYSIXTEEN">
+			<h1>Version 2016 (GA)</h1>
+			<p>
+				This is a major version release with new features, improvements, and enhancements as well as issue fixes. Polarion Software practices Enterprise Agile development. Some features  
+				have been introduced to customers in service releases and improved throughout the version 2016 development cycle. The aggregation of these features, plus some previously unreleased 
+				features comprise the version 2016 GA (General Availability) release. 
+			</p>
+			<p>
+				For information about new features and enhancements, visit the Polarion Software blog and read the post: <a href="http://blog.polarion.com/whats-new-and-noteworthy-in-polarion-2016/">What's New and Noteworthy in Polarion 2016</a>.
+			</p>
+		</div>
+		
+		<div id="TWENTYFIFTEEN-SR-THREE">
+			<h1>Version 2015 SR3</h1>
+			<p>
+				Last planned service release for version 2015. Features and improvements from the this release plus other version 2015 releases roll up to comprise version 2016, 
+				the next major  version release, which will also deliver some new features and improvements. For information about features, fixes, etc. for this release please 
+				read the <strong>Polarion blog</strong> article: <a href="http://blog.polarion.com/whats-new-and-noteworthy-in-polarion-2015-sr3/">What's New and Noteworthy in Polarion 2015 SR3</a>. 
+			</p>
+		</div>
+		
+		<div id="TWENTYFIFTEEN-SR-TWO">
+			<h1>Version 2015 SR2</h1>
+			<p>
+				Second planned service release for version 2015. For information about features, fixes, etc. please read the <strong>Polarion blog</strong> article: 
+				<a href="http://blog.polarion.com/whats-new-and-noteworthy-in-polarion-2015-sr2/">What's New and Noteworthy in Polarion 2015 SR2</a>. 
+			</p>
+		</div>
+		
+		<div id="TWENTYFIFTEEN-SR-ONE">
+			<h1>Version 2015 SR1</h1>
+			<p>
+				First planned service release for version 2015. For information about features, fixes, etc. please read the <strong>Polarion blog</strong> article: 
+				<a href="http://blog.polarion.com/whats-new-and-noteworthy-in-polarion-2015-sr1/">What's New and Noteworthy in Polarion 2015 SR1</a>. 
+			</p>
+		</div>
+		
+		<div id="TWENTYFIFTEEN-GA">
+			<h1>Version 2015</h1>	
+			<p>
+				This is a major version release with new features, improvements, and enhancements as well as issue fixes. Polarion Software practices Enterprise Agile development. Some features  
+				have been introduced to customers in service releases and improved throughout the version 2015 development cycle. The aggregation of these features, plus some previously unreleased 
+				features comprise the version 2015 GA (General Availability) release. 
+			</p>
+			<p>See also: <a href="http://blog.polarion.com/introducing-polarion-2015-whats-new-and-noteworthy">Introducing Polarion 2015: What's New and Noteworthy</a> on the Polarion Software Blog.</p>
+			<h2>New Features</h2>
+			<ul>
+				<li>
+					<strong>Visual Live Reporting</strong>: New technology for online Pages with a palette of user-configurable "Widgets" enabling non-programmers to visually 
+					create robust report pages displaying "live" project and Work Item data. Includes new URL copy/paste hyperlinking, which extends to all rich text editors. 
+					Also includes a custom widget reference implementation for a Gantt chart.
+				</li>
+				<li>
+					<strong>Cross-project Plans</strong>: Teams can now include Work Items from any project into a Plan.
+				</li>
+				<li>
+					<strong>Document Status Change Signatures</strong>: Possibility to configure Document workflow actions to require one or more electronic signatures, indicating 
+					stakeholders' agreement with the current state of the Document and its content. Transition to a different status is blocked until the specified person or persons  
+					have taken action to sign off indicating their agreement to allow transition to the next process step in the workflow. When workflow conditions block users from  
+					executing a workflow transition, clear messages explain why the action is not available. This is extended to include Work Item workflow as well.
+				</li>
+				<li>
+					<strong>Work Item Field-based Permissions</strong>: Administrators can now grant or deny permissions for any Work Item field, including Custom Fields. 
+				</li>
+				<li>
+					<strong>License Management</strong>: New license activation feature streamlines and simplifies installation of new, and update of existing licenses. Activate 
+					an installation online via a new Activation Wizard by simply entering a license key string provided by Polarion Software. The wizard also provides an option 
+					for offline activation. In addition, there is a new <em>Reactivate Polarion</em> action in the License topic of Global Administration, which can be used to 
+					update the installation in case of additional or modified licenses.
+				</li>
+				<li>
+					<strong>Variant Management</strong>: This release introduces a new add-on product, Polarion VARIANTS. When installed, it works transparently with Polarion ALM, 
+					Polarion REQUIREMENTS, or Polarion QA to provide robust product line engineering (PLE) functionality on top of the existing product capabilities. There is a 
+					new project template for variant management projects, and other project templates are updated to include variant management support. 
+				</li>
+			</ul>
+			<h2>Significant Enhancements</h2>
+			<p>Some important enhancements to existing features and functionality is also in this release.</p>
+			
+			<h3>LiveDoc Enhancements</h3>
+			<ul>
+				<li>Now possible to continue the numbering of ordered list when there are paragraphs or another list between the list items.</li>
+				<li>Now possible to change the type (or presentation) of a Work Item contained in a Document.</li>
+			</ul>
+			<h3>Performance and Core Enhancements</h3>
+			<ul>
+				<li>
+					Plans loads faster due to heavy optimization in loading the burn-up / burn-down charts.
+				</li>
+				<li>
+					Conflicts are better recognized and merged even if they occur very late in commits to the data repository.
+				</li>
+				<li>Database disk size is significantly smaller when using PKs for structures.</li>
+				<li>The functionality of the Polarion Scripting Extension is now included out-of-the-box with Polarion.</li>
+				<li>Rendering API was introduced to greatly simplify the custom development of reports.</li>
+			</ul>
+		</div>
+		<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		
+		<div id="TWENTYFOURTEEN-THREE">
+			<h1>Version 2014 SR3</h1>
+			<p>This is Service Release 3 for Polarion version 2014. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements.  
+				New features and enhancements in this release will be rolled up into the next major version (Polarion 2015).
+			</p>
+			<p>See also: <a href="http://blog.polarion.com/polarion-2014-sr3-new-and-noteworthy">Polarion 2014 SR3 - What's New and Noteworthy</a> on the Polarion Software Blog.</p>
+			<h2>Document Enhancements</h2>
+			<ul>
+				<li>New notification event for Document status change: when Documents are configured with Document workflow, users can be notified of only important events linked to Documents' status change.</li>
+				<li>Redesign of Document change notifications for better readability</li>
+			</ul>
+			<h2>Space Titles</h2>
+			<p>
+				In the previous release (2014 SR2) a new Title field was introduced for Documents and Wiki Pages, which supports non-ASCII characters. In this release, the Title field 
+				is implemented for spaces in the Documents &amp; Wiki area. The benefits of using Title include: 
+			</p>
+			<ul>
+				<li>
+					Safer renaming: the system identifier (ID) need not be changed, risking breakage of links. Just change the space (or document or page) Title. 
+				</li>
+				<li>Intuitive search: Title can often be more human-readable than the system ID, which can help search users find what they are looking for more readily.</li>
+				<li>
+					Global usability: Title supports languages with character sets other than ASCII. Users of these languages see titles in their preferred language in the UI, 
+					and can search on same.
+				</li>
+			</ul>
+			<h2>Scripted Headings in ToC Macro</h2>
+			<p>The Table of Contents macro &ndash; <code>{toc}</code> &ndash; now includes headings that are created by Velocity scripts.</p>
+			
+			<h2>Referenced Work Items API</h2>
+			<p>
+				The Polarion Open API was improved to provide more support to add, remove and manage referenced Work Items... i.e. items that are shown in a Document that are actually contained in another Document.
+			</p>
+			<h2>Plans Performance</h2>
+			<p>
+				Plans that are set up to use custom fields for work estimation (story points or cost, for example) will now load the burn-down or burn-up charts much faster.
+			</p>
+			<h2>Important Fixes</h2>
+			<ul>
+				<li>Now possible to import an Excel file with many merged cells.</li>
+				<li>Now possible to use the current user variable when defining Custom Set permissions</li>
+				<li>Now possible to use Ctrl+C and similar non-editing keyboard shortcuts in some read-only fields.</li>
+			</ul>
+			<p>
+				As always, a complete listing of fixed issues is provided in the Resolved Issues file available from product download pages on the Polarion Software web site.
+			</p>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYFOURTEEN-TWO">
+			<h1>Version 2014 SR2</h1>
+			<p>This is Service Release #2 for Polarion version 2014. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements, 
+				especially for Document security and permissions. New features and enhancements in this release will be rolled up into the next major version (Polarion 2015).
+			</p>
+			<p>See also: <a href="http://blog.polarion.com/polarion-2014-sr2-new-and-noteworthy">Polarion 2014 SR2 - What's New and Noteworthy</a> on the Polarion Software Blog.</p>
+			<h2>Granular Document Permissions</h2>
+			<p>The MODIFY DOCUMENT permission present in previous releases has been split into a more granular set of permissions for Documents:</p>
+			<ul>
+				<li>Permission to MODIFY FIELDS - allows modification of status and custom fields.</li>
+				<li>Permission to MODIFY CONTENT - add/remove/modify Document-contained Work Items and modify Document text, structure, or attachments. Cannot edit title, description, test steps, or attachments of contained Work Items (but can edit other WI fields).</li>
+				<li>Permission to MANAGE - move Document, adjust the default presentation (e.g. fields at start/end), etc.</li>
+			</ul>
+			<h2>Permissions Management</h2>
+			<ul>
+				<li>New dynamic roles for Documents and Comments: document_author and comment_author. The default permissions for these roles can be modified globally and for specific projects.</li>
+				<li>Easy visual identification of explicitly granted/denied permissions, and inherited permissions, in the permissions administration UI.</li>
+			</ul>
+			
+			<h2>Document &amp; Wiki Page Titles</h2>
+			<p>
+				Give your Documents and Wiki pages and documents human-friendly titles using ASCII or <b>non-ASCII</b> characters. When Title is used, it’s displayed throughout the UI, 
+				rather than the Name (ID). If not used, then Name (ID) is displayed, as before. So there’s no need to update existing Documents unless you want to. (Users of languages 
+				with non-ASCII charsets <i>will</i> probably want to!) Note that spaces are still not supported - we’ll deliver that next release.
+			</p>
+			
+			<h2>Polarion Connector for HP ALM&trade; 12</h2>
+			<p>
+				Polarion Connector for HP ALM now supports HP ALM 12. HP ALM 11 is still supported, and HP ALM 12 support is transparent. No need to specify which version when you:
+			</p>
+			<ul>
+				<li>Create a connection to HP ALM 12 server</li>
+				<li>Create a sync pair with HP ALM 12 and see all available attributes</li>
+				<li>Sync attribute of artifacts in HP ALM 12, excluding attributes that require direct database access.</li>
+			</ul>
+			<p>
+				You can configure sync pairs to include relations, so that all relations between HP artifacts are synchronized with Polarion. You can configure sync pairs to include 
+				Test Steps, so that test steps from HP ALM 12 are imported to Polarion.
+			</p>
+			
+			<h2>Other Enhancements and Improvements</h2>
+			<p>As always, we select and prioritize these based on feedback and input from our customers.</p>
+			
+			<h3>Administration</h3>
+			<ul>
+				<li>Now possible to disable tracking of time spent (test duration) in execution of manual tests via a new system property: <em>com.polarion.alm.ui.forms.extensions.disableTimeSpentRecording</em>. (Such tracking may be prohibited by law in some countries.)</li>
+				<li>“Dependent” enumeration lists: admins can set up configurations where user’s selection of a value in one list populates one or more other lists according the user’s selection. For example, selection of “Linux” in a list of operating systems can result in only Linux versions visible in a list of OS versions.</li>
+				<li>Visibility of workflow functions and conditions: admins can now readily see if conditions and functions exist for workflow actions without having to edit each action. Functions and conditions can be edited by clicking on the items shown in the Actions table of the Workflow Designer.</li>
+			</ul>
+			
+			<h3>End Users</h3>
+			<ul>
+				<li>Reset Favorites: users can quickly reset their Favorite shortcuts to the original default state with a new button in the Manage Shortcuts dialog.</li>
+				<li>Reset UI: users can reset their user interface to the original default state (other users are not affected). A button on users’ <i>My Polarion</i> page  restores confirmation dialogs, among other things.</li>
+				<li>New visual query element “SQL” in the visual Query Builder enables direct entry of SQL syntax in Work Item queries in the Tracker.</li>
+				<li>QA managers can easily mark Test Runs that should not be wiped by automated cleanup of Test Runs. Select multiple Test Runs in a table (manually or via query) and set the <i>Keep in History</i> flag for all of them at once.</li>
+			</ul>
+			
+			<h2>Performance</h2>
+			<ul>
+				<li>Reuse of Baseline views in historical database results in improved performance of historical queries and burn-down charts in Plans.</li>
+				<li>Improved performance with a large SVN access file.</li>
+			</ul>
+			
+			<h2>Other</h2>
+			<ul>
+				<li>Advanced types of HighCharts now included with Polarion.</li>
+				<li>Firefox 31 is now supported.</li>
+			</ul>
+			
+			<h2>Important Fixes</h2>
+			<ul>
+				<li>Default values for text and rich text custom fields, specified in Administration, are written when new Work Items are created.</li>
+				<li>Order of children is kept when moving Work Items between Documents.</li>
+				<li>Improved handling of invalid selections in the Document Editor.</li>
+				<li>Faster and more reliable shutdown of the Polarion server.</li>
+				<li>Improved visibility of update installation documentation is distributions and web site.</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYFOURTEEN-ONE">
+			<h1>Version 2014 SR1</h1>
+			<p>This is Service Release #1 for Polarion version 2014. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements, 
+			especially for Documents and User Management. New features and enhancements in this release will be rolled up into the next major version (Polarion 2015).
+			</p>
+			<p>See also: <a href="http://blog.polarion.com/polarion-2014-SR1-whats-new-and-noteworthy">Polarion 2014 SR1 - What's New and Noteworthy</a> on the Polarion Software Blog.</p>
+			<h2>New Features</h2>
+			<ul>
+				<li>
+					<strong>Document Types</strong>: New Administration topic <em>Documents &amp; Wiki &gt; Document Types</em>. After enabling the feature, Administrators can define named types  
+					for Documents (globally and per-project). Users can then classify new and existing Documents according to type, and use type as a parameter when searching for Documents.
+				</li>
+				<li>
+					<strong>Document Workflow</strong>: New Administration topic <em>Documents &amp; Wiki &gt; Document Workflow</em>. After enabling the feature, Administrators can configure 
+					workflows for Documents (in general, and for specific Document Types). Document workflow applies to the Document as a unit. Workflow of Work Items contained in the Document 
+					is unaffected by the Document workflow unless Document workflow is explicitly configured to invoke an action to change Work Items' status.
+				</li>
+				<li>
+					<strong>Custom Permissions Sets</strong>: Administrators can create named &quot;Custom Sets&quot; of user permissions for explicit sets of Work Items, Documents, Wiki pages, 
+					Plans or Test Runs. The artifacts that have their permissions controlled by a Custom Set are selected by a query. Custom Sets appear in the list of permission categories, and permissions are defined for 
+					them in the same way as other permission categories. If an artifact matches the query of more than one Custom Set, its permissions are controlled by the first listed Custom Set.
+				</li>
+				<li>
+					<strong>Dependent Enumerations</strong>: With this feature, you can make only a subset of all the values of one enumeration visible to end users viewing the field. 
+					The subset depends on the value selected in another field of type <em>enum</em>. For example, an enum field with a list of operating system versions can be mapped to 
+					the user selection in a field listing operating systems. If the user has selected e.g. Linux in that field, then the version field will show only Linux versions, while  
+					versions of others are hidden.
+				</li>
+				<li>
+					<strong>Image Copy/Paste</strong>: With some limitations users can paste an image from their clipboard into any rich text field in Work Items, or into Documents (including  
+					descriptions of Work Items in the Document). Supported image formats are: BMP, JPG, PNG, and GIF. Currently works only in Mozilla Firefox, and Google Chrome. Quality of pasted images
+					can vary somewhat depending on the source of the copied image, and the browser used.           
+				</li>
+				<li>
+					<strong>Reuse of Recent Test Results</strong>: Test Cases now allow testers to select from the most recent test steps and test case execution results, applying the selected result to the 
+					current execution.
+				</li>
+				<li>
+					<strong>Test Run Clean-up</strong>: There is a new job: <code>polarion.jobs.testruns.delete</code> that can be run to delete old/no longer needed Test Runs in configured Projects. 
+					Test Runs are selected according to a query specified in the <em>Testing &gt; Configuration</em> administration. The job can be scheduled to run periodically and automatically. 
+					See topic <em>Configuring Cleanup of Old Test Runs</em> 
+					in Help.
+				</li>
+			</ul>
+			<h2>Significant Improvements</h2>
+			<ul>
+				<li>
+					<strong>New default tokenizer</strong>: New default tokenizer now splits words by whitespaces, so IDs like abc_d1e, or abc_def are no longer split to multiple words. 
+					Queries “abc*” and “abc_d*” now always return both IDs. Users of Asian languages should use a new system property: <code>search.wordBoundaries=standard</code>. For details, 
+					search Help for &quot;Tokenization&quot;.
+				</li>
+				<li>
+					<strong>Connectors</strong>: Connector for JIRA: new Synchronize Status field. Connectors for JIRA and HP QC: add hyperlinks to open synchronized items.
+				</li>
+			</ul>
+			<h2>Performance Improvements</h2>
+			<ul>
+				<li>New Lucene version provides more robust locking for read &amp; write operations, which results in improved concurrency.</li>
+				<li>Loading of Work Items uses improved caching and evaluation of permissions, which improves the load performance by more than 40%. This improvement also positively 
+					affects loading of objects such as Documents, Work Items Tree table, or Traceability Matrix. Rendering of Wiki pages that work with Work Items (e.g. Reports, Plans),
+					and export to Word or Excel is also faster.
+				</li>
+				<li>Additional caching of historical query results and revisions list of object history provides faster loading of object history and also historical versions of objects.</li>
+				<li>Improved concurrency and performance of manual test execution for Test Runs with many planned test cases.</li>
+				<li>Rename map is now cached in memory, so if this map is large it no longer affects performance.</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYFOURTEEN-GA">
+			<h1>Version 2014 (GA)</h1>
+			<p>
+				This is a major version release with new features, improvements, and enhancements as well as issue fixes. Polarion Software practices Agile development. Some features  
+				have been introduced to customers in service releases and improved throughout the version 2014 development cycle. The aggregation of these features, plus some previously unreleased 
+				features comprise the version 2014 release. 
+			</p>
+			<h2>New Features</h2>
+			<ul>
+				<li>
+					<strong>Clustering</strong>: New support for running Polarion on multiple physical and/or virtual machines, sharing a single repository on clustered instances, or running 
+					multiple Polarion instances each with its own repository, or a combination of these topographies. Supported use cases include active/active failover, and distributed processing 
+					to utilize hardware resources efficiently based on user demand.
+				</li>
+				<li>
+					<strong>Release Plans</strong>: New top-level business object <em>Plan</em> (Navigation &gt; Plans) facilitates planning of releases and iterations within releases. 
+					Create any hierarchy of Plans, populated with pre-estimated Work Items to be processed within the Plan's time frame. Simple drag-drop operation to populate a Plan with  
+					Work Items. Robust live reporting with burn-up/burn-down charting clearly shows Plan progress in several ways, including comparison against "ideal" progress in terms of 
+					the total estimated work, the team's total capacity, and the time available. New example Plans are included in demo projects.
+				</li>
+				<li>
+					<strong>Requirements Interchange</strong>: Native support for ReqIF round-trip without additional plugins or integrations. Import and re-import RIF and ReqIF  
+					documents, export Polarion LiveDoc documents as ReqIF or RIF documents, and re-import external changes to exported data.
+				</li>
+				<li>
+					<strong>LiveDoc Custom Fields</strong>: Create custom metadata for Polarion Documents on a per-Document basis: Owner, Target Version, for example.  
+				</li>
+			</ul>
+			<h2>Significant Improvements and Fixes</h2>
+			<ul>
+				<li>
+					Configure custom PDF headers and footers per Document during export. Save and reuse the custom configuration; 
+					optionally restore the default with a single click. Reference Document custom fields both from PDF and Microsoft Word<sup>&reg;</sup> header and footer.
+				</li>
+				<li>
+					Handle a large set of parameters in wiki report pages by using the POST "method" on the {parameter-form}. 
+				</li>
+				<li>
+					Added support for Subversion 1.8.
+				</li>
+				<li>
+					Improved transparency in some LiveDoc operations:
+					<ul>
+						<li>Users who delete a LiveDoc are informed that its Work Items will also be deleted.</li>
+						<li>Users are informed when a Work Item is in a LiveDoc's Recycle Bin.</li>
+					</ul>
+				</li>
+				<li>
+					Specify labels for string values in the {parameter} macro by creating an ad-hoc enumeration.
+				</li>
+				<li>
+					The {testrecords} macro was modified to show <em>all</em> test records when "top=0".
+				</li>
+				<li>
+					Improved handling of merged cells in import form Microsoft Word<sup>&reg;</sup>.
+				</li>
+				<li>
+					Empty table cells in rich-text editors no longer contain white spaces.
+				</li>
+				<li>
+					The {includeform} macro now works in History.
+				</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		<hr />
+		<p id="olderVersions"><strong>OLDER VERSIONS</strong></p>
+		<hr />
+		<div id="TWENTYTHIRTEEN-THREE">
+			<h1>Version 2013 SR3</h1>
+			<p>
+				This is Service Release #3 for Polarion version 2013. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements, 
+				especially in back-end performance. New features and enhancements in this release will be rolled up into the next major version (Polarion 2014).
+			</p>
+			<p>Note: you may find this article on the Polarion blog more useful: <a href="http://blog.polarion.com/polarion-2013-sr3-new-and-noteworthy">Polarion 2013 SR3 - New and Noteworthy</a>.</p>
+			
+			<h2>Test Record Attachments</h2>
+			<p>
+				It is now possible to attach files to test steps and test case verdict while executing test cases manually. Attach screenshots  or images, protocols, error messages, 
+				or any kind of file useful in documenting the results of the test steps and test case.
+			</p>
+			<h2>Find and Replace in LiveDocs</h2>
+			<p>
+				Polarion LiveDocs now have Find and Replace within the same document. Find any word or phrase, navigate between all instances found, and replace one or all instances.
+			</p>
+			
+			<h2>New Charting Library</h2>
+			<p>
+				Charts in wiki pages and dashboards no longer need to use Adobe Flash<sup>&reg;</sup>. Polarion now integrates the Highcharts library, which in addition to integrating easily 
+				into wiki reports and exporting nicely to PDF, also has many more options for rendering custom charts.
+			</p>
+			
+			<h2>Performance Improvements</h2>
+			<ul>
+				<li>
+					Generation of Wiki Reports with complex velocity scripts that use cycles is now much faster. Actual improvement depends on the structure of the script, 
+					but sample reports tested generated 10x faster.
+				</li>
+				<li>
+					Loading of Work Items is up to 25% faster. This has also positive impact on loading of Documents, which is now about 10% faster, and on generating of Wiki Reports that show   
+					Work Items.
+				</li>
+				<li>
+					Export to Microsoft Excel<sup>&reg;</sup> is now about 25% faster.
+				</li>
+				<li>
+					Loading of LiveDocs with many comments was improved. A sample document containing 400 comments now loads 3x faster than when tested in the previous version.
+				</li>
+				<li>
+					The Time Sheet view renders much faster for Work Item types that show any form extension.
+				</li>
+			</ul>
+			<h2>Significant Fixes</h2>
+			<ul>
+				<li>The Comments field can be now marked as read-only depending on status of the Work Item.</li>
+				<li>Manual test execution now offers only Test Runs where the Test Case(s) can be executed.</li>
+				<li>Export improvements:
+					<ul>
+						<li>Improved appearance of LiveDocs exported to Microsoft Word</li>
+						<li>Work Item comments are now correctly rendered in LiveDocs <em>and</em> Word export if they are configured to be shown in a LiveDoc.</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYTHIRTEEN-TWO">
+			<h1>Version 2013 SR2</h1>
+			<p>
+				This is Service Release #2 for Polarion version 2013. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements, 
+				especially in the back end. New features and enhancements in this release will be rolled up into the next major version (Polarion 2014).
+			</p>
+			<p>Note: you may find this article on the Polarion blog more useful: <a href="http://blog.polarion.com/archives/3784">Polarion 2013 SR2 - New and Noteworthy</a>.</p>
+			<h2>Rich Text Enhancements</h2>
+			<ul>
+				<li><strong>Fonts</strong>: Rich Text and LiveDoc editors now enable selection of font styles and sizes. Mapping of fonts on the system level for Microsoft Word import.</li>
+				<li><strong>Colors</strong>: In the above components, colors can be applied to text and text background.</li> 
+			</ul>
+			<h2>Easy Prioritization</h2>
+			<ul>
+				<li>New Prioritization sidebar panel enables setting of Work Item priority by priority rank, numeric value, or table position.</li>
+				<li>
+					Work Items table enters special prioritization mode when the sidebar panel opens. The table is sorted top to bottom starting with highest priority at the top. 
+					Items can be dragged upward or downward in the table according to priority. Other items are automatically rescaled
+				</li>
+				<li>
+					Options to rescale Priority field values of selected items, or all items in the prioritization table. The latter is useful before starting to prioritize newly 
+					created or imported Work Items.
+				</li>
+			</ul>
+			<h2>Performance</h2>
+			<ul>
+				<li>
+					<strong>Configurable System Access</strong>: the system connection to the repository can be set to connect either via <em>file</em> or <em>svn</em> protocol. 
+					Used only for system read. No degradation of security. The reindex time can be up to 3x times faster by using the <em>svn</em> protocol. New system property 
+					<code>repoSystem</code> specifies the protocol to be used.
+				</li>
+				<li>
+					<strong>Parallelization</strong>: multiple CPU cores used when indexing non-dependent entities. Together with accessing Subversion via the <em>svn</em> protocol, 
+					the procedures can be more than 5x faster compared to version 2013-SR1
+				</li>
+				<li>
+					<strong>Optimized Tree Creator</strong>: the Work Items Tree view now consumes less memory, and is loaded faster. If a user’s query will load a very large tree,  
+					the system now offers an option to load just the top items of the data, which is the data typically needed.
+				</li>
+				<li>
+					<strong>Optimize data preloading on big data (80%)</strong>: Once Polarion server is started it pre-loads all the configuration files, which just speeds up later 
+					invocations on components such as query, builds, etc. Up to 80% faster as compared with v. 2013-SR1.
+				</li>
+				<li>
+					<strong>Administrator Alerts</strong>: The Polarion system administrator is notified by automated email if...
+					<ul>
+						<li>the Polarion server is running out of memory</li>
+						<li>the server is running low on disk space</li>
+						<li>a user has used a SQL Query that takes too much time to be executed until the http timeout</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Polarion Diagnostic Tool (PDT)</strong>: New utility automates preparation and sending of all information needed by Polarion support team to diagnose 
+					problems. Bundled in the <code>diagtool</code> folder of the installation. Full documentation is included in the bundle.
+				</li>
+			</ul>
+			<h2>Usability Improvements</h2>
+			<ul>
+				<li>
+					<strong>Diagram Editor:</strong> Significant performance improvements on Internet Explorer 8 in standards, as well as many new stencils in the shapes library,   
+					and more editing options.
+				</li>
+				<li>
+					<strong>Auto-assignment to current user</strong>: A new auto-assignment rule has been added to assign a Work Item to the currently logged-in user.
+				</li>
+				<li>
+					<strong>Consistent handling of time zones</strong>: The server's time zone is always used for all time-stamp data to eliminate confusion about due dates, 
+					planned starts, etc. 
+				</li>
+			</ul>
+			<h2>System Updates</h2>
+			<ul>
+				<li>
+					<strong>Browsers</strong>: Firefox 23 and new releases of Google Chrome are supported.
+				</li>
+				<li>
+					<strong>Microsoft Office</strong>: Microsoft Office 2013 is officially supported for Word and Excel Round-trip.
+				</li>
+				<li>
+					<strong>Java</strong>: Java 7 is now officially supported and recommended for use on the server.
+				</li>
+			</ul>
+			<h2>Windows Installers</h2>
+			<p>
+				The release introduces 2 installers for the Windows platform: 32- and 64-bit. The default installer contains 64-bit Java 7. 
+				The 32-bit installer is mainly for desktop or notebook PC evaluations, or a small VM. The 64-bit version is always recommended for production use.
+			</p>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYTHIRTEEN-ONE">
+			<h1>Version 2013 SR1</h1>
+			<p>
+				This is Service Release #1 for Polarion version 2013. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements. 
+				New features and enhancements in this release will be rolled up into the next major version (Polarion 2014).
+			</p>
+			<p>Note: you may find this article on the Polarion blog more useful: <a href="http://blog.polarion.com/archives/3211">Polarion 2013 SR1 - New and Noteworthy</a>.</p>
+			<ul>
+				<li>
+					<strong>Approval Center</strong> - Formal approval process support. New workflow conditions and functions enable automatic adding users, according to a specified role, 
+					to a list of Approvers on every Work Item that must undergo review and approval. New panel for LiveDoc sidebar and the tracker shows the current state of all approvals, 
+					and approvals for which the current user is responsible, and facilitates marking of items as approved or disapproved. Approvers can approve or disapprove single items, 
+					or multiple items at once. Work Item comments pertaining to approvals are labeled as such. Disapproved items can have their approval state reset, causing them to repeat 
+					the review-and-approve cycle. This extended approvals support is now pre-configured in the default project templates.
+				</li>
+				<li>
+					<strong>Comment Resolution</strong> - All Work Item comment threads can be marked as &quot;resolved&quot;. This hides them so users can focus on 
+					active discussions only. Resolved comments can be easily viewed, and resolved thread reopened for further discussion if necessary.
+				</li>
+				<li>
+					<strong>User-definable LiveDoc Field Display</strong> - Document presentation configuration (i.e. which fields are rendered together with Title and Description) are 
+					configurable by each user to provide an individualized view of Work Item data in the Document. The same individualized configuration option is available when opening 
+					a Document from a baseline or historical revision.
+				</li>
+				<li>
+					<strong>Document and Rich Text Editing</strong> - Width and height of table rows and columns is now easily adjustable by dragging borders. Both numbered (ordered) 
+					and bullet (unordered) lists are now available in these editors.
+				</li>
+				<li>
+					<strong>Referenced Work Item Visibility</strong> - the Work Item properties panel of the Document sidebar now shows users if the selected Work Item is referenced 
+					from another Document, and if so, which Document(s). A link provides quick access to the item's referencing Document. 
+				</li>
+				<li>
+					<strong>Baseline Report Parameters</strong> - You can now generate parameterized reports in baselines as well as in the current project revision.
+				</li>
+				<li>
+					<strong>Project-level Views</strong> - Administrators can now create a project-specific Views and link them with their users.
+				</li>
+				<li>
+					<strong>Refined Querying on Any/None Values</strong> - Querying for Any/None value has been refined so that it now uses a new index field HAS_VALUE. 
+					Querying by ######NULL is deprecated but will still work. Updating of such queries in macros and API calls is recommended, however. 
+				</li>
+				<li>
+					<strong>Switchable Test Case Advance</strong> - it is now possible to switch off automatic advance to the next test case in a Test Run. 
+					This enables execution of the same test case in different environments before moving on to the next test case a the Test Run.
+				</li>
+				<li>
+					<strong>Enhanced Project Templates</strong> - with new approval process support, as mentions, and a number of useful new reports:
+					<ul>
+						<li>Estimation Quality</li>
+						<li>Frequent Test Case Failures</li>
+						<li>Items by Category</li>
+						<li>Items By Status</li>
+						<li>Requirements Approval Statistics</li>
+						<li>Requirements Test Coverage</li>
+						<li>Test Runs Statistics</li>
+						<li>Traceability Report</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Enhanced Excel<sup>&reg;</sup> Import</strong> - the importer will now handle import of structured and complex fields when these are preset and 
+					properly formatted in Microsoft Excel. For example: <em>assignee</em>, <em>category</em>, <em>hyperlinks</em> and <em>linkedWorkItems</em>.
+				</li>
+				<li>
+					<strong>Webservices Enhancements</strong> - The webservices API now provides an interface to create 
+					Polarion baselines. So you can easily create a baseline before and after an import procedure, for example. Test Runs can now have files attached via webservices. 
+					
+				</li>
+				<li>
+					<strong>New System Property</strong> - The system property <code>polarion.durationHoursPerDay</code> can be used to define hours per day used when days need to be 
+					converted to working hours in places like Time Sheet view or Work Records calculations.
+				</li>
+				<li>
+					<strong>Browser Support</strong> - New versions of Mozilla Firefox and Microsoft Internet Explorer are supported. See the Supported Browsers section of the README.html file bundled  
+					in your distribution. 
+				</li>
+				<li>
+					<strong>OS Support</strong> - Polarion now supports Debian 7. See the Installation Guide (PDF) document bundled with your distribution for the latest 
+					system requirements and supported operating systems.
+				</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYTHIRTEEN">
+			<h1>Version 2013 (GA)</h1>	
+			<p>
+				This is a major release with significant new features, improvements, and enhancements as well as issue fixes. Polarion Software practices Agile development. 
+				Some features have been introduced to customers in service releases and improved throughout the version 2013 development cycle. The aggregation of 
+				these features, plus some newly released features comprise the version 2013 release.
+			</p>
+			<h2>New Features</h2>
+			<ul>
+				<li>
+					<strong>Diagramming</strong>: Create and edit many types of diagrams right in your LiveDoc specification documents, or in the Description field, or rich-text 
+					custom fields of any type of Work Item in the tracker.
+				</li>
+				<li>
+					<strong>Formal Testing Procedures</strong>: Define test steps tables within your Test Cases to capture explicitly how to conduct tests. Import and 
+					round-trip using Excel<sup>&reg;</sup>; execute online, or off-line with results re-imported and logged in Polarion.
+				</li>
+				<li>
+					<strong>Test Planning</strong>: Enhanced flexibility for when planning tests: plan via live query results or hand pick the test cases that should be executed.  
+					Select any option from 5 possible choices. 
+				</li>
+				<li>
+					<strong>OLE Support</strong>: Significant improvements in connecting Polarion technology with proprietary Microsoft OLE<sup>&reg;</sup> objects. To ensure that 
+					OLE objects (including the new version of OLE objects with EMF thumbnails) can be converted well, the conversion must be done on the Windows Server platform only.
+				</li>
+				<li>
+					<strong>Easier than Ever for Users</strong>: Features that have been in Polarion since version 1.0 revisited: Query Building and Work Item Linking. 
+					<ul>
+						<li>New in-place Query Builder helps users construct simple to complex queries visually, with project-specific elements and options. </li>
+						<li>New Easy Linking enables visual linking between Work Items in LiveDocs or the tracker across any number of browser windows.</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Connectors</strong>: Custom data exchange and synchronization between Polarion and Atlassian JIRA<sup>&reg;</sup>, and/or HP Quality Center&trade; enabling 
+					teams using Polarion to collaborate with others who prefer to keep using these tools. Connectors are integrated into the Polarion platform, than developed as extensions.
+				</li>
+				<li>
+					<strong>Mobile Access</strong>: A new iOS app <em>ALM2GO</em>, released concurrently with version 2013, delivers all the functionality of Polarion<sup>&reg;</sup> REVIEWER&trade;  
+					on the Apple iPhone<sup>&reg;</sup>. The app is free on the Apple App Store for iPhone. At least one low-cost Polarion REVIEWER license must be present on the Polarion Server in 
+					order to use the app.
+				</li>
+				<li>
+					<strong>Attachment Content Search</strong>: The content of attachments is now indexed so users can find attachments via their content type: PDF, WORD, EXCEL, RTF, TXT, etc. 
+				</li>
+				<li>
+					<strong>Browser Support</strong>: New versions of Mozilla Firefox and Microsoft Internet Explorer are supported. See the Supported Browsers section of the README.html file bundled  
+					in your distribution. 
+				</li>
+				<li>
+					<strong>OS Support</strong>: Polarion now supports Microsoft Windows Server 2012, RHEL 6, Debian 6 and Ubuntu 12. See the Installation Guide (PDF) document bundled with your distribution for the latest 
+					system requirements and supported operating systems.
+				</li>
+			</ul>			
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYTWELVE-SR3">
+			<h1>Version 2012 SR3</h1>
+			<p>
+				This is Service Release #3 for version 2012. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements. 
+				Note: you may find this article on the Polarion blog more useful: <a href="http://blog.polarion.com/?p=2786">Polarion 2012 SR3 - New and Noteworthy</a>.
+			</p>
+			<ul>
+				<li>
+					Import from Microsoft Excel<sup>&reg;</sup>. You can now import Excel Sheets that contain not only test cases, but which have additional rows containing discrete 
+					test steps.
+				</li>
+				<li>
+					Execute Tests with Test Steps off-line. When you describe the steps of your manual tests as trackable “Test Steps”, you can now export test cases that have such Test Steps 
+					associated with them to Excel for offline execution. When testers execute the steps offline, they can record the result of each test step as well as the overall result of each 
+					test case in the Excel workbook. 
+				</li>
+				<li>
+					Customize Test Steps table. New Test Steps topic in Testing administration enables administrators to customize the table of Test Steps rendered in the Test Steps field of Test Case 
+					type Work Items. Add columns to track any needed information with each Test Step defined. Change default column heading labels to use teams' own terminology.
+				</li>
+				<li>
+					OLE Objects. Possibility to import Microsoft Word documents that contain OLE Objects. Configure Polarion to automatically convert OLE objects into PNG images.
+				</li>
+				<li>
+					Import Multi-valued Fields. When importing Work Items from Excel spreadsheets, users can now configure the import to map multiple field values in Excel cells to Polarion multi-valued  
+					enumeration fields.
+				</li>
+				<li>
+					New Custom Field Types. Several new field types are introduced for use when configuring custom fields in projects: <em>user</em>, <em>timepoint</em>, <em>project</em>, <em>build</em>, and <em>test run</em>.
+				</li>
+				<li>
+					Rich Text Toolbar Always Visible. When editing a Work Item's description, the field's toolbar now remains static and no longer scrolls out of view when the field content increases.
+				</li>
+				<li>
+					Custom Logo for Each Polarion Instance. In multi-instance setups, visually differentiate each Polarion server instance by specifying the URL to an image file in a new system property: 
+					<code>com.polarion.logoURL</code>. The specified image replaces the Polarion logo in the Navigation panel on the configured server.
+				</li>
+				<li>
+					Internet Explorer Compatibility Mode Check. Although Polarion will allow users to run the latest Microsoft Internet Explorer, they should not use the so-called &quot;compatibility&quot;.  
+					If run in this mode, a warning appears on the login page.
+				</li>
+				<li>
+					Restructure LiveDocs Using Tree Table. Although the most common way to restructure content of a Document is to use the Document Editor, users now have the option to use new 
+					operations in the Tree Table view of the Document to move content around.
+				</li>
+				<li>
+					Saved Configurations for the Work Items Table. Users can define, save, and reuse multiple Work Items table configurations, and can easily switch between different table layout and content  
+					without having to configure the columns for each different view they want.
+				</li>
+				<li>
+					PDF Export for LiveDoc Comparison View. When a user compares 2 LiveDoc documents, the Document view of the comparison result can now be exported to a PDF file. PDF header/footer customization support now 
+					recognizes 2 additional parameters:
+					<ul>
+						<li><em>documentName1</em>  &ndash; name of first compared Document</li>
+						<li><em>documentName2</em>  &ndash; name of second compared Document</li>
+					</ul>
+				</li>
+				<li>
+					Browser Support. Service Release 3 adds support for Firefox 17.
+				</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYTWELVE-SR2">
+			<h1>Version 2012 SR2</h1>
+			<p>
+				This is Service Release #2 for version 2012. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements. 
+				Note: you may find this article on the Polarion blog more useful: <a href="http://blog.polarion.com/?p=2438">Polarion 2012 SR2 - New and Noteworthy</a>.
+			</p>
+			<ul>
+				<li>
+					Manual planning of Test Runs. You can now  plan Test Runs by manually selecting the test cases to execute. The action “Select test cases” is available to 
+					Test Runs created from Test Run templates having planning type: Manual, By Query on Create, or From LiveDoc on Create.
+				</li>
+				<li>
+					Easy Linking: Click the new quick-link icon of Work Items in LiveDocs or the Tracker in one browser window, go to another window, select the target there, and 
+					the link is established.
+				</li>
+				<li>
+					Graphical Query Builder: You no longer need to type queries in Polarion query language (although you still can if you really want to). Nor do you need to open 
+					a separate Query Builder dialog to build queries visually. Now you can specify the search criteria quickly and easily just with few clicks directly in the various 
+					Work Item views, as well as dialogs in which you query for Work Items. This feature is disabled by default in the SR2 update but can be enabled 
+					by adding the following property to the system properties file polarion.properties: <code>com.polarion.ui.useQueryBubblePanel=true</code>.
+				</li>
+				<li>
+					Easy portal searching: Press Shift+Enter to search the entire portal when searching in left Navigation panel. (Pressing just Enter searches just the current project, as before.)
+				</li>
+				<li>
+					Hide and Restore Navigation: You can easily hide the left side navigator panel by clicking a new closer icon. (A click on the left edge of the screen restores the panel to view.)
+				</li>
+				<li>
+					Create Work Item menu: The Create Work item menu button in the Table view of Work Items now lists all the configured Work Item types, including the two types shown as icons on the toolbar.
+				</li>
+				<li>
+					&quot;Compact&quot; UI Mode: There is now an option to display the UI in &quot;compact&quot; mode which renders content with less surrounding white space. Available from the 
+					View menu of Navigation.
+				</li>
+				<li>
+					Work Item Text Wrapping: You can enable text wrap to adjust the Work Item Table's row height to display all the content. Right-click the table header and select Wrap Text on 
+					the menu to toggle text wrapping on or off.
+				</li>
+				<li>
+					Tile Work Item Table panes: There is now an option to tile the table and Work Item detail panes horizontally to display them side by side. Useful for wide-screen monitors. 
+				</li>
+				<li>
+					Document History includes Baselines: Baselines are displayed in a Document’s history view so you can easily compare the Document between baselines. Baselines that were added to the 
+					revisions list, and in which the Document was not changed in revision, are now identified by use of Italic font style.
+				</li>
+				<li>
+					Language Configuration: The release adds a graphical user interface to the Portal &gt; Languages administration page to make configuring support for different languages easier.
+				</li>
+				<li>
+					Table rows in Rich-test fields: a new quick action makes it more convenient to add a new row to a table contained in a rich-text field in Work Items... Description, for example..
+				</li>
+				<li>
+					Hyperlinks open Repository Browser: When the hyperlinks point to a Subversion resource, it allows users to open Polarion’s Repository Browser instead of opening the native SVN repository.
+				</li>
+				<li>
+					Firefox Support: the release adds support for Firefox 15.
+				</li>
+				<li>
+					{includeForm} improves over #includeMacros: You can now use the {includeForm} macro in wiki pages and the included macros are loaded immediately. No need to use #includeMacros any longer. 
+					This prevents an issue with the macros not loading after server start-up.
+				</li>
+				<li>
+					Connect to SQL Layer with ODBC: It is now possible to connect to Polarion’s SQL layer both with JDBC and ODBC drivers. For the ODBC connection you can use the Postgress 
+					SQL ODBC drivers. You should configure the Postgress server port via property com.polarion.platform.sql.pgPort. See the SDK documentation for details.
+				</li>
+				<li>
+					PDF Export Improvements:
+					<ul>
+						<li>The formatting styles applied to Polarion LiveDocs and Wiki pages exported to PDF have been improved so the results look better.</li>
+						<li>Linked work items are nicely rendered when a LiveDoc is exported into PDF.</li>
+					</ul>
+				</li>
+				<li>
+					TestWebService is fully documented: The SDK Web Services documentation now describes the test management features exposed by TestWebService to the full extent.
+				</li>
+				<li>
+					SVN Access and deleted projects: When you delete a project, the project-specific settings are also deleted from the Subversion repository's access control file (“access file”). 
+					This is an important improvement, because when the settings were kept, as previously, Polarion would not allow you to create a new project in the same location.
+				</li>
+				<li>
+					Support for non-Latin Alphabets: The release incorporates a number of improvements for people using languages with non-Latin based alphabets.
+					<ul>
+						<li>Site Searching: Searching by entering Japanese or Chinese characters does not automatically start the search action.</li>
+						<li>
+							Commenting in Documents: The comment marker in a Polarion LiveDoc is placed just after the selected Japanese, Chinese or any other non-Latin character. 
+							However, your administrator must configure Polarion to enable this behavior by adding the following property to the system properties file 
+							polarion.properties: <code>com.polarion.placeCommentsDirectly=true</code>.
+						</li>
+						<li>
+							History Compare: The release adds support for Document comparison with languages that do not separate words by spaces. (Applies not only for Documents, 
+							but also for Work Items, notifications, baselines, etc.) However, your administrator must configure Polarion to enable this behavior by adding the following 
+							property to the system properties file polarion.properties: <code>com.polarion.customWordSpacingCharacters=\u3000\u3001\u3002\uff08\uff09\uff0c\uff0e\uff61\uff64</code>.
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYTWELVE-SR1">
+			<h1>Version 2012 SR1</h1>
+			<p>
+				This is Service Release #1 for version 2012. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements:
+			</p>
+			<ul>
+				<li>
+					Test Steps feature. When enabled (optional), then for manual/formal testing, a table of Test Steps can be added to Test Case descriptions. The 
+					table is rendered in a test execution widget during test runs. Testers can record results of each test step, marking steps Passed, Failed, or 
+					Blocked, in addition to marking the overall result for the Test Case. Execution time for each Test Case is now part of test records. 
+				</li>
+				<li>
+					Translation feature for Work Items. Optionally enable multiple human language translations for Work Item titles and descriptions. Create custom 
+					fields to store translation texts to support any number of language translations. Configure different languages for different Work Item types. When 
+					Work Items are contained in LiveDoc documents, users can switch to view them in their preferred language, and print or export to PDF in the preferred 
+					language.
+				</li>
+				<li>
+					Remote connection to SQL database layer. Connect from a remote client when Polarion is running. New documentation for the database layer is now part of 
+					the SDK and includes schema diagrams, remote connection how-to, SQL query examples and more.
+				</li>
+				<li>Browser support: Google Chrome and Firefox 12. Internet Explorer 8 is now supported in native mode (i.e., not in IE7 compatibility mode).</li>
+				<li>Handling of concurrent changes in LiveDoc documents is significantly improved. Most concurrent modifications are automatically and safely merged. 
+					Any which cannot be safely merged are tracked and reported to users, who can review conflicting changes and decide what action to take to resolve them. 
+				</li>
+				<li>
+					Work Item editor shows workflow transitions that are not allowed, with information about what is needed to enable blocked transitions. 
+				</li>
+				<li>
+					You can now export results of Document comparisons to PDF.
+				</li>
+				<li>
+					It is now possible to query Work items by comment author.
+				</li>
+				<li>
+					Comments field can be set as a required field, requiring users to add a new comment before saving changes to Work Items.
+				</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>	
+		
+		<div id="TWENTYTWELVE">
+			<h1>Version 2012</h1>
+			<p>
+				This is a major release with significant new features, improvements, and enhancements as well as issue fixes. Polarion Software practices Agile development. 
+				Some features have been introduced to customers in service releases and improved throughout the version 2012 development cycle. The aggregation of 
+				these features, plus some new never before released features comprise the version 2012 release.
+			</p>
+			<p>
+				A list of specific tracker issues addressed in this release is provided in the Resolved Issues file that is published online. You can find the link on the 
+      		Polarion product download pages. This  is mainly for the benefit of current customers who are interested in knowing if specific issues have been resolved in the release. 
+			</p>
+			<h2>New Features</h2>
+			<h3>Quality Assurance and Test Management</h3>
+			<ul>
+				<li>New technology supporting test specification, planning, execution and reporting</li>
+				<li>Test specification and test execution are separated in the data model</li>
+				<li>Automated test cases as &quot;first class citizens&quot;</li>
+				<li>Out-of-box test automation support and integration with any 3rd party test automation tool that can export test results to xUnit format</li>
+				<li>Offline testing support via round-trip for Microsoft Excel&reg;</li>
+			</ul>
+			<h3>Polarion Live-Branch&trade;</h3>
+			<ul>
+				<li>Exclusive new technology for managing document variants is introduced.</li>
+				<li>Maintain a single &quot;master&quot; Document for shared specifications; reference master artifacts in new Documents &quot;branched&quot; from the master.</li>
+				<li>Maintain variant-specific Work Items in branched Documents.</li>
+				<li>&quot;Freeze&quot; a variant Document at a specific revision of the master. Changes in master's Work Items will not propagate to the branched Document.</li>
+				<li>Unfreeze a branched Document to make the branch &quot;live&quot; and propagate current and subsequent changes in master's Work Items to referenced items in the branched Document.</li>
+				<li>Freeze individual referenced Work Items in a branched Document at a specific revision of the item. Unfreeze to propagate current and all subsequent changes in the master item to the referenced item.</li>
+                <!--  -->
+			</ul>
+			<h3>Polarion Time-Machine&trade; Navigable Baselines</h3>
+			<ul>
+				<li>New Baselines created with this version (and later) can be browsed in the same way as the current project state.</li>
+				<li>All artifacts (Documents, wiki pages, Work Items, Test Runs, etc.) appear in the state they were at the time the Baseline was captured.</li>
+				<li>Search queries only operate on and return data from the Baseline.</li>
+				<li>Reports reflect the state of the project at the time the Baseline was captured.</li>
+			</ul>
+			<h3>Integration with External Repositories</h3>
+			<p>
+				It's now easy to use Polarion to manage project tasks and content, and automate project workflow while using existing Subversion and/or Git repositories to manage source code.
+			</p>
+			<ul>
+				<li>Configure Polarion to work with external Subversion and Git repositories in new administration topic <em>Repositories</em>.</li>
+				<li>Easily create traceability links in Polarion by simply citing a Work Item ID in commit messages of configured external repositories.</li>
+				<li>Optional manual linking of any Polarion Work Item to an external repository revision.</li>
+			</ul>
+			
+			<h3>Import and Round-trip for Excel<sup>&reg;</sup></h3>
+			<p>
+				In version 2011 we introduced import and round-trip for Microsoft Word. Now we have similar functionality for Microsoft Excel:
+			</p>
+			<ul>
+				<li>Create new Work Items (test cases, etc.) by importing Excel workbooks.</li>
+				<li>Rule-based import, with customizable rules and import configurations that can be reused when importing similar workbooks.</li>
+				<li>Easy graphical Excel column - to - Work Item field mapping during import.</li>
+				<li>Round-trip: export Test Cases to Excel, log test results externally, re-import to Polarion automatically creating traceable test records and auto-assigned defect artifacts for failed tests.</li>
+			</ul>
+			<h3>Social Media-like Features</h3>
+			<p>This release introduces several features inspired by currently-popular social media platforms.</p>
+			<ul>
+				<li>Activity Stream: Render a stream of portal activities in any wiki page with new {activity-stream} macro.</li>
+				<li>Limit streamed activity to just the type(s) that are most interesting or useful for a given context. Keep abreast of activity without having to go read email notifications.</li>
+				<li>New &quot;My Polarion&quot; personal dashboard page for every user. User-customizable Work Item information and activity stream to facilitate current work situations.</li>
+				<li>Personal avatar images. Upload directly to user profile, or automatically pull an image from gravatar.com that is associated with the email in the user profile.</li>
+			</ul>
+			<h3>Embedded SQL Database Layer</h3>
+			<p>
+				This back-end addition does not replace the primary data storage and management still handled by the Subversion repository. Rather, it creates and maintains a read-only 
+				index of information in the primary storage, which can be queried to facilitate certain kinds of reporting (Traceability reports, for example) for which the Lucene 
+				query engine is ill suited. For example, an outer-join query isn't practical with Lucene, but it quite simple with SQL.
+			</p>
+			<ul>
+				<li>Embedded SQL database maintains index of Work Item data and historical information. Database is read-only.</li>
+				<li>New parameter &#039;<code>sqlQuery</code>&#039; is introduced for the <code>{workitems}</code> macro which can take almost any standard SQL query as its argument.</li>
+				<li>New Work Item query function <code>TEST_RECORDS</code>, usable in the query bar in Work Item views, accesses the SQL layer, and enables users to search Work Items according to test records.</li>
+			</ul>
+			<h3>Fresh, Easy-to-Use Web Interface</h3>
+			<p>
+				This release introduces a major new look-and-feel, inspired by social media platforms, and developed in close contact with current users.   
+			</p>
+			<ul>
+				<li>More screen real estate devoted to data presentation, with infrequently-needed information out of the way, but still quickly accessible.</li>
+				<li>Multiple Navigation views: Tools and Topics. New Tools view has all the information and links contained in the Header and Footer areas of previous versions.</li>
+				<li>
+					User-adjustable Navigation: user's project-level Favorite shortcuts appear first in Navigation. Default Favorites are provided by project templates. Users can 
+					easily remove defaults and add current context as a Favorite shortcut. (Portal-level User Shortcuts are still present and usable in the Topics section.)
+				</li>
+				<li>Collapsible Topics section: the feature topics enabled by license and configuration appear in a new section beneath user Favorites, and can be expanded or collapsed.</li>
+				<li>Integration of new UI libraries and update to newer web standards versions (CSS, XHTML, etc.) for compatibility and improved performance in browsers.</li>
+			</ul>
+			<h3>New Documentation</h3>
+			<p>
+				There is a new PDF manual for customers who want to use Polarion with multiple native or external repositories: <strong>Polarion Multi-repository Setup Guide</strong>. The main 
+				focus is on configuring multiple concurrently-running instances of the Polarion server. Because this configuration is needed by relatively few Polarion users, 
+				the information in this guide was removed from the existing installation guide documentation for Windows and Linux. These guides now focus on installing and 
+				configuring a single instance of the Polarion server for production use. 
+			</p>
+			<p>
+				Another PDF manual, the <strong>Polarion Trial Guide</strong>, supports trial downloaders who want to get a trial installation up and running quickly. Again, the 
+				information has been separated from the existing installation guide documentation, making those more approachable and focused on production installation and 
+				configuration.
+			</p>
+			<p>
+				Both new documents can be downloaded from any Polarion product download page, or the  
+				<a href="http://www.polarion.com/resources/index.php?cat=docs">Documents resource page</a>.
+			</p>
+			
+			
+			<h2>Significant Improvements and Enhancements</h2>
+			<ul>
+				<li>Possibility to delete a Work Item</li>
+				<li>Bulk-copy multiple Work Items in a single operation</li>
+				<li>Link Work Items using an opposite role</li> 
+				<li>Cut/copy Work Items in the Document Editor via context menu</li>
+				<li>Restrict a list of approvers by some role</li>
+				<li>Bulk-edit large number of Work Items at once, in several "chunks"</li>
+				<li>Preserve project history when moving a project (to archive, for example)</li>
+				<li>Import-from-Word Field Extractor: "Match style"</li>
+				<li>Ability to include the Work Item title in a Work Report</li>
+				<li>Deprecated enumeration values - keep all values, but hide some in drop down lists</li>
+				<li>More operations (not just sum) for calculated fields</li>
+				<li>Option to save edited Work Item without confirmation</li> 
+				<li>Support for Mozilla Firefox versions 9-11</li>
+				<li>Update of bundled Java and Subversion to latest released version.</li>
+			</ul>
+			
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYELEVENSR3">
+			<h1 class="series">Version 2011 SR3</h1>
+			<p>
+				This is Service Release #3 for version 2011. The release delivers the following new features and enhancements:
+			</p>
+			<ul>
+				<li>
+					Support for Firefox version 8.
+				</li>
+				<li>
+					Possibility to restrict Work Item approvers according to user role. New roles introduced: global role <em>approver</em>, and project role <em>project_approver</em>.
+				</li>
+				<li>
+					<strong>Document related:</strong>
+					<ul>
+						<li>
+							New Document sidebar pane: Document Outline. Renders a hierarchical view of the heading structure of a Document.
+						</li>
+						<li>
+							Possibility to Cut or Copy an entire Work Item via new items on the icon menu of each Work Item in the Documents.
+						</li>
+					</ul>
+				</li>
+				
+				<li>
+					<strong>Work Item related:</strong>
+					<ul>
+						<li>
+							Possibility to Bulk Edit more than 100 items without reformulating a query. If a query retrieves more than 100 items, users can process them in multiple 
+							&quot;chunks&quot; of (max.) 100 until all items selected by the query are processed. There is no need to reformulate the original query. 
+						</li>
+						<li>
+							Bulk copy: The <em>Duplicate</em> operation in the tracker now works with multiple selected Work Items, enabling duplication of multiple selected 
+							Work Items in a single operation.
+						</li>
+						<li>
+							New <em>Delete</em> action for Work Items in the Tracker (Work Items &gt; Table &gt; Editor pane &gt; Actions &gt; Delete). Bulk Edit is supported for 
+							the action. Users must have permissions allowing the action in the scope. See new Help topic: <em>Deleting Work Items</em> for best practices suggestions. 
+						</li>
+						<li>
+							Possibility to import images contained in Excel worksheets. Images in supported formats appear in Work Items. Images in unsupported formats are imported as 
+							Work Item attachments.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Project related:</strong>
+					<ul>
+						<li>
+							Possibility to move projects and preserve their history to support archival of completed projects under some location in the repository. 
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<p>
+				The release also contains ongoing bug fixes and improvements in usability, stability, and performance areas.
+			</p>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<div id="TWENTYELEVENSR2">
+            <h1 class="series">Version 2011 SR2</h1>
+            <p>
+               This is Service Release #2 for version 2011. The release delivers the following new features:
+            </p>
+            <ul>
+                <li>
+                    Import from Microsoft Excel: Users can now import Excel workbooks containing requirements, test cases, or other types of artifacts, creating
+                    an equivalent Work Item in Polarion for each artifact defined in the Excel document. Users can optionally import artifacts as tracker-based
+                    Work Items, or Document-based Work Items. Users can define custom import rules and save them as Import Configurations for reuse with similar
+                    Excel documents on subsequent imports.
+                </li>
+                <li>
+                    Round-trip for Microsoft Excel: Polarion users can export Work Items to an Excel workbook, controlling which Work Item fields are included in
+                    the export, and whether or not they are locked in Excel. There is also an option to allow the Excel user to modify the structural hierarchy of
+                    Work Items. External users can edit the allowed content, after which the modified workbook can be imported back into Polarion, updating the
+                    Work Items in the portal from the changes in the Excel document.
+                </li>
+                <li>
+                    Interactive Report Pages: A new set of page parameter macros enables page authors to easily create visual fields that let page users input different
+                    values and vary the information reported on the page. For example, a page might show a burn-down chart for a sprint. By using the new macros, the author
+                    can enable page users to select which sprint. It is also possible to allow page users to make a persistent change in the default value of a page parameter.
+                    For details, see the Wiki Syntax Help for the <code>{parameter}</code> and related macros, and the Help topic <em>Creating Interactive Report Pages</em>
+                    (User Guide &gt; Using the Wiki &gt; Introduction to the Wiki &gt; Adding Dynamic Content to Wiki Pages).
+                </li>
+                <li>
+                    New Browser Support: The release delivers support for Mozilla Firefox version 5 and version 6. The latest 6.x version is recommended.
+                </li>
+            </ul>
+            <p>
+                The 2011-SR2 release also delivers some significant improvements or enhancements to existing functionality:
+            </p>
+                <ul>
+                    <li>
+                        Improved stability of the Document Editor.
+                    </li>
+                    <li>
+                        Unlimited heading levels in Documents, configurable by a new system property, with 9 levels supported by default.
+                    </li>
+                    <li>
+                        Possibility to sort the Work Items Table on Outline Number (when Work Items are Document-based).
+                    </li>
+                    <li>
+                        Custom variables in Wiki pages can be referenced in the PDF header/footer configuration (Administration: Wiki: Export) providing the possibility to
+                        conditionally display some value(s) in the header/footer of pages exported to PDF.
+                    </li>
+                    <li>
+                        Improved handling of “rangy error” in Document Editor (most commonly seen when using Internet Explorer). New option for 1-click save and reload of
+                        the Document.
+                    </li>
+                </ul>
+
+            <p>
+                The release also contains ongoing bug fixes and improvements in usability, stability, and performance areas.
+            </p>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		<div id="TWENTYELEVENSR1">
+			<h1 class="series">Version 2011 SR1</h1>
+			<p>
+				This is Service Release #1 for version 2011. It delivers ongoing bug-fixes, usability and other improvements, plus some new features and significant enhancements:
+			</p>
+			<ul>
+				<li>Browser support: Firefox 4 and Microsoft Internet Explorer 9 are now supported.</li>
+				<li>
+					Single Sign-on (SSO): Polarion recognizes when users' login credentials are provided in the HTTP request header and passes the user name (and optionally some predefined password) to Apache, 
+					without showing the user interface for authentication. See Help: Administrator's Guide: Advanced Administration: Configuring Single Sign-on (SSO).
+				</li>
+				<li>
+					External repository revision linking: Polarion can now be optionally configured to support linking of revisions in external SVN and Git repositories to Polarion Work Items. 
+					Any Work Item ID(s) cited in external repository commit messages will auto-link the revision to the item(s) in Polarion. The default SVN repository is always used to 
+					track Polarion artifacts (Work Items, Documents, pages, etc.). If this repository is used to manage some source code, it can be used in conjunction with external repositories 
+					in the configuration. A new topic <em>Repositories</em> is provided in project and Repository administration where you can configure external repositories. 
+				</li>
+				
+				<li>
+					New SDK documentation servlet: The SDK Javadoc is fully browsable on the Polarion server without requiring a login. Simply access the URL. For example: 
+					<code>http://localhost/polarion<strong>/sdk/doc/javadoc/index.html</strong></code>
+				</li>
+				<li>
+					Fix erroneous auto-linked revisions: if a commit message contains the ID of a Work Item, the revision is automatically linked to the item. In the past, if
+					the wrong ID was accidentally specified in a commit message, there was no way to remove the incorrect revision link from the Work Item. It is now possible to 
+					remove an auto-linked revision from the table in the Linked Revisions section of the Work Item detail form (Work Items, Table tab).
+				</li>
+				
+				<li>
+					Added support for Document move/rename: Documents can be renamed or moved to a different space within the same project. Links to derived Documents are automatically updated. If the user invoking rename doesn't have permission to modify derived Documents, the action fails with 
+					an appropriate message.
+				</li>
+				<li>
+					Page-break control in PDF export: You can now explicitly specify where a page break should occur in PDF output of Documents and Wiki pages exported to PDF. This has 
+					previously been possible in Wiki pages using the {pagebreak} macro. A GUI control for inserting a page break is now provided in the Document Editor toolbar. Page-breaking 
+					is also supported in Word Import and Work Round-trip. 
+				</li>
+				
+				<li>
+					Improved Custom Field modification: If the type of a custom field is changed, there is now consistent mapping and conversion of values and notification in the UI of any 
+					incompatible value(s) remaining in a Work Item. Also, clearing of caches after custom field type change is now automatic. 
+				</li>
+				
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div> <!-- /#2011SR1 -->
+		
+		<!-- 2011 -->
+		<div id="TWENTYELEVEN">
+			<h1 class="series">Version 2011</h1>
+			<p>
+				This is a major release with significant new features, improvements, and enhancements as well as bug fixes. The major new items are described below.
+			</p>
+			
+			<p>
+				A list of specific tracker issues addressed in this release is provided in the Resolved Issues file that is published online. You can find the link on the 
+      		Polarion product download pages. This  is mainly for the benefit of current customers who are interested in knowing if specific issues have been resolved in the release. 
+			</p>
+			<h1>New Features</h1>
+			<h2 id="polarionDocs">Live Documents</h2>
+			<p>
+				A whole new implementation of Polarion's LiveDoc<sub>SM</sub> technology, these new online documents have an easy word processor-like user interface, but can contain one or more types 
+				of Work Items. Live Documents replace the Modules and LiveDoc features of previous versions. (These can still be used if they exist in projects, but migration to Live 
+				Documents is recommended.)
+			</p>
+			<h3>Importer for Microsoft Office Word<sup>&reg;</sup></h3>
+			<p>
+				Live Documents may be created by importing Word documents in .docx format. During import, you can create rules for recognizing Work Items contained 
+				in document content. Recognition can be based on a wide variety of factors including keywords in document text, styles in the text, and regular expressions. 
+				Rules can be saved and reused when importing other Word documents with similar characteristics.
+			</p>
+			<h3>Round-trip for Microsoft Office Word<sup>&reg;</sup></h3>
+			<p>
+				Live Documents may be exported to Word's .docx format for sharing or offline work. The level of change allowed in the exported document can be set during the 
+				export operation. Changes in the exported document may be limited to comments only, or comments and field value changes, or full change capability may be allowed. 
+			</p>
+			<p>
+				Changed Word documents may be re-imported to the portal via the Word Round-trip Import Changes feature. The import may be restricted to comments only.
+			</p>
+			<h3>Merged Navigation</h3>
+			<p>
+				As Polarion Documents are in essence a special type of Wiki page, the former <em>Wiki</em> topic in Navigation is renamed <em>Documents and Wiki</em>. Documents and 
+				Wiki pages co-exist in spaces and are differentiated by icons in the Navigation pane.
+			</p>
+			<h3>Dynamic Content</h3>
+			<p>
+				Due to their Wiki page ancestry, Live Documents support many of the same macros as Wiki pages, enabling embedding of dynamically rendered tracker, user, project, and 
+				other data in Live Documents. Access point: Document Editor toolbar: <em>Insert</em> &gt; Wiki Content.
+			</p>
+			<h2>New Administration Features</h2>
+			<ul>
+				<li>
+					<strong>Graphical User Interfaces</strong>: Most Administration topics now have graphical user interfaces and no longer require knowledge of XML in order to configure 
+					and customize Polarion. There are a few exceptions for less common customizations... notification email layouts and building, for example. But the most commonly requested 
+					Administration topics now have a GUI. 
+				</li>
+				<li>
+					<strong>Permissions Management</strong>: New Administration topic makes it much easier to configure role-based user permissions. Administration &gt; User Management &gt; 
+					Permissions Management.
+				</li>
+				<li>
+					<strong>Access Management</strong>: New Administration topic provides capability for administrators to control access to the Subversion access file. The feature is 
+					essentially a graphical front end for the SVN access file. Administration &gt; User Management &gt; Access Management.
+				</li>
+				<li>
+					<strong>License Management</strong>: New repository-scope Administration topic "License" provides a front end to the <code>users</code> file enabling administrators 
+					to specify license assignments from within the portal, as well as view current license usage.
+				</li>
+			</ul>
+			<h2>Test Case Management Support</h2>
+			<p>
+				A new project template <em>QA Project</em> is provided. Projects instantiated on this template have a special Testing space containing a default Test Case Specification 
+				Document for defining test cases, and templates for creating test runs which track test case execution, and for which history is tracked. Specially configured workflow 
+				automatically creates linked Defect type Work Items when a test case fails to pass during execution of the test. To see the features, create a sandbox project and 
+				select the QA Project template during the project creation process. 
+			</p>
+			<p>
+				There is extended parameterization of the Work Item form to enable access to the History tab of a Work Item or pre-populate some fields of the Work Item editor directly 
+				via a URL. For example: 
+			</p>
+			<p style="margin-bottom: 30px;">
+				<code>
+					http://portal.your.com/polarion/#/project/MyProj1/workitems?query=%28type:userstory%20AND%20CUSTOM_FIELDS:backlog%29%20AND%20NOT%20status:%28closed%20OR%20verified-done%20OR%20verified-rejected%29%20&amp;form_field_testRun=X		
+				</code>
+			</p>
+			<h2>Customizable Login Page</h2>
+			<p>
+				The portal login page can now be customized via simple HTML/CSS edits. An image such as a corporate logo can be added beside the Polarion logo, and the color of the 
+				background can be set to any color hex value &mdash; #FFFFFF for example. (You asked for it!)
+			</p>
+			<h1>Significant Enhancements</h1>
+			<h2>Multi-repositories on Multiple Hosts</h2>
+			<p>
+				Previously, slave instances of Polarion had to run on the same physical machine as the Master instance. This limitation is removed, but the following caveats should be noted: 
+			</p>
+			<ul>
+				<li>Limited to LAN &mdash; assumes high speed and absence of firewalls and similar restrictions</li>
+				<li>Requires an additional port open for inter-Polarion communication</li>
+				<li>Master cannot start Slaves, and cannot request reindex. It can send a shut-down request.</li>
+				<li>Every Polarion instance (slave or master, local or LAN) requires its own hostname (existing limitation)</li>
+				<li>A remote (LAN) Slave can only be alone on a machine, or live on Master's machine (where also other Slaves may exist)</li>
+				<li>Master and all his Slaves must run the same build ID</li>
+				<li>Only one Master in the network</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<!-- 2010 SR2 -->
+		<div id="TWENTYTENSR2">
+			<h1 class="series">Version 2010 SR2</h1>
+			<p>
+				This is Service Release #2 for version 2010. In addition to ongoing bug-fixes, usability and other improvements, the release delivers the following significant enhancements:
+			</p>
+			<ul>
+				<li>
+					Possibility to require user to enter a password when executing workflow action or approving a Work Item. The goal is not security, but rather an attention 
+					flag for the user that the action represents a sign-off and that it is important. The following system properties are introduced:
+					<ul>
+						<li><code>secure.actions</code> - takes a list of action IDs, and the specified actions will trigger a password dialog.</li>
+						<li><code>secure.approvals</code> - <em>false</em> by default. If true, end users are prompted for password when executing an approval.</li>
+						<li><code>secure.dialog.title</code> - Stores the title of the password dialog.</li>
+						<li><code>secure.dialog.message</code> - Stores the message presented in the password dialog displayed in response to a secure action or approval.</li>
+					</ul>
+				</li>
+				<li>Bundled Maven is updated to version 2.0.11</li>
+				<li>
+					New API to query permissions via Web Services. See <code>hasPermission</code>, <code>hasCurrentUserPermission</code>, and <code>canCreateInstances</code> in the 
+					Javadoc.
+				</li>
+				<li>
+					Possibility to move Work Items within a Module structure via Web Services. 
+				</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<!-- 2010 SR1 -->
+		<div id="TWENTYTENSR1">
+			<h1 class="series">Version 2010 SR1</h1>
+			<p>
+			   This is Service Release #1 for version 2010. In addition to ongoing bug-fixes, usability and other improvements, the release delivers the following new features:
+			</p>
+			<h2>Polarion Installed as a Windows Service</h2>
+			<p>
+				Polarion server is now installed as a Windows service by default on Windows<sup>&reg;</sup> systems. This is optional, controlled by a checkbox option in the 
+				Windows installer program. A new script <code>$POLARION_HOME$\polarion\service.bat</code> can be used to install or uninstall the Polarion service. Run 
+				<code>service.bat -install</code> or <code>service.bat -uninstall</code>.
+			</p>
+			<p>
+				The installer creates and configures shortcuts for starting and stopping the server. The command line call for starting the server is different from that used 
+				to start the server as a console application and parameters from <code>polarion.ini</code> (memory settings etc.) are not taken into account when Polarion is 
+				started as a service. Please see the <em>Installation Guide for Windows</em> PDF document (bundled in the distribution) for more details.
+			</p>
+			
+			<h2>Multiple Link Roles in Work Item Trees</h2>
+			<p>
+				In the Work Items topic in the Table view (when the Tree mode is selected) and in Multi Edit view (in Tree mode when a single work item type is selected in Navigation), it 
+				is now possible to specify multiple roles for the  query. The dropdown list for Role contains checkboxes enabling selection of one or more link roles.
+			</p>
+			<p>
+				The default role selection is also changed from <i>parent</i> to <i>all</i>. <strong>IMPORTANT:</strong> This changes the behavior of the view when accessed 
+				by URLs such as <code>/project/playground/workitems/requirement?resolution=unresolved&amp;table_mode=tree&amp;tab=multiedit</code>. Such URLs used to display 
+				the tree using the <i>parent</i> link role... now it displays the tree using all roles. If you have shortcuts to such views, their behavior will be different now. 
+				You can change these shortcuts back to the original behavior with these steps:
+			</p>
+			<ol>
+				<li>Invoke the shortcut.</li>
+				<li>Modify the Role setting in the Search bar, selecting the role you originally had.</li>
+				<li>Save the shortcut with the same name.</li>
+			</ol>
+			<p>(NOTE: Work Item Trees are a feature of Polarion ALM and Polarion Requirements.)</p>
+			
+			<h2>New &quot;Load All&quot; action for Table view</h2>
+			<p>
+				This action appears as a link in the footer area of the Table view (Work Items topic). In cases where not all work items found by a query are loaded into the work 
+				items table, this action will load all found items up to a maximum limit specified in the system configuration.
+			</p>
+			<p>
+				A new configuration option <code>loadAllLimit</code> is added to <code>polarion.properties</code>. The value specified controls the maximum number of work items 
+				that any user may load in a work items table. The default value is 3000.
+			</p>
+			
+			<h2>Update Scripts Check License Validity</h2>
+			<p>
+				Scripts that update an existing installation to a new release now check the validity of the license for the version being installed and display a message if the 
+				license is not compatible. (Installation is halted.)
+			</p>
+			<h2>Create Work Records via Web Services</h2>
+			<p>A new method is added to the Web Services API which enables creation of work records, including comments and type, via web services.</p>
+			<p>
+			<code>
+				com.polarion.alm.ws.client.tracker.TrackerWebService.createWorkRecordWithTypeAndComment(String, User, Date, EnumOptionId, String, String)
+			</code>
+			</p>
+			<p>See the Javadoc for more information.</p>
+			
+			<h2>Polarion Waits if Repository Not Available</h2>
+			<p>
+				Polarion server now waits and rechecks connection every 10 seconds if repository (repositories) is not available when the server starts up. The server can be shut down 
+				normally while in the waiting state. This also means it is possible to restart Apache Service without restarting the Polarion server.
+			</p>
+			<h2>Updated Browser Support</h2>
+			<ul>
+				<li>Mozilla Firefox version 3.6 is now supported.</li>
+				<li>Mozilla Firefox version 2.0 support is discontinued.</li>
+			</ul>
+			<h2>Updated Bundled Component Versions (Windows installer)</h2>
+			<ul>
+				<li>Bundled Apache is now version 2.2.15 (previously 2.2.13).</li>
+				<li>Bundled Subversion is now version 1.6.6 (previously 1.6.5).</li>
+				<li>Bundled Java is now version 1.6.0_19 (previously 1.6.0_16).</li>
+			</ul>
+			<h2>Improved multi.job Configurability</h2>
+			<p>
+				Previously undocumented multi.job (a job that can spawn other jobs) has some extended configurability. See Help, Administrator's Guide: System Maintenance: 
+				Topics: Creating Scheduled Jobs: Spawning Multiple Jobs.
+			</p>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>
+		
+		<!-- 2010 -->
+		<div id="TWENTYTEN">
+			<h1 class="series">Version 2010</h1>
+			<p>
+			This is a major release with significant new features, improvements, and enhancements as well as bug fixes. The major new items are described below.
+		   </p>
+
+		<h1>New Features</h1>
+			<h3>Improved Navigation</h3>
+			<p>
+
+			The first thing you'll notice is the simplified navigation. A single 
+			Navigation pane provides all resources and shortcuts for a project or 
+			repository. New Open button and dialog, with Windows 7 style Favorites, make it 
+			quicker and easier to open the project, project group or repository you want to 
+			work with.
+			</p>
+			<h2>Even More Robust Modules</h2>
+			<ul>
+			  <li><strong>Outline numbering: </strong>You can now optionally add automatic 
+			  outline numbering to work items (e.g. Requirements). These appear both in the 
+			  portal and in PDF&nbsp;exports. </li>
+  
+			  <li><strong>Multiple Module reuse: </strong>reuse multiple modules at once, 
+			  establishing cross&nbsp;module links in the new modules. For example, you can 
+			  manage a requirements&nbsp;specification module and system test module (with 
+			  test cases) in one place,&nbsp;and reuse both of them at once when 
+			  implementing some variant of the base&nbsp;specification. In the new modules 
+			  the test cases will be linked to&nbsp;requirements. </li>
+
+  
+			  <li><strong>Move items within Modules: </strong>New buttons in the Designer 
+			  view let you move an&nbsp;item before or after, or as the first or last child 
+			  another item in the module&nbsp;structure. </li>
+			  
+			  <li><strong>Bulk Move to Module: </strong>Now you can move work items from any 
+			  module (or from&nbsp;normal storage) to another module. If you ever import 
+			  work items from a Word&nbsp;document, you'll appreciate this capability. </li>
+			  
+			  <li><strong>Export Home page revisions to PDF: </strong>Module revisions are 
+			  in effect baselines.&nbsp;By rendering module work items on e.g the Module's 
+			  Home page, you can export&nbsp;any revision of the page to PDF. (Revision 
+			  export works for other wiki pages too.)</li> 
+			  
+			  <li><strong>Web Service API: </strong>Modules can now be operated using Web Service API</li>
+
+  			</ul>
+			<p>(NOTE: Modules are a feature of Polarion ALM and Polarion Requirements.)</p>
+
+			<h2>Multiple Repositories</h2>
+			<p>With a license for this Polarion ALM feature, you can have multiple 
+			Subversion repositories (including the possibility to update your current 
+			single-repo system to multi).</p>
+
+			<h2>Rich Text Work Item Fields</h2>
+
+			<ul>
+			  <li><strong>Rich text custom fields: </strong>This popular request is now 
+			  fulfilled. You can create&nbsp;custom fields with the same rich text 
+			  capabilities and the Description field.&nbsp;Great for translations of the 
+			  work item Description and other text-intensive&nbsp;needs.</li> 
+  
+			  <li><strong>Tables in rich text fields: </strong>Also by popular 
+			  demand!&nbsp;&nbsp; </li>
+			</ul>
+	
+			<h2>New/Improved Configurations</h2>
+
+			<ul>
+			  <li><strong>Read-only work item fields: </strong>Configure some work item 
+			  fields as read only,&nbsp;depending also on the work item status. So you can 
+			  mark fields like Title and&nbsp;Description as read only for e.g. approved, 
+			  closed, verified statuses. </li>
+			  
+			  <li><strong>Customizable email notifications: </strong>Include custom fields 
+			  in the top section of&nbsp;notifications, hide some fields from appearing in 
+			  notifications, limit sending&nbsp;of notifications by use role. </li>
+			  
+			  <li><strong>Link role rules: </strong>Define which kind of link roles can 
+			  exist between work items&nbsp;to ensure that users cannot create inappropriate 
+			  relationships between linked&nbsp;work items. </li>
+
+			  
+			  <li><strong>Time Points on project group: </strong>For example: if you have 
+			  multiple projects that&nbsp;share the same release date (e.g. one for 
+			  requirements, one for defects and&nbsp;changes), you can set a time points for 
+			  the project group rather than&nbsp;repeating for individual projects.</li> 
+			  
+			  <li><strong>Custom icons for enumerations:&nbsp;</strong>A new GUI in the 
+			  Enumeration Designer makes it&nbsp;easy to upload and select your own icon 
+			  images for enumerations.</li>
+			</ul>
+
+			<h2>Wiki</h2>
+
+			<ul>
+			  <li><strong>The Dashboard </strong>(Polarion ALM only) is now implemented as a 
+			  Wiki page. New&nbsp;macros that show dashboard content can be used in any 
+			  other wiki page to&nbsp;create other dashboards for a specific user role, 
+			  domain, etc. </li>
+			  
+			  <li><strong>API and Scripting: </strong>For Polarion ALM users, there's a new 
+			  public Wiki API (it's&nbsp;read only in this release). Also, you can deploy 
+			  your own services to the wiki&nbsp;velocity context.</li>
+			  
+			  <li><strong>New macro {pages}: </strong>Query and list references to other Wiki
+			  pages, for example recently updated pages in a Wiki space.</li>
+
+			</ul>
+			  
+			<h2>And More!</h2>
+			<ul>
+			  <li>New and updated&nbsp;demo project and data </li>
+			  <li>Internet Explorer 8 fully supported </li>
+			  <li>Automated installer for Ubuntu available </li>
+
+			  <li>Unified location for log 
+			  files&nbsp;--&nbsp;<code>polarion/data/logs</code></li> 
+			  <li>Possibility to rotate log files and delete old log files to conserve disk 
+			  space </li>
+			  <li>Possibility to have old project builds automatically deleted to conserve disk 
+			  space </li>
+			  <li>Improved support for new users with additional information or help in 
+			  tooltips everywhere</li>
+			</ul>
+			<p class="top"><a href="#top">TOP&nbsp;^</a></p>
+		</div>		<!-- /2010 -->
+
+		<!-- START VERSIONS 3.x -->
+		<h1 id="THREEXX" class="series">Version 3.x.x</h1>	
+		<!-- 3.3.x -->
+			<div id="THREEDOTTHREEDOTTHREE">
+				<h2 class="sect">Version 3.3.3</h2>
+				<p>
+					This was a maintenance release, planned in our iterative development process. No new features announced. The release was aimed at bug fixes, performance enhancements, and usability improvements.
+				</p>
+				<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+			</div>
+
+			<div id="THREEDOTTHREEDOTTWO">
+				<h2 class="sect">Version 3.3.2</h2>
+				<p>
+					This was a maintenance release, planned in our iterative development process. No new features announced. The release was aimed at bug fixes, performance enhancements, and usability improvements.
+				</p>
+				<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+			</div>
+			<div id="THREEDOTTHREEDOTONE">
+
+				<h2 class="sect">Version 3.3.1</h2>
+				<p>
+					This was a maintenance release, planned in our iterative development process. No new features were announced. The release was aimed at bug fixes, performance enhancements, and usability improvements.
+				</p>
+				<p>
+					One improvement worth mentioning is rotation of log files to prevent overloading disk space. 
+				</p>
+				<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+			</div>
+
+			
+			<div id="THREEDOTTHREEDOTOH">
+				<h2 class="sect">Version 3.3.0</h2>
+				<p>
+					This was a major release with new features and significant improvements as well as bug fixes and ongoing improvements. 
+				</p>	
+				
+				<h3>New Features</h3>
+				<ul>
+					<li>Rich Text Editor in Wiki</li>
+
+					<li>Calculated fields, with values derived from aggregated values of other fields</li>
+					<li>
+						New project templates:
+						<ul>
+							<li>SCRUM Projects</li>
+							<li>Extreme Programming (XP)</li>
+							<li>Test Case Management</li>
+
+						</ul>
+					</li>
+					<li>Module work item structure comparison</li>
+					<li>Move work items out of a Module</li>
+					<li>Export work items to XML</li>
+					<li>Hyperlinks to other work items in work item Description field</li>
+					<li>New UI control to copy work item ID, ID + Title, or URL to clipboard</li>
+
+				</ul>
+		
+				<h3>Significant Improvements/Enhancements</h3>
+				
+				<h4>New LiveDoc Engine</h4>
+				<p>
+					The LiveDoc subsystem has been completely rewritten for this release, and now utilizes a different XML parser. Memory consumption is significantly reduced and 
+					processing is  significantly faster and enables more and bigger Live Documents to be handled by Polarion.
+				</p>
+	
+				<h4>Notifications</h4>
+				<p>Greater control over who received notifications when. Information is integrated into Help topic Administrator's Guide: Configuring Notifications.</p>
+
+				<ul>
+					<li>Possibility to <em>exclude</em> targets for a specific event</li>
+					<li>Possibility to specify field(s) for updated work item event, limiting notification to only changes in the specified field(s)</li>
+					<li>Possibility to restrict notifications on work item status change event to specified beginning ending states</li>
+					<li>Possibility to configure custom notification email subjects for different events</li>
+
+				</ul>
+	
+				<p>
+					New events around approvals: <code>workitem-approval-added</code>, <code>workitem-approval-removed</code>, <code>workitem-approval-changed</code>
+				</p>
+				<p>New notification targets:</p>		
+				<ul>
+
+					<li><code>comment-thread-participant</code>: Users that commented in thread discussion</li>
+					<li><code>new-assignee</code>: When assignee field is changed then only new assignees will be notified </li>
+					<li><code>old-assignee</code>: When assignee field is changed then only old assignees will be notified </li>
+					<li><code>affected-approvees</code>: When approval field is changed then only affected approvees (added, removed, changed state) will be notified. </li>
+				</ul>
+
+				
+				<h4>Module Reuse with Derived Modules</h4>
+				<p>
+					In previous releases, reuse of modules was limited to simple duplication. Now it is also possible to create a derived copy with specified work item fields marked as 
+					derived (and therefore read-only). Changes in the derived fields  of the source Module will be reflected in the equivalent fields in the new derived module.
+				</p>
+				
+				<h4>Moving Projects</h4>
+				<p>It is now possible to move projects from one location to another from within the Polarion portal. See new Administrator's Guide topic: Moving Projects.</p>
+				
+				<h4>Conflict Detection</h4>
+
+				<p>Polarion now detects potential conflicting access to work items and wiki pages and notifies users.</p>
+				
+				<h4>Watched Items on Demand</h4>
+				<p>Users with many watched items previously could experience slow performance in the user profile viewer/editor because all the watched items were loaded. Now 
+				the user form does not contain users' watched items, providing rather a button which will load the items into the work items Table view on demand.</p>
+				
+				<h4>Work Item Designer and Wiki Page Usability</h4>
+				<ul>
+					<li>In Designer/Multi-Edit the last edited work item is still selected after save (exact cursor position is not kept)</li>
+
+					<li>In Wiki there are 2 buttons: <strong>Save</strong>, which saves without closing the editor, and <strong>Save &amp; Close</strong></li>
+					<li>
+						Attachments are hidden by default on wiki pages. New attachments button shows the number of attachments and on click displays the Attachments 
+						portlet from which attachments can be accessed.
+					</li>
+					<li>
+						New <strong>Backlinks</strong> button displays hidden by default Backlinks portlet which provided a hyperlinked list of other wiki pages that link 
+						to the currently viewed page.
+					</li>
+				</ul>
+	
+				<h4>At-a-glance status of child work items</h4>
+				<p>
+					In tree view mode, child work items that are resolved appear in <span style=" text-decoration: line-through;">strike through</span> font. This 
+					can optionally be disabled with a new system property: <code>disableTableIdDecoration</code>.
+				</p>
+				
+				<h4>Enhanced module work item query in wiki pages</h4>
+
+				<p>It is now possible to reference an item root in wiki AND add a query AND be able to specify to filter all levels. For example:</p>
+				<p>
+					<code>
+					{module-workitems:moduleName=Business Requirements|project=library|display=table|root=WI-57|expand=yes|<strong>query=status:open AND customfield:x</strong>}
+					</code>
+				</p>
+				
+				<h4>Work Report and Time Reporting Enhancements</h4>		
+				<ul>
+
+					<li>Work Record locking date: Work Records on/before the configured date cannot be modified.</li>
+					<li>Possibility to report negative time values for Work Records and other time fields (can be used to balance time reporting in next reporting period after Work Records are locked)</li>
+					<li>New Comment and Type fields in Work Records, with administration option to make them required fields.	</li>
+					<li>New system property <code>useDecimalHoursDurationFormat</code> enables display and input of decimal time values (e.g. <code>.50</code> instead of <code>1/2 h</code>).</li>
+				</ul>
+				
+				<h4>Project roles for &quot;My Hats&quot; feature</h4>
+				<p>This feature (a.k.a. role-based or user-configurable user interface) now supports project-scope roles. E.g. <code>project_developer</code>, <code>project_user</code></p>
+				
+				<h4>Improved Wiki page export</h4>
+
+				<p>Wiki pages exported to PDF now have informational page headers and footers with project-specific header/footer content.</p>
+				
+				<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+			</div>
+
+	
+		
+		<!-- 3.2.x -->		
+				<div id="THREEDOTTWODOTTHREE">
+
+				<h2 class="sect">Version 3.2.3</h2>
+				<p>This was a maintenance release, planned in our iterative development process. No new features announced. The release was aimed at bug fixes, performance enhancements, 
+				and usability and other improvements.</p>	
+			</div>
+			
+			<div id="THREEDOTTWODOTTWO">
+				<h2 class="sect">Version 3.2.2</h2>
+				<p>This was an internal non-public release. (You didn&#039;t miss anything!)</p>
+			</div>
+
+	
+			<div id="THREEDOTTWODOTONE">
+				<h2 class="sect">Version 3.2.1</h2>
+				<p>This is a maintenance release, planned in our iterative development process. No new features are announced. The release is aimed at bug fixes, performance enhancements, 
+				and usability improvements.</p>
+				<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+			</div>
+			
+			<div id="THREEDOTTWODOTOH">
+				<h2 class="sect">Version 3.2.0</h2>
+
+			<p>A major release with some significant new features and continued performance and usability improvements, and bug fixing. The new/improved things in the release 
+				include:</p>
+				<ul>
+					<li>Significant new features in Requirements Management: 
+						<ul>
+							<li>New <em>Modules</em>: containers for work items (mainly for Requirements) which ensure preservation of structure and sorting.</li>
+							<li>New Designer view in Modules facilitates creation of requirements trees.</li>
+							<li>New Module Library sample project which contains pre-fabricated modules with wiki content and work items, reusable in, and optionally linked from, other projects.</li>
+
+							<li>Possibility to reuse content from any Module in other Modules.</li>
+							<li>Wiki-based Home page for each Module.</li>
+							<li>
+								Dedicated requirements management product, <a href="http://www.polarion.com/products/requirements/index.php">Polarion<sup>&reg;</sup> Requirements&trade;</a> 
+								that provides an affordable solution for defining requirements, yet is fully integrated with the Polarion ALM platform enabling other parts of organizations 
+								to leverage requirements throughout the full lifecycle.
+							</li>
+						</ul>
+
+					</li>
+					<li>
+						Easily embed images in work item descriptions.
+					</li>
+					<li>Import MS Project Milestones to Polarion Time Points.</li>
+					<li>Printing for the Multi Edit view's Tree mode</li>
+					<li>Wiki features and improvements:
+						<ul>
+							<li>Extract wiki content into new work items.</li>
+
+							<li>&quot;Sticky&quot; Home page, customizable for every project and for the Repository. New &quot;Home&quot; topic leads to such pages.</li>
+							<li>&quot;Sticky&quot; Home page for Modules provides possibility of textual as well as data content for Modules.</li>
+							<li>Wiki pages can be of 2 different types: <em>portal pages</em> which are intended to be relatively static like a document, and <em>content pages</em> which are more like web pages and intended for collaborative work.</li>
+
+							<li>Expanded Wiki Syntax Help with description of all macros</li>
+							<li>More macros for easy embedding of tracker and system data in wiki pages</li>
+							<li>Improved wiki space index page</li>
+						</ul>
+					</li>
+					<li>Support for Subversion 1.5, Java 6 (runtime).</li>
+					<li>New wiki-based Guided Tour for each Polarion product (appears by default in the Repository - Home topic)</li>
+
+					<li>Optional on-the-fly creation of user accounts by new users. Disabled by default in this product, the feature enables new users to create a basic read-only user 
+					account on Polarion ALM systems. The feature can be enabled by the system administrator.</li>				
+				</ul>
+				<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+			</div>
+		
+		
+		<!-- 3.1.x -->
+				<div id="THREEDOTONEDOTTOW">
+					<h2 class="sect">Version 3.1.2</h2>
+					<p>A regular maintenance release focused mainly on continued performance and usability improvements, and bug fixing. The new/improved things in the release 
+					include:</p>
+					<ul>
+						<li>Wiki available in free Community product. A limited version of the integrated Wiki is now available in the free Polarion ALM <em>Community</em> product. 
+						Basic content features are available. Advanced features such as macros and embedded queries are not available in the free <em>Community</em> product.</li>
+
+						
+						<li>Java 6 Support. While Sun Java 5 is still the recommended runtime version, if for some reason that version cannot be used (not available on target platform, 
+						serious performance problems are encountered, etc.), Sun Java 6 can be used. Note that OpenJDK 6 is not the same as Sun Java 6 and is still not 
+						officially supported.
+						</li>
+						
+						<li>License usage. The portal footer now displays the type of license you are using when you are logged in. This is useful in situations where multiple license 
+						types are installed so that users and administrators can see which license is being used by a given user.</li>
+						
+						<li>Improvements to enumerations editor including a selector for icons which displays a dialog listing all images residing in the default icon location.</li>
+						<li>
+						Static list limit in combo boxes. To improve performance, a configurable limit of 10 is set on statically loaded values in combo-box (drop down) lists. When there 
+						are more allowed values for a given field, are loaded dynamically when user opens the combo drop down. The default limit of 10 values can be modified in a 
+						new property <em>lazyAllowedValuesLoadLimit</em> (root/polarion/configuration/polarion.proprties).
+						</li>
+
+						
+						<li>
+							Extended keyboard support. The following shortcuts are now implemented:
+							<ul>
+								<li>ALT+Q - focus work item query </li>
+								<li>ALT+E - edit button on all forms </li>
+								<li>CTRL+ENTER - save button on all forms </li>
+								<li>
+								   Focusing fields on Work Item form: CTRL+ALT+...
+									<ul style="margin-top: 4px;">
+
+										<li>A - assignee </li>
+										<li>C - comments </li>
+										<li>D - description</li>
+										<li>E - initial estimate while creating, remaining estimate otherwise </li>
+										<li>G - categories </li>
+										<li>K,L - linked work items </li>
+
+										<li>N - time spent </li>
+										<li>P - time point </li>
+										<li>R - resolution </li>
+										<li>T - title, when in edit mode </li>
+										<li>V - severity </li>
+										<li>W - status (workflow) </li>
+
+										<li>Y - priority </li>
+									</ul>
+								</li>
+							</ul>
+							Shortcuts for Multi-edit view are unchanged. It is possible to disable all keyboard shortcuts (including those in Multi-edit) by setting  
+							JVM property -DdisableKeyboardShortcuts=true.
+						</li>
+					</ul>
+					<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+				</div>
+
+				
+				<div id="THREEDOTONEDOTONE">
+					<h2 class="sect">Version 3.1.1</h2>
+					<p>A regular maintenance release focused mainly on continued performance and usability improvements, and bug fixing. There are some new/improved things in the release 
+					that seem worth noting:</p>
+					<ul>
+						<li>Comment threads. Comments in work items can now have multiple threads to facilitate discussions on different topics related to the item. Each comment has an optional Title field.</li>
+						<li>Work items of different types can be exported differently, with different fields etc. A the export XML schema now has a new <code>workitem</code> element which has a 
+						<code>type</code> attribute which can be used to specify export characteristics for a specific work item type.</li>
+
+						<li>You can now print the Tree mode of the Multi Edit view to HTML (as other views) keeping the displayed tree structure.</li>
+						<li>New license usage log. You can now check the usage licenses in a new <code>log4j-licensing-TIMESTAMP.log</code> log file.</li>
+					</ul>
+					<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+				</div>
+				
+				<div id="THREEDOTONEDOTOH">
+
+					<h2 class="sect">Version 3.1.0</h2>
+					<p>A major release with significant new features, improvements, and enhancements. It probably should have been a 3.5 release, but by the time we pulled together 
+					the list of everything that&#039;s actually in the release, it was too late to change the version. So it&#039;s only 3.1, but we think you will find it well worth looking 
+					at and updating (if you are a current customer).</p>
+					
+					<h3>New Features</h3>
+					<ul>
+						<li>New Enterprise SDK with open proprietary, Java&trade;, and Web Services APIs, documentation, and examples. Can be downloaded on the Polarion ALM Enterprise download page <em>Related Downloads</em> section.</li>
+
+						<li>New &quot;Tree&quot; mode in Multi-Edit, with quick create/edit of child and sibling items and fast navigation to linked items. Provides easy, document-like 
+						    development of Requirements and other Work Item structures.</li>
+						<li>Embed queries for work items or users in Wiki pages to show formatted, linked results right in the page. Also, a Wiki page can be displayed as Overview/Dashboard portlet.</li>
+						<li>New 64-bit support for Linux platforms</li>
+						<li>New online editing of XML configuration files. Make minor changes fast - no need to download, edit offline, and upload back to the server (although you still can).</li>
+						<li>New Enumerations editor for graphical editing of many enumerations makes this configuration much easier to perform.</li>
+
+						<li>New Polarion ALM <em>Community</em> - Free product with SVN-based version control and full-featured tracker.</li>
+						<li>New Polarion ALM <em>Pro</em> - Replaces Polarion ALM <em>Team</em> with a more robust feature set that includes Wiki team collaboration.</li>
+						<li>New licensing model for improved consistency and easier management of licenses. <strong>Note:</strong> 3.0.x license are not compatible &ndash; customers with current 
+						maintenance agreements may obtain an new license for version 3.1 without charge by contacting <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#115;&#097;&#108;&#101;&#115;&#064;&#112;&#111;&#108;&#097;&#114;&#105;&#111;&#110;&#046;&#099;&#111;&#109;">&#115;&#097;&#108;&#101;&#115;&#064;&#112;&#111;&#108;&#097;&#114;&#105;&#111;&#110;&#046;&#099;&#111;&#109;</a>.</li>
+
+					</ul>
+					<h3>Significant Improvements/Enhancements</h3>
+					<ul>			
+						<li>Projects portlet filtering: show just your projects or only selected projects in the portlet</li>
+						<li>Incremental search in combo-box lists is back, with an enhancement that enables you to enter a string in a popup text box after typing the 2nd character.</li>
+						<li>Export of Matrix view to MS Excel.</li>
+						<li>Tree view merged with Table view. Display mode is selectable in the Table view. Tree mode avoids duplicates and can apply the query filtering also on children</li>
+
+						<li>New planning constraint option <em>Start no earlier than</em> provides possibility to control the start date of a Work Item in Live Plan, thereby enabling true time-boxing of work items.</li>
+						<li>Overview filter for Timesheet view to show only items with work records</li>
+						<li>Possibility to customize dashboard queries to show overdue items or items due at some specific time (e.g. today, tomorrow)</li>
+						<li>Progress logging and console display for reindex with estimation of reindex time (after first reindex), and possibility to tell if the process is deadlocked.</li>
+						<li>New possibility to configure which perspectives are available for each &quot;Hat&quot; via a new <code>perspectives.xml</code> configuration file. </li>
+
+						<li>New possibility to limit access to &quot;Hats&quot; based on user role defined in repository + project.</li>
+						<li>New <em>$today$</em> constant enables queries for Work Items based on, or relative to the current date.</li>
+						<li>New <em>linkedWorkItems</em> and <em>backlinkedWorkItems</em> query elements enable searching for linked Work Items according to link role.</li>
+
+						<li>Possibility to use external Maven installation for building.</li>
+						<li>New option to save the field selection in exported Work Item reports, and the report properties of Work Reports</li>
+						<li>CSV and Excel Table exporters include work item backlinks (incoming links) and derived revision links (via commit message). Export of these linked items for Word and Excel template formats is optional.</li>
+						<li>Tooltips are expanded to display information about icons and list items in the Work Item form.</li>
+						<li>Possibility to convert work items stored in Live Document to XML storage in the portal repository.</li>
+						<li>Fixed problem with Wiki authentication so that local data is not lost if connection times out and user must log in again.</li>
+
+						<li>Fixed problem where portal URLs were truncated when clicked in some Microsoft email clients, resulting in inability to easily navigate from a notification to a work item in the portal.</li>				
+					</ul>
+					<p>The release also delivers significant performance improvements and improved usability in many areas too numerous to list.</p>
+					<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+				</div>
+		
+		<!-- 3.0.x -->
+				<div id="THREEDOTOHDOTTHREE">
+					<h2 class="sect">Version 3.0.3</h2>
+					<p>A planned regular maintenance release. The focus is on bug fixes, general usability and performance, and Wiki improvements. (Wiki is only available to 
+					licensees for Polarion ALM <em>Enterprise</em>.)</p>
+				</div>
+				
+		<div id="THREEDOTOHDOTTWO">
+					<h2 class="sect">Version 3.0.2</h2>
+					<p>A <strong>patch update</strong> to correct a defect found in version 3.0.1. Distributions can update other versions... see <a href="#302Opts">Update Options</a>.</p>
+					<h3>Issues Addressed</h3>
+
+					<p>The main problem addressed involved adding Work Records in Work Items from Excel Live Documents. Such items were not shown in the portal, further work with the respective 
+					Work Item was blocked, an error occurred on opening the Time Sheet view, and report exports would no longer work.</p>
+					<p>Also fixed are known issues from v. 3.0.1 regarding printing and exporting of Tree Table, where only 1 level in a hierarchy was included in the output.</p>
+					
+			<h3 id="THREEDOTOHDOTTWO_pts">Update options</h3>
+					<p>This update provides the following distributions:</p>
+					<ul>
+						<li><strong>3.0.2 Full Installation:</strong> Provides a clean installation of v. 3.0.2 or upgrades a v. 2.6.5 installation to v. 3.0.2.</li>
+
+						<li><strong>3.0.0 Update:</strong> Updates an existing v. 3.0.0 installation to v. 3.0.2.</li>
+						<li><strong>3.0.1 Patch:</strong> Updates an existing v. 3.0.1 installation to v. 3.0.2.</li>
+					</ul>
+					<h4>Updating older versions</h4>
+					<p>If you have a Polarion version older than 2.6.5, you will need to upgrade to 2.6.5, and then to the latest 3.0.x. Please contact Polarion technical support 
+					for assistance with such upgrades.</p>
+
+					<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+				</div>
+				
+		<div id="THREEDOTOHDOTONE">
+					<h2 class="sect">Version 3.0.1</h2>
+					<p>A service/maintenance release for <a href="#300">version 3.0.0</a>. It is mainly a bug-fix release, but it also delivers one new feature.</p>
+					<h2>New Feature: User Time-splitting between projects</h2>
+
+					<p>This feature enables administrators or individual end users to configure a split of their regular working time between 2 or more projects. The configuration is 
+					available in each user's account profile. Administrators can access it in a user's account via the Administration - User Management topic. End users can access 
+					the configuration by clicking their user name in the portal header.</p>
+					<p>The configuration is taken into account by the Live Plan engine. By accounting for work time in this way, project planning accuracy in improved for the configured projects.</p>
+					
+					<h3>Update Options</h3>
+					<p>Two distributions are provided for this release:</p>
+					<ul>
+						<li><strong>3.0.1 Full Installation</strong>: Provides a clean installation of v. 3.0.1 or upgrades a v. 2.6.5 installation.</li>
+
+						<li><strong>3.0.1 Update:</strong> Updates a v. 3.0.0 installation to v. 3.0.1.</li>
+					</ul>
+					<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+				</div>
+				
+		<div id="THREEDOTOHDOTOH">
+		
+				<div id="news">
+					<h2 class="sect">Version 3.0.0</h2>
+
+					<p>The main focus of this release was a completely new implementation of the platform with a new plugin-based architecture, open Java&trade; API, and web services. The major 
+					end result you should notice is improved overall performance. A major benefit going forward is extensibility and the possibility to add custom functionality with 
+					user-developed plugins. We have not yet released documentation of the new API, but this is planned for the first update release.</p>
+		
+					<p>Several significant new features are also delivered in the release: </p>
+					<ul>
+						<li><a href="#qc">Quality</a> topic</li>
+						<li><a href="#wiki">Wiki</a></li>
+
+						<li><a href="#timesheet">User-editable Time Sheet View on Work Items</a></li>
+						<li><a href="#timesplit">User time-splitting between projects</a></li>
+						<li><a href="#wcal">GUI for user Working Calendar configuration</a></li>
+						<li><a href="#MyHat">My Hat</a></li>
+					</ul>
+					
+					<h3 id="qc">Quality topic</h3>
+
+					<p>This much-requested feature centralizes software quality information. All the metrics, audits, compliance and  reuse stats, and more are centralized and accessible via 
+					the new <em>Quality</em>  topic, located in the Projects Perspective, Topics portlet.</p>
+					<h3>Access point</h3>
+					<p class="procHdr">To access this feature:</p>
+					<ol>
+						<li>After login, be sure you are in the <em>Projects</em> perspective.</li>
+
+						<li>In the <em>Projects</em> portlet, select <em>Repository</em>, or any Project Group or Project.</li>
+						<li>In the <em>Topics</em> portlet, click on the <em>Quality</em> topic.</li>
+
+					</ol>
+					<h3 id="wiki">Wiki</h3>
+					<p>Polarion 3.0 features a Subversion-based Wiki (meaning that Wiki data is stored in underlying SVN repository just as any other development artifact). There is a default Wiki 
+					space for the Repository (i.e., a &quot;global&quot;  or &quot;corporate&quot;Wiki), and a default space for each Polarion-managed project. You can create additional Wiki 
+					spaces within the default spaces. For Wiki pages, you can use either a Wiki editor (using Wiki syntax), or a graphical (WYSIWYG) editor.</p>
+					
+					<p>This feature significantly expands Polarion&#039;s team collaboration and communication capabilities. Previously, team members could collaborate and communicate only on 
+					individual Work Items (tasks, change requests, etc.). Now they can do so on the project level. This especially facilitates collaboration in early phases such as requirements 
+					gathering and discussion as well as later stages. And as mentioned, there&#039;s an even broader communication level - a global Wiki for the repository.</p>
+
+					<h4>Access point</h4>
+					<p class="procHdr">To access this feature:</p>
+					<ol>
+						<li>After login, be sure you are in the <em>Projects</em> perspective.</li>
+						<li>In the <em>Projects</em> portlet, select a project (for Project Wiki) or <em>Repository</em> (for global Wiki).</li>
+
+						<li>In the <em>Topics</em> portlet, click <em>Wiki</em>.</li>
+					</ol>
+					<h3 id="timesheet">Time Sheet View on Work Items</h3>
+					<p>The Time Sheet feature makes it quick and easy for developers and others to manage reporting of time spent on assigned work items during a specific time period .</p>
+					<p>The Time sheet view provides a matrix containing a subset of Work Items and a period of time (retrieved by a query specified in the view). The grid displays values 
+					representing time already reported (if any) by the current user on each Work Item fetched by the query. The grid visually differentiates working and non-working days 
+					as currently configured in Working Calendars at global and user levels.</p>
+
+					
+					<p>The Time sheet feature provides both an overview of time that has already been reported in individual Work Items,  plus another means of reporting time spent on Work Items. 
+					It is also a handy way to review and redistribute already-reported time, as opposed to having to access each affected Work Item. People may optionally choose this view to 
+					make the initial report of their time rather than using the Work Item form for individual items. </p>
+					<h4>Access point</h4>
+					<p class="procHdr">To access this feature:</p>
+					<ol>
+						<li>After login, be sure you are in the <em>Projects</em> perspective.</li>
+						<li>In the <em>Projects</em> portlet, select any Project for which you have a role assigned you.</li>
+						<li>In the <em>Topics</em> portlet, select <em>Work Items</em>.</li>
+						<li>In the working area, click the <em>Time sheet</em> tab.</li>
+					</ol>
+					
+					<h3 id="timesplit">User time-splitting between projects</h3>
+					<p>Added in the 3.0.1 Service Release. The Live Plan engine now supports the splitting of user working time between 2 or more projects. Using this configuration 
+					increases the accuracy of project planning. Time splitting can be configured in each user's account profile, either by an administrator, or by the individual user.</p>
+					<p class="procHdr">To access this feature:</p>
+					<ul>
+						<li>Administrators can access the configuration in the user's account via the User Management topic in the Administration perspective.</li>
+						<li>End users can access the configuration in their user account profile, accessed by clicking their user name in the Polarion ALM portal header.</li>
+						<li>The main documentation topic can be found in the Administrator's Guide. Search for &quot;Configuring User Time-splitting&quot;.</li>
+					</ul>
+					
+					<h3 id="wcal">Graphical Working Calendar Configuration</h3>
+					<p>The Working Calendar feature defines available working time for projects. Regularly occurring working and non-working time, as well as exceptions to these, can be defined 
+					both globally for the organization, and for individual users. </p>
+					<p>In previous versions, it was necessary to edit an XML configuration file directly, which required knowledge of and tools for editing XML. Some people were able to 
+					configure their personal Working Calendar, thus placing more workload on administrators.</p>
+					<p>While direct XML editing is still an option in version 3.0, both administrators and users can now perform this important configuration easily and quickly via the Polarion GUI. 
+					Individual users can deal with their own schedule as inevitable changes happen, and the changes are immediately reflected in live project plan where they are visible to managers. 
+					System administrators need only deal with initial configuration at the global level and any later changes.</p>
+
+					<h4>Access point - global configuration</h4>
+					<p>You must have administrator rights to configure the global Working Calendar.</p>
+					<ol>
+						<li>After login, select the <em>Administration</em> perspective.</li>
+						<li>In the <em>Projects</em> portlet, select <em>Repository</em>.</li>
+						<li>In the <em>Topics</em> portlet, expand the <em>Work Items</em> node and click <em>Calendar</em>.</li>
+					</ol>
+					<h4>Access point - user configuration</h4>
+					<p class="procHdr">To access this feature:</p>
+
+					<ol>
+						<li>After login, open your user profile by clicking on your user name displayed in the Polarion header (right-hand side)</li>
+						<li>If necessary, scroll downward until you see the <em>Working Calendar</em> portlet which contains the GUI for your personal working calendar.</li>
+					</ol>
+					
+					<h3 id="MyHat">My Hat</h3>
+					<p>We commonly speak about people &quot;wearing different hats&quot; in a team or organization. Many times the same person &quot;wears more than one hat&quot;. So for example, 
+					the same person might put on his/her <em>developer hat</em> at some times, and a <em>project manager hat</em> at other times. A different set of information is needed when 
+					wearing the first hat than when wearing the second. With the new <em>My Hat</em> feature in Polarion 3.0, different information is presented in the interface according to 
+					which Hat you elect to wear at any given time. The default &quot;Hats&quot; are:</p>
+
+					<ul>
+						<li>Manager</li>
+						<li>Developer</li>
+						<li>Tester</li>
+					</ul>
+					<p>When &quot;wearing&quot; any of these hats, you see only the topics you need to see; everything else is out of your way. To change Hats, just select the one 
+					you want to wear now from the My Hat list next to your user name in the header.</p>
+
+					
+					<p>An administrator can define the Hats that are available for users to &quot;put on&quot;, and what information is shown when wearing each Hat.</p>
+					
+					<h4>Access Point</h4>
+					
+					<p class="procHdr">To configure the Hat definitions:</p>
+					<ol>
+						<li>Click <em>Administration</em> to enter the Administration perspective (administrator permissions required)</li>
+
+						<li>In the <em>Topics </em> portlet, expand <em>User Management</em> and click on <em>My Hats</em>.</li>
+					</ol>
+					
+					<p class="procHdr">To assign Hats to a user:</p>
+					<ol>
+						<li>Click <em>Administration</em> to enter the Administration perspective (administrator permissions required)</li>
+						<li>In the <em>Topics </em> portlet, expand <em>User Management</em> and click on <em>Users</em>.</li>
+						<li>Use the <em>Search</em> feature to locate a user account.</li>
+						<li>On the user account page for the selected user, scroll if necessary to see the <em>My Hats</em> portlet. </li>
+					</ol>
+		
+					<h4>Access Point</h4>
+					<p>To switch to the user interface for a specific configured function, select the function from the drop-down list appearing next to your user name in the Polarion header.</p>
+					
+					<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+		
+					<h3 id="uichanges">Noteworthy UI Changes</h3>
+					<p>The release also features several notable improvements and enhancements to previously existing features.</p>
+					
+					<h4>Human-readable URLs</h4>
+					<p>Provides the possibility to bookmark portal URLs and share them by e-mail, chat, etc.</p>
+
+					
+					<h4>Improved Shortcuts</h4>
+					<p>As mentioned, the new URL format makes it easy to share shortcuts. Simply execute one, copy the resulting URL from your browser, and send it. In addition:</p>
+					<ul>
+						<li>Shortcuts now save the entire view plus current query.</li>
+						<li>Shortcuts portlet is present in all perspectives for uniformity of UI.</li>
+					</ul>
+					
+					<h4>Site Search Options</h4>
+
+					<p>With the implementation of the new <a href="#wiki">Wiki feature</a>, the scope of the Site Search feature can be specified and the search run either on Work Items 
+					(as in previous versions) or on the Wiki.</p>
+		
+					<h4>Easier portal page</h4>
+					<p>There are now 2 topics (views) for the main portal page: <strong>Overview</strong> (default) and <strong>Dashboard</strong>. This simplifies and reduces the amount of 
+					information you are presented with on login.</p>
+					<p>Overview is a high-level roll-up summarizing a few key stats for the repository, or a selected project group or project.</p>
+
+					<p>"Dashboard  is a concentration of charts and graphs with key data, trends, relationships etc. about the current scope selection (repository, project group, project). 
+					A new <em>Scoreboard</em> chart in this view reveals overall compliance levels with a number of key metrics at a glance. The rules are generally user configurable. It 
+					is possible to drill down to more granular levels of information maintained in the <a href="#qc">Quality Center</a>.</p>
+					
+					<h4>Bulk Edit moved to Work Items Table</h4>
+					<p>There is no longer a separate Bulk Edit view for Work Items. The functionality has been incorporated into the Table view.</p>
+					
+					<h4>Renamed <em>Operations</em> Button</h4>
+
+					<p>The <em>Operations</em> button in the Work Item viewer/editor pane is now labeled <em>Actions</em>.</p>
+					
+					<h4>Topics Portlet </h4>
+					<ul>
+						<li>Former topic <em>Metrics</em> is replaced by the new <a href="#qc"><em>Quality</em></a> topic. Many 2.6.x dashboard portlets are moved there.</li>
+
+						<li>Former topic <em>Tests</em> now has its information included in the <em>Reports</em> topic.</li>
+						<li>New <em>XP Compliance</em> topic reports levels of compliance with Extreme Programming (XP) methodology. Rules are user-configurable.</li>
+					</ul>
+
+					<h4>Administration Perspective</h4>
+					<ul>
+						<li>The <em>Dashboards</em> topic is renamed as <em>Portal</em> and several sub-topics that were found there are moved, renamed, or dropped:</li>
+							<li>
+							<ul>
+								<li>The former <em>Project Group Dashboard</em> topic is renamed as <em>Project Overview</em>.</li> <!-- CONFIRM! -->
+
+								<li>The former <em>Charts</em> topic is renamed as <em>Dashboard</em>.</li> <!-- CONFIRM! -->
+								<li>The former <em>Work Item Metrics</em> topic moved and is now a sub-topic of <em>Reports</em>.</li> <!-- CONFIRM! -->
+
+								<li>The former <em>Metric Providers</em> topic is dropped.</li> <!-- CONFIRM! -->
+							</ul>
+						</li>
+						<li>The <em>Reports</em> topic is now a topic group with several sub-topics:
+							<ul>
+
+								<li>The configuration that was formerly <em>Reports</em> is now a sub-topic named <em>Report Descriptors</em></li>
+								<li>The <em>Work Item Metrics</em> topic is moved under <em>Reports</em>, as mentioned above</li>
+								<li>There is a new <em>Package Reuse</em> topic that enables configuration of the Package Reuse metrics.</li>
+
+							</ul>
+						</li>
+					</ul>
+					
+					<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+					
+				<h2 id="improvs">Improvements &amp; Enhancements</h2>	
+		
+				<h3>Work Items</h3>
+				<p>Several new features and enhancements are concerned with or related to Work Items.</p>		
+					<h4>Work Items Table</h4>
+					<ul>
+						<li>Drop-down menu on table header to show/hide columns, access actions</li>
+						<li>Drag-drop re sizable panels; possibility to maximize the table or the form</li>
+						<li>No separate view for Bulk Edit. Each Table view item has a selection box, and edits can be applies to all checked items at once.</li>
+					</ul>
+					
+					<h4>Work Item Preview</h4>
+					<ul>
+						<li>New mouse-over activated editors - many fields can be updated without waiting for form loading.</li>
+						<li>Drop-down menu on Edit button enables quick change of Work Item type (e.g. Task > Defect) or Work Item status.</li>
+						<li>Vote and Watch are added to Actions.</li>
+						<li>User-configurable form layout at global and project scopes</li>
+						<li>Possibility to create a hierarchy of links in the header</li>
+						<li>View an item&#039;s History in a new tabbed page</li>
+					</ul>
+			
+					<h4>Multiple Work Item Assignees</h4>
+					<p>It will now be possible to have multiple assignees for Work Items. Among other use cases, this enhancement makes it possible to define a custom Work Item type such as 
+					<em>Meeting</em>, create Work Items of that type, schedule them, and assign multiple users.</p>
+			
+					<p>When multiple users are assigned to an item, the planning engine uses a special field (field name to be finalized) to reflect the aggregate of all time actually spent 
+					by all users, which is reflected in the Live Plan.</p>
+		
+				<h3>Administration</h3>
+				<ul>
+					<li>Improved New Project Wizard is based on common use cases</li>
+					<li>Work area of User Management and other functions has layout that is consistent with other perspectives, e.g. Work Items Table in Projects perspective.</li>
+					<li>User table can be filtered by scope</li>
+					<li>New History view for User accounts</li>
+					<li>GUI for global <a href="#wcal">Working Calendar</a></li>
+				</ul>
+
+				<h3>Security</h3>
+				<ul>
+					<li>Only users with global role &quot;assignable&quot; or context role &quot;project_assignable&quot; can be put into the assignees list. In version 2.x this was 
+					controlled by privilege.</li>
+					<li>Portal login requires permission <code>com.polarion.security.login permission</code>. In the default configuration, this permission is granted to the role 
+					&quot;user&quot;. in version 2.x that role was hard-coded.</li>
+				</ul>
+		
+				<h3>Build Management</h3>
+				<ul>
+					<li>New Integration Build (build type)</li>
+					<li>Option to auto-update reports after builds.</li>
+				</ul>
+				<p class="top"><a href="#cont">TOP&nbsp;^</a></p>
+
+					
+				<h2 id="other">Other significant changes</h2>
+				<p><strong>Shortcuts format changed</strong><br />The internal architecture for Shortcuts changes significantly with this release. Shortcuts defined in previous versions will not 
+				work in version 3.0. Some migration tools and documentation are provided, but it may still be necessary for users to recreate some shortcuts in Polarion 3.0.</p>
+				<p><strong>New user role <em>assignable</em></strong><br />Two new user roles are implemented in this release:</p>
+				
+				<ul>
+					<li><em>assignable</em> - a global permission</li>
+					<li><em>project_assignable</em> - a project-specific permission</li>
+				</ul>
+				
+				<p><span style="color: Red; font-weight: bold; font-style: italic;">Users must have this role in their profile in order to be assigned Work Items.</span> Previously, users with a 
+				developer or administrator roles could be assigned Work Items. However, a need was identified for roles with read/write access to Work Items without the possibility of being 
+				and assignee.</p>
+				
+				<p>User roles can be assigned in the <em>User Management &gt; Users</em> or <em>User Management &gt; Roles</em> topics of the Administration perspective. The latter will be easiest if you need to 
+				add the <em>assignable/project_assignable</em> roles to multiple users.</p>
+
+				
+				<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+				
+				</div><!-- /#news -->
+				</div> <!-- /#300 -->
+	
+			
+			<!-- 2.x -->
+				<div id="TWOX">
+					<h1 class="series">Version 2.x</h1>
+
+					<div id="TWOSIXFIVE">
+						<h2 class="sect">Version 2.6.5</h2>
+						<p><em>Tracking of version history commenced with this version.</em></p>
+						<h3>New Features</h3>
+						<p>This section provides brief descriptions of what's new in this release of Polarion for Subversion.</p>
+						<ul>	
+			      		<li>Exportable status dates: All dates of status changes are now exportable to Excel.</li>
+
+			      		<li> Tree View Hierarchy is Exported: The sort order, including child levels, of the Tree view are maintained via heading styles when the view is exported to MS Word. See User Guide: Exporting Work Items for more information.</li>
+			      		<li>Non-working time display: Non-working time is now based on Working Calendar configuration (all applicable scopes) and is represented visually in the Live Plan and Work Reports.</li>
+			      		<li>Out of the box LDAP + SSL setup</li>
+						</ul>
+						<h3>Improvements</h3>
+						<p>In addition to new features there are a number of improvements in various areas:</p>
+
+						<ul>
+				      	<li>Due date and time point optionally taken into account as scheduling criteria for the Live Plan. See Administrator's Guide: Configuring Planning for info.</li>
+				        	<li>Splitting of planned items around fixed-time items</li>
+				        	<li>Display unavailable time in live plan and export it to the time report.</li>
+				       	<li>Custom code invocation during workflow transitions and related adjustments</li>
+				         <li>Tree view export to Excel templates</li>
+
+				         <li>Tests, failures and error counts are now available in addition to success ratio and line coverage</li>
+				         <li>New support for:
+				            <ul>
+									<li>Firefox 2.0</li>
+				            	<li>Internet Explorer 7.0</li>
+				            	<li>Subversion 1.4</li>
+								</ul>
+
+							</li>
+						</ul>
+						<p class="top"><a href="#top">TOP&nbsp;^</a></p>		
+					</div><!-- /#2.6.5 -->
+				</div>
+			<!-- /2.x -->
+			
+	</div><!-- /#cont -->
+
+
+	
+</div>
+	<div style="margin-bottom: 0px; height: 44px;" id="ftr">
+		<p style="padding-right: 13px; margin-top: 0px; padding-top: 15px; margin-bottom: 0px;">&copy; 2017 Polarion AG</p>
+	</div>
+</div>
+
+
+</body>
+</html>

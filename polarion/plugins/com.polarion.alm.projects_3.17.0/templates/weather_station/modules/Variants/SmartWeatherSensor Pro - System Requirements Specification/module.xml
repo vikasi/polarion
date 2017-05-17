@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">rProject</field>
+    <field id="branchedFrom">Master Specifications#System Requirements Specification%29519</field>
+    <field id="branchedWithQuery">id:"WS-38" OR id:"WS-39" OR id:"WS-40" OR id:"WS-41" OR id:"WS-97" OR id:"WS-43" OR id:"WS-98" OR id:"WS-45" OR id:"WS-1" OR id:"WS-37" OR id:"WS-52" OR id:"WS-53" OR id:"WS-54" OR id:"WS-55" OR id:"WS-56" OR id:"WS-57" OR id:"WS-58" OR id:"WS-46" OR id:"WS-47" OR id:"WS-59" OR id:"WS-48" OR id:"WS-60" OR id:"WS-49" OR id:"WS-61" OR id:"WS-62" OR id:"WS-63" OR id:"WS-99" OR id:"WS-100"</field>
+    <field id="created">2015-05-25 17:43:06.172 +0200</field>
+    <field id="headingSidebarFields">severity,status</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=WS-92"></h1><p id="polarion_new_0">Functional requirements identify the primary user functions that must be contained within the scope of the application. Functional requirements should be stated as an implementation of a user requirement.</p><div id="polarion_wiki macro name=toc"></div><div id="polarion_editor_html_block1" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">#documentPanel(true &quot;approved&quot;)</pre>
+</div><h2 id="polarion_wiki macro name=module-workitem;params=id=WS-93"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-94"></h3><p id="polarion_merged_2">
+  <span style="font-weight: normal;font-style: normal;">The purpose of this document is to describe the set of functional requirements a environment sensor built from the Grand Unified Environment Sensing Platform supports.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-95"></h3><p id="polarion_merged_3">
+  <span style="font-style: normal;">The environment sensors is supposed to read environmental data from sensors and to communicate it for further processing to the visualization and data processing.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-96"></h3><p id="polarion_1">
+  <span style="font-style: italic;">List any other documents or Web addresses to which this functional requirements document refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=WS-104"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-105"></h3><p id="polarion_2">
+  <span style="font-style: italic;">Provide a context diagram of the system, with explanations as applicable. The context of a system refers to the connections and relationships between the system and its environment.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-107"></h3><div id="polarion_wiki macro name=module-workitem;params=id=WS-1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-37|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-52|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-53|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-54|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-55|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-56|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-57|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-58|level=1|external=true"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=WS-109"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-111"></h3><p id="polarion_merged_9">
+  <span style="font-style: italic;">Describe the performance conditions and their associated capabilities.<br/>
+    </span>
+</p><div id="polarion_wiki macro name=module-workitem;params=id=WS-59|external=true"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-113"></h3><p id="polarion_merged_14">
+  <span style="font-style: italic;">Describe requirements for the quality characteristics of the system. Specify the requirements in measurable and verifiable terms. Describe any trade-offs between the characteristics (e.g., security versus portability).</span>
+</p><div id="polarion_wiki macro name=module-workitem;params=id=WS-60|external=true"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-115"></h3><p id="polarion_merged_15">
+  <span style="font-style: italic;">Specify relevant applicable laws, regulations, policies, and standards that will affect the operation or performance of the system, as well as any relevant external regulatory requirements, or constraints imposed by normal business practices.  </span>
+</p><div id="polarion_wiki macro name=module-workitem;params=id=WS-61|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-62|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-63|external=true"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=WS-117"></h2><p id="polarion_3">
+  <span style="font-style: italic;">Define all the terms necessary to properly interpret this document, including acronyms and abbreviations. You may wish to build a separate glossary that spans multiple projects or the entire organization, and just include terms specific to a single project in each document.<br/>
+    </span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=WS-119"></h2><p id="polarion_4">
+  <span style="font-style: italic;">Optionally, include any pertinent analysis models, such as data flow diagrams, class diagrams, state-transition diagrams, or entity-relationship diagrams.</span>
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status as image,pvRestriction</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                            <item id="value">false</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                        <struct>
+                            <item id="key">sidebarWorkItemFields</item>
+                            <item id="value">severity,status,pvRestriction</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">requirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">approved</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+    <field id="variant">WS-72</field>
+    <field id="version" type="string">1.0</field>
+</module>

@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Provide-Package: com.polarion.alm.builder,com.polarion.alm.builder.int
+ ernal;x-friends:="com.polarion.alm.builder.tests",com.polarion.alm.bu
+ ilder.internal.model;x-friends:="com.polarion.alm.builder.tests,com.p
+ olarion.alm.tracker",com.polarion.alm.builder.internal.persistence;x-
+ friends:="com.polarion.alm.builder.tests",com.polarion.alm.builder.in
+ ternal.report;x-friends:="com.polarion.alm.builder.tests",com.polario
+ n.alm.builder.model,com.polarion.alm.builder.report,com.polarion.alm.
+ builder.security,com.polarion.alm.builder.spi,com.polarion.alm.builde
+ r.spi.maven,com.polarion.alm.builder.util,org.apache.maven.model,org.
+ apache.maven.model.io.xpp3,org.codehaus.plexus.util.xml
+Bundle-SymbolicName: com.polarion.alm.builder
+Bundle-Name: %pluginName
+Bundle-Version: 3.17.0
+Bundle-ClassPath: builder.jar,lib/maven-embedder-2.1-SNAPSHOT-dep.jar
+Bundle-Localization: plugin
+Require-Bundle: com.polarion.subterra.base;reprovide=true,com.polarion
+ .platform.jobs;reprovide=true,com.polarion.alm.projects;reprovide=tru
+ e,com.polarion.platform.persistence;reprovide=true,com.polarion.subte
+ rra.index,com.polarion.subterra.persistence,com.polarion.usdp.persist
+ ence,org.eclipse.core.runtime;optional=true,org.apache.ant,org.tmates
+ oft.svnkit,com.polarion.qcentre,com.polarion.cluster,com.polarion.pla
+ tform.guice
+Bundle-Vendor: %providerName
+
+

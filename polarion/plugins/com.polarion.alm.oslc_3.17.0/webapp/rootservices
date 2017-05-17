@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<%@ page contentType="application/rdf+xml" language="java" pageEncoding="UTF-8" %>
+<% 
+	String baseUrl = com.polarion.core.config.Configuration.getInstance().getBaseURL().toString();
+	pageContext.setAttribute("baseUrl", baseUrl); 
+	pageContext.setAttribute("oslcUrl", com.polarion.alm.oslc.provider.OslcUris.getInstance().getOslcBaseURI().toString()); 
+%>
+
+<rdf:Description
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:jfs="http://jazz.net/xmlns/prod/jazz/jfs/1.0/"
+	xmlns:jd="http://jazz.net/xmlns/prod/jazz/discovery/1.0/"
+	xmlns:oslc="http://open-services.net/ns/core#"
+	rdf:about="${baseUrl}/polarion/oslc/rootservices">
+
+  	<dc:title xml:lang="en">Polarion OSLC Root Services</dc:title>
+
+	<jfs:oauthRealmName>Polarion</jfs:oauthRealmName>
+	<jfs:oauthDomain>${baseUrl}</jfs:oauthDomain>
+	<jfs:oauthRequestConsumerKeyUrl rdf:resource="${oslcUrl}oauth/requestKey"/>
+	<jfs:oauthApprovalModuleUrl rdf:resource="${oslcUrl}oauth/approveKey"/>
+	<jfs:oauthRequestTokenUrl rdf:resource="${oslcUrl}oauth/requestToken"/>
+	<jfs:oauthUserAuthorizationUrl rdf:resource="${oslcUrl}oauth/authorize"/>
+	<jfs:oauthAccessTokenUrl rdf:resource="${oslcUrl}oauth/accessToken"/>	
+ 
+  	<oslc_cm:cmServiceProviders 
+  		xmlns:oslc_cm="http://open-services.net/xmlns/cm/1.0/" 
+  		rdf:resource="${oslcUrl}catalog" />
+  		 		
+	<% if (com.polarion.core.config.Configuration.getInstance().oslc().rmProvider()) { %>
+  	<oslc_rm:rmServiceProviders 
+  		xmlns:oslc_rm="http://open-services.net/xmlns/rm/1.0/" 
+  		rdf:resource="${oslcUrl}catalog" />
+	<% } %>
+
+ 	<jd:oslcCatalogs>
+		<oslc:ServiceProviderCatalog rdf:about="${oslcUrl}catalog">
+			<% if (com.polarion.core.config.Configuration.getInstance().oslc().cmProvider()) { %>
+				<oslc:domain rdf:resource="http://open-services.net/ns/cm#"/>
+			<% } %>
+			<% if (com.polarion.core.config.Configuration.getInstance().oslc().rmProvider()) { %>
+				<oslc:domain rdf:resource="http://open-services.net/ns/rm#"/>
+			<% } %>
+			<% if (com.polarion.core.config.Configuration.getInstance().oslc().coreTeamcenterProvider()) { %>
+				<oslc:domain rdf:resource="http://www.plm.automation.siemens.com/ldf#"/>
+			<% } %>
+		</oslc:ServiceProviderCatalog>
+	</jd:oslcCatalogs>
+
+</rdf:Description>

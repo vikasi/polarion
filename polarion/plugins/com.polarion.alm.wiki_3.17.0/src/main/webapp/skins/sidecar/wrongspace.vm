@@ -1,0 +1,15 @@
+#template("startpage.vm")
+<div id="xwikicontent">
+	#xwikimessageboxstart("Incorrect Space name." "Space can't be created.")
+	$xwiki.getCustomMessage()
+
+<div style="text-align: center; border: 0px solid blue;"> 
+#set($parent2 = $request.getParameter("parent"))
+<a href="$xwiki.getURL("$!{parent2}")?parentSpace=page/_default">back to view</a>
+</div>
+<div class="clearfloats"></div>
+
+	#xwikimessageboxend()
+
+</div>
+#template("endpage.vm") 

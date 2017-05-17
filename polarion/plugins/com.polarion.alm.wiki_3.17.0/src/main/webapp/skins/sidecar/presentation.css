@@ -1,0 +1,289 @@
+/* Presentation stylesheet */
+
+/* classes */
+.box,
+.main-content {
+  margin: 0.5em;
+}
+
+/* dom-tree */
+.dom-tree {
+  padding: 0 0 0 1.5em;
+  color: #999;
+}
+.dom-tree code {
+  font-weight: bold;
+}
+.dom-tree ul ul ul  {
+  list-style: disc;
+}
+.dom-tree ul ul ul ul  {
+  list-style: circle;
+}
+.dom-tree ul ul ul ul ul {
+  list-style: square;
+}
+.dom-tree dl,
+.dom-tree dt,
+.dom-tree dd {
+  color: black;
+  margin: 0;
+  padding: 0;
+  display: inline; /* IE 5.x doesn't like this */
+}
+.dom-tree dd {
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+---------------------------------------
+Global header
+---------------------------------------
+*/
+#globalmenu a {
+  text-decoration: none;
+}
+
+#companylogo img {
+  text-decoration: none;
+  border: none;
+}
+
+.breadcrumbspace{
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.button{
+  font-family: Helvetica;
+  font-weight: bold;
+  padding: 1px 16px;
+  width: auto;
+  overflow: visible;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+.xwikiintra li:hover, .xwikitabbar li:hover, .xwikiintracontent legend:hover, .xwikiintracontent fieldset.collapsed legend:hover{
+/*  background-color: #FFD;*/
+}
+.xwikiintracontent h4{
+  font-size: 110%;
+  text-align: left;
+  text-transform: none;
+  margin: 0px;
+}
+#xwikihistorylist li{
+  list-style-type: none;
+}
+table.xwikidatatable th{
+  text-align: center;
+  border: 1px solid;
+}
+table.xwikidatatable td{
+  padding: 2px 8px;
+  vertical-align: middle;
+}
+
+/*
+---------------------------------------
+Menu
+---------------------------------------
+*/
+.rightmenu a{
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 110%;
+  border: 1px solid #ff0000;
+}
+
+
+
+div.leftmenu{
+/*	margin-top: -10px;*/
+/*	padding-top: 3px;*/
+	padding-top: 8px;
+	
+}
+
+.menuseparator {
+	display: inline;
+	background-image:url('icon_title3sep.gif');
+	background-repeat: repeat-y;
+}
+
+/*
+---------------------------------------
+Panels
+---------------------------------------
+*/
+.xwikipaneltitle{
+  padding: 0px;
+  margin: 0px;
+  font-size: 11px;
+  font-family: Verdana, Arial, Helvetica;
+  font-weight: bold;
+  color: #ffffff;
+  background-image: url("panel.png"); /*no-repeat right center;*/
+  background-repeat: repeat-x;
+  clip: auto;
+}
+
+.xwikipaneltitle1{
+  padding-left: 5px;
+  margin: 0px;
+  font-size: 11px;
+  font-family: Verdana, Arial, Helvetica;
+  font-weight: bold;  
+  color: #ffffff;
+  background-image: url("panel.png"); /*no-repeat right center;*/
+  background-repeat: repeat-x;
+  clip: auto;
+}
+
+.xwikipanelcontents{
+  padding: 0px;
+  margin: 0px;
+}
+
+.xwikilogintable{
+  margin: auto;
+}
+.xwikilogintable th{
+  text-align: right;
+  background-color: transparent;
+}
+.xwikilogintable td{
+  text-align: left;
+}
+
+#xwikirightstable{
+  width: 624px;
+  margin: 5px 0px;
+  border: 1px solid;
+}
+#xwikirightstable th{
+  text-align: center;
+  border: 1px solid;
+}
+#xwikirightstable td, #xwikirightstable tr{
+  border: 1px solid;
+  text-align: center;
+}
+.panel input.panelinput, .panel select{
+  width: 135px;
+}
+#xwikiincludeddocuments .xwikibuttonlink a{
+  padding: 2px 8px;
+  margin-left: 8px;
+}
+
+/*
+---------------------------------------
+Articles
+---------------------------------------
+*/
+.article_title {
+ font-size: 120%;
+ border-bottom: 1px;
+}
+
+.article_content {
+ padding: 10px;
+}
+
+.article_date {
+ font-size: 120%;
+ border-bottom: 1px solid;
+}
+
+.article_footer {
+ border-top: 1px solid;
+ font-size: 75%; 
+ font-weight: bold; 
+}
+
+/*
+---------------------------------------
+Misc
+---------------------------------------
+*/
+.currentspace a{
+  text-decoration: none !important;
+  padding: 2px;
+}
+.imgfloatleft{
+  float: left;
+  margin-right: 8px;
+}
+.imgfloatright{
+  float:right;
+  margin-left: 8px;
+}
+.imgleft{
+  text-align: left;
+}
+.imgcenter{
+  text-align: center;
+}
+.imgright{
+  text-align: right;
+}
+
+/*
+---------------------------------------
+Misc
+---------------------------------------
+*/
+div.errormessage, div.warningmessage, div.infomessage, div.plainmessage{
+  /*margin: 4px 0px 4px;
+  border: 1px solid #DDD;
+  padding: 8px 8px 8px 28px;
+  background: #F5F5F5 url(/polarion/wiki/images/msg.png) 8px 8px no-repeat;*/
+  text-align: left;
+  width: 95%;
+  margin: 4px 5px;
+  padding: 16px 4px 16px 36px;
+  background: #F5F5F5 url("/polarion/wiki/skins/sidecar/msg.png") 10px 18px no-repeat;
+}
+
+div.infomessage{
+  /*background-image: url(/polarion/wiki/images/msginfo.png);
+  color: #369;*/
+  
+  background-image: url("/polarion/wiki/skins/sidecar/images/msginfo.png");
+  background-color:#D8E4F1;
+}
+
+div.warningmessage{
+  /*background-image: url(/polarion/wiki/images/msgwarning.png);
+  color: #c82;*/
+  
+  background-image: url("/polarion/wiki/skins/sidecar/images/msgwarning.png");
+  background-color:#FFFFCE;
+}
+
+div.errormessage{
+  /*background-image: url(/polarion/wiki/images/msgerror.png);
+  color: #F00;*/
+  
+  background-image: url("/polarion/wiki/skins/sidecar/images/msgerror.png");
+  background-color:#FFCCCC;
+}
+
+div.plainmessage{
+  background-image: none;
+  /*color: #369;*/
+}
+

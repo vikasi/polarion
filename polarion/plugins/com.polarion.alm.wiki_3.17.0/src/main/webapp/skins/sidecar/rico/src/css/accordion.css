@@ -1,0 +1,28 @@
+/* DEM */
+.accordionTabTitleBar {
+	background: #EEE;
+	color: #777;
+	font-weight: normal;
+}
+.accordionTabTitleBarHover {
+	background: #FFD;
+	color: #000;
+	font-weight: normal;
+	cursor: pointer;
+}
+.accordionTabTitleBarSelected {
+	background: #EEE;
+	color: #000;	
+	font-weight: bold;
+}
+.accordionTabContentBox {
+	overflow: auto;
+	width: auto !important;
+	padding-left:5px;
+}
+
+* html .accordionTabContentBox  {
+	width: 100% !important;
+}
+
+/* DEM */

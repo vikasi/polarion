@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="elibrary" id="source-check-aggregate" tag="20130523_1550">
+    <structure-element id="root" provider="root" type="root">
+        <value-fact-element id="overall-test-coverage" provider="source-check-aggregate" type="overall-test-coverage">
+            <value/>
+            <properties>
+                <property id="number-of-valid-lines">
+                    <value>0</value>
+                </property>
+                <property id="number-of-covered-lines">
+                    <value>0</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="overall-test-results" provider="source-check-aggregate" type="overall-test-results">
+            <value/>
+            <properties>
+                <property id="hasTests">
+                    <value>true</value>
+                </property>
+                <property id="errorsCount">
+                    <value>1</value>
+                </property>
+                <property id="failuresCount">
+                    <value>1</value>
+                </property>
+                <property id="testsCount">
+                    <value>5</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="OftenIntegration" provider="SourceAggregate" type="execution">
+            <value/>
+            <properties>
+                <property id="hasCodeIntegration">
+                    <value>true</value>
+                </property>
+                <property id="hasCodeIntegrationData">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="CollectiveCodeOwnership" provider="SourceAggregate" type="execution">
+            <value/>
+            <properties>
+                <property id="isSourceCodeExistInRepository">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+    </structure-element>
+</factbase>

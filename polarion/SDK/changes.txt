@@ -1,0 +1,2403 @@
+Changes in Polarion API
+=======================
+
+Version 3.17.0
+--------------
+
+  Polarion Java API
+  
+      * added method com.polarion.alm.projects.IProjectService.loginWithToken(String, String)    
+	  * added method com.polarion.platform.security.ISecurityService.authenticate(String, String, String)
+	  * added method com.polarion.platform.security.ISecurityService.loginWithToken(String, String)
+	  * added class com.polarion.platform.security.TcssToken
+	  * added method com.polarion.platform.repository.config.IRepositoryConfigService.invalidateAll()
+	  * added method com.polarion.platform.repository.external.ExternalRepositoryUtils.expandVariables(String, IExtendedLocation, String)
+	  * added field com.polarion.platform.repository.external.IExternalRepositoryProvider.POSITION
+	  * added field com.polarion.platform.repository.external.IExternalRepositoryProvider.BRANCH
+	  * added interface com.polarion.platform.repository.external.IExternalRtRepository
+	  * added interface com.polarion.platform.repository.external.IResourceTraceabilityRepositoryConfiguration
+	  * added interface com.polarion.platform.repository.driver.svn.ISvnRtRepositoryConfiguration
+	  * added interface com.polarion.platform.repository.external.git.IGitRtRepositoryConfiguration
+	  * added class com.polarion.subterra.base.location.ExtendedLocation
+	  * added interface com.polarion.subterra.base.location.IExtendedLocation
+	  * added method com.polarion.subterra.base.location.ILocation.getLastComponentExtension()
+	  * added method com.polarion.subterra.base.location.ILocation.getLastComponentWithoutExtension()
+	  * added interface com.siemens.polarion.rt.collectors.api.model.RtFile
+	  * added interface com.siemens.polarion.rt.collectors.api.model.RtFileProperties
+	  * added interface com.siemens.polarion.rt.collectors.api.RtBranchConfiguration
+	  * added interface com.siemens.polarion.rt.collectors.api.RtCollectionContext
+	  * added interface com.siemens.polarion.rt.collectors.api.RtCollectionModelFactory
+	  * added interface com.siemens.polarion.rt.collectors.api.RtCollectionModelFactory.RtFilePropertiesBuilder
+	  * added interface com.siemens.polarion.rt.collectors.api.RtCollector
+	  * added interface com.siemens.polarion.rt.collectors.api.RtRepositoryCollectionConfiguration
+	  * added class com.siemens.polarion.rt.parsers.api.exceptions.RtParsingException
+	  * added interface com.siemens.polarion.rt.parsers.api.model.RtElement
+	  * added interface com.siemens.polarion.rt.parsers.api.model.RtLink
+	  * added interface com.siemens.polarion.rt.parsers.api.model.RtObjectReference
+	  * added enum com.siemens.polarion.rt.parsers.api.model.RtObjectType
+	  * added interface com.siemens.polarion.rt.parsers.api.model.RtPosition
+	  * added interface com.siemens.polarion.rt.parsers.api.RtElementBuilder
+	  * added interface com.siemens.polarion.rt.parsers.api.RtLinkBuilder
+	  * added interface com.siemens.polarion.rt.parsers.api.RtParser
+	  * added interface com.siemens.polarion.rt.parsers.api.RtParserDescriptor
+	  * added interface com.siemens.polarion.rt.parsers.api.RtParserProperties
+	  * added interface com.siemens.polarion.rt.parsers.api.RtParsingContext
+	  * added interface com.siemens.polarion.rt.parsers.api.RtParsingModelFactory
+  
+  Polarion Rendering API
+  
+      * added interface com.polarion.alm.shared.api.model.fields.ModelObjectField
+	  * added interface com.polarion.alm.shared.api.model.rt.LinkedResource
+	  * added interface com.polarion.alm.shared.api.model.rt.LinkedResourceFields
+	  * added interface com.polarion.alm.shared.api.model.rt.LinkedResourcePositionField
+	  * added interface com.polarion.alm.shared.api.model.rt.LinkedResourcePositionRenderer
+	  * added interface com.polarion.alm.shared.api.model.rt.LinkedResourcesField
+	  * added enum com.polarion.alm.shared.api.model.rt.LinkedResourceFieldsEnum  
+	  * added method com.polarion.alm.shared.api.model.wi.WorkItemFields.linkedResources()
+  
+  Polarion Web Services
+
+        * added method com.polarion.alm.ws.client.session.SessionWebService.logInWithToken(String, String, String)
+		* added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestCaseParameterNames(String)
+		* added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestCaseRecords(String, String)
+		* added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestParametersLibrary(String)
+		* added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestRunByIdWithFields(String, String, String[])
+		* added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestRunByUriWithFields(String, String[])
+		* added method com.polarion.alm.ws.client.tracker.TrackerWebService.getLinkedResources(String)
+
+
+Version 3.10.3
+--------------
+
+  Polarion Java API
+  
+      * added method com.polarion.alm.tracker.ITrackerPolicy.canInsertReferencedWorkItems();
+      * added method com.polarion.platform.i18n.Localization.getString(String, Object...)
+  
+  Polarion Rendering API
+  
+      * added method com.polarion.alm.shared.api.model.document.DocumentsPermissions.insertReferencedWorkItems()
+      * added method com.polarion.alm.shared.api.model.wi.WorkItemField.render()
+      * added method com.polarion.alm.shared.api.utils.SharedLocalization.getString(String, Object...)
+  
+  Polarion Web Services
+  
+      * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.executeTest(String, TestRecord[])
+      * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getDefinedTestRunCustomFieldKeys(String)
+      * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getDefinedTestRunCustomFieldType(String, String)
+      * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getDefinedTestRunCustomFieldTypes(String)
+      * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestRunCustomFieldType(String, String)
+      * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestRunCustomFieldTypes(String)
+
+
+Version 3.10.2
+--------------
+
+  Polarion Java API
+  
+      * added method com.polarion.alm.tracker.model.IWorkflowObjectPermissions.comment()
+      * added method com.polarion.alm.tracker.workflow.IArguments.getArguments()
+      * added method com.polarion.alm.tracker.workflow.IArguments.getArgumentsWithPrefix(String)
+      * added method com.polarion.subterra.base.data.identification.IObjectId.removeRevision()
+      * deprecated method com.polarion.alm.tracker.ITrackerService.isOslcLinkingEnabled(IContextId)
+      * added class com.polarion.core.util.RunnableWEx<T>.RunnableException
+
+  Polarion Rendering API
+  
+      * added method com.polarion.alm.shared.api.model.document.DocumentWorkItems.revisionOfWorkItem(WorkItem)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.CustomEnumParameter.names()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.CustomEnumParameter.singleName()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.CustomEnumParameter.allowMultipleValues()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SeparateByParameter.field()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SeparateByParameter.enumeration()
+      * added interface com.polarion.alm.shared.api.model.rp.widget.RepositoryWidgetResources
+      * added interface com.polarion.alm.shared.api.model.rp.widget.RepositoryWidgetScriptedChart
+      * added method com.polarion.alm.shared.api.model.rp.widget.RichPageRenderingContext.createCustomHighchartBuilder()
+      * added method com.polarion.alm.shared.api.model.rp.widget.RichPageRenderingContext.createJsActionsBuilder()
+      * added method com.polarion.alm.shared.api.model.rp.widget.RichPageWidget.getDescriptionHtml(RichPageWidgetContext)
+      * added class com.polarion.alm.shared.api.model.wiki.WikiAttachmentReference
+      * added interface com.polarion.alm.shared.api.utils.charts.highcharts.CommonHighchartBuilder
+      * added interface com.polarion.alm.shared.api.utils.charts.highcharts.CustomHighchartBuilder
+      * added method com.polarion.alm.shared.api.utils.html.JsMethodArgumentsBuilder.escapeForAttribute(boolean)
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsBuilder
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsBuilderBase<T>
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsCreateArtifactBuilder
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsCreatePlanBuilder
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsCreateProjectBuilder
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsCreateTestRunBuilder
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsDuplicateBuilder
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsExportToPdfBuilder
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsImportDocumentBuilder
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsPrintBuilder
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsWithDocumentBuilder<T>
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsWithInProjectTemplateBuilder<T>
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsWithProjectBuilder<T>
+      * added interface com.polarion.alm.shared.api.utils.js.JsActionsWithSpaceBuilder<T>
+      * added method com.polarion.alm.shared.api.utils.links.DocumentLinkBuilder.sorting(String)
+      * added method com.polarion.alm.shared.api.utils.links.WorkItemLinkBuilder.parameters(Map<String, String>)
+      
+  Polarion Web Services
+      
+      * added method com.polarion.alm.ws.client.tracker.TrackerWebService.addComment(java.lang.String, java.lang.String, com.polarion.alm.ws.client.types.Text)
+      * added method com.polarion.alm.ws.client.tracker.TrackerWebService.addLinkedOslcItem(java.lang.String, java.lang.String, com.polarion.alm.ws.client.types.tracker.EnumOptionId, java.lang.String) 
+      * deprecated method com.polarion.alm.ws.client.tracker.TrackerWebService.createComment(java.lang.String, com.polarion.alm.ws.client.types.Text) 
+      * deprecated method com.polarion.alm.ws.client.tracker.TrackerWebService.createCommentNew(java.lang.String, java.lang.String, com.polarion.alm.ws.client.types.Text, java.lang.String[])
+      * deprecated method com.polarion.alm.ws.client.tracker.TrackerWebService.createDocumentComment(java.lang.String, com.polarion.alm.ws.client.types.Text)
+      * deprecated method com.polarion.alm.ws.client.tracker.TrackerWebService.createDocumentCommentReply(java.lang.String, com.polarion.alm.ws.client.types.Text)
+  
+
+Version 3.10.1
+--------------
+
+  Polarion Java API
+  
+      * added field com.polarion.alm.projects.model.IUser.KEY_HOMEPAGECONTENT
+      * added method com.polarion.alm.projects.model.IUser.getHomePageContent()
+      * added method com.polarion.alm.projects.model.IUser.setHomePageContent(Text)
+      * added method com.polarion.alm.projects.IProjectService.getProjectGroupForPath(String)
+      * added interface com.polarion.alm.tracker.model.ILinkedOslcResourceStruct
+      * added method com.polarion.alm.tracker.model.IModule.getRelativePath()
+      * added method com.polarion.alm.tracker.model.IModule.buildHomePage()
+      * added interface com.polarion.alm.tracker.model.IModuleHomePageBuilder
+      * added interface com.polarion.alm.tracker.model.IModuleHomePageBuilder.IHeadingBuilder
+      * added interface com.polarion.alm.tracker.model.IModuleHomePageBuilder.IWorkItemBuilder
+      * added method com.polarion.alm.tracker.model.IRichPage.hasDefaultContent()
+      * added field com.polarion.alm.tracker.model.ITestRun.KEY_TITLE
+      * added field com.polarion.alm.tracker.model.ITestRun.KEY_PROJECT_SPAN
+      * added method com.polarion.alm.tracker.model.ITestRun.getTitle()
+      * added method com.polarion.alm.tracker.model.ITestRun.setTitle(String)
+      * added method com.polarion.alm.tracker.model.ITestRun.getRecordsForTestCase(IWorkItem)
+      * added method com.polarion.alm.tracker.model.ITestRun.getAllRecordsForTestCase(IWorkItem)
+      * added method com.polarion.alm.tracker.model.ITestRun.removeRecordsForTestCase(IWorkItem)
+      * added method com.polarion.alm.tracker.model.ITestRun.getProjectSpan()
+      * added method com.polarion.alm.tracker.model.IWikiPage.delete()
+      * added field com.polarion.alm.tracker.model.IWorkItem.KEY_LINKED_OSLC_RESOURCES
+      * added method com.polarion.alm.tracker.model.IWorkItem.addLinkedOslcResource(URI, IEnumOption, String)
+      * added method com.polarion.alm.tracker.model.IWorkItem.getLinkedOslcResourcesStructs()
+      * added method com.polarion.alm.tracker.model.IWorkItem.removeLinkedOslcResource(URI, IEnumOption)
+      * added method com.polarion.alm.tracker.ITestManagementService.getTestRunsConfiguration(String, String)
+      * added method com.polarion.alm.tracker.ITrackerService.isOslcLinkingEnabled(IContextId)
+      * added class com.polarion.alm.tracker.TestRunsConfiguration 
+      * added method com.polarion.alm.tracker.TestsConfiguration.getTestRunsConfiguration()
+      * added method com.polarion.alm.tracker.TestsConfiguration.setTestRunsConfiguration(TestRunsConfiguration)
+      * added method com.polarion.platform.context.IContextService.contextExists(IContextId)
+      * added field com.polarion.platform.spi.security.IAuthenticationSource.NO_ACCESS
+      * added field com.polarion.platform.spi.security.IAuthenticationSource.ACCESS_READ_ONLY
+      * added field com.polarion.platform.spi.security.IAuthenticationSource.ACCESS_READWRITE
+      * added method com.polarion.platform.persistence.spi.PObject.setInCustomSet(String, boolean)
+      * added method com.polarion.platform.persistence.IPersistencePolicy.preEvaluateCustomSets(Iterable<IPObject>)
+      * added method com.polarion.platform.persistence.IQueryHelper.negateQuery(String)
+      * deprecated value com.polarion.platform.persistence.IQueryHelper.FIELD_IS_LOCAL
+      * deprecated value com.polarion.platform.persistence.IQueryHelper.IS_LOCAL_TRUE
+      * deprecated value com.polarion.platform.persistence.IQueryHelper.IS_LOCAL_FALSE
+      * deprecated class com.polarion.alm.tracker.IDocument
+      * deprecated class com.polarion.alm.tracker.IDocumentsManager
+      * deprecated method com.polarion.alm.tracker.ITrackerService.getDocumentsManager()
+
+  Polarion Rendering API
+  
+      * added method com.polarion.alm.shared.api.model.eo.Enumeration.isDefined(String)
+      * added method com.polarion.alm.shared.api.model.project.ProjectFields.start()
+      * added method com.polarion.alm.shared.api.model.project.ProjectFields.finish()
+      * added value com.polarion.alm.shared.api.model.project.ProjectFieldsEnum.start
+      * added value com.polarion.alm.shared.api.model.project.ProjectFieldsEnum.finish
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.CustomEnumParameter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.ParameterFactory.customEnum(String)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.ParameterFactory.scope(String)
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.ScopeParameter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.ScriptParameter.render()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.ScriptRenderResult
+      * added method com.polarion.alm.shared.api.model.rp.widget.RichPageContext.getDisplayedScope()
+      * added method com.polarion.alm.shared.api.model.rp.RichPage.hasDefaultContent()
+      * added method com.polarion.alm.shared.api.model.rp.RichPageReference.isRepositoryHomePage()
+      * added method com.polarion.alm.shared.api.model.rp.RichPageReference.isProjectHomePage()
+      * added method com.polarion.alm.shared.api.model.rp.RichPageReference.isSpaceHomePage()
+      * added interface com.polarion.alm.shared.api.model.rp.RichPagesInScopePermissions
+      * added method com.polarion.alm.shared.api.model.rp.RichPagesPermissions.inScope()
+      * added method com.polarion.alm.shared.api.model.tr.TestRunFields.title()
+      * added method com.polarion.alm.shared.api.model.tr.TestRunFields.projectSpan()
+      * added value com.polarion.alm.shared.api.model.tr.TestRunFieldsEnum.title
+      * added value com.polarion.alm.shared.api.model.tr.TestRunFieldsEnum.projectSpan
+      * added method com.polarion.alm.shared.api.model.tr.TestRunQueries.notExecutedTestCasesFilter()
+      * added method com.polarion.alm.shared.api.model.tr.TestRunRenderer.withTitle(boolean)
+      * added method com.polarion.alm.shared.api.model.tr.TestRunRenderer.withTitle()
+      * added method com.polarion.alm.shared.api.model.tr.UpdatableTestRunFields.title()
+      * added method com.polarion.alm.shared.api.model.user.UpdatableUserFields.homePageContent()
+      * added method com.polarion.alm.shared.api.model.user.UserFields.homePageContent()
+      * added value com.polarion.alm.shared.api.model.user.UserFieldsEnum.homePageContent
+      * added class com.polarion.alm.shared.api.model.wi.WorkItemAttachmentReference
+      * added method com.polarion.alm.shared.api.model.wiki.WikiPageFields.homePageContent()
+      * added method com.polarion.alm.shared.api.model.wiki.WikiPageFields.updatedBy()
+      * added value com.polarion.alm.shared.api.model.wiki.WikiPageFieldsEnum.homePageContent
+      * added value com.polarion.alm.shared.api.model.wiki.WikiPageFieldsEnum.updatedBy
+      * added method com.polarion.alm.shared.api.utils.links.ProjectLinkBuilder.space(String)
+      * added method com.polarion.alm.shared.api.utils.links.RepositoryLinkBuilder.space(String)
+      * added method com.polarion.alm.shared.api.utils.links.RepositoryLinkBuilder.user(String)
+      * added interface com.polarion.alm.shared.api.utils.links.SpaceLinkBuilder
+      * added method com.polarion.alm.shared.api.SharedContext.createHtmlLink(String)
+      
+  Polarion Web Services
+      
+      * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.addProjectToProjectSpan(String, String)
+      * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.createTestRunWithTitle(String, String, String, String)
+      * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.removeProjectFromProjectSpan(String, String)
+      
+  
+Version 3.10.0
+--------------
+
+  Polarion Java API
+      
+      * added interface com.polarion.alm.tracker.model.signatures.ITestRunWorkflowSignature
+      * added interface com.polarion.alm.tracker.model.signatures.IWorkflowSignaturesManager<T>
+      * added method com.polarion.alm.tracker.model.ICommentBase.getTrackerService()
+      * added interface com.polarion.alm.tracker.model.ICommentsManager<T>
+      * added field com.polarion.alm.tracker.model.ITestRecord.KEY_SIGNED
+      * added method com.polarion.alm.tracker.model.ITestRecord.isSigned()
+      * added field com.polarion.alm.tracker.model.ITestRun.KEY_COMMENTS
+      * added field com.polarion.alm.tracker.model.ITestRun.KEY_HOMEPAGECONTENT
+      * added field com.polarion.alm.tracker.model.ITestRun.KEY_USE_REPORT_FROM_TEMPLATE
+      * added field com.polarion.alm.tracker.model.ITestRun.ENUM_ID_STATUS
+      * added method com.polarion.alm.tracker.model.ITestRun.getUpdated()
+      * added method com.polarion.alm.tracker.model.ITestRun.getComments()
+      * added method com.polarion.alm.tracker.model.ITestRun.getCommentsManager()
+      * added method com.polarion.alm.tracker.model.ITestRun.isRichPageTestRun()
+      * added method com.polarion.alm.tracker.model.ITestRun.getHomePageContent()
+      * added method com.polarion.alm.tracker.model.ITestRun.setHomePageContent(Text)
+      * added method com.polarion.alm.tracker.model.ITestRun.isUseReportFromTemplate()
+      * added method com.polarion.alm.tracker.model.ITestRun.setUseReportFromTemplate(boolean)
+      * added method com.polarion.alm.tracker.model.ITestRun.getWorkflowSignaturesManager()
+      * added method com.polarion.alm.tracker.model.ITestRun.getWorkflowSignatures()
+      * added interface com.polarion.alm.tracker.model.ITestRunComment
+      * added interface com.polarion.alm.tracker.model.ITestRunCommentsManager
+      * added field com.polarion.alm.tracker.model.ITypeOpt.PROPERTY_KEY_REQUIRES_SIGNATURE_TCE
+      * added method com.polarion.alm.tracker.model.IWorkflowObject.getWorkflowSignaturesManager()
+      * added method com.polarion.alm.tracker.model.IWorkflowObject.getWorkflowSignatures()
+      * added method com.polarion.alm.tracker.ISavedQueriesManager.saveUserDefaultQuery(IUser, String, String)
+      * added method com.polarion.alm.tracker.ITestManagementService.getTestRun(String, String, String)
+      * added constructor com.polarion.alm.tracker.SavedQuery.SavedQuery(int, String, String, boolean)
+      * added constructor com.polarion.alm.server.api.config.SavedQueryImpl.SavedQueryImpl(String, String, boolean)
+      * added method com.polarion.platform.persistence.spi.Structure.checkModify(String, Object, Object)
+      * added method com.polarion.platform.persistence.diff.IDiffManager.generateHistory(IPObject, Set<String>, String[], boolean)
+      * added interface com.polarion.subterra.index.IDb.DbWorkerEx<T>
+  
+  Polarion Rendering API
+
+      * added interface com.polarion.alm.shared.api.model.comment.CommentBase
+      * added interface com.polarion.alm.shared.api.model.comment.CommentBaseField<C>
+      * added interface com.polarion.alm.shared.api.model.comment.CommentBaseFields
+      * added enum com.polarion.alm.shared.api.model.comment.CommentBaseFieldsEnum
+      * added interface com.polarion.alm.shared.api.model.comment.CommentBasePermissions
+      * added interface com.polarion.alm.shared.api.model.comment.CommentBaseRenderer<T>
+      * added interface com.polarion.alm.shared.api.model.comment.CommentBasesField<C>
+      * added interface com.polarion.alm.shared.api.model.comment.CommentBasesTreeField<C>
+      * added interface com.polarion.alm.shared.api.model.copy.CopyCommand
+      * added interface com.polarion.alm.shared.api.model.copy.CopyResult
+      * added method com.polarion.alm.shared.api.model.document.DocumentFields.workflowSignatures()
+      * added value com.polarion.alm.shared.api.model.document.DocumentFieldsEnum.workflowSignatures
+      * added interface com.polarion.alm.shared.api.model.document.DocumentWorkflowSignature
+      * added interface com.polarion.alm.shared.api.model.document.DocumentWorkflowSignatureFields
+      * added enum com.polarion.alm.shared.api.model.document.DocumentWorkflowSignatureFieldsEnum
+      * added interface com.polarion.alm.shared.api.model.document.DocumentWorkflowSignaturesField
+      * added method com.polarion.alm.shared.api.model.eo.EnumOptionField.optionIdIfCan()
+      * added method com.polarion.alm.shared.api.model.fields.Field.compareWith(Field)
+      * added interface com.polarion.alm.shared.api.model.fields.FieldDifferences
+      * added method com.polarion.alm.shared.api.model.revision.Revision.previousRevision()
+      * added method com.polarion.alm.shared.api.model.revision.RevisionRenderer.withMessage(boolean)
+      * added method com.polarion.alm.shared.api.model.revision.RevisionRenderer.withMessage()
+      * added method com.polarion.alm.shared.api.model.revision.Revisions.comparator(String)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Setter.structure()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Setter.allowedFields(Iterable<String>)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Setter.disallowedFields(Iterable<String>)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Builder.structure()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Builder.allowedFields(Iterable<String>)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Builder.disallowedFields(Iterable<String>)
+      * added method com.polarion.alm.shared.api.model.rp.widget.RichPageRenderingContext.plan()
+      * added method com.polarion.alm.shared.api.model.rp.widget.RichPageRenderingContext.testRun()
+      * added interface com.polarion.alm.shared.api.model.signatures.Signature
+      * added interface com.polarion.alm.shared.api.model.signatures.SignatureFields
+      * added enum com.polarion.alm.shared.api.model.signatures.SignatureFieldsEnum
+      * added interface com.polarion.alm.shared.api.model.signatures.SignatureRenderer
+      * added interface com.polarion.alm.shared.api.model.signatures.SignaturesField
+      * added interface com.polarion.alm.shared.api.model.signatures.WorkflowSignature
+      * added interface com.polarion.alm.shared.api.model.signatures.WorkflowSignatureFields
+      * added enum com.polarion.alm.shared.api.model.signatures.WorkflowSignatureFieldsEnum
+      * added interface com.polarion.alm.shared.api.model.signatures.WorkflowSignatureRenderer
+      * added interface com.polarion.alm.shared.api.model.signatures.WorkflowSignaturesField<T>
+      * added method com.polarion.alm.shared.api.model.tr.record.TestRecordFields.signed()
+      * added method com.polarion.alm.shared.api.model.tr.record.TestRecordFields.testCaseRevision()
+      * added value com.polarion.alm.shared.api.model.tr.record.TestRecordFieldsEnum.signed
+      * added value com.polarion.alm.shared.api.model.tr.record.TestRecordFieldsEnum.testCaseRevision
+      * added method com.polarion.alm.shared.api.model.tr.record.TestRecordsField.byResultIds(Iterable<String>)
+      * added method com.polarion.alm.shared.api.model.tr.record.TestRecordsField.executed()
+      * added method com.polarion.alm.shared.api.model.tr.TestRun.can()
+      * added method com.polarion.alm.shared.api.model.tr.TestRunFields.homePageContent()
+      * added method com.polarion.alm.shared.api.model.tr.TestRunFields.useReportFromTemplate()
+      * added method com.polarion.alm.shared.api.model.tr.TestRunFields.workflowSignatures()
+      * added method com.polarion.alm.shared.api.model.tr.TestRunFields.comments()
+      * added value com.polarion.alm.shared.api.model.tr.TestRunFieldsEnum.homePageContent
+      * added value com.polarion.alm.shared.api.model.tr.TestRunFieldsEnum.useReportFromTemplate
+      * added value com.polarion.alm.shared.api.model.tr.TestRunFieldsEnum.workflowSignatures
+      * added va8lue com.polarion.alm.shared.api.model.tr.TestRunFieldsEnum.comments
+      * added interface com.polarion.alm.shared.api.model.tr.TestRunPermissions
+      * added method com.polarion.alm.shared.api.model.tr.UpdatableTestRunFields.homePageContent()
+      * added method com.polarion.alm.shared.api.model.tr.UpdatableTestRunFields.useReportFromTemplate()
+      * added method com.polarion.alm.shared.api.model.wi.linked.LinkedWorkItemFields.revision()
+      * added value com.polarion.alm.shared.api.model.wi.linked.LinkedWorkItemFieldsEnum.revision
+      * added interface com.polarion.alm.shared.api.model.wi.CreateLinkCommand
+      * added method com.polarion.alm.shared.api.model.wi.UpdatableWorkItemLinkedWorkItemsField.addLink()
+      * added method com.polarion.alm.shared.api.model.wi.UpdatableWorkItemLinkedWorkItemsField.removeLink(String)
+      * added method com.polarion.alm.shared.api.model.wi.WorkItemLinkedWorkItemsField.directIfCan()
+      * added method com.polarion.alm.shared.api.model.ModelObject.copyFieldsTo(UpdatableModelObject)
+      * added enum com.polarion.alm.shared.api.model.StructureEnum
+      * added interface com.polarion.alm.shared.api.model.StructureSelector<T>
+      * added method com.polarion.alm.shared.api.transaction.TransactionalExecutor.executeSafelyInReadOnlyTransaction(RunnableInReadOnlyTransaction<T>)
+      * added interface com.polarion.alm.shared.api.utils.charts.highcharts.HcHorizontalAlignmentSelector<T>
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HcTitle.align()
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HighchartBuilder.horizontalAlignment()
+      * added method com.polarion.alm.shared.api.utils.collections.ReadOnlyStrictCollection.toTransformed(NotStrictTransformer<E, T>)
+      * added method com.polarion.alm.shared.api.utils.collections.ReadOnlyStrictCollection.toTransformed(StrictTransformer<E, T>)
+      * added method com.polarion.alm.shared.api.utils.collections.ReadOnlyStrictList.toTransformed(NotStrictTransformer<E, T>)
+      * added method com.polarion.alm.shared.api.utils.collections.ReadOnlyStrictList.toTransformed(StrictTransformer<E, T>)
+      * added method com.polarion.alm.shared.api.utils.collections.StrictList.toTransformed(NotStrictTransformer<E, T>)
+      * added method com.polarion.alm.shared.api.utils.collections.StrictList.toTransformed(StrictTransformer<E, T>)
+      * added method com.polarion.alm.shared.api.utils.html.HtmlAttributesBuilder.onClickMethod()
+      * added interface com.polarion.alm.shared.api.utils.html.JsMethodArgumentsBuilder
+      * added interface com.polarion.alm.shared.api.utils.html.JsMethodInvocationBuilder
+      * added method com.polarion.alm.shared.api.utils.html.RichTextRenderTarget.isEditor()
+      * added method com.polarion.alm.shared.api.utils.links.AdministrationLinkBuilder.testRunWorkflow()
+      * added interface com.polarion.alm.shared.api.utils.links.LinkWithPageMode
+      * added interface com.polarion.alm.shared.api.utils.links.PageModeSelector
+      * added method com.polarion.alm.shared.api.utils.links.RepositoryLinkBuilder.administration()
+      * added interface com.polarion.alm.shared.api.utils.links.TestRunPropertiesLinkBuilder
+      
+  Polarion Web Services
+  
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRecord.getSigned()
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRecord.setSigned(java.lang.Boolean signed)
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.getHomePageContent()
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.setHomePageContent(com.polarion.alm.ws.client.types.Text homePageContent) 
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.getUseReportFromTemplate()
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.setUseReportFromTemplate(java.lang.Boolean useReportFromTemplate)
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.getComments()
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.setComments(com.polarion.alm.ws.client.types.tracker.TestRunComment[] comments)
+      * added class com.polarion.alm.ws.client.types.tracker.TestRunComment 
+
+Version 3.9.3
+-------------
+      
+  Polarion Rendering API
+      
+      * added method com.polarion.alm.shared.api.model.revision.RevisionSelector.dateOrBefore(Date)
+      * added method com.polarion.alm.shared.api.model.revision.RevisionSelector.dateOrAfter(Date)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Setter.scope()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Setter.prototype()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Setter.subtype(String)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Builder.scope()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Builder.prototype()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Builder.subtype(String)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SortingParameter.Setter.scope()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SortingParameter.Setter.prototype()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SortingParameter.Setter.subtype(String)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SortingParameter.Builder.scope()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SortingParameter.Builder.prototype()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SortingParameter.Builder.subtype(String)
+      * added method com.polarion.alm.shared.api.model.tr.TestRun.queries()
+      * added interface com.polarion.alm.shared.api.model.tr.TestRunQueries 
+      * added method com.polarion.alm.shared.api.model.tr.TestRunRenderer.iconField(String)
+      * added method com.polarion.alm.shared.api.model.Renderer.withRevisionIcon(boolean)
+      * added method com.polarion.alm.shared.api.model.Renderer.withRevisionIcon()
+      * added interface com.polarion.alm.shared.api.utils.charts.highcharts.HcLegend 
+      * added interface com.polarion.alm.shared.api.utils.charts.highcharts.HcLegendTitle 
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HighchartBuilder.legend()
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HighchartBuilder.subtitle()
+      * added interface com.polarion.alm.shared.api.utils.collections.NotStrictTransformer<E, T>
+      * added method com.polarion.alm.shared.api.utils.collections.StrictHashSet.toTransformed(NotStrictTransformer<E, T>)
+      * added enum com.polarion.alm.shared.api.utils.html.RichTextRenderTarget.EXCEL
+      
+
+Version 3.9.2
+-------------
+
+  Polarion Java API
+      
+      * added interface com.polarion.alm.tracker.model.parameters.IParameter<T>
+      * added interface com.polarion.alm.tracker.model.parameters.IParameterDefinition
+      * added interface com.polarion.alm.tracker.model.parameters.IParameterDefinitionStruct
+      * added interface com.polarion.alm.tracker.model.parameters.IParametersAndDefinitionsManager
+      * added interface com.polarion.alm.tracker.model.parameters.IParametersAndDefinitionsStruct
+      * added interface com.polarion.alm.tracker.model.parameters.IParametersManager
+      * added interface com.polarion.alm.tracker.model.parameters.IParameterStruct<T>
+      * added field com.polarion.alm.tracker.model.IPlan.KEY_USE_REPORT_FROM_TEMPLATE
+      * added method com.polarion.alm.tracker.model.IPlan.isUseReportFromTemplate()
+      * added method com.polarion.alm.tracker.model.IPlan.setUseReportFromTemplate(boolean)
+      * added method com.polarion.alm.tracker.model.IPlan.isRichPagePlan()
+      * added interface com.polarion.alm.tracker.model.ITestCase
+      * added field com.polarion.alm.tracker.model.ITestRecord.KEY_TEST_PARAMETERS
+      * added field com.polarion.alm.tracker.model.ITestRecord.KEY_ITERATION
+      * added method com.polarion.alm.tracker.model.ITestRecord.getTestParameters()
+      * added method com.polarion.alm.tracker.model.ITestRecord.getTestParametersManager()
+      * added method com.polarion.alm.tracker.model.ITestRecord.isPaused()
+      * added method com.polarion.alm.tracker.model.ITestRecord.isPlanned()
+      * added method com.polarion.alm.tracker.model.ITestRecord.isExecuted()
+      * added method com.polarion.alm.tracker.model.ITestRecord.getIteration()
+      * added method com.polarion.alm.tracker.model.ITestRecord.isIteration()
+      * added field com.polarion.alm.tracker.model.ITestRun.KEY_TEST_PARAMETERS
+      * added method com.polarion.alm.tracker.model.ITestRun.getAllRecordsForTestCase(String)
+      * added method com.polarion.alm.tracker.model.ITestRun.getTestParameters()
+      * added method com.polarion.alm.tracker.model.ITestRun.getTestParametersManager()
+      * added method com.polarion.alm.tracker.model.ITrackerProjectPermissions.readDocument(String)
+      * added method com.polarion.alm.tracker.model.ITrackerProjectPermissions.createDocument(String)
+      * added method com.polarion.alm.tracker.model.ITrackerProjectPermissions.createWikiPage(String)
+      * added method com.polarion.alm.tracker.model.ITrackerProjectPermissions.createRichPage(String)
+      * added method com.polarion.alm.tracker.model.IWorkItem.getTestCase()
+      * added interface com.polarion.alm.tracker.IParametersLibrary
+      * added interface com.polarion.alm.tracker.IScopeSelector<T>
+      * added method com.polarion.alm.tracker.ITestManagementPolicy.canUseTestParametersInTestSteps()
+      * added method com.polarion.alm.tracker.ITestManagementPolicy.canUseTestParametersInTestRuns()
+      * added method com.polarion.alm.tracker.ITestManagementService.testParametersLibrary()
+      * added method com.polarion.platform.persistence.IQueryHelper.escapeQueryForSQL(String)
+  
+  Polarion Rendering API
+
+      * added method com.polarion.alm.shared.api.model.eo.EnumerationReference.isObjectBased()
+      * added method com.polarion.alm.shared.api.model.eo.Enumerations.isDefined(String)
+      * added method com.polarion.alm.shared.api.model.eo.EnumOption.isPhantom()
+      * added method com.polarion.alm.shared.api.model.eo.EnumOptionFields.columnWidth()
+      * added value com.polarion.alm.shared.api.model.eo.EnumOptionFieldsEnum.columnWidth
+      * added method com.polarion.alm.shared.api.model.eo.EnumOptionRenderer.withColor(boolean)
+      * added method com.polarion.alm.shared.api.model.eo.EnumOptionRenderer.withColor()
+      * added method com.polarion.alm.shared.api.model.fields.BooleanField.getIfCan()
+      * added method com.polarion.alm.shared.api.model.fields.FloatField.render()
+      * added interface com.polarion.alm.shared.api.model.fields.FloatFieldRenderer
+      * added interface com.polarion.alm.shared.api.model.fields.Text
+      * added interface com.polarion.alm.shared.api.model.parameter.Parameter<T>
+      * added interface com.polarion.alm.shared.api.model.parameter.ParameterDefinition
+      * added interface com.polarion.alm.shared.api.model.parameter.ParametersAndDefinitionsField
+      * added interface com.polarion.alm.shared.api.model.parameter.ParametersField
+      * added interface com.polarion.alm.shared.api.model.parameter.ParametersLibrary
+      * added method com.polarion.alm.shared.api.model.plan.PlanFields.useReportFromTemplate()
+      * added value com.polarion.alm.shared.api.model.plan.PlanFieldsEnum.useReportFromTemplate
+      * added method com.polarion.alm.shared.api.model.plan.PlanUtils.isRichPagePlan()
+      * added method com.polarion.alm.shared.api.model.plan.PlanUtils.getResolvableItems()
+      * added method com.polarion.alm.shared.api.model.plan.UpdatablePlanFields.useReportFromTemplate()
+      * added method com.polarion.alm.shared.api.model.project.Project.label()
+      * added method com.polarion.alm.shared.api.model.project.ProjectFields.projectGroup()
+      * added method com.polarion.alm.shared.api.model.project.ProjectFields.lead()
+      * added method com.polarion.alm.shared.api.model.project.ProjectFields.active()
+      * added value com.polarion.alm.shared.api.model.project.ProjectFieldsEnum.projectGroup
+      * added value com.polarion.alm.shared.api.model.project.ProjectFieldsEnum.lead
+      * added value com.polarion.alm.shared.api.model.project.ProjectFieldsEnum.active
+      * added method com.polarion.alm.shared.api.model.project.UpdatableProjectFields.lead()
+      * added method com.polarion.alm.shared.api.model.project.UpdatableProjectFields.active()
+      * added value com.polarion.alm.shared.api.model.rp.parameter.impl.RichPageParameterEnum.TimeAxisScale
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.BooleanParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.BooleanParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.DataSetParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.DataSetParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.DateParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.DateParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.EnumParameter.SetterBase
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.EnumParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.EnumParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.FieldsParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.IntegerParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.IntegerParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.IntervalFieldParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.IntervalFieldParameter.set()
+      * added method com.polarion.alm.shared.api.model.rp.parameter.MultiParameter.clear()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.ObjectSelectorParameter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.ParameterFactory.objectSelector(String)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.ParameterFactory.timeAxisScale(String)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.RichPageParameter.Builder.dependencySource(boolean)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.RichPageParameter.Builder.dependencyTarget(boolean)
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.ScriptParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.ScriptParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.SeparateByParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SeparateByParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.SortingParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.SortingParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.StringParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.StringParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.TimeAxisParameter.Setter
+      * added method com.polarion.alm.shared.api.model.rp.parameter.TimeAxisParameter.Builder.scale(ScaleType)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.TimeAxisParameter.Builder.baseDate(int)
+      * added method com.polarion.alm.shared.api.model.rp.parameter.TimeAxisParameter.set()
+      * added interface com.polarion.alm.shared.api.model.rp.parameter.TimeAxisScaleParameter
+      * added interface com.polarion.alm.shared.api.model.rp.widget.RichPageParametersContext
+      * added field com.polarion.alm.shared.api.model.rp.widget.RichPageWidget.ATTRIBUTE_ACTION_ID
+      * added field com.polarion.alm.shared.api.model.rp.widget.RichPageWidget.ATTRIBUTE_CONFIRM_TITLE
+      * added field com.polarion.alm.shared.api.model.rp.widget.RichPageWidget.ATTRIBUTE_CONFIRM_TEXT
+      * added field com.polarion.alm.shared.api.model.rp.widget.RichPageWidget.ATTRIBUTE_CONFIRM_BUTTON
+      * added field com.polarion.alm.shared.api.model.rp.widget.RichPageWidget.ATTRIBUTE_CONFIRM_KEY
+      * added method com.polarion.alm.shared.api.model.rp.widget.RichPageWidget.processParameterDependencies(RichPageWidgetDependenciesContext)
+      * added method com.polarion.alm.shared.api.model.rp.widget.RichPageWidget.executeAction(RichPageWidgetActionContext)
+      * added interface com.polarion.alm.shared.api.model.rp.widget.RichPageWidgetActionContext
+      * added interface com.polarion.alm.shared.api.model.rp.widget.RichPageWidgetCommonContext
+      * added interface com.polarion.alm.shared.api.model.rp.widget.RichPageWidgetDependenciesContext
+      * added interface com.polarion.alm.shared.api.model.tr.record.TestRecord
+      * added interface com.polarion.alm.shared.api.model.tr.record.TestRecordFields
+      * added enum com.polarion.alm.shared.api.model.tr.record.TestRecordFieldsEnum
+      * added interface com.polarion.alm.shared.api.model.tr.record.TestRecordRenderer
+      * added method com.polarion.alm.shared.api.model.tr.record.TestRecordsField.byResultId(String)
+      * added method com.polarion.alm.shared.api.model.tr.record.TestRecordsField.byTestCase(String)
+      * added method com.polarion.alm.shared.api.model.tr.record.TestRecordsField.byTestCaseIteration(String, int)
+      * added interface com.polarion.alm.shared.api.model.tr.record.TestRecordStep
+      * added interface com.polarion.alm.shared.api.model.tr.record.TestRecordSteps
+      * added interface com.polarion.alm.shared.api.model.tr.record.TestStepResult
+      * added interface com.polarion.alm.shared.api.model.tr.record.TestStepResultFields
+      * added enum com.polarion.alm.shared.api.model.tr.record.TestStepResultFieldsEnum
+      * added interface com.polarion.alm.shared.api.model.tr.record.TestStepResultsField
+      * added interface com.polarion.alm.shared.api.model.tr.TestRecordsRenderer
+      * added method com.polarion.alm.shared.api.model.tr.TestRun.recordForExecution(int)
+      * added method com.polarion.alm.shared.api.model.tr.TestRun.testCasesWithMissingParameters()
+      * added method com.polarion.alm.shared.api.model.tr.TestRunFields.testParameters()
+      * added value com.polarion.alm.shared.api.model.tr.TestRunFieldsEnum.testParameters
+      * added method com.polarion.alm.shared.api.model.tr.TestRuns.renderTestRecords()
+      * added method com.polarion.alm.shared.api.model.tr.TestRuns.canAddParameters(String)
+      * added method com.polarion.alm.shared.api.model.tr.UpdatableTestRunFields.selectTestCasesBy()
+      * added interface com.polarion.alm.shared.api.model.ts.TestStep
+      * added interface com.polarion.alm.shared.api.model.ts.TestSteps
+      * added method com.polarion.alm.shared.api.model.ts.TestStepsField.render()
+      * added method com.polarion.alm.shared.api.model.user.UserFields.email()
+      * added value com.polarion.alm.shared.api.model.user.UserFieldsEnum.email
+      * added interface com.polarion.alm.shared.api.model.wi.testcase.TestCase
+      * added method com.polarion.alm.shared.api.model.wi.WorkItem.testCase()
+      * added method com.polarion.alm.shared.api.model.wiki.WikiPageFields.spaceId()
+      * added value com.polarion.alm.shared.api.model.wiki.WikiPageFieldsEnum.spaceId
+      * added method com.polarion.alm.shared.api.model.ModelObject.label()
+      * added method com.polarion.alm.shared.api.model.ModelObjectReference.projectId()
+      * added field com.polarion.alm.shared.api.model.ModelPermissions.DENIED
+      * added interface com.polarion.alm.shared.api.model.RendererOfIterable
+      * added method com.polarion.alm.shared.api.utils.html.HtmlAttributesBuilder.readOnly()
+      * added method com.polarion.alm.shared.api.utils.html.HtmlAttributesBuilder.booleanAttribute(String)
+      * added method com.polarion.alm.shared.api.utils.html.HtmlDecoratedLabelBuilder.iconBuilders()
+      * added method com.polarion.alm.shared.api.utils.html.HtmlTagSelector.b()
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.GenericHcObject.addCustomStringAttribute(String, String)
+      * added interface com.polarion.alm.shared.api.utils.charts.highcharts.HcMarker
+      * added interface com.polarion.alm.shared.api.utils.charts.highcharts.HcMarkerSymbol
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HcSerie.fillColor(String)
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HcSerie.fillOpacity(Number)
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HcSerie.negativeColor(String)
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HcSerie.dashType()
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HcSerie.marker()
+      * added interface com.polarion.alm.shared.api.utils.charts.highcharts.HcSerieDashType
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HcSeriesDataLabels.format(String)
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HcTooltip.formatter(String)
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HcTypeSelector.column()
+      * added method com.polarion.alm.shared.api.utils.charts.highcharts.HighchartBuilder.useRelativeWidth(Double)
+      
+  Polarion Web Services
+  
+      * added method com.polarion.alm.ws.client.types.planning.Plan.getUseReportFromTemplate()
+      * added method com.polarion.alm.ws.client.types.planning.Plan.setUseReportFromTemplate(Boolean)
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRecord.getIteration()
+      * added method com.polarion.alm.ws.client.types.testmanagement.TestRecord.setIteration(Integer)
+  
+Version 3.9.1
+-------------
+
+  Polarion Java API
+
+    * added method com.polarion.alm.tracker.model.signatures.IDocumentWorkflowSignaturesManager.getDocumentSigners()
+    * added field com.polarion.alm.tracker.model.IModule.KEY_HEADING_SIDEBAR_FIELDS
+    * added method com.polarion.alm.tracker.model.IModule.getHeadingSidebarFields()
+    * added field com.polarion.alm.tracker.model.IPlan.KEY_HOMEPAGECONTENT
+    * added method com.polarion.alm.tracker.model.IPlan.getHomePageContent()
+    * added method com.polarion.alm.tracker.model.IPlan.setHomePageContent(Text)
+    * added field com.polarion.alm.tracker.model.ITestRun.KEY_ID_PREFIX
+    * added method com.polarion.alm.tracker.model.ITestRun.setIdPrefix(String)
+    * added method com.polarion.alm.tracker.model.ITestRun.getIdPrefix()
+    * added method com.polarion.alm.tracker.variantmanagement.IVariantManagementConfiguration.isSortByOutlineNumber()
+    * added field com.polarion.alm.tracker.IModulePageLayouter.PROPERTY_SIDEBAR_WORK_ITEM_FIELDS
+    * added method com.polarion.alm.tracker.ITestManagementService.createTestRun(String, String, String, boolean)
+    * added method com.polarion.alm.tracker.TestsConfiguration.isTestRunsGeneratedIdEnabled()
+    * added method com.polarion.alm.tracker.TestsConfiguration.setTestRunsGeneratedIdEnabled(boolean)
+    * added method com.polarion.platform.persistence.spi.AbstractObjectEnumFactory.createPhantomOption(String, String)
+    * added method com.polarion.platform.persistence.spi.AbstractObjectEnumFactory.extractValueFromEnumId(String)
+    * added method com.polarion.platform.persistence.spi.AbstractObjectEnumFactory.getExtendedProperties(IPObject, String, String)
+    * added method com.polarion.platform.persistence.spi.AbstractObjectEnumFactory.isNullOrUnresolvable(IPObject)
+    * added method com.polarion.subterra.base.data.model.ICodeType.transformForSave(Text, IContextId)
+    * added method com.polarion.subterra.base.data.model.ICodeType.transformForEditor(Text, String, IContextId)        
+
+  Polarion Rendering API
+
+    * added method com.polarion.alm.shared.api.model.category.CategoryReference.CategoryReference(String, String)
+    * added method com.polarion.alm.shared.api.model.category.CategoryReference.fromRelativePath(String, String)
+    * added constructor com.polarion.alm.shared.api.model.category.CategoryReference.toRelativePath(String)
+    * added interface com.polarion.alm.shared.api.model.comment.CommentPermissions
+    * added method com.polarion.alm.shared.api.model.document.Document.can()
+    * added interface com.polarion.alm.shared.api.model.document.DocumentPermissions
+    * added constructor com.polarion.alm.shared.api.model.document.DocumentReference.DocumentReference(SpaceReference, String)
+    * added method com.polarion.alm.shared.api.model.document.DocumentReference.fromSpaceRelativePath(SpaceReference, String)
+    * added method com.polarion.alm.shared.api.model.document.DocumentReference.fromRelativePath(String, String)
+    * added method com.polarion.alm.shared.api.model.document.DocumentReference.toSpaceRelativePath(SpaceReference)
+    * added method com.polarion.alm.shared.api.model.document.DocumentReference.toRelativePath(String)
+    * added method com.polarion.alm.shared.api.model.document.Documents.can()
+    * added interface com.polarion.alm.shared.api.model.document.DocumentsInSpacePermissions
+    * added interface com.polarion.alm.shared.api.model.document.DocumentsPermissions
+    * added method com.polarion.alm.shared.api.model.eo.EnumOptionField.optionId()
+    * added method com.polarion.alm.shared.api.model.eo.EnumOptionFields.parent()
+    * added value com.polarion.alm.shared.api.model.eo.EnumOptionFieldsEnum.parent
+    * added method com.polarion.alm.shared.api.model.plan.PlanFields.homePageContent()
+    * added value com.polarion.alm.shared.api.model.plan.PlanFieldsEnum.homePageContent
+    * added constructor com.polarion.alm.shared.api.model.plan.PlanReference.PlanReference(String, String)
+    * added method com.polarion.alm.shared.api.model.plan.PlanReference.fromRelativePath(String, String)
+    * added method com.polarion.alm.shared.api.model.plan.PlanReference.toRelativePath(String)
+    * added method com.polarion.alm.shared.api.model.plan.Plans.can()
+    * added interface com.polarion.alm.shared.api.model.plan.PlansInScopePermissions
+    * added interface com.polarion.alm.shared.api.model.plan.PlansPermissions
+    * added method com.polarion.alm.shared.api.model.plan.PlanUtils.getPrioritizationLink()
+    * added method com.polarion.alm.shared.api.model.plan.PlanUtils.getOpenInTableLink()
+    * added method com.polarion.alm.shared.api.model.plan.UpdatablePlanFields.homePageContent()
+    * added constructor com.polarion.alm.shared.api.model.project.ProjectReference.ProjectReference(String)
+    * added interface com.polarion.alm.shared.api.model.rp.parameter.CompositeParameter.BuilderBase<P, B>
+    * added method com.polarion.alm.shared.api.model.rp.parameter.EnumParameter.Builder.values(String...)
+    * added interface com.polarion.alm.shared.api.model.rp.widget.RichPageContext
+    * added interface com.polarion.alm.shared.api.model.rp.widget.RichPageRenderingContext
+    * added method com.polarion.alm.shared.api.model.rp.widget.RichPageWidget.getTags(SharedContext)
+    * added method com.polarion.alm.shared.api.model.rp.widget.RichPageWidgetRenderer.object(ModelObject)
+    * added method com.polarion.alm.shared.api.model.rp.widget.RichPageWidgetRenderer.pageContext(Map<Object, Object>)
+    * added method com.polarion.alm.shared.api.model.rp.widget.RichPageWidgetRenderingContext.pageContext()
+    * added field com.polarion.alm.shared.api.model.rp.RichPageReference.HOME
+    * added constructor com.polarion.alm.shared.api.model.rp.RichPageReference.RichPageReference(SpaceReference, String)
+    * added method com.polarion.alm.shared.api.model.rp.RichPageReference.fromSpaceRelativePath(SpaceReference, String)
+    * added method com.polarion.alm.shared.api.model.rp.RichPageReference.fromRelativePath(String, String)
+    * added method com.polarion.alm.shared.api.model.rp.RichPageReference.toSpaceRelativePath(SpaceReference)
+    * added method com.polarion.alm.shared.api.model.rp.RichPageReference.toRelativePath(String)
+    * added method com.polarion.alm.shared.api.model.rp.RichPages.can()
+    * added interface com.polarion.alm.shared.api.model.rp.RichPagesPermissions
+    * added method com.polarion.alm.shared.api.model.space.HasNameAndSpaceReference.toSpaceRelativePath(SpaceReference)
+    * added method com.polarion.alm.shared.api.model.space.SpaceSelector.reference(SpaceReference)
+    * added constructor com.polarion.alm.shared.api.model.tp.TimePointReference.TimePointReference(Scope, String)
+    * added method com.polarion.alm.shared.api.model.tp.TimePointReference.fromRelativePath(String, String)
+    * added method com.polarion.alm.shared.api.model.tp.TimePointReference.toRelativePath(String)
+    * added interface com.polarion.alm.shared.api.model.tr.TestRunBuilder<T>
+    * added method com.polarion.alm.shared.api.model.tr.TestRunFields.idPrefix()
+    * added value com.polarion.alm.shared.api.model.tr.TestRunFieldsEnum.idPrefix
+    * added constructor com.polarion.alm.shared.api.model.tr.TestRunReference.TestRunReference(String, String)
+    * added method com.polarion.alm.shared.api.model.tr.TestRunReference.fromRelativePath(String, String)
+    * added method com.polarion.alm.shared.api.model.tr.TestRunReference.toRelativePath(String)
+    * added method com.polarion.alm.shared.api.model.tr.UpdatableTestRunFields.idPrefix()
+    * added interface com.polarion.alm.shared.api.model.user.AvatarField
+    * added method com.polarion.alm.shared.api.model.user.UpdatableUserFields.initials()
+    * added method com.polarion.alm.shared.api.model.user.UserFields.initials()
+    * added method com.polarion.alm.shared.api.model.user.UserFields.avatarFileName()
+    * added value com.polarion.alm.shared.api.model.user.UserFieldsEnum.initials
+    * added value com.polarion.alm.shared.api.model.user.UserFieldsEnum.avatarFileName
+    * added constructor com.polarion.alm.shared.api.model.user.UserReference.UserReference(String)
+    * added method com.polarion.alm.shared.api.model.wi.WorkItem.can()
+    * added interface com.polarion.alm.shared.api.model.wi.WorkItemPermissions
+    * added method com.polarion.alm.shared.api.model.wi.WorkItemReference.fromRelativePath(String, String)
+    * added method com.polarion.alm.shared.api.model.wi.WorkItemReference.WorkItemReference(String, String)
+    * added method com.polarion.alm.shared.api.model.wi.WorkItemReference.toRelativePath(String)
+    * added method com.polarion.alm.shared.api.model.wi.WorkItemRenderer.wrapTitle(boolean)
+    * added method com.polarion.alm.shared.api.model.wi.WorkItemRenderer.wrapTitle()
+    * added method com.polarion.alm.shared.api.model.wi.WorkItemRenderer.withTruncatedTitle(int)
+    * added method com.polarion.alm.shared.api.model.wi.WorkItems.can()
+    * added interface com.polarion.alm.shared.api.model.wi.WorkItemsInScopePermissions
+    * added interface com.polarion.alm.shared.api.model.wi.WorkItemsPermissions
+    * added method com.polarion.alm.shared.api.model.wiki.WikiPageReference.fromSpaceRelativePath(SpaceReference, String)
+    * added method com.polarion.alm.shared.api.model.wiki.WikiPageReference.fromRelativePath(String, String)
+    * added method com.polarion.alm.shared.api.model.wiki.WikiPageReference.WikiPageReference(SpaceReference, String)
+    * added method com.polarion.alm.shared.api.model.wiki.WikiPageReference.toSpaceRelativePath(SpaceReference)
+    * added method com.polarion.alm.shared.api.model.wiki.WikiPageReference.toRelativePath(String)
+    * added interface com.polarion.alm.shared.api.model.workflow.WorkflowObjectPermissions
+    * added interface com.polarion.alm.shared.api.model.HasRelativePath
+    * added method com.polarion.alm.shared.api.model.ModelObject.can()
+    * added interface com.polarion.alm.shared.api.model.ModelObjectPermissions
+    * added method com.polarion.alm.shared.api.model.PrototypeSelector.byString(String)
+    * added method com.polarion.alm.shared.api.model.PrototypeSelectorPlural.byString(String)
+    * added method com.polarion.alm.shared.api.utils.charts.highcharts.HighchartBuilder.render(Integer, Integer)
+    * added method com.polarion.alm.shared.api.utils.charts.highcharts.HighchartBuilder.context()
+    * added method com.polarion.alm.shared.api.utils.html.HtmlBuilderTarget.defaultHrefTarget()
+    * added method com.polarion.alm.shared.api.utils.links.PlanLinkBuilder.selection(String)
+    * added method com.polarion.alm.shared.api.utils.velocity.ObjectFactory.newStringBuilder()
+
+  Polarion Web Services
+  
+    * added method com.polarion.alm.ws.client.types.planning.Plan.getHomePageContent()
+    * added method com.polarion.alm.ws.client.types.planning.Plan.setHomePageContent(Text)
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestsConfiguration.isTestRunsGeneratedIdEnabled()
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestsConfiguration.setTestRunsGeneratedIdEnabled(boolean)
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getHeadingSidebarFields()
+    * added method com.polarion.alm.ws.client.types.tracker.Module.setHeadingSidebarFields(String)
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.getIdPrefix()
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.setIdPrefix(String)
+
+Version 3.9.0
+-------------
+
+  Polarion Java API
+
+    * added method com.polarion.alm.builder.model.IBuildStatus.BuildStatusType.getLabel()
+    * added interface com.polarion.alm.tracker.model.signatures.IDocumentWorkflowSignature
+    * added interface com.polarion.alm.tracker.model.signatures.IDocumentWorkflowSignaturesManager
+    * added interface com.polarion.alm.tracker.model.signatures.ISignature
+    * added interface com.polarion.alm.tracker.model.signatures.ISignatureData
+    * added interface com.polarion.alm.tracker.model.signatures.ISignatureVerdictOpt
+    * added interface com.polarion.alm.tracker.model.signatures.IWorkflowSignature
+    * added field com.polarion.alm.tracker.model.ICommentBase.KEY_SIGNATURE_DATA 
+    * added method com.polarion.alm.tracker.model.ICommentBase.getSignatureData() 
+    * added method com.polarion.alm.tracker.model.ICommentBase.setSignatureData(IWorkflowSignature, String)
+    * added field com.polarion.alm.tracker.model.ICommentTagOpt.OPT_SIGNATURES 
+    * added interface com.polarion.alm.tracker.model.IFeatureLinkOpt
+    * added interface com.polarion.alm.tracker.model.IFeatureSelection
+    * added interface com.polarion.alm.tracker.model.IFeatureSelectionItem
+    * added field com.polarion.alm.tracker.model.IModule.KEY_VARIANT
+    * added method com.polarion.alm.tracker.model.IModule.setVariant(IWorkItem) 
+    * added method com.polarion.alm.tracker.model.IModule.getVariant() 
+    * added method com.polarion.alm.tracker.model.IModule.getWorkflowSignaturesManager() 
+    * added method com.polarion.alm.tracker.model.IModule.getWorkflowSignatures()
+    * added field com.polarion.alm.tracker.model.IPlan.KEY_PROJECT_SPAN 
+    * added method com.polarion.alm.tracker.model.IPlan.getProjectSpan() 
+    * added interface com.polarion.alm.tracker.model.IRichPage
+    * added interface com.polarion.alm.tracker.model.IRichPageAttachment
+    * added method com.polarion.alm.tracker.model.ITrackerProject.getSignatureStateEnum()
+    * added method com.polarion.alm.tracker.model.ITrackerProject.getSignatureVerdictEnum()
+    * added method com.polarion.alm.tracker.model.ITrackerProject.getDocumentSigners()
+    * added interface com.polarion.alm.tracker.model.IWithAttachments<T>
+    * added method com.polarion.alm.tracker.model.IWorkflowAction.isSignatureRequired()
+    * added method com.polarion.alm.tracker.model.IWorkflowAction.isAddingSignature()
+    * added field com.polarion.alm.tracker.model.IWorkflowObject.KEY_WORKFLOW_SIGNATURES
+    * added method com.polarion.alm.tracker.model.IWorkflowObject.can()
+    * added interface com.polarion.alm.tracker.model.IWorkflowObjectPermissions
+    * added interface com.polarion.alm.tracker.spi.variantmanagement.IVariantManagementProvider
+    * added interface com.polarion.alm.tracker.variantmanagement.IVariantManagementConfiguration
+    * added interface com.polarion.alm.tracker.variantmanagement.IVariantManagementService
+    * added method com.polarion.alm.tracker.workflow.config.IAction.getNotRecognizedSignaturePolicyMessage()
+    * added method com.polarion.alm.tracker.workflow.config.IAction.getSignaturesConfiguration()
+    * added interface com.polarion.alm.tracker.workflow.config.IActionSignaturesConfiguration
+    * added method com.polarion.alm.tracker.workflow.config.IWorkflowConfig.getTransitionAction(String, String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.isSignaturePolicyDefined(String, String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.getSignaturePolicies(String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.isNotRecognizedSignaturePolicy(String, String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.addSignaturePolicies(Map<String, ContributionHolder>)
+    * added interface com.polarion.alm.tracker.workflow.ISignaturePolicy<T>
+    * added interface com.polarion.alm.tracker.workflow.IWorkflowCondition<T>
+    * added method com.polarion.alm.tracker.workflow.IWorkflowManager.calculateSignatureState(IWorkflowObject, String, List<ISignature>)
+    * added method com.polarion.alm.tracker.workflow.IWorkflowManager.getSignatureStateMessage(IWorkflowObject, String, ISignatureStateOpt)
+    * added method com.polarion.alm.tracker.IModuleBrancher.copyWorkflowStatusAndSignatures(boolean)
+    * added interface com.polarion.alm.tracker.IRichPageManager
+    * added interface com.polarion.alm.tracker.IRichPageSelector<T>
+    * added interface com.polarion.alm.tracker.ISpaceSelector<T>
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUseRichPages()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canModifyRichPages()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canModifyRichPageWidgets()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUseVariantManagement()
+    * added method com.polarion.alm.tracker.ITrackerService.getRichPageManager() 
+    * added method com.polarion.platform.security.ISecurityService.hasAddonLicense(String)
+    * added method com.polarion.platform.startup.StartupMonitor.logRawData(int, String)
+    * added method com.polarion.platform.persistence.model.IPObject.getFieldLabel(String) 
+    * added interface com.polarion.platform.persistence.spi.ModelTypedList.ValueWrapper<T>
+    * added method com.polarion.platform.persistence.spi.ModelTypedList.setValueWrapper(ValueWrapper)
+    * added method com.polarion.platform.persistence.IDataService.getConstantEnumerationIds()
+
+  Polarion Rendering API
+    
+    * introduced (package com.polarion.alm.shared.api and subpackages) 
+
+  Polarion Web Services
+
+    * added method com.polarion.alm.ws.client.planning.PlanningWebService.addPlanAllowedType(String, EnumOptionId)
+    * added method com.polarion.alm.ws.client.planning.PlanningWebService.addProjectToPlanProjectSpan(String, String)
+    * added method com.polarion.alm.ws.client.planning.PlanningWebService.removePlanAllowedType(String, EnumOptionId)
+    * added method com.polarion.alm.ws.client.planning.PlanningWebService.removeProjectFromPlanProjectSpan(String, String)
+    * added method com.polarion.alm.ws.client.types.planning.Plan.getProjectSpanURIs()
+    * added method com.polarion.alm.ws.client.types.planning.Plan.setProjectSpanURIs(String[])
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getVariantURI()
+    * added method com.polarion.alm.ws.client.types.tracker.Module.setVariantURI(String)
+    * deleted class com.polarion.alm.ws.client.types.tracker.CustomValue
+
+Version 3.8.3
+-------------
+
+  Polarion Java API
+
+    * added class com.polarion.alm.projects.model.IFolder
+    * added class com.polarion.alm.projects.model.IFolderManager
+    * added method com.polarion.alm.wiki.model.IWikiSpace.getTitleOrName()
+    * added method com.polarion.alm.wiki.model.IWikiSpace.getTitle()
+    * added class com.polarion.platform.persistence.ICustomFieldType
+    * added method com.polarion.platform.persistence.ICustomFieldsService.getCustomFieldTypesFor(String)
+    * added method com.polarion.platform.persistence.spi.AbstractObjectEnumFactory.appendHome(String)
+    * added method com.polarion.platform.persistence.spi.Structure.getSecurityReferee()
+    * added interface com.polarion.subterra.base.data.model.ICodeType
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.DOCUMENT_STATUS_CHANGED
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.STATUS_FROM_PARAMETER
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.STATUS_TO_PARAMETER
+    * added method com.polarion.psvn.core.notifications.spi.AbstractNotificationCreator.matchesStatusFilter(IEnumOption, IEnumOption, Element)
+    * added method com.polarion.alm.tracker.IModulePageLayouter.getContentRenderedFieldIds(IRenderingLayout)
+    * added method com.polarion.alm.tracker.ITestManagementPolicy.canExecuteTestRuns()
+    * added method com.polarion.alm.tracker.ITrackerService.getFolderManager()
+    * added method com.polarion.alm.tracker.activity.Activity.cloneWithInfo(Text)
+    * added method com.polarion.alm.tracker.activity.Activity.getChangedFields()
+    * added class com.polarion.alm.tracker.model.IFolderItem
+    * interface com.polarion.alm.tracker.model.IModule extends com.polarion.alm.tracker.model.IFolderItem
+    * interface com.polarion.alm.tracker.model.IWikiPage extends com.polarion.alm.tracker.model.IFolderItem
+    * added method com.polarion.alm.tracker.model.IModule.IStructureNode.getLayout()
+    * added method com.polarion.alm.tracker.model.IModule.IStructureNode.updateWorkItemLayout(int)
+    * added method com.polarion.alm.tracker.model.IModule.getExternalWorkItems()
+    * added method com.polarion.alm.tracker.model.IModule.addExternalWorkItem(IWorkItem)
+    * added method com.polarion.alm.tracker.model.IModule.overwriteExternalWorkItem(IWorkItem)
+    * added method com.polarion.alm.tracker.model.IModule.freezeExternalWorkItem(IWorkItem, String)
+    * added method com.polarion.alm.tracker.model.IModule.unfreezeExternalWorkItem(IWorkItem)
+    * added field com.polarion.alm.tracker.model.ITestRecord.STRUCTURE_ID
+    * added method com.polarion.alm.tracker.model.ITrackerProject.getFolders()
+    * added method com.polarion.alm.tracker.model.IWorkflowObject.getProject()
+    * added interface com.polarion.alm.tracker.spi.variantsmanagement.IVariantProblem
+    * added interface com.polarion.alm.tracker.spi.variantsmanagement.IVariantManagementProvider
+    * added interface com.polarion.alm.tracker.spi.variantsmanagement.IVariantDescriptionModel
+    * added class com.polarion.alm.tracker.spi.variantsmanagement.DefaultVariantProblem
+    * added class com.polarion.alm.tracker.spi.variantsmanagement.DefaultVariantDescriptionModel
+    * added class com.polarion.alm.tracker.spi.variantsmanagement.AbstractVariantManagementProvider
+    * added method com.polarion.alm.tracker.workflow.IWorkflowManager.getWorkflowConfig(String, String, IContextId)
+    * added method com.polarion.alm.tracker.workflow.config.IContribution.getLabel()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.getCannotUseReqIfReason(IContextId, boolean)
+
+  Polarion Web Services
+  
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getFolder(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getFolderForURI(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getFolders(String)
+    * added class com.polarion.alm.ws.client.types.tracker.Folder
+  
+Version 3.8.2
+-------------
+
+  Polarion Java API
+  
+    * added method com.polarion.alm.projects.model.IUser.getLabel()
+    * added method com.polarion.alm.wiki.model.IWikiPage.getTitle()
+    * added method com.polarion.alm.wiki.model.IWikiPage.getTitleOrName()
+    * generified interface com.polarion.platform.persistence.IEnumeration<T>
+    * generified interface com.polarion.platform.persistence.model.IPObjectList<T>
+    * added field com.polarion.platform.persistence.IQueryHelper.FIELD_SQL
+    * added interface com.polarion.platform.persistence.model.IHasValues
+    * interface com.polarion.platform.persistence.model.IPObject extends com.polarion.platform.persistence.model.IHasValues
+    * interface com.polarion.platform.persistence.model.IStructure extends com.polarion.platform.persistence.model.IHasValues
+    * added method com.polarion.platform.persistence.model.IPObject.can()
+    * added interface com.polarion.platform.persistence.model.IPObjectPermissions
+    * added method com.polarion.platform.persistence.spi.PObject.objectsCreatedInTx
+    * added method com.polarion.platform.persistence.spi.PObject.disposeStructures()
+    * added method com.polarion.platform.persistence.spi.PObject.can()
+    * generified method com.polarion.platform.persistence.spi.PObjectTypedList.getUrisList()
+    * added method com.polarion.platform.security.Permission.denied(String, IPermission, IContextId)
+    * added method com.polarion.platform.security.PermissionDeniedException.PermissionDeniedException(String, IPermission, IContextId, IPermission)
+    * added method com.polarion.alm.tracker.IModuleManager.createModule(IProject, ILocation, String, String, List<ITypeOpt>, ILinkRoleOpt, boolean)
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUserRif11a()
+    * added method com.polarion.alm.tracker.ITrackerService.getAssignableUsers(IContextId)
+    * added method com.polarion.alm.tracker.ITrackerService.getApproverUsers(IContextId)
+    * added method com.polarion.alm.tracker.model.ICommentBase.can()
+    * added interface com.polarion.alm.tracker.model.IDocumentPermissions
+    * added field com.polarion.alm.tracker.model.IModule.KEY_TITLE
+    * added field com.polarion.alm.tracker.model.IModule.RENDERING_TARGET_SAVE
+    * added method com.polarion.alm.tracker.model.IModule.getTitle()
+    * added method com.polarion.alm.tracker.model.IModule.setTitle(String)
+    * added method com.polarion.alm.tracker.model.IModule.updateTitleHeading(String)
+    * added method com.polarion.alm.tracker.model.IModule.getTitleOrName()
+    * added method com.polarion.alm.tracker.model.IModule.getTitleWithSpace()
+    * added method com.polarion.alm.tracker.model.IModule.getOutlineNumberingPrefix()
+    * added method com.polarion.alm.tracker.model.IModule.can()
+    * added method com.polarion.alm.tracker.model.ITrackerProject.can()
+    * added interface com.polarion.alm.tracker.model.ITrackerProjectPermissions
+    * added field com.polarion.alm.tracker.model.IWikiPage.KEY_TITLE
+    * added method com.polarion.alm.tracker.model.IWikiPage.getTitle()
+    * added method com.polarion.alm.tracker.model.IWikiPage.getTitleOrName()
+    * added method com.polarion.alm.tracker.model.IWikiPage.getTitleWithSpace()
+    * added method com.polarion.alm.tracker.model.IWorkItem.can()
+    * added interface com.polarion.alm.tracker.model.IWorkItemPermissions
+    * added method com.polarion.alm.tracker.workflow.ICallContext.getTargetStatusId()
+    * added method com.polarion.alm.tracker.workflow.IWorkflowManager.getWorkflowConfig(IWorkflowObject)
+    * added method com.polarion.alm.tracker.ITestManagementPolicy.canUseAdministration()
+
+  Polarion Web Services
+
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.createDocument(String, String, String, String, EnumOptionId[], EnumOptionId, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.reuseDocument(String, String, String, String, String, boolean, EnumOptionId, String[])
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.updateTitleHeadingInDocument(String, String)
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getTitle()
+    * added method com.polarion.alm.ws.client.types.tracker.Module.setTitle(String)
+    * added method com.polarion.alm.ws.client.types.tracker.WikiPage.getTitle()
+    * added method com.polarion.alm.ws.client.types.tracker.WikiPage.setTitle(String)
+
+Version 3.8.1
+-------------
+
+  Polarion Java API
+
+    * added interface com.polarion.platform.persistence.IConfigurableEnumeration
+    * generified method com.polarion.platform.persistence.ICustomFieldsService.getValidCustomFieldIds(IPObject)
+    * method behavior modified (see JavaDoc) com.polarion.platform.persistence.diff.IDiffManager.generateDiff(IPObject, IPObject, Set, String)
+    * generified method com.polarion.platform.persistence.model.IPObject.getCustomFieldsList()
+    * added method com.polarion.platform.persistence.model.IPrototype.getLabel()
+    * generified method com.polarion.platform.persistence.spi.IDynamicRolesProvider.fillDynamicRoles(Set, String, IPObject)
+    * generified method com.polarion.platform.persistence.spi.PObject.setCachedDynamicRoles(String, Collection)
+    * generified method com.polarion.platform.persistence.spi.PObject.getCachedDynamicRoles(String)
+    * added method com.polarion.platform.persistence.spi.PObject.isInCustomSet(String)
+    * added method com.polarion.platform.persistence.spi.PObjectList.getEmptyReadOnlyList(IDataService)
+    * generified method com.polarion.platform.persistence.spi.PObjectList.getUrisList()
+    * added method com.polarion.platform.persistence.spi.RepoBasedEnumeration.getConfigurationId()
+    * generified method com.polarion.platform.context.IContextListener.contextsMoved(List>)
+    * generified method com.polarion.platform.context.IContextService.getAllSubcontextIds(IContextId)
+    * generified method com.polarion.platform.security.ChangePasswordPermission.getDynamicRoles(String)
+    * generified method com.polarion.platform.security.IPermission.getDynamicRoles(String)
+    * added method com.polarion.platform.security.IPermission.isInCustomSet(String)
+    * generified method com.polarion.platform.security.ISecurityService.getParentPermissions(IPermission)
+    * added method com.polarion.platform.security.Permission.isInCustomSet(String)
+    * generified method com.polarion.platform.security.Permission.getDynamicRoles(String)
+    * added field com.polarion.platform.security.Permission.EMPTY
+    * added method com.polarion.subterra.base.data.model.ICustomField.getDependsOn()
+    * added method com.polarion.subterra.base.data.model.ICustomField.getDependentFieldIds()
+    * added method com.polarion.subterra.base.data.model.ICustomField.getDependencyMapping()
+    * added interface com.polarion.subterra.base.data.model.IRelationMapping
+    * added interface com.polarion.subterra.base.data.model.IValueMapping
+    * added method com.polarion.subterra.base.data.model.TypeFactory.isBoolean(IType)
+    * added method com.polarion.alm.tracker.IModuleManager.unregisterModulePageLayouter(String)
+    * added method com.polarion.alm.tracker.ITestManagementService.deleteTestRuns(Collection)
+    * deprecated method com.polarion.alm.tracker.ITestManagementService.searchTestRecords(String, String, int)
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canModifyPlans()
+    * added method com.polarion.alm.tracker.TestsConfiguration.getTestRunsDeleteQuery()
+    * added method com.polarion.alm.tracker.TestsConfiguration.setTestRunsDeleteQuery(String)
+    * added method com.polarion.alm.tracker.TestsConfiguration.isTestRunsDeleteEnabled()
+    * added method com.polarion.alm.tracker.TestsConfiguration.setTestRunsDeleteEnabled(boolean)
+    * deprecated method com.polarion.alm.tracker.model.IBaselineDiff.getCustomFieldsDiff()
+    * interface com.polarion.alm.tracker.model.IModule extends com.polarion.alm.tracker.model.IWorkflowObject
+    * added field com.polarion.alm.tracker.model.IModule.FIELD_ORDER
+    * added field com.polarion.alm.tracker.model.IModule.ENUM_ID_TYPE
+    * added field com.polarion.alm.tracker.model.IModule.ENUM_ID_STATUS
+    * deprecated method com.polarion.alm.tracker.model.IModule.compareCustomFields(String, String)
+    * deprecated method com.polarion.alm.tracker.model.IModule.compareCustomFieldsWith(IModule, String, String)
+    * added method com.polarion.alm.tracker.model.IModule.compareFields(String, String)
+    * added method com.polarion.alm.tracker.model.IModule.compareFieldsWith(IModule, String, String)
+    * removed field com.polarion.alm.tracker.model.ITestRecord.INDEX_NAME
+    * interface com.polarion.alm.tracker.model.IWorkItem extends com.polarion.alm.tracker.model.IWorkflowObject
+    * deprecated field com.polarion.alm.tracker.model.IWorkItem.KEY_PREVIOUS_STATUS
+    * deprecated method com.polarion.alm.tracker.model.IWorkItem.getPreviousStatus()
+    * added field com.polarion.alm.tracker.model.IWorkItem.ENUM_ID_LINK_ROLE
+    * added interface com.polarion.alm.tracker.model.IWorkflowObject
+    * generified interface com.polarion.alm.tracker.workflow.ICallContext
+    * added method com.polarion.alm.tracker.workflow.ICallContext.getTarget()
+    * deprecated method com.polarion.alm.tracker.workflow.ICallContext.getWorkItem()
+    * generified method com.polarion.alm.tracker.workflow.ICallContext.getModifiedObjects()
+    * generified method com.polarion.alm.tracker.workflow.ICallContext.prepareObjectForModification(S)
+    * generified interface com.polarion.alm.tracker.workflow.ICondition
+    * deprecated method com.polarion.alm.tracker.workflow.IContributionsManager.isConditionDefined(String)
+    * deprecated method com.polarion.alm.tracker.workflow.IContributionsManager.isFunctionDefined(String)
+    * deprecated method com.polarion.alm.tracker.workflow.IContributionsManager.isValidatorDefined(String)
+    * deprecated method com.polarion.alm.tracker.workflow.IContributionsManager.isNotRecognizedCondition(String)
+    * deprecated method com.polarion.alm.tracker.workflow.IContributionsManager.isNotRecognizedFunction(String)
+    * deprecated method com.polarion.alm.tracker.workflow.IContributionsManager.getConditions()
+    * deprecated method com.polarion.alm.tracker.workflow.IContributionsManager.getFunctions()
+    * deprecated method com.polarion.alm.tracker.workflow.IContributionsManager.getValidators()
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.isConditionDefined(String, String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.isFunctionDefined(String, String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.isValidatorDefined(String, String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.getConditions(String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.getFunctions(String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.getValidators(String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.isNotRecognizedCondition(String, String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.isNotRecognizedFunction(String, String)
+    * generified interface com.polarion.alm.tracker.workflow.IFunction
+    * interface com.polarion.alm.tracker.workflow.IWorkflowManager generalized to accept com.polarion.alm.tracker.model.IWorkflowObject instead of just work items
+    * added method com.polarion.alm.tracker.workflow.IWorkflowManager.readWorkflowConfig(String, String, IContextId)
+    * deprecated method com.polarion.alm.tracker.workflow.IWorkflowManager.readWorkflowConfig(String, IContextId)
+    * added method com.polarion.alm.tracker.workflow.config.IContribution.getPrototype()
+    * generified method com.polarion.alm.tracker.workflow.config.IOperation.getParams()
+    * added method com.polarion.alm.tracker.workflow.config.IWorkflowConfig.getPrototype()
+    * generified method com.polarion.alm.tracker.workflow.config.IWorkflowConfig.getTransitions()
+    * generified method com.polarion.alm.tracker.workflow.config.IWorkflowConfig.getActionsMap()
+  
+  Polarion Web Services
+
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getModuleAbsoluteLocation()
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getStatus()
+    * added method com.polarion.alm.ws.client.types.tracker.Module.setStatus(EnumOptionId)
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getType()
+    * added method com.polarion.alm.ws.client.types.tracker.Module.setType(EnumOptionId)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getFilteredEnumOptionsForKey(String, String, String)
+    * added method com.polarion.alm.ws.client.types.tracker.CustomFieldType.getDependsOn()
+    * added class com.polarion.alm.ws.client.types.tracker.EnumCustomFieldType
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.resetWorkflow(String)
+    * method com.polarion.alm.ws.client.tracker.TrackerWebService.getAvailableActions(String) accepts URI of any com.polarion.alm.tracker.model.IWorkflowObject
+    * method com.polarion.alm.ws.client.tracker.TrackerWebService.getUnavailableActions(String) accepts URI of any com.polarion.alm.tracker.model.IWorkflowObject
+    * method com.polarion.alm.ws.client.tracker.TrackerWebService.performWorkflowAction(String, int) accepts URI of any com.polarion.alm.tracker.model.IWorkflowObject
+    * method com.polarion.alm.ws.client.tracker.TrackerWebService.getInitialWorkflowAction(String) accepts URI of any com.polarion.alm.tracker.model.IWorkflowObject
+    * deprecated method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.searchTestRecords(String, String, int)
+
+Version 3.8.0
+-------------
+
+  Polarion Java API
+
+    * added method com.polarion.alm.tracker.IPlanningManager.enableEasyPlanningInProject(String)
+    * added method com.polarion.alm.tracker.IPlanningManager.searchPlanTemplates(String, String, int)
+    * added method com.polarion.alm.tracker.IPlanningManager.getPlan(String, String, String)
+    * added method com.polarion.alm.tracker.IPlanningManager.createPlan(String, String)
+    * added method com.polarion.alm.tracker.IPlanningManager.searchPlans(String, String)
+    * added class com.polarion.alm.tracker.model.IPlan
+    * added class com.polarion.alm.tracker.model.IPlanCalculationTypeOpt
+    * added class com.polarion.alm.tracker.model.IPlanRecord
+    * added class com.polarion.alm.tracker.model.IPlanStatistics
+    * added field com.polarion.alm.tracker.model.IWorkItem.KEY_PLANNED_IN
+    * added method com.polarion.alm.tracker.model.IWorkItem.getPlannedIn()
+    * added field com.polarion.alm.tracker.model.IModule.DIFF_IGNORED_FIELDS
+    * added method com.polarion.alm.tracker.model.IModule.unreference(IWorkItem)
+    * added method com.polarion.alm.tracker.model.IModule.compareCustomFields(String, String)
+    * added method com.polarion.alm.tracker.model.IModule.compareCustomFieldsWith(IModule, String, String)
+    * added method com.polarion.alm.tracker.model.IBaselineDiff.getPlanDiff()
+    * added method com.polarion.alm.tracker.model.IBaselineDiff.getCustomFieldsDiff()
+    * added method com.polarion.alm.tracker.calendar.IWorkingCalendar.numberOfWorkingDays(Date, Date)
+    * added method com.polarion.alm.tracker.ITrackerPolicy.getCannotUseReqIfReason(IContextId)
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUsePlans()
+    * added method com.polarion.psvn.core.notifications.spi.AbstractNotificationCreator.addAnnounces(INotificationEvent, ChangeInfo, int, List)
+    * added method com.polarion.psvn.core.notifications.spi.AbstractNotificationCreator.addAnnounces(String, ChangeInfo, int, List)
+    * added method com.polarion.psvn.core.notifications.spi.AbstractNotificationCreator.getNotificationId(ChangeInfo)
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.PLAN_CREATED
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.PLAN_UPDATED
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.PLAN_DELETED
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.PLAN_STATUS_CHANGED
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.PLAN_WORKITEM_ADDED
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.PLAN_WORKITEM_REMOVED
+    * added class com.polarion.alm.ui.server.navigation.NavigationExtenderNode
+    * added class com.polarion.alm.ui.server.navigation.NavigationExtender
+    * added method com.polarion.platform.startup.StartupMonitor.setNumberOfPhases(int)
+    * added method com.polarion.platform.spi.security.IAuthenticationSource.copyACLRights(String, String)
+    * added method com.polarion.platform.shutdown.IShutdownService.isPlannedShutdown()
+    * added method com.polarion.platform.service.repository.IRepositoryService.startPulling()
+    * added method com.polarion.platform.persistence.spi.PObject.fillCustomFieldDefaultValues()
+    * added method com.polarion.platform.persistence.IDataService.refreshEnumerations(IContextId)
+    * added class com.polarion.platform.jobs.InaccessibleJobException
+    * added method com.polarion.platform.jobs.IJob.isInaccessible()
+    * added method com.polarion.platform.jobs.IJob.getNodeId()
+    * added method com.polarion.platform.jobs.scheduler.JobExecutionRequest.JobExecutionRequest(String, String, Map, NodeSelector)
+    * added method com.polarion.platform.jobs.scheduler.JobExecutionRequest.getNodeSelector()
+    * added class com.polarion.platform.jobs.scheduler.NodeSelector
+    * added method com.polarion.platform.persistence.events.IEventManager.registerListener(IPersistenceListener, String, IContextId, boolean)
+    * added method com.polarion.platform.persistence.ICalculatedFieldsService.recalculate(IContextId, String)
+    * added method com.polarion.platform.persistence.IDataService.clearCaches(String)
+    * see note on behavior in cluster environment in Javadoc:
+        * com.polarion.platform.jobs.IJobUnit
+        * com.polarion.alm.builder.IWatchableRepository
+
+  Polarion Web Services
+
+    * added interface com.polarion.alm.ws.client.planning.PlanningWebService
+    * added class com.polarion.alm.ws.client.types.planning.Plan
+    * added class com.polarion.alm.ws.client.types.planning.PlanStatistics
+    * added class com.polarion.alm.ws.client.types.planning.PlanRecord
+    * added method com.polarion.alm.ws.client.WebServiceFactory.getPlanningService()
+    * added method com.polarion.alm.ws.client.types.tracker.WorkItem.getPlannedIn()
+    * added method com.polarion.alm.ws.client.types.tracker.WorkItem.setPlannedIn(Plan)
+    * added method com.polarion.alm.ws.client.types.tracker.Module.setCustomFields(Custom)
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getCustomFields()
+    * added method com.polarion.alm.ws.client.security.SecurityWebService.getUserFromToken(String)
+
+Version 3.7.3
+-------------
+
+  Polarion Java API
+
+    * added method com.polarion.alm.projects.IProjectService.hasBeenModifiedSince(String)
+    * added method com.polarion.wiki.util.CalendarTool.formatUtcDateTime(Date)
+    * added method com.polarion.wiki.util.CalendarTool.formatUtcDate(Date)
+    * added method com.polarion.alm.builder.IBuildInformationRepository.getBuildLocation(IObjectId)
+    * deprecated method com.polarion.alm.builder.IBuilderService.isBuildRunning(IBuildArtifact, String, String)
+    * added method com.polarion.alm.builder.IBuilderService.getRunningBuildJob(IBuildArtifact, String, String)
+    * added method com.polarion.alm.builder.IBuilderService.getBuildsPolicy()
+    * added method com.polarion.alm.builder.IBuilderService.checkIsBuildRunning(IBuild)
+    * added method com.polarion.alm.builder.IMasterBuildJobUnit.getBuildArtifact()
+    * added method com.polarion.alm.builder.IMasterBuildJobUnit.getBuildDescriptorName()
+    * added method com.polarion.alm.builder.IMasterBuildJobUnit.getCalculationDescriptorName()
+    * added field com.polarion.alm.builder.model.IBuild.JOB_ID
+    * added method com.polarion.alm.builder.model.IBuild.getJobId()
+    * added method com.polarion.platform.jobs.IJobManager.addJobStateListener(IJob, IJobStateListener)
+    * added method com.polarion.platform.jobs.IJobManager.removeJobStateListener(IJob, IJobStateListener)
+    * added method com.polarion.platform.jobs.IJobManager.getListeners(IJob)
+    * serializable interface com.polarion.platform.jobs.IJobStatus
+    * added method com.polarion.platform.jobs.ILogger.getLogFile()
+    * serializable class com.polarion.platform.jobs.scheduler.JobExecutionRequest
+    * serializable class com.polarion.platform.persistence.spi.PObject
+    * added method com.polarion.platform.persistence.spi.RepoBasedEnumeration.getContextId()
+    * generified interface com.polarion.platform.core.IPlatform
+    * removed class removed from API com.polarion.alm.tracker.Formatter
+    * generified interface com.polarion.alm.tracker.exporter.IExportManager
+    * added method com.polarion.alm.tracker.model.IModule.getCommentById(String)
+    * added field com.polarion.alm.tracker.model.ITestRecord.KEY_ATTACHMENTS
+    * added method com.polarion.alm.tracker.model.ITestRecord.getAttachments()
+    * added method com.polarion.alm.tracker.model.ITestRecord.createAttachment(String, String, InputStream)
+    * added method com.polarion.alm.tracker.model.ITestRecord.createAttachmentForTestStepResult(int, String, String, InputStream)
+    * added method com.polarion.alm.tracker.model.ITestRecord.deleteAttachment(String)
+    * added field com.polarion.alm.tracker.model.ITestStepResult.KEY_ATTACHMENTS
+    * added method com.polarion.alm.tracker.model.ITestStepResult.getAttachments()
+    * added method com.polarion.alm.tracker.model.ITestStepResult.deleteAttachment(String)
+    * added method com.polarion.alm.tracker.model.IWorkItem.getComments(boolean, SortBy)
+    * added enum com.polarion.alm.tracker.model.ICommentBase.SortBy
+
+Polarion Web Services
+
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.addAttachmentToTestRecord(String, int, String, String, byte)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.deleteAttachmentFromTestRecord(String, int, String)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.addAttachmentToTestStep(String, int, int, String, String, byte)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.deleteAttachmentFromTestStep(String, int, int, String)
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRecord.getAttachments()
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRecord.setAttachments(TestRunAttachment)
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestStepResult.getAttachments()
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestStepResult.setAttachments(TestRunAttachment)
+    * added method com.polarion.alm.ws.client.types.builder.Build.getJobId()
+    * added method com.polarion.alm.ws.client.types.builder.Build.setJobId(String)
+
+Version 3.7.2
+-------------
+
+  Polarion Java API
+
+    * added field com.polarion.alm.tracker.model.ICommentTagOpt.OPT_SECURE
+    * added method com.polarion.alm.tracker.model.IWorkItem.getAttachmentsContainedByText(Text, boolean)
+    * added method com.polarion.alm.tracker.ITrackerService.getWorkItemWithRevision(String, String, String)
+    * added method com.polarion.subterra.base.data.model.CustomField.parseField(Element, IDefaultValueObtainer, String)
+    * added method com.polarion.platform.spi.security.UserRolesConfig.UserRolesConfig(Document, ILocation)
+    * added method com.polarion.platform.spi.security.UserRolesConfig.UserRolesConfig(UserRolesConfig, InputStream, ILocation)
+    * added method com.polarion.platform.security.ISecurityService.getRolesForUser(String, IContextId...)
+    * added method com.polarion.platform.security.ISecurityService.getContextRolesForUser(String, IContextId...)
+    * added method com.polarion.platform.service.repository.IRepositoryInfo.ownsURI(URI)
+    * added method com.polarion.platform.service.repository.IRepositoryInfo.getRepositoryUriForSystemUser()
+    * added class com.polarion.platform.jobs.IExecuteCommandJobUnit
+    * added method com.polarion.platform.jobs.ILogEvent.getThreadName()
+
+Version 3.7.1
+-------------
+
+  Polarion Java API
+
+    * added field com.polarion.alm.tracker.model.ICommentBase.KEY_TAGS
+    * added field com.polarion.alm.tracker.model.ICommentBase.KEY_RESOLVED
+    * added interface com.polarion.alm.tracker.model.ICommentTagOpt
+    * added method com.polarion.alm.tracker.model.ICommentBase.getTags()
+    * added method com.polarion.alm.tracker.model.ICommentBase.createChildComment(Text, boolean)
+    * added method com.polarion.alm.tracker.model.ICommentBase.setResolvedComment(boolean)
+    * added method com.polarion.alm.tracker.model.ICommentBase.isResolvedComment()
+    * added method com.polarion.alm.tracker.model.IWorkItem.getComments(boolean)
+    * added method com.polarion.alm.tracker.model.IWorkItem.getRootComments(boolean)
+    * added method com.polarion.alm.tracker.model.IModuleComment.createChildComment(Text, boolean)
+    * added method com.polarion.alm.tracker.model.IComment.createChildComment(Text, boolean)
+    * deprecated method com.polarion.alm.tracker.model.IComment.createChildComment(Text, String, List)
+    * added method com.polarion.alm.tracker.model.IModule.getRootComments(boolean)
+    * added interface com.polarion.alm.tracker.model.ITestRunAttachment
+    * added interface com.polarion.platform.persistence.spi.IEnumSet
+    * added interface com.polarion.platform.persistence.spi.IEnumList
+    * added interface com.polarion.platform.persistence.spi.IEnumCollection
+    * generified interface com.polarion.platform.persistence.spi.AbstractTypedList
+    * generified interface com.polarion.platform.persistence.model.ITypedList
+    * added method com.polarion.alm.tracker.model.ITestRun.getWikiContent()
+    * added method com.polarion.alm.tracker.model.ITestRun.setWikiContent(Text)
+    * added method com.polarion.alm.tracker.model.ITestRun.getAttachments()
+    * added method com.polarion.alm.tracker.model.ITestRun.getAttachment(String)
+    * added method com.polarion.alm.tracker.model.ITestRun.createAttachment(String, String, InputStream)
+    * added field com.polarion.alm.tracker.model.ITestRun.KEY_ATTACHMENTS
+    * added field com.polarion.platform.persistence.IQueryHelper.HAS_VALUE
+    * deprecated field com.polarion.platform.persistence.IQueryHelper.UNASSIGNED_VALUE
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canResetApprovals(IContextId)
+    * added method com.polarion.alm.tracker.ITrackerPolicy.checkCanApproveDisapprove(IWorkItem)
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canResolveComments(IWorkItem)
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canResolveComments(IModule)
+    * added method com.polarion.platform.TransactionExecuter.executeSafely(RunnableWEx)
+    * added method com.polarion.platform.persistence.spi.PObject.checkCanSetKey(String, Object)
+    * added method com.polarion.platform.persistence.spi.ModelTypedList.getPObject()
+    * added method com.polarion.core.util.types.duration.DurationTime.getMillisPerDay()
+    * added method com.polarion.core.util.types.duration.DurationTime.getMillis()
+    * added method com.polarion.core.util.types.duration.DurationTime.getHours()
+    * added method com.polarion.core.util.types.duration.DurationTime.fromHours(float)
+    * added method com.polarion.core.util.types.duration.DurationTime.fromString(String)
+    * deprecated methods com.polarion.core.util.types.duration.DurationTime.getLength*
+    * deprecated methods com.polarion.core.util.types.duration.DurationTime.getIn*
+    * deprecated methods com.polarion.core.util.types.duration.DurationTime.DurationTime*
+    * deprecated methods com.polarion.core.util.types.duration.DurationTime.setCoefficients(Fraction)
+    * deprecated fields com.polarion.core.util.types.duration.DurationTime.(MONTH,YEAR,MIN)
+    * deprecated class com.polarion.core.util.types.duration.DurationTimeFactory
+    * deprecated class com.polarion.core.util.types.duration.Fraction
+    * deprecated class com.polarion.core.util.types.duration.FractionalCombination
+  
+  Polarion Web Services
+
+    * added class com.polarion.alm.ws.client.types.tracker.TestRunAttachment
+    * added method com.polarion.alm.ws.client.types.tracker.ModuleComment.getResolved()
+    * added method com.polarion.alm.ws.client.types.tracker.ModuleComment.setResolved(Boolean)
+    * added method com.polarion.alm.ws.client.types.tracker.ModuleComment.getTags()
+    * added method com.polarion.alm.ws.client.types.tracker.ModuleComment.setTags(EnumOptionId)
+    * added method com.polarion.alm.ws.client.types.tracker.Comment.setResolved(Boolean)
+    * added method com.polarion.alm.ws.client.types.tracker.Comment.getResolved()
+    * added method com.polarion.alm.ws.client.types.tracker.Comment.getTags()
+    * added method com.polarion.alm.ws.client.types.tracker.Comment.setTags(EnumOptionId)
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.setAttachments(TestRunAttachment)
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.getAttachments()
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.createBaseline(String, String, String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.deleteBaseline(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.updateBaseline(Baseline)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.isHistoryAvailable()
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.setResolvedComment(String, boolean)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.isResolvedComment(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.setCommentTags(String, EnumOptionId)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.updateWikiContentForTestRun(String, Text)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getWikiContentForTestRun(String)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.addAttachmentToTestRun(String, String, String, byte)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestRunAttachments(String)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestRunAttachment(String, String)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.updateTestRunAttachment(String, String, String, byte)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.deleteTestRunAttachment(String, String)
+
+Version 3.7.0
+-------------
+
+  Polarion Java API
+
+    * added method com.polarion.alm.tracker.activity.IActivityStreamService.getActivitySources())
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUseExcelImportOfTestSteps())
+    * added method com.polarion.alm.tracker.ITrackerPolicy.checkCanUseExcelImportOfTestSteps())
+    * added annotation com.polarion.platform.repository.external.ExternalRepositoryCredentials)
+    * deprecated method com.polarion.platform.i18n.Localization.getStringWithSpace(String))
+    * deprecated method com.polarion.platform.i18n.Localization.getStringWighSpace(String, String))
+    * added method com.polarion.subterra.base.SubterraURI.fromString(String)
+    * added method com.polarion.alm.tracker.model.IWorkItem.getAllAttachmentsContainedByDescription()
+    * removed method com.polarion.alm.tracker.ITrackerService.getWorkRecordsConfig(IProject)
+    * added method com.polarion.platform.persistence.IDataService.clearCaches(Collection, boolean)
+    * added method com.polarion.alm.tracker.workflow.IArguments.getFieldArgumentName()
+
+  Polarion Web Services
+
+    * added class com.polarion.alm.ws.client.types.tracker.CustomValue
+    * added class com.polarion.alm.ws.client.types.tracker.ActivitySource
+    * added class com.polarion.alm.ws.client.types.tracker.ActivityCustomValueEntry
+    * added class com.polarion.alm.ws.client.types.tracker.ActivityCustomValue
+    * added class com.polarion.alm.ws.client.types.tracker.ActivityComment
+    * added class com.polarion.alm.ws.client.types.tracker.Activity
+    * added class com.polarion.alm.ws.client.types.tracker.ModuleComment
+    * added class com.polarion.alm.ws.client.types.tracker.ImportedComment
+    * added class com.polarion.alm.ws.client.types.testmanagement.TestStep
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.moveWorkItemToDocument(String, String, String, int, boolean)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.listProjectActivities(String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.listGroupActivities(SubterraURI, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.listAllActivities(String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.listProjectActivitiesGlobalIds(String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.listGroupActivitiesGlobalIds(SubterraURI, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.listAllActivitiesGlobalIds(String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getActivityByGlobalId(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.listActivitySources()
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.canCurrentUserAddCommentToActivity(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.canCommentActivity(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.addCommentToActivity(String, Text)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.createDocumentComment(String, Text)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.createDocumentCommentReply(String, Text)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.createDocumentCommentReferringWI(String, String, Text)
+    * deprecated method (see Javadoc for changed behavior) com.polarion.alm.ws.client.tracker.TrackerWebService.moveWorkItemToModule(String, String, String, int)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestSteps(String)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.setTestSteps(String, TestStep)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.getTestStepsConfiguration(String)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.addTestRecordToTestRun(String, TestRecord)
+    * added method com.polarion.alm.ws.client.testmanagement.TestManagementWebService.updateTestRecordAtIndex(String, int, TestRecord)    
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getComments()
+    * added method com.polarion.alm.ws.client.types.tracker.Module.setComments(ModuleComment)
+
+Version 3.6.3
+-------------
+
+  Polarion Java API
+
+    * added method com.polarion.alm.tracker.model.IModule.IStructureNode.removeFromParent()
+    * added method com.polarion.alm.tracker.model.IModule.IStructureNode.moveNodeAfter(IStructureNode)
+    * added method com.polarion.alm.tracker.model.IModule.IStructureNode.moveNodeBefore(IStructureNode)
+    * added method com.polarion.alm.tracker.model.IModule.IStructureNode.moveNodeAsFirstChild(IStructureNode)
+    * added method com.polarion.alm.tracker.model.IModule.IStructureNode.moveNodeAsLastChild(IStructureNode)
+    * added method com.polarion.alm.tracker.model.IWikiPage.getPageNameWithSpace()
+    * added field com.polarion.alm.tracker.IModuleManager.TITLE_TESTSTEPS_LAYOUTER
+    * added field com.polarion.alm.tracker.IModuleManager.TITLE_DESC_TESTSTEPS_LAYOUTER
+    * added method com.polarion.alm.tracker.IModuleManager.getModuleWorkItemsQuery(IProject, ILocation, boolean)
+    * added method com.polarion.alm.tracker.IModulePageLayouter.getSuitableForTypes(String)
+    * added method com.polarion.platform.persistence.IDataService.getEnumerationObjectFactories()
+    * added method com.polarion.platform.persistence.IDataService.getObjectFromEnumOption(IEnumOption)
+    * added method com.polarion.platform.persistence.IDataService.getObjectEnumerationForKey(String, String, IContextId)
+    * added method com.polarion.platform.persistence.IDataService.getEnumerationForEnumId(IEnumType, IContextId)
+    * added interface com.polarion.platform.persistence.IEnumObjectFactory
+    * added field com.polarion.platform.persistence.IEnumOption.PROPERTY_KEY_URI
+    * added field com.polarion.platform.persistence.IEnumOption.PROPERTY_KEY_UI_LINK
+    * added class com.polarion.platform.persistence.spi.AbstractObjectEnumFactory
+    * added class com.polarion.platform.persistence.spi.AbstractObjectEnumeration
+    * added class com.polarion.platform.persistence.spi.IObjectEnumeration
+    * added method com.polarion.platform.persistence.spi.Structure.getContextId()
+    * added method com.polarion.subterra.base.data.model.TypeFactory.getStructType(String)
+    * added method com.polarion.subterra.base.data.model.TypeFactory.getListType(String)
+    * added method com.polarion.alm.tracker.exporter.IExportConfiguration.IExportField.getColumnWidth()
+    * added method com.polarion.alm.tracker.ITestManagementService.getTestSteps(IWorkItem)
+    * added method com.polarion.alm.tracker.ITestManagementService.setTestSteps(IWorkItem, ITestSteps)
+    * added method com.polarion.alm.tracker.ITestManagementService.getTestStepsCustomField(IWorkItem)
+    * added method com.polarion.alm.tracker.ITestManagementService.getTestStepsCustomField(String, String)
+    * added method com.polarion.alm.tracker.ITestManagementService.getTestStepsKeys(String)
+    * added method com.polarion.alm.tracker.model.ITestRecord.getTestStepResults()
+    * added method com.polarion.alm.tracker.model.ITestRecord.addTestStepResult(String, Text)
+    * added interface com.polarion.alm.tracker.model.ITestStepResult
+    * added interface com.polarion.alm.tracker.model.ITestSteps
+    * added interface com.polarion.alm.tracker.model.ITestStep
+    * added interface com.polarion.alm.tracker.model.ITestStepKeyOpt
+    
+  Polarion Web Services
+
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getModules(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getModulesSubFolders(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getModulesWithFields(String, String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getModuleUris(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryModules(String, String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryModulesInBaseline(String, String, String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryModulesBySQL(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryModulesInBaselineBySQL(String, String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryModuleUris(String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryModuleUrisInBaseline(String, String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryModuleUrisBySQL(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryModuleUrisInBaselineBySQL(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getWikiPageByUri(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getWikiPageByUriWithFields(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getDocumentSpaces(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getWikiSpaces(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getWikiPages(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWikiPages(String, String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getWikiPagesWithFields(String, String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getWikiPageUris(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWikiPageUris(String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWikiPagesInBaseline(String, String, String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWikiPagesBySQL(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWikiPagesInBaselineBySQL(String, String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWikiPageUrisInBaseline(String, String, String, int)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWikiPageUrisBySQL(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWikiPageUrisInBaselineBySQL(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getEnumOptionFromObjectUriForId(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getEnumOptionFromObjectUriForKey(String, String, String)
+    * added class com.polarion.alm.ws.client.types.tracker.WikiPage
+    * added class com.polarion.alm.ws.client.types.tracker.WikiPageAttachment
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRecord.getTestStepResults()
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRecord.setTestStepResults(TestStepResult)
+    * added class com.polarion.alm.ws.client.types.testmanagement.TestStepResult    
+
+Version 3.6.2
+-------------
+
+  Polarion Java API
+
+    * added method com.polarion.platform.persistence.ICustomFieldsService.getCustomFields(String, IContextId, String)
+    * added method com.polarion.alm.tracker.model.ITestRun.removeRecordsForTestCase(String)
+    * added method com.polarion.alm.tracker.model.ITestRecord.setTestCase(IWorkItem)
+    * added method com.polarion.alm.tracker.model.ITestRun.getAllRecords()
+    * added method com.polarion.alm.tracker.model.ITestRun.getSelectTestCasesBy()
+    * added method com.polarion.alm.tracker.model.ITestRun.setSelectTestCasesBy(ISelectTestCasesByOpt)
+    * added method com.polarion.alm.tracker.model.ITestRun.setSelectTestCasesBy(String)
+    * added method com.polarion.alm.tracker.model.ITestRun.getDocument()
+    * added method com.polarion.alm.tracker.model.ITestRun.setDocument(IModule)
+    * added field com.polarion.alm.tracker.model.ITestRun.KEY_SELECT_TEST_CASES_BY
+    * added field com.polarion.alm.tracker.model.ITestRun.KEY_DOCUMENT
+    * added method com.polarion.alm.tracker.ITrackerService.getGlobalLanguageDefinitionsProvider()
+    * added method com.polarion.alm.tracker.model.ILanguageDefinition.setLabel(String)
+    * added method com.polarion.alm.tracker.model.ILanguageDefinition.getTypeDefinitions()
+    * added method com.polarion.alm.tracker.model.ILanguageDefinition.setTypeDefinitions(Map)
+    * added method com.polarion.alm.tracker.model.ILanguageDefinition.setDefaultTypeDefinition(Type)
+    * added method com.polarion.alm.tracker.model.ILanguageDefinitionsProvider.isGlobal()
+    * added method com.polarion.platform.spi.security.IAuthenticationSource.delGroupsAndACL(String, String)
+    * added method com.polarion.platform.repository.config.IRepositoryConfigService.validateConfiguration(String, String, IContextId, Object)
+    * added interface com.polarion.platform.repository.config.IValidatingDataHandler
+    * added method com.polarion.alm.tracker.ITestManagementPolicy.canModifyTestRuns()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUseDiagramming()
+    * added method com.polarion.alm.tracker.TestsConfiguration.getTestCasePlanningQuery()
+    * added method com.polarion.alm.tracker.TestsConfiguration.setTestCasePlanningQuery(String)
+    * added interface com.polarion.alm.tracker.model.ISelectTestCasesByOpt
+    * added method com.polarion.alm.tracker.model.ILinkRoleOpt.isAllowedFromAll()
+    * added method com.polarion.alm.tracker.model.ILinkRoleOpt.isAllowedToAll()
+    * added method com.polarion.alm.tracker.model.ILinkRoleOpt.IRule.isAllowedFromAll()
+    * added method com.polarion.alm.tracker.model.ILinkRoleOpt.IRule.isAllowedToAll()
+    
+  Polarion Web Services
+
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.setSelectTestCasesBy(EnumOptionId)
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.getSelectTestCasesBy()
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.setDocument(Module)
+    * added method com.polarion.alm.ws.client.types.testmanagement.TestRun.getDocument()
+
+Version 3.6.1
+-------------
+
+  Polarion Java API
+
+    * added method com.polarion.alm.tracker.ITestsFileProcessor.setProperties(Map)
+    * added class com.polarion.alm.tracker.AbstractTestsFileProcessor
+    * added class com.polarion.alm.tracker.DelegatingTestsFileProcessor
+    * added method com.polarion.alm.tracker.TestsConfiguration.shouldCreateSummaryDefect(int, int, int)
+    * added class com.polarion.alm.tracker.TestsFileProcessorContribution
+    * added method com.polarion.alm.tracker.model.IModule.RENDERING_TARGET_EXPORT_COMPARE_PDF
+    * added method com.polarion.alm.tracker.model.IWorkItem.getUnavailableActions()
+    * added method com.polarion.alm.tracker.workflow.IWorkflowManager.getUnavailableActions(IWorkItem)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.addConditions(Map)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.addFunctions(Map)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.isNotRecognizedCondition(String)
+    * added method com.polarion.alm.tracker.workflow.IContributionsManager.isNotRecognizedFunction(String)
+    * added method com.polarion.alm.tracker.workflow.config.IAction.getNotRecognizedConditionsMessages()
+    * added method com.polarion.alm.tracker.workflow.config.IAction.getNotRecognizedFunctionsMessages()
+    * added method com.polarion.alm.tracker.model.IWorkItem.getTrackerService()
+    * added method com.polarion.alm.tracker.model.IModule.getTrackerService()
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getInitialWorkflowActionForProjectAndType(String, EnumOptionId)
+    * deprecated method com.polarion.alm.tracker.IModulePageLayouter.RenderParameters.isIE7()
+    * deprecated field com.polarion.alm.tracker.model.IWorkItem.RenderingOptions.renderImagesFromHead
+    * added method com.polarion.platform.i18n.Localization.getLocale()
+    * added field com.polarion.alm.tracker.IModulePageLayouter.RenderParameters.language
+    * added method com.polarion.alm.tracker.model.IModule.renderHomePageContent(String, String, String, String)
+    * added field com.polarion.alm.tracker.model.ITypeOpt.PROPERTY_KEY_TEMPLATE_WORKITEM
+    * added method com.polarion.platform.persistence.IDataService.sqlSearchInBaseline(String, String)
+    * added class com.polarion.alm.tracker.model.ILanguageDefinition
+    * added class com.polarion.alm.tracker.model.ILanguageDefinitionsProvider
+    * added method com.polarion.alm.tracker.model.ITrackerProject.getLanguageDefinitionsProvider()
+    * added method com.polarion.alm.tracker.model.IWorkItem.getLocalizedTitle(String)
+    * added method com.polarion.alm.tracker.model.IWorkItem.getLocalizedDescription(String)
+    * added method com.polarion.alm.tracker.model.IWorkItem.setLocalizedTitle(String, String)
+    * added method com.polarion.alm.tracker.model.IWorkItem.setLocalizedDescription(String, Text)
+    
+  Polarion Web Services
+
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getUnavailableActions(String)
+    * added method com.polarion.alm.ws.client.types.tracker.WorkflowAction.getUnavailabilityMessage()
+    * added method com.polarion.alm.ws.client.types.tracker.WorkflowAction.setUnavailabilityMessage(String)
+    * added method com.polarion.alm.ws.client.types.projects.User.getDisabledNotifications()
+    * added method com.polarion.alm.ws.client.types.projects.User.setDisabledNotifications(Boolean)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getLanguageDefinitions(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getLanguageDefinition(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getLocalizedWorkItemTitleField(String, String, EnumOptionId)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getLocalizedWorkItemTitle(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getLocalizedWorkItemDescriptionField(String, String, EnumOptionId)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getLocalizedWorkItemDescription(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.setLocalizedWorkItemTitle(String, String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.setLocalizedWorkItemDescription(String, String, Text)
+    * added class com.polarion.alm.ws.client.types.tracker.LanguageDefinition
+
+Version 3.6.0
+-------------
+
+  Polarion Java API
+  
+    * added method com.polarion.platform.persistence.IDataService.sqlSearch(String)
+    * added method com.polarion.platform.persistence.IDataService.searchInstancesInBaseline(String, String, String, String)
+    * added method com.polarion.platform.persistence.IDataService.searchInstancesInBaseline(String, String, String, int, String)
+    * added method com.polarion.platform.persistence.IDataService.doInBaseline(IPObject, RunnableWEx)
+    * added method com.polarion.platform.persistence.IDataService.doOutsideBaseline(RunnableWEx)
+    * added method com.polarion.platform.persistence.IDataService.getCurrentBaselineRevision()
+    * added method com.polarion.platform.persistence.IDataService.getCurrentBaseline()
+    * added method com.polarion.platform.persistence.IDataService.getLastRevisionCommitedByCurrentThread()
+    * added method com.polarion.platform.persistence.IEnumOption.isHidden()
+    * added field com.polarion.platform.persistence.IEnumOption.PROPERTY_KEY_HIDDEN
+    * added method com.polarion.platform.persistence.model.IPObject.getLastRevision()
+    * added method com.polarion.platform.persistence.model.IPrototype.isVersioned()
+    * added field com.polarion.platform.persistence.model.IPrototype.KEY_VERSIONED
+    * added method com.polarion.platform.persistence.spi.PObject.getLastRevision()
+    * added method com.polarion.platform.persistence.spi.PObject.checkRevisionInBaseline()
+    * added method com.polarion.platform.persistence.spi.ConstantEnumOption.isHidden()
+    * added method com.polarion.platform.persistence.spi.DelegatingOption.isHidden()
+    * added method com.polarion.platform.persistence.spi.EnumOption.isHidden()
+    * added method com.polarion.platform.persistence.spi.RepoBasedEnumeration.getEnumerationFolder(String)
+    * added method com.polarion.platform.persistence.spi.RepoBasedEnumeration.getEnumerationFileName(String)
+    * added interface com.polarion.platform.persistence.notifications.INotificationCreator.IChangeNotification
+    * added method com.polarion.platform.persistence.notifications.INotificationCreator.filterGroupedNotifications(Collection<IChangeNotification>)
+    * added class com.polarion.platform.jobs.spi.IJobContextService
+    * added method com.polarion.platform.security.AdministrationPermission.forAction(String)
+    * added class com.polarion.alm.tracker.ITestManagementService
+    * added class com.polarion.alm.tracker.ITestsManager
+    * added field com.polarion.alm.tracker.IModulePageLayouter.RenderParameters.isExternal
+    * added field com.polarion.alm.tracker.IModulePageLayouter.RenderParameters.pinnedRevision
+    * added method com.polarion.alm.tracker.IModuleManager.isExternalModuleItem(IWorkItem)
+    * added method com.polarion.alm.tracker.IModuleManager.branchModule(IModule, IProject, ILocation, String)
+    * added class com.polarion.alm.tracker.IModuleBrancher
+    * added interface com.polarion.alm.tracker.ITestResultsImportJobUnit
+    * added class com.polarion.alm.tracker.TestsConfiguration
+    * added method com.polarion.alm.tracker.IBaselinesManager.isHistoryAvailable()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canModifyWorkItems()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canModifyWorkItems(IContextId)
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canBranchDocuments()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canCommentDocuments(IContextId)
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUseExport()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUseImport()
+    * added method com.polarion.alm.tracker.ITrackerPolicy.checkCanApproveDisapprove(IWorkItem, IApprovalStruct, IEnumOption)
+    * added interface com.polarion.alm.tracker.ITestManagementPolicy
+    * added method com.polarion.alm.tracker.ITrackerService.queryWorkItemsInBaseline(String, String, String)
+    * added field com.polarion.alm.tracker.IModulePageLayouter.RenderParameters.module
+    * added method com.polarion.alm.tracker.model.IModule.findCommentsReferencingWorkItem(IWorkItem)
+    * added field com.polarion.alm.tracker.model.IModuleComment.KEY_REFERRED_WORK_ITEM
+    * added method com.polarion.alm.tracker.model.IModuleComment.getReferredWorkItem()
+    * added method com.polarion.alm.tracker.model.IModuleComment.setReferredWorkItem(IWorkItem)
+    * added field com.polarion.alm.tracker.model.IStatusOpt.PROPERTY_KEY_TERMINAL
+    * added method com.polarion.alm.tracker.model.IStatusOpt.isTerminal()
+    * added class com.polarion.alm.tracker.model.ITestRun
+    * added class com.polarion.alm.tracker.model.ITestRecord
+    * added field com.polarion.alm.tracker.model.IModule.IStructureNode.KEY_EXTERNAL
+    * added method com.polarion.alm.tracker.model.IModule.IStructureNode.isExternal()
+    * added method com.polarion.alm.tracker.model.IModule.IStructureNode.getModule()
+    * added method com.polarion.alm.tracker.model.IModule.getWorkItem(String, String)
+    * added method com.polarion.alm.tracker.model.IModule.compareWith(IModule, String, String, String, String)
+    * added field com.polarion.alm.tracker.model.IModule.KEY_BRANCHED_FROM
+    * added field com.polarion.alm.tracker.model.IModule.KEY_BRANCHED_WITH_QUERY
+    * added method com.polarion.alm.tracker.model.IModule.getBranchedFrom()
+    * added method com.polarion.alm.tracker.model.IModule.setBranchedFrom(IModule)
+    * added method com.polarion.alm.tracker.model.IModule.getBranchedWithQuery()
+    * added method com.polarion.alm.tracker.model.IModule.setBranchedWithQuery(String)
+    * added method com.polarion.alm.tracker.model.IModule.getBranchedModules()
+    * added class com.polarion.alm.tracker.model.IWikiPage
+    * added field com.polarion.alm.tracker.exporter.IExportHelper.Options.contextModule
+    * added field com.polarion.alm.tracker.exporter.IExportHelper.Options.trimTooLongReadOnlyContent
+    * added class com.polarion.alm.tracker.activity.Activity
+    * added class com.polarion.alm.tracker.activity.ActivityComment
+    * added class com.polarion.alm.tracker.activity.ActivityCustomValue
+    * added interface com.polarion.alm.tracker.activity.IActivitySource
+    * added interface com.polarion.alm.tracker.activity.IActivityStreamService
+    * added interface com.polarion.alm.tracker.activity.UserAndProjectResolver
+    * added field com.polarion.alm.projects.model.IUser.KEY_AVATAR_FILE_NAME
+    * added field com.polarion.alm.projects.model.IUser.DIFF_IGNORED_FIELDS
+    * added method com.polarion.alm.projects.model.IUser.getAvatarURL()
+    * added method com.polarion.alm.projects.model.IUser.setAvatarFileData(String, InputStream)
+    * added method com.polarion.alm.projects.model.IUser.hasAvatarFile()
+    * added method com.polarion.alm.projects.model.IUser.removeAvatarFile()
+    * added method com.polarion.alm.projects.model.IUser.getAvatarFileData()
+    * added method com.polarion.alm.projects.IProjectService.getUserAvatarURL(String)
+    * added method com.polarion.psvn.core.notifications.spi.AbstractNotificationCreator.filterGroupedNotifications(Collection<IChangeNotification>)
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.TESTRUN_UPDATED
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.TESTRUN_DELETED
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.TESTRUN_STATUS_CHANGED
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.TESTRUN_FINISHED
+    * added class com.polarion.alm.ui.server.forms.extensions.FormExtensionContribution
+    * added interface com.polarion.alm.ui.server.forms.extensions.IFormExtension  
+    
+  Polarion Web Services
+
+    * added method com.polarion.alm.ws.client.types.tracker.EnumOption.isHidden()
+    * added method com.polarion.alm.ws.client.types.tracker.EnumOption.setHidden(boolean)
+    * added method com.polarion.alm.ws.client.projects.ProjectWebService.getUserAvatarURL(String)
+    * added service com.polarion.alm.ws.client.testmanagement.TestManagementWebService
+    * added method com.polarion.alm.ws.client.WebServiceFactory.getTestManagementService()
+    * added class com.polarion.alm.ws.client.types.testmanagement.Property
+    * added class com.polarion.alm.ws.client.types.testmanagement.TestRecord
+    * added class com.polarion.alm.ws.client.types.testmanagement.TestRun
+    * added class com.polarion.alm.ws.client.types.testmanagement.TestsConfiguration
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWorkItemUrisBySQL(String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWorkItemUrisInBaselineBySQL(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWorkItemsBySQL(String, String)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWorkItemsInBaselineBySQL(String, String, String)
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getBranchedFrom()
+    * added method com.polarion.alm.ws.client.types.tracker.Module.setBranchedFrom(Module)
+    * added method com.polarion.alm.ws.client.types.tracker.Module.getBranchedWithQuery()
+    * added method com.polarion.alm.ws.client.types.tracker.Module.setBranchedWithQuery(String)
+    
+Version 3.5.3
+-------------
+
+  Polarion Java API
+  
+    * added method com.polarion.alm.tracker.ITrackerService.findWorkItem(String, String)
+    * added field com.polarion.platform.startup.StartupMonitor.persistenceStartedOK
+    * added method com.polarion.alm.tracker.model.ILinkRoleOpt.getOppositeName()
+    * added class com.polarion.platform.jobs.spi.NullProgressMonitor
+    * added method com.polarion.alm.tracker.importer.IImportCommand.setProgressMonitor(IProgressMonitor)
+    * added field com.polarion.alm.tracker.importer.AbstractImportCommand.progress
+    * added method com.polarion.alm.tracker.importer.AbstractImportCommand.setProgressMonitor(IProgressMonitor)
+    * added method com.polarion.alm.tracker.IModuleManager.updateDerivedModule(IModule, String, Set, Set, boolean)
+    * added method com.polarion.alm.tracker.IBaselinesManager.deleteBaseline(IBaseline)
+    * added method com.polarion.alm.tracker.model.IWorkItem.getAllowedApprovers()
+    * added method com.polarion.alm.tracker.model.IWorkItem.resetWorkflow()
+    * added method com.polarion.alm.tracker.model.IWorkItem.getProjectId()
+    * added method com.polarion.alm.projects.model.IUniqueObject.getProjectId()
+    * added method com.polarion.platform.TransactionLocal.disposeValue(T)
+    * added method com.polarion.platform.TransactionLocal.holds()
+    * added method com.polarion.platform.context.IContextNatureProvider.getHistoricalLocations(String)
+    * added method com.polarion.platform.context.IContextService.getHistoricalLocations(String)
+    * added method com.polarion.platform.ITransactionService.setRollbackOnly(Throwable)
+    * added method com.polarion.alm.tracker.model.IWorkflowAction.getRequiredRoles()
+    * added method com.polarion.alm.tracker.model.IWorkflowAction.hasCurrentUserRequiredRoles(IContextId)
+
+  Polarion Web Services
+    
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.updateDerivedDocument(String, String, boolean)
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.getAllowedApprovers(String)    
+
+Version 3.5.2
+-------------
+
+  Polarion Java API
+  
+    * added method com.polarion.alm.tracker.exporter.IExporterDescriptor.isCharsetSelectable
+    * deprecated method com.polarion.alm.tracker.exporter.IExporterDescriptor.isFieldsExporter
+    * deprecated method com.polarion.alm.tracker.exporter.IExporterDescriptor.canExportField
+    * added method com.polarion.alm.tracker.exporter.IExportTemplate.getExportFields
+    * added class com.polarion.alm.tracker.exporter.ITemplateExportCommandFactory
+    * added class com.polarion.alm.tracker.exporter.IExporterDescriptor.IFieldExportCapability
+    * added class com.polarion.alm.tracker.exporter.IExportConfiguration.IExportField
+    * added methods com.polarion.alm.tracker.exporter.IExportConfiguration.getExportFields
+    * deprecated method com.polarion.alm.tracker.exporter.IExportConfiguration.getFields
+    * added method com.polarion.alm.tracker.exporter.ExportConfiguration.setExportFields
+    * added method com.polarion.alm.tracker.exporter.ExportConfiguration.getExportFields
+    * added method com.polarion.alm.tracker.exporter.IExportConfiguration.getModule
+    * added method com.polarion.alm.tracker.exporter.ExportConfiguration.getModule
+    * added method com.polarion.alm.tracker.exporter.ExportConfiguration.setModule
+    * changed value of field com.polarion.alm.tracker.exporter.IExportHelper.Options.includeWorkItemBacklinks
+    * added interface com.polarion.alm.tracker.importer.ITestResultsImportResult
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canCreateWorkItems
+    * added method com.polarion.platform.persistence.diff.IChange.getChangedFields
+    * added class com.polarion.platform.TransactionExecuter
+    * added interface com.polarion.platform.IRendererService
+    * added field com.polarion.alm.tracker.model.IWorkItem.KEY_LINKED_WORK_ITEMS_DERIVED
+    * added method com.polarion.alm.tracker.model.IWorkItem.KEY_LINKED_WORK_ITEMS_DERIVED
+    * added interface com.polarion.alm.tracker.importer.excel.IExcelImportService
+    * added class com.polarion.alm.tracker.importer.excel.ExcelImportConfiguration
+    * added method com.polarion.platform.i18n.Localization.getString(String, String...)
+    * removed method com.polarion.platform.i18n.Localization.getString(String, String)
+    * removed method com.polarion.platform.i18n.Localization.getString(String, String, String)
+    * removed method com.polarion.platform.i18n.Localization.getString(String, String, String, String)
+    * added method com.polarion.platform.i18n.Localization.getValue(String)
+    * added method com.polarion.platform.i18n.Localization.getValue(String, String...)
+    * added method com.polarion.platform.i18n.Localization.getValue(String, List)
+    * added method com.polarion.platform.i18n.Localization.getValue(String, String)
+    * removed class com.polarion.platform.i18n.II18nService
+    * added class com.polarion.platform.i18n.I18nService
+    * added method com.polarion.platform.persistence.model.IPObject.getFieldType
+    * added method com.polarion.platform.persistence.spi.PObject.getFieldType
+    * added method com.polarion.alm.tracker.model.ITrackerProject.getTrackerService
+    * added method com.polarion.platform.security.ISecurityService.loginUserFromVault
+    * added interface com.polarion.alm.tracker.importer.conditions.IConditionsRegistry
+    * added interface com.polarion.alm.tracker.importer.conditions.ITextCondition
+    * added interface com.polarion.alm.tracker.importer.conditions.ITextConditionDescriptor
+    * added method com.polarion.alm.tracker.exporter.IParameterDescriptor.getSwitchedOnAlert
+    * added method com.polarion.subterra.base.location.Location.deserializeLocations
+    * added method com.polarion.subterra.base.location.Location.serialize(Collection)
+    * added method com.polarion.subterra.base.data.model.IDataPrototype.canKeyBeCached(String)
+    * added method com.polarion.platform.persistence.model.IPrototype.canKeyBeCached(String)
+    * added method com.polarion.platform.persistence.model.IPrototype.canKeyBeCached(String)
+    * added field com.polarion.platform.persistence.model.IPrototype.KEY_KEY_NOT_CACHED
+    * added method com.polarion.alm.builder.model.IBuild.getDurationAsString()
+    * added method com.polarion.platform.persistence.IQueryHelper.expandKeywords(String)
+    * added method com.polarion.platform.persistence.model.IRevision.getLocationDiffURL(ILocationChangeMetaData)
+    * added method com.polarion.platform.persistence.model.IRevision.getLocationURL(ILocationChangeMetaData)
+    * added method com.polarion.platform.persistence.model.IRevision.getChangedLocations()
+    * added class com.polarion.platform.repository.external.ExternalRepositoryUtils
+    * added method com.polarion.platform.repository.external.IExternalRepositoryProvider.IExternalRepository.getViewLocationDiffURL(ILocationChangeMetaData)
+    * added method com.polarion.platform.repository.external.IExternalRepositoryProvider.IExternalRepository.getViewLocationURL(ILocationChangeMetaData)
+    * added method com.polarion.platform.repository.external.IExternalRepositoryProvider.IExternalRepository.getChangedLocations(String)
+    * added method com.polarion.alm.tracker.IModuleManager.getHeadingType(IProject)
+    * removed class com.polarion.alm.tracker.ModuleUtils  
+
+  Polarion Web Services
+      
+    * added method com.polarion.alm.ws.client.types.tracker.WorkItem.getLinkedWorkItemsDerived()
+    * added method com.polarion.alm.ws.client.types.tracker.WorkItem.setLinkedWorkItemsDerived(LinkedWorkItem[])
+    
+Version 3.5.1
+-------------
+
+  Polarion Java API
+
+    * changed signature of method com.polarion.platform.persistence.spi.ISecurityReferee.checkModify
+    * changed signature of method com.polarion.platform.persistence.spi.ISecurityReferee.checkAdd
+    * changed signature of method com.polarion.platform.persistence.spi.ISecurityReferee.checkRemove
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canApproveDisapproveOthers
+    * added method com.polarion.alm.tracker.ITrackerPolicy.checkCanApproveDisapproveOthers
+    * added method com.polarion.platform.persistence.spi.IQueryExpander.sortResult
+    * added method com.polarion.alm.tracker.model.ILinkedRevisionStruct.getRepositoryName
+    * added method com.polarion.platform.persistence.IDataService.getExternalRepositoryProviderRegistry
+    * added method com.polarion.platform.persistence.model.IRevision.isExternal
+    * added method com.polarion.platform.persistence.model.IRevision.getViewURL
+    * added method com.polarion.platform.persistence.spi.Revision.isExternal
+    * added method com.polarion.platform.persistence.spi.Revision.getViewURL
+    * added interface com.polarion.platform.repository.external.IExternalRepositoryProviderRegistry
+    * added interface com.polarion.platform.repository.external.IExternalRepositoryProvider
+    * added class com.polarion.platform.repository.external.AbstractExternalRepositoryConfiguration
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUsePercentualAssignment(String)
+    * added field com.polarion.psvn.core.notifications.INotificationEvent.DOCUMENT_MOVED
+    * deprecated method com.polarion.alm.tracker.exporter.IExportManager.getTemplates(IExporterDescriptor)
+    * deprecated method com.polarion.alm.tracker.exporter.IExportManager.getTemplate(IExporterDescriptor,String)
+    * deprecated method com.polarion.alm.tracker.exporter.IExportManager.createTemplate
+    * deprecated method com.polarion.alm.tracker.exporter.IExportManager.deleteTemplate(IExporterDescriptor,String)
+    * added method com.polarion.alm.tracker.exporter.IExportManager.getTemplates(IExporterDescriptor,IContextId)
+    * added method com.polarion.alm.tracker.exporter.IExportManager.getTemplate(IExporterDescriptor,String,IContextId)
+    * added method com.polarion.alm.tracker.exporter.IExportManager.setTemplateContent
+    * added method com.polarion.alm.tracker.exporter.IExportManager.deleteTemplate(IExporterDescriptor,String,IContextId)
+    * added method com.polarion.alm.tracker.exporter.IExportTemplate.getLabel
+    * added method com.polarion.alm.tracker.exporter.IExportTemplate.getContextId
+    * added method com.polarion.alm.tracker.model.IWorkItem.addLinkedRevision(String,String)
+    * added method com.polarion.alm.tracker.model.IWorkItem.removeLinkedRevision(String,String)
+    * added method com.polarion.alm.tracker.model.ILinkedRevisionStruct.isRemoved
+    * added field com.polarion.alm.tracker.model.ILinkedRevisionStruct.KEY_REMOVED
+    * added method com.polarion.platform.persistence.model.IPObject.getIncompatibleCustomFieldsList
+    * added method com.polarion.platform.persistence.model.IPObject.getIncompatibleCustomFieldPrototype
+    * added method com.polarion.platform.persistence.model.IPObject.getIncompatibleCustomField
+    * added method com.polarion.alm.tracker.ModuleUtils.handlePageBreak
+    * added method com.polarion.alm.tracker.ITrackerPolicy.canUseExcelRoundTrip
+    * deprecated class com.polarion.alm.tracker.importer.IImporter
+    * added class com.polarion.alm.tracker.importer.IImportCommand
+    * added class com.polarion.alm.tracker.importer.IImportCommandFactory
+    * added class com.polarion.alm.tracker.importer.IWorkItemImportResult
+    * added class com.polarion.alm.tracker.importer.AbstractImportCommand
+    * added method com.polarion.alm.tracker.importer.IImportInfo.getImportResult
+    * deprecated class com.polarion.alm.tracker.exporter.IExporter
+    * added class com.polarion.alm.tracker.exporter.IExportCommand
+    * added class com.polarion.alm.tracker.exporter.IExportCommandFactory
+    * added class com.polarion.alm.tracker.exporter.AbstractExportCommand
+    * added method com.polarion.alm.tracker.exporter.IExportConfiguration.getContextId
+    * added method com.polarion.alm.tracker.exporter.ExportConfiguration.getContextId
+    * added method com.polarion.alm.tracker.exporter.ExportConfiguration.setContextId
+    * added method com.polarion.alm.tracker.exporter.IExport.getExportResult
+    * added method com.polarion.alm.tracker.model.IModule.getModuleNameWithSpace
+    * added method com.polarion.platform.spi.security.IAuthenticationSource.getAllSections
+    * added method com.polarion.alm.tracker.model.IModule.getDerivedModules
+    
+  Polarion Web Services
+      
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.addExternallyLinkedItem
+    * added method com.polarion.alm.ws.client.tracker.TrackerWebService.removeExternallyLinkedItem
+        
+Version 3.5.0
+-------------
+
+  Polarion Java API
+
+    * removed method com.polarion.alm.builder.IBuilderService.getDashboardDescriptor(IGroupEntity)
+    * removed interface com.polarion.alm.builder.model.IDashboardDescriptor
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.setUserACL(String, String, String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.delUserACL(String, String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getUserACLRights(String, String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getUserACLRights(String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getGroupACLRights(String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.setGroupACL(String, String, String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.delGroupACL(String, String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getGroupACLRights(String, String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.hasACL(String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getEffectiveGroupsAndUsers(List, boolean)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getEffectiveUsers(List, boolean)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getOverridenPaths(String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getAllUsers()
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getAllRoles()
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.patch(String)
+    * new constant com.polarion.alm.tracker.importer.IImportManager.IMP_WORD
+    * new interface com.polarion.alm.tracker.model.IExternalWorkItemURI
+    * new interface com.polarion.alm.tracker.model.IExternallyLinkedWorkItemStruct
+    * new constant com.polarion.alm.tracker.model.IWorkItem.KEY_EXTERNALLY_LINKED_WORK_ITEMS
+    * new method com.polarion.alm.tracker.model.IWorkItem.getExternallyLinkedWorkItemsStructs()
+    * new method com.polarion.alm.tracker.model.IWorkItem.getExternallyLinkedWorkItemsStructsDirect()
+    * new interface com.polarion.alm.tracker.ITrackerService.IExternallyLinkedWorkItem
+    * new method com.polarion.alm.tracker.ITrackerService.loadExternallyLinkedWorkItems(List, String, boolean, Map)
+    * new method com.polarion.alm.tracker.ITrackerService.getExternalWorkItemURI(URI)
+    * new interface com.polarion.alm.tracker.exporter.IModuleExportConfiguration
+    * new class com.polarion.alm.tracker.exporter.ModuleExportConfiguration
+    * new constant com.polarion.alm.tracker.importer.IImportConfiguration.IMPORT_TYPE_WORKITEMS
+    * new constant com.polarion.alm.tracker.importer.IImportConfiguration.IMPORT_TYPE_MODULES
+    * new method com.polarion.alm.tracker.importer.IImportManager.getImporterDescriptors(String)
+    * new method com.polarion.alm.tracker.importer.IImporterDescriptor.getImportTypes()
+    * new interface com.polarion.alm.tracker.importer.IModuleImportConfiguration
+    * new class com.polarion.alm.tracker.importer.ModuleImportConfiguration
+    * new method com.polarion.platform.persistence.diff.IDiffManager.getDiffGenerator(String, IPrototype)
+    * new method com.polarion.core.util.types.duration.DurationTimeFactory.parseDuration(String)
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canUseAccessManagement()
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_HOMEPAGECONTENT
+    * new method com.polarion.alm.tracker.model.IModule.isOldStyleModule()
+    * new method com.polarion.alm.tracker.model.IModule.getHomePageContent()
+    * new method com.polarion.alm.tracker.model.IModule.setHomePageContent(Text)
+    * new method com.polarion.platform.persistence.spi.Structure.getPObject()
+    * new method com.polarion.alm.tracker.model.IModule.getAllWorkItems()
+    * new method com.polarion.alm.tracker.model.IModule.getUnreferencedWorkItems()
+    * new method com.polarion.platform.security.ISecurityService.findPermissionFactory(String)
+    * new method com.polarion.platform.security.ISecurityService.getParentPermissions(IPermission)
+    * new method com.polarion.alm.tracker.IModuleManager.getModulePageLayouter(String)
+    * new method com.polarion.alm.tracker.IModuleManager.registerModulePageLayouter(String, IModulePageLayouter)
+    * new interface com.polarion.alm.tracker.IModulePageLayouter
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_RENDERINGLAYOUTS
+    * new interface com.polarion.alm.tracker.model.IModule.IRenderingLayoutStruct
+    * new method com.polarion.alm.tracker.model.IModule.getRenderingLayouts()
+    * new method com.polarion.alm.tracker.model.IModule.renderHomePageContent(String, String, String)
+    * new constant com.polarion.alm.tracker.IModuleManager.DEFAULT_LAYOUTER
+    * new constant com.polarion.alm.tracker.IModuleManager.PARAGRAPH_LAYOUTER
+    * new constant com.polarion.alm.tracker.IModuleManager.SECTION_LAYOUTER
+    * new method com.polarion.alm.tracker.model.IWorkItem.addExternallyLinkedItem(URI, IEnumOption)
+    * new method com.polarion.alm.tracker.model.IWorkItem.removeExternallyLinkedItem(URI, IEnumOption)
+    * new method com.polarion.alm.tracker.IModuleManager.getRegisteredModulePageLayouterNames()
+    * new interface com.polarion.alm.tracker.model.IAttachmentBase
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_ATTACHMENTS
+    * new method com.polarion.alm.tracker.model.IModule.createAttachment(String, String, InputStream)
+    * new method com.polarion.alm.tracker.model.IModule.getAttachments()
+    * new method com.polarion.alm.tracker.model.IModule.getAttachment(String)
+    * new method com.polarion.alm.tracker.model.IModule.deleteAttachment(IModuleAttachment)
+    * new interface com.polarion.alm.tracker.model.IModuleAttachment
+    * new interface com.polarion.alm.tracker.model.ICommentBase
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_COMMENTS
+    * new method com.polarion.alm.tracker.model.IModule.createComment(Text)
+    * new method com.polarion.alm.tracker.model.IModule.getComments()
+    * new method com.polarion.alm.tracker.model.IModule.getRootComments()
+    * new interface com.polarion.alm.tracker.model.IModuleComment
+    * new constant com.polarion.alm.projects.IProjectLifecycleManager.PROP_NAME
+    * new constant com.polarion.alm.projects.IProjectLifecycleManager.PROP_DESCR
+    * new constant com.polarion.alm.projects.IProjectLifecycleManager.PROP_PARAMS
+    * new constant com.polarion.alm.projects.IProjectLifecycleManager.PROP_PARAM
+    * new constant com.polarion.alm.projects.IProjectLifecycleManager.PROP_PARAM_NAME
+    * new constant com.polarion.alm.projects.IProjectLifecycleManager.PROP_TEMPLATE_LOCATION
+    * new method com.polarion.alm.projects.IProjectLifecycleManager.saveProjectTemplate(String, Properties, String)
+    * new method com.polarion.alm.projects.IProjectLifecycleManager.duplicateProjectTemplate(String, Properties, String, String)
+    * new method com.polarion.alm.projects.IProjectLifecycleManager.writeProjectTemplateTo(ZipOutputStream, String, boolean)
+    * new method com.polarion.alm.projects.IProjectTemplate.isDefault()
+    * new method com.polarion.alm.projects.IProjectTemplate.getParametersIDs()
+    * new method com.polarion.platform.security.ISecurityService.hasPermission(Collection, IPermission, IContextId)
+    * new method com.polarion.platform.repository.config.IRepositoryConfigService.invalidateLocation(ILocation)
+    * new constant com.polarion.alm.tracker.exporter.IExportManager.EXP_WORD_ROUND_TRIP
+    * new constant com.polarion.alm.tracker.importer.IImportManager.IMP_WORD_ROUND_TRIP
+    * new method com.polarion.alm.projects.IProjectLifecycleManager.getAllProjectTemplateIDs()
+    * new method com.polarion.alm.projects.IProjectTemplate.getDistributions()
+    * new constant com.polarion.alm.projects.model.IUser.KEY_INITIALS
+    * new method com.polarion.alm.projects.model.IUser.getInitials()
+    * new method com.polarion.alm.projects.model.IUser.setInitials(String)
+    * new constant com.polarion.alm.projects.IProjectLifecycleManager.PROP_AVAILABLE_FOR_CURRENT_USER
+    * new method com.polarion.alm.projects.IProjectLifecycleManager.getAllProjectTemplates(boolean)
+    * new method com.polarion.alm.projects.IProjectTemplate.isAvailableForCurrentUser()
+    * new constant com.polarion.alm.projects.IProjectLifecycleManager.PROP_CUSTOM_TEMPLATE_ICO
+    * new method com.polarion.alm.projects.IProjectTemplate.getCustomIco()
+    * new method com.polarion.alm.projects.IProjectLifecycleManager.getProjectTemplateCustomIco(BufferedOutputStream, String, String, String)
+    * new method com.polarion.alm.projects.IProjectLifecycleManager.PROP_DISTRIBUTIONS
+    * new method com.polarion.alm.tracker.importer.IImportConfiguration.PARAM_FILE_NAME
+    * new method com.polarion.alm.tracker.model.IModule.getHeadingWorkItemType()
+    * new method com.polarion.alm.tracker.model.IModule.createUnreferencedWorkItem()
+    * new method com.polarion.alm.tracker.model.IModule.removeComment(IModuleComment)
+    * new method com.polarion.alm.tracker.model.IModule.compareRevisions(String, String)
+    * new constant com.polarion.alm.tracker.model.IModule.ATTACHMENT_IMG_PREFIX
+    * new method com.polarion.alm.tracker.model.IModule.handleDocumentComments(String, String)
+    * new method com.polarion.alm.wiki.model.IWikiPage.getUpdated()
+    * new method com.polarion.alm.wiki.model.IWikiPage.getCreated()
+    * new method com.polarion.alm.wiki.model.IWikiPage.getUpdatedBy()
+    * new method com.polarion.alm.wiki.model.IWikiPage.getCreatedBy()
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_MODULEFOLDER
+    * new method com.polarion.alm.tracker.model.IModule.getModuleFolder()
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_MODULELOCATION_GRANDPARENT
+    * method com.polarion.alm.tracker.model.IModificationDiff.getDeltas() returns IFieldDiff[] instead of Object[]
+    * new class com.polarion.alm.tracker.ModuleUtils
+    * new method com.polarion.alm.wiki.IWikiService.searchPages(String, String, String)
+    * new method com.polarion.alm.wiki.model.IWikiPage.getProject()
+    * new method com.polarion.alm.tracker.IModuleManager.getModuleWorkItems(IProject, String, String, String, int)
+    * new method com.polarion.alm.tracker.importer.IImportManager.setTemplateContent(IImporterDescriptor, String, IContextId, InputStream, boolean)
+    * new constant com.polarion.alm.tracker.model.IModule.RENDERING_TARGET_PREVIEW
+    * new constant com.polarion.alm.tracker.model.IModule.RENDERING_TARGET_EDITOR
+    * new constant com.polarion.alm.tracker.model.IModule.RENDERING_TARGET_ROUNDTRIP
+    * new constant com.polarion.alm.tracker.model.IModule.RENDERING_TARGET_COMPARE
+    * new constant com.polarion.alm.tracker.model.IModule.RENDERING_TARGET_EXPORT_PDF
+    * new method com.polarion.alm.tracker.model.IModule.getHomePageContentParts()
+    * new method com.polarion.alm.tracker.model.IModule.getWorkItem()
+    * new method com.polarion.alm.tracker.ITrackerService.isAutoSuspectOn(IContextId)
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_AUTOSUSPECT
+    * new method com.polarion.alm.tracker.model.IModule.isAutoSuspect()
+    * new method com.polarion.alm.tracker.model.IModule.setAutoSuspect(boolean)
+    * method com.polarion.alm.tracker.workflow.config.IWorkflowConfig.getActions() returns Collection<IAction> instead of Collection
+    * new method com.polarion.alm.tracker.model.IModule.filterWorkItems(String)
+    * new method com.polarion.alm.tracker.model.IModule.checkConflictInParts(Set, Set, Set, Set, IModule)
+    * new method com.polarion.alm.tracker.model.IModule.mergeContentParts(Set, Map, Map, Set)
+    * new constant com.polarion.alm.tracker.IModuleManager.DEFAULT_SPACE_LOCATION
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canImportModule(IContextId)
+    * new interface com.polarion.platform.persistence.IAuthSrcPermissionService
+    * new class com.polarion.platform.spi.security.AuthenticationSourcePermission
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.getAuthSrcPermission(String, String)
+    * new constant com.polarion.psvn.core.notifications.INotificationEvent.DOCUMENT_CREATED
+    * new constant com.polarion.psvn.core.notifications.INotificationEvent.DOCUMENT_UPDATED
+    * new constant com.polarion.psvn.core.notifications.INotificationEvent.DOCUMENT_DELETED
+    * new method com.polarion.platform.persistence.IPersistencePolicy.canReadInstances(String, String, IContextId)
+    * new method com.polarion.platform.persistence.IPersistencePolicy.canReadInstance(String, IPObject)
+    * new method com.polarion.platform.service.repository.IRepositoryReadOnlyConnection.getSubLocations(ILocation, boolean, boolean)
+    * new constant com.polarion.psvn.core.notifications.INotificationEvent.DOCUMENT_COMMENTED
+    * new constant com.polarion.psvn.core.notifications.INotificationEvent.DOCUMENT_COMMENT_REMOVED
+    * new constant com.polarion.alm.tracker.model.IModule.RENDERING_TARGET_PRINT
+    * method com.polarion.alm.tracker.importer.IImportManager.getImporterDescriptors() returns Collection<IImporterDescriptor> instead of Collection
+    * method com.polarion.alm.tracker.importer.IImportManager.getImports(IUser) returns List<IImportInfo> instead of List
+    * deprecated method com.polarion.alm.tracker.importer.IImportManager.getTemplates(IImporterDescriptor)
+    * new method com.polarion.alm.tracker.importer.IImportManager.getTemplates(IImporterDescriptor, IContextId)
+    * deprecated method com.polarion.alm.tracker.importer.IImportManager.getTemplate(IImporterDescriptor, String)
+    * new method com.polarion.alm.tracker.importer.IImportManager.getTemplate(IImporterDescriptor, String, IContextId)
+    * deprecated method com.polarion.alm.tracker.importer.IImportManager.deleteTemplate(IImporterDescriptor, String)
+    * new method com.polarion.alm.tracker.importer.IImportManager.deleteTemplate(IImporterDescriptor, String, IContextId)
+    * new method com.polarion.alm.tracker.importer.IImportTemplate.getLabel()
+    * new method com.polarion.alm.tracker.importer.IImportTemplate.getContextId()
+    * method com.polarion.alm.tracker.importer.IImporterDescriptor.getParameterDescriptors() returns List<IParameterDescriptor> instead of List
+    * method com.polarion.alm.tracker.importer.ImportConfiguration.setParams(Map) has changed argument type to Map<String, Object>
+    * new class com.polarion.alm.tracker.model.IWorkItem.RenderingOptions
+    * new method com.polarion.alm.tracker.model.IWorkItem.renderDescription(Text, RenderingOptions)
+    * deprecated method com.polarion.alm.tracker.model.IWorkItem.transformDescriptionForUI(Text)
+    * new method com.polarion.alm.tracker.model.IModule.addRenderingLayout(String, String, String)
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canReadDocuments()
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canCreateDocument(IContextId)
+    * new class com.polarion.platform.TransactionLocal
+    * new constructor com.polarion.platform.spi.security.UserRolesConfig.UserRolesConfig(UserRolesConfig, InputStream)
+    * removed constructor com.polarion.platform.spi.security.UserRolesConfig.UserRolesConfig(InputStream)
+    * removed method com.polarion.platform.spi.security.UserRolesConfig.addAll(UserRolesConfig)
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canUseFormConfiguration()
+    * new method com.polarion.platform.persistence.notifications.ChangeInfo.forget()
+    * new method com.polarion.alm.tracker.workreport.IWorkReportConfiguration.getWorkItemsQuery()
+    * new method com.polarion.alm.tracker.workreport.WorkReportConfiguration.setWorkItemsQuery(String)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.checkExistsAndIsValid()
+    * deprecated method com.polarion.alm.tracker.model.IModule.createWorkItem()
+    * new method com.polarion.alm.tracker.model.IModule.createWorkItem(String)
+
+  Polarion Web Services
+
+    * new method com.polarion.alm.ws.client.types.tracker.WorkItem.getExternallyLinkedWorkItems()
+    * new method com.polarion.alm.ws.client.types.tracker.WorkItem.setExternallyLinkedWorkItems(ExternallyLinkedWorkItem)
+    * new class com.polarion.alm.ws.client.types.tracker.ExternallyLinkedWorkItem
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.addExternallyLinkedItem(String, String, EnumOptionId)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.removeExternallyLinkedItem(String, String, EnumOptionId)
+    * new method com.polarion.alm.ws.client.types.tracker.Module.getHomePageContent()
+    * new method com.polarion.alm.ws.client.types.tracker.Module.setHomePageContent(Text)
+    * new method com.polarion.alm.ws.client.types.tracker.Module.getAutoSuspect()
+    * new method com.polarion.alm.ws.client.types.tracker.Module.setAutoSuspect(Boolean)
+    * new method com.polarion.alm.ws.client.types.tracker.Module.getModuleFolder()
+    * new method com.polarion.alm.ws.client.types.tracker.Module.setModuleFolder(String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.getProductLicense()
+    * new class com.polarion.alm.ws.client.types.security.LicenseInfo
+    * new class com.polarion.alm.ws.client.types.security.ProductLicense
+
+Version 3.4.3
+-------------
+
+  Polarion Java API
+  
+    * new method com.polarion.platform.repository.config.IRepositoryConfigService.executeInDataHandlerResultsCachingContext(Object[], RunnableWEx)
+
+  Polarion Web Services
+
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.moveWorkItemToModule(String, String, String, int)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getInitialWorkflowAction(String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.hasPermission(String, String, String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.hasCurrentUserPermission(String, String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.canCreateInstances(String, String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.canReadInstance(String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.canModifyInstance(String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.canDeleteInstance(String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.canReadKey(String, String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.canModifyKey(String, String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.canAddElementToKey(String, String)
+    * new method com.polarion.alm.ws.client.security.SecurityWebService.canRemoveElementFromKey(String, String)
+    
+Version 3.4.2
+-------------
+
+  Polarion Java API
+
+    * new method com.polarion.platform.jobs.IMultiJobUnit.setJobs(MultiJobExecutionRequest...)
+    * new method com.polarion.platform.jobs.IMultiJobUnit.setMultiJobExecutionRequest(MultiJobExecutionRequest)
+    * new class com.polarion.platform.jobs.MultiJobExecutionRequest
+    * new method com.polarion.platform.service.repository.IRepositoryConnection.create(ILocation, InputStream, Boolean) (tagged with @since 3.4.1 after the release)
+    * method com.polarion.platform.persistence.spi.AbstractEnumeration.getAllSortedOptions() returns Collection<IEnumOption> instead of LinkedHashMap
+    * method com.polarion.platform.persistence.spi.RepoBasedEnumeration.getAllSortedOptions() returns List instead of LinkedHashMap
+    
+  Polarion Web Services
+
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getWorkItemByUriInRevision(String, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getWorkItemByUriInRevisionWithFields(String, String, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWorkItemsInRevision(String, String, String, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWorkItemsInRevisionLimited(String, String, String, String, int)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.queryBaselines(String, String)
+    * new method com.polarion.alm.ws.client.types.tracker.WorkItem.getCustomFields()
+    * new method com.polarion.alm.ws.client.types.tracker.WorkItem.setCustomFields(Custom[])
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.createWorkRecordWithTypeAndComment(String, User, Date, EnumOptionId, String, String)
+
+Version 3.4.1
+-------------
+
+  Polarion Java API
+
+    * new method com.polarion.alm.tracker.IDocumentsManager.existsDocumentFolder(ILocation)
+    * new method com.polarion.alm.tracker.IModuleManager.duplicate(IModule, IProject, ILocation, String, ILinkRoleOpt, Set, Set, Set, Set, Map)
+    * new method com.polarion.alm.tracker.IModuleManager.createDerivedModule(IModule, IProject, ILocation, String, Set, ILinkRoleOpt, Set, Set, Map)
+    * new method com.polarion.alm.tracker.IModuleManager.updateWILinksAfterModuleReuse(Map)
+    * new interface com.polarion.alm.wiki.IWikiService
+    * new interface com.polarion.alm.wiki.IWikiPolicy
+    * new interface com.polarion.alm.wiki.model.IWikiPage
+    * new interface com.polarion.alm.wiki.model.IWikiSpace
+    * new class com.polarion.wiki.util.CalendarTool
+    * new class com.polarion.wiki.util.EscapingTool
+    * new interface com.polarion.platform.IPlatformService
+    * new constructor com.polarion.subterra.base.location.LocationsCache.LocationWrapper.LocationWrapper(ILocation, boolean, long)
+    * new field com.polarion.subterra.base.location.LocationsCache.LocationWrapper.lastRev
+
+  Polarion Web Services
+  
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.createModule(String, String, String, EnumOptionId, EnumOptionId, boolean, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.updateDerivedModule(String, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getModuleByUri(String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getModuleByUriWithFields(String, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getModuleByLocation(String, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getModuleByLocationWithFields(String, String, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getModuleWorkItems(String, String, boolean, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getModuleWorkItemUris(String, String, boolean)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.createWorkItemInModule(String, String, WorkItem)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.reuseModule(String, String, String, String, EnumOptionId, String, String, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.updateModule(Module)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.deleteModule(String)
+    * new class com.polarion.alm.ws.client.types.tracker.Module
+    * new method com.polarion.alm.ws.client.types.tracker.WorkItem.getModuleURI()
+    * new method com.polarion.alm.ws.client.types.tracker.WorkItem.setModuleURI(String)
+    * new class com.polarion.alm.ws.client.Utils
+
+Version 3.4.0
+-------------
+
+  Polarion Java API
+
+    * new interface com.polarion.alm.projects.model.IGroupUniqueObject
+    * new method com.polarion.alm.tracker.ITimePointsManager.createTimePoint(IContextId, String, DateOnly)
+    * new method com.polarion.alm.tracker.ITimePointsManager.getTimePoint(IContextId, String, boolean)
+    * new method com.polarion.alm.tracker.ITimePointsManager.getTimePoints(IContextId, String, String, boolean, boolean, boolean)
+    * new method com.polarion.alm.tracker.ITimePointsManager.getTimePoints(IContextId, String, boolean)
+    * new method com.polarion.alm.tracker.ITimePointsManager.getNotClosedTimePoints(IContextId, String, boolean)
+    * new method com.polarion.alm.tracker.ITimePointsManager.getClosedTimePoints(IContextId, String, boolean)
+    * new method com.polarion.alm.tracker.ITimePointsManager.getNearestTimePoint(IContextId, boolean)
+    * deprecated method com.polarion.alm.tracker.ITimePointsManager.getClosedTimePoints(String)
+    * deprecated method com.polarion.alm.tracker.ITimePointsManager.getNearestTimePoint(String)
+    * deprecated method com.polarion.alm.tracker.ITimePointsManager.getNotClosedTimePoints(String)
+    * deprecated method com.polarion.alm.tracker.ITimePointsManager.getTimePoints(String)
+    * new method com.polarion.alm.builder.ICleanJobUnit.setMaxBuildAgeDays(int)
+    * new method com.polarion.alm.builder.ICleanJobUnit.setBuildArtifacts(IBuildArtifactSelector)
+    * new method com.polarion.alm.builder.ICleanJobUnit.setMinSuccessfulBuildsCount(int)
+    * new method com.polarion.alm.builder.spi.BuildArtifactSelector.fromString(String)
+    * new method com.polarion.alm.tracker.model.ILinkRoleOpt.getRules()
+    * new interface com.polarion.alm.tracker.model.ILinkRoleOpt.IRule
+    * new method com.polarion.alm.tracker.model.ILinkRoleOpt.isAllowed(String, String)
+    * new method com.polarion.alm.tracker.model.ILinkRoleOpt.isAllowed(ITypeOpt, ITypeOpt)
+    * new method com.polarion.alm.tracker.model.ILinkRoleOpt.isAllowedToTypes(String)
+    * new method com.polarion.alm.tracker.model.IModule.KEY_OUTLINENUMBERING
+    * new method com.polarion.alm.tracker.model.IModule.KEY_USESOUTLINENUMBERING
+    * new method com.polarion.alm.tracker.model.IModule.IStructureNode.getOutlineNumber()
+    * new constant com.polarion.alm.tracker.model.IModule.IStructureNode.KEY_OUTLINENUMBER
+    * new interface com.polarion.alm.tracker.model.IModule.IOutlineNumberingDef
+    * new method com.polarion.alm.tracker.model.IModule.usesOutlineNumbering()
+    * new method com.polarion.alm.tracker.model.IModule.setUsesOutlineNumbering(boolean)
+    * new method com.polarion.alm.tracker.model.IModule.getOutlineNumbering()
+    * new method com.polarion.alm.tracker.model.IModule.setOutlineNumberingPrefix(String)
+    * new method com.polarion.alm.tracker.model.IModule.getOutlineNumberOfWorkitem(IWorkItem)
+    * new method com.polarion.alm.tracker.IModuleManager.moveOutFromModulesWithReport(Collection)
+    * new interface com.polarion.alm.tracker.model.IModule.IMoveReport
+    * new method com.polarion.alm.tracker.model.IModule.moveInWithReport(Collection, String)
+    * new method com.polarion.alm.tracker.model.IModule.moveOutWithReport(Collection)
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_MODULELOCATION_TREE
+    * new method com.polarion.subterra.base.data.model.IPrimitiveType.getSubtype()
+    * new method com.polarion.subterra.base.data.model.TypeFactory.getPrimitiveType(Class, String)
+    * new method com.polarion.subterra.base.data.model.TypeFactory.getPrimitiveType(String, String)
+    * new method com.polarion.alm.tracker.model.IWorkItem.getOutlineNumber()
+    * new constant com.polarion.alm.tracker.model.IWorkItem.KEY_OUTLINE_NUMBER
+    * deprecated method com.polarion.alm.tracker.exporter.IExportHelper.format(Object)
+    * deprecated method com.polarion.alm.tracker.exporter.IExportHelper.formatFieldValue(String,String,Object)
+    * new method com.polarion.alm.tracker.exporter.IExportHelper.getFormatter(Options)
+    * new interface com.polarion.alm.tracker.exporter.IExportHelper.IFormatter
+    * new class com.polarion.alm.tracker.exporter.IExportHelper.Options
+
+  Polarion Web Services
+
+    * new method com.polarion.alm.ws.client.types.tracker.WorkItem.getOutlineNumber()
+    
+Version 3.3.2
+-------------
+
+  Polarion Java API
+
+    * new method com.polarion.qcentre.factbase.serialization.CachedFactBaseRepository.clearCache()
+    * new method com.polarion.core.util.types.DateOnly.clone()
+    * new method com.polarion.core.util.types.duration.DurationTime.clone()
+    * new method com.polarion.core.util.types.duration.Fraction.clone()
+    * new method com.polarion.core.util.types.duration.FractionalCombination.clone()
+
+Version 3.3.1
+-------------
+
+  Polarion Java API
+
+    * new method com.polarion.platform.security.ISecurityService.getUserManagementPolicy()
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.userExists(String)
+    * new method com.polarion.alm.tracker.model.IWorkItem.getAttachmentsContainedByDescription()
+    * new interface com.polarion.platform.jobs.ILogsCleanupJobUnit
+    * new class com.polarion.platform.jobs.spi.ArrayJobParameter
+    * new method com.polarion.platform.jobs.spi.SimpleJobParameter.convertSimpleValue(IJobParameterType, Object)
+    * new method com.polarion.platform.persistence.IQueryHelper.fieldQuery(String, String)
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canUseCalendarFromSVN(String)
+    * new method com.polarion.platform.ITransactionService.setRollbackOnly(String)
+    * new method com.polarion.alm.tracker.model.IModule.moveIn(Collection<IWorkItem>, String)
+    * new method com.polarion.qcentre.factbase.serialization.FactBaseRepository.clearCache()
+
+  Polarion Web Services
+
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.addAttachment(String, String, String, byte)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.updateAttachment(String, String, String, String, byte)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.deleteAttachment(String, String)
+
+Version 3.3.0
+-------------
+
+  Polarion Java API
+
+    * new constructor com.polarion.core.util.types.duration.DurationTime(boolean, String[], boolean)
+    * new method com.polarion.core.util.types.duration.DurationTime.isNegative()
+    * new method com.polarion.core.util.types.duration.DurationTime.setNegative(boolean)
+    * new constant com.polarion.alm.projects.model.IProject.KEY_LOCK_WORK_RECORDS_DATE
+    * new method com.polarion.alm.projects.model.IProject.getLockWorkRecordsDate()
+    * new method com.polarion.alm.projects.model.IProject.setLockWorkRecordsDate(DateOnly)
+    * new method com.polarion.alm.tracker.ITrackerService.getWorkRecordsConfig(IProject)
+    * new method com.polarion.alm.tracker.model.ITrackerProject.getWorkRecordTypeEnum()
+    * new method com.polarion.alm.tracker.model.IWorkItem.createWorkRecord(IUser, DateOnly, IWorkRecordTypeOpt, DurationTime, String)
+    * new constant com.polarion.alm.tracker.model.IWorkRecord.KEY_TYPE
+    * new constant com.polarion.alm.tracker.model.IWorkRecord.KEY_COMMENT
+    * new method com.polarion.alm.tracker.model.IWorkRecord.getComment()
+    * new method com.polarion.alm.tracker.model.IWorkRecord.getType()
+    * new interface com.polarion.alm.tracker.model.IWorkRecordTypeOpt
+    * new method com.polarion.alm.tracker.workreport.IWorkReportConfiguration.getIncludeTimeline()
+    * new method com.polarion.alm.tracker.workreport.IWorkReportConfiguration.getIncludeWorkRecordList()
+    * new method com.polarion.alm.tracker.workreport.WorkReportConfiguration.setIncludeTimeline(boolean)
+    * new method com.polarion.alm.tracker.workreport.WorkReportConfiguration.getIncludeTimeline()
+    * new method com.polarion.alm.tracker.workreport.WorkReportConfiguration.setIncludeWorkRecordList(boolean)
+    * new method com.polarion.alm.tracker.workreport.WorkReportConfiguration.getIncludeWorkRecordList()
+    * new method com.polarion.alm.tracker.IModuleManager.createDerivedModule(IModule, IProject, ILocation, String, Set, ILinkRoleOpt, Set, Set)
+    * new method com.polarion.alm.tracker.IModuleManager.updateDerivedModule(IModule, String, Set, Set)
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_DERIVEDFROM
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_DERIVEDFIELDS
+    * new constant com.polarion.alm.tracker.model.IModule.KEY_DERIVEDFROMLINKROLE
+    * new method com.polarion.alm.tracker.model.IModule.setDerivedFrom(IModule)
+    * new method com.polarion.alm.tracker.model.IModule.getDerivedFrom()
+    * new method com.polarion.alm.tracker.model.IModule.setDerivedFields(String)
+    * new method com.polarion.alm.tracker.model.IModule.getDerivedFields()
+    * new method com.polarion.alm.tracker.model.IModule.setDerivedFromLinkRole(ILinkRoleOpt)
+    * new method com.polarion.alm.tracker.model.IModule.getDerivedFromLinkRole()
+    * new method com.polarion.alm.tracker.IModuleManager.isDerivedFromLink(IWorkItem, ILinkRoleOpt, IWorkItem)
+    * new method com.polarion.alm.tracker.model.IWorkItem.doSuspectDerivedItems()
+    * new interface com.polarion.alm.projects.IProjectManagementJobUnit
+    * new class com.polarion.platform.jobs.spi.LocationJobParameter
+    * new constant com.polarion.platform.jobs.IJobUnit.UNKNOWN_WORK_LENGTH
+    * new method com.polarion.platform.service.repository.IRepositoryReadOnlyConnection.getMergedRevisionsMetaData(String)
+    * new method com.polarion.alm.tracker.model.IWorkItem.getInitialAction()
+    * new method com.polarion.alm.tracker.workflow.IWorkflowManager.getInitialAction(IWorkItem)
+    * new method com.polarion.alm.tracker.workflow.IWorkflowManager.handleSave(IWorkItem)
+    * new interface com.polarion.platform.persistence.ICalculatedFieldsService
+    * new method com.polarion.platform.persistence.IDataService.getCalculatedFieldsService()
+    * new interface com.polarion.platform.persistence.IObjectHierarchyProvider
+    * new method com.polarion.platform.persistence.IDataService.getObjectHierarchyProvider()
+    * new method com.polarion.alm.tracker.IDocumentsManager.getDocumentPersistenceModule()
+    * new method com.polarion.alm.tracker.IDocumentsManager.getDocumentStorage(ILocation)
+    * new method com.polarion.alm.tracker.model.IModule.moveOut(Collection)
+    * new interface com.polarion.platform.ExtendedSynchronization
+    * new interface com.polarion.alm.tracker.IModuleManager.moveOutFromModules(Collection)
+    * new package com.polarion.psvn.core.notifications (including subpackages; not tagged with @since tag)
+    * new constant com.polarion.alm.tracker.model.ILinkRoleOpt.PROPERTY_PARENT
+    * new method com.polarion.subterra.base.data.model.ICustomFieldsProvider.getDefinedCustomFields(String, IContextId, Object)
+    * new interface com.polarion.alm.tracker.exporter.IXmlGenerator
+    * new method com.polarion.alm.tracker.exporter.IExportTemplate.getLocation()
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canUseXmlExport()
+    * new constant com.polarion.alm.tracker.exporter.IExportManager.EXP_XML_XML
+    * new constant com.polarion.alm.tracker.exporter.IExportManager.EXP_XML_HTML
+    * new constant com.polarion.alm.tracker.exporter.IExportManager.EXP_XML_TXT
+    * new constant com.polarion.alm.tracker.exporter.IExportManager.EXP_XML_PDF
+    * new constant com.polarion.alm.tracker.exporter.IExportManager.EXP_XML_RTF
+
+  Polarion Web Services
+
+    * new service com.polarion.alm.ws.client.builder.BuilderWebService and related classes
+    * new method com.polarion.alm.ws.client.projects.ProjectWebService.getContainedGroups(String)
+    * new method com.polarion.alm.ws.client.projects.ProjectWebService.getContainedProjects(String)
+    * new method com.polarion.alm.ws.client.projects.ProjectWebService.getProjectByURI(String)
+    * new method com.polarion.alm.ws.client.types.projects.Project.getLocation()
+    * new method com.polarion.alm.ws.client.types.projects.Project.setLocation(String)
+    * new method com.polarion.alm.ws.client.types.projects.Project.getLockWorkRecordsDate()
+    * new method com.polarion.alm.ws.client.types.projects.Project.setLockWorkRecordsDate(Date)
+    * new method com.polarion.alm.ws.client.types.projects.ProjectGroup.getLocation()
+    * new method com.polarion.alm.ws.client.types.projects.ProjectGroup.setLocation(String)
+    * new method com.polarion.alm.ws.client.types.tracker.WorkRecord.getComment()
+    * new method com.polarion.alm.ws.client.types.tracker.WorkRecord.setComment(String)
+    * new method com.polarion.alm.ws.client.types.tracker.WorkRecord.getType()
+    * new method com.polarion.alm.ws.client.types.tracker.WorkRecord.setType(EnumOptionId)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.generateHistory(String, String[], String[]) and related classes
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getDurationHours(String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getWorkItemsCount(String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWorkItemsLimited(String, String, String[], int)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.queryWorkItemUrisLimited(String, String, int)
+    * new method com.polarion.alm.ws.client.projects.ProjectWebService.getUsers()
+    * new method com.polarion.alm.ws.client.projects.ProjectWebService.getUserByUri(String)
+    * new method com.polarion.alm.ws.client.projects.ProjectWebService.getProjectAtLocation(String)
+    * new method com.polarion.alm.ws.client.projects.ProjectWebService.getProjectGroupAtLocation(String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getRevision(String, String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getRevisionByUri(String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getWorkItemsLinkedToRevision(String)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getWorkItemsLinkedToRevisionWithFields(String, String[])
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.queryRevisionUris(String, String, boolean)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.queryRevisions(String, String, String[])
+
+Version 3.2.3
+-------------
+
+  Polarion Java API
+  
+    * new constant com.polarion.alm.tracker.model.IWorkItem.KEY_LINKED_REVISIONS_DERIVED
+    * new constant com.polarion.subterra.base.data.model.ICustomFieldsProvider.CONFLICT_PREFIX
+
+  Polarion Web Services
+
+    * new method com.polarion.alm.ws.client.projects.ProjectWebService.createUser(String)
+    * new method com.polarion.alm.ws.client.projects.ProjectWebService.updateUser(User)
+    * new method com.polarion.alm.ws.client.tracker.TrackerWebService.getOneDayLength()
+    * new method com.polarion.alm.ws.client.types.tracker.WorkItem.getLinkedRevisionsDerived()
+    * new method com.polarion.alm.ws.client.types.tracker.WorkItem.setLinkedRevisionsDerived(Revision)
+
+Version 3.2.1
+-------------
+
+  Polarion Java API
+
+    * new interface <tt>com.polarion.platform.jobs.IMultiJobUnit</tt>
+    * new method <tt>com.polarion.alm.builder.IWritableRepository.moveFromLocalFile(File, ILocation)</tt>
+    * new method <tt>com.polarion.alm.builder.model.IBuildDescriptor.IBuildDeploymentDefinition.isMove()</tt>
+    * new method <tt>com.polarion.platform.repository.config.IRepositoryConfigService.executeInDataHandlerResultsCachingContext(RunnableWEx)</tt>
+    * new constant <tt>com.polarion.platform.security.AdministrationPermission.ACTION_PROJECT_CREATE</tt>
+    * new method <tt>com.polarion.alm.tracker.IPlanningManager.getCurrentUpdateJob()</tt>
+    * deprecated constant <tt>com.polarion.alm.tracker.IPlanningManager.UPDATEPLAN_CALC_ID</tt>
+
+Version 3.2.0
+-------------
+
+  Polarion Java API
+
+    * new method com.polarion.alm.tracker.ITrackerService.getModuleManager()
+    * new method com.polarion.subterra.base.data.model.IStructType.getSerializer()
+    * new inteface com.polarion.subterra.base.data.model.IStructValueSerializer
+    * new method com.polarion.subterra.base.data.model.TypeFactory.getStructType(String, Map, IStructValueSerializer)
+    * new method com.polarion.alm.tracker.model.IWorkItem.delete()
+    * new method com.polarion.platform.persistence.model.IPObject.copyTo(IPObject, Set, Set, boolean, Set, Set)
+    * new method com.polarion.platform.persistence.spi.PObject.copyTo(IPObject, Set, Set, boolean, Set, Set)
+    * new method com.polarion.platform.persistence.model.IStructure.isModified()
+    * new method com.polarion.platform.persistence.spi.Structure.isModified()
+
+Version 3.1.3
+-------------
+
+  Polarion Java API
+
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canUseModules()
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canUseTreeMultiEdit()
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canUseTreeTableExport()
+    * new interface com.polarion.alm.tracker.IModuleManager
+    * new interface com.polarion.alm.tracker.model.IModule
+    * changed return type of method com.polarion.alm.tracker.IBaselinesManager.scheduleComparisonJob(String, String, IUser)
+    * new method com.polarion.alm.tracker.model.IWorkItem.getModule()
+    * new method com.polarion.alm.tracker.IDocumentsManager.transformImgUrlForLiveDocs(String, IDocImgUrlFactory)
+    * removed method com.polarion.alm.tracker.IDocumentsManager.transformImgUrl(String, IDocImgUrlFactory)
+    * removed method com.polarion.alm.tracker.IDocumentsManager.transformImgUrlsInHTML(String, IDocImgUrlFactory)
+    * new interface com.polarion.alm.tracker.IImgUrlFactory
+    * changed return type of method com.polarion.alm.tracker.IDocumentsManager.getPortalImgUrlFactory()
+    * new method com.polarion.alm.tracker.IDocumentsManager.transformImgUrl(String, IImgUrlFactory)
+    * new method com.polarion.alm.tracker.IDocumentsManager.transformImgUrlsInHTML(String, IImgUrlFactory)
+    * new method com.polarion.alm.tracker.model.IWorkItem.transformDescriptionForUI(Text)
+    * new constant com.polarion.alm.tracker.exporter.IExportManager.EXP_EXCEL_LIVEDOC
+    * new constant com.polarion.alm.tracker.exporter.IExportManager.EXP_WORD_LIVEDOC
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canUseExportToLivedocs()
+    * new class com.polarion.subterra.base.location.LocationsCache
+
+  Polarion Web Services
+
+    * Added method com.polarion.alm.ws.client.tracker.TrackerWebService.addLinkedItemWithRev(String, String, EnumOptionId, String, boolean)
+    * Added method com.polarion.alm.ws.client.tracker.TrackerWebService.getRevisions(String)
+
+
+Version 3.1.2
+-------------
+
+  Polarion Java API
+
+    * new method com.polarion.alm.tracker.exporter.IExporterDescriptor.getHint()
+    * new inteface com.polarion.platform.repository.config.IConfigProblemCatcher
+    * new inteface com.polarion.platform.repository.config.IConfigProblemCatcher.IProblem
+    * new enum com.polarion.platform.repository.config.IConfigProblemCatcher.Severity
+    * new method com.polarion.platform.repository.config.IDataHandler.readLocation(ILocation, IDataHandlerContext)
+    * new method com.polarion.platform.repository.config.IDataHandler.readLocations(List, IDataHandlerContext)
+    * new method com.polarion.platform.repository.config.IDataHandler.writeLocation(ILocation, Object, IDataHandlerContext)
+    * removed method com.polarion.platform.repository.config.IDataHandler.readLocation(ILocation, IRepositoryService)
+    * removed method com.polarion.platform.repository.config.IDataHandler.readLocations(List, IRepositoryService)
+    * removed method com.polarion.platform.repository.config.IDataHandler.writeLocation(ILocation, Object, IRepositoryService)
+    * new inteface com.polarion.platform.repository.config.IDataHandlerContext
+    * new method com.polarion.platform.repository.config.IRepositoryConfigService.getConfigProblemCatcher()
+    * new method com.polarion.subterra.base.data.model.ICustomFieldsProvider.getControlField(String)
+    * new method com.polarion.subterra.base.data.model.ICustomFieldsProvider.getCustomField(String, String, IContextId, Object)
+    * new method com.polarion.subterra.base.data.model.ICustomFieldsProvider.getListCustomField(String, String, IContextId, Object)
+    * new method com.polarion.subterra.base.data.model.ICustomFieldsProvider.isCustomFieldDefined(String, String, IContextId, Object)
+    * deprecated method com.polarion.subterra.base.data.model.ICustomFieldsProvider.getCustomField(String, String, IContextId)
+    * deprecated method com.polarion.subterra.base.data.model.ICustomFieldsProvider.getListCustomField(String, String, IContextId)
+    * deprecated method com.polarion.subterra.base.data.model.ICustomFieldsProvider.isCustomFieldDefined(String, String, IContextId)
+    * new constant com.polarion.alm.tracker.model.IWorkItem.ATTACHMENT_IMG_PREFIX
+    * new constant com.polarion.platform.persistence.IQueryHelper.ALL_QUERY
+    * new method com.polarion.alm.tracker.ITrackerPolicy.canUseUnrestrictedWiki()
+    * new method com.polarion.platform.persistence.IDataService.createCollectionForKey(IPObject, String, List)
+    * new method com.polarion.platform.persistence.IDataService.createCollectionForTypeId(IPObject, String, List)
+    * new method com.polarion.platform.persistence.IDataService.createStructureForKey(IPObject, String, Map)
+    * new method com.polarion.platform.persistence.IDataService.createStructureForTypeId(IPObject, String, Map)
+    * removed method com.polarion.platform.persistence.IDataService.createCollectionForKey(IContextId, String, String, List)
+    * removed method com.polarion.platform.persistence.IDataService.createCollectionForTypeId(IContextId, String, List)
+    * removed method com.polarion.platform.persistence.IDataService.createStructureForKey(IContextId, String, String, Map)
+    * removed method com.polarion.platform.persistence.IDataService.createStructureForTypeId(IContextId, String, Map)
+    * new method com.polarion.platform.persistence.model.IListFactory.createList(IPObject, IListType, boolean, List)
+    * removed method com.polarion.platform.persistence.model.IListFactory.createList(IDataService, IContextId, IListType, boolean, List)
+    * new method com.polarion.platform.persistence.model.IStructureFactory.createStructure(IPObject, IStructType, boolean, Map)
+    * removed method com.polarion.platform.persistence.model.IStructureFactory.createStructure(IDataService, IContextId, IStructType, boolean, Map)
+    * new constructor com.polarion.platform.persistence.spi.CustomTypedList.CustomTypedList(IPObject, IListType, boolean, List)
+    * removed constructor com.polarion.platform.persistence.spi.CustomTypedList.CustomTypedList(IDataService, IContextId, IListType, boolean, List)
+    * new method com.polarion.platform.persistence.spi.DefaultListFactory.createList(IPObject, IListType, boolean, List)
+    * removed method com.polarion.platform.persistence.spi.DefaultListFactory.createList(IDataService, IContextId, IListType, boolean, List)
+    * new method com.polarion.platform.persistence.spi.DefaultStructureFactory.createStructure(IPObject, IStructType, boolean, Map)
+    * removed method com.polarion.platform.persistence.spi.DefaultStructureFactory.createStructure(IDataService, IContextId, IStructType, boolean, Map)
+    * new constructor com.polarion.platform.persistence.spi.ModelTypedList.ModelTypedList(IPObject, IListType, boolean, List)
+    * removed constructor com.polarion.platform.persistence.spi.ModelTypedList.ModelTypedList(IDataService, IContextId, IListType, boolean, List)
+    * new constructor com.polarion.platform.persistence.spi.PObjectTypedList.PObjectTypedList(IPObject, IListType, boolean, List)
+    * removed constructor com.polarion.platform.persistence.spi.PObjectTypedList.PObjectTypedList(IDataService, IListType, boolean, List)
+    * new constructor com.polarion.platform.persistence.spi.Structure.Structure(IPObject, IStructType, boolean, Map)
+    * removed constructor com.polarion.platform.persistence.spi.Structure.Structure(IDataService, IContextId, IStructType, boolean, Map)
+    * removed method com.polarion.platform.persistence.spi.ValueHelper.wrap(IDataService, IContextId, IType, Object)
+    * removed method com.polarion.platform.persistence.spi.ValueHelper.wrapCustomField(IDataService, IContextId, IType, Object)
+    * new method com.polarion.platform.persistence.model.IPrototype.getAnnotationKeys()
+    * deprecated method com.polarion.platform.persistence.model.IPrototype.getAnotationKeys()
+    * new method com.polarion.alm.tracker.workflow.config.IWorkflowConfig.getInitialActionId()
+    * new method com.polarion.alm.tracker.workflow.config.IWorkflowConfig.setInitialActionId(String)
+    * new method com.polarion.qcentre.factbase.tools.DateTagUtils.prevDaysTags(long, int)
+    * new method com.polarion.alm.tracker.IDocumentsManager.getPortalImgUrlFactory()
+
+  Polarion Web Services
+
+    * Comment field childComments replaced with childCommentURIs
+    * Added comment field parentCommentURI
+    * Added TrackerWebService method createCommentNew
+
+Version 3.1.1
+-------------
+
+  Polarion Java API
+
+    * new interface com.polarion.platform.security.ISecurityService.IBackendSecuritySynchronizationResult
+    * new method com.polarion.platform.security.ISecurityService.synchronizeBackendSecurity(Collection<String>, Collection<IContextId>)
+    * new method com.polarion.platform.spi.security.IAuthenticationSource.synchronizeBackendSecurity(ISecurityService, Collection<String>, Collection<IContextId>)
+    * new method com.polarion.alm.tracker.model.IPriorityEnumeration.getClosestStandardOpt(float, IPObject)
+    * new method com.polarion.alm.tracker.model.IPriorityEnumeration.getClosestStandardOpt(float, Object)
+    * new method com.polarion.alm.tracker.model.IPriorityEnumeration.wrapOption(float, IPObject)
+    * new method com.polarion.alm.tracker.model.IPriorityEnumeration.wrapOption(float, Object)
+    * new method com.polarion.platform.persistence.IEnumeration.wrapOption(String, IPObject)
+    * new method com.polarion.platform.persistence.IEnumeration.wrapOption(String, Object)
+    * new method com.polarion.platform.persistence.model.IPObject.setEnumerationValue(String, String)
+    * new method com.polarion.platform.persistence.model.IPObject.getEnumerationOptionForField(String, String)
+    * new method com.polarion.platform.persistence.spi.AbstractEnumeration.getControlValue(IPObject)
+    * new method com.polarion.platform.persistence.spi.AbstractEnumeration.getOption(Object, String)
+    * new method com.polarion.platform.persistence.spi.ValueHelper.wrap(IPObject, String, IType, Object)
+    * new method com.polarion.platform.persistence.spi.ValueHelper.wrapCustomField(IPObject, String, IType, Object)
+    * new method com.polarion.alm.tracker.model.IComment.createChildComment(Text)
+    * new method com.polarion.alm.tracker.model.IComment.createChildComment(Text, String, List)
+    * new method com.polarion.alm.tracker.model.IComment.getChildComments()
+    * new method com.polarion.alm.tracker.model.IComment.getParentComment()
+    * new method com.polarion.alm.tracker.model.IComment.getRootComment()
+    * new method com.polarion.alm.tracker.model.IComment.getTitle()
+    * new method com.polarion.alm.tracker.model.IComment.getVisibleTo()
+    * new method com.polarion.alm.tracker.model.IWorkItem.getRootComments()
+    * new method com.polarion.alm.tracker.model.IWorkItem.createComment(Text, String, List)
+    * new package com.polarion.qcentre.factbase (including subpackages)
+
+  Polarion Web Services
+
+    * the old web service client has to be replaced by the new client included with the 3.1.1 SDK
+    * TrackerWebService: added methods to access custom field metadata
+    * TrackerWebService: added methods to get enumeration content for work items to be created
+    * Comment has new fields childComments, titlte, visibleTo

@@ -1,0 +1,18 @@
+#set($rev1= $request.get("rev1"))
+#set($rev2= $request.get("rev2"))
+
+#if($type=="html")
+	#set ($origContent = $origdoc.getRenderedContent($origdoc.content) )
+	#set ($newContent = $newdoc.getRenderedContent($newdoc.content) )
+#else
+	#set ($origContent = $origdoc.content)
+	#set ($newContent = $newdoc.content)
+#end
+
+#set ($res = $xwiki.diffContent($origContent, $newContent, $type))
+
+#if ($res)
+  #set ($compare = $xwiki.getCompareTable())
+#end
+
+#template("changescontent.vm")

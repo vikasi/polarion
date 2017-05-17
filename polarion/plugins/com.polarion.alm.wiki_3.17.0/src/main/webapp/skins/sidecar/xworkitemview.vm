@@ -1,0 +1,186 @@
+#set ( $items = $workitem.getWorkItems($request.getParameterMap()) )
+#set ( $fields = $workitem.getFields() )
+#set ( $workItemLink = $workitem.getWorkItemLink() )
+#set ( $wi_id = $workitem.getId())
+
+#if  ( ($workItemLink.getOutputType() == "table") && ($workitem.getSize() > 0))
+  <div class="panel" style="top: 0px; pmargin-right: 0px; border:0px; width: 100%!important; margin: 0 !important;">
+    <table>
+      <tr>
+        <td width="100%" valign="middle" class="xwikipaneltitle1" title='#if ( ($workitem.getItem()) == "query") $workitem.getQueryProject()$workitem.getQuery() #else $workitem.getProject()$workitem.getItem()#end'>#if ( ($workitem.getItem()) == "query") #packNameWi("$workitem.getQueryProject()$workitem.getQuery()" 80) #else #packNameWi("$workitem.getProject()$workitem.getItem()" 80)#end</td>
+        <td id="wi_but_$wi_id" class="btn_min" onclick="togglePanelbyID('$wi_id');" style="cursor:pointer;" title="$msg.get("exp_col_table")">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+    </table>
+    <div id="wi_panel_$wi_id" class="xwikipanelcontents" style="display: block;">  
+      <div> 
+      <input type="hidden" id="itemTableRows_$wi_id" value="$workitem.getSize()"/>
+      <input type="hidden" id="itemTableCols_$wi_id" value="$workitem.getCollCount()"/> 
+      <input type="hidden" id="itemTableHeight_$wi_id" value="$workItemLink.getTableHeight()"/> 
+      <input type="hidden" id="itemTableWidth_$wi_id" value="$workItemLink.getTableWidth()"/> 
+      <input type="hidden" id="itemTableSortBy_$wi_id" value="$!workItemLink.getSortBy()"/> 
+      <input type="hidden" id="itemClass_$wi_id" value="#if ($workItemLink.getExpand()) expanded #else collapsed #end"/>
+      <table id="itemTable_$wi_id"  style="line-height: 1.5em;" cellspacing="0" cellpadding="0" border="0" class="ricoLiveGrid">
+        <colgroup>
+         #foreach($fild in $fields)
+           <col/>
+         #end
+        </colgroup>
+        <thead>
+         <tr>
+           #foreach($fild in $fields)
+            <th>$workitem.getRealNameField($fild)</th>
+           #end
+          </tr>
+         </thead>
+         <tbody>
+   #foreach($item in $items)
+    <tr>
+    #foreach($fild in $fields)
+     #if ($fild == "id")
+     	<td>
+     	<a target="_blank" href="$workitem.getWorkItemURL($item)"><b style="font-weight: normal; color: #00425E; #if ( $workitem.getValue('resolution', $item) != "" )text-decoration:line-through;#end">$workitem.getValue($fild, $item)</b></a></td>
+     #elseif ($fild == "description")
+        #set( $val   =  $!workitem.getValue( $fild, $item) )
+        #set( $idVal =  $!workitem.getValueID($item) )
+  	    <td><span style="cursor: pointer;" onclick="getDescription('$!idVal', '$tdoc.getURL("decsrpwi")' );">#packNameDesc($!val 100)</span></td>
+  	    ##<td>#packNameWi($!val 100)</td>
+     #elseif ($fild == "comments")	
+        #set( $val   =  $!workitem.getValue( $fild, $item) )
+        #set( $idVal =  $!workitem.getValueID($item) )
+  	    <td><span style="cursor: pointer;" onclick="getComments('$!idVal', '$tdoc.getURL("decsrpwi")' );">$!val</span></td>
+     #else
+       <td>$workitem.getValue( $fild, $item)</td>
+     #end
+    #end
+    </tr>
+   #end
+   </tbody>
+  </table>
+ </div>
+
+</div>
+<div class="wifooterBg">
+<div  style="float: left; padding-left: 5px;"><b class="wifooter">
+#if( ( $workitem.getTotal() < $workitem.getTop() ) || ($workitem.getTop()== 0) )
+ $workitem.getTotal() $msg.get("itemsfoundwi") 
+#else
+ $msg.get("showingwi") $workitem.getTop() $msg.get("itemsofwi") $workitem.getTotal() $msg.get("foundwi")
+#end
+
+</b></div>
+<div align="right" style="background-color: #EEEEEE; border: 1px solid #C0C0C0;"><img src="$xwiki.getSkinFile("wifooter_separator.gif")">&nbsp;<a href="$workitem.getWorkItemMore()" target="_blank" style="border: 0px;"><b class="wifooterR">$msg.get("morewi")</b></a>&nbsp;</div>
+</div>
+
+</div>
+
+
+#elseif ( ($workItemLink.getOutputType() == "list") && ($workitem.getSize() > 0) )
+
+#foreach($itm in $items)
+<img onclick="togglePanelVisibilityWi(this.next('div'), this, '$xwiki.getSkinFile('')')"  src="#if ($workItemLink.getExpand()) $xwiki.getSkinFile('expand_min.gif')"  #else $xwiki.getSkinFile('expand.gif')" #end/>&nbsp;<span onmouseover="this.className='wiItem_active'" onmouseout="this.className='wiItem_normal'"><a style="color: #000000; font-size:11px; text-decoration: none;"  title='$workitem.getValueID($itm) - $workitem.getValue('title', $itm)'  target="_blank" href="$workitem.getWorkItemURL($itm)"><b style="color: #AA0000; #if ( $workitem.getValue('resolution', $itm) != "" )text-decoration:line-through;#end ">$workitem.getValue('id', $itm)</b>#if ($workitem.getDisplay() == "long")<b>- $workitem.getValue('title', $itm)</b>#end</a></span><br/>
+<table style="display: none;">
+<tr>
+<td></td>
+</tr>
+</table>
+<div id="wi_panel_$wi_id" class="xwikipanelcontents" style="display:#if ($workItemLink.getExpand()) inline #else none #end;">
+   <table style="margin-bottom: 5px; margin-top: 2px; margin-left: 10px; width: #if ( $workItemLink.getTableWidth() == "100%") 98% #else$workItemLink.getTableWidth() #end ; border: 1px solid #BED8E8;">
+    <tr>
+      <td class="table" style="font-size:11px; padding: 5px;">
+         #foreach($fild in $fields)
+           <b>$!workitem.getRealNameField($fild): </b>$!workitem.getValue( $fild, $itm)<br/>
+         #end
+      </td>
+    </tr>
+  </table>
+</div>
+
+#end
+
+#elseif ( ($workItemLink.getOutputType() == "single")  && ($workitem.getSize() > 0) )
+<input type="hidden" id="empty_item" value="1"/>
+#foreach($itm in $items)
+<span onmouseover="this.className='wiItem_active'" onmouseout="this.className='wiItem_nomal'"><a style="color: #000000;font-size:11px; text-decoration: none;" title='$workitem.getValueID($itm) - $workitem.getValue('title', $itm)' target="_blank" href="$workitem.getWorkItemURL($itm)">
+#if ($workitem.getDisplay() == "long")
+<b style="color: #AA0000; #if ( $workitem.getValue('resolution', $itm) != "" )text-decoration:line-through;#end">$workitem.getValue('id',$itm)</b><b> - $workitem.getValue('title', $itm)</b>
+#else 
+<b style="color: #AA0000; #if ( $workitem.getValue('resolution', $itm) != "" )text-decoration:line-through;#end">$workitem.getValue('id',$itm)</b>
+#end
+</a></span>
+
+#end
+#end
+
+
+
+#if ( ($workitem.getSize() == 0) && ($workItemLink.getOutputType() != "table") )
+<input type="hidden" id="empty_item" value="1"/>
+#if ( ($workitem.getItem()) == "query")<span onmouseover="this.className='wiItem_active'" onmouseout="this.className='wiItem_normal'"><a style="color: #000000; font-size:11px; text-decoration: none;" target="_blank" href="$workitem.getWorkItemMore()">$workitem.getQueryProject()$workitem.getQuery()</a></span>#else<span onmouseover="this.className='wiItem_active'" onmouseout="this.className='wiItem_normal'"><a style="color: #000000; font-size:11px; text-decoration: none;" target="_blank" href="$workitem.getWorkItemMore()">$workitem.getProject()$workitem.getItem()</a></span>#end
+
+#elseif ( ($workitem.getSize() == 0) && ($workItemLink.getOutputType() == "table") )
+
+<div class="panel" style="margin-right:-2px; border:0px solid red; width: 100%!important; margin: 0 !important;">
+<table>
+<tr>
+ <td width="100%" valign="middle" class="xwikipaneltitle1" title='#if ( ($workitem.getItem()) == "query") $workitem.getQueryProject()$workitem.getQuery() #else $workitem.getProject()$workitem.getItem()#end'>#if ( ($workitem.getItem()) == "query") #packNameWi("$workitem.getQueryProject()$workitem.getQuery()" 80) #else #packNameWi("$workitem.getProject()$workitem.getItem()" 80)#end</td>
+ <td class="xwikipaneltitle">&nbsp;</td>
+</tr>
+</table>
+<div id="wi_panel_$wi_id"  class="xwikipanelcontents" style="display: none;">
+
+  <div style="display: none;"> 
+   <input type="hidden" id="itemTableRows_$wi_id" value="1"/>
+   <input type="hidden" id="itemTableCols_$wi_id" value="6"/> 
+   <input type="hidden" id="itemTableHeight_$wi_id" value="100%"/> 
+   <input type="hidden" id="itemTableWidth_$wi_id" value="100%"/> 
+   <input type="hidden" id="itemTableSortBy_$wi_id" value="$!workItemLink.getSortBy()"/> 
+   <input type="hidden" id="itemClass_$wi_id" value="#if ($workItemLink.getExpand()) expanded #else collapsed #end"/>
+
+   <table id="itemTable_$wi_id"  style="line-height: 1.5em;" cellspacing="0" cellpadding="0" border="0" class="ricoLiveGrid">
+    <colgroup>
+      #foreach($fild in $fields)
+        <col/>
+      #end
+    </colgroup>
+   <thead>
+   <tr>
+
+   #foreach($fild in $fields)
+    <th>$workitem.getRealNameField($fild)</th>
+   #end
+
+   </tr>
+</thead>
+  <tbody>
+
+    <tr>
+    #foreach($fild in $fields)
+    <td>&nbsp;</td>
+
+    #end
+    </tr>
+
+   </tbody>
+  </table>
+ </div>
+
+</div>
+
+<div class="wifooterBg">
+<div  style="float: left; padding-left: 5px;"><b class="wifooter">
+#if( $workitem.getTotal() < $workitem.getTop() )
+  0 $msg.get("itemsfoundwi")
+#else
+  0 $msg.get("itemsfoundwi")
+#end
+
+</b></div>
+<div align="right" style="background-color: #EEEEEE; border: 1px solid #C0C0C0;"><img src="$xwiki.getSkinFile("wifooter_separator.gif")">&nbsp;<a href="$workitem.getWorkItemMore()" target="_blank" style="border: 0px;"><b class="wifooterR">$msg.get("morewi")</b></a>&nbsp;</div>
+</div>
+
+</div>
+
+#end
+#set($macroitem = $workitem)
+#template("xmacroerrors.vm")
+

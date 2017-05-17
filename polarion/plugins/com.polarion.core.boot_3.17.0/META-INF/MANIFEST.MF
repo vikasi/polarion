@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.core.boot; singleton:=true
+Generated-from: 1409779118313;type=2
+Require-Bundle: org.apache.log4j,com.polarion.core.util,com.polarion.s
+ ubterra.base,org.eclipse.core.runtime.compatibility,org.eclipse.core.
+ runtime;bundle-version="2.1"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+Export-Package: com.polarion.core.boot,com.polarion.core.boot.impl,com
+ .polarion.core.boot.launchers,com.polarion.core.config,com.polarion.c
+ ore.config.impl;x-friends:="com.polarion.platform.tests,com.polarion.
+ usdp.persistence.tests,com.polarion.alm.tracker.tests"
+Bundle-Name: %pluginName
+Bundle-Version: 3.17.0
+Bundle-ClassPath: boot.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Bundle-Activator: org.eclipse.core.internal.compatibility.PluginActiva
+ tor
+Plugin-Class: com.polarion.core.boot.BootPlugin
+
+

@@ -1,0 +1,73 @@
+###
+### Global header
+###
+### The uppermost area of each page
+### Contains the company logo, links to global actions and the search facility
+###
+#if($context.getMode()==0) ## Visible only in a page
+
+
+<!--[if lte IE 6]>
+<link href="$xwiki.getSkinFile("ie7fixes.css")"" rel="stylesheet" type="text/css" />
+<![endif]-->
+<div id="headerglobal" class="layoutsection">
+ <div id="headerglobalbg"><div id="companylogo"><a  href="$xwiki.getURL("Main.Home", "view")" title="Home">
+#set($logo = $!prefdoc.getAttachment("logo"))
+#if(!$logo)
+#set($logourl = $xwiki.getSkinFile("logo.gif"))<img src="$logourl" alt="XWiki" />#else#set($logourl = $prefdoc.getAttachmentURL($logo.filename, "download"))
+      <img src="$logourl" alt="XWikiz"/>#end</a> <img src="$xwiki.getSkinFile("xwikiglobalmenuseparator.gif")" border="0" alt="" style="width:3px; height: 13px;"> <div class="globallinkhome"><a class='globallink' href="$xwiki.getURL("Main.Home", "view")" title="Home">Home</a></div>
+  </div>
+  <div id="globaldoctitle">
+    <h1>$!headertitle</h1>
+  </div>
+  <div id="globallinks">
+    <div id="globalmenu">
+
+#if (!$isguest)
+### IMA {
+     <img src=$xwiki.getSkinFile("member.gif") alt=""/>      
+### IMA }
+    <b><a class='globallink' href="$xwiki.getURL($context.user, "view")">$xwiki.parseMessage("myhomepage")</a></b> #sep()
+#end
+#if($hasadmin)
+
+      <a class='globallink' href="$xwiki.getURL("XWiki.XWikiPreferences","admin")">$msg.get("admin")</a> #sep()
+#end
+#if ($context.action != "loginerror")
+#if ($isguest)
+#set($loginurl = $xwiki.getURL("XWiki.XWikiLogin", "login", "xredirect=$logredir"))
+      <a class='globallink' href="$loginurl">$msg.get("login")</a>#sep()
+#else
+#set($logouturl = $xwiki.getURL("XWiki.XWikiLogout","logout", "xredirect=$logredir"))
+### IMA {
+     <img src=$xwiki.getSkinFile("lock.gif") alt=""/>
+### IMA }
+      <a class='globallink' href="$logouturl">$msg.get("logout")</a>#sep()
+#end
+#end
+#set($regurl = $xwiki.getURL("XWiki.RegisterNewUser"))
+      <a class='globallink' href="$regurl">$msg.get("register")</a>
+	 #* #sep()
+      <a class='globallink' href="$xwiki.getURL("Doc.Home","view")">$msg.get("doc")</a>*#
+    </div>
+#*if($searchdoc.isNew()==false)*#
+    <div id="globalsearch">
+      <form action="$searchdoc.getURL("view")">
+        <p>
+           <table cellpadding="2" cellspacing="0" border="0" align="right">
+           <tr>
+           	<td><input class="globalsearchinputt" type="text" name="text" value="" size="15" /></td>
+           	<td><input class="globalsearchinputb" type="submit" value="" /></td>
+           </tr>
+           </table>
+       </p>
+      </form>
+    </div>
+  </div>
+#*end*#
+</div>
+</div>
+#end
+### TODO: Format the header for pdf output
+<div class="xwikimainbodycontainerouter" style="margin-top:-20px;">
+<div class="xwikimainbodycontainer">

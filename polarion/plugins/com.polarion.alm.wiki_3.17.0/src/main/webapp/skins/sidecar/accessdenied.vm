@@ -1,0 +1,28 @@
+###
+### Access denied messge
+###
+###
+
+<script>
+    if (document.getElementById('progressbar'))
+    {
+        document.getElementById('progressbar').style.visibility = "hidden";
+    }
+</script>
+#template("startpage.vm")
+<div id="exceptiondiv" class="main layoutsubsection">
+#if ($xwiki.isReadOnly())
+#xwikimessageboxstart($msg.get("error") $msg.get("readonly"))
+#else
+#xwikimessageboxstart($localization.getValue('definition.error') $localization.getValue('macro.general.doNotHaveRequiredPermissions'))
+#end
+$!exception
+#xwikimessageboxend()
+<div class="clearfloats"></div>
+</div>
+<script>
+	if(parent != null && parent.handleErrorMessage2 != null){
+       parent.handleErrorMessage2(document.getElementById("exceptiondiv"));
+    }
+</script>
+#template("endpage.vm")

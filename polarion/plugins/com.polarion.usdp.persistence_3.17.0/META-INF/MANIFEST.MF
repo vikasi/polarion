@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.usdp.persistence
+Export-Package: com.icl.saxon,com.icl.saxon.expr,com.icl.saxon.om,com.
+ polarion.usdp.core.model.constants,com.polarion.usdp.persistence,com.
+ polarion.usdp.persistence.document.impl,com.polarion.usdp.persistence
+ .document.impl.excel,com.polarion.usdp.persistence.document.impl.html
+ ;x-friends:="com.polarion.usdp.persistence.tests",com.polarion.usdp.p
+ ersistence.document.impl.word
+Bundle-Name: %pluginName
+Bundle-Version: 3.17.0
+Bundle-ClassPath: usdp-persistence.jar,lib/jtidy-r8-SNAPSHOT.jar,lib/s
+ axon.jar,cleaner.jar
+Bundle-Localization: plugin
+Require-Bundle: com.polarion.subterra.base;reprovide=true,com.polarion
+ .subterra.persistence;reprovide=true,com.polarion.subterra.persistenc
+ e.document;reprovide=true,com.polarion.subterra.index,com.polarion.al
+ m.projects,net.n3.nanoxml;reprovide=true,com.polarion.platform,com.po
+ larion.platform.repository
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+
+

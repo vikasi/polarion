@@ -1,0 +1,1126 @@
+#macro(template $tname)
+$xwiki.parseTemplate($tname)
+#end
+
+#macro(renderTemplate $tname )
+$xwiki.renderTemplate($tname)
+#end
+
+#macro(includeTopic $topic)
+$xwiki.includeTopic($topic)
+#end
+
+#macro(includeMacros $topic)
+$xwiki.includeForm($topic)
+#end
+
+#macro(includeForm $topic)
+$xwiki.includeForm($topic)
+#end
+
+#macro(includeInContext $topic)
+$xwiki.includeForm($topic)
+#end
+
+#macro(include_macros $topic)
+
+#end
+
+#macro(include_page $topic)
+$xwiki.includeForm($topic)
+#end
+
+#macro(includeServlet $url)
+<!-- including $url -->
+$xwiki.invokeServletAndReturnAsString($url)
+<!-- included $url -->
+#end 
+
+#macro(editactions)
+<a href="$doc.getURL("preview")" onclick="document.forms.edit.action=this.href; document.forms.edit.submit(); return false;">$msg.get("preview")</a>
+<span> | </span>
+<a href="$doc.getURL("save")" onclick="document.forms.edit.action=this.href; document.forms.edit.submit(); return false;" >$msg.get("save")</a>
+#end
+
+#macro(versions)
+#foreach( $rev in $tdoc.getRecentRevisions(4) )
+<a href="$doc.getURL("view", "rev=$rev")">$rev</a><span class="xwikisep"> | </span>
+#end
+#if ($tdoc.realLanguage!="")
+<a href="$doc.getURL("view", "xpage=diff&language=${tdoc.realLanguage}")">$msg.get("diff")</a><span class="xwikisep"> | </span>
+#else
+<a href="$doc.getURL("view", "xpage=diff")">$msg.get("history")</a><span class="xwikisep"> | </span>
+#end
+#end
+
+## Display all queued Struts errors
+#macro(errorMarkup)
+    #if ($errors.exist() )
+        <ul>
+        #foreach ($e in $errors.all )
+            $e
+        #end
+        </ul>
+    #end
+#end
+
+## Display all queued Struts errors for a particular property
+#macro(errorMarkupForProperty $property)
+    #if ($errors.exist($property) )
+        <ul>
+        #foreach ($er in $errors.get($property))
+            $er
+        #end
+        </ul>
+    #end
+#end
+
+#macro(jabber $id)
+<img src="http://indicator.amessage.info/indicator.php?param1=${id}&amp;param2=big" alt="jabber $id" />
+#end
+
+#macro(skype $id)
+<a href="skype:${id}?call"><img width="182" height="44" src="http://mystatus.skype.com/bigclassic/${id}" style="border: none;"></a>
+#end
+
+#macro(yahoo $id)
+<img border="0" src="http://opi.yahoo.com/online?u=${id}&amp;m=g&amp;t=1" alt="yahoo $id" />
+#end
+
+#macro(aim $id)
+#set($onurl = "http://${request.serverName}:${request.serverPort}${xwiki.getSkinFile('aimonline.gif')}")
+#set($offurl = "http://${request.serverName}:${request.serverPort}${xwiki.getSkinFile('aimoffline.gif')}")
+<img border="0" src="http://big.oscar.aol.com/nvludo?on_url=${onurl}&off_url=${offurl}" alt="Online detector"></a>
+#end
+
+#macro(msn $id)
+#set($onurl = "${request.serverName}:${request.serverPort}${xwiki.getSkinFile('msnonline.gif')}")
+#set($offurl = "${request.serverName}:${request.serverPort}${xwiki.getSkinFile('msnoffline.gif')}")
+<img border="0" src="http://www.the-server.net:8002/msn/${id}/onurl=${onurl}/offurl=${offurl}/unknownurl=${offurl}" />
+#end
+
+#macro(im $user)
+#set($userdoc = $xwiki.getDocument($user))
+#set($userobj = $userdoc.getObject("XWiki.XWikiUsers"))
+#set($imtype = $userdoc.display("imtype","view",$userobj))
+#set($imaccount = $userdoc.display("imaccount","view",$userobj))
+#if($imtype=="Yahoo")
+#yahoo("$imaccount")
+#end
+#if($imtype=="AIM")
+#aim("$imaccount")
+#end
+#if($imtype=="MSN")
+#msn("$imaccount")
+#end
+#if($imtype=="Jabber")
+#jabber("$imaccount")
+#end
+#if($imtype=="Skype")
+#skype("$imaccount")
+#end
+#end
+
+#macro(sign $username)
+#if($username.indexOf(".")==-1)
+#set($username = "XWiki.${username}")
+#end
+#if($xwiki.exists("$username"))
+$xwiki.getUserName("$username")
+#else
+$xwiki.getUserName("xwiki:${username}")
+#end
+#end
+
+#macro(includeHelp $pagename)
+  #if($xwiki.exists("xwiki:XWiki.${pagename}"))
+    $xwiki.includeForm("xwiki:XWiki.${pagename}",false)
+  #else
+    #if($xwiki.exists("XWiki.${pagename}"))
+      $xwiki.includeForm("XWiki.${pagename}",false)
+    #end
+  #end
+#end
+
+#macro(flickr $rss)
+{rss:feed=${rss}|full=1}
+#end
+
+#macro(flickrtag $tag)
+#flickr("http://www.flickr.com/services/feeds/photos_public.gne?tags=${tag}&format=rss_200")
+#end
+
+#macro(flickruser $id)
+#flickr("http://www.flickr.com/services/feeds/photos_public.gne?id=${id}&format=rss_200")
+#end
+
+#macro(flickrusertag $id $tag)
+#flickr("http://www.flickr.com/services/feeds/photos_public.gne?id=${id}&tags=${tag}&format=rss_200")
+#end
+
+###macro(map $address $cp $linktext)
+##<a href="http://www.viamichelin.com/viamichelin/fra/dyn/controller/mapPerformPage?strAddress=${address}&strLocation=&strCP=${cp}&strCountry=1424&x=30&y=9">${linktext}</a>
+##end
+
+#macro(mindmap $mindmap $width $height)
+#if(!$width)
+#set($width="100%")
+#end
+#if(!$height)
+#set($height="600")
+#end
+#if(!$mindmap)
+#set($mindmap = "")
+#set($mmurl = "")
+#else
+#if($mindmap.startsWith("http"))
+#set($mmurl = $mindmap)
+#else
+#set($mmurl1 = $doc.getAttachmentURL($mindmap,"download"))
+#set($mmurl = "http://${request.serverName}:${request.serverPort}${mmurl1}")
+#end
+#end
+<applet code="freemind.main.FreeMindApplet.class" archive="/polarion/wiki/freemind/freemind.jar" width="${width}" height="${height}">
+<param name="type" value="application/x-java-applet;version=1.4" />
+<param name="scriptable" value="false" />
+<param name="modes" value="freemind.modes.browsemode.BrowseMode" />
+<param name="browsemode_initial_map" value="$mmurl" />
+<param name="initial_mode" value="Browse" />
+<param name="selection_method" value="selection_method_direct" />
+</applet>
+#end
+
+#macro(toc $pinit $pmax $pnumbered)
+#set($isPDF = $context.get("pdf_generate") == "1")
+#set($init = $pinit)
+#set($max = $pmax)
+#set($numbered = $pnumbered)
+ #set ($int = 0)
+ #set ($boolean = false)
+ #if ($init == "")
+  #set ($init = 2)
+ #else
+  #set ($init = $int.valueOf($init))
+ #end
+ #if ($max == "")
+  #set ($max = 6)
+ #else
+  #set ($max = $int.valueOf($max))
+ #end
+ #if ($numbered == "")
+  #set ($numbered = false)
+ #else
+  #set ($numbered = $boolean.valueOf($numbered))
+  #set ($context.context.tocNumbered = $numbered)
+ #end
+		<toc init="$init" max="$max" numbered="$numbered" pdf="$isPDF">
+#end
+
+#macro(exportPackage)
+#set($export = $request.get("export"))
+#if ($export == "1")
+  #set($dateFormat = "dd MMM yyyy ? HH:mm")
+  #set($diff = $request.get("diff"))
+  #set($SpaceName = $request.get("SpaceName"))
+
+  1.1 Space : $SpaceName
+
+  <form method="POST" action="$doc.getName()?export=2">
+
+#set($docs = $xwiki.getSpaceDocsName($SpaceName))
+  <table border="1" style="text-align:center;">
+  <tr><td>Name</td><td>Export</td><td colspan="3">Default Action</td></tr>
+  <tr><td colspan="2"></td><td>overwrite</td><td>merge objects</td><td>skip</td></tr>
+  #foreach ($doc in $docs)
+    #if ($xwiki.hasAccessLevel("view", "${context.database}:${SpaceName}.${doc}"))
+
+    <tr><td>[${doc}>${SpaceName}.${doc}]</td><td><input type="checkbox" name="ToExport" value="${SpaceName}.${doc}" /></td><td><input type="radio" name="${SpaceName}.${doc}_default" value="overwrite" checked="true" /></td> <td><input type="radio" name="${SpaceName}.${doc}_default" value="merge" /></td> <td><input type="radio" name="${SpaceName}.${doc}_default" value="skip" /></td> </tr>
+
+    #end
+  #end
+  </table>
+
+  #if($SpaceName != "XWiki")
+
+
+    1.1 Space : XWiki
+
+    #set($docs = $xwiki.getSpaceDocsName("XWiki"))
+    <table border="1" style="text-align:center;">
+    <tr><td>Name</td><td>Export</td><td colspan="3">Default Action</td></tr>
+    <tr><td colspan="2"></td><td>overwrite</td><td>merge objects</td><td>skip</td></tr>
+    #foreach ($doc in $docs)
+      #if ($xwiki.hasAccessLevel("view", "${context.database}:XWiki.${doc}"))
+
+      <tr><td>[${doc}>XWiki.${doc}]</td><td><input type="checkbox" name="ToExport" value="XWiki.${doc}" /></td><td><input type="radio" name="XWiki.${doc}_default" value="overwrite" checked="true" /></td> <td><input type="radio" name="XWiki.${doc}_default" value="merge" /></td> <td><input type="radio" name="XWiki.${doc}_default" value="skip" /></td> </tr>
+
+      #end
+    #end
+    </table>
+  #end
+
+  <input type="submit" name="submitted" value="Valider">
+  </form>
+
+
+
+#elseif ($export == "2")
+  #set($ToExport = $request.getParameterValues("ToExport"))
+  $response.setContentType("application/zip")
+  #set($export = $xwiki.export)
+  #foreach ($itemexp in $ToExport)
+    #set($defaultAction = $request.get("${itemexp}_default"))
+    $export.add($itemexp, $defaultAction)
+  #end
+  $export.export()
+#else
+  <form method="POST" action="$doc.getName()?export=1">
+  Select the space you want to export : <br />
+  #set($spaces = $xwiki.getSpaces())
+  <select name="SpaceName">
+  #foreach ($space in $spaces)
+    <option value="$space">$space</option>
+  #end
+
+  </select>
+  <input type="submit" name="submitted" value="Valider">
+  </form>
+#end
+#end
+
+#macro(importPackage)
+#set($toexport = $request.get("export"))
+#if($toexport == "1")
+  #set($appName = $request.get("App"))
+  #set($alist = $doc.getAttachmentList())
+  #foreach ($oAttach in $alist)
+    #if ($oAttach.getFilename() == $appName)
+      #set($import = $xwiki.import)
+      $import.importPackage($oAttach.getContent())
+
+      #set($docs = $import.getDocuments())
+
+      #foreach($docInfo in $docs)
+        #set($right = "")
+        #set($right = $request.get("$docInfo.getFullName()_default"))
+        #if($right)
+          $import.setDocumentAction($docInfo.getFullName(), $right)
+        #end
+      #end
+
+
+      #set($ret = $import.install())
+      $import.getTestInstallToString($ret)
+    #end
+  #end
+
+
+#else
+  #set($alist = $doc.getAttachmentList())
+  #if ($alist.size() == 0)
+    Add the package in attachment
+  #end
+  #foreach ($oAttach in $alist)
+    #set($import = $xwiki.import)
+
+    1.1 $oAttach.getFilename()
+
+    $import.importPackage($oAttach.getContent())
+
+    1.1.1 Infos
+
+    Author : $import.getAuthor() <br />
+    Name : $import.getName() <br />
+    Description : $import.getDescription() <br />
+    Licence : $import.getLicence() <br />
+    Version : $import.getVersion() <br />
+
+    #set($canInstall = $import.testInstall())
+    install : $import.getTestInstallToString($canInstall)
+
+    1.1.1 Status of each Files
+    #set($docs = $import.getDocuments())
+
+    <form method="POST" action="$request.getRequestURL()?export=1">
+    <input type="hidden" name="App" value="$oAttach.getFilename()" />
+    <table border="1" style="text-align:center;">
+    <tr><td>Name</td><td>infos</td><td colspan="3">Action</td></tr>
+    <tr><td colspan="2"></td><td>overwrite</td><td>merge objects</td><td>skip</td></tr>
+
+
+    #foreach($docInfo in $docs)
+
+
+      <tr><td>[$docInfo.getFullName()>$docInfo.getFullName()]</td> <td>__$import.getTestInstallToString($docInfo.isInstallable())__</td>
+#if($import.getTestInstallToString($docInfo.isInstallable()) == "Already exist")
+  #if ($import.getActionToString($docInfo.getDefaultAction()) == "overwrite")
+    <td><input type="radio" name="$docInfo.getFullName()_default" value="overwrite" checked="true" /></td>
+  #else
+    <td><input type="radio" name="$docInfo.getFullName()_default" value="overwrite" /></td>
+  #end
+  #if ($import.getActionToString($docInfo.getDefaultAction()) == "merge")
+    <td><input type="radio" name="$docInfo.getFullName()_default" value="merge" checked="true" /></td>
+  #else
+   <td><input type="radio" name="$docInfo.getFullName()_default" value="merge" /></td>
+  #end
+  #if ($import.getActionToString($docInfo.getDefaultAction()) == "skip")
+    <td><input type="radio" name="$docInfo.getFullName()_default" value="skip" checked="true" /></td> </tr>
+  #else
+    <td><input type="radio" name="$docInfo.getFullName()_default" value="skip" /></td> </tr>
+  #end
+#else
+  <td colspan="3"></td>
+#end
+
+
+    #end
+    </table>
+    #if ($canInstall != 0)
+      1.1.1 You can install this application
+      <input type="submit" name="submitted" value="Valider">
+    #else
+      1.1.1 You can't install this application.
+    #end
+    </form>
+  #end
+#end
+
+#end
+###
+###    Separator
+###
+### Insert a span containing a |
+###
+#macro(sep)
+<span class="separator"> | </span>
+#end
+
+###
+###    useravatar
+###
+### Display the avatar of a user, or a standard image if the user has no avatar
+###
+### @param username The name of the user whose avatar will be displayed
+###
+#macro(useravatar $username)
+  #if(!$picturelist)
+    #set($picturelist = $xwiki.hashMap)
+  #end
+  #if(!$picturelist.containsKey($username))
+    #set($picture = "<img src='")
+    #set($picture = $picture.concat($xwiki.getSkinFile("noavatar.png")))
+    #set($picture = $picture.concat("' alt='$username' title='$username'/>"))
+    #set($profiledoc = $xwiki.getDocument($username))
+    #if(!$profiledoc.isNew())
+      #set($profileobj = $profiledoc.getObject("XWikiUsers", 0))
+      #if($profiledoc.attachmentList.size() != 0)
+        #set($hasavatar = 0)
+        #if($profileobj.avatar && $profileobj.avatar != "")
+          #foreach ($attach in $profiledoc.attachmentList)
+            #if($attach.filename == $profileobj.avatar)
+              #set($hasavatar = 1)
+            #end
+          #end
+        #end
+        #if($hasavatar == 1)
+          #set($pictureurl = $profiledoc.getAttachmentURL($profileobj.avatar))
+          #set($picture = "<img src='")
+          #set($picture = $picture.concat($pictureurl))
+          #set($picture = $picture.concat("' alt='"))
+          #set($picture = $picture.concat($username))
+          #set($picture = $picture.concat("' title='"))
+          #set($picture = $picture.concat($username))
+          #set($picture = $picture.concat("'/>"))
+        #end
+      #end
+    #end
+    $!picturelist.put($username, $picture)
+  #end
+  $picturelist.get($username)
+#end
+
+###
+###    mimetypeimg
+###
+### Display an icon according to the mimetype
+###
+### @param mime The reported mimetype of the file
+### @param fname The name of the file
+###
+#macro(mimetypeimg $mime $fname)
+#set($idx = $fname.lastIndexOf("."))
+#set($idx = $idx + 1)
+#if(($idx != 0) && ($idx != -1))
+#set($ext = $fname.substring($idx))
+#else
+#set($ext = "")
+#end
+#####    images
+#if($mime.equals("image/svg"))
+<img src="$xwiki.getSkinFile("mimetypes/vectorgfx.png")" alt="[svg]" title="[svg]"/>#elseif($mime.equals("application/svg+xml"))
+<img src="$xwiki.getSkinFile("mimetypes/vectorgfx.png")" alt="[svg]" title="[svg]"/>#elseif($mime.startsWith("image/"))
+<img src="$xwiki.getSkinFile("mimetypes/jpg.png")" alt="[img]" title="[img]"/>#####    text based
+#elseif($mime.equals("text/plain"))
+<img src="$xwiki.getSkinFile("mimetypes/txt.png")" alt="[text]" title="[text]"/>#elseif($mime.equals("text/html"))
+<img src="$xwiki.getSkinFile("mimetypes/html.png")" alt="[html]" title="[html]"/>#elseif($mime.equals("text/css"))
+<img src="$xwiki.getSkinFile("mimetypes/url.png")" alt="[css]" title="[css]"/>#elseif($mime.startsWith("text/"))
+<img src="$xwiki.getSkinFile("mimetypes/txt.png")" alt="[text]" title="[text]"/>#####    documents
+#elseif($mime.equals("application/xml"))
+<img src="$xwiki.getSkinFile("mimetypes/xml.png")" alt="[xml]" title="[xml]"/>#elseif($mime.equals("application/pdf"))
+<img src="$xwiki.getSkinFile("mimetypes/pdf.png")" alt="[pdf]" title="[pdf]"/>#elseif($mime.equals("application/postscript"))
+<img src="$xwiki.getSkinFile("mimetypes/ps.png")" alt="[ps]" title="[ps]"/>#elseif($mime.equals("application/msword"))
+<img src="$xwiki.getSkinFile("mimetypes/word.png")" alt="[doc]" title="[doc]"/>#elseif($mime.equals("application/powerpoint"))
+<img src="$xwiki.getSkinFile("mimetypes/ppt.png")" alt="[ppt]" title="[ppt]"/>#elseif($mime.equals("application/x-shockwave-flash"))
+<img src="$xwiki.getSkinFile("mimetypes/swf.png")" alt="[swf]" title="[swf]"/>#####    archives
+#elseif($mime.equals("application/x-tar"))
+<img src="$xwiki.getSkinFile("mimetypes/tar.png")" alt="[tar]" title="[tar]"/>#elseif($mime.equals("application/zip"))
+<img src="$xwiki.getSkinFile("mimetypes/zip1.png")" alt="[zip]" title="[zip]"/>#elseif($mime.equals("application/x-gzip"))
+<img src="$xwiki.getSkinFile("mimetypes/tar_gz.png")" alt="[gz]" title="[gz]"/>#elseif($mime.equals("application/java-archive"))
+<img src="$xwiki.getSkinFile("mimetypes/jar.png")" alt="[jar]" title="[jar]"/>#####    media
+#elseif($mime.startsWith("audio/"))
+<img src="$xwiki.getSkinFile("mimetypes/wav.png")" alt="[audio]" title="[audio]"/>#elseif($mime.startsWith("video/"))
+<img src="$xwiki.getSkinFile("mimetypes/video.png")" alt="[video]" title="[video]"/>#####    octet-streams extensions
+#elseif($mime.equals("application/octet-stream"))
+#if($ext.equals("xls"))
+<img src="$xwiki.getSkinFile("mimetypes/excel.png")" alt="[xls]" title="[xls]"/>#elseif($ext.equals("bz") || $ext.equals("bz2") || $ext.equals("tbz"))
+<img src="$xwiki.getSkinFile("mimetypes/tar_bz.png")" alt="[bz]" title="[bz]"/>#elseif($ext.equals("tgz"))
+<img src="$xwiki.getSkinFile("mimetypes/tar_gz.png")" alt="[gz]" title="[gz]"/>#elseif($ext.equals("rar"))
+<img src="$xwiki.getSkinFile("mimetypes/zip1.png")" alt="[rar]" title="[rar]"/>#elseif($ext.equals("odp") || $ext.equals("odt") || $ext.equals("odf") || $ext.equals("sxw") || $ext.equals("stw"))
+<img src="$xwiki.getSkinFile("mimetypes/openoffice.png")" alt="[odf]" title="[odf]"/>#else
+<img src="$xwiki.getSkinFile("mimetypes/bin.png")" alt="[bin]" title="[bin]"/>#end
+#elseif($mime.startsWith("application/"))
+<img src="$xwiki.getSkinFile("mimetypes/exec.png")" alt="[app]" title="[app]"/>#end
+#end
+
+###
+###    packName
+###
+### Display a shorter version of a string
+###
+### @param name The processed string
+###
+#macro(packName $name)
+#if(!$maxnamelength)
+#set($maxnamelength = 25)
+#end
+#set($idx = $name.lastIndexOf("."))
+#if(($idx != 0) && ($idx != -1))
+#set($ext = $name.substring($idx))
+#else
+#set($ext = "")
+#set($idx = $name.length())
+#end
+#set($fname = $name.substring(0, $idx))
+#if($fname.length() > $maxnamelength)$fname.substring(0, $maxnamelength)~$ext#else$name#end
+#end
+
+#macro(xwikiobjectfield $fielddoc $fieldname $fieldtext $action)
+<div class="xmblabel">$fieldtext</div>
+<div class="xmbfield">
+#if($fieldname!="")
+$fielddoc.display($fieldname, $action)
+#end
+</div>
+#end
+
+#macro(formfield $fieldtext $html)
+<div class="xmblabel">$fieldtext</div>
+<div class="xmbfield">
+$html
+</div>
+#end
+
+#macro(defaultDisplayObj $document $obj)
+ #set($class = $obj.xWikiClass)
+ #foreach($prop in $class.properties)
+  #formfield(${prop.prettyName} $document.display($prop.getName(), "edit", $obj))
+ #end
+#end
+
+#macro(defaultViewDisplayObj $document $obj)
+ #set($class = $obj.xWikiClass)
+ #foreach($prop in $class.properties)
+  #formfield(${prop.prettyName} $document.display($prop.getName(), "view", $obj))
+ #end
+#end
+
+##
+## Formats a date according to the ISO8601 standard
+##
+#macro(formatdateISO $date)
+#set($tz = $xwiki.formatDate($date, "Z"))
+#set($tz = "${tz.substring(0, 3)}:${tz.substring(3)}")
+$xwiki.formatDate($date, "yyyy-MM-dd")T$xwiki.formatDate($date, "HH:mm:ss")$tz#end
+
+##
+## Formats a username like a fn (hCard microformat)
+##
+#macro(userfn $username)
+#set($fn = $xwiki.getLocalUserName($username))
+#if($fn.indexOf("<a") >= 0)
+#set($fn = $fn.replaceAll("<a", '<a class="url fn"'))
+#else
+#set($fn = "<span class='fn'>$fn</span>")
+#end
+$fn
+#end
+
+###
+###
+### Macros for "foot notes"
+###
+### TODO:
+###       Make Radeox macros 
+###       Support in wysiwyg
+###
+###
+#macro(footnote $text)
+#if(!$page_footnotes)
+#set($page_footnotes = $xwiki.arrayList)
+#set($footnote_group_id = 1)
+#end
+#set($discard = $page_footnotes.add($text))
+#set($footnote_id = $page_footnotes.size())
+<sup class="footnoteRef" id="footnoteref_${footnote_group_id}_${footnote_id}">
+ <a href="#footnote_${footnote_group_id}_${footnote_id}" title="$msg.get("core.footnotes.gotofootnote", [${footnote_id}]): $text">\[$footnote_id\]</a>
+</sup>
+#end
+##
+##
+##
+#macro(putFootnotes)
+#if($page_footnotes && ($page_footnotes.size() > 0))
+<div class="footnotes">
+<ol>
+#foreach($footnote in $page_footnotes)
+<li id="footnote_${footnote_group_id}_${velocityCount}">
+ <a class="footnoteBackRef" title="$msg.get("core.footnotes.backtoref")" href="#footnoteref_${footnote_group_id}_${velocityCount}">^</a>
+  $footnote</li>
+#end
+</ol>
+</div>
+#set($discard = $page_footnotes.clear())
+#set($footnote_group_id = $footnote_group_id + 1)
+#end
+#end
+##
+##
+##  Generate navigation links for paged documents
+##
+#macro(pagedViewLinks $itemsPerPage $totalPages $crtPageNumber)
+#if($totalPages > 0)
+<div class="pagedNavigation">
+#if($crtPageNumber > 0)
+#set($prevPage = $crtPageNumber - 1)
+<span class="pagedLink"><a href="$doc.getURL($context.action, "page=0&ipp=${itemsPerPage}")">$msg.get("core.paging.firstPage")</a></span>
+<span class="pagedLink"><a href="$doc.getURL($context.action, "page=${prevPage}&ipp=${itemsPerPage}")">$msg.get("core.paging.previousPage")</a></span>
+#else
+<span class="pagedLink inactive">$msg.get("core.paging.firstPage")</span>
+<span class="pagedLink inactive">$msg.get("core.paging.previousPage")</span>
+#end
+#set($displayCrtPageNumber = $crtPageNumber + 1)
+#set($displayTotalPages = $totalPages + 1)
+<span class="pagedStatus">$msg.get("core.paging.pageNumberOf", [$displayCrtPageNumber, $displayTotalPages])</span>
+#if($crtPageNumber < $totalPages)
+#set($nextPage = $crtPageNumber + 1)
+<span class="pagedLink"><a href="$doc.getURL($context.action, "page=${nextPage}&ipp=${itemsPerPage}")">$msg.get("core.paging.nextPage")</a></span>
+<span class="pagedLink"><a href="$doc.getURL($context.action, "page=${totalPages}&ipp=${itemsPerPage}")">$msg.get("core.paging.lastPage")</a></span>
+#else
+<span class="pagedLink inactive">$msg.get("core.paging.nextPage")</span>
+<span class="pagedLink inactive">$msg.get("core.paging.lastPage")</span>
+#end
+</div>
+#end
+#end
+
+## Macro to set a page break used in print, pdf and rtf mode
+#macro(pagebreak)
+<p style="page-break-before: always;" />
+#end
+
+## Macro to include childs of a page
+#set($clevel = 1)
+#macro(includeChilds $page)
+ #includeChilds($page false)
+#end
+## Macro to include childs at multiple levels
+#macro(includeChilds $page $withPageBreaks)
+ #if($clevel!=0)
+  #foreach($childDocName in $xwiki.searchDocuments("where doc.parent='$page' order by doc.creationDate"))
+    #set($childDoc = $xwiki.getDocument($childDocName))
+    #if(($childDoc)&&($childDoc.getSpace()!="Panels")&&($childDoc.getSpace()!="XWiki"))
+     #if($withPageBreaks)
+     #pagebreak()
+     #end
+     $childDoc.getRenderedContent()
+     #set($clevel = $xwiki.add($clevel,-1))
+     #includeChilds($childDocName $withPageBreaks)
+     #set($clevel = $xwiki.add($clevel,1))
+    #end
+  #end
+ #end
+#end
+
+## Macro to include childs of a page
+#macro(includeLinks $page)
+ #includeLinks($page false)
+#end
+## Macro to include childs at multiple levels
+#macro(includeLinks $page $withPageBreaks)
+ #if($clevel!=0)
+  #set($pageDoc = $xwiki.getDocument($page))
+  #foreach($child in $pageDoc.getLinks())
+    #set($childDocName = $child.getLink())
+    #set($childDoc = $xwiki.getDocument($childDocName))
+    #if(($childDoc)&&($childDoc.getSpace()!="Panels")&&($childDoc.getSpace()!="XWiki"))
+     #if($withPageBreaks)
+     #pagebreak()
+     #end
+     $childDoc.getRenderedContent()
+     #set($clevel = $xwiki.add($clevel,-1))
+     #includeLinks($childDocName $withPageBreaks)
+     #set($clevel = $xwiki.add($clevel,1))
+    #end
+  #end
+ #end
+#end
+##
+##
+## macro library providing macros to render charts
+##
+##
+#macro(chartStart $caption $type $width $height $otherOptions)
+#set($colors = ["1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900"])
+    #set($chartSWF = "/polarion/ria/fusioncharts/FCF_${type}.swf")
+    #set($strXML = "")
+    #set($chartId ="$caption.hashCode()")
+    #set($chartCaption ="$caption")
+    #set($chartWidth = $width)
+    #set($chartHeight = $height )
+    #set($debugMode = 1)
+    #set($registerWithJS = "false")
+    #set($strXML = "<graph caption='$chartCaption' $otherOptions>")
+    #set($index = 0)
+#end 
+##
+#macro (addStrXml $str)
+    #set($strXML = "$strXML$str")
+#end
+##
+#macro( addSet $name $value)
+    #addStrXml("<set name='$name' value='$value' color='$colors.get($index)' />")
+    #set($index = $index + 1)
+#end
+##
+#macro( addSetWithAttributes $name $value $attributes)
+    #addStrXml("<set name='$name' value='$value'$attributes/>")
+    #set($index = $index + 1)
+#end
+##
+#macro( addCategories $categories)
+    #addStrXml("<categories >")
+    #foreach($category in $categories.split(":"))
+    #addStrXml("<category name='$category'/>")
+    #end
+    #addStrXml("</categories >")
+#end
+##
+#macro( addDataSet $name $values)
+    #set($strXML = "$strXML<dataset seriesname='$name'  color='$colors.get($index)' >")
+    #foreach($value in $values.split(":"))
+    #set($strXML = "$strXML<set value='$value' />")
+    #end
+    #set($strXML = "$strXML</dataset >")
+    #set($index = $index + 1)
+#end
+##
+#macro( chartEnd )
+    #set($strXML = "$strXML</graph>")
+    #set($strFlashVars= "chartWidth=$chartWidth&chartHeight=$chartHeight&debugMode=$debugMode&dataXML=$strXML")
+    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" 
+    	width="$chartWidth" height="$chartHeight" id="$chartId">
+      <param name="allowScriptAccess" value="always" />
+      <param name="movie" value="$chartSWF"/>
+      <param name="FlashVars" value="$strFlashVars" />
+      <param name="quality" value="high" />
+      <embed 	wmode="transparent"
+      			src="$chartSWF" 
+      			FlashVars="$strFlashVars" 
+      			quality="high" 
+      			width="$chartWidth" 
+      			height="$chartHeight" 
+      			name="$chartId" 
+      			allowScriptAccess="always" 
+      			type="application/x-shockwave-flash" 
+      			pluginspage="http://www.macromedia.com/g/getflashplayer">
+      		<param name="wmode" value="transparent"/>
+      	</embed>
+    </object>
+#end
+
+#########################################################################################################
+###                                        HighChart Macros                                           ###
+#########################################################################################################
+#macro(highchartStart $title $type $width $height)
+	#set($isPDF = $context.get("pdf_generate") == "1")
+
+
+	#set($highchartColors = ["1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900"])
+    #set($highchartOption = "")
+    #set($highchartType = $type)
+    #set($highchartTitle = $title)
+    #set($highchartWidth = $width)
+    #set($highchartHeight = $height)
+    #set($highchartCategories = "")
+    #set($highchartSeries = "")
+    
+    #if(${highchartBlockId}>0)
+	    #set($highchartBlockId = $highchartBlockId + 1)
+	#else
+	    #set($highchartBlockId = 1)
+  	#end
+  	
+  	#set($highchartAdditionalOptions = "")
+
+	#set($highchartDataSetIndex = 0)
+#end 
+
+#macro( setHighchartCategories $categories)
+	#set($highchartTempIndex = 0)
+
+	#set($highchartCategories = "categories: [")
+    #foreach($category in $categories.split(":"))
+        #if ($highchartTempIndex == 0)
+			#set($highchartTempIndex = 1)
+		#else
+			#set($highchartCategories = "${highchartCategories},")
+  		#end
+		#set($highchartCategories = "${highchartCategories}'${category}'")
+    #end
+    #set($highchartCategories = "${highchartCategories}]")   
+#end
+
+#macro( addHighchartDataSet $name $values)
+	#set($highchartTemp = $values.replace(':',','))
+	
+    #if ($highchartDataSetIndex == 0)
+		#set($highchartDataSetIndex = $highchartDataSetIndex+1)
+	#else
+		#set($highchartSeries = "${highchartSeries},")
+	#end
+	
+	#set($highchartSeries = "${highchartSeries}{name: '${name}', ")
+	#set($highchartSeries = "${highchartSeries}data: [")
+
+	#set($highchartSeries = "$highchartSeries$highchartTemp")
+	
+	#set($highchartSeries = "${highchartSeries}]}")
+#end
+
+#macro( addHighchartXYDataSet $name $values)
+	#set($highchartTempIndex = 0)
+	
+	#if ($highchartDataSetIndex == 0)
+		#set($highchartDataSetIndex = $highchartDataSetIndex+1)
+	#else
+		#set($highchartSeries = "${highchartSeries},")
+	#end
+
+	#set($highchartSeries = "${highchartSeries}{name: '${name}', ")
+	#set($highchartSeries = "${highchartSeries}data: [")
+	
+    #foreach($value in $values.split(":"))
+        #if ($highchartTempIndex == 0)
+			#set($highchartTempIndex = 1)
+		#else
+			#set($highchartSeries = "${highchartSeries},")
+  		#end
+    
+    	#set($highchartSeries = "${highchartSeries}[${value}]")
+    #end
+	#set($highchartSeries = "${highchartSeries}]}")
+#end
+
+#macro( addHighchartPieDataSet $name $values)
+	#set($highchartTempIndex = 0)
+
+	
+	#if ($highchartDataSetIndex == 0)
+		#set($highchartDataSetIndex = $highchartDataSetIndex+1)
+	#else
+		#set($highchartSeries = "${highchartSeries},")
+	#end
+
+	#set($highchartSeries = "${highchartSeries}{type:'pie', name: '${name}', ")
+	#set($highchartSeries = "${highchartSeries}data: [")
+	
+    #foreach($value in $values.split(":"))
+        #if ($highchartTempIndex == 0)
+			#set($highchartTempIndex = 1)
+		#else
+			#set($highchartSeries = "${highchartSeries},")
+  		#end
+    
+    	#set($highchartSeries = "${highchartSeries}[${value}]")
+    #end
+	#set($highchartSeries = "${highchartSeries}]}")
+#end
+
+#macro( addHighchartAdditionalOptions $value)
+	#set($highchartAdditionalOptions = "${highchartAdditionalOptions}${value}")
+#end
+
+#macro( initHighchartOptions )
+	#set($highchartTempIndex = 0)
+
+	#set($highchartOptions = "{chart: {type: '$highchartType'}, colors: [")
+    #foreach($color in $highchartColors)
+        #if ($highchartTempIndex == 0)
+			#set($highchartTempIndex = 1)
+		#else
+			#set($highchartOptions = "${highchartOptions},")
+  		#end
+    
+    	#set($highchartOptions = "${highchartOptions}'#${color}'") 
+	#end
+    #set($highchartOptions = "${highchartOptions}], title: {text: '$highchartTitle'}, credits: {href: null,text: ''}, exporting: {enabled: false}, ") 
+    #set($highchartOptions = "${highchartOptions}xAxis: {${highchartCategories}}, yAxis :{title: {text: 'Values'}}, series: [${highchartSeries}]};")
+#end
+
+#macro( initLocalization )
+	##Months
+	#set($months="['$localization.getValue('highcharts.date.january')', '$localization.getValue('highcharts.date.february')', '$localization.getValue('highcharts.date.march')'") 
+	#set($months="${months}, '$localization.getValue('highcharts.date.april')', '$localization.getValue('highcharts.date.may')', '$localization.getValue('highcharts.date.june')'") 
+	#set($months="${months}, '$localization.getValue('highcharts.date.july')', '$localization.getValue('highcharts.date.august')', '$localization.getValue('highcharts.date.september')'") 
+	#set($months="${months}, '$localization.getValue('highcharts.date.october')', '$localization.getValue('highcharts.date.november')', '$localization.getValue('highcharts.date.december')']")
+	
+	##ShortMonths
+	#set($shortMonths="['$localization.getValue('highcharts.date.januaryShort')', '$localization.getValue('highcharts.date.februaryShort')', '$localization.getValue('highcharts.date.marchShort')'") 
+	#set($shortMonths="${shortMonths}, '$localization.getValue('highcharts.date.aprilShort')', '$localization.getValue('highcharts.date.mayShort')', '$localization.getValue('highcharts.date.juneShort')'") 
+	#set($shortMonths="${shortMonths}, '$localization.getValue('highcharts.date.julyShort')', '$localization.getValue('highcharts.date.augustShort')', '$localization.getValue('highcharts.date.septemberShort')'") 
+	#set($shortMonths="${shortMonths}, '$localization.getValue('highcharts.date.octoberShort')', '$localization.getValue('highcharts.date.novemberShort')', '$localization.getValue('highcharts.date.decemberShort')']")
+	
+	##Weekdays
+	#set($weekdays="['$localization.getValue('highcharts.weekdays.sunday')', '$localization.getValue('highcharts.weekdays.monday')', '$localization.getValue('highcharts.weekdays.tuesday')', '$localization.getValue('highcharts.weekdays.wednesday')'") 
+	#set($weekdays="${weekdays}, '$localization.getValue('highcharts.weekdays.thursday')', '$localization.getValue('highcharts.weekdays.friday')', '$localization.getValue('highcharts.weekdays.saturday')']")
+		 
+	##Compose and add the rest
+	#set($loc="lang: { months: ${months}, shortMonths: ${shortMonths}, weekdays: ${weekdays}")
+	#set($loc="${loc}, decimalPoint: '$localization.getValue('highcharts.decimalpoint')', loading: '$localization.getValue('highcharts.loading')'")
+	#set($loc="${loc}, resetZoom: '$localization.getValue('highcharts.resetZoom')', resetZoomTitle: '$localization.getValue('highcharts.resetZoomTitle')'")
+	#set($loc="${loc}, thousandSep: '$localization.getValue('highcharts.thousandSep')', contextButtonTitle: '$localization.getValue('highcharts.contextButtonTitle')'")
+	#set($loc="${loc}, printChart: '$localization.getValue('highcharts.printChart')', downloadJPEG: '$localization.getValue('highcharts.downloadJPEG')'")
+	#set($loc="${loc}, downloadPDF: '$localization.getValue('highcharts.downloadPDF')', downloadPNG: '$localization.getValue('highcharts.downloadPNG')', downloadSVG: '$localization.getValue('highcharts.downloadSVG')'}")
+#end
+
+#macro( highchartEnd )
+	<div id="highchartBlockId_${highchartBlockId}" style="height:${highchartHeight}px;width:${highchartWidth}px;">
+		{pre}
+			#initHighchartOptions()
+			#initLocalization()
+			#if ($isPDF || $context.getAction().equals("preview"))
+				$highchartRenderer.generateChartFromVelocity($context.getContext().get("vcontext"), $context.getRequest().getHttpServletRequest())
+			#else
+				<script type="text/javascript">
+					Highcharts.setOptions({chart: {style: {fontFamily: 'Arial, Helvetica, \"sans-serif\"'}}, $loc});
+					var options = $highchartOptions
+					options.chart.renderTo = 'highchartBlockId_${highchartBlockId}';
+					$highchartAdditionalOptions
+					
+					new Highcharts.Chart(options);
+				</script>
+			#end
+		{/pre}
+	</div>
+#end
+
+#########################################################################################################
+###                                          Helper Macros                                            ###
+#########################################################################################################
+#macro (clearFloats)
+<div style="clear:both"></div>
+#end
+
+#########################################################################################################
+###                                        Signatures Macros                                          ###
+#########################################################################################################
+#macro(panelTitle $t)
+<div style="color: \#003366;font-weight: bold;line-height: 1.2;font-family: Arial, Helvetica, sans-serif;margin: 0.83em 0 0.41em;font-size:16px">$t</div>
+#end
+
+#macro(renderVerdictIcon $verdict)
+  #if($verdict.id.equals("signed"))
+   <img style="height:16px" src="/polarion/ria/images/sidebars/signatures/verdict-comment-signed.png"/>
+  #elseif($verdict.id.equals("declined"))
+   <img style="height:16px" src="/polarion/ria/images/sidebars/signatures/verdict-comment-declined.png"/>
+  #else
+   <img style="height:16px" src="/polarion/ria/images/sidebars/signatures/signature-comment.png"/>
+  #end
+#end
+
+#macro(renderTransition $c)
+   #if($c.transitionRevision)
+        *$c.getLabel*  
+        <span style="font-size:12px;padding-left:5px">
+          ($calendarTool.formatDate($trackerService.dataService.getRevision($document.getContextId(),$c.transitionRevision).created,"yyyy-MM-dd HH:mm"))
+        </span> 
+   #else
+      <i>
+        *$c.getLabel* 
+        <span style="font-size:12px;padding-left:5px">
+          ($!c.signatureState.name)
+        </span>  
+      </i>
+   #end
+  ##{portallink:/project/${document.project.id}/wiki/${document.moduleFolder}/${document.id}?sidebar=signatures&status=reviewed&revision=$c.transitionRevision} link     {portallink}
+#end
+
+#macro(renderSignatures $showPending)
+#panelTitle("$localization.getValue('macro.documentPanel.documentSignatures.label')")
+
+<table border="0" width="700px" cellpadding=3>
+#set($someRevision = false)
+#foreach($c in $document.getWorkflowSignatures())
+  #if($showPending || $c.transitionRevision)
+   #if(!$c.signatureState.id.equals("obsolete"))
+    #set($someRevision = true)
+    <tr style="border-bottom: thin solid lightgray;height:40px;">
+      <td colspan=4 style="font-size:15px;vertical-align:bottom;">
+               #renderTransition($c)
+      </td>
+    </tr>
+    #foreach($s in $c.signatures)
+      <tr style="margin-top:20px">
+        <td style="width:20px;padding-left:10px;vertical-align:middle;">
+          #renderVerdictIcon($s.verdict)
+        </td>
+        <td align="left"  style="vertical-align:middle;"> *$s.signedBy.label*  
+#if($s.signerRole)<span style="font-size:11px">
+          ($!s.signerRole)</span>#end
+        </td>
+        <td align="right" style="width:100px; vertical-align:middle;" > 
+          $!s.verdict.name 
+       </td>
+        <td align="right" style="width:150px; vertical-align:middle;" >  
+            #if($s.verdictTime) 
+              $calendarTool.formatDate($s.verdictTime,"yyyy-MM-dd HH:mm")
+            #end 
+          </span>
+        </td>
+      </tr>
+      #if($s.verdictComment)
+        <tr style="">
+          <td></td>
+          <td colspan=3 style="font-style:italic">
+            $s.verdictComment.text.convertToHTML().content
+          </td>
+        </tr>
+      #end
+    #end
+   #end
+  #end
+#end
+</table>
+#if(!$someRevision)
+  $localization.getValue('macro.documentPanel.documentSignatures.noSignedStatuses')
+#end
+#end  ### end macro(renderSignatures)
+   
+#macro(renderProperties)
+  #panelTitle($localization.getValue('macro.documentPanel.documentProperties.label'))
+  <table cellpadding=1>
+    <tr>
+      <td align="right">
+        $localization.getValue('field.Module.status.label'): 
+      </td>
+      <td>
+        #if($document.status)
+          <img src=$document.status.getProperty("iconURL") /> 
+          *$document.status.name*
+        #end
+      </td>
+    </tr>
+    <tr>
+      <td align="right">
+        #set($versionField = $document.getCustomFieldPrototype("version").getName())
+        #if($versionField == "")
+         #set($versionField = "version")
+        #end
+        $versionField:     
+      </td>
+      <td>
+        <b>$!document.getValue("version") </b>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">
+        $localization.getValue('field.Module.author.label'):
+      </td>
+      <td>
+        $!document.author.label
+      </td>
+    </tr>
+    <tr>
+      <td align="right">
+        $localization.getValue('field.Module.created.label'): 
+      </td>
+      <td>
+        $calendarTool.formatDate($document.created,"yyyy-MM-dd HH:mm")
+      </td>
+    </tr>
+  </table>
+#end
+
+
+#macro(renderLastApproved $approvedState)
+  #panelTitle($localization.getValue('macro.documentPanel.approvedVersions.label'))
+
+<div style="padding-top:10px;">
+#if($document.status.id.equals($approvedState))
+ $localization.getValue('macro.documentPanel.approvedVersions.currentVersionApproved', [$!document.getValue("version")])
+#else
+ $localization.getValue('macro.documentPanel.approvedVersions.currentVersionNotApproved', [$!document.getValue("version")])
+#end
+
+$localization.getValue('macro.documentPanel.approvedVersions.approvedVersions')
+
+#set($notApprovedYet = true)
+#set($ds =  $trackerService.getDataService())
+#foreach($c in $document.getWorkflowSignatures())
+  #if($c.transitionRevision  && $c.targetStatus.id.equals($approvedState) )
+    #set($r = $c.transitionRevision)
+    #set($notApprovedYet = false)
+    #set($version = false)
+    #set($signedDoc = $document)
+    #if($c.getBranchedFrom())
+        #set($signedDoc = $c.getBranchedFrom().getWorkflowObject())
+    #end
+    #set($oldDoc =  $ds.getVersionedInstance($signedDoc.getUri(),$r))
+    #set($version =  $oldDoc.getValue("version"))
+    #if(!$version)  #set($version =  $r) #end
+    #if($oldDoc.moduleFolder == "_default")
+        #set($pathPart = "$oldDoc.moduleName")
+    #else
+        #set($pathPart = "$oldDoc.moduleFolder/$oldDoc.moduleName")
+    #end
+     * {portallink:/wiki/$pathPart?revision=$r|addcontext=yes} <b>$version</b> {portallink} <span style="font-size:12px;padding-left:5px">($calendarTool.formatDate($trackerService.dataService.getRevision($document.getContextId(),$r).created,"yyyy-MM-dd HH:mm")) </span>
+  #end
+#end
+#if($notApprovedYet)
+<i>$localization.getValue('macro.documentPanel.documentSignatures.notApproved')</i>
+#end
+</div>
+
+#end
+
+#macro(documentPanel $showPending $approvedState)
+<div>
+  #renderProperties()
+  \\
+  
+  #renderLastApproved($approvedState)
+
+  #renderSignatures($showPending)
+</div>
+#end
+

@@ -1,0 +1,41 @@
+#template("startpage.vm")
+<div id="exceptiondiv" class="main layoutsubsection">
+#set($message = $xwiki.parseMessage())
+    #if($message)
+    <center id="messageText">
+        <h2>$message</h2>
+        <br/><br/>
+    </center>
+    #else
+$msg.get("problemoccured")
+    #end
+    <br/><br/>
+    #if($exp)
+$msg.get("detailedinformation"):<br/>
+<pre id="exceptionText">
+    $exp.getFullMessage()
+</pre>
+    
+    #end
+
+
+<div class="clearfloats"></div>
+</div>
+<script>
+	if(parent != null && parent.handleErrorMessage2 != null){
+	   #if($exp)
+	   		parent.handleErrorException(document.getElementById("messageText"),document.getElementById("exceptionText"));
+	   #else
+	   		parent.handleErrorMessage2(document.getElementById("exceptiondiv"));
+	   #end
+       
+    }
+</script>
+#template("endpage.vm")
+
+<script>
+    if (document.getElementById('progressbar'))
+    {
+        document.getElementById('progressbar').style.visibility = "hidden";
+    }
+</script>

@@ -1,0 +1,45 @@
+1.1 Test Step Columns Quick-Help
+
+This is where you define the columns, and column labels, which appear to users in the Test Steps field of Test Case type Work Items (including LiveDocs when the presentation is set to show Test Steps).\\
+
+Each ~~row~~ in the configuration table above defines one ~~column~~ of the Test Steps table. You can define columns for whatever information you want to capture when a Test Step is executed by a tester. \\ 
+
+~~Examples of some columns you might want for Test Steps:~~
+
+* Step Name - a short human-friendly string that encapsulates the essence of a Test Step
+* Step Instruction - text describing how a tester should execute a Test Step
+* Expected Result - text describing the expected outcome of execution of a Test Step. 
+
+1.1.1 Configuration Reference
+The following table lists each column of the configuration table above together with a short description of what it is. \\ \\
+{table}
+Configuration Table Column | Description
+*ID* | Unique identifier (in project scope) for a column of the Test Steps table.  
+*Name* | Text of the column header of the Test Steps table column you are defining
+*Column Width* | The width of the column you are defining as it will appear in the Test Steps table. Width specification can be in pixels or percentage. For example: 250px = 250 pixels, 25% = 25% of the total available display width (determined automatically by Polarion).
+*Description* | A short text that describes the column, its purpose, data type, semantics, etc.  
+{table}
+
+1.1.1.1 Tips
+* Use the + (plus) icon to add another row to the configuration table. The net effect is to add another column to the Test Steps table.
+* User the - (minus) icon to remove a row from the configuration table. The net effect is to remove a column from the Test Steps table.
+
+1.1.1 Example
+
+The following configuration table... \\ \\
+{table}
+ID | Name | Column Width | Description | Actions
+stName | Step Name | 20% | Short name that tells what the test step is | -
+stInstr | Step Instruction | 30% | Free-form text instruction how to perform this test step | -
+stExpected | Expected Result | 30% | Description of the expected result of executing this test step. | -
+{table}
+\\
+...results in this Test Steps table: \\ \\
+{table}
+Step Name | Step Instruction | Expected Result | ~~+ non-user definable columns like "Actual Result"~~
+|&nbsp; |&nbsp; |&nbsp;
+{table} 
+\\
+(The specified column widths are not rendered here on this page... they are in the actual Test Steps table.) \\
+
+ 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option default="true" description="Generic relation type. A more concrete link should be used where possible." id="relates_to" name="relates to" oppositeName="is related to" sortOrder="1"/>
+    <option description="Parent - child relationship used to structure items of the same type." id="parent" name="has parent" oppositeName="is parent of" parent="true" sortOrder="2">
+        <rule sameType="true"/>
+    </option>
+
+    <option description="Links more granular Requirements to their parent Requirements." id="refines" name="refines" oppositeName="is refined by" parent="true" sortOrder="3">
+        <rule from="electricalRequirement, mechanicalRequirement, softwareRequirement" to="changerequest, systemRequirement, electricalRequirement, softwareRequirement, mechanicalRequirement"/>
+    </option>
+
+    <option description="Used for link implementing Tasks and Issues to Work Packages and also Work Packages to Requirements." id="implements" name="implements" oppositeName="is implemented by" parent="true" sortOrder="4">
+        <rule from="task, issue" to="workPackage"/>
+        <rule from="workPackage" to="systemRequirement, softwareRequirement, mechanicalRequirement, electricalRequirement"/>
+    </option>
+
+    <option description="Marks item that is a duplicate of existing item of the same type." id="duplicates" name="duplicates" oppositeName="is duplicated by" sortOrder="5">
+        <rule sameType="true"/>
+    </option>
+
+    <option description="Follow-up of a done item." id="follow_up" name="has follow-up" oppositeName="follows" sortOrder="6">
+        <rule from="defect, task" to="task, issue"/>
+    </option>
+
+    <option description="Used to link verifying Test Cases to Requirements." id="verifies" name="verifies" oppositeName="is verified by" sortOrder="7">
+        <rule from="systemTestCase" to="systemRequirement"/>
+        <rule from="softwareTestCase, unitTestCase" to="softwareRequirement"/>
+        <rule from="mechanicalTestCase" to="mechanicalRequirement"/>
+        <rule from="electricalTestCase" to="electricalRequirement"/>
+    </option>
+
+    <option description="Used to link a Issue with Test Case that triggered it." id="triggered_by" name="is triggered by" oppositeName="triggers" sortOrder="8">
+        <rule from="issue" to="systemTestCase, unitTestCase, softwareTestCase, electricalTestCase, mechanicalTestCase"/>
+    </option>
+
+    <option description="Links Risk items that assesses Requirements risks." id="assesses" name="assesses" oppositeName="is assessed by" sortOrder="9">
+        <rule from="risk" to="systemRequirement, softwareRequirement, electricalRequirement, mechanicalRequirement"/>
+    </option>
+
+    <option description="An action that mitigates a risk." id="mitigates" name="mitigates" oppositeName="is mitigated by" sortOrder="10">
+        <rule from="task" to="risk"/>
+    </option>
+
+    <option description="System role that links derived items." id="derived_from" name="is derived from" oppositeName="is derived by" sortOrder="12">
+        <rule from="__other" to="__other"/>
+    </option>
+
+    <option description="System role that links branched items." id="branched_from" name="is branched from" oppositeName="has branch" sortOrder="13">
+        <rule from="__other" to="__other"/>
+    </option>
+
+</enumeration>

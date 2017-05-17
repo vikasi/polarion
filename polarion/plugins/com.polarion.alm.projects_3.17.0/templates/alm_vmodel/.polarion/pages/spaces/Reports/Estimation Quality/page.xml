@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2015-01-28 09:51:13.619 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client19" class="polarion-rp-widget-part" data-widget="com.polarion.pageParametersForm">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="title"></sub><sub id="content"><sub>iteration</sub></sub><sub id="width">500</sub></span>
+</div><p id="polarion_client4">
+  <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline"><span id="polarion-rp-widget-content"></span><span class="polarion-rp-widget-parameters"><sub id="script"><sub id="script">&lt;div style=&quot;color:grey; text-align:right&quot;&gt;
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name &lt;br/&gt; $date.long
+&lt;div&gt;</sub></sub></span></span>
+</p><h2 id="polarion_client21">Estimation Quality</h2><p id="polarion_client1"></p><p id="polarion_client29">
+  Analyzes Work Items checking the initial estimates and recorded time spent, and for each user reports a summary of how much they overestimate or underestimate their Work Items.<br/>
+  <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline"><span id="polarion-rp-widget-content"></span><span class="polarion-rp-widget-parameters"><sub id="script"><sub id="script">&lt;span style=&#39;color: $pageParameters.undercolor.value&#39;&gt;&lt;strong&gt;Underestimated&lt;/strong&gt;&lt;/span&gt; ($pageParameters.undercolor.value)</sub></sub></span></span> <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline"><span id="polarion-rp-widget-content"></span><span class="polarion-rp-widget-parameters"><sub id="script"><sub id="script">&lt;span style=&#39;color: $pageParameters.overcolor.value&#39;&gt;&lt;strong&gt;Overestimated&lt;/strong&gt;&lt;/span&gt; ($pageParameters.overcolor.value)</sub></sub></span></span>, link to a table of the Work Items that were analysed.
+</p><ul id="polarion_client28">
+  <li>!E = &quot;done&quot; items without Initial Estimate</li>
+  <li>!S = &quot;done&quot; items without Time Spent</li>
+</ul><div id="polarion_client6" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="script"><sub id="script">#set($projectID = $page.fields().project().get().fields().id().get())
+#set($workitemsQuery = &quot;project.id:($projectID) AND ($pageParameters.workitemsQuery.value)&quot;)
+#set($uQuery = &quot;SELECT DISTINCT A.FK_URI_USER FROM REL_WORKITEM_USER_ASSIGNEE A, LUCENE_QUERY(&#39;WorkItem&#39;, &#39;$workitemsQuery&#39; , &#39;id&#39;)  WI WHERE A.FK_WORKITEM = WI.C_PK&quot;)
+#set($users = $trackerService.dataService.sqlSearch($uQuery))
+#set($nullq = &#39;######NULL&#39;)
+
+&lt;table class=&quot;polarion-Document-table&quot; style=&quot;margin: auto;empty-cells: show;border-collapse: collapse;width: 80%;border: 1px solid #CCCCCC;&quot; id=&quot;polarion_wiki macro name=table;params=uid=client2&quot;&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;th style=&quot;height: 12px;text-align: left;vertical-align: top;font-weight: bold;background-color: #F0F0F0 !important;border: 1px solid #CCCCCC;padding: 5px;&quot;&gt;User&lt;/th&gt;
+          #foreach($timepoint in $pageParameters.iteration.values)
+            
+            &lt;th style=&quot;height: 12px;text-align: left;vertical-align: top;font-weight: bold;background-color: #F0F0F0 !important;border: 1px solid #CCCCCC;padding: 5px;&quot;&gt;$timepoint.label()&lt;/th&gt;
+          #end
+      &lt;/tr&gt;
+    #foreach($user in $users)
+      #set($details = &quot;&quot;)
+      #foreach($timepoint in $pageParameters.iteration.values)
+        #set($queryBasic = &quot;$workitemsQuery AND PLAN:(${projectID}/$timepoint.id) AND assignee.id:$user.id&quot;)
+        #set($unestimatedQuery = &quot;$queryBasic AND initialEstimate:$nullq&quot;)
+        #set($unestimatedItems = $trackerService.queryWorkItems($unestimatedQuery, &quot;id&quot;))
+        #set($unspentQuery = &quot;$queryBasic AND timeSpent:$nullq&quot;)
+        #set($unspentItems = $trackerService.queryWorkItems($unspentQuery, &quot;id&quot;))
+        #set($correctQuery = &quot;$queryBasic AND NOT initialEstimate:$nullq AND NOT timeSpent:$nullq&quot;)
+        #set($correctItems = $trackerService.queryWorkItems($correctQuery, &quot;id&quot;))
+        #set($diff = &quot;&quot;)
+        #foreach($item in $correctItems)
+          #if($diff == &quot;&quot;)
+            #set($wiEstimate = $item.initialEstimate)
+            #set($diff = $wiEstimate.parseDuration($wiEstimate.toString()))
+          #else
+            #set($x = $diff.add($item.initialEstimate))
+          #end
+          #set($wiSpent = $item.timeSpent)
+          #set($wiSpent = $wiSpent.parseDuration($wiSpent.toString()))
+          #set($wiSpent.negative = true)
+          #set($x = $diff.add($wiSpent))
+          #set($x = $diff.toCollapsedForm(28800000))
+        #end
+        #if ($diff == &quot;&quot;)
+          #set($detail = &quot;-&quot;)
+        #else
+          #if ($diff.negative)
+            #set($color = $pageParameters.undercolor.value)
+          #else
+            #set($color = $pageParameters.overcolor.value)
+          #end
+          #set($detail = &quot;&lt;span style=&#39;white-space: nowrap; color: $color;&#39;&gt;&lt;strong&gt;$diff&lt;/strong&gt;&lt;/span&gt;&quot;)
+        #end
+        #set($detail = &quot;&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;&lt;a href=&#39;/polarion/#/workitems?query=$correctQuery&#39; target=&#39;$link_target&#39;&gt;$detail&lt;/a&gt;&lt;br&gt;(!E:&lt;a href=&#39;/polarion/#/workitems?query=$unestimatedQuery&#39; target=&#39;$link_target&#39;&gt;$unestimatedItems.size()&lt;/a&gt; !S:&lt;a href=&#39;/polarion/#/workitems?query=$unspentQuery&#39; target=&#39;$link_target&#39;&gt;$unspentItems.size()&lt;/a&gt;)&lt;/td&gt;&quot;)
+        #set($details = &quot;$details $detail&quot;)
+      #end
+
+        &lt;tr&gt;
+            &lt;td style=&quot;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&quot;&gt;$user.name&lt;/td&gt;
+            $details
+        &lt;/tr&gt;
+    #end
+    &lt;/tbody&gt;
+&lt;/table&gt;</sub></sub></span>
+</div><p id="polarion_client7"></p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div><span id="polarion-rp-parameters"><sub id="iteration" data-label="Iteration" data-type="Enumeration"><sub id="values"><sub>Iteration_1</sub></sub><sub id="enumId">@plan[template.id:iteration]</sub><sub id="prototype">Plan</sub><sub id="allowNoValue">false</sub><sub id="allowMultipleValues">true</sub></sub><sub id="link_target" data-label="Link Target" data-type="String">_top</sub><sub id="overcolor" data-label="Overcolor" data-type="String">green</sub><sub id="undercolor" data-label="Undercolor" data-type="String">red</sub><sub id="workitemsQuery" data-label="Workitems Query" data-type="String">HAS_VALUE:resolution</sub></span>]]></field>
+    <field id="title">Estimation Quality</field>
+</rich-page>

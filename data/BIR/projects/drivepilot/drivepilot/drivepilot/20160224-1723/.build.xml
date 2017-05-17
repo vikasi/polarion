@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<build>
+    <field id="buildArtifact">drivepilot:drivepilot:</field>
+    <field id="buildDescriptorName">_default</field>
+    <field id="buildStamp">20160224-1723</field>
+    <field id="buildTag">20160224-1723</field>
+    <field id="buildEvents">
+        <struct>
+            <item id="warnCount">0</item>
+            <item id="fatalCount">0</item>
+            <item id="errorCount">0</item>
+        </struct>
+    </field>
+    <field id="startTime">2013-05-24 17:23:18.798 +0200</field>
+    <field id="author">admin</field>
+    <field id="logFiles">
+        <list>
+            <item>log</item>
+        </list>
+    </field>
+    <field id="deployedArtifacts">
+        <list>
+            <struct>
+                <item id="location">results/drivepilot/drivepilot</item>
+                <item id="label">Default Maven 2 build results for DrivePilot - App</item>
+            </struct>
+        </list>
+    </field>
+    <field id="finishTime">2013-05-24 17:23:26.113 +0200</field>
+    <field id="creationTime">2013-05-24 17:23:18.718 +0200</field>
+    <field id="buildTestResults">
+        <struct>
+            <item id="skippedCount">0</item>
+            <item id="testCount">3</item>
+            <item id="failureCount">0</item>
+            <item id="errorCount">0</item>
+        </struct>
+    </field>
+</build>

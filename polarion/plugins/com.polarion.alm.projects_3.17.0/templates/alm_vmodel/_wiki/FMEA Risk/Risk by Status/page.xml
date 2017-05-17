@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20120105112743</created>
+<type>content</type>
+<content><![CDATA[{include-macros:_default.macros}
+
+1 Risk by Status Report
+
+This Risk Report lists all the FMEA Work Items that are currently defined for this Project.
+
+{table:header=no}
+#scoreEntry("Draft" "type:risk AND status:draft" "req_status_draft.gif")
+#scoreEntry("Analysis" "type:risk AND status:analysis" "req_status_awaiting_review.gif")
+#scoreEntry("Actions Pending" "type:risk AND status:action-pending" "status_inprogress.gif")
+#scoreEntry("Actions Taken" "type:risk AND status:action-taken" "req_status_approved.gif")
+#scoreEntry("Rejected" "type:risk AND status:rejected" "req_status_rejected.gif")
+{table}
+
+
+1.1 Draft
+{workitems:type:risk AND status:draft|fields=id,title,rpn}
+
+1.1 Analysis
+{workitems:type:risk AND status:analysis|fields=id,title,rpn}
+
+1.1 Actions Pending
+
+{workitems:type:risk AND status:action-pending|fields=id,title,rpn,recommendedActions}
+
+1.1 Actions Taken
+
+{workitems:type:risk AND status:action-taken|fields=id,title,rpn}
+
+1.1 Completed 
+
+{workitems:type:risk AND status:completed|fields=id,title,rpn}
+
+
+1.1 Rejected 
+
+{workitems:type:risk AND status:rejected|fields=id,title,rpn,resolution}
+]]></content>
+</wiki-page>

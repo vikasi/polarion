@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<user-roles>
+    <user name="rProject">
+        <role name="project_admin"/>
+        <role name="project_assignable"/>
+    </user>
+    <user name="cUser">
+        <role name="project_approver"/>
+        <role name="project_assignable"/>
+    </user>
+    <user name="jRequirement">
+        <role name="project_assignable"/>
+    </user>
+    <user name="mTest">
+        <role name="project_assignable"/>
+    </user>
+</user-roles>

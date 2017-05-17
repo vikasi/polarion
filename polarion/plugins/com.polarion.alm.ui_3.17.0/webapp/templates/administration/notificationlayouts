@@ -1,0 +1,5 @@
+1 Notification Layouts
+
+#info("Notification Layouts provide a way to customize the *layout of email notification messages* pertaining to new and updated Work Items. A Notification Layout defines what fields are displayed in notification email messages, and how those fields are arranged.\\ \\ There are two default layouts, which you can customize, or you can create your own custom layouts by changing the default configuration files. To actually use a customized layout, you need to configure an optional attribute named ~~layout~~ for particular Work Item related events. You can optionally define layouts for specific Work Item types.\\ \\ Notification Layouts are defined in XML. The Notification Layout Editor provides an embedded XML editor which enables you to edit the XML code of Layouts without leaving your browser. Inline Help contains extensive comments on the various elements and how to structure them to achieve the desired layout of email notifications.")
+
+{notification-layouts}

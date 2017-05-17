@@ -1,0 +1,142 @@
+<link href="${clink}css/xray/xray-default.css" type="text/css" rel="stylesheet"/>
+<link href="${clink}css/xray/xray-table.css" type="text/css" rel="stylesheet"/>
+<link href="${clink}css/xray/xray-detail.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="${clink}javascript/xray/xray.js"></script>
+
+#if($canRead)
+<table width="100%" cellspacing="0" cellpadding="0">
+	#if($canChange)
+	<tr>
+		<td>
+			#actionBar()
+				<table cellpadding="0" cellspacing="0" height="100%">
+					<tr>
+			           <td class="pl">
+                            #set($actionURL = $jslink)
+                            #addPortletAction($actionURL)
+                            #addLinkLayout($actionURL "clear")			
+                            #if($currentProjectId)
+                            	#set($actionURL = $actionURL.addQueryData("currentProject","$!currentProjectId"))
+                            #end
+							#set($actionURL = $actionURL.addQueryData("eventSubmit_doReload","eventSubmit_doReload"))
+							#action($actionURL false false "Clear Enumerations Cache")
+        	        	</td>
+						<td width="100%"></td>
+						<td class="systemActions">
+    						#allowCustomize($allowCustomize)
+    						#if($allowCustomize)
+                    			<a href="$jslink.getAction('controls.Customize', $portlet)" title="Customize">
+                    				<img src="${clink}images/polarion/control/customize.gif" alt="Customize" border="0" align="absmiddle">
+                    			</a>
+							#end
+						</td>
+                		<td class="systemActions" nowrap="nowrap">
+                			#contextHelp("pref_enumerations")
+                		</td>
+					</tr>
+				</table>
+			#actionBarEnd()
+		</td>
+	</tr>
+	#end
+	#if($data.message)
+		<tr>
+			<td style="padding:10">
+				$!data.message
+				<br/>
+		</td>
+	</tr>
+	#end
+	<tr>
+		<td style="padding:10">
+			#panel("Enumerations" "Enumerations" false true true false)
+				<table cellspacing="5" width="100%">
+					<tr>
+						<td>
+            					#set($tableId = "enumerations_table_$portlet.getID()")
+                       			<table id="$tableId" class="list" width="100%" cellpadding="0" cellspacing="0" rules="all">
+            						<tr>
+            							<th>Name</th>
+										<th>Type</th>
+            							<th>Actions</th>
+            					 	</tr>
+            					 	#foreach($enumeration in $enumerations.entrySet())
+            						 	<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)">
+            						 		<td><a target="_blank" href="#formatRepoFileLink($!enumeration.value)">$!enumeration.key</a></td>
+											#if($global_enumerations)
+												<td>Project configuration</td>
+											#else
+												<td>Global configuration</td>
+											#end
+											<td>
+												#if($canChange)
+													#set($deleteUrl = $jslink.addQueryData("eventSubmit_doRemove", "").addQueryData("enum-file",$!enumeration.key))																							
+                                    				#if($currentProjectId)
+														#set($deleteUrl = $deleteUrl.addQueryData("currentProject","$!currentProjectId"))			
+													#end
+													#addLinkLayout($deleteUrl "clear")
+													<a href="$deleteUrl">remove</a>
+												#end								
+											</td>
+            					 		</tr>
+									#end
+									#if($global_enumerations)
+            					 	#foreach($enumeration in $global_enumerations.entrySet())
+										#if(!$enumerations.containsKey($enumeration.key))
+											<tr onmouseover="selectRow(this)" onmouseout="deselectRow(this)">
+												<td><a target="_blank" href="#formatRepoFileLink($!enumeration.value)">$!enumeration.key</a></td>
+												<td>Global configuration</td>
+												<td></td>
+											</tr>
+										#end
+									#end
+									#end
+            					</table> 
+								#firstSecond($tableId)
+ 						</td>
+					</tr>
+				</table>
+	        #endPanel()
+		</td>
+	</tr>
+	#if($canChange)
+        <tr>
+        	<td style="padding:10">
+        			#if($global_enumerations) 
+        				#panel("Configuration" "Upload New Project Enumeration" false true true false)
+        			#else 
+        				#panel("Configuration" "Upload New Global Enumeration" false true true false)
+        			#end					
+        			<br/>
+                    #set($actionURL = $jslink)
+                    #addPortletAction($actionURL)
+                    #addLinkLayout($actionURL "clear")			
+                    #if($currentProjectId)
+                    	#set($actionURL = $actionURL.addQueryData("currentProject","$!currentProjectId"))
+                    #end					
+        			<form enctype="multipart/form-data" name="importForm" method="post" action="$actionURL">
+        				<input type="hidden" name="fileUrl" value="$fileUrl">	
+        				<table>
+        					<tr>
+        						<td class="featureLabel"><label for="file" ACCESSKEY=f> <u>F</u>ile: </label></td>
+        						<td><input id="file" size=100 type="file" name="file"/></td>
+        					</tr>
+        					<tr>
+        						<td align="left" colspan="2" style="padding-top:10">
+        							<input type="submit" name="eventSubmit_doUpload" value="Upload" class="actionButton"/>
+        						</td>
+        					</tr>
+        				</table>
+        			</form>
+        		#endPanel()
+        	</td>
+        </tr>	
+	#end
+</table>
+#else
+	Cannot read - security restriction.
+#end
+
+
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/build_workitem_reports.psml" hidden="false">
+    <title>Work Item Reports</title>
+    <short-title>Work Item Reports</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_build_workitem_reports_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_build_workitem_reports_portlet" type="portlet" name="webui::FileConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/builder/workitem-reports.xml</value>
+		  </preference>
+		  </fragment>
+    </fragment>
+</page>

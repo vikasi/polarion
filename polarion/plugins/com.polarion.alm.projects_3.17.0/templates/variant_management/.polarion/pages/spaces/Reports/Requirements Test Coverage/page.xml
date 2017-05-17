@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2015-03-25 15:28:22.719 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client4" class="polarion-rp-widget-part" data-widget="com.polarion.pageParametersForm">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="title"></sub><sub id="content"><sub>reqtypes</sub><sub>status</sub><sub>version</sub></sub><sub id="width">700</sub></span>
+</div><div id="polarion_client8" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="script"><sub id="script" style="white-space:pre;">&lt;div style=&quot;color:grey; text-align:right&quot;&gt;
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name &lt;br/&gt; $date.long
+&lt;div&gt;</sub></sub></span>
+</div><h2 id="polarion_client6">Requirements Test Coverage</h2><p id="polarion_hardcoded_1">
+  <span style="font-size: 10pt;line-height: 1.5;">Displays statistics about test coverage for selected requirements, i.e. the ratio of requirements linked and not linked by verification test cases. Requirements without linked verification test cases are also listed in detailed table below.</span>
+</p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 38.671875%;">
+  <div id="polarion_client7" class="polarion-rp-widget-part" data-widget="com.polarion.multiSetPieChart">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters" style="display: none;"><sub id="title">Requirements Test Case Coverage</sub><sub id="sectors"><sub id="elements"><sub><sub id="prototype">WorkItem</sub><sub id="queryType">sqlVelocity</sub><sub id="sqlRestQuery" style="white-space:pre;">AND C_TYPE IN $pageParameters.reqtypes.toSql()
+#if(!$pageParameters.status.values.empty)
+AND C_STATUS IN $pageParameters.status.toSql()
+#end
+AND EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = WORKITEM.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND LINK.C_ROLE = &#39;$pageParameters.verifiesLinkRole.toSql()&#39;)</sub><sub id="children"><sub id="sectorName">Covered</sub><sub id="sectorColor">green</sub></sub></sub><sub><sub id="prototype">WorkItem</sub><sub id="queryType">sqlVelocity</sub><sub id="sqlRestQuery" style="white-space:pre;">AND C_TYPE IN $pageParameters.reqtypes.toSql()
+#if(!$pageParameters.status.values.empty)
+AND C_STATUS IN $pageParameters.status.toSql()
+#end
+AND NOT EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = WORKITEM.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND LINK.C_ROLE = &#39;$pageParameters.verifiesLinkRole.toSql()&#39;)</sub><sub id="children"><sub id="sectorName">Uncovered</sub><sub id="sectorColor">red</sub></sub></sub></sub></sub><sub id="showDataLabels">true</sub><sub id="showZeroValues">false</sub></span>
+</div><p id="polarion_client35"></p>
+</div>
+<div class="polarion-rp-column" style="width: 61.328125%;">
+  <div id="polarion_client32" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters" style="display: none;"><sub id="script"><sub id="script" style="white-space:pre;">&lt;div style=&quot;text-align: left;&quot;&gt;
+There are &lt;strong&gt;
+&lt;span class=&quot;polarion-rp-inline-widget&quot; data-widget=&quot;com.polarion.countOfObjects&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id=&quot;dataSet&quot;&gt;
+      &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+      &lt;sub id=&quot;queryType&quot;&gt;sqlVelocity&lt;/sub&gt;
+      &lt;sub id=&quot;sqlRestQuery&quot;&gt;AND C_TYPE IN ${esc.d}pageParameters.reqtypes.toSql()
+${esc.h}if(!${esc.d}pageParameters.status.values.empty)
+AND C_STATUS IN ${esc.d}pageParameters.status.toSql()
+${esc.h}end
+AND NOT EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = WORKITEM.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND LINK.C_ROLE = &#39;${esc.d}pageParameters.verifiesLinkRole.toSql()&#39;)&lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;before&quot;&gt;&lt;/sub&gt;&lt;sub id=&quot;after&quot;&gt;Requirements&lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;/strong&gt; without verifying test cases.
+&lt;/div&gt;</sub></sub></span>
+</div><p id="polarion_client30"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <h3 id="polarion_client24">Requirements without Test Cases</h3><div id="polarion_client26" class="polarion-rp-widget-part" data-widget="com.polarion.table">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters" style="display: none;"><sub id="dataSet"><sub id="prototype">WorkItem</sub><sub id="queryType">sqlVelocity</sub><sub id="sqlRestQuery" style="white-space:pre;">AND C_TYPE IN $pageParameters.reqtypes.toSql()
+#if(!$pageParameters.status.values.empty)
+AND C_STATUS IN $pageParameters.status.toSql()
+#end
+AND NOT EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = WORKITEM.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND LINK.C_ROLE = &#39;$pageParameters.verifiesLinkRole.toSql()&#39;)</sub><sub id="children"><sub id="columns"><sub><sub id="id">id</sub></sub><sub><sub id="id">title</sub></sub><sub><sub id="id">status</sub></sub></sub><sub id="sortBy"></sub></sub></sub><sub id="advanced"><sub id="top">0</sub></sub></span>
+</div><h3 id="polarion_client27">Requirements with Test Cases</h3><div id="polarion_client29" class="polarion-rp-widget-part" data-widget="com.polarion.table">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters" style="display: none;"><sub id="dataSet"><sub id="prototype">WorkItem</sub><sub id="queryType">sqlVelocity</sub><sub id="sqlRestQuery" style="white-space:pre;">AND C_TYPE IN $pageParameters.reqtypes.toSql()
+#if(!$pageParameters.status.values.empty)
+AND C_STATUS IN $pageParameters.status.toSql()
+#end
+AND EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = WORKITEM.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND LINK.C_ROLE = &#39;$pageParameters.verifiesLinkRole.toSql()&#39;)</sub><sub id="children"><sub id="columns"><sub><sub id="id">id</sub></sub><sub><sub id="id">title</sub></sub><sub><sub id="id">status</sub></sub></sub><sub id="sortBy"></sub></sub></sub><sub id="advanced"><sub id="top">0</sub></sub></span>
+</div><p id="polarion_client23"></p>
+</div>
+<div class="polarion-rp-row-separator"></div><span id="polarion-rp-parameters"><sub id="reqtypes" data-label="Requirement Item Types" data-type="Enumeration"><sub id="values"><sub>requirement</sub></sub><sub id="enumId">workitem-type</sub><sub id="prototype">WorkItem</sub><sub id="allowNoValue">false</sub><sub id="allowMultipleValues">true</sub></sub><sub id="status" data-label="Status" data-type="Enumeration"><sub id="enumId">status</sub><sub id="prototype">WorkItem</sub><sub id="subtype">requirement</sub><sub id="allowNoValue">true</sub><sub id="allowMultipleValues">true</sub></sub><sub id="verifiesLinkRole" data-label="Verifies Link Role" data-type="String">verifies</sub></span>]]></field>
+    <field id="title">Requirements Test Coverage</field>
+</rich-page>

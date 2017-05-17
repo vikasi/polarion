@@ -1,0 +1,98 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../hivemind.css">
+<title>HiveMind Registry -  Configuration Point com.polarion.platform.repository.config.userConfiguration</title>
+</head>
+<body>
+<div class="title"> Module <a href="../module/com.polarion.platform.repository.config.html">com.polarion.platform.repository.config</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+<hr>
+<table class="top-level-object" cellspacing="0">
+<tr>
+<th class="object-id"><img src="../public.png" width="20" height="20" alt="[public]"> Configuration Point com.polarion.platform.repository.config.userConfiguration</th><th>Occurs:</th><td> unbounded </td>
+</tr>
+<tr>
+<th colspan="3" class="section">Schema</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;config&gt; </th>
+</tr>
+<tr>
+<td class="description" colspan="3">Id of configuration (used for retriving the configuration information) 
+				
+				The configuration will be merge default and user specific configurations.
+				
+				Path in default repository to retrieve or store configuration information for a particular user. 
+				The path must contain substring [USER_ID] that will be replaced be id of the user for which 
+				the configuration is read or stored.
+				
+				Path in default repository to retrieve or store default configuration information.
+				If omitted, it is assumed that this user configuration has no global default; attempts to read 
+				or write such configuration with no specified user will fail.
+				
+				The file processor generate suitable Object for configuration consumer, if omited the service will use the default.
+				Default file processor returns the org.w3c.dom.Document as result of configuration processing.
+				The service must implement the com.polarion.platform.repository.config.IDataHandler interface</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute cfgFilePath</th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute dataHandler</th><th> Translator: </th><td>service</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute defaultCfgFilePath</th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute id</th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute inheritable</th><th> Translator: </th><td>boolean,default=false</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">com.polarion.platform.repository.internal.config.UserConfigContribution</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">id</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">id</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">inheritable</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">inheritable</span>"
+       <span class="attribute">skip-if-null</span>="<span class="attribute-value">false</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">cfgFilePath</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">cfgFilePath</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">defaultCfgFilePath</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">defaultCfgFilePath</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">dataHandler</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">dataHandler</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<div class="title"> Module <a href="../module/com.polarion.platform.repository.config.html">com.polarion.platform.repository.config</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+</body>
+</html>

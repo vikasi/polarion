@@ -1,0 +1,13 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>checkstyle</groupId>
+  <artifactId>checkstyle-optional</artifactId>
+  <version>4.1</version>
+  <dependencies>
+    <dependency>
+      <groupId>checkstyle</groupId>
+      <artifactId>checkstyle</artifactId>
+      <version>4.1</version>
+    </dependency>
+  </dependencies>
+</project>

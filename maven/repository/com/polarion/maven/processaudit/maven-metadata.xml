@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <plugins>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:sensor-tracker:maven-plugin:3.17.0</name>
+      <prefix>sensor-tracker</prefix>
+      <artifactId>sensor-tracker</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:sensor-plan:maven-plugin:3.17.0</name>
+      <prefix>sensor-plan</prefix>
+      <artifactId>sensor-plan</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:plugin-cobertura:maven-plugin:3.17.0</name>
+      <prefix>cobertura</prefix>
+      <artifactId>plugin-cobertura</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:layout-java:maven-plugin:3.17.0</name>
+      <prefix>layout-java</prefix>
+      <artifactId>layout-java</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:sensor-source-checks:maven-plugin:3.17.0</name>
+      <prefix>sensor-source-checks</prefix>
+      <artifactId>sensor-source-checks</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:sensor-standard-cobertura:maven-plugin:3.17.0</name>
+      <prefix>sensor-standard-cobertura</prefix>
+      <artifactId>sensor-standard-cobertura</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:sensor-surefire-test:maven-plugin:3.17.0</name>
+      <prefix>sensor-surefire-test</prefix>
+      <artifactId>sensor-surefire-test</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:action-transfer:maven-plugin:3.17.0</name>
+      <prefix>action-transfer</prefix>
+      <artifactId>action-transfer</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:source-check-aggregate:maven-plugin:3.17.0</name>
+      <prefix>source-check-aggregate</prefix>
+      <artifactId>source-check-aggregate</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:analyzer-score:maven-plugin:3.17.0</name>
+      <prefix>analyzer-score</prefix>
+      <artifactId>analyzer-score</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.processaudit:report-general:maven-plugin:3.17.0</name>
+      <prefix>report-general</prefix>
+      <artifactId>report-general</artifactId>
+    </plugin>
+  </plugins>
+</metadata>

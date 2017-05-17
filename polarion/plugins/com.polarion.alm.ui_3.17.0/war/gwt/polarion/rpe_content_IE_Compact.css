@@ -1,0 +1,2224 @@
+.polarion-rp-column-toolbar {
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.polarion-PlanProgressMacro-mainDiv, .polarion-PlanProgressMacro-mainRelativeDiv, .polarion-rpe-view, .polarion-rp-column {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.polarion-HistoryTable-mainPanel {
+  position: absolute !important;
+  left: 0px;
+  right: 0px;
+}
+
+.polarion-HistoryTable-mainPanel, .polarion-rp-column-drag-decoration {
+  position: absolute !important;
+  top: 0px;
+  bottom: 0px;
+}
+
+.polarion-rpw-table-main {
+  width: 100%;
+}
+
+.polarion-rpw-table-content {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.polarion-rpw-table-header-row > th {
+  vertical-align: top;
+  text-align: left;
+  padding: 0px 4px;
+  height: 28px;
+  color: #757575;
+  font-weight: normal;
+  border-bottom: 1px solid #D2D7DA;
+}
+
+.polarion-rpw-table-content-row > td {
+  vertical-align: top;
+  padding: 2px 14px 2px 4px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.polarion-rpw-table-not-readable-cell {
+  font-style: italic;
+}
+
+.polarion-rpw-table-footer {
+  text-align: center;
+  font-style: italic;
+  width: 100%;
+  vertical-align: top;
+}
+
+.polarion-rpw-table-counts {
+  display: inline-block;
+  padding: 0 7px;
+  vertical-align: middle;
+}
+
+.polarion-rpw-table-open-in-table {
+  display: inline-block;
+  color: #1D5696 !important;
+  padding: 0px 7px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.polarion-rpw-table-open-in-table > a > img {
+  border: 0px;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.polarion-rpw-table-open-in-table > a > img:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.polarion-rpw-table-show-query {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.polarion-rpw-table-show-query:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.polarion-rpw-table-query {
+  display: none;
+  padding-top: 5px;
+  color: #717171;
+}
+
+.polarion-errormessage, .polarion-warningmessage, .polarion-infomessage, .polarion-infomessage-noSideMargin, .polarion-plainmessage {
+  text-align: left;
+  margin: 4px 5px;
+  padding: 16px 4px 16px 36px;
+  background: whitesmoke url("/polarion/wiki/skins/sidecar/msg.png") 10px 18px no-repeat;
+}
+
+.polarion-infomessage, .polarion-infomessage-noSideMargin {
+  background-image: url("/polarion/wiki/skins/sidecar/images/msginfo.png");
+  background-color: #D8E4F1;
+}
+
+.polarion-infomessage-noSideMargin {
+  margin: 4px 0px;
+}
+
+.polarion-warningmessage {
+  background-image: url("/polarion/wiki/skins/sidecar/images/msgwarning.png");
+  background-color: #FFFFCE;
+}
+
+.polarion-errormessage {
+  background-image: url("/polarion/wiki/skins/sidecar/images/msgerror.png");
+  background-color: #FFCCCC;
+}
+
+.polarion-plainmessage {
+  background-image: none;
+}
+
+.polarion-dle-clipboard-container {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  left: 1px;
+}
+
+.polarion-rpe-content {
+  padding: 5px;
+  font-size: 10pt;
+}
+
+.polarion-dle-document p, .polarion-rpe-content p {
+  line-height: 1.5;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.polarion-rpe-content a {
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+.polarion-rpe-content a:hover {
+  text-decoration: underline !important;
+}
+
+.polarion-TestRecordsTable {
+  width: 100%;
+}
+
+.polarion-rte-link a, .polarion-TestRecordsTable a {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+.polarion-rte-link a:visited, .polarion-TestRecordsTable a:visited {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+.polarion-rte-link a:hover, .polarion-TestRecordsTable a:hover {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: underline !important;
+}
+
+.polarion-TestRecordsTable tr.arrow:hover {
+  cursor: pointer !important;
+}
+
+a.descriptionLink {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+a.descriptionLink:visited {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: none !important;
+}
+
+a.descriptionLink:hover {
+  cursor: pointer !important;
+  color: #0277BB !important;
+  text-decoration: underline !important;
+}
+
+a.polarion-dle-toc-link:link {
+  cursor: pointer !important;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+a.polarion-dle-toc-link:visited {
+  cursor: pointer !important;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+a.polarion-dle-toc-link:hover {
+  cursor: pointer !important;
+  color: black !important;
+  text-decoration: underline !important;
+}
+
+.polarion-BurnMacro-warning {
+  background-color: #ffffce;
+  padding: 10px;
+  text-align: left;
+}
+
+.polarion-dle-document .polarion-PlanLabelMacro-mainAnchor,
+.polarion-dle-document .polarion-PlanLabelMacro-mainAnchor:link,
+.polarion-dle-document .polarion-PlanLabelMacro-mainAnchor:visited,
+.polarion-dle-document .polarion-PlanLabelMacro-mainAnchor:hover,
+.polarion-dle-document .polarion-PlanLabelMacro-anchor,
+.polarion-dle-document .polarion-PlanLabelMacro-anchor:link,
+.polarion-dle-document .polarion-PlanLabelMacro-anchor:hover,
+.polarion-dle-document .polarion-PlanLabelMacro-anchor:visited {
+  color: #0F4B8F !important;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.polarion-PlanLabelMacro-mainAnchor i, .polarion-PlanLabelMacro-anchor i, .polarion-PlanningSidebar-label i, .polarion-PlanningSidebar-treeNodeButton i, .dataCell .fa {
+  padding-right: 0.3em;
+}
+
+.polarion-PlanLabelMacro-container, .polarion-TestRunLabelWidget-container {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #E1F0FF;
+}
+
+.polarion-PlanLabelMacro-container a, .polarion-TestRunLabelWidget-container a {
+  color: #0E4A90 !important;
+}
+
+.polarion-PlanLabelMacro-mainLabel, .polarion-TestRunLabelWidget-container {
+  font-weight: bold;
+  font-size: 30px !important;
+  line-height: 50px;
+}
+
+.polarion-PlanLabelMacro-parents {
+  font-size: 12px;
+  padding-bottom: 7px;
+}
+
+.polarion-PlanLabelMacro-childrenTable {
+  table-layout: fixed;
+}
+
+.polarion-PlanLabelMacro-children {
+  font-size: 12px;
+  padding-top: 7px;
+}
+
+.polarion-PlanLabelMacro-createChild {
+  cursor: pointer;
+}
+
+.polarion-PlanLabelMacro-parentsSeparator {
+  color: #777777;
+  margin-right: 10px;
+}
+
+.polarion-PlanLabelMacro-planFinishedDivGreen {
+  color: #FFFFFF;
+  font-size: 15px;
+  padding: 17px;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+.polarion-PlanLabelMacro-planFinishedDivGreen {
+  background: #27AE60;
+}
+
+.polarion-PlanLabelMacro-planFinishedDivGreen:hover {
+  background: #009248;
+}
+
+.polarion-PlanLabelMacro-planFinishedNormalSpan, .polarion-PlanLabelMacro-planFinishedBoldSpan, .polarion-PlanLabelMacro-planFinishedDotSpan {
+  vertical-align: middle;
+}
+
+.polarion-PlanLabelMacro-planFinishedBoldSpan {
+  font-weight: bold;
+}
+
+.polarion-PlanLabelMacro-planFinishedNormalSpan {
+  text-decoration: underline;
+}
+
+.polarion-PlanProgressMacro-mainDiv, .polarion-PlanProgressMacro-mainRelativeDiv {
+  padding-left: 10px;
+  width: 100%;
+}
+
+.polarion-PlanProgressMacro-mainRelativeDiv {
+  position: relative;
+  height: 75px;
+}
+
+/* width is defined as inline style for the div*/
+.polarion-PlanProgressMacro-mainRelativeDiv > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.polarion-PlanProgressMacro-mainTable {
+  border-width: 0px;
+  margin-right: 10px;
+}
+
+.polarion-PlansMacro-mainTable {
+  border-width: 0px;
+  margin-right: 23px;
+  height: 48px;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowTopRight, .polarion-PlanProgressMacro-arrowBottomLeft, .polarion-PlanProgressMacro-arrowBottomLeftAligned, .polarion-PlanProgressMacro-arrowBottomRight {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  pd4ml-display: none;
+}
+
+.polarion-PlansMacro-arrowTopLeft, .polarion-PlansMacro-arrowTopRight {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  pd4ml-display: none;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowTopRight, .polarion-PlansMacro-arrowTopLeft, .polarion-PlansMacro-arrowTopRight {
+  border-top-color: #3A7523;
+  border-top-style: solid;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowTopRight {
+  top: -6px;
+}
+
+.polarion-PlansMacro-arrowTopLeft, .polarion-PlansMacro-arrowTopRight {
+  top: -5px;
+}
+
+.polarion-PlanProgressMacro-arrowBottomRight {
+  border-bottom-color: #DE6768;
+}
+
+.polarion-PlanProgressMacro-arrowBottomLeft, .polarion-PlanProgressMacro-arrowBottomLeftAligned {
+  border-bottom-color: #3A7523;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowTopRight {
+  border-top-width: 11px;
+}
+
+.polarion-PlansMacro-arrowTopLeft, .polarion-PlansMacro-arrowTopRight {
+  border-top-width: 8px;
+}
+
+.polarion-PlanProgressMacro-arrowBottomLeft, .polarion-PlanProgressMacro-arrowBottomLeftAligned, .polarion-PlanProgressMacro-arrowBottomRight {
+  border-bottom-width: 11px;
+  border-bottom-style: solid;
+  bottom: -26px;
+}
+
+.polarion-PlanProgressMacro-arrowTopLeft, .polarion-PlanProgressMacro-arrowBottomLeft {
+  left: -8px;
+}
+
+.polarion-PlansMacro-arrowTopLeft {
+  left: -6px;
+}
+
+.polarion-PlanProgressMacro-arrowBottomLeftAligned {
+  left: -6px;
+}
+
+.polarion-PlanProgressMacro-arrowTopRight, .polarion-PlanProgressMacro-arrowBottomRight {
+  right: -8px;
+}
+
+.polarion-PlansMacro-arrowTopRight {
+  right: -6px;
+}
+
+.polarion-PlanProgressMacro-leftCellGrey, .polarion-PlanProgressMacro-leftCellGreen, .polarion-PlanProgressMacro-leftCellRed, .polarion-PlanProgressMacro-rightCell, .polarion-PlanProgressMacro-leftCellBlack {
+  border-width: 0px;
+}
+
+.polarion-PlanProgressMacro-leftCellGrey, .polarion-PlanProgressMacro-leftCellGreen, .polarion-PlanProgressMacro-leftCellRed, .polarion-PlanProgressMacro-leftCellBlack {
+  vertical-align: middle;
+  font-family: helvetica;
+  font-size: 28px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+
+.polarion-PlansMacro-leftCellGrey {
+  vertical-align: middle;
+  font-family: helvetica;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+
+.polarion-PlanProgressMacro-leftCellGrey, .polarion-PlansMacro-leftCellGrey {
+  color: #888888;
+}
+
+.polarion-PlanProgressMacro-leftCellGreen {
+  color: #3A7523;
+}
+
+.polarion-PlanProgressMacro-leftCellRed {
+  color: #CA0814;
+}
+
+.polarion-PlanProgressMacro-rightCell {
+  width: 100%;
+}
+
+.polarion-PlanProgressMacro-infoDoneDiv, .polarion-PlanProgressMacro-infoIdealDiv {
+  min-height: 10px;
+}
+
+.polarion-PlansMacro-infoDoneDiv {
+  max-height: 11px;
+  min-height: 11px;
+}
+
+.polarion-PlansMacro-infoIdealDiv {
+  min-height: 11px;
+}
+
+.polarion-PlanProgressMacro-progressBarDiv, .polarion-PlansMacro-progressBarDiv {
+  border-color: #CCCCCC;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2px;
+}
+
+.polarion-PlansMacro-progressBarDiv {
+  padding: 1px;
+}
+
+.polarion-PlanProgressMacro-progressBarInnerTable, .polarion-PlanProgressMacro-infoInnerTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.polarion-PlanProgressMacro-progressBarInnerTable {
+  height: 16px;
+}
+
+.polarion-PlanProgressMacro-leftProgressBar, .polarion-PlanProgressMacro-centerProgressBar, .polarion-PlanProgressMacro-centerProgressBarOutpaced, .polarion-PlanProgressMacro-rightProgressBar {
+  border-style: solid;
+  border-width: 0 0 20px;
+}
+
+.polarion-PlansMacro-leftProgressBar, .polarion-PlansMacro-centerProgressBar, .polarion-PlansMacro-centerProgressBarOutpaced, .polarion-PlansMacro-rightProgressBar {
+  border-style: solid;
+  border-width: 0 0 14px;
+}
+
+.polarion-PlanProgressMacro-leftProgressBar, .polarion-PlansMacro-leftProgressBar, .polarion-PlansMacro-centerProgressBarOutpaced {
+  background-color: #AED77E;
+  border-color: #AED77E;
+}
+
+.polarion-PlanProgressMacro-centerProgressBar {
+  background-color: #FFD8D9;
+  border-color: #FFD8D9;
+}
+
+.polarion-PlanProgressMacro-centerProgressBarOutpaced {
+  background-color: #86C142;
+  border-color: #86C142;
+}
+
+.polarion-PlanProgressMacro-rightProgressBar, .polarion-PlansMacro-rightProgressBar, .polarion-PlansMacro-centerProgressBar {
+  background-color: #F1F1F1;
+  border-color: #F1F1F1;
+}
+
+.polarion-PlanProgressMacro-infoMiddleCell {
+  width: 1%;
+}
+
+.polarion-PlanProgressMacro-infoDivGreen, .polarion-PlanProgressMacro-infoDivRed, .polarion-PlansMacro-infoDivGreen, .polarion-PlansMacro-infoDivRed {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.polarion-PlanProgressMacro-infoDivGreen, .polarion-PlanProgressMacro-infoDivRed {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.polarion-PlansMacro-infoDivGreen {
+  font-size: 9px;
+  line-height: 1em;
+  font-family: helvetica;
+}
+
+.polarion-PlanProgressMacro-infoDivGreen, .polarion-PlansMacro-infoDivGreen {
+  color: #3A7523;
+}
+
+.polarion-PlanProgressMacro-infoDivRed {
+  color: #DE6768;
+}
+
+.polarion-PlanProgressMacro-relativeDivContainer {
+  position: relative;
+}
+
+.polarion-PlanProgressMacro-displayNone {
+  display: none;
+}
+
+.polarion-PlansMacro-smallCirle {
+  background: none repeat scroll 0 0 #E1F0FF;
+  border-radius: 50%;
+  height: 16px;
+  left: 4px;
+  top: 18px;
+  position: absolute;
+  width: 16px;
+}
+
+.polarion-PlansMacro-smallPlus {
+  height: 16px;
+  left: 7px;
+  top: 2px;
+  position: absolute;
+  width: 16px;
+}
+
+.polarion-PlansMacro-contentTable {
+  border-radius: 6px;
+  background-color: #F5F5F5;
+  width: 100%;
+  border-collapse: separate;
+  height: 54px;
+}
+
+.polarion-PlansMacro-plansTable {
+  width: 100%;
+  max-width: 800px;
+}
+
+.polarion-PlansMacro-leftCell {
+  width: 30px;
+  min-width: 30px;
+}
+
+.polarion-PlansMacro-leftCell, .polarion-PlansMacro-rightCell {
+  border-bottom: 12px solid white;
+}
+
+.polarion-PlansMacro-errorDiv {
+  color: #888888;
+  float: right;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.polarion-PlansMacro-noPlansSpan {
+  color: #888888;
+  float: left;
+  font-weight: bold;
+}
+
+.polarion-PlansMacro-errorInvalidPlans {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.polarion-PlansMacro-progressBarCell {
+  width: 50%;
+  vertical-align: middle;
+}
+
+.polarion-PlansMacro-planNameCell, .polarion-PlansMacro-planNewTable {
+  font-size: 15px;
+  color: #0F4B8F;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.polarion-PlansMacro-planNewTable:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.polarion-PlansMacro-planNameCell {
+  padding-left: 13px;
+  max-width: 200px;
+  vertical-align: middle;
+}
+
+.polarion-PlansMacro-planNameDiv, .polarion-PlansMacro-planNameDivStriked {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.polarion-PlansMacro-planNameDivStriked {
+  text-decoration: line-through;
+}
+
+.polarion-PlansMacro-planNameDiv i, .polarion-PlansMacro-planNameDivStriked i {
+  margin-right: 10px;
+  vertical-align: -5px;
+}
+
+.polarion-PlansMacro-contentRow {
+  height: 50px;
+  background-color: #F5F5F5;
+}
+
+.polarion-PlansMacro-contentRow .polarion-PlanProgressMacro-mainRelativeDiv {
+  height: 50px;
+}
+
+.polarion-PlansMacro-verticalLine, .polarion-PlansMacro-verticalLineShort {
+  border-right: 2px solid #E1F0FF;
+  position: absolute;
+  left: 11px;
+  top: 32px;
+}
+
+.polarion-PlansMacro-verticalLine {
+  height: 58px;
+}
+
+.polarion-PlansMacro-verticalLineShort {
+  height: 36px;
+}
+
+.polarion-PlansMacro-figuresContainer {
+  position: absolute;
+}
+
+.polarion-WorkItemsBoardMacro-Table {
+  border-collapse: separate;
+  border-spacing: 0px;
+  table-layout: fixed;
+  cellspacing: 0px;
+}
+
+.polarion-WorkItemsBoardMacro-BorderSmallCell {
+  min-width: 4px;
+}
+
+.polarion-WorkItemsBoardMacro-MiddleEmptyCell {
+  min-width: 16px;
+}
+
+.polarion-WorkItemsBoardMacro-HeaderCell {
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ecf0f1;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.polarion-WorkItemsBoardMacro-FooterCell {
+  height: 15px;
+  border-radius: 0 0 10px 10px;
+  background-color: #ecf0f1;
+}
+
+.polarion-WorkItemsBoardMacro-LeftSmallCell {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.polarion-WorkItemsBoardMacro-RightSmallCell {
+  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #eeeeee;
+}
+
+.polarion-WorkItemsBoardMacro-TopLeveWICell {
+  padding: 2px;
+  border: solid #eeeeee;
+  border-width: 1px 1px 1px 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  vertical-align: middle;
+  background-color: white;
+}
+
+.polarion-WorkItemsBoardMacro-TopLeveWICell tr,
+.polarion-WorkItemsBoardMacro-ChildWiCell tr,
+.polarion-WorkItemsBoardMacro-ChildWiCell-compact tr {
+  page-break-inside: avoid;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-WorkitemTable, .polarion-WorkItemsBoardMacro-ChildWiCell-WiTable {
+  height: 38px;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-WorkitemTable,
+.polarion-WorkItemsBoardMacro-ChildWiCell-WiTable,
+.polarion-WorkItemsBoardMacro-ChildWiCell-WiTable-compact {
+  border-spacing: 2px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Class for tables cells. It prevents changing sizes(extending) of parent table column, in case if cell contains some long text wit out spaces. */
+.polarion-WorkItemsBoardMacro-NonExtendable, .polarion-WorkItemsBoardMacro-TopLevelWICell-Workitem, .polarion-WorkItemsBoardMacro-TopLevelWICell-CustomFieldBasedEstimate, .polarion-WorkItemsBoardMacro-ChildWiCell-RemainingEstimate,
+.polarion-WorkItemsBoardMacro-ChildWiCell-CompactInfo {
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-Workitem {
+  font-size: 15px;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-WorkitemTable a {
+  white-space: nowrap;
+}
+
+.polarion-WorkItemsBoardMacro-TopLevelWICell-CustomFieldBasedEstimate {
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.polarion-WorkItemsBoardMacro-EmptyTableCell {
+  padding: 5px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  font-size: 15px;
+  font-weight: bold;
+  color: #a2a2a2;
+}
+
+.polarion-WorkItemsBoardMacro-ChildCell {
+  background-color: #ecf0f1;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell, .polarion-WorkItemsBoardMacro-ChildWiCell-compact {
+  border-radius: 5px;
+  border-left: 5px solid;
+  border-right: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  background-color: white;
+  position: relative;
+  margin: 5px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell {
+  padding: 7px 3px 3px 7px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-compact {
+  padding: 2px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell img, .polarion-WorkItemsBoardMacro-ChildWiCell a {
+  vertical-align: middle;
+}
+
+.polarion-WorkItemsBoardMacro-AvatarContainer {
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  position: relative;
+  padding: 2px;
+}
+
+.polarion-WorkItemsBoardMacro-AvatarContainer-Avatar {
+  width: 36px;
+  height: 36px;
+  float: right;
+  border-radius: 18px;
+}
+
+.polarion-WorkItemsBoardMacro-NumberDecorator, .polarion-WorkItemsBoardMacro-NumberDecorator-pdf {
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+  color: white;
+  border: solid 1px white;
+  background-color: grey;
+  position: absolute;
+  overflow: hidden;
+}
+
+.polarion-WorkItemsBoardMacro-NumberDecorator {
+  border-radius: 6px;
+  line-height: 12px;
+  font-size: 9px;
+  text-align: center;
+  top: 26px;
+  left: 26px;
+  height: 12px;
+  width: 12px;
+}
+
+.polarion-WorkItemsBoardMacro-NumberDecorator-pdf {
+  line-height: 9px;
+  font-size: 8px;
+  text-align: right;
+  top: 28px;
+  left: 28px;
+  height: 10px;
+  width: 10px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-NumberDecorator > span {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-Title {
+  vertical-align: top;
+  overflow: hidden;
+  font-size: 12px;
+  color: #0e4a90;
+  padding: 2px 4px 0px 2px;
+  position: relative;
+  line-height: 15px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-Title-nonForPdf {
+  height: 38px;
+}
+
+.polarion-WorkItemsBoardMacro-ChildWiCell-RemainingEstimate,
+.polarion-WorkItemsBoardMacro-ChildWiCell-CompactInfo,
+.polarion-WorkItemsBoardMacro-TopLevelWICell-CustomFieldBasedEstimate {
+  font-size: 11px;
+  color: #a2a2a2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 4px;
+}
+
+.polarion-WorkItemsBoardMacro-currentUser {
+  font-weight: bold;
+}
+
+.polarion-WorkItemsBoardMacro-gradient {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#FFFFFFFF',GradientType=0 );
+  bottom: 0px;
+  cursor: pointer;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+}
+
+.polarion-WorkItemsBoardMacro-TimeSpentProgressValue {
+  height: 16px;
+  background-color: #acd879;
+}
+
+.polarion-WorkItemsBoardMacro-RemainingEstimateProgressValue {
+  height: 16px;
+  background-color: #e5e5e5;
+}
+
+.polarion-padded-font-icon-16 {
+  font-size: 16px;
+  padding-right: 6px;
+}
+
+.polarion-plain-font-icon-16 {
+  font-size: 16px;
+}
+
+.polarion-font-icon-16 {
+  font-size: 16px;
+  text-shadow: 1px 1px 0 white;
+}
+
+.polarion-font-icon-24 {
+  font-size: 24px;
+  text-shadow: 1px 1px 0 white;
+  vertical-align: -0.115384em;
+}
+
+.polarion-font-icon-32 {
+  font-size: 32px;
+  text-shadow: 1px 1px 0 white;
+}
+
+.polarion-font-icon-topicTree {
+  font-size: 25px;
+  text-shadow: 1px 1px 0 white;
+  margin: 2px;
+}
+
+.polarion-font-icon-relative {
+  font-size: 1.230769em;
+  vertical-align: -0.115384em;
+  text-shadow: 1px 1px 0 white;
+  padding-right: 0.3em;
+}
+
+.polarion-font-icon-relative-ActivityStream {
+  font-size: 1.230769em;
+  vertical-align: -0.115384em;
+  text-shadow: 1px 1px 0 white;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+.polarion-font-icon-combo {
+  font-size: 13px;
+  text-shadow: 1px 1px 0 white;
+  padding-right: 4px;
+}
+
+.polarion-dle-document h1, .polarion-dle-document h2, .polarion-dle-document h3, .polarion-dle-document h4, .polarion-dle-document h5, .polarion-dle-document h6 {
+  color: #003366;
+  font-weight: bold;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.83em 0 0.41em;
+}
+
+.polarion-dle-document h1 {
+  border-bottom: 1px solid lightgrey;
+  font-size: 26pt;
+  padding-bottom: 5px;
+}
+
+.polarion-dle-document h2 {
+  font-size: 22pt;
+}
+
+.polarion-dle-document h3 {
+  font-size: 18pt;
+}
+
+.polarion-dle-document h4 {
+  font-size: 14pt;
+}
+
+.polarion-dle-document h5 {
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+.polarion-dle-document h6 {
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+.polarion-rpe-content h1, .polarion-rpe-content h2, .polarion-rpe-content h3, .polarion-rpe-content h4, .polarion-rpe-content h5, .polarion-rpe-content h6 {
+  color: #0E4A90;
+  text-shadow: 1px 1px 0.01em white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+.polarion-rpe-content h1 {
+  font-size: 30px;
+  line-height: 50px;
+  border-bottom: 4px solid #E1F0FF;
+}
+
+.polarion-rpe-pdf.polarion-rpe-content h1 {
+  border-bottom: none !important;
+}
+
+.polarion-rpe-content h2 {
+  font-size: 23px;
+  background-color: #E1F0FF;
+  padding: 8px 14px 8px 14px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.polarion-rpe-content h3 {
+  font-size: 23px;
+}
+
+.polarion-rpe-content h4 {
+  font-size: 15px;
+  line-height: normal;
+  padding: 0px;
+}
+
+.polarion-rpe-content h5 {
+  font-size: 13px;
+  line-height: normal;
+  color: black;
+  padding: 0px;
+}
+
+.polarion-rpe-content h6 {
+  font-size: 13px;
+  line-height: normal;
+  color: black;
+  padding: 0px;
+}
+
+.heading-7, .heading-8, .heading-9, .heading-10, .heading-11, .heading-12, .heading-13, .heading-14, .heading-15, .heading-16, .heading-17, .heading-18, .heading-19, .heading-20, .heading-21, .heading-22, .heading-23, .heading-24, .heading-25, .heading-26, .heading-27, .heading-28, .heading-29, .heading-30, .heading-31 {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #003366;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.polarion-rp-column-layout {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.polarion-rpw-table-content-row a {
+  color: black;
+}
+
+.polarion-rp-column-layout-cell {
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.polarion-rpe-view .polarion-rp-column-layout-cell > :last-child {
+  margin-bottom: 0px;
+}
+
+.polarion-dle-toc-pdf-compare {
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+
+.polarion-rpe-edit .polarion-rp-parameters-view {
+  margin-top: 1px;
+}
+
+.polarion-rp-parameters-view {
+  border: 1px solid #BDC3C7;
+  padding: 15px;
+  line-height: 1.5;
+}
+
+.polarion-rp-parameters-view-cell {
+  vertical-align: top;
+}
+
+.polarion-rp-parameters-scope-icon img {
+  vertical-align: bottom;
+  padding-right: 3px;
+}
+
+.polarion-rp-parameters-view-title, .polarion-rpe-pageParametersForm-title, .polarion-rp-parameters-view-value {
+  font-weight: bold;
+}
+
+.polarion-rpe-pageParametersForm-title {
+  margin-bottom: 10px;
+}
+
+#polarion-rp-parameters, #polarion-rp-page-script {
+  display: none;
+}
+
+.polarion-rp-widget-parameters {
+  display: none;
+}
+
+.polarion-HistoryTable-mainPanel {
+  background-color: #FFF;
+}
+
+.polarion-HistoryTable-table {
+  width: 100%;
+}
+
+.polarion-HistoryTable-headerCell {
+  background: url("/polarion/ria/images/backgrounds/table_header.gif") repeat scroll 0 0 transparent;
+  border-bottom: 1px solid #D5D6DA;
+  color: #595959;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0.01em white;
+  height: 24px;
+  padding: 8px;
+}
+
+.polarion-HistoryTable-cell {
+  padding: 4px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.polarion-HistoryTable-cell a {
+  cursor: pointer !important;
+  color: #369 !important;
+  text-decoration: underline !important;
+}
+
+.polarion-HistoryTable-cell.actualBaseline {
+  background-color: #ffeb8f;
+}
+
+.polarion-HistoryTable-cell.baseline {
+  background-color: #d9f7c0;
+}
+
+.polarion-HistoryTable-table tr:hover > .polarion-HistoryTable-cell {
+  background-color: #F5F5F5 !important;
+}
+
+.polarion-rp-widget-info, .polarion-rp-widget-warning, .polarion-rp-widget-error {
+  position: relative;
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 12px;
+  padding-left: 30px;
+  border-radius: 5px;
+}
+
+.polarion-rpe-pdf .polarion-rp-widget-info,
+.polarion-rpe-pdf .polarion-rp-widget-warning,
+.polarion-rpe-pdf .polarion-rp-widget-error {
+  padding-left: 12px;
+}
+
+.polarion-rp-inline-widget .polarion-rp-widget-info,
+.polarion-rp-inline-widget .polarion-rp-widget-warning,
+.polarion-rp-inline-widget .polarion-rp-widget-error {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: left;
+}
+
+.polarion-rp-widget-info {
+  color: #00529B;
+  background-color: #BDE5F8;
+}
+
+.polarion-rp-widget-warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+
+.polarion-rp-widget-error {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.polarion-rp-widget-info i,
+.polarion-rp-widget-warning i,
+.polarion-rp-widget-error i {
+  position: absolute;
+  margin: auto;
+  left: 10px;
+  top: calc(50% - 6px);
+  bottom: 0;
+  right: 0;
+}
+
+.polarion-htmlTooltip-content .polarion-rp-widget-info,
+.polarion-htmlTooltip-content .polarion-rp-widget-warning,
+.polarion-htmlTooltip-content .polarion-rp-widget-error {
+  display: block;
+}
+
+.polarion-StatusButtonExtension-buttonsPanel {
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+.polarion-StatusButtonExtension-tableRow td {
+  padding: 0px;
+}
+
+.polarion-StatusButtonExtension-buttons {
+  width: 100px !important;
+  table-layout: fixed;
+  font-size: 18px;
+  font-family: Arial;
+  cursor: pointer;
+  height: 50px;
+  text-align: center;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  padding-left: 2px;
+  padding-right: 2px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.polarion-StatusButtonExtension-buttons-readOnly {
+  cursor: default;
+}
+
+.polarion-StatusButtonExtension-buttons-isFirst {
+  border-left: 1px solid;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.polarion-StatusButtonExtension-buttons-isLast {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.polarion-StatusButtonExtension-buttons-standAlone {
+  border-left: 1px solid;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.polarion-StatusButtonExtension-buttons-print {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.polarion-StatusButtonExtension-buttons-pdf {
+  border: 1px solid;
+  width: 100px !important;
+  table-layout: fixed;
+  font-size: 18px;
+  font-family: Arial;
+  height: 50px;
+  text-align: center;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin: 1px;
+}
+
+.polarion-StatusButtonExtension-buttons-content {
+  border-collapse: collapse;
+  padding: 0px;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.polarion-StatusButtonExtension-buttons-content-labelCell {
+  vertical-align: bottom;
+  line-height: 1;
+  text-align: center;
+  height: 65%;
+}
+
+.polarion-StatusButtonExtension-buttons-content-dateCell {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.polarion-StatusButtonExtension-buttons-labelText {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial, Helvetica;
+  white-space: normal;
+}
+
+.polarion-StatusButtonExtension-buttons-labelText-small {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica;
+  white-space: normal;
+}
+
+.polarion-StatusButtonExtension-buttons-dateText {
+  font-size: 10px;
+  font-family: Arial, Helvetica;
+  white-space: nowrap;
+}
+
+.polarion-rte-caption-paragraph {
+  font-style: italic;
+  font-size: 8pt;
+}
+
+.polarion-rte-caption {
+  font-style: italic;
+  font-size: 8pt;
+}
+
+.polarion-TestsExecutionButton-buttonPanel {
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  /*width:213px;
+  height:75px*/
+}
+
+.polarion-TestsExecutionButton-button {
+  margin: 5px;
+}
+
+.polarion-TestsExecutionButton-link a:hover {
+  text-decoration: none !important;
+}
+
+.polarion-TestsExecutionButton-buttons.polarion-TestsExecutionButton-buttons-defaultCursor {
+  cursor: default;
+}
+
+.polarion-TestsExecutionButton-buttons, .polarion-TestsExecutionButton-buttons-pdf {
+  table-layout: fixed;
+  font-size: 18px;
+  font-family: Arial;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 6px;
+  padding-left: 2px;
+  padding-right: 2px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.polarion-TestsExecutionButton-buttons-pdf {
+  width: 213px;
+  box-shadow: none;
+  border: 1px solid;
+  padding: 0px;
+}
+
+.polarion-TestsExecutionButton-buttons-content {
+  border-collapse: collapse;
+  padding: 0px;
+  table-layout: fixed;
+  min-width: 213px;
+}
+
+.polarion-TestsExecutionButton-buttons-content-labelCell {
+  vertical-align: middle;
+  line-height: 1;
+  text-align: center;
+  padding: 20px 10px 6px;
+}
+
+.polarion-TestsExecutionButton-buttons-content-labelCell-noSumText {
+  padding-bottom: 10px;
+}
+
+.polarion-TestsExecutionButton-labelTextNew, .polarion-TestsExecutionButton-labelText {
+  font-size: 26px;
+  font-weight: bold;
+  color: #43a134;
+  font-family: Arial;
+  text-align: center;
+  text-shadow: 1px 1px 0 white;
+  padding-bottom: 1px;
+}
+
+.polarion-TestsExecutionButton-labelText {
+  padding-bottom: 7px;
+}
+
+.polarion-TestsExecutionButton-sumText {
+  font-size: 11px;
+  color: #5f5f5f;
+  font-family: Arial;
+  text-align: center;
+  text-shadow: 1px 1px 0 white;
+  padding: 0 10px 7px;
+}
+
+.polarion-activity_stream_editMode .polarion-activity_stream_showmore, .polarion-activity_stream_filterbutton {
+  cursor: default;
+}
+
+.polarion-activity_stream_editMode a:HOVER {
+  text-decoration: none !important;
+}
+
+.polarion-activity_stream {
+  font-family: Arial;
+  font-size: 11px;
+}
+
+.polarion-activity_stream a, .polarion-activity_stream p, .polarion-activity_stream table, .polarion-activity_stream tr, .polarion-activity_stream td, .polarion-activity_stream textarea, .polarion-activity_stream input, .polarion-activity_stream div {
+  font-family: Arial;
+  font-size: 11px;
+  zoom: 1;
+}
+
+.polarion-activity_stream td {
+  font-size: 11px;
+}
+
+.polarion-activity_stream span {
+  font-family: Arial;
+  font-size: 11px;
+}
+
+.polarion-activity_stream_mainContent {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  min-width: 300px;
+}
+
+.polarion-activity_stream_imageCol {
+  padding-right: 9px;
+  padding-left: 5px;
+  width: 50px;
+  float: left;
+}
+
+.polarion-activity_stream_image {
+  width: 50px;
+  height: 50px;
+}
+
+.polarion-activity_stream_content {
+  margin-left: 65px;
+}
+
+.polarion-activity_stream_label {
+  height: 16px;
+  width: 100%;
+  color: gray;
+}
+
+.polarion-activity_stream_label span {
+  white-space: nowrap;
+}
+
+.polarion-activity_stream_user {
+  color: #3B5998;
+}
+
+.polarion-activity_stream_item_content, .polarion-activity_stream_item_content SPAN, .polarion-activity_stream_item_content A, .polarion-activity_stream_item_content DIV {
+  font-size: 11px;
+}
+
+.polarion-activity_item_content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.polarion-activity_stream_norecentactivity {
+  font-style: italic;
+}
+
+.polarion-activity_stream_activity:hover,
+.polarion-activity_stream_activity_collapsed:hover,
+.polarion-activity_stream_activity_expanded:hover,
+.polarion-activity_stream_activity:hover,
+.polarion-activity_stream_activity_collapsed:hover {
+  border-bottom: 1px solid #E9E9E9;
+  background-color: #FFF68A;
+  padding-top: 1px;
+}
+
+.polarion-activity_stream_activity-contentCell {
+  width: 100%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.polarion-activity_stream_item {
+  width: auto;
+  margin-top: 5px;
+  line-height: 20px !important;
+}
+
+.polarion-activity_stream_dots {
+  color: #3B5998;
+  font-size: 10px !important;
+  cursor: pointer;
+  text-align: left;
+  padding-top: 1px;
+  line-height: 20px;
+  display: block;
+}
+
+.polarion-activity_stream_activity_expanded, .polarion-activity_stream_activity, .polarion-activity_stream_activity_collapsed {
+  border-bottom: 1px solid #E9E9E9;
+  padding-top: 1px;
+  position: relative;
+  line-height: 20px;
+  min-height: 64px;
+  overflow: hidden;
+}
+
+.polarion-activity_stream_activity {
+  max-height: 92px;
+}
+
+.polarion-activity_stream_activity .polarion-activity_stream_dots {
+  display: none;
+}
+
+.polarion-activity_stream_activity_collapsed {
+  max-height: 92px;
+}
+
+.polarion-activity_stream_activity_collapsed .polarion-activity_stream_dots {
+  display: block !important;
+}
+
+.polarion-activity_stream_activity_collapsed .polarion-activity_stream_activity-contentCell {
+  height: 38px;
+}
+
+.polarion-activity_stream_activity_expanded .polarion-activity_stream_dots, .polarion-activity_stream_activity .polarion-activity_stream_dots, .polarion-activity_stream_activity_collapsed .polarion-activity_stream_dots {
+  display: none;
+}
+
+.polarion-activity_stream_showmore {
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #E9E9E9;
+  text-decoration: underline;
+  color: #3B5998;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+.polarion-activity_stream_showmore_loading {
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #E9E9E9;
+  color: #3B5998;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.polarion-activity_stream_topArea {
+  position: relative;
+  height: 32px;
+  margin-bottom: 2px;
+}
+
+.polarion-activity_stream_filter_wrap {
+  position: absolute;
+  left: 0px;
+  right: 28px;
+}
+
+.polarion-activity_stream_button_wrap {
+  width: 20px;
+  position: absolute;
+  float: right;
+  top: 0px;
+  right: 0px;
+}
+
+.polarion-activity_stream_filterbutton {
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 4px;
+}
+
+.polarion-activity_stream_progressBar {
+  position: absolute;
+  top: 7px;
+  right: 4px;
+  display: none;
+}
+
+.polarion-activity_stream_filterField {
+  border: 1px solid #c9c9c9;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 1px 2px #F2F2F2 inset;
+  -webkit-box-shadow: 1px 2px #F2F2F2 inset;
+  box-shadow: 1px 2px #F2F2F2 inset;
+  height: 28px;
+  padding: 1px;
+  padding-left: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.polarion-activity_stream_filterField_input {
+  position: relative;
+  border: 0px;
+  height: 28px;
+  outline: none;
+  background-color: transparent;
+  z-index: 5;
+  width: 100%;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.polarion-activity_stream_filterField_input::-ms-clear {
+  display: none;
+}
+
+.polarion-activity_stream_filterField_clear {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 2px;
+  top: 7px;
+  z-index: 10;
+}
+
+.polarion-activity_stream_overlayColumn {
+  max-width: 0px;
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  z-index: 2;
+}
+
+.polarion-activity_stream_overlayPanel {
+  overflow: visible;
+  width: 50px;
+  cursor: text;
+}
+
+.polarion-activity_stream_overlayText {
+  color: #cfcfcf;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 2px;
+  left: 15px;
+  white-space: nowrap;
+}
+
+.polarion-rpw-recentlyUpdatedPages-misc {
+  color: gray;
+  font-size: 11px;
+}
+
+.polarion-TestRunLabelWidget-templateLabel {
+  font-weight: normal;
+}
+
+.polarion-TestRunImportTestResultsWidget-link,
+.polarion-TestRunExportTestResultsWidget-link {
+  cursor: pointer;
+}
+
+.polarion-TestRunOverviewWidget-linkContainer {
+  width: 96px;
+}
+
+.polarion-TestRunOverviewWidget-linkContainer a:hover {
+  text-decoration: none !important;
+}
+
+.polarion-TestRunOverviewWidget-linkContent {
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-image: url("/polarion/ria/images/backgrounds/btnTesting.png");
+}
+
+.polarion-TestRunOverviewWidget-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.polarion-TestRunOverviewWidget-buttonsContainer {
+  width: 100%;
+  overflow: auto;
+}
+
+.polarion-TestRunOverviewWidget-count {
+  line-height: 0;
+  font-weight: bold;
+  font-family: Arial;
+  text-align: center;
+}
+
+.polarion-TestRunOverviewWidget-buttonName {
+  line-height: 1em;
+  font-size: 11px;
+  font-family: Arial;
+  text-align: center;
+}
+
+.polarion-TestRunStatusButtonWidget-content {
+  display: inline-block;
+  padding: 12px 10px;
+  cursor: pointer;
+  line-height: 1 !important;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: bottom;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  min-width: 190px;
+}
+
+.polarion-TestRunStatusButtonWidget-content-light {
+  color: #fff !important;
+}
+
+.polarion-TestRunStatusButtonWidget-content-dark {
+  color: #333 !important;
+}
+
+.polarion-TestRunStatusButtonWidget-content-disabled {
+  cursor: default;
+}
+
+.polarion-TestRunStatusButtonWidget-content-tall {
+  padding: 18px 0 19px;
+}
+
+.polarion-TestRunStatusButtonWidget-content-pdf {
+  display: inline-block;
+  padding: 12px 10px;
+  cursor: pointer;
+  line-height: 1.5 !important;
+  border-radius: 6px;
+  text-align: center;
+  vertical-align: bottom;
+  text-decoration: none !important;
+  box-shadow: none;
+  width: 190px;
+}
+
+.polarion-TestRunStatusButtonWidget-icon {
+  vertical-align: bottom;
+  padding-bottom: 2px;
+}
+
+.polarion-TestRunStatusButtonWidget-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.polarion-TestRunStatusButtonWidget-description {
+  font-size: 10px;
+}
+
+.polarion-TestRunWidgets-disabled-label {
+  color: gray;
+}
+
+.polarion-TestRunSignaturesWidget-table {
+  width: 100%;
+}
+
+.polarion-TestRunSignaturesWidget-tableHeader {
+  border-bottom: thin solid lightgray;
+  height: 40px;
+  font-size: 15px;
+  vertical-align: bottom;
+}
+
+.polarion-TestRunSignaturesWidget-statusImage {
+  height: 16px;
+  padding-right: 5px;
+  margin-bottom: -1px;
+}
+
+.polarion-TestRunSignaturesWidget-imageCell {
+  width: 20px;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.polarion-TestRunSignaturesWidget-image {
+  height: 16px;
+}
+
+.polarion-TestRunSignaturesWidget-userCell {
+  vertical-align: middle;
+}
+
+.polarion-TestRunSignaturesWidget-signerRole {
+  font-size: 11px;
+}
+
+.polarion-TestRunSignaturesWidget-verdictCell {
+  width: 100px;
+  vertical-align: middle;
+}
+
+.polarion-TestRunSignaturesWidget-dateCell {
+  width: 150px;
+  vertical-align: middle;
+}
+
+.polarion-TestRunSignaturesWidget-noSignatures {
+  color: #888888;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.polarion-TestRunSignaturesWidget-link {
+  font-size: 12px;
+}
+
+.polarion-rt-linkblock-headpart {
+  padding-left: 2px;
+  padding-bottom: 2px;
+}
+
+.polarion-rt-linkblock-element {
+  color: #666666;
+  font-weight: bold;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.polarion-rt-linkblock-role {
+  display: inline-block;
+  color: #999999;
+  font-weight: bold;
+}
+
+.polarion-rt-linkblock-category, .polarion-rt-linkblock-repository, .polarion-rt-linkblock-parser {
+  color: #666666;
+  font-size: 11px;
+  display: inline-block;
+}
+
+.polarion-rt-linkblock-linkstable td {
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.polarion-rt-linkblock-branch {
+  color: #666666;
+}
+
+.polarion-rt-linkblock-link {
+  padding-left: 5px;
+}
+
+.polarion-rt-linkblock-revision {
+  padding: 2px 0 2px 0;
+  color: #999999;
+  font-size: 11px;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.polarion-rt-linkblock-revision div {
+  float: left;
+  margin-right: 5px;
+}
+
+.polarion-rt-linkblock-message {
+  padding: 2px 0 2px 0;
+  color: #999999;
+  font-size: 11px;
+  font-style: italic;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.polarion-rt-linkblock-line {
+  display: inline-block;
+  padding-left: 5px;
+  color: #999999;
+}
+
+.polarion-rt-linkblock-warning {
+  margin-top: 5px;
+}
+
+.polarion-rpe-edit {
+  background-color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+.polarion-rpe-view {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.polarion-rpe-edit img, .polarion-rpe-view img {
+  border: none;
+}
+
+.polarion-rp-column {
+  float: left;
+  padding: 5px;
+}
+
+.polarion-rpe-view .polarion-rp-column {
+  padding: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.polarion-rp-column-container {
+  border: 1px solid transparent;
+  padding: 5px;
+  overflow-x: auto;
+  outline: 0;
+}
+
+.polarion-rpe-view .polarion-rp-column-container {
+  padding: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.polarion-rpe-view .polarion-rp-column-container > :last-child {
+  margin-bottom: 0px;
+}
+
+.polarion-rp-column-toolbar {
+  background-color: #f5f5f5;
+  text-align: right;
+  height: 31px;
+  border-left: 1px dashed lightgray;
+  border-right: 1px dashed lightgray;
+  border-top: 1px dashed lightgray;
+  position: relative;
+}
+
+.polarion-rp-column-configure-layout {
+  display: inline-block;
+  margin-top: 8px;
+  cursor: pointer;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.polarion-rp-column-configure-layout > img {
+  border: 0px;
+}
+
+.polarion-rp-column-configure-layout > img + img {
+  margin: 0px 6px 5px 4px;
+}
+
+.polarion-rp-column-configure-layout:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.polarion-rpe-edit .polarion-rp-column-container {
+  border-left: 1px dashed lightgray;
+  border-right: 1px dashed lightgray;
+  border-bottom: 1px dashed lightgray;
+}
+
+.polarion-rp-row-separator {
+  clear: both;
+  height: 0px;
+}
+
+.polarion-rp-column-drag-decoration {
+  background-image: url("/polarion/ria/images/actions/drag.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 10px;
+  right: -11px;
+}
+
+.polarion-rp-column-drag-panel {
+  z-index: 1;
+  width: 10px;
+}
+
+.polarion-rp-column-drag-panel-dragging {
+  background-image: url("/polarion/ria/images/horizontal_resizer_line.png");
+  background-position: top center;
+  background-repeat: repeat-y;
+}
+
+.polarion-rpe-edit .polarion-rp-inline-widget {
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  background-color: #E1F0FF;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 2px 0 2px 0;
+}
+
+.polarion-rpe-edit #polarion-rp-widget-content .polarion-rp-inline-widget {
+  background-color: transparent;
+  border-radius: 0px;
+  cursor: inherit;
+}
+
+.polarion-rp-inline-widget .polarion-rp-widget-progress {
+  vertical-align: text-bottom;
+}
+
+.polarion-rpe-edit .polarion-rp-inline-widget .polarion-rp-widget-padding {
+  font-size: 13px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+[polarion-inline-block-widget=true] {
+  display: inline-block;
+}
+
+.polarion-rpe-edit [polarion-inline-block-widget=true] {
+  padding: 5px;
+}
+
+.polarion-rpe-edit [polarion-inline-block-widget=true] .polarion-rp-widget-padding {
+  display: none;
+}
+
+[polarion-inline-block-widget=true] #polarion-rp-widget-content {
+  display: block;
+}
+
+.polarion-rpe-edit .polarion-rp-widget-part {
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.polarion-rpe-edit .polarion-rp-widget-part-selected,
+.polarion-rpe-edit .polarion-rp-inline-widget-selected {
+  border-color: #D69125;
+  box-shadow: 0 0 4px #D69125;
+}
+
+.polarion-rpe-edit #polarion-rp-widget-content {
+  padding-right: 1px;
+}
+
+.polarion-rp-widget-toolbar {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  padding: 4px 0px 4px 4px;
+  background-color: #E1F0FF;
+  cursor: pointer !important;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.polarion-rpe-edit .polarion-rp-widget-part-selected .polarion-rp-widget-toolbar {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.polarion-rp-widget-toolbar:hover,
+.polarion-rpe-edit .polarion-rp-inline-widget:hover,
+.polarion-rp-widget-toolbar-selected,
+.polarion-rpe-edit .polarion-rp-inline-widget-selected {
+  background-color: #FFF5AD;
+}
+
+.polarion-rp-widget-toolbar-dirty,
+.polarion-rpe-edit .polarion-rp-inline-widget-dirty {
+  background-color: #FFCF5C;
+}
+
+.polarion-rp-widget-toolbar-content {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.polarion-rp-widget-toolbar-messageContainer {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: transparent;
+}
+
+.polarion-rp-widget-toolbar-message {
+  color: #924615;
+}
+
+.polarion-rp-widget-toolbar-iconContainer {
+  width: 50px;
+}
+
+.polarion-rp-widget-toolbar-content img {
+  vertical-align: text-bottom;
+  margin-left: 4px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.polarion-rp-widget-toolbar-content img:HOVER {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.polarion-dle-clipboard-container .polarion-rp-widget-parameters {
+  display: inline !important;
+}
+
+.polarion-rp-parameters-form-editor-panel, .polarion-rp-toc-edit {
+  border: 1px solid #BDC3C7;
+  padding: 10px;
+}
+
+.polarion-rp-parameters-form-editor-panel {
+  padding: 5px !important;
+}
+
+.polarion-rp-parameters-form-editor-footerPanel {
+  margin-top: 10px;
+}
+
+.polarion-rp-widget-selection-placeholder {
+  display: none;
+  visibility: hidden;
+  color: transparent;
+  font-size: 1px;
+}
+
+.polarion-rp-toc-edit {
+  margin-top: 5px;
+  background-color: #F5F5F5;
+}
+
+.polarion-WorkItemsBoardMacro-Table TABLE, .polarion-PlanLabelMacro-container TABLE, .polarion-TestRunLabelWidget-container TABLE {
+  border-collapse: collapse;
+}
+
+.polarion-PlanLabelMacro-container td, .polarion-TestRunLabelWidget-container td {
+  vertical-align: top;
+}
+
+.polarion-rpe-unresolvablePanel {
+  padding: 15px;
+}
+
+.polarion-rpe-unresolvableMessage {
+  padding-bottom: 15px;
+}
+
+.polarion-rpe-newArtifactButton {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #0277BB;
+  cursor: pointer;
+}

@@ -1,0 +1,161 @@
+#*
+Copyright 2004 The Apache Software Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*#
+
+#**
+
+@author <a href="mailto:taylor@apache.org">David Sean Taylor</a>
+@version $Id: user-browser.vm 348264 2005-11-22 22:06:45Z taylor $
+
+*#
+<script language='JavaScript' src='/j2-admin/scripts/jetspeed-security.js'></script>
+
+#set ($MESSAGES = $portletConfig.getResourceBundle($renderRequest.Locale))
+#set ($formAction = $renderResponse.createActionURL())
+
+#if ($statusMsg)
+#parse ('/WEB-INF/view/status-include.vm')
+#end
+#if ($errorMessages)
+#parse ('/WEB-INF/view/errors-include.vm')
+#end
+
+<table cellpadding=0 cellspacing=1 border=0 width='100%' >
+  <tr>
+     <th width='12'></th>
+    #foreach ($column in $title)      
+      <th align='center' class="portlet-section-header" width="100%" nowrap>
+        $MESSAGES.getString("$column")
+      </th>
+    #end
+  </tr>
+  #foreach ( $user in $table )
+  <tr>
+    #if ($velocityCount % 2 == 0)
+       #set($rowstyle = "portlet-section-body")
+    #else
+       #set($rowstyle = "portlet-section-alternate")
+    #end  
+	#set ($action = $renderResponse.createActionURL())
+	$action.setParameter("user", $user)           
+	   #if ($selected == $user)
+       <td class="$rowstyle" nowrap width='12'>
+         <img src="/j2-admin/images/selected.gif" />
+       </td>	 	
+       #else
+       <td class="$rowstyle" nowrap width='12'>
+         &nbsp;
+       </td>             
+       #end
+	  <td class="$rowstyle" nowrap width="100%">
+	    <div align="center"><a href='$action'>$user</a></div>
+	  </td>
+   </tr>
+  #end
+</table>
+
+<hr/>
+
+<!-- controls -->
+<table width="200" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    #if ($prev)
+      <td valign="middle" height="30">
+        <div align="center">
+          <form action="$formAction" method="post">
+          	<input type='hidden' name='db.browser.action' value='first' />                    
+            <input class="portlet-form-button" type="submit" value="$MESSAGES.getString('firstarrow')">
+            <input type="hidden" name="start" value="0">
+          </form>
+        </div>
+      </td>  
+      <td valign="middle" height="30">
+        <div align="center">
+          <form action="$formAction" method="post">
+          	<input type='hidden' name='db.browser.action' value='prev'/>                    
+            <input class="portlet-form-button" type="submit" value="$MESSAGES.getString('prevarrow')">
+            <input type="hidden" name="start" value="$prev">
+          </form>
+        </div>
+      </td>
+    #end
+    #if ($tableSize > 0)
+      <form action="$formAction" method="post">
+      <td valign="middle" height="30">
+        <div align="center">
+          	<input type='hidden' name='db.browser.action' value='change'/>                    
+            <input type="input" name='start' size='5' value="$start" class="portlet-form-field-label">
+        </div>
+      </td>  
+      <td valign="middle" height="30">
+        <div align="center">
+            <input type="input" readonly size='10' value="$MESSAGES.getString('numsepa') $tableSize" class="portlet-form-field-label">            
+        </div>
+      </td>  
+      <td valign="middle" height="30">
+        <div align="center">
+            <input class="portlet-form-button" type="submit" value="$MESSAGES.getString('go')">            
+        </div>
+      </td>  
+
+      </form>
+
+      
+    #end    
+    #if ($next)
+      <td valign="middle">
+        <div align="center">
+          <form action="$formAction" method="post">
+          	<input type='hidden' name='db.browser.action' value='next'/>          
+            <input class="portlet-form-button" type="submit" value="$MESSAGES.getString('nextarrow')">
+            <input type="hidden" name="start" value="$next">
+          </form>
+        </div>
+      </td>
+      <td valign="middle" height="30">
+        <div align="center">
+          <form action="$formAction" method="post">
+          	<input type='hidden' name='db.browser.action' value='last'/>                    
+            <input class="portlet-form-button" type="submit" value="$MESSAGES.getString('lastarrow')">
+            <input type="hidden" name="start" value="$tableSize">
+          </form>
+        </div>
+      </td>  
+    #end
+    #if ($tableSize > 0)
+      <td valign="middle">
+        <div align="center">
+          <form action="$formAction" method="post">
+          	<input type='hidden' name='db.browser.action' value='refresh'/>
+            <input class="portlet-form-button" type="submit" name="eventSubmit_doRefresh" value="$MESSAGES.getString('refresh')" />
+          </form>
+        </div>
+      </td>
+    #end
+  </tr>
+</table>
+<form action="$formAction" method="post">
+    <input type='hidden' name='db.browser.action' value='search'/>                    
+    <input type='hidden' name='searchColumn' value='1'/>                        
+    
+  <table>
+  <tr>
+    <td><input class="portlet-form-button" type="submit" value="$MESSAGES.getString('search')"></td>
+    <td><input type="text" name="searchString" size="30" value="" class="portlet-form-field-label"></td>
+    <td nowrap align="right" style="vertical-align:middle">&nbsp;$MESSAGES.getString('filter')</td>
+    <td style="vertical-align:middle"><input type="checkbox"  #if($filtered == "on") checked=1 #end name="filtered"></td>
+  </tr>
+  </table>    
+</form>

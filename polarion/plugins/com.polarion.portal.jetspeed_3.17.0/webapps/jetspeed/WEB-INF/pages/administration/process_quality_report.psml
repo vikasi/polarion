@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/process_quality_report.psml" hidden="false">
+    <title>Report Descriptors</title>
+    <short-title>Reports Configuration</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_workitem_quality_report_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_process_quality_report_portlet" type="portlet" name="webui::FileConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/maven/processaudit/rule-settings.xml</value>
+		  </preference>
+		  </fragment>
+    </fragment>
+</page>

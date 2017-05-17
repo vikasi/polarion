@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plan>
+    <field id="allowedTypes">
+        <list>
+            <item>userstory</item>
+        </list>
+    </field>
+    <field id="author">admin</field>
+    <field id="calculationType">customFieldBased</field>
+    <field id="capacity">12.0</field>
+    <field id="created">2015-09-30 12:44:00.000 +0200</field>
+    <field id="description" text-type="text/plain">Iterations are short time frames (timeboxes) that typically last from one to four weeks.</field>
+    <field id="estimationField">storyPoints</field>
+    <field id="name">Iteration 1</field>
+    <field id="parent">Version_1_0</field>
+    <field id="prioritizationField">priority</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="item">SAMPLE-1</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">open</field>
+    <field id="template">iteration</field>
+    <field id="useReportFromTemplate">true</field>
+</plan>

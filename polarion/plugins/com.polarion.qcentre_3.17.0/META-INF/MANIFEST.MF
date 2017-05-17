@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.qcentre
+Export-Package: com.polarion.qcentre.factbase,com.polarion.qcentre.fac
+ tbase.assemble,com.polarion.qcentre.factbase.delta,com.polarion.qcent
+ re.factbase.delta.compare,com.polarion.qcentre.factbase.delta.tools,c
+ om.polarion.qcentre.factbase.expressions,com.polarion.qcentre.factbas
+ e.impl,com.polarion.qcentre.factbase.serialization,com.polarion.qcent
+ re.factbase.tools,com.polarion.qcentre.factbase.tools.render,com.pola
+ rion.qcentre.factbase.tools.sub,com.polarion.qcentre.javaproject.fact
+ base
+Bundle-Name: Qcentre Plug-in
+Bundle-Version: 3.17.0
+Bundle-Localization: plugin
+Bundle-ClassPath: qcentre.jar,lib/ognl-2.6.9.jar
+Require-Bundle: com.polarion.core.util;visibility:=reexport,com.polari
+ on.cluster;bundle-version="3.7.3",com.polarion.platform;bundle-versio
+ n="3.7.3"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+
+

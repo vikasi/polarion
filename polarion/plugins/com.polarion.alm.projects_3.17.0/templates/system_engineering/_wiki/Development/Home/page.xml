@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20121229212153</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+{section:width=100%}
+{column}
+1 Development
+Hardware and software solutions are created for the components identified in the system design. Part of the solution may require custom hardware and/or software development, and part may be implemented with off-the-shelf items, modified as needed to meet the design specifications. The components are tested and delivered ready for integration and installation.
+
+The Development space contains a default set of pages that report various metrics and statistics about the status of development.
+
+1.1.1 OBJECTIVE
+* Develop and/or purchase hardware and software components that meet the design specifications and requirements with minimum defects 
+* Identify any exceptions to the requirements or design specifications that are required 
+
+1.1.1  INPUT
+
+* [System Requirements Documents > Requirements.Home]
+* [Design Specifications Documents > Design.Home]
+
+1.1.1 OUTPUT
+
+*Releases*
+{plans:query=template.id:release AND project.id:$page.project|child-template=release}
+
+Development Resources\\
+* [Development Environment>Development Environment] - how to setup development environment
+
+1.1.1 REVIEW
+#currentIterationVariable($iter)
+
+* {portallink:/plan?id=$iter.id|addcontext=yes}Current Iteration {portallink}
+* [Unplanned items > Unplanned Items]
+
+1.1.1 VERIFY and TEST
+* [Recent xUnit Build Tests Results > xUnit Build Tests Statistic] - Check recent results of xUnit Automated Test Runs
+* {portallink:/wiki/Reports/Test%20Runs%20Statistics?groupId=&passedTestResult=passed&testRunTemplates=xUnit%20Test%20Manual%20Upload,xUnit%20Build%20Test&fromDate=2013-01-01&toDate=&verifiesLinkRoles=verifies | addcontext=yes} xUnit Build Tests Statistics Report{portallink} - Check results and statistics of  xUnit Automated Test Runs for some particular build and/or time range.
+* [Requirement - Test Cases - Issues Triggered>Test Coverage - Issues Triggered]  
+* [Low Quality Items > Low Quality Items]
+
+
+{column}
+{column:width=2px}
+{column}
+{column:width=400px}
+{regiontitle}Create New{regiontitle}
+* {portallink:/workitems?form_mode=create&form_field_type=workPackage|addcontext=yes}New #typeIcon("workPackage") Work Package{portallink}
+* {portallink:/workitems?form_mode=create&form_field_type=task|addcontext=yes}New #typeIcon("task") Task{portallink}
+
+#importDocumentPanel()
+
+{regiontitle}Tasks and Activities{regiontitle}
+#getProcessTaskHeading("Development")
+{workitems:linkedWorkItems:${page.project}/$processTaskHeading.id|fields=id,title|sortby=outlineNumber}
+
+{regiontitle}Current Iteration{regiontitle}
+#if($iter)
+<center> {portallink:/plan?id=$iter.id|addcontext=yes}Current Iteration {portallink}</center>
+{plan-burndown:$iter.id}
+#else
+#warning("No current iteration.")
+#end
+
+{regiontitle}Workflow{regiontitle}
+<img src="/polarion/module-attachment/${page.project}/_default/Process%20Description/diagram_20130124-1718.48611.png" />
+
+{column}
+{section}]]></content>
+</wiki-page>

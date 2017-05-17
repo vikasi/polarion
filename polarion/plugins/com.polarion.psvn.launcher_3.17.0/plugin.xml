@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="com.polarion.core.boot.appLaunchers">
+      <application
+            className="com.polarion.psvn.launcher.PolarionSVNApplication"
+            appId="polarion.server">
+      </application>
+      <launcher
+            className="com.polarion.core.boot.launchers.BasicAppLauncher">
+      </launcher>
+   </extension>
+   
+   <extension
+         point="com.polarion.core.boot.appLaunchers">
+      <application
+            appId="polarion.coordinator"
+            className="com.polarion.psvn.launcher.CoordinatorApplication">
+      </application>
+      <launcher
+            className="com.polarion.core.boot.launchers.BasicAppLauncher">
+      </launcher>
+   </extension>
+   
+</plugin>

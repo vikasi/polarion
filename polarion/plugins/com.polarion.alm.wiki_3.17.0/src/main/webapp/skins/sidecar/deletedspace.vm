@@ -1,0 +1,18 @@
+###
+### Document deleted messge
+###
+###
+#if( $doc.getDoc().exists($context.getContext()) )
+	#template("NoAccess.vm")
+#else
+	#template("startpage.vm")
+	<div class="main layoutsubsection">
+	#if($message)
+	<div id="xwikimessage">$message</div>
+	#end
+	#xwikimessageboxstart($msg.get("delete") $msg.get("deletedSpace"))
+	#xwikimessageboxend()
+	</div>
+	<div class="clearfloats"></div>
+	#template("endpage.vm")
+#end

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="elibrary" id="svndepend-raw-report" tag="2009-07-29">
+    <structure-element id="root" provider="root" type="root">
+        <structure-element id="project-layout" provider="layout-java" type="layout-root">
+            <properties>
+                <property id="name">
+                    <value>layout-root</value>
+                </property>
+                <property id="project-name">
+                    <value>elibrary</value>
+                </property>
+                <property id="layout-type">
+                    <value>project</value>
+                </property>
+            </properties>
+            <structure-element id="C:/Polarion_3.3.1/data/workspace/polarion-data/deploymentSpaces/_default/elibrary/com.polarion/elibrary/null/src/main/java" provider="layout-java" type="source-folder">
+                <properties>
+                    <property id="name">
+                        <value>C:/Polarion_3.3.1/data/workspace/polarion-data/deploymentSpaces/_default/elibrary/com.polarion/elibrary/null/src/main/java</value>
+                    </property>
+                </properties>
+                <structure-element id="com" provider="layout-java" type="package">
+                    <properties>
+                        <property id="name">
+                            <value>com</value>
+                        </property>
+                        <property id="author">
+                            <value>admin</value>
+                        </property>
+                    </properties>
+                    <structure-element id="com.polarion" provider="layout-java" type="package">
+                        <properties>
+                            <property id="name">
+                                <value>com.polarion</value>
+                            </property>
+                            <property id="author">
+                                <value>admin</value>
+                            </property>
+                        </properties>
+                        <structure-element id="com.polarion.demo" provider="layout-java" type="package">
+                            <properties>
+                                <property id="name">
+                                    <value>com.polarion.demo</value>
+                                </property>
+                                <property id="author">
+                                    <value>admin</value>
+                                </property>
+                            </properties>
+                            <structure-element id="com.polarion.demo.Book" provider="layout-java" type="type">
+                                <properties>
+                                    <property id="name">
+                                        <value>Book</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Example" provider="layout-java" type="type">
+                                <properties>
+                                    <property id="name">
+                                        <value>Example</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Library" provider="layout-java" type="type">
+                                <properties>
+                                    <property id="name">
+                                        <value>Library</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.reuse" provider="layout-java" type="package">
+                                <properties>
+                                    <property id="name">
+                                        <value>com.polarion.demo.reuse</value>
+                                    </property>
+                                    <property id="author">
+                                        <value>admin</value>
+                                    </property>
+                                </properties>
+                                <structure-element id="com.polarion.demo.reuse.ReusingClass" provider="layout-java" type="type">
+                                    <properties>
+                                        <property id="name">
+                                            <value>ReusingClass</value>
+                                        </property>
+                                    </properties>
+                                </structure-element>
+                                <structure-element id="com.polarion.demo.reuse.SubClass" provider="layout-java" type="type">
+                                    <properties>
+                                        <property id="name">
+                                            <value>SubClass</value>
+                                        </property>
+                                    </properties>
+                                </structure-element>
+                                <structure-element id="imports" provider="layout-java" type="imports">
+                                    <value-fact-element id="com.polarion.demo.reuse.ReusingClass:org.apache.commons.collections.primitives.ArrayIntList" provider="layout-java" type="type-import">
+                                        <value/>
+                                        <links>
+                                            <link id="imports"/>
+                                            <link id="com.polarion.demo.reuse.ReusingClass"/>
+                                        </links>
+                                        <properties>
+                                            <property id="import-str">
+                                                <value>org.apache.commons.collections.primitives.ArrayIntList</value>
+                                            </property>
+                                            <property id="is-resolved">
+                                                <value>false</value>
+                                            </property>
+                                        </properties>
+                                    </value-fact-element>
+                                    <value-fact-element id="com.polarion.demo.reuse.ReusingClass:org.apache.commons.collections.primitives.IntList" provider="layout-java" type="type-import">
+                                        <value/>
+                                        <links>
+                                            <link id="imports"/>
+                                            <link id="com.polarion.demo.reuse.ReusingClass"/>
+                                        </links>
+                                        <properties>
+                                            <property id="import-str">
+                                                <value>org.apache.commons.collections.primitives.IntList</value>
+                                            </property>
+                                            <property id="is-resolved">
+                                                <value>false</value>
+                                            </property>
+                                        </properties>
+                                    </value-fact-element>
+                                    <value-fact-element id="com.polarion.demo.reuse.ReusingClass:org.apache.commons.configuration.BaseConfiguration" provider="layout-java" type="type-import">
+                                        <value/>
+                                        <links>
+                                            <link id="imports"/>
+                                            <link id="com.polarion.demo.reuse.ReusingClass"/>
+                                        </links>
+                                        <properties>
+                                            <property id="import-str">
+                                                <value>org.apache.commons.configuration.BaseConfiguration</value>
+                                            </property>
+                                            <property id="is-resolved">
+                                                <value>false</value>
+                                            </property>
+                                        </properties>
+                                    </value-fact-element>
+                                    <value-fact-element id="com.polarion.demo.reuse.ReusingClass:org.apache.log4j.Logger" provider="layout-java" type="type-import">
+                                        <value/>
+                                        <links>
+                                            <link id="imports"/>
+                                            <link id="com.polarion.demo.reuse.ReusingClass"/>
+                                        </links>
+                                        <properties>
+                                            <property id="import-str">
+                                                <value>org.apache.log4j.Logger</value>
+                                            </property>
+                                            <property id="is-resolved">
+                                                <value>false</value>
+                                            </property>
+                                        </properties>
+                                    </value-fact-element>
+                                    <value-fact-element id="com.polarion.demo.reuse.SubClass:com.polarion.demo.Library" provider="layout-java" type="type-import">
+                                        <value/>
+                                        <links>
+                                            <link id="imports"/>
+                                            <link id="com.polarion.demo.reuse.SubClass"/>
+                                        </links>
+                                        <properties>
+                                            <property id="import-str">
+                                                <value>com.polarion.demo.Library</value>
+                                            </property>
+                                            <property id="is-resolved">
+                                                <value>true</value>
+                                            </property>
+                                            <property id="default">
+                                                <value>com.polarion.demo</value>
+                                            </property>
+                                        </properties>
+                                    </value-fact-element>
+                                </structure-element>
+                                <structure-element id="total-references" provider="layout-java" type="total-references">
+                                    <value-fact-element id="total-references:com.polarion.demo:elibrary" provider="layout-java" type="package-reference">
+                                        <value/>
+                                        <properties>
+                                            <property id="package-name">
+                                                <value>com.polarion.demo</value>
+                                            </property>
+                                            <property id="project">
+                                                <value>elibrary</value>
+                                            </property>
+                                        </properties>
+                                    </value-fact-element>
+                                </structure-element>
+                            </structure-element>
+                            <structure-element id="imports" provider="layout-java" type="imports">
+                                <value-fact-element id="com.polarion.demo.Library:java.util.Iterator" provider="layout-java" type="type-import">
+                                    <value/>
+                                    <links>
+                                        <link id="imports"/>
+                                        <link id="com.polarion.demo.Library"/>
+                                    </links>
+                                    <properties>
+                                        <property id="import-str">
+                                            <value>java.util.Iterator</value>
+                                        </property>
+                                        <property id="is-resolved">
+                                            <value>false</value>
+                                        </property>
+                                    </properties>
+                                </value-fact-element>
+                                <value-fact-element id="com.polarion.demo.Library:java.util.LinkedList" provider="layout-java" type="type-import">
+                                    <value/>
+                                    <links>
+                                        <link id="imports"/>
+                                        <link id="com.polarion.demo.Library"/>
+                                    </links>
+                                    <properties>
+                                        <property id="import-str">
+                                            <value>java.util.LinkedList</value>
+                                        </property>
+                                        <property id="is-resolved">
+                                            <value>false</value>
+                                        </property>
+                                    </properties>
+                                </value-fact-element>
+                                <value-fact-element id="com.polarion.demo.Library:java.util.List" provider="layout-java" type="type-import">
+                                    <value/>
+                                    <links>
+                                        <link id="imports"/>
+                                        <link id="com.polarion.demo.Library"/>
+                                    </links>
+                                    <properties>
+                                        <property id="import-str">
+                                            <value>java.util.List</value>
+                                        </property>
+                                        <property id="is-resolved">
+                                            <value>false</value>
+                                        </property>
+                                    </properties>
+                                </value-fact-element>
+                            </structure-element>
+                            <structure-element id="total-referenced" provider="layout-java" type="total-referenced">
+                                <value-fact-element id="total-referenced:com.polarion.demo.reuse:elibrary" provider="layout-java" type="package-reference">
+                                    <value/>
+                                    <properties>
+                                        <property id="package-name">
+                                            <value>com.polarion.demo.reuse</value>
+                                        </property>
+                                        <property id="project">
+                                            <value>elibrary</value>
+                                        </property>
+                                    </properties>
+                                </value-fact-element>
+                            </structure-element>
+                        </structure-element>
+                    </structure-element>
+                </structure-element>
+            </structure-element>
+        </structure-element>
+        <structure-element id="authors-statistic" provider="layout-java" type="authors-statistic">
+            <structure-element id="admin" provider="layout-java" type="author-statistic">
+                <properties>
+                    <property id="name">
+                        <value>admin</value>
+                    </property>
+                    <property id="references">
+                        <value>1</value>
+                    </property>
+                    <property id="referenced">
+                        <value>1</value>
+                    </property>
+                    <property id="components">
+                        <value>2</value>
+                    </property>
+                </properties>
+                <structure-element id="total-referenced" provider="layout-java" type="total-referenced">
+                    <value-fact-element id="total-referenced:com.polarion.demo.reuse:elibrary" provider="layout-java" type="package-reference">
+                        <value/>
+                        <properties>
+                            <property id="package-name">
+                                <value>com.polarion.demo.reuse</value>
+                            </property>
+                            <property id="project">
+                                <value>elibrary</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="total-references" provider="layout-java" type="total-references">
+                    <value-fact-element id="total-references:com.polarion.demo:elibrary" provider="layout-java" type="package-reference">
+                        <value/>
+                        <properties>
+                            <property id="package-name">
+                                <value>com.polarion.demo</value>
+                            </property>
+                            <property id="project">
+                                <value>elibrary</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </structure-element>
+            </structure-element>
+        </structure-element>
+        <structure-element id="libraries" provider="layout-java" type="libraries">
+            <properties>
+                <property id="count">
+                    <value>0</value>
+                </property>
+            </properties>
+        </structure-element>
+        <structure-element id="internal-reuse" provider="layout-java" type="internal-reuse">
+            <structure-element id="com.polarion.demo" provider="layout-java" type="component">
+                <properties>
+                    <property id="name">
+                        <value>com.polarion.demo</value>
+                    </property>
+                    <property id="author">
+                        <value>admin</value>
+                    </property>
+                    <property id="count">
+                        <value>1</value>
+                    </property>
+                </properties>
+            </structure-element>
+            <structure-element id="com.polarion.demo.reuse" provider="layout-java" type="component">
+                <properties>
+                    <property id="name">
+                        <value>com.polarion.demo.reuse</value>
+                    </property>
+                    <property id="author">
+                        <value>admin</value>
+                    </property>
+                    <property id="count">
+                        <value>0</value>
+                    </property>
+                </properties>
+            </structure-element>
+        </structure-element>
+    </structure-element>
+</factbase>

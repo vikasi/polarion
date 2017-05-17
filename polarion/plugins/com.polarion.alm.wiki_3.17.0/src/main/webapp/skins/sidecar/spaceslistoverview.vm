@@ -1,0 +1,170 @@
+#set ($type = $request.getParameter("type"))
+#set ($docName = $request.getParameter("docName"))
+#set ($docSpace = $request.getParameter("docSpace"))
+#set ($docProject = $request.getParameter("docProject"))
+#set ($docParent = $request.getParameter("docParent"))
+#set ($docOverviewSpace = $request.getParameter("docOverviewSpace"))
+ 
+#if($type == "Page")
+  #set($wizardImg = $xwiki.getSkinFile("images/wizard_new_page.png"))
+  #set($widthCell = '84')
+#else
+  #set($wizardImg = $xwiki.getSkinFile("images/wizard_new_space.png"))
+  #set($widthCell = '95')
+#end
+
+<form id='template' name='template' method='post' onsubmit='return false;'>
+  <table cellpadding='0' cellspacing='0' style='width:502px; height:402px; border: 1px solid #3E5F80; margin: 0;'>
+    <tr>
+      <td>
+        <table valign='top' cellpadding='0' cellspacing='0' width='100%' style='border-top:1px solid #E9F6FF;border-left:1px solid #E9F6FF; border-bottom:0px solid #3E5F80; cursor: pointer;'>
+          <tr>
+            <td class='popupwindowheaderNew'>$msg.get("New") $type</td>
+            <td class='popupwindowheaderNewx'></td>
+            <td class='popupwindowheaderNewx1'>
+            <a href='javascript:end();'><img src='$xwiki.getSkinFile("images/popup_close.gif")' border='0'></a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class='popupwindow7'>
+        <table cellpadding='0' cellspacing='0' width='100%' style='border: 2px solid #5D82A6; cursor: default;'>
+          <tr>
+            <td class='popupwindow7'>
+              <table cellpadding='0' cellspacing='0' width='100%' style='border: 0px solid green;'>
+                <tr>
+                  <td class='popupwindow1' width='10'></td>
+                  <td class='popupwindow1' align='left' valign='middle' width='497'>$msg.get("New") $type</td>   
+                </tr>
+                <tr>
+                  <td class='popupwindow7' width='10'></td>
+                  <td class='popupwindow7'><div id='new_prj_err' class='popupwindow13' style='display: none'>&nbsp;</div></td>
+                </tr>
+              </table>
+            </td>
+            <td class='popupwindow7'style='height: 80'><img valign='middle'align='right' src='$wizardImg' border='0'></td>
+          <tr> 
+        </table>
+      </td>
+    </tr>
+    <tr>
+   <td style='height:251px;'>
+     <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+      <tr>
+        <td width='4' height='11' class='popupwindow7'></td>
+        <td height='11' class='popupwindow8'></td>
+      </tr>
+      <tr>
+        <td width='4' height='240' class='popupwindow7'></td>
+        <td>
+          <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+           <tr>
+             <td width='10' colspan='2' height='45'></td>
+             <td height='45' colspan='3 'class='popupwindow12' align='left'>$msg.get("Create New") $type </td>
+             <td width='10' height='45'></td>
+           </tr>
+           <tr>
+             <td width='10' height='35'></td>
+             <td width='10' class="mandatory"><b>*</b></td>
+             <td width='$widthCell' height='35' class='popupwindow11' style='text-align: right'>$type $msg.get("name"):&nbsp;</td>
+             <td width='393' height='35' align='left' class='popupwindow11'><input type='text' name='title' id='title' value='' class='panelinput' onkeypress='return checkTextTitle(event);' style='width:150px;'></td>
+             <td width='10' height='35'></td>
+           </tr>
+         #if ($type == "Page")
+           #if ( ($docName == "Home" ) || ($docName == "WikiOverview" && $docOverviewSpace=="") )
+             <tr>
+               <td width='10' height='35'></td>
+               <td width='10'></td>
+               <td width='$widthCell' height='35' align='right'  class='popupwindow11'> $msg.get("createspace"):&nbsp;</td>
+               <td width='393' height='35' align='left' class='popupwindow11'>
+                 <select id='spaces2' name='spaces2' style='width:180px;'>
+                  <option value='$docParent'>$msg.get("Default Space")</option>
+                  ##
+                  ## Load spaces list
+                  ##
+                  #if ($docProject != "")
+                  	#set($spaces = $xwiki.getCurrentSpaces("$docProject"))
+                  #else
+                        #set($spaces = $xwiki.getCurrentSpaces("$docParent"))
+                  #end
+                  
+                  ##set($spaces = $xwiki.spaces)
+                  #foreach($space in $spaces)
+                    #set($spaceInfo = $xwiki.getSpaceInfo($space))
+                    #if ($spaceInfo.name != "_default")
+                      <option value='$space' #if($spaceInfo.name == $doc.getSpace($docSpace)) selected  #end>$spaceInfo.name</option>
+                    #end
+                  #end
+                 </select>
+               </td>
+               <td width='10' height='35'></td>
+             </tr>
+            #end
+           <tr>
+               <td width='10' height='25'></td>
+               <td width='10'></td>
+               <td width='$widthCell' height='25' align='right' class='popupwindow11'><input type="radio" checked name="docType" value="content"></td>
+               <td width='393' height='25' align='left' class='popupwindow11'>&nbsp;$msg.get("contentpage")</td>
+               <td width='10' height='25'></td>
+           </tr>
+           <tr>
+               <td width='10' height='25'></td>
+               <td width='10'></td>
+               <td width='$widthCell' height='25' align='right' class='popupwindow11'><input type="radio" name="docType" value="portal"></td>
+               <td width='393' height='25' align='left' class='popupwindow11'>&nbsp;$msg.get("reportpage")</td>
+               <td width='10' height='25'></td>
+            </tr>
+##           <tr>
+##               <td width='10' height='25'></td>
+##               <td width='10'></td>
+##               <td width='$widthCell' height='25' align='right' class='popupwindow11'><input type="radio" name="docType" value="active"></td>
+##               <td width='393' height='25' align='left' class='popupwindow11'>&nbsp;$msg.get("activepage")</td>
+##               <td width='10' height='25'></td>
+##            </tr>
+           <tr>
+               <td width='10' height='40'></td>
+               <td width='10'></td>
+               <td width='70' height='40'></td>
+               <td width='393' height='40'></td>
+               <td width='10' height='40'></td>
+            </tr>
+          #else
+             <tr>
+               <td width='490' height='90' colspan='5'></td>
+            </tr>
+          #end
+           </table>
+         </td>
+       </tr>
+     </table>
+   </td>
+  </tr>
+  <tr>
+    <td>
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+        <tr>
+          <td width='311' class='popupwindow3'></td>
+          <td width='2'  class='popupwindow3'></td>
+          <td width='30' class='popupwindow4' align='center' onClick='createUrl("$type", "$docName", "$docSpace", "$docProject", "$docParent", "$docOverviewSpace");'><img src='$xwiki.getSkinFile("images/popup_finish.gif")' border='0'></td>
+          <td width='55' class='popupwindow5'><span class='popupwindowA' onClick='javascript:createUrl("$type", "$docName", "$docSpace", "$docProject", "$docParent", "$docOverviewSpace");'>$msg.get("Finish")</span></td>
+          <td width='2'  class='popupwindow3'><img src='$xwiki.getSkinFile("images/popup_btn_separator.gif")'border='0'></td>
+          <td width='30' class='popupwindow4' align='center' onClick='end();'><img src='$xwiki.getSkinFile("images/popup_cancel.gif")'border='0'></td>
+          <td width='55' class='popupwindow5'><a class='popupwindowA' href='javascript:end();'>$msg.get("Cancel")</a></td>
+          <td width='13' class='popupwindow3'></td>
+        </tr>
+      </table>
+    </td>
+   </tr>
+ <tr>
+   <td>
+    <table border='0' cellpadding='0' cellspacing='0' width='100%' style='border-bottom: 0px solid red;'>
+     <tr>
+       <td width='477' style='background-color:#778CA5;'></td>
+       <td class='popupwindow2'></td>
+     </tr>
+    </table>
+  </td>
+ </tr>
+</table>
+</form>

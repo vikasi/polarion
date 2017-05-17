@@ -1,0 +1,12 @@
+###
+### Document footer
+###
+### Contains the global and space zones
+###
+
+## IMA Show header/footer {
+#if($showHeaderFooter == "1")
+	#template("footerbody.vm")
+#end
+## IMA }
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension-point id="webapps" name="Web applications" schema="schema/webapps.exsd"/>
+   <extension-point id="root-webapp" name="Root web application" schema="schema/root-webapp.exsd"/>
+
+   <extension
+         id="webserver"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.polarion.portal.tomcat.TomcatRunnable">
+         </run>
+      </application>
+   </extension>
+
+   <extension-point id="externalJsFile" name="External JavaScript File" schema="schema/externalJsFile.exsd"/>
+
+</plugin>

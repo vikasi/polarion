@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="drivepilot" id="tracker-check" tag="20130523_1550">
+    <structure-element id="root" provider="root" type="root">
+        <value-fact-element id="StaffedProjectTeam" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="totalRequiredRoles">
+                    <value>0</value>
+                </property>
+                <property id="violationsCount">
+                    <value>0</value>
+                </property>
+                <property id="is-developer-role-exist">
+                    <value>true</value>
+                </property>
+                <property id="is-customer-role-exist">
+                    <value>false</value>
+                </property>
+                <property id="is-project-manager-role-exist">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="AcceptanceTestsExistence" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="isWorkitemsExist">
+                    <value>false</value>
+                </property>
+                <property id="is-work-item-type-exist">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="UserStoriesExistence" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="isWorkitemsExist">
+                    <value>false</value>
+                </property>
+                <property id="is-work-item-type-exist">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="TaskExistence" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="isWorkitemsExist">
+                    <value>true</value>
+                </property>
+                <property id="is-work-item-type-exist">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <violation-fact-element category="" description="" id="OftenBuilds:date:22-05-13" provider="Tracker" rule="OftenBuilds" severity="" tag="22-05-13" type="TrackerViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <value-fact-element id="OftenBuilds" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="isFreshBuilds">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="TaskCorrectEsimation" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="violationsCount">
+                    <value>0</value>
+                </property>
+                <property id="totalTasks">
+                    <value>0</value>
+                </property>
+                <property id="is-task-type-exist">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="UserStoriesCorrectEsimation" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="violationsCount">
+                    <value>0</value>
+                </property>
+                <property id="totalUserStoriesCount">
+                    <value>0</value>
+                </property>
+                <property id="is-user-story-type-exist">
+                    <value>false</value>
+                </property>
+                <property id="is-developer-role-exist">
+                    <value>true</value>
+                </property>
+                <property id="is-risk-field-exist">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NotChangedTaskUserStoryEstimates" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="violationCount">
+                    <value>0</value>
+                </property>
+                <property id="totalWorkitems">
+                    <value>0</value>
+                </property>
+                <property id="is-user-story-type-exist">
+                    <value>false</value>
+                </property>
+                <property id="is-task-type-exist">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="ChooseSystemMetaphor" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="isMetaphorExist">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="CreateAcceptanceTest" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="violationsCount">
+                    <value>0</value>
+                </property>
+                <property id="totalUserStories">
+                    <value>0</value>
+                </property>
+                <property id="isReleaseExist">
+                    <value>false</value>
+                </property>
+                <property id="is-work-item-type-exist">
+                    <value>false</value>
+                </property>
+                <property id="work-item-type">
+                    <value>testcase</value>
+                </property>
+                <property id="is-work-item-relation-exist">
+                    <value>true</value>
+                </property>
+                <property id="work-item-relation-type">
+                    <value>relates_to</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="UserStoryToTaskDetalization" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="violationsCount">
+                    <value>0</value>
+                </property>
+                <property id="totalUserStories">
+                    <value>0</value>
+                </property>
+                <property id="isIterationExist">
+                    <value>false</value>
+                </property>
+                <property id="is-work-item-type-exist">
+                    <value>false</value>
+                </property>
+                <property id="work-item-type">
+                    <value>requirement</value>
+                </property>
+                <property id="is-work-item-relation-exist">
+                    <value>true</value>
+                </property>
+                <property id="work-item-relation-type">
+                    <value>implements</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="CorrectlyCreatedUserStories" provider="Tracker" type="execution">
+            <value/>
+            <properties>
+                <property id="violationsCount">
+                    <value>0</value>
+                </property>
+                <property id="totalUserStoryCount">
+                    <value>0</value>
+                </property>
+                <property id="is-user-story-type-exist">
+                    <value>false</value>
+                </property>
+                <property id="is-customer-role-exist">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+    </structure-element>
+</factbase>

@@ -1,0 +1,201 @@
+#*
+Copyright 2004 The Apache Software Foundation
+
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*#
+
+#set($sizes = $jetspeed.columnSizes)
+
+#set($myPage = $jetspeed.page)
+
+#set($myFragment = $jetspeed.currentFragment)
+
+#set($decorator = $myPage.getDefaultDecorator($myFragment.getType()))
+
+#set($actions = $jetspeed.PageDecoratorActions)
+
+#set($editing = false)
+#if($jetspeed.portletMode.toString() == "edit")
+  #set($editing = true)    
+  #set($lastColumn = $renderRequest.getAttribute("numberOfColumns") - 1)  
+#end    
+  
+ #if($myFragment.getDecorator())
+        #set($decorator = $myFragment.getDecorator())
+  #end
+
+  #if ($decorator)
+        #set($decoTop = "${decorator}/decorator-top.vm")
+        #set($decoBottom = "${decorator}/decorator-bottom.vm")
+  #end
+
+<!-- Decorator  $decorator  ${decoTop} - ${decoBottom}-->
+
+
+  #if (($decoTop) && ($myFragment == $myPage.getRootFragment()))
+      #parse($jetspeed.getDecoration($decoTop, "layout").appRelativePath)
+  #end
+
+#set($layoutType =$portletConfig.getInitParameter("layoutType"))
+#set($columnLayout = $renderRequest.getAttribute("columnLayout"))
+
+#if ($actions.size()>0)
+<table  width="100%" cellspacing="0" cellpadding="0" >
+  <tr>
+    <td class="PContent" style="font-size:1pt;" nowrap="true">&nbsp;</td>
+
+    <td align="left" valign="middle" class="PContent" >
+    </td>
+    <td align="right" valign="middle" class="PContent" >
+      <table border="0" cellpadding="0" cellspacing="0" >
+      <tr>
+      #foreach ($action in $actions)
+      <td align="right" valign="middle" class="PContent" >
+      <a href="${action.Action}" title="${action.Name}" ><img src="${action.Link}" alt="${action.Alt}" border="0"></a>
+      </td>
+      #end
+	  #if($editing == true)    		  	  
+	   #set ($chooser = "${jetspeed.basePath}/system/customizer/portlet-selector.psml")
+	      <td align="right" valign="middle" class="PContent" >
+	      	<a href="javascript:openWindow('$response.encodeURL($chooser)')"><img src="#GetPageResource('images/select.gif')" border="0" title="Select"/></a>
+	      </td>	  
+	  #end      
+      </tr>
+      </table>
+    </td>
+
+    <td class="PContent" style="font-size:1pt;" nowrap="true">&nbsp;</td>
+  </tr>
+</table>
+#end
+
+<form name='portletform' action="$renderResponse.createActionURL()" method="post">
+<input type='hidden' name='portlets'/>
+<input type='hidden' name='page' value='$myPage'/>
+</form>
+
+<div id="portal-layout-$htmlUtil.getSafeElementId($myPage.id)" class="portal-layout">
+<table  width="100%" cellspacing="0" cellpadding="0" >
+  <tr>
+     #set ($sizeIndex = 0)
+     #set ($layoutImageBase = "${jetspeed.pageBasePath}/content/images")
+     #foreach($column in $columnLayout.columns)
+        #if ($sizes)
+          #if ($sizeIndex < $sizes.size())
+             <td valign='top' width='$sizes.get($sizeIndex)'/>
+          #else
+	       <td valign="top">          
+          #end
+        #else
+       <td  valign="top">
+       #end
+       #set ($sizeIndex = $sizeIndex + 1)     
+       <table width="100%" class="portal-layout-column">
+       #foreach($f in $column)       
+        <tr>
+         <td width="100%">			
+			#set($coords = $columnLayout.getCoordinate($f))	  
+	        #set($col = $coords.x)
+	        #set($lastRow = $columnLayout.getLastRowNumber($col))
+			#set($row = $coords.y)
+            #if($editing)<div id="_$f.id">        
+            <div style="position:relative; top:10px; left:0; width:100%; height:100%;">
+              <div id="_$f.id_toolBox"  >
+               <table cellpadding="0" cellspacing="0" >
+                 <tr>
+                   <td></td>
+                   <td align="center" onMouseover="this.style.backgroundColor='red'" onMouseout="this.style.backgroundColor=''">
+                        #if($row > 0)
+                         #set($upUrl = $renderResponse.createRenderURL())    
+                         $!upUrl.setParameter("move","1")
+                         $!upUrl.setParameter("fragmentId","$f.id")
+                         <a href="$upUrl"><img src="#GetPageResource('images/movePortletUp.gif')" border="0" title="Move Portlet Up"/></a>
+                       #end
+                   </td>
+                   <td></td>
+                   <td></td>
+                 </tr>
+                 <tr>
+                   <td align="right" onMouseover="this.style.backgroundColor='red'" onMouseout="this.style.backgroundColor=''">
+                        #if($lastColumn > 0 && $col > 0)            
+                         #set($leftUrl = $renderResponse.createRenderURL())    
+                         $!leftUrl.setParameter("move","3")
+                         $!leftUrl.setParameter("fragmentId","$f.id")    
+                         <a href="$leftUrl"><img src="#GetPageResource('images/movePortletLeft.gif')" border="0" title="Move Portlet Left"/></a>
+                        #end
+                   </td>
+                   <td align="center" style="font-size:smaller; font-weight:bold" >
+                      &nbsp;  Position &nbsp;
+                   </td>
+                   <td align="left" onMouseover="this.style.backgroundColor='red'" onMouseout="this.style.backgroundColor=''">
+                        #if($lastColumn > 0 && $col < $lastColumn)
+                         #set($rightUrl = $renderResponse.createRenderURL())    
+                         $!rightUrl.setParameter("move","4")
+                         $!rightUrl.setParameter("fragmentId","$f.id")
+                         <a href="$rightUrl"><img src="#GetPageResource('images/movePortletRight.gif')" border="0" title="Move Portlet Right"/></a>
+                        #end
+                    </td>
+                    <td>
+                         #set($deleter = $renderResponse.createActionURL())    
+                         $deleter.setParameter("deleteId","$f.id")
+                         $deleter.setParameter("page","$myPage")                         
+                         &nbsp;<a href="$deleter"><img src="#GetPageResource('images/close.gif')" border="0" title="Remove Portlet"/></a>                    
+                    </td>
+                 </tr>
+				 <tr>
+					<td></td>
+					<td align="center" onMouseover="this.style.backgroundColor='red'" onMouseout="this.style.backgroundColor=''">					  
+					  #if($row < $lastRow)						
+					    #set($downUrl = $renderResponse.createRenderURL())	
+			            $!downUrl.setParameter("move","2")
+			            $!downUrl.setParameter("fragmentId","$f.id")
+                        #set ($imgsrc="$layoutImageBase/movePortletDown.gif")
+					    <a href="$downUrl"><img src="#GetPageResource('images/movePortletDown.gi')" border="0" title="Move Portlet Down"/></a>
+					  #end
+					</td>
+					<td></td>
+					<td></td>
+				 </tr>
+			  </table>
+			</div>
+		 #end			
+           ## get the decorated Portlet content
+		  #if($f.type == "portlet")
+			 #parse($f.decoration.template)
+		  #else		
+	 	 	 $jetspeed.setCurrentFragment($f)
+			 $f.renderedContent			
+		  #end
+           
+          ##$jetspeed.decorateAndInclude($f)
+
+		  #if($editing)
+		 </div>
+		</div>
+       #end		
+
+      </td>
+	 </tr>
+	   #end
+
+    </table>
+   </td>
+   #end
+  </tr>
+</table>
+</div>
+
+#if (($decoBottom ) && ($myFragment == $myPage.getRootFragment()))
+   #parse($jetspeed.getDecoration($decoBottom, "layout").appRelativePath)
+#end

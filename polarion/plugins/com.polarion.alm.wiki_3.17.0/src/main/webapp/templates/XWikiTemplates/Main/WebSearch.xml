@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xwikidoc>
+<web>Main/_default</web>
+<name>WebSearch</name>
+<language/>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent/>
+<creator>XWiki.Admin</creator>
+<author>admin</author>
+<customClass/>
+<contentAuthor/>
+<creationDate>1107690420000</creationDate>
+<date>1177670154000</date>
+<contentUpdateDate>1177669849000</contentUpdateDate>
+<version>1.25</version>
+<title/>
+<template/>
+<defaultTemplate/>
+<validationScript/>
+
+<content>1 Search on this Wiki
+
+#set($formatDate = "yyyy-MM-dd HH:mm")
+#if ($request.getParameter("text"))
+#set ($text = $request.getParameter("text") )
+#else
+#set($text = "")
+#end
+#if ($request.getParameter("projectweb"))
+#set ($projectweb = $request.getParameter("projectweb") )
+#else
+#set($projectweb = "")
+#end
+
+
+&lt;center&gt;
+&lt;form action="WebSearch"&gt;
+&lt;input type="text" name="text" value="$!text"&gt;&amp;nbsp;&lt;input type="submit" name="search" value="Search"&gt;
+&lt;input type="hidden" name="projectweb" value="$!projectweb" /&gt;
+&lt;/form&gt;
+&lt;/center&gt;
+
+#if($text!="")
+#set ($sql = "where doc.web like '%$text%' or doc.name like '%$text%' or doc.content like '%$text%' order by doc.date desc")
+#set ($start = 0)
+#set ($nb = 50)
+&lt;!-- 
+Sql: $sql
+Sql: $start
+Sql: $nb
+--&gt;
+
+1.1 Search in documents
+#foreach ($item in $xwiki.searchDocuments($sql , $nb , $start))
+#if ($xwiki.hasAccessLevel("view", $context.user, "${context.database}:${item}"))
+#set($bentrydoc = $xwiki.getDocument($item))
+   * [$bentrydoc.name&gt;${bentrydoc.web}.$bentrydoc.name] by $xwiki.getLocalUserName($bentrydoc.author) on $xwiki.formatDate($bentrydoc.date, $formatDate)
+${bentrydoc.web}.$bentrydoc.name
+#end
+#end
+#end</content>
+</xwikidoc>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20110509141357</created>
+<type>content</type>
+<content><![CDATA[1 Unplanned
+
+{toc}
+
+1.1 Score Board
+
+{table:header=no}
+<img src="/polarion/icons/default/enums/type_userstory.gif"/> Unplanned User Stories |  {workitems: type:userstory AND status:reviewed AND NOT PLAN:(*)|display=count}
+{table}
+
+
+To plan an item for release select {portallink:/plans?query=template.id:release|addcontext=yes}a Plan{portallink}, and add the item to the list of planned items.
+
+1.1 List of unplanned user stories
+*User stories* reviewed by stakeholders but not yet planned.
+
+{workitems:query=type:userstory AND status:reviewed AND NOT PLAN:(*)|fields=id,status, title, severity, assignee|display=table}
+
+
+
+
+ ]]></content>
+</wiki-page>

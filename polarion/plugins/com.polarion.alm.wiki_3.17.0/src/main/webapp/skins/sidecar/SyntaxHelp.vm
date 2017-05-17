@@ -1,0 +1,697 @@
+<div id="xwikisyntaxhelppanel" style="height: 1px; width: 100% overflow-x: hidden; overflow-y: auto; border: 0px solid red;">
+##height:99%; border: 1px solid red; overflow-y: auto
+##largepanelheader("Wiki syntax help")
+<div id="xwikisyntaxhelp">  
+  <div id="xwikihelpheadings">
+    <div id="xwikihelpheadingsHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Headings</h6></div>
+    <div id="xwikihelpheadingsContent" class="accordionTabContentBox">
+	<table cellpadding="5px">
+<tr><th>Type</th><th>To get</th></tr>
+<tr><td nowrap><tt>1 Heading 1</tt></td><td nowrap>
+1 Heading 1</td></tr>
+<tr><td nowrap><tt>1.1 Heading 2</tt></td><td nowrap>
+1.1 Heading 2</td></tr>
+<tr><td nowrap><tt>1.1.1 Heading 3</tt></td><td nowrap>
+1.1.1 Heading 3</td></tr>
+<tr><td nowrap><tt>1.1.1.1 Heading 4</tt></td><td nowrap>
+1.1.1.1 Heading 4</td></tr>
+<tr><td nowrap><tt>1.1.1.1.1 Heading 5</tt></td><td nowrap>
+1.1.1.1.1 Heading 5</td></tr>
+<tr>
+      <td>
+       \{toc\} </br>
+         \1.1 Topic 1</br>       
+         \1.1.1 Subtopic 1</br>
+         \1.1.1.1 Subtopic 1</br>
+         \1.1 Topic 2 </br>
+         \1.1.1 Subtopic 2 </br>
+  </td>
+  <td>
+    <ul>
+          <li class="tocEntry"><a href="javascript:scrollToTargetInViewContent('HTopic13C2Fbr3E');"> Topic 1<br/></a>
+                <ul>
+          <li class="tocEntry"><a href="javascript:scrollToTargetInViewContent('HSubtopic13C2Fbr3E');"> Subtopic 1<br/></a>
+                <ul>
+          <li class="tocEntry"><a href="javascript:scrollToTargetInViewContent('HSubtopic13C2Fbr3E-1');"> Subtopic 1<br/></a>
+     </li>
+   </ul>
+</li>
+       </ul>
+</li>
+          <li class="tocEntry"><a href="javascript:scrollToTargetInViewContent('HTopic23C2Fbr3E');"> Topic 2 <br/></a>
+                <ul>
+          <li class="tocEntry"><a href="javascript:scrollToTargetInViewContent('HSubtopic23C2Fbr3E');"> Subtopic 2 <br/></a>
+       </li>
+</ul> </li>
+</ul>
+  </td>
+</tr>
+<tr><td nowrap><tt>\{regiontitle\}\\text\\ \{regiontitle\}</tt></td><td nowrap>
+  <span class="regiontitle"> text </span></td></tr>
+</table>
+  	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HHeadings">More</a>
+    </div>
+  </div>
+  <div id="xwikihelpemph">
+    <div id="xwikihelpemphHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Emphasizing</h6></div>
+    <div id="xwikihelpemphContent" class="accordionTabContentBox">
+    <table cellpadding="5px">
+<tr><th>Type</th><th>To get</th></tr>
+<tr><td><tt> a \*bold text\*</tt></td><td>a <strong class="strong">bold text</strong></td></tr>
+<tr><td><tt>\__underlined text\__</tt></td><td><del class="u">underlined text</del></td></tr>
+<tr><td><tt>\~~text in italics~~</tt></td><td><i class="italic">text in italics</i></td></tr>
+<tr><td><tt>\--striked text--</tt></td><td><del class="strike">striked text</del></td></tr>
+<tr><td><tt>\<tt\>monospace font\<\/tt\></tt></td><td><tt>monospace font</tt></td></tr>
+<tr><td><tt>Text in a \<sup\>superscript\<\/sup\> format</tt></td><td>Text in a <sup>superscript</sup> format</td></tr>
+<tr><td><tt>Text in a \<sub\>subscript\<\/sub\> format</tt></td><td>Text in a <sub>subscript</sub> format</td></tr>
+</table>
+	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HEmphasizing">More</a>
+    </div>
+  </div>
+  <div id="xwikihelpparagraphs">
+    <div id="xwikihelpparagraphsHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Paragraphs & line breaks</h6></div>
+    <div id="xwikihelpparagraphsContent" class="accordionTabContentBox">
+<table width=390px cellpadding="5px">
+<tr><th>Type</th><th>To get</th></tr>
+<tr><td><tt>Here is the first paragraph.<br/>
+This text continues the same paragraph.</tt>
+<tt><br/></tt>
+<tt><br/></tt>
+<tt>This paragraph is a new one.</tt>
+<tt><br/></tt>
+<tt><br/></tt>
+<tt>This paragraph is another new one.</tt>
+<tt>This text is displayed&#92;&#92;on two lines.</tt>
+</td>
+<td><tt>Here is a paragraph.
+This text continues the same paragraph.</tt>
+<tt><br/></tt>
+<tt><br/></tt>
+<tt>This paragraph is a new one.</tt>
+<tt><br/></tt>
+<tt><br/></tt>
+<tt>This paragraph is another new one.
+This text is displayed\\on two lines. </tt>
+</td></tr>
+<tr><td><tt>\-\-\-\-</tt></td><td>----</td></tr></table>
+	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HParagraphs26amp3Blinebreaks">More</a>
+    </div>
+  </div>
+  <div id="xwikihelplinks">
+    <div id="xwikihelplinksHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Links</h6></div>
+    <div id="xwikihelplinksContent" class="accordionTabContentBox">
+<table cellpadding="5px">
+<tr><th>Type</th><th>To get</th></tr>
+<tr>
+<td nowrap><tt>
+\[Project/Space.Page\]<br/>
+\[Project/Space\]<br/>
+\[Project/\]<br/>
+\[/Space.Page\]<br/>
+\[Space.Page\]<br/>
+\[Page\]<br/>
+\[&#104;ttp://www.polarion.com\]<br/>
+\[Polarion >&#104;ttp://www.polarion.com\]<br/>
+\{portallink:/monitor\}Monitor\{portallink\}<br/>
+</tt>
+</td>
+<td nowrap>
+<span class="wikilink">project,space,page</span><br/>
+<span class="wikilink">project,space,Home</span><br/>
+<span class="wikilink">project,_default,Home</span><br/>
+<span class="wikilink">repository,space,page</span><br/>
+<span class="wikilink">current project,space,page</span><br/>
+<span class="wikilink">current project,current space,page</span><br/>
+<span class="wikilink"><a href="http://www.polarion.com" target="_blank">www.polarion.com</a></span><br/>
+<span class="wikilink"><a href="http://www.polarion.com" target="_blank">Polarion</a></span></br>
+<span class="wikilink"><a href="/polarion/#/monitor" target="_blank">Monitor</a></span>
+</td></tr>
+</table>
+   	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HLinks">More</a>
+    </div>
+  </div>
+  <div id="xwikihelplists">
+    <div id="xwikihelplistsHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Lists</h6></div>
+    <div id="xwikihelplistsContent" class="accordionTabContentBox">
+<table cellpadding="5px">
+<tr><th>Type</th><th>To get</th></tr>
+<tr><td nowrap><tt>
+\* Level 1<br/>
+\** Level 2<br/>
+\*\*\* Level 3<br/>
+\** Level 2<br/>
+</tt></td><td nowrap>
+<ul class="star">
+<li>Level 1<ul class="star">
+<li>Level 2<ul class="star">
+<li>Level 3</li>
+</ul>
+</li>
+<li>Level 2</li>
+</ul></li>
+</ul></td></tr>
+<tr><td nowrap><tt>
+\1. Item<br/>
+\11. Subitem<br/>
+\1. Item<br/>
+\1*. Subitem
+</tt></td><td nowrap>
+<ol><li>Item<ol><li>Subitem</li>
+</ol>
+</li>
+<li>Item<ul class="star">
+<li>Subitem</li>
+</ul></li>
+</ol></td></tr>
+</table>
+	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HLists">More</a>
+    </div>
+  </div>
+  <div id="xwikihelptables">
+    <div id="xwikihelptablesHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Tables</h6></div>
+    <div id="xwikihelptablesContent" class="accordionTabContentBox">
+<table cellpadding="5px">
+<tr><th>Type</th><th>To get</th></tr>
+<tr><td nowrap><tt>
+\{table}<br/>
+Category | Sales (KE)<br/>
+Category 1 | 100<br/>
+Category 2 | 50<br/>
+Category 3 | 50<br/>
+Total | =sum(B2:B4)<br/>
+\{table}
+</tt></td><td nowrap>
+<table class="wiki-table" cellpadding="0" cellspacing="0" border="0"><tr><th>Category</th><th>Sales (KE)</th></tr><tr class="table-odd"><td>Category 1</td><td>100</td></tr><tr class="table-even"><td>Category 2</td><td>50</td></tr><tr class="table-odd"><td>Category 3</td><td>50</td></tr><tr class="table-even"><td>Total</td><td>200</td></tr></table>
+</td></tr>
+</table>
+	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HTables">More</a>
+    </div>
+  </div>
+  <div id="xwikihelpimages">
+    <div id="xwikihelpimagesHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Images</h6></div>
+    <div id="xwikihelpimagesContent" class="accordionTabContentBox">
+<table>
+<tr><th>Type</th><th>To get</th></tr>
+<tr><td><tt>
+\{image:noavatar.png}
+</tt></td><td>
+<img src="$xwiki.getSkinFile("noavatar.png")" alt="noavatar.png"/>
+</td></tr>
+<tr><td><tt>
+\{image:noavatar.png|30}
+</tt></td><td>
+<img src="$xwiki.getSkinFile("noavatar.png")" height="30" alt="noavatar.png"/>
+</td></tr>
+<tr><td><tt>
+\{image:noavatar.png| |20}
+</tt></td><td>
+<img src="$xwiki.getSkinFile("noavatar.png")" width="20" alt="noavatar.png"/>
+</td></tr>
+<tr><td><tt>
+\{image:noavatar.png|30|20}
+</tt></td><td>
+<img src="$xwiki.getSkinFile("noavatar.png")" width="20" height="30" alt="noavatar.png"/>
+</td></tr>
+<tr><td><tt>
+\{image:http\://somesite/noavatar.png}
+</tt></td>
+<td>
+<img src="$xwiki.getSkinFile("noavatar.png")" alt="noavatar.png"/>
+</td></tr>
+</table>
+	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HImages">More</a>
+    </div>
+  </div>
+  <div id="xwikescape">
+    <div id="xwikihelpescapeHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Escaping Text</h6></div>
+    <div id="xwikihelpescapeContent" class="accordionTabContentBox">
+     <table cellpadding="5px">
+       <tr><th>Type</th><th>To get</th></tr>
+       <tr><td><tt>&#092;&#091;not a wiki link&#092;&#093;</tt></td><td>&#091;not a wiki link&#093;</td></tr>
+       <tr><td><tt>&#092;&#042;not a bold text&#092;&#042;</tt></td><td>&#042;not a bold text&#042;</td></tr>
+			 <tr><td><tt>  
+\{code:java\}<br>
+public class MyClass \{<br>
+  public void helloWorld() \{\}<br>
+\}<br>
+\{code\}
+</td><td>
+{code:java}
+public class MyClass {
+  public void helloWorld() {}
+}
+{code}
+</tt></td></tr>
+
+<tr><td>
+<tt>
+\{workitems:updated:&#91;&#92;&#36;today-20d&#92;&#36;
+     TO &#92;&#36;today&#92;&#36;&#93;\}
+
+\{workitems:resolution:
+     &#92;&#35;&#92;&#35;&#92;&#35;&#92;&#35;&#92;&#35;&#92;&#35;NULL\}
+</tt>
+</td><td>Escape special syntax characters in macro queries.<br />
+Example macros without escaping are: <br />
+<tt>
+\{workitems:updated:&#91;&#36;today-20d&#36;
+     TO &#36;today&#36;&#93;\}
+
+\{workitems:resolution:
+     &#35;&#35;&#35;&#35;&#35;&#35;NULL\}
+</tt>
+</td></tr>
+
+</table>
+	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HEscapingtext">More</a>
+    </div>
+  </div>
+  <div id="xwikihelpbox">
+    <div id="xwikihelpboxHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Boxes</h6></div>
+    <div id="xwikihelpboxContent" class="accordionTabContentBox">
+      <table cellpadding="5px">
+        <tr><th>Type</th><th>To get</th></tr>
+        <tr>
+            <td>
+             \#message("Message text")
+             </td>
+            <td>
+              #message("Message text")
+            </td>
+         </tr>
+        <tr>
+          <td>
+            \#info(\"text\")
+          </td>
+          <td>
+             #info("text")
+          </td>
+        </tr>
+        <tr>
+          <td>
+            \#warning(\"text\")
+          </td>
+          <td>
+             #warning("text")
+          </td>
+        </tr>
+        <tr>
+          <td>
+            \#error(\"text\")
+          </td>
+          <td>
+             #error("text")
+          </td>
+        </tr>
+        <tr>
+          <td>
+            \{hint\}hint\{hint\}
+          </td>
+          <td>
+             {hint}hint{hint}
+          </td>
+        </tr>
+      </table>
+      <a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HBoxes">More</a>
+    </div>
+  </div>
+  <div id="xwikihelpworkitem">
+    <div id="xwikihelpworkitemHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Work Items</h6></div>
+    <div id="xwikihelpworkitemContent" class="accordionTabContentBox" style="overflow: auto">
+    <p><br/>
+    <b>Link to Work Item:</b></p>
+    <p>{pre}<tt>
+        {workitem: DP-1}<br/><br/>
+        {workitem: drivepilot/DP-1| display=long}<br/><br/>
+        {workitem: drivepilot/DP-3| label=work item alias}<br/><br/>
+        {workitem: drivepilot/DP-5| fields=title, status as text-image}
+    </tt>{/pre}</p>
+    <p>&nbsp;</p>
+    <p><b>List of Work Items:</b></p>
+    <p>{pre}<tt>
+        {workitems: status:open|top=2}<br/><br/>
+        {workitems: @all}<br/><br/>
+        {workitems: NOT HAS_VALUE:resolution|project=drivepilot|top=2}<br/><br/>
+        {workitems: status:open|top=2 |fields=title, status as text-image, severity as image}<br/><br/>
+        {workitems: query=status:verified-done|top=2|project=drivepilot|top=20|sortby=id|display=list|expand=yes}<br/><br/>
+        {workitems: queryName=Awaiting Review| top=2}<br/><br/>
+        {workitems: status:open|fields=title, status as text-image, severity as image| display=list|top=2}</br></br>
+        {workitems: sqlQuery=SELECT WI.C_PK FROM WORKITEM WI, PROJECT P WHERE WI.FK_PROJECT = P.C_PK AND P.C_ID = 'drivepilot'|display=table|expand=yes|top=2|fields=title|width=400|height=200}<br/></tt>{/pre}</p>
+    <p>&nbsp;</p>
+    <p><b>Recently modified Work Items:</b></p>
+    <p>{pre}<tt>
+        {recently-modified-workitems:project=@current}<br/><br/>
+        {recently-modified-workitems:drivepilot|top=5|link=yes}
+    </tt>{/pre}</p>
+    <p>&nbsp;</p>
+    <a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HWorkItems">More</a>
+    </div>
+    </div>
+    <div id="xwikihelpmodules">
+    <div id="xwikihelpmodulesHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Documents</h6></div>
+    <div id="xwikihelpmodulesContent" class="accordionTabContentBox" style="overflow: auto">
+    <p><br/>
+    <b>Link to document:</b></p>
+    <p>{pre}<tt>
+    {document:Business Requirements}<br/>
+    <br/>
+    {document:Business Requirements|page=table}<br/>
+    <br/>
+    {document:MySpaceName/Business Requirements}<br/>
+    <br/>
+    {document:MySpaceName/Business Requirements|query=WI-16}</tt>{/pre}</p>
+    <p>&nbsp;</p>
+    <p><b>List of document workitems</b></p>
+	<p>{pre}<tt>{document-workitems:Business Requirements|project=library|display=document|root=WI-57}<br/>
+	<br/>
+	{document-workitems:Business Requirements|project=library|display=document|fields=title, status as text-image, severity as image}<br/>
+	<br/>
+	{document-workitems:Business Requirements|project=library|display=table|root=WI-57|expand=yes}<br/>
+	<br/>
+	{document-workitems:MySpaceName/Business Requirements|project=library|display=table|root=WI-57|expand=yes}</tt>{/pre}</p>
+	<p>&nbsp;</p>
+    <p><b>Document properties</b></p>
+	<p>{pre}<tt>{document-property:Business Requirements|author}<br/><br/>
+	{document-property:Business Requirements|created}<br/><br/>
+	{document-property:MySpaceName/Business Requirements|updated}<br/><br/></tt>{/pre}</p>
+	<p>&nbsp;</p>
+	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HDocuments">More</a>
+    </div>
+    </div>
+    <div id="xwikihelpproject">
+   <div id="xwikihelpprojectHeader" class="accordionTabTitleBar" style="overflow-x: auto;"><h6 class="accordionTitle">Projects</h6></div>
+    <div id="xwikihelpprojectContent" class="accordionTabContentBox">
+    <p><br/>
+    <b>Render project&#39;s name:</b><br/></p>
+    <p>__Possible properties__:</p>
+    <p>name, users, location, description, lead, active, start, finish</p>
+    <p>{pre}<tt>{project-property:name}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+		<b>Property of project other then current:</b></p>
+    <p>{pre}<tt>{project-property:playground|name}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+    <b>Group properties:</b><br/></p>
+    <p>__Possible properties__:</p>
+    <p>projects, projectsDeep, users, location</p>
+    <p>{pre}<tt>{projectgroup-property:location}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+    <p><b>Link to project:</b></p>
+    <p>{pre}<tt>{project: playground| display=long}<br/>
+		<br/>
+		{project: @current}<br/>
+		<br/>
+		{project: playground| label=project alias}<br/>
+		<br/>
+		{project: playground| fields=id,start,lead}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+		<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HProjects">More</a>
+    </div>
+   </div>
+    <div id="xwikihelpproject">
+   <div id="xwikihelpprojectHeader" class="accordionTabTitleBar" style="overflow-x: auto;"><h6 class="accordionTitle">Pages</h6></div>
+    <div id="xwikihelpprojectContent" class="accordionTabContentBox">
+    <p><br/>
+    <b>Project pages list:</b><br/></p>
+    <p>__Possible properties__:</p>
+    <p>project, query, space, fields, top, sortby, display</p>
+    <p>{pre}<tt>{pages:project=playground| query=created:[20091110 TO \$today\$]|top=10| sortby=name|display=list}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+    <b>Group pages list:</b><br/></p>
+    <p>__Possible properties__:</p>
+    <p>group, query, space, fields, top, sortby, display</p>
+    <p>{pre}<tt>{pages:group=Sandbox| query=created:[\$today-3d\$ TO \$today\$]|top=10| sortby=name|display=list}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+    <p><b>Samples:</b></p>
+    <p>{pre}<tt>{pages:project=@current}<br/>
+		<br/>
+		{pages:group=@current}<br/>
+		<br/>
+		{pages:group=/}<br/>
+		<br/>
+		{pages:project=root}<br/>
+		<br/>
+		{pages:sortby=~created}<br/>
+		<br/>
+		{pages:sortby=updated}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+    <b>Create page button:</b><br/></p>
+    <p>{pre}<tt>{create-page-button:template=TemplateFullTest| label=*Create Full Test Run*| prefix=TestRun_}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+		<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HPages">More</a>
+    </div>
+   </div>
+  <div id="xwikihelpuser">
+   <div id="xwikihelpuserHeader" class="accordionTabTitleBar" style="overflow-x: auto;"><h6 class="accordionTitle">Users</h6></div>
+    <div id="xwikihelpuserContent" class="accordionTabContentBox">
+				<p><br/>
+    <b>Link to user:</b></p>
+    <p>{pre}<tt>{user: admin}<br/>
+		<br/>
+		{user: @current}<br/>
+		<br/>
+		{user: admin| display=long}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+		<p><b>List of users:</b></p>
+		<p>{pre}<tt>{users:@all|project=playground|fields=id, name}<br/>
+		<br/>
+		{users:@all|top=3|group=/|fields=id, name}<br/></tt>{/pre}</p>
+		<p>&nbsp;</p>
+		<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HUsers">More</a>
+    </div>
+  </div>
+   <div id="xwikihelpparameter">
+   <div id="xwikihelpparameterHeader" class="accordionTabTitleBar" style="overflow-x: auto;"><h6 class="accordionTitle">Parameters</h6></div>
+    <div id="xwikihelpparameterContent" class="accordionTabContentBox">
+				<p><br/>
+    <b>Parameter:</b></p>
+    <p>{pre}<tt>&#123;parameter:param1|type=string|value=paramValue&#125;<br/>
+		<br/>
+		&#123;parameter:param2|type=user|value=@current|role=user&#125;<br/>
+		<br/>
+		&#123;parameter:param3|type=timePoint|value=version1.0|query=version*|multi=true&#125;</tt>{/pre}</p>
+		<p>&nbsp;</p>
+		<p><b>Parameter form:</b></p>
+		<p>{pre}<tt>{parameter&#045;form}<br/>
+		<br/>
+		{parameter&#045;editor:param1}<br/>
+		<br/>
+		{parameter&#045;editor:param2|width=200}<br/>
+		<br/>
+		{parameter&#045;form&#045;submit}<br/>
+		<br/>
+		{parameter&#045;form&#045;save}<br/>
+		<br/>
+		{parameter&#045;form}</tt>{/pre}</p>
+		<p>&nbsp;</p>
+		<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HParameters">More</a>
+    </div>
+  </div>
+  #if($xwiki.isALM())
+  <div id="xwikihelpdashboard">
+    <div id="xwikihelpheadingsDashboard" class="accordionTabTitleBar"><h6 class="accordionTitle">Dashboard</h6></div>
+    <div id="xwikihelpheadingsContent" class="accordionTabContentBox">
+        <p><br/>
+    <b>Dashboard Property Macro</b></p>
+    <p>Dashboard properties (Build Frequency, Build Success Ratio)</p>
+    <p>{pre}<tt>
+	    {dashboard-property:build-success-ratio}<br/><br/>
+	    {dashboard-property:build-frequency}<br/></br></tt>{/pre}</p>
+    <p><b>Fact Macro</b></p>
+    <p>Number of Users/Files/Developers/Changes, ...</p>
+    <p>{pre}<tt>
+	    {fact:base=repo-analysis|value=NOF}<br/><br/></tt>{/pre}</p>
+    <p><b>Line Chart Macro</b></p>
+    <p>Work Items Trend, Test Coverage, Testing, ...</p>
+	    <p>{pre}<tt>
+	    {line-chart:report-path=charts/workitems-trend.xml|items=workitems-trend-data:RESOLVED-UNRESOLVED/*|tags=14|width=100%|height=100%}<br/><br/></tt>{/pre}</p>
+    <p><b>Pie Chart Macro</b></p>
+	    <p>{pre}<tt>
+	    {piechart:report-path=charts/repo-statistics-Pie3D.xml|width=100%|height=100%}<br/><br/></tt>{/pre}</p>
+    <p><b>Live Plan Macro</b></p>
+    <p>{pre}<tt>
+	    {live-plan:width=100%|height=100%}<br/><br/></tt>{/pre}</p>
+    <p><b>Report Macro</b></p>
+    <p>Report Macro (Process Score, Quality Score Card, Top5 Projects, Top5 Packages, Facts and Figures)</p>
+	    <p>{pre}<tt>
+	    {report:report-path=html/qualitycentre-portlet-inner.html|width=100%|height=100%}<br/><br/></tt>{/pre}</p>
+    <p><b>Update Report Footer Macro</b></p>
+    <p>{pre}<tt>
+	    {update-report-footer:report-path=charts/workitems-trend.xml|calculation=trackeranalysis}<br/><br/></tt>{/pre}</p>
+    <p>&nbsp;</p>
+	<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HDashboard">More</a>
+    
+    </div>
+  </div>
+  #end
+  <div id="xwikihelptestmanagement">
+   <div id="xwikihelptestmanagementHeader" class="accordionTabTitleBar" style="overflow-x: auto;"><h6 class="accordionTitle">Test Management</h6></div>
+    <div id="xwikihelptestmanagementContent" class="accordionTabContentBox">
+        <p><br/></p>
+    <p><b>Create Test Run button:</b></p>
+    <p>{pre}<tt>{create-testrun-button}</tt>{/pre}</p>
+    <p>{pre}<tt>{create-testrun-button:label=Create Manual Test Run|project=playground|query=type:manual}</tt>{/pre}</p>
+        <p>&nbsp;</p>  
+    <p><b>Recent Test Runs:</b></p>
+    <p>{pre}<tt>{recent-testruns}</tt>{/pre}</p>
+    <p>{pre}<tt>{recent-testruns:playground|status=failed}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Test Run label:</b></p>
+    <p>{pre}<tt>{testrun-label}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Test Run overview:</b></p>
+    <p>{pre}<tt>{testrun-overview}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Test records table:</b></p>
+    <p>{pre}<tt>{testrecords:result=failed}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Test Run status button:</b></p>
+    <p>{pre}<tt>{testrun-status-button}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Execute Test Run button:</b></p>
+    <p>{pre}<tt>{execute-testrun-button}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Test Run properties:</b></p>
+    <p>{pre}<tt>{testrun-property:status}</tt>{/pre}</p>
+    <p>{pre}<tt>{testrun-property:type as image-text}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Export tests to Excel:</b></p>
+    <p>{pre}<tt>{export-tests:query=status:active}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Import results from Excel:</b></p>
+    <p>{pre}<tt>{import-test-results}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Import automated test results:</b></p>
+    <p>{pre}<tt>{import-automated-test-results}</tt>{/pre}</p>
+        <p>&nbsp;</p> 
+    <a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HTestManagement">More</a>
+    </div>
+  </div>
+  <div id="xwikihelpplans">
+   <div id="xwikihelpplansHeader" class="accordionTabTitleBar" style="overflow-x: auto;"><h6 class="accordionTitle">Plans</h6></div>
+    <div id="xwikihelpplansContent" class="accordionTabContentBox">
+        <p><br/></p>
+    <p><b>Plan status button:</b></p>
+    <p>{pre}<tt>{plan-status-button}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Show Plan burn up chart:</b></p>
+    <p>{pre}<tt>{plan-burnup}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Show Plan burn down chart:</b></p>
+    <p>{pre}<tt>{plan-burndown}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Workitems board :</b></p>
+    <p>{pre}<tt>{workitems-board:columns=draft, open as To-do;inprogress as In Progress; done as Done}</tt>{/pre}</p>
+    <p>{pre}<tt>{workitems-board:MS3|roles=implements|columns=draft, open as To-do;inprogress as In Progress; done as Done|compact-statuses=done}</tt>{/pre}</p>
+        <p>&nbsp;</p> 
+    <p><b>Open Plan in table button:</b></p>
+    <p>{pre}<tt>{plan-open-in-table}</tt>{/pre}</p>
+        <p>&nbsp;</p> 
+    <p><b>Plan label:</b></p>
+    <p>{pre}<tt>{plan-label}</tt>{/pre}</p>
+        <p>&nbsp;</p> 
+    <p><b>Plan progress:</b></p>
+    <p>{pre}<tt>{plan-progress}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <p><b>Plans with Query:</b></p>
+    <p>{pre}<tt>{plans}</tt>{/pre}</p>
+    <p>{pre}<tt>{plans:sprint1}</tt>{/pre}</p>
+    <p>{pre}<tt>{plans:project=elibrary}</tt>{/pre}</p>
+    <p>{pre}<tt>{plans:group=/Demo Projects}</tt>{/pre}</p>
+    <p>{pre}<tt>{plans:query=project.id:elibrary AND id:sp*}</tt>{/pre}</p>
+        <p>&nbsp;</p>
+    <a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HPlans">More</a>
+    </div>
+  </div>
+  <div id="xwikihelpsocialmedia">
+   <div id="xwikihelpsocialmediaHeader" class="accordionTabTitleBar" style="overflow-x: auto;"><h6 class="accordionTitle">Social Media</h6></div>
+    <div id="xwikihelpsocialmediaContent" class="accordionTabContentBox">
+				<p><br/>
+    <b>List of activities:</b></p>
+    <p>{pre}<tt>{activity-stream}</tt><br/><br/>
+    <tt>{activity-stream:Eric Testman|top=30}</tt><br/><br/>
+	<tt>{activity-stream:Eric Testman|top=30|activities=workitems:updated, jobs}</tt>
+    {/pre}</p>
+		<p>&nbsp;</p>
+		<a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HSocialMedia">More</a>
+    </div>
+  </div>
+  <div id="xwikihelpother">
+    <div id="xwikihelpotherHeader" class="accordionTabTitleBar"><h6 class="accordionTitle">Other</h6></div>
+    <div id="xwikihelpotherContent" class="accordionTabContentBox">
+      <p>{pre}<br/>
+      <b>Nereast timepoint of current project:</b><br/>
+      <tt>{timepoint}</tt><br/>
+      <br/>
+      <b>Build summary:</b><br/>
+      <tt>{latestbuild}</tt><br/>
+      <br/>
+      <b>Create new project button:</b><br/>
+      <tt>{createprojectbutton}</tt><br/>
+      <br/>
+      <b>Include wiki page into another:</b><br/>
+      <tt>{include-page:playground/_default.Home}</tt><br/>
+      <br/>
+      <b>Include macros from wiki page into another:</b><br/>
+      <tt>{include-macros:playground/_default.Macros}</tt><br/>
+      <br/>
+      <b>Page break in PDF:</b><br/>
+      <tt>{page-break:page}</tt><br/>
+      <br/>
+      <b>Keeping text together in PDF:</b><br/>
+      <tt>{keep-together}multi-line text{keep-together}</tt><br/>
+      <br/>
+      <b>Show certain text in PDF or wiki:</b><br/>
+      <tt>{show:wiki}[link to page]{show}<br />
+      {show:pdf}&#60;a href="link another pdf"&#62;another pdf&#60;/a&#62;{show}<br /></tt>
+      <br/>
+      <b>Show certain text in selected pages:</b><br/>
+      <tt>{showPrefix:TestRun_|variable=testRun}<br/>
+      Test run $testRun.<br/>
+      {showPrefix}</tt><br/>
+      <tt>{showNotPrefix:Template}<br/>
+      This is not a template page.<br/>
+      {showNotPrefix}</tt><br/>
+      <br/>
+      {/pre}</p>
+      <a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp#HOther">More</a>
+    </div>
+  </div>
+  ##add links to detailed syntax and HighCharts helps
+  <div style="text-align:right;padding:3px 6px 0 0;font-weight:bold;">
+    <a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/SyntaxHelp">Detailed Syntax Help</a><br/>
+    <a style="text-decoration:none;" target="_blank" href="/polarion/#/wiki/Doc/HighchartsHelp">Wiki Highcharts Help</a>
+  </div>
+  ##end of syntax help link
+  </div>
+#*<div id="xwikihelpsyntax">$msg.get("helponsyntax") <a href="http://polarion/xwiki/bin/view/Doc/XWikiSyntax?xpage=plain" onclick="openHelp(); return false;">$msg.get("xwikisyntax")</a></div>*#
+##panelfooter()
+</div>
+##<script type="text/javascript" src="$xwiki.getSkinFile("rico/rico.js")"></script>
+##<script type="text/javascript" src="$xwiki.getSkinFile("rico/xwrico.js")"></script>
+<script type="text/javascript">
+Rico.loadModule('Accordion');
+Rico.include('accordion.css');
+Rico.onLoad( function() {
+var option = {
+	panelHeight: 242,
+	hoverClass: 'accordionTabTitleBarHover',
+	selectedClass: 'accordionTabTitleBarSelected'
+}
+var accordion = new Rico.Accordion($$('div.accordionTabTitleBar'), $$('div.accordionTabContentBox'), option);
+  try
+  {
+        var helpPanelWidth = "99%";
+//	alert("Rico" + helpPanelWidth);
+	var contentBoxes = $$('div.accordionTabContentBox');
+        len = contentBoxes.length;
+        for (i=0; i < len; i++)
+        {
+            el = contentBoxes.pop();
+            el.style.width = helpPanelWidth;
+//            alert(i + "-" + el.id + " w: " + el.style.width);
+  }
+  }
+  catch(ex){alert("Error while load Rico.Accordion: " + ex)
+  }
+});
+</script>

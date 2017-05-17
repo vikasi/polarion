@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.objectweb.jotm
+Export-Package: .,com.polarion.platform,org.objectweb.carol.cmi,org.ob
+ jectweb.carol.cmi.compiler,org.objectweb.carol.cmi.compiler.dtd,org.o
+ bjectweb.carol.cmi.jndi,org.objectweb.carol.jndi.enc.java,org.objectw
+ eb.carol.jndi.iiop,org.objectweb.carol.jndi.lmi,org.objectweb.carol.j
+ ndi.ns,org.objectweb.carol.jndi.spi,org.objectweb.carol.rmi.iiop.inte
+ rceptor,org.objectweb.carol.rmi.jonathan.david,org.objectweb.carol.rm
+ i.jonathan.jeremie,org.objectweb.carol.rmi.jrmp.interceptor,org.objec
+ tweb.carol.rmi.jrmp.server,org.objectweb.carol.rmi.multi,org.objectwe
+ b.carol.util.bootstrap,org.objectweb.carol.util.configuration,org.obj
+ ectweb.carol.util.multi,org.objectweb.carol.util.perfs,org.objectweb.
+ jotm,org.objectweb.jotm.jta.rmi,org.objectweb.jotm.ots,org.objectweb.
+ transaction.jta
+Generated-from: 1409778586222;type=2
+Bundle-Name: %pluginName
+Bundle-Version: 1.4.3.2014-10-06
+Bundle-ClassPath: lib/carol.jar,lib/jonas_timer.jar,jotm.jar,lib/jotm_
+ iiop_stubs.jar,lib/jotm_jrmp_stubs.jar,lib/jts1_0.jar,lib/commons-cli
+ .jar
+Bundle-Localization: plugin
+Require-Bundle: javax.transaction;visibility:=reexport,org.apache.log4
+ j;visibility:=reexport,org.eclipse.core.runtime.compatibility,org.ecl
+ ipse.core.runtime;bundle-version="2.1"
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.eclipse.core.internal.compatibility.PluginActiva
+ tor
+Bundle-Vendor: %providerName
+
+

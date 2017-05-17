@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20150325174822</created>
+<type>active</type>
+<content><![CDATA[1 Reports
+
+<table class="itemsTable" style="width:80%">
+<thead>
+<tr>
+<th>Name</th>
+<th>Updated</th>
+</tr>
+</thead>
+#foreach($p in $transaction.richPages().search().query("project.id:$page.project AND space.id:Reports").sort("title"))
+<tr><td> $p.render.withLinks</td><td>$p.fields.updated.render</td></tr>
+#end
+#foreach($p in $transaction.wikiPages().search().query("project.id:$page.project AND space.id:Reports AND NOT id:Home").sort("title"))
+<tr><td> $p.render.withLinks</td><td>$p.fields.updated.render</td></tr>
+#end
+</table>
+]]></content>
+</wiki-page>

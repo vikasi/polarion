@@ -1,0 +1,18 @@
+1 Document Workflow
+
+#info("The workflow configuration of the Document enables you to specify *workflow transitions* from start state to end state and *perform specific action* for each transition.")
+
+\\
+{configuration:workflow|prototype=Module}
+\\
+1.1 Quick Help
+
+The table above shows the workflow configurations currently defined for *Documents*. In general, configurations can be Global or project in their scope. The ~~Scope~~ column indicates the scope of 
+the configuration currently in use. A Document workflow configuration can also be specific to one or more Document types. \\
+
+There are two simple rules that define the order in which configurations are used:
+* Configuration in the project scope always overrides the Global configuration.
+* Type-specific configuration always overrides the ~~All Types~~ configuration.
+
+#info("Note that there is a separate workflow configuration applicable only to Work Items and Work Items types. This is the configuration used to map an overall process or methodology into Polarion. The configuration topic is: Administration &gt; Work Items &gt; Workflow.")
+

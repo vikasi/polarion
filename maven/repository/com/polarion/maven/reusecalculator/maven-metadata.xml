@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <plugins>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.reusecalculator:maven-svndepend-plugin:maven-plugin:3.17.0</name>
+      <prefix>svndepend</prefix>
+      <artifactId>maven-svndepend-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.reusecalculator:maven-svndepend-integration-plugin:maven-plugin:3.17.0</name>
+      <prefix>svndepend-integration</prefix>
+      <artifactId>maven-svndepend-integration-plugin</artifactId>
+    </plugin>
+  </plugins>
+</metadata>

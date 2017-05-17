@@ -1,0 +1,166 @@
+#macro (headerCell $body)
+  <th class="portlet-section-header">
+    <b>     
+        $body
+    </b>
+  </th>
+#end
+
+#macro (entryCell $body)
+  <td class='portlet-section-body'>    
+      $body &nbsp;    
+  </td>
+#end
+
+#macro (entryCell2 $body $count)
+#if (($count % 2) == 0)
+  <td class='portlet-section-body'>    
+#else
+  <td class='portlet-section-alternate'>    
+#end
+      $body &nbsp;    
+  </td>
+#end
+
+
+#macro (formField $label $value $size $id $MESSAGES $ERRORS)
+#if ($ERRORS)
+#set ($eflag = "$!ERRORS.get($id)")
+#else
+#set ($eflag = "")
+#end
+  <tr colspan="4" align="right">
+  #if ($!eflag == "")
+    <td width="5%" align="left">&nbsp;</td>
+  #else
+    <td width="5%" class="portlet-msg-error" align="left">&nbsp;</td>  
+  #end
+    <td nowrap class="portlet-section-alternate" align="right">$!MESSAGES.getString($label):&nbsp;</td>
+    <td class="portlet-section-body" align="left">
+      <input id="$!id" type="text" name="$!id" size="$!size" value="$!value" class="portlet-form-field-label">
+    </td>
+    <td width="5%" class="portlet-form-label" align="left">&nbsp;</td>
+  </tr>
+#end
+
+#macro (readField $label $value $size $id $MESSAGES $ERRORS)
+#if ($ERRORS)
+#set ($eflag = "$!ERRORS.get($id)")
+#else
+#set ($eflag = "")
+#end
+  <tr colspan="4" align="right">
+  #if ($!eflag == "")
+    <td width="5%" align="left">&nbsp;</td>
+  #else
+    <td width="5%" class="portlet-msg-error" align="left">&nbsp;</td>  
+  #end
+    <td nowrap class="portlet-section-alternate" align="right">$!MESSAGES.getString($label):&nbsp;</td>
+    <td class="portlet-section-body" align="left">
+      <input id="$!id" disabled='true' type="text" name="$!id" size="$!size" value="$!value" class="portlet-form-field-label">
+    </td>
+    <td width="5%" class="portlet-form-label" align="left">&nbsp;</td>
+  </tr>
+#end
+
+#macro (ErrorMessages $ERRORS)
+#if ($ERRORS)
+#if ($ERRORS.size() > 0)
+#foreach ($msg in $ERRORS)
+<div class="portlet-msg-error">
+$msg<br/>
+</div>
+#end
+<br/>
+#end
+#end
+#end
+
+#macro (Preference $prefs $name)
+#set ($pall = $prefs.get($name))
+#foreach ($x in $pall)
+#set ($extraction = $x)
+#end
+$extraction
+#end
+
+#macro (form4ColumnCell $label $value $size $id)
+  <tr colspan="4" align="right">
+    <td width="5%" class="portlet-form-label" align="left">&nbsp;</td>
+    <td nowrap class="portlet-form-field-label" align="right">$!label:&nbsp;</td>
+    <td class="portlet-form-input-field" align="left">
+      <input id="$!id" type="text" name="$!id" size="$!size" value="$!value">
+    </td>
+    <td width="5%" class="portlet-form-label" align="left">&nbsp;</td>
+  </tr>
+#end
+
+#macro (form4CheckBoxCell $label $value $id)
+   <tr colspan="4" align="right">
+    <td width="5%" class="portlet-form-label" align="left">&nbsp;</td>
+    <td nowrap class="portlet-form-field-label" align="right">&nbsp;</td>
+    <td class="portlet-form-input-field" align="left">
+      <input type="checkbox" name="$id" #if ($value=="true") checked=1 #end>&nbsp;$label</input>
+    </td>
+    <td width="5%" class="portlet-form-label" align="left">&nbsp;</td>
+    </tr>
+#end
+
+#macro(checkBox $name $checkedValue $uncheckedValue $currentValue $label) 
+    <script type="text/javascript"> 
+      function ${name}_listener(cb) 
+      { 
+         var valueElement = document.getElementById('${name}'); 
+         if(cb.checked) 
+         { 
+             valueElement.value = '$checkedValue'; 
+         } 
+         else 
+         { 
+            valueElement.value = '$uncheckedValue'; 
+         } 
+ 
+      } 
+    </script> 
+    #if($currentValue == $checkedValue) 
+        #set($isChecked = true) 
+    #else 
+        #set($isChecked = false) 
+    #end     
+   <tr colspan="4" align="right">
+    <td width="5%" class="portlet-form-label" align="left">&nbsp;</td>
+    <td nowrap class="portlet-form-field-label" align="right">&nbsp;</td>
+    <td class="portlet-form-input-field" align="left">
+      <input type="checkbox" name="${name}_checkBox" id="${name}_checkBox" value="-1" #if($isChecked)checked#end onClick="${name}_listener(this)">$!label</>
+      <input type="hidden" name="${name}" id="${name}" value="${currentValue}" />       
+    </td>
+    <td width="5%" class="portlet-form-label" align="left">&nbsp;</td>
+    </tr>    
+#end
+
+#macro (prefField $key $values $size)
+#if ($ERRORS)
+#set ($eflag = "$!ERRORS.get($id)")
+#else
+#set ($eflag = "")
+#end
+#set ($pv = $pf.Value)
+#foreach ($x in $pv)
+#set ($extr = $x)
+#end
+#foreach ($x in $values)
+#set ($extr = $x)
+#end
+  <tr colspan="4" align="right">
+  #if ($!eflag == "")
+    <td width="5%" align="left">&nbsp;</td>
+  #else
+    <td width="5%" class="portlet-msg-error" align="left">&nbsp;</td>  
+  #end
+    <td nowrap class="portlet-section-alternate" align="right">$!key:&nbsp;</td>
+    <td class="portlet-section-body" align="left">
+      <input id="$!id" type="text" name="$!key" size="$!size" value="$!extr" class="portlet-form-field-label">
+    </td>
+    <td width="5%" class="portlet-form-label" align="left">&nbsp;</td>
+  </tr>
+#end

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2013-01-09 22:59:12.071 +0100</field>
+    <field id="headingSidebarFields">severity,status</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-189"></h1><p id="polarion_merged_2">
+  <span style="font-style: italic;"><span style="font-weight: bold;">NOTE TO AUTHOR: </span> Highlighted, italicized text throughout this template is provided solely as background information to assist you in creating this document.  Please delete all such text, as well as the instructions in each section, prior to submitting this document.  <span style="font-weight: bold;">ONLY YOUR PROJECT-SPECIFIC INFORMATION SHOULD APPEAR IN THE FINAL VERSION OF THIS DOCUMENT.</span></span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-190"></h2><p id="polarion_merged_0">
+  A <span style="font-weight: bold;">failure modes and effects analysis (FMEA)</span> is a procedure in product development and operations management for analysis of potential failure modes within a system for classification by the severity and likelihood of the failures. A successful FMEA activity helps a team to identify potential failure modes based on past experience with similar products or processes, enabling the team to design those failures out of the system with the minimum of effort and resource expenditure, thereby reducing development time and costs. It is widely used in manufacturing industries in various phases of the product life cycle and is now increasingly finding use in the service industry. Failure modes are any errors or defects in a process, design, or item, especially those that affect the customer, and can be potential or actual. Effects analysis refers to studying the consequences of those failures.
+</p><p id="polarion_merged_1">
+  This <span style="font-weight: bold;">FMEA Study</span> document collects the potential failures.
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-194"></h2><div id="polarion_wiki macro name=module-workitem;params=id=TMPLT-472"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-196"></h2><p id="polarion_merged_3">
+  Full FMEA Worksheet is available: <span class="polarion-rte-link" data-type="wikiPage" id="fake" data-item-name="FMEA Worksheet" data-space-name="Risks" data-option-id="default"></span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-371"></h2><p id="polarion_cleaned_0">
+  <span style="font-size: 10pt;line-height: 1.5;">Browse the Requirements and Design items assessed by potential failures using: <span style="font-weight: bold;"><span class="polarion-rte-link" data-type="polarion" id="fake" data-custom-label="Requirements - Design Traceability Tree" data-url="/wiki/Requirements/System Requirements/?link_role=parent,refines,assesses&amp;tree_depth=5&amp;tab=tree"></span></span></span>
+</p><p id="polarion_1"></p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Risk</item>
+                <item id="layouter">section</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status,rpn</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                            <item id="value">false</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                        <struct>
+                            <item id="key">sidebarWorkItemFields</item>
+                            <item id="value">severity,status,detectionRating,occurrenceRating,severityRating</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">risk</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">generic</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

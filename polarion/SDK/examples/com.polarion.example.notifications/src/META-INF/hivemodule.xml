@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="com.polarion.example.notifications" version="1.0.0">
+
+	<contribution configuration-id="com.polarion.psvn.core.notifications.targets">
+		<target instance="instance:com.polarion.example.notifications.targets.CustomFieldTargets"/>
+	</contribution>
+	
+</module>

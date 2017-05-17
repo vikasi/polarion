@@ -1,0 +1,48 @@
+<script>
+var tmp = new Array();var pgs = new Array();var spc = new Array();
+#set($spaces = $xwiki.spaces)
+#foreach($space in $spaces)
+tmp.push("${space}");
+#end
+spc = spc.concat(tmp);tmp = new Array(0);
+#foreach($space in $spaces)
+#set ($sql = "where doc.web="$space" order by doc.date desc")
+#set ($pages = $xwiki.searchDocuments($sql , 30 , 0))
+#foreach($page in $pages)
+#set ($sclng = $space.length()+1)
+#set ($pglng = $page.length())
+#set ($pagename = $page.substring($sclng,$pglng))
+tmp.push("${pagename}");
+#end
+pgs.push(tmp);tmp = new Array(0);
+#end
+var initUrl = "$doc.getURL("edit", "")";
+//var currAction = "?&amp;editor=$request.getParameter("editor")";
+var currAction = "?&amp;editor=wiki";
+var tplAction = "&amp;tpl=";var cpyAction = "&amp;cpy=";
+</script>
+<script type="text/javascript" src="$xwiki.getSkinFile("loadtemplate.js")"></script>
+     <form id="template" name="template">
+     <table border="0">
+          <tr><td>
+               <input type="radio" id="copy" name="copy" value="space" onChange="copyChange()" />
+               Space:
+          <select id="space" name="space" onChange="spaceChange()" >
+               <option></option>
+          </select>
+     </td></tr>
+          <tr><td>     
+               <input type="radio" id="copy" name="copy" value="page" onChange="copyChange()" CHECKED />
+               Pages:     
+          <select id="page" name="page" >
+               <option></option>
+          </select>
+     </td></tr>
+          <tr><td align="center">
+     <input type="button" value="Submit" onClick="yesNo()" />
+     </tr></td>     
+     </table>
+     </form>
+     <script>
+               loadSpaces();
+     </script>

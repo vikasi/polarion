@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module-comment>
+    <field id="author">rProject</field>
+    <field id="created">2015-03-26 13:49:15.424 +0100</field>
+    <field id="resolved">true</field>
+    <field id="signatureData">
+        <struct>
+            <item id="targetStatusId">approved</item>
+            <item id="verdict">signed</item>
+            <item id="workflowActionId">markApproved</item>
+            <item id="workflowSignature">subterra:data-service:objects:/default/%project-id%${DocumentWorkflowSignature}{Module}{moduleFolder}Master Specifications#System Requirements Specification#2</item>
+        </struct>
+    </field>
+    <field id="tags">
+        <list>
+            <item>signatures</item>
+        </list>
+    </field>
+    <field id="text" text-type="text/plain">Approved</field>
+</module-comment>

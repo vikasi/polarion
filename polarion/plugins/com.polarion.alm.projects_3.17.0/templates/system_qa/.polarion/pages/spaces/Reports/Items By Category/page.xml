@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2015-02-05 15:19:28.424 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <p id="polarion_hardcoded_1"></p><div id="polarion_client1" class="polarion-rp-widget-part" data-widget="com.polarion.pageParametersForm">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="title"></sub><sub id="content"><sub>wiTypes</sub><sub>resolved</sub></sub><sub id="width">900</sub></span>
+</div><p id="polarion_client2"></p><div id="polarion_client3" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="script"><sub id="script">&lt;div style=&quot;color:grey; text-align:right&quot;&gt;
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name &lt;br/&gt; $date.long
+&lt;div&gt;</sub></sub></span>
+</div><h1 id="polarion_client5">Items By Category</h1><p id="polarion_client8">Displays a chart of the number of Work Items in each Work Item Category, filtered by type and resolution status.</p><div id="polarion_client17" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="script"><sub id="script">#set($baseQuery=&quot;project.id:$page.reference.projectId&quot;)
+#set($baseQuery=&quot;$baseQuery AND type:($pageParameters.wiTypes.toLucene())&quot;)
+#if($pageParameters.resolved.value)
+  #set($baseQuery=&quot;$baseQuery AND HAS_VALUE:resolution&quot;)
+#end
+
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.multiSetPieChart&quot; style=&quot;width:500px&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id=&quot;title&quot;&gt;Items By Category&lt;/sub&gt;
+    &lt;sub id=&quot;sectors&quot;&gt;
+      &lt;sub id=&quot;elements&quot;&gt;
+        #foreach($category in $trackerService.getTrackerProject($page.reference.projectId).getCategories())
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;luceneVelocity&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;$baseQuery AND categories.id:$category.id&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;$category.name&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        #end
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;luceneVelocity&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;$baseQuery AND NOT HAS_VALUE:categories.id&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Un-categorized&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;showDataLabels&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;showZeroValues&quot;&gt;false&lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;
+   &lt;span class=&quot;polarion-rp-inline-widget&quot; data-widget=&quot;com.polarion.countOfObjects&quot;&gt;
+    &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id=&quot;dataSet&quot;&gt;
+      &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+      &lt;sub id=&quot;queryType&quot;&gt;luceneVelocity&lt;/sub&gt;
+      &lt;sub id=&quot;luceneQuery&quot;&gt;$baseQuery AND NOT HAS_VALUE:categories.id&lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;before&quot;&gt;Un-categorized&lt;/sub&gt;
+    &lt;sub id=&quot;after&quot;&gt;&lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/span&gt;
+ &lt;/li&gt;
+#foreach($category in $trackerService.getTrackerProject($page.reference.projectId).getCategories())
+ &lt;li&gt;
+   &lt;span class=&quot;polarion-rp-inline-widget&quot; data-widget=&quot;com.polarion.countOfObjects&quot;&gt;
+    &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id=&quot;dataSet&quot;&gt;
+      &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+      &lt;sub id=&quot;queryType&quot;&gt;luceneVelocity&lt;/sub&gt;
+      &lt;sub id=&quot;luceneQuery&quot;&gt;$baseQuery AND categories.id:$category.id&lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;before&quot;&gt;$category.name&lt;/sub&gt;
+    &lt;sub id=&quot;after&quot;&gt;&lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/span&gt;
+ &lt;/li&gt;
+#end
+&lt;/ul&gt;</sub></sub></span>
+</div><p id="polarion_client14"></p><p id="polarion_client7"></p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div><span id="polarion-rp-parameters"><sub id="resolved" data-label="Resolved Only" data-type="Boolean">false</sub><sub id="wiTypes" data-label="Types" data-type="Enumeration"><sub id="values"><sub>systemRequirement</sub><sub>softwareRequirement</sub><sub>mechanicalRequirement</sub><sub>electricalRequirement</sub></sub><sub id="enumId">workitem-type</sub><sub id="prototype">WorkItem</sub><sub id="allowNoValue">false</sub><sub id="allowMultipleValues">true</sub></sub></span>]]></field>
+    <field id="title">Items By Category</field>
+</rich-page>

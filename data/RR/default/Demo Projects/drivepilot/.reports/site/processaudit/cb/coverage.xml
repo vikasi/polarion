@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+
+<coverage line-rate="0.5319148936170213" branch-rate="0.5714285714285714" version="null" timestamp="1283562221024">
+	<sources>
+		<source>default</source>
+		<source>0</source>
+		<source>S:/data-multi/multirepository/cns-test/workspace/polarion-data/deploymentSpaces/_default/drivepilot/drivepilot/drivepilot/null/src/main/java</source>
+		<source>--source</source>
+		<source>drivepilot</source>
+		<source>--levelThreshold</source>
+		<source>--dateThreshold</source>
+		<source>--methodModifierFilter</source>
+		<source>S:/data/maven-repo</source>
+		<source>--localRepository</source>
+		<source>--projectId</source>
+		<source>S:/data-multi/multirepository/cns-test/workspace/polarion-data/deploymentSpaces/_default/drivepilot/drivepilot/drivepilot/null</source>
+	</sources>
+	<packages>
+		<package name="com.polarion.demo" line-rate="0.6756756756756757" branch-rate="0.6666666666666666" complexity="1.3076923076923077">
+			<number-of-valid-lines>37</number-of-valid-lines>
+			<number-of-covered-lines>25</number-of-covered-lines>
+			<number-of-valid-branches>6</number-of-valid-branches>
+			<number-of-covered-branches>4</number-of-covered-branches>
+			<accumulated-CCN>17.0</accumulated-CCN>
+			<methods-num>13</methods-num>
+			<classes>
+				<class name="com.polarion.demo.Book" filename="com/polarion/demo/Book.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<number-of-valid-lines>10</number-of-valid-lines>
+					<number-of-covered-lines>10</number-of-covered-lines>
+					<number-of-valid-branches>0</number-of-valid-branches>
+					<number-of-covered-branches>0</number-of-covered-branches>
+					<accumulated-CCN>5.0</accumulated-CCN>
+					<methods-num>5</methods-num>
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="19" hits="5" branch="false"/>
+								<line number="20" hits="5" branch="false"/>
+								<line number="21" hits="5" branch="false"/>
+								<line number="22" hits="5" branch="false"/>
+								<line number="23" hits="5" branch="false"/>
+								<line number="24" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAuthor" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="37" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPublicationYear" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="51" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPublisher" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="44" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="getTitle" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="30" hits="5" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="19" hits="5" branch="false"/>
+						<line number="20" hits="5" branch="false"/>
+						<line number="21" hits="5" branch="false"/>
+						<line number="22" hits="5" branch="false"/>
+						<line number="23" hits="5" branch="false"/>
+						<line number="24" hits="5" branch="false"/>
+						<line number="30" hits="5" branch="false"/>
+						<line number="37" hits="3" branch="false"/>
+						<line number="44" hits="2" branch="false"/>
+						<line number="51" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.polarion.demo.Example" filename="com/polarion/demo/Example.java" line-rate="0.0" branch-rate="0.0" complexity="3.0">
+					<number-of-valid-lines>11</number-of-valid-lines>
+					<number-of-covered-lines>0</number-of-covered-lines>
+					<number-of-valid-branches>2</number-of-valid-branches>
+					<number-of-covered-branches>0</number-of-covered-branches>
+					<accumulated-CCN>3.0</accumulated-CCN>
+					<methods-num>1</methods-num>
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="5" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+								<line number="9" hits="0" branch="false"/>
+								<line number="10" hits="0" branch="false"/>
+								<line number="11" hits="0" branch="false"/>
+								<line number="12" hits="0" branch="false"/>
+								<line number="13" hits="0" branch="true"/>
+								<line number="14" hits="0" branch="false"/>
+								<line number="16" hits="0" branch="true"/>
+								<line number="17" hits="0" branch="false"/>
+								<line number="19" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="5" hits="0" branch="false"/>
+						<line number="8" hits="0" branch="false"/>
+						<line number="9" hits="0" branch="false"/>
+						<line number="10" hits="0" branch="false"/>
+						<line number="11" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="true"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="true"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.polarion.demo.Library" filename="com/polarion/demo/Library.java" line-rate="0.9375" branch-rate="1.0" complexity="1.2857142857142858">
+					<number-of-valid-lines>16</number-of-valid-lines>
+					<number-of-covered-lines>15</number-of-covered-lines>
+					<number-of-valid-branches>4</number-of-valid-branches>
+					<number-of-covered-branches>4</number-of-covered-branches>
+					<accumulated-CCN>9.0</accumulated-CCN>
+					<methods-num>7</methods-num>
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="15" hits="2" branch="false"/>
+								<line number="16" hits="2" branch="false"/>
+								<line number="17" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="add" signature="(Lcom/polarion/demo/Book;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="25" hits="4" branch="false"/>
+								<line number="26" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSize" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="42" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="matches" signature="(Lcom/polarion/demo/Book;Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="61" hits="4" branch="true"/>
+							</lines>
+						</method>
+						<method name="matches" signature="(Ljava/lang/String;Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="65" hits="7" branch="true"/>
+							</lines>
+						</method>
+						<method name="remove" signature="(Lcom/polarion/demo/Book;)Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="35" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="search" signature="(Ljava/lang/String;)[Lcom/polarion/demo/Book;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="50" hits="2" branch="false"/>
+								<line number="51" hits="2" branch="true"/>
+								<line number="52" hits="4" branch="false"/>
+								<line number="53" hits="4" branch="true"/>
+								<line number="54" hits="3" branch="false"/>
+								<line number="56" hits="4" branch="false"/>
+								<line number="57" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="15" hits="2" branch="false"/>
+						<line number="16" hits="2" branch="false"/>
+						<line number="17" hits="2" branch="false"/>
+						<line number="25" hits="4" branch="false"/>
+						<line number="26" hits="4" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="42" hits="3" branch="false"/>
+						<line number="50" hits="2" branch="false"/>
+						<line number="51" hits="2" branch="true"/>
+						<line number="52" hits="4" branch="false"/>
+						<line number="53" hits="4" branch="true"/>
+						<line number="54" hits="3" branch="false"/>
+						<line number="56" hits="4" branch="false"/>
+						<line number="57" hits="2" branch="false"/>
+						<line number="61" hits="4" branch="true"/>
+						<line number="65" hits="7" branch="true"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.polarion.demo.reuse" line-rate="0.0" branch-rate="0.0" complexity="1.3333333333333333">
+			<number-of-valid-lines>10</number-of-valid-lines>
+			<number-of-covered-lines>0</number-of-covered-lines>
+			<number-of-valid-branches>1</number-of-valid-branches>
+			<number-of-covered-branches>0</number-of-covered-branches>
+			<accumulated-CCN>4.0</accumulated-CCN>
+			<methods-num>3</methods-num>
+			<classes>
+				<class name="com.polarion.demo.reuse.ReusingClass" filename="com/polarion/demo/reuse/ReusingClass.java" line-rate="0.0" branch-rate="0.0" complexity="1.5">
+					<number-of-valid-lines>8</number-of-valid-lines>
+					<number-of-covered-lines>0</number-of-covered-lines>
+					<number-of-valid-branches>1</number-of-valid-branches>
+					<number-of-covered-branches>0</number-of-covered-branches>
+					<accumulated-CCN>3.0</accumulated-CCN>
+					<methods-num>2</methods-num>
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="reuseCommonsConfiguration" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="19" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="reuseCommonsPrimitives" signature="()V" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+								<line number="13" hits="0" branch="true"/>
+								<line number="14" hits="0" branch="false"/>
+								<line number="16" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="true"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.polarion.demo.reuse.SubClass" filename="com/polarion/demo/reuse/SubClass.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<number-of-valid-lines>2</number-of-valid-lines>
+					<number-of-covered-lines>0</number-of-covered-lines>
+					<number-of-valid-branches>0</number-of-valid-branches>
+					<number-of-covered-branches>0</number-of-covered-branches>
+					<accumulated-CCN>1.0</accumulated-CCN>
+					<methods-num>1</methods-num>
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+								<line number="9" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="9" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>

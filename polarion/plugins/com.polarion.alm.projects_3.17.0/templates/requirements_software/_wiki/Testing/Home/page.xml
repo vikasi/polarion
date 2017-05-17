@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20061207220023</created>
+<type>content</type>
+<content><![CDATA[
+{section:width=100%}
+{column}
+1 Testing
+
+1.1 Test Case Specifications
+The “Test Specification” document describes test cases that need to be executed to verify that the specification has been implemented.
+
+* {document:Testing/Test Specification} - link to the test specification document
+* [Test Case Coverage>Test Case Traceability] - review how well is the specification covered by test cases
+
+{column}
+
+{column:width=2}
+{column}
+{column:width=300}
+
+{regiontitle}Activity{regiontitle}
+{activity-stream:query=workitem.type:testcase}
+
+{column}
+{section}]]></content>
+</wiki-page>

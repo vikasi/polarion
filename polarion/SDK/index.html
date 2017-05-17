@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<title>Polarion&reg; ALM™ Software Development Kit (SDK)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+    body {
+    text-align:center;
+    }
+    #container {
+    margin:0px auto 0px auto;
+    width:810px;
+    text-align:left;
+    font-family: arial;
+    }
+    html body {
+      color:Black;
+      font-family:Arial,Helvetica,Verdana,Geneva,sans-serif;
+      font-size:80%;
+      margin:0;
+      padding:0;
+      line-height:145%;
+    }
+    code {
+      font-size:130%;
+    }
+    a.small {
+      font-size:8pt;
+    }
+    div#hdr {
+      //background-image:url(http://www.polarion.com/img/banners/readme_header_logo.gif);
+      background-position:left center;
+      background-repeat:no-repeat;
+      color:white;
+      font-family:arial black,helvetica;
+      font-weight:bold;
+      height:70px;
+      line-height:30px;
+      vertical-align:middle;
+      text-align:left;
+      margin-left: -37px;
+    }
+    div#hdr h1 {
+      font-size:170%;
+      font-weight:bold;
+      margin:0;
+      padding:20px 0 0 106px;
+    }
+    div#hdr span.tl {
+      font-size:12px;
+      font-style:italic;
+      padding-left:42px;
+    }
+    div#hdr sup {
+      font-size:12px;
+      font-weight:normal;
+    }
+    div#nav {
+      background-color:inherit;
+      color:#191970;
+      font-size:90%;
+      margin-top: 19px; margin-bottom: 19px;      
+    }
+    div#nav ul {
+      display:block;
+      list-style-image:none;
+      list-style-position:outside;
+      list-style-type:none;
+      margin:0;
+      padding:0;
+    }
+    div#nav ul li {
+      display:inline-block;
+      padding-right:12px;
+      float: left;
+    }
+    
+    div#nav ul li:last-child {
+	    padding-right: 0;
+	}
+    
+    div#nav a, div#nav a:link, div#nav a:visited, div#nav a:hover {
+      background-color:#55a0b9;
+      color:white;
+      font-weight:bold;
+      padding:5px 10px 5px 10px;
+      text-decoration:none;
+    }
+    div#nav a:hover {
+      background-color: #307389;
+      border-bottom:1px dotted #307389;
+      color:#FFF;
+      font-weight: bold;
+    }
+    div#cont {
+      width: 800px;
+      background-color:White;
+      color:inherit;
+    }
+    div#cont h1 {
+      background-color:inherit;
+      border-bottom:1px solid #CCCCCC;
+      font-size:160%;
+      margin-top: 32px;
+      padding-bottom:4px;
+    }
+    div#cont h2, div#cont h3 {
+      background-color:inherit;
+      color:black;
+      font-size:135%;
+
+      font-weight:bold;
+      margin:18px 16px 2px;
+      padding:0;
+    }
+    div#cont h3 {
+      font-size:115%;
+      font-style:normal;
+    }
+    div#cont p {
+      margin:0 16px 8px;
+      padding:0;
+    }
+    div#cont p.top {
+      font-size:80%;
+      font-weight:bold;
+      text-align:right;
+    }
+    div#cont p.procHdr {
+      font-style:italic;
+      margin-bottom:2px;
+    }
+
+    div#cont ul, div#cont ol {
+      margin:0 1em;
+      padding-left:1em;
+    }
+    div#cont ul li {
+      list-style-image:none;
+      list-style-position:outside;
+      list-style-type:square;
+      margin:0 28px 8px;
+    }
+    div#cont ol li {
+      margin:0 28px 8px;
+    }
+    div#cont a:link, div#cont a:visited {
+      background-color:inherit;
+      border-bottom:1px dotted #135E83;
+      color:#55a0b9;
+      text-decoration:none;
+      font-weight: bold;
+    }
+    div#cont a:hover {
+     // background-color:#FFFFE0;
+      background-color: #307389;
+      border-bottom:1px dotted #307389;
+      color:#FFF;
+      font-weight: bold;
+    }
+    
+    div#ftr {
+      background-color:#55a0b9;
+      background-position:left center;
+      background-repeat:no-repeat;
+      color:white;
+      font-size:13px;
+      height:70px;
+      margin:0 0 6px;
+      padding:0 1em 0 8px;
+      text-align:right;
+    }
+    div#ftr p {
+      padding:0 18px 0 0;
+    }
+    div.note {
+      background-color:#EEEEEE;
+      border-color:#CCCCCC #999999 #999999 #CCCCCC;
+      border-style:solid;
+      border-width:1px 2px 2px 1px;
+      margin:18px 5%;
+    }
+    div#cont div.note h2 {
+      background-color:inherit;
+      color:Blue;
+      margin-top:6px;
+    }
+    table {
+      background-color:#FFFFFF;
+      border:1px solid #CCCCCC;
+      margin:18px 12px;
+    }
+    th, td {
+      border:1px solid #EEEEEE;
+      padding:4px 1em;
+      text-align:left;
+    }
+    th {
+      background-color:#CCCCCC;
+    }
+
+    th.Title {background-color: #55a0b9; color:#FFF; padding-bottom: 0; border-bottom: none;}
+    .shad {
+      background-color:#F9F9F9;
+    }
+	</style>
+</head>
+
+<body>
+<div style="width: 100%; background-color:#55a0b9; height: 70px">
+	<div id="container">
+	<div id="hdr">
+		<h1>Polarion<sup>&reg;</sup>ALM™ Software Development Kit</h1>
+	</div>
+	<div id="nav">
+		<ul>
+		  <li><a href="#sdkguide" title="Download SDK guide and examples in PDF">SDK Guide</a></li>
+		  <li><a href="#java" title="Javadoc for Polarion Open Java API">Open Java API</a></li>
+		  <li><a href="#java-rendering" title="Javadoc for Polarion Rendering Java API">Rendering Java API</a></li>
+		  <li><a href="#websvcs" title="Polarion Web Services API">Web Services API</a></li>
+		  <li><a href="#db" title="Info on the embedded Database">Database</a></li>
+		  <li><a href="#other" title="Other resources &amp; Info">Other Resources</a></li>
+		  <li><a href="#struct" title="SDK Folder Structure">Folder Structure</a></li>
+		</ul>
+		<div style="clear:both"></div>
+	</div>
+
+	<div id="cont">
+		<h1 id="intro">Introduction</h1>
+		<p>
+			The <code>sdk</code> folder in your Polarion installation provides documentation, source code, examples, and other information to help developers 
+			wishing to extend the standard features and capabilities of Polarion. This page provides links to the various resources. 
+		</p>
+
+		<h1 id="sdkguide">SDK Guides and Examples</h1>
+			<p>A guide to the Polarion SDK together with the examples from the SDK folder is provided in PDF documents below. </p>
+			<ul>
+				<li><a href="doc/sdk.pdf" title="Download SDK guide and examples in PDF">Download SDK Guide &amp; Examples</a></li>
+				<li><a href="doc/widget-sdk.pdf" title="Download Widget SDK guide and examples in PDF">Download Widget SDK Guide &amp; Examples</a></li>
+				<li><a href="doc/rt-sdk.pdf" title="Download Resource Traceability SDK guide and examples in PDF">Download Resource Traceability SDK Guide &amp; Examples</a></li>
+		</ul>
+		<p>
+			The <code>sdk/examples</code> folder contains subfolders with examples for implementing several custom extensions and other functionality. See 
+			<a href="#struct">Folder Structure</a> below.
+		</p>
+
+       <h1 id="java">Polarion Open Java API ("Open API")</h1>
+	  <p>Documentation of the Open API is provided in Javadoc format.</p>
+	  <ul>
+	    <li><a href="doc/javadoc/index.html" title="Javadoc for Polarion Open Java API">Access API Documentation...</a></li>
+	  </ul>
+	  
+	  <h1 id="java-rendering">Polarion Rendering API ("Rendering API")</h1>
+	  <p>Documentation of the Rendering API is provided in Javadoc format.</p>
+	  <ul>
+	    <li><a href="doc/javadoc-rendering/index.html" title="Javadoc for Polarion Rendering Java API">Access Rendering API Documentation...</a></li>
+	  </ul>
+	  
+	  <h1 id="websvcs">Polarion Web Services API</h1>
+	  <p>Documentation for the Web service Java client</p>
+	  <ul>
+		 <li><a href="doc/javadoc/com/polarion/alm/ws/client/WebServiceFactory.html">Web service client Javadoc</a></li>
+	   </ul>
+	  <p>Use the following links to see the WSDL sources</p>
+	  <ul>
+	    <li><a href="/polarion/ws/services/BuilderWebService?wsdl">BuilderWebService.wsdl</a></li>
+	    <li><a href="/polarion/ws/services/PlanningWebService?wsdl">PlanningWebService.wsdl</a></li>
+	    <li><a href="/polarion/ws/services/ProjectWebService?wsdl">ProjectWebService.wsdl</a></li>
+	    <li><a href="/polarion/ws/services/SecurityWebService?wsdl">SecurityWebService.wsdl</a></li>
+	    <li><a href="/polarion/ws/services/SessionWebService?wsdl">SessionWebService.wsdl</a></li>
+	    <li><a href="/polarion/ws/services/TestManagementWebService?wsdl">TestManagementWebService.wsdl</a></li>
+	    <li><a href="/polarion/ws/services/TrackerWebService?wsdl">TrackerWebService.wsdl</a></li>
+	  </ul>
+	  
+	  <h1 id="db">Database</h1>
+	  <p>
+	  Polarion's architecture includes a database that mirrors the current state of the Polarion repository, and one that replicates the repository history. For some types of reporting, querying the database can be significantly more efficient than using the Lucene query engine.</p>
+	  <p>You can access various resources including schema diagrams, remote connection information, and a tables reference.</p>
+	       <ul>
+	         <li><a href="doc/database/TablesReferenceIndex.html">Database Tables Reference</a></li>
+			 <li><a href="doc/database/TableChanges.html">Database Table Changes</a></li>
+			 <li><a href="doc/database/ColumnChanges.html">Database Column Changes</a></li>
+	         <li><a href="doc/database/WorkItemDBSchema.pdf">Work Item Schema</a></li>
+	         <li><a href="doc/database/FullDBSchema.pdf">Full Database Schema</a></li>
+	         <li><a href="doc/database/SQLQueryExamples.pdf">SQL Query Examples</a></li>
+	         <li><a href="doc/database/ExternalDatabaseConnection.pdf">External Connection Information</a></li>
+	       </ul>
+	   
+	  <h1 id="other">Other Resources</h1>
+	  
+	  <ul>
+	    <li><a href="changes.txt">API Change History</a></li>
+	    <li><a href="doc/hivedoc/index.html">HiveMind Module Registry</a></li>
+	  </ul>
+	  
+	  <h1 id="struct">Folder Structure</h1>
+	  <table cellpadding="0" cellspacing="1">
+	    <tr>
+	      <th colspan="2" class="Title">SDK ROOT FOLDER: (<code>polarion/sdk)</code></th>
+	    </tr>
+	    <tr>
+	      <th>File</th>
+	      <th>Description</th>
+	    </tr>
+	    <tr>
+	      <td><code>changes.txt</code></td>
+	      <td>A summary of changes to the Java and Web Services APIs, listed by version number.</td>
+	    </tr>
+	    <tr>
+	      <td><code>index.html</code></td>
+	      <td>This web page</td>
+	    </tr>
+	  </table>
+	  <table cellpadding="0" cellspacing="1">
+	    <tr>
+	      <th class="Title" colspan="2">FOLDER: <code>sdk/doc/</code></th>
+	    </tr>
+	    <tr>
+	      <th>File/folder</th>
+	      <th>Contents</th>
+	    </tr>
+	    <tr>
+	      <td><code>sdk.pdf</code></td>
+	      <td>Guide to the SDK plus SDK examples</td>
+	    </tr>
+	    <tr>
+	      <td><code>widget-sdk.pdf</code></td>
+	      <td>Guide to the Widget SDK plus Widget SDK examples</td>
+	    </tr>
+		<tr>
+	      <td><code>rt-sdk.pdf</code></td>
+	      <td>Guide to the Resource Traceability SDK plus examples</td>
+	    </tr>
+	    <tr>
+	      <td><code>javadoc/</code></td>
+	      <td>Java API documentation</td>
+	    </tr>
+	    <tr>
+	      <td><code>javadoc-rendering/</code></td>
+	      <td>Java Rendering API documentation</td>
+	    </tr>
+	    <tr>
+	      <td><code>hivedoc/</code></td>
+	      <td>HiveMind module registry (documentation for Java components)</td>
+	    </tr>
+	    <tr>
+	      <td><code>database/</code></td>
+	      <td>Schema diagrams and documentation for the embedded database</td>
+	    </tr>
+	  </table>
+	  
+	  
+	  <table cellpadding="0" cellspacing="1">
+	    <tr>
+	      <th class="Title" colspan="2">FOLDER: <code>sdk/examples/</code></th>
+	    </tr>
+	    <tr>
+	      <th>Folder</th>
+	      <th>Description</th>
+	    </tr>
+		<tr>
+	      <td><code>com.polarion.example.administration/</code></td>
+	      <td>Custom administration extension example</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.commithook/</code></td>
+	      <td>Checking commit message via Web Services</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.enumerationfactory/</code></td>
+	      <td>Custom enumeration factory example</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.formextension/</code></td>
+	      <td>Custom Work Item form extension example</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.importer/</code></td>
+	      <td>Stand-alone application to import Work Items into Polarion</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.job/</code></td>
+	      <td>Custom job implementation for the Scheduler</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.notifications/</code></td>
+	      <td>Polarion notification extension example</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.servlet/</code></td>
+	      <td>Custom servlet for inclusion on a Wiki page</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.velocitycontext/</code></td>
+	      <td>Example of velocity context in pages</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.velocitymacro/</code></td>
+	      <td>Example of velocity macro inclusion in pages</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.velocitywidget/</code></td>
+	      <td>Custom velocity widget example</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.widget/</code></td>
+	      <td>Custom widget example</td>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.example.workflow/</code></td>
+	      <td>Custom workflow function and condition</td>
+	    </tr>
+	  </table>
+	  
+	  <table cellpadding="0" cellspacing="1" style="margin-bottom: 32px;">
+	    <tr>
+	      <th colspan="2" class="Title">FOLDER: <code>sdk/lib/</code></th>
+	    </tr>
+	    <tr>
+	      <th>Folder</th>
+	      <th>Description</th>
+	    </tr>
+	    <tr>
+	      <td><code>com.polarion.alm.ws.client/</code></td>
+	      <td>Web service Java client and project to Eclipse</td>
+	    </tr>
+	  </table>
+	  
+	  <div style="margin-top:150px;"></div>
+
+	</div><!-- /#cont -->
+
+	
+</div>
+	<div style="margin-bottom: 0px; height: 44px;" id="ftr">
+  		<p style="padding-right: 13px; margin-top: 0px; padding-top: 15px; margin-bottom: 0px;">© 2017 Polarion AG</p>
+	</div>
+</div>
+
+
+
+
+</body></html>

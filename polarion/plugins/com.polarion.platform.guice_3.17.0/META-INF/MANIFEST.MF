@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.platform.guice
+Require-Bundle: com.polarion.platform;bundle-version="3.5.1",com.polar
+ ion.platform.hivemind;bundle-version="3.5.1",org.apache.hivemind;bund
+ le-version="1.1.1"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion Software
+Import-Package: org.osgi.framework;version="1.3.0"
+Guice-Modules: com.polarion.platform.guice.internal.hivemind.PlatformM
+ odule
+Export-Package: com.google.inject,com.google.inject.assistedinject,com
+ .google.inject.binder,com.google.inject.internal,com.google.inject.in
+ ternal.asm,com.google.inject.internal.cglib.core,com.google.inject.in
+ ternal.cglib.proxy,com.google.inject.internal.cglib.reflect,com.googl
+ e.inject.internal.util,com.google.inject.matcher,com.google.inject.mu
+ ltibindings,com.google.inject.name,com.google.inject.servlet,com.goog
+ le.inject.spi,com.google.inject.throwingproviders,com.google.inject.u
+ til,com.polarion.platform.guice.internal,com.polarion.platform.guice.
+ internal.hivemind,javax.inject,org.aopalliance.aop,org.aopalliance.in
+ tercept
+Bundle-Name: Guice Plarform Implementation Plug-in
+Bundle-Version: 3.17.0
+Eclipse-AutoStart: true
+Bundle-ClassPath: lib/guice-3.0.jar,lib/javax.inject.jar,lib/aopallian
+ ce.jar,lib/guice-assistedinject-3.0.jar,lib/guice-multibindings-3.0.j
+ ar,lib/guice-throwingproviders-3.0.jar,lib/guice-servlet-3.0.jar,plat
+ form-guice.jar
+Bundle-Activator: com.polarion.platform.guice.internal.GuiceActivator
+
+

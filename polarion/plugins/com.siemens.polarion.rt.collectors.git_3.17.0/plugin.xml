@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="com.siemens.polarion.rt.collectors">
+      <collector
+            class="com.siemens.polarion.rt.collectors.git.RtGitCollector"
+            repositoryProvider="git">
+      </collector>
+   </extension>
+
+</plugin>

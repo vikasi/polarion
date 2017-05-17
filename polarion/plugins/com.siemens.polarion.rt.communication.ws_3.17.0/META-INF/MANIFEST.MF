@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.siemens.polarion.rt.communication.ws;singleto
+ n:=true
+Export-Package: com.siemens.polarion.rt.communication.ws,com.siemens.p
+ olarion.rt.communication.ws.client,com.siemens.polarion.rt.communicat
+ ion.ws.client.rt,com.siemens.polarion.rt.communication.ws.client.sess
+ ion,com.siemens.polarion.rt.communication.ws.client.types,com.siemens
+ .polarion.rt.communication.ws.client.types.rt,com.siemens.polarion.rt
+ .communication.ws.encoding,com.siemens.polarion.rt.communication.ws.s
+ ervices
+Bundle-Name: Polarion RT Communication Plugin
+Bundle-Version: 3.17.0
+Bundle-ClassPath: rtCommunicationWs.jar,ws/WEB-INF/
+Require-Bundle: com.polarion.platform,com.polarion.platform.repository
+ ,com.polarion.alm.ws,org.apache.axis;bundle-version="1.4.0",com.polar
+ ion.alm.ws.client
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion AG
+
+

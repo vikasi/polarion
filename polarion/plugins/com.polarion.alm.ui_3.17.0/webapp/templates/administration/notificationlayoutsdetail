@@ -1,0 +1,83 @@
+<a style="cursor:pointer;" onclick="navigateFromFrame('#page:notifications/notification_layouts')" ><< Return to Notification Layouts</a>
+
+1 Notification Layout Configuration
+
+*Work Item Type:* [wiLabel]
+\\
+*Name:* [filename]
+\\
+{xmleditor:notification-layouts|filename=[filename]|wiType=[wiType]|project=[project]}
+
+1.1 Quick Help
+A *Layout* consists of two types of components:
+1. complex components that can contain other components
+1. primitive components that cannot contain other components
+
+Work item form fields can be placed inside complex or primitive components.
+
+*NOTE*: Fields can only be shown once in the form! 
+
+1.1.1.1.1 Complex Components
+
+1.1.1.1.1.1 Horizontal
+* <tt>&lt;horizontal&gt; &lt;/horizontal&gt;</tt>
+* Add components on a horizontal row, each component is in a new column
+
+1.1.1.1.1.1 Vertical
+* <tt>&lt;vertical&gt; &lt;/vertical&gt;</tt>
+* Add components into one vertical column, each component is in a new row
+* Used as default on the top level <tt>&lt;formLayout&gt;</tt> element
+
+1.1.1.1.1 Primitive Components 
+
+1.1.1.1.1.1 Field
+* <tt>&lt;field id="nameOfField1,nameOfField2"/&gt;</tt>
+* Create an editor widget used for the specified field, or custom field.
+* If ~~nameOfField~~ represents a complex field, it creates a complex widget.\\Note: If a complex field is placed inside a section, it is shown as a simple text, because there is not enough space to create a complex widget.
+
+For *custom fields*, you can use special notation language:
+* all custom fields except risk = <tt>&lt;field id="@allCustomFields,-risk"/&gt;</tt>
+* risk custom field = <tt>&lt;field id="risk"/&gt;</tt>
+
+1.1.1.1.1.1 Section
+* <tt>&lt;section&gt; &lt;/section&gt;</tt>
+* Group of fields with blue background. Sub-elements can be only fields.
+* It is recommended to add only fields based on simple values.
+* Complex fields such as comments or linkedWorkItems should not be inside a section because there is no space for them.  
+
+1.1.1.1.1.1 Panel
+* <tt>&lt;panel description="My panel with Custom Fields"&gt; &lt;/panel&gt;</tt>
+* Blue bordered panel. Only fields can be here.
+* Description is mandatory.
+
+1.1.1.1.1 Available Fields
+* title
+* type
+* description
+* resolution
+* categories
+* timePoint
+* approvals
+* assignee
+* author
+* _document
+* _space
+* comments
+* attachments
+* linkedWorkItems
+* workRecords
+* hyperlinks
+* planningConstraints
+* status
+* severity
+* priority
+* previousStatus
+* dueDate
+* initialEstimate
+* timeSpent
+* remainingEstimate
+* plannedStart
+* plannedEnd
+* linkedRevisions
+#info("A list of available custom fields is defined in Administration &gt; Work Items &gt; Custom Fields, *{hyperlink:/administration/workitems/customfields}*.")
+\\

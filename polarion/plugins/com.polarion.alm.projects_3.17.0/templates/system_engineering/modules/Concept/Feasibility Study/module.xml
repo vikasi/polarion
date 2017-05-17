@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2013-01-09 22:54:35.616 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-40"></h1><p id="polarion_30">
+  <span style="font-style: italic;">NOTE TO AUTHOR:  Italicized text throughout this Document is provided solely as background information to assist you in creating a feasibility study. You should delete all such text, including the instructions in each section, prior to submitting the feasibility study.  <br/>
+    ONLY YOUR PROJECT-SPECIFIC INFORMATION SHOULD APPEAR IN THE FINAL VERSION OF THIS DOCUMENT.</span>
+</p><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-41"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-42"></h3><p id="polarion_38">
+  <span style="font-style: italic;">TO DO: Describe the purpose of the Feasibility Study.</span>
+</p><p id="polarion_merged_1">
+  <span style="font-style: italic;">INFO: Usually the Feasibility Study is used to provide an analysis of the objectives, requirements, and system concepts of the proposed system, including justification, schedule, and end products.  During this analysis, the objectives of the system are defined based on the needed functions described previously.  Included in these system objectives are the high-level functional and performance objectives and any assumptions and constraints.  When the system objectives have been identified, the various alternatives for satisfying those objectives are determined.  For each alternative, the costs in time and other resources are estimated.  A determination is then made as to the most feasible development alternative.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-43"></h3><p id="polarion_41">
+  <span style="font-style: italic;">TO DO: Describe the scope of the Feasibility Study as it relates to the project.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-44"></h3><p id="polarion_43">
+  <span style="font-style: italic;">TO DO: Provide a brief system overview description as a point of reference for the remainder of the document.  In addition, include the following:</span>
+</p><ul id="polarion_merged_7">
+  <li><span style="font-style: italic;">Responsible organization</span></li>
+  <li><span style="font-style: italic;">System name or title</span></li>
+  <li><span style="font-style: italic;">System code</span></li>
+  <li><span style="font-style: italic;">System category</span></li>
+  <li><span style="font-style: italic;">Major application: performs clearly defined functions for which there is a readily identifiable security consideration and need</span></li>
+  <li><span style="font-style: italic;">General support system: provides general ADP or network support for a variety of users and applications</span></li>
+  <li><span style="font-style: italic;">Operational status:</span></li>
+  <ul>
+    <li><span style="font-style: italic;">Operational</span></li>
+    <li><span style="font-style: italic;">Under development</span></li>
+    <li><span style="font-style: italic;">Undergoing a major modification</span></li>
+  </ul>
+  <li><span style="font-style: italic;">System environment or special conditions</span></li>
+</ul><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-45"></h3><p id="polarion_51">
+  <span style="font-style: italic;">TO DO: Provide a list of the references that were used in preparation of this document.  Examples of references are:</span>
+</p><ol id="polarion_53">
+  <li><span style="font-style: italic;">Previously developed documents relating to the project</span></li>
+  <li><span style="font-style: italic;">Documentation concerning related projects</span></li>
+  <li><span style="font-style: italic;">HUD standard procedures documents</span></li>
+</ol><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-46"></h3><p id="polarion_54">
+  <span style="font-style: italic;">TO DO: Provide a list of the acronyms and abbreviations used in this document and the meaning of each.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-47"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-48"></h3><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-49"></h4><p id="polarion_90">
+  <span style="font-style: italic;">TO DO: Provide a summary of the departments, units, etc. within your organization, as well as any external organizations such as suppliers, regulators, etc.</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-50"></h4><p id="polarion_93">
+  <span style="font-style: italic;">TO DO: Identify or refer to the hi level system input and output requirements processed in this study.</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-51"></h4><p id="polarion_95">
+  <span style="font-style: italic;">TO DO: Identify or refer to the system’s processing requirements processed in this study.</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-52"></h4><p id="polarion_97">
+  <span style="font-style: italic;">TO DO: Identify or refer to the system’s security requirements processed in this study.</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-53"></h4><p id="polarion_99">
+  <span style="font-style: italic;">TO DO: Identify the interaction with other systems.</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-54"></h4><p id="polarion_101">
+  <span style="font-style: italic;">TO DO: Identify the physical environment (batch processing environment, interactive online transactions, ad hoc reports, external and local communications).</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-55"></h3><p id="polarion_103">
+  <span style="font-style: italic;">TO DO: Describe current functional procedures of any existing system, whether automated or manual.  Specifically, document the major processing and data flow of the current system(s), volume of work currently processed, costs incurred in operating the current system, skill categories and number of staff required to operate and maintain the current system, equipment used by the existing system, and any other factors that are unique to the current system.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-56"></h3><p id="polarion_108">
+  <span style="font-style: italic;">TO DO: Analyze the anticipated functions of the system, considering such areas as new services, increased capacity, legislative and policy requirements, privacy and security requirements, audit controls, and target completion date.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-57"></h3><p id="polarion_110">
+  <span style="font-style: italic;">TO DO: Identify major performance objectives, considering such areas as reduced staff and equipment costs, increased processing speed, increased productivity, improved management information services, improved controls over automated decision-making system(s), and compliance with regulations.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-58"></h3><p id="polarion_112">
+  <span style="font-style: italic;">TO DO: Determine the assumptions and constraints, such as operational life of the proposed system; period of time for comparison of system alternatives; input, output, and processing requirements; financial constraints; changing hardware, software, and operating environment; and availability of information and resources.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-59"></h3><p id="polarion_114">
+  <span style="font-style: italic;">TO DO: Describe the method or strategy employed (e.g., survey, weighting, modeling, benchmarking, simulation,etc.) to evaluate the proposed system to arrive at a feasible alternative.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-60"></h3><p id="polarion_116">
+  <span style="font-style: italic;">TO DO: Identify the criteria applicable to the development process that will be used to determine the most attractive system option.  Such criteria typically include cost, priority, development time, ease of system use, or any combination.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-61"></h3><p id="polarion_118">
+  <span style="font-style: italic;">TO DO: State the recommendation for the proposed system, including consequences of not taking action, and what delays and risks can be tolerated.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-62"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-63"></h3><p id="polarion_149">
+  <span style="font-style: italic;">TO DO: Present the overall system concept and describe how the requirements will be met.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-64"></h3><p id="polarion_151">
+  <span style="font-style: italic;">TO DO: Describe the improvements of the system in terms of the objectives.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-65"></h3><p id="polarion_153">
+  <span style="font-style: italic;">TO DO: Outline the time and resource costs, including the time and funding required for all activities of the lifecycle, from definition through operation and system retirement. </span> 
+</p><p id="polarion_merged_2">
+  <span style="font-style: italic;">INFO: It is imperative to use realistic estimates.  When making the estimates, remember to include such factors as the current workload of personnel, staff absences due to vacation and illness, lead time for procurement of equipment and software, and staff training.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-66"></h3><p id="polarion_155">
+  <span style="font-style: italic;">INFO: In the following subsections, describe the anticipated impacts of the proposed system, including potential conversion problems.</span>
+</p><p id="polarion_157">
+  <span style="font-style: italic;">TO DO: Describe new equipment requirements and changes to currently available equipment.</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-67"></h4><p id="polarion_159">
+  <span style="font-style: italic;">TO DO: Describe any additions or modifications to existing applications and support software in order to adapt them to the proposed system.</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-68"></h4><p id="polarion_161">
+  <span style="font-style: italic;">TO DO: Describe any organizational, personnel, and skill requirement changes.</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-69"></h4><p id="polarion_163">
+  <span style="font-style: italic;">TO DO: Describe the effects on operations. </span>
+</p><p id="polarion_merged_3">
+  <span style="font-style: italic;">INFO: Examples of operational impact can include:</span>
+</p><ul id="polarion_merged_4">
+  <li><span style="font-style: italic;">User operating procedures</span></li>
+  <li><span style="font-style: italic;">Operating center procedures</span></li>
+  <li><span style="font-style: italic;">Operating center/user relationships</span></li>
+  <li><span style="font-style: italic;">Source data processing</span></li>
+  <li><span style="font-style: italic;">Data entry procedures</span></li>
+  <li><span style="font-style: italic;">Data retention requirements, information storage and retrieval procedures (refer to Handbook 2229.1, Records Disposition Scheduling for Automated Systems)</span></li>
+  <li><span style="font-style: italic;">Output reporting procedures, media, and schedules</span></li>
+  <li><span style="font-style: italic;">System failure contingencies and recovery procedures</span></li>
+</ul><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-70"></h4><p id="polarion_167">
+  <span style="font-style: italic;">TO DO: Describe the developmental impacts. </span>
+</p><p id="polarion_merged_5">
+  <span style="font-style: italic;">INFO: Examples of developmental impact:</span>
+</p><ul id="polarion_merged_6">
+  <li><span style="font-style: italic;">Specific activities to be performed by the user in support of development of the system</span></li>
+  <li><span style="font-style: italic;">Resources required to develop databases</span></li>
+  <li><span style="font-style: italic;">Computer processing resources required to develop and test the new system</span></li>
+  <li><span style="font-style: italic;">Privacy and security implications</span></li>
+</ul><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-71"></h4><p id="polarion_171">
+  <span style="font-style: italic;">TO DO: Describe requirements for modification of physical facilities (offices, buildings, grounds, etc.)</span>
+</p><h4 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-72"></h4><p id="polarion_173">
+  <span style="font-style: italic;">TO DO: Describe security and privacy factors that may influence the development, design, and continued operation of the proposed system.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-73"></h3><p id="polarion_175">
+  <span style="font-style: italic;">TO DO: State the reasoning that supports the recommendation of the proposed system over all alternative systems.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-74"></h2><p id="polarion_205">
+  <span style="font-style: italic;">INFO: This section provides a description of the alternative systems considered in this feasibility study.  Each alternative system should be under a separate section header, 4.1 - 4.x.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-75"></h3><p id="polarion_207">
+  <span style="font-style: italic;">TO DO: Describe the alternative system, following the outline described for the proposed system in the previous section.  State the reasons that the alternative system was not selected.</span>
+</p>]]></field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">generic</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

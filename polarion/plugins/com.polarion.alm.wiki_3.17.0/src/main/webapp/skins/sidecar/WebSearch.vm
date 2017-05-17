@@ -1,0 +1,177 @@
+#set ($hide_comments = "1") 
+1 Search on this Wiki 
+	                                        
+#set($spaces = $xwiki.getCurrentSpaces()) 
+##Space: $xwiki.getRequestURL()  
+#set($formatDate = "yyyy-MM-dd HH:mm") 
+#if ($request.getParameter("text")) 
+ #set ($text = $request.getParameter("text")) 
+#else 
+ #if ($request.getParameter("text1")) 
+   #set ($text = $request.getParameter("text1")) 
+ #else
+   #set($text = "") 
+ #end
+#end 
+	 	 
+##text: $text 
+#if ($request.getParameter("search_in")) 
+ #set ($search_in = $request.getParameter("search_in") ) 
+#else 
+  #if ($request.getParameter("search_in1")) 
+    #set ($search_in = $request.getParameter("search_in1") ) 
+  #else 
+   #set($search_in = $xwiki.searchInProject()) 
+  #end
+#end 
+	 
+##search_in: $search_in 
+#set ($startID = $request.getParameter("startId") ) 
+#if (!$startID) 
+ #set ($startID = "N" ) 
+#end 
+	 
+##startID: $startID 
+<script type="text/javascript"> 
+#set($searchURL = $xwiki.getSearchURL()) 
+</script> 
+		 
+<center> 
+<form  name="searchW" action="/polarion/wiki/bin/view/Panels/WebSearch" method="post"> 
+<table border=0> 
+<tr> 
+<td align="left" style="padding-bottom: 3px;"><input type="text" id="text" name="text" value='{pre}$!text{/pre}' onkeypress="searchEnterPress(event, '$msg.get('incorectsymb')', true)"></td> 
+<td> 
+<div onclick="if (checkSubmitText(searchW.text.value , \"$msg.get("incorectsymb")\") ) {javascript:doSearch(searchW.search_in, document.searchW.text.value); javascript:document.searchW.submit();}"> 
+#xwikitopmenuentrystartimageButtonSearch("#" $msg.get("Search")) 
+</div> 
+</td> 
+</tr> 
+<tr> 
+<td align="left" colspan=2>  
+<select id="search_in" name="search_in"> 
+<option value="" #if ($search_in == "" ) selected #end>In all spaces</option> 
+#if ($xwiki.isProjectLevel()) 
+    <option value="${xwiki.getCurrentProject()}/" #if ($search_in == "${xwiki.getCurrentProject()}/" ) selected #end>In all project spaces</option> 
+#else 
+    <option value="/" #if ($search_in == "/" ) selected #end>In all global spaces</option> 
+#end 
+#foreach($space in $spaces)
+    #set($spaceName = $xwiki.getSpaceInfo($space).name)
+    #if ($spaceName == "_default")
+        <option value="$space" #if ($search_in == $space) selected #end >In default space</option> 
+    #else
+        <option value="$space" #if ($search_in == $space) selected #end >In space '$xwiki.getSpaceDisplayName($spaceName)'</option> 
+    #end
+#end 
+</select> 
+</td>  
+</tr> 
+<tr> 
+<td align="left" colspan=2>  
+<input type="checkBox" id="adv" name="adv" #if ($request.getParameter("adv")) checked #end />$msg.get("extpagescontent") <br/> 
+<input type="checkBox" id="search_inAttach"  name="search_inAttach" #if ($request.getParameter("search_inAttach")) checked #end  />$msg.get("Search in attachments") 
+</td>  
+</tr> 
+<tr> 
+<td align="left"  colspan=2 style="padding-bottom: 3px;"> 
+</td> 
+</tr> 
+ 	 
+</table> 
+##<input type="hidden" name="search_inProject" value="$search_inProject" /> 
+</form> 
+</center> 
+ 	 
+#if ($startID != "Y") 
+	 
+#if($text!="") 
+#set ($sql = "where doc.web like '%$text%' or doc.name like '%$text%' or doc.content like '%$text%' order by doc.date desc") 
+#set ($sqlPages = "where doc.web like '%$search_in%' and doc.name like '%$text%' order by doc.date desc") 
+ 	 
+	 	 
+#set ($start = 0) 
+#set ($nb = 50) 
+ 	 
+#if ($request.getParameter("adv")) 
+#set ($adv = true) 
+#else 
+#set ($adv = false)     
+#end 
+ 	 
+#set($list = $xwiki.searchDocumentsUsingLucene($search_in, $text, $adv)) 
+1.1 $msg.get("searchinpages") #if ($text) for ~~{pre}$text{/pre}~~ ($list.size()) #end \\ 
+#set($msg_created=$msg.get("created"))  
+#set($msg_updated=$msg.get("updated")) 
+#set($msg_lastmodified=$msg.get("lastmodifiedon")) 
+#set($msg_location=$msg.get("location")) 
+#foreach ($page in $list)  
+ 	    #set($title = $!page.getHeader()) 
+ 	    #if( $title == "") 
+ 	        #set($title = $page.name) 
+	 	#end 
+ 	    <span class="wikilink"><a href="$page.getTopURL()" target="_top">{pre}$title{/pre}</a> $msg_location: $xwiki.encodeLink("${page.web}/${page.name}")</span><br/>       
+ 	    #if ($adv) 
+ 	        {pre}$xwiki.encodeLink($!page.content){/pre}\\ 
+ 	    #end         
+ 	    <div class="textLabel"> 
+ 	       $msg_created: <b>$xwiki.getLocalUserName($page.creator)</b> $msg_lastmodified <b>$xwiki.formatDate($page.creationDate, $formatDate)</b>, $msg_updated : <b>$xwiki.getLocalUserName($page.author)</b> $msg_lastmodified <b>$xwiki.formatDate($page.date, $formatDate)</b> 
+ 	    </div> 
+ 	          ---- 
+#end 
+	 	 
+	 	 
+	 	#if ( $request.getParameter("search_inAttach") ) 
+	 	 
+	 	<div id="attachmentscontent" class="xwikiintracontent"> 
+	 	<h4 class="xwikiintratitle">$msg.get("attachments")</h4> 
+	 	<table width=100%  class="xwikidatatable" summary="$msg.get(document) $msg.get("attachments")" style="margin-top:-4px;//margin-top:0px;"> 
+	 	<col class="attachmenttype"/> 
+	 	<col class="attachmentname"/> 
+        <col class="attachmentname"/> 
+	 	<col class="attachmentauthor"/> 
+	 	<col class="attachmentversion"/> 
+	 	<col class="attachmentdate"/> 
+	 	<col class="attachmentsize"/> 
+	 	<tr> 
+	 	<td class="th1"></td> 
+        <td class="th1">$msg.get("pagename")</td> 
+	 	<td class="th1">$msg.get("filename")</td> 
+	 	<td class="th1">$msg.get("revision")</td> 
+	 	<td class="th1">$msg.get("length")</td> 
+	 	<td class="th1">$msg.get("author")</td> 
+	 	<td class="th1">$msg.get("created")</td> 
+	 	</tr> 
+	 	<tr> 
+	 	<td class="th2"></td> 
+	 	<td class="th2"></td> 
+        <td class="th2"></td> 
+	 	<td class="th2"></td> 
+	 	<td class="th2"></td> 
+	 	<td class="th2"></td> 
+	 	<td class="th2"></td> 
+	 	 
+	 	</tr> 
+	 	 
+	 	 
+	 	1.1 Search in attachments files. 
+	 	 
+	 	#foreach ($attach in $xwiki.searchAttachmentsUsingLucene($search_in, $text)) 
+	 	<tr> 
+	 	<td>#mimetypeimgPanel($attach.getMimeType().toLowerCase() $attach.getFilename().toLowerCase())</td> 
+	 	<td><a href="$attach.getDocument().getURL("view")">$attach.getDocument().getName()</a></td> 
+        <td><a href="$attach.getDocument().getAttachmentURL($attach.filename, "download")" title="$msg.get("downloadthisattachment")">#packName($attach.filename)</a></td> 
+	 	<td>$attach.version</td> 
+	 	<td>$attach.filesize</td> 
+	 	<td>$xwiki.getLocalUserName($attach.author)</td> 
+	 	<td>$!xwiki.formatDate($attach.date, "yyyy-MM-dd HH:mm")</td> 
+</tr> 
+##end 
+#end 
+</table> 
+</div> 
+#end 
+	 
+#end 
+	 	 
+#end 

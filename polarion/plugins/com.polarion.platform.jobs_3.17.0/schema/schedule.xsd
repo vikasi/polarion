@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://polarion.com/schema/Jobs/Schedule" xmlns:tns="http://polarion.com/schema/Jobs/Schedule" elementFormDefault="qualified">
+
+
+    <element name="schedule">
+        <annotation>
+        	<documentation>
+        		Describes content of .polarion/jobs/schedule.xml
+        	</documentation>
+        </annotation>
+        <complexType>
+    		<sequence>
+    			<element name="job" maxOccurs="unbounded"
+    				minOccurs="0">
+    				<complexType>
+    					<sequence>
+    						<any>
+    							<annotation>
+    								<documentation>
+    									Job parameters as new elements.
+    								</documentation>
+    							</annotation></any>    					</sequence>
+    					<attribute name="name" type="string"
+    						use="required">
+    					</attribute>
+    					<attribute name="id" type="string"
+    						use="required">
+    					</attribute>
+    					<attribute name="scope" type="string"
+    						use="optional">
+                            <annotation>
+                            	<documentation>
+                            		Equivalent to adding parameter named
+                            		"scope".
+                            	</documentation>
+                            </annotation>
+    					</attribute>
+    					<attribute name="cronExpression" type="string"
+    						use="required">
+    					</attribute>
+    					<attribute name="disabled" type="boolean"
+    						use="optional">
+    					</attribute>
+    				</complexType>
+    			</element>
+    		</sequence>
+    	</complexType>
+    </element>
+</schema>

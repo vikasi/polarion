@@ -1,0 +1,41 @@
+###
+### Document deleted messge
+###
+###
+#if( $doc.getDoc().exists($context.getContext()) )
+	#template("NoAccess.vm")
+#else
+	#template("startpage.vm")
+	<div class="main layoutsubsection"> 
+	#if($message)
+	<div id="xwikimessage">$message</div>
+	#end
+	#set($delete=$localization.getValue("definition.delete") )
+	#set($delete = $delete.concat("<br/>") )
+	#set($deleteinfo=$localization.getValue("wiki.label.pageHasBeenDeleted") )
+	#set($url = $doc.getURL("view"))
+	#if($url.indexOf("/_users")>-1)
+		 #set($deleteinfo=$deleteinfo.concat($localization.getValue("wiki.label.userHomePageHasBeenDeleted")))
+	#end
+	#xwikimessageboxstart($delete $deleteinfo)
+		#if($url.indexOf("/Dashboard")==-1 && $url.indexOf("_users")==-1 && $url.indexOf("_testruns")==-1)
+		#set($url = $url.substring(0, $url.lastIndexOf("/")).concat("/Home"))
+		#end
+		<script type="text/javascript">
+		   function okPressed(){
+		   	if($url.indexOf("/_users")>-1){
+					 window.top.location.reload();
+			}else{
+		   	  try{
+		      	   top.refreshWikiPages();
+		      	 } catch(e){}
+		      location.href = '$url';
+		    }
+		   }
+		</script>
+		<input type="button" class="button" value="$localization.getValue('definition.ok')" onclick="okPressed();"/>
+	#xwikimessageboxend()
+	</div>
+	<div class="clearfloats"></div>
+	#template("endpage.vm")
+#end

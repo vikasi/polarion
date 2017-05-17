@@ -1,0 +1,97 @@
+
+div.leftmenu{
+/*	padding-top: 44px;*/
+}
+
+#footerglobal{
+	margin-top:10px;
+}
+
+#headerspace{
+
+margin-left: -1px;
+margin-right: -1px;
+width: 100%;
+border-left: 1px solid #3E5F80;
+
+}
+
+.submenu {
+	margin-top: 14px !important;
+	margin-left: 10px !important;
+}
+
+#SyntaxHelpPanel{
+	margin-right: 7px;
+}
+
+#xwikidoccontent {
+	width: 99%;
+/*	width:100%;*/
+}
+
+#xwikitext{
+	width: 100%;
+}
+
+#content{
+	width:400px;
+}
+
+#edit{
+	width:100%;
+
+}
+
+#xwikidoccontent textarea {
+	width: 100%;
+}
+
+
+.panel{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+#editPanels .panel{
+  width: 99%;
+}
+
+.cach{
+	margin-left: 3px;
+	width: 69%;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.xwikipanelcontents {
+/*	padding:10px;*/
+	margin-left:0px;
+	width:70%;
+}
+
+input.globalsearchinputt {
+	border: 1px solid #000000;
+	font-size: 9px;
+	font-family:Verdana;
+	background-color: #ffffff;
+	height: 16px;
+	height: 16px !important;
+	width: 150px;
+	padding: 2px;
+}
+
+textarea{
+	width: 200px;
+}
+
+a.globallink:visited {
+		font-size: 11px;
+		color: #00425E;
+		text-decoration: none;
+		padding-left: 2px;
+		padding-right: 2px;
+		background-color: transparent;
+}

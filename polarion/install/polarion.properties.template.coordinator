@@ -1,0 +1,15 @@
+com.polarion.application=polarion.coordinator
+base.url=http://example-coordinator
+TomcatService.ajp13-port=
+
+# Control port and host name for shutdown requests
+controlPort=
+controlHostname=
+
+#Credentials used to connect to the load balancer, if authentication is enabled
+#Replace #ClusterId# with the id of the cluster. 
+#com.polarion.cluster.#ClusterId#.loadBalancer.user=
+#com.polarion.cluster.#ClusterId#.loadBalancer.password=
+
+#Port to connect to zookeeper
+com.polarion.zookeeper.port=2181

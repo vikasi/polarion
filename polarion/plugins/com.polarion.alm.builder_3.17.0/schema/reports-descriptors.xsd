@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://polarion.com/schema/Reports/Descriptors" xmlns:tns="http://polarion.com/schema/Reports/Descriptors" elementFormDefault="qualified">
+
+    <element name="descriptors">
+        <annotation>
+        	<documentation>
+        		Describes content of .polarion/reports/descriptors.xml
+        	</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="site-descriptor" maxOccurs="unbounded" minOccurs="0"
+            	type="tns:SiteDescriptorType"></element>
+            <element name="custom-descriptor" maxOccurs="unbounded" minOccurs="0"
+            	type="tns:CustomDescriptorType"></element>
+          </sequence>
+        </complexType>
+    </element>
+
+
+    <complexType name="DescriptorType">
+    	<sequence>
+            <element name="extension" type="string" maxOccurs="unbounded" minOccurs="0"></element>
+            <element name="description" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="properties" maxOccurs="1" minOccurs="0">
+    			<complexType>
+    				<sequence>
+    					<any></any>
+    				</sequence>
+    			</complexType>
+    		</element>
+    		<element name="goals" maxOccurs="1" minOccurs="0">
+    			<complexType>
+    				<sequence>
+    					<element name="goal" type="string"
+    						maxOccurs="unbounded" minOccurs="0">
+    					</element>
+    				</sequence>
+    			</complexType>
+    		</element>
+    		<element name="aggregation" type="boolean" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="artifacts" maxOccurs="1" minOccurs="0">
+    			<complexType>
+    				<sequence>
+    					<element name="artifact" maxOccurs="unbounded"
+    						minOccurs="0">
+    						<complexType>
+    							<all>
+    								<element name="groupId"
+    									type="string" maxOccurs="1" minOccurs="0">
+    								</element>
+    								<element name="artifactId"
+    									type="string" maxOccurs="1" minOccurs="0">
+    								</element>
+    								<element name="tag" type="string"
+    									maxOccurs="1" minOccurs="0">
+    								</element>
+    							</all>
+    						</complexType>
+    					</element>
+    				</sequence>
+    			</complexType>
+    		</element>
+    		<element name="maven-report" maxOccurs="unbounded" minOccurs="0">
+    			<complexType>
+    				<sequence>
+    					<element name="plugin" type="string"
+    						maxOccurs="1" minOccurs="1">
+    					</element>
+    				</sequence>
+    			</complexType>
+    		</element>
+    	</sequence>
+    	<attribute name="name" type="string" use="optional"></attribute>
+    </complexType>
+    
+    <complexType name="CustomDescriptorType">
+      <complexContent>
+        <extension base="tns:DescriptorType">
+			<sequence>
+	    		<element name="calculator" maxOccurs="unbounded" minOccurs="0">
+	    			<complexType>
+	    				<sequence>
+	    					<element name="plugin" type="string"
+	    						maxOccurs="1" minOccurs="1">
+	    					</element>
+	    				</sequence>
+	    			</complexType>
+	    		</element>
+			</sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+
+    <complexType name="SiteDescriptorType">
+      <complexContent>
+        <extension base="tns:DescriptorType">
+			<sequence>
+	    		<element name="use-preconfigured-reports" type="boolean" maxOccurs="1"
+	    			minOccurs="0">
+	    		</element>
+	    		<element name="report-id" type="string" maxOccurs="1"
+	    			minOccurs="0">
+	    		</element>
+	    		<element name="report-name" type="string" maxOccurs="1"
+	    			minOccurs="0">
+	    		</element>
+			</sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+
+</schema>

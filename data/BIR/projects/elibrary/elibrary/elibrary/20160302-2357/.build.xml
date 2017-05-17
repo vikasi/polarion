@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<build>
+    <field id="author">sDeveloper</field>
+    <field id="buildArtifact">elibrary:elibrary:</field>
+    <field id="buildDescriptorName">All Tests</field>
+    <field id="buildEvents">
+        <struct>
+            <item id="errorCount">2</item>
+            <item id="events">
+                <list>
+                    <struct>
+                        <item id="message"><![CDATA[BUILD FAILURE
+
+There are test failures.
+
+Please refer to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports for the individual test results.]]></item>
+                        <item id="severity">ERROR</item>
+                    </struct>
+                    <struct>
+                        <item id="message">Tester reports 1 failure(s) and 1 error(s) for 5 test(s) (0 test(s) skipped)</item>
+                        <item id="severity">ERROR</item>
+                    </struct>
+                </list>
+            </item>
+            <item id="fatalCount">0</item>
+            <item id="warnCount">0</item>
+        </struct>
+    </field>
+    <field id="buildStamp">20160302-2357</field>
+    <field id="buildTag">20160302-2357</field>
+    <field id="buildTestResults">
+        <struct>
+            <item id="errorCount">1</item>
+            <item id="failureCount">1</item>
+            <item id="skippedCount">0</item>
+            <item id="testCount">5</item>
+        </struct>
+    </field>
+    <field id="creationTime">2016-03-02 23:57:18.953 +0100</field>
+    <field id="deployedArtifacts">
+        <list>
+            <struct>
+                <item id="label">Default Maven 2 build results for E-Library App</item>
+                <item id="location">results/elibrary/elibrary</item>
+            </struct>
+        </list>
+    </field>
+    <field id="finishTime">2016-03-02 23:57:28.719 +0100</field>
+    <field id="jobId">398cc069-0a7b1e4b-40f38093-1d578fe5</field>
+    <field id="logFiles">
+        <list>
+            <item>log</item>
+        </list>
+    </field>
+    <field id="startTime">2016-03-02 23:57:19.099 +0100</field>
+</build>

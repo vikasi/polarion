@@ -1,0 +1,13 @@
+#template("xwiki.vm")
+#if($request.pdftemplate)
+#set($pdfdoc = $xwiki.getDocument($request.pdftemplate))
+#else
+#set($pdfdoc = $doc)
+#end
+$pdfdoc.use("XWiki.PDFClass")
+#template("pdfhtmlheader.vm")
+<div id="xwikicontent">
+$cdoc.getRenderedContentPdf()
+</div>
+</body>
+</html>

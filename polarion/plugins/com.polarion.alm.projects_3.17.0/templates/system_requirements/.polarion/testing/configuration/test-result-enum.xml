@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option color="#3B9E00" iconURL="/polarion/icons/default/enums/testrun_status_passed.png" id="passed" name="Passed" sortOrder="1"/>
+    <option color="#C30000" createDefect="true" iconURL="/polarion/icons/default/enums/testrun_status_failed.png" id="failed" name="Failed" sortOrder="2"/>
+    <option color="#7B439F" iconURL="/polarion/icons/default/enums/testrun_status_blocked.png" id="blocked" name="Blocked" sortOrder="3"/>
+</enumeration>

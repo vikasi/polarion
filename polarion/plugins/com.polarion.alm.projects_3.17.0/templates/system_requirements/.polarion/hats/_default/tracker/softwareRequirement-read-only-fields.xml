@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<read-only>
+    <status id="_default">
+        <field id="description"/>
+        <field id="title"/>
+        <field id="attachments"/>
+    </status>
+
+    <status id="_create">
+        <field id=""/>
+    </status>
+
+    <status id="draft">
+        <field id=""/>
+    </status>
+
+</read-only>

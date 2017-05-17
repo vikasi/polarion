@@ -1,0 +1,51 @@
+
+##<form id="edit" method="post" action="$doc.getURL("preview")" >
+
+#set($notNew = $request.getParameter("notNew"))
+<div>
+<input type="hidden" name="template" value="$!request.template" />
+<input type="hidden" name="xredirect" value="$!xredirect" />
+<input type="hidden" name="language" value="$!tdoc.language" />
+<div id="xwikitext">
+	<div id="plain_wiki_editor">
+		#template("simpleedittoolbar.vm")
+		<div id="xwikidoccontent">
+		   #if($tdoc.isNew() && !$tdoc.isTemplate() && !$notNew && $tdoc.hasEmptyContent())
+		   	  $xwiki.getTextArea($msg.get("pagehasnocontent"))	
+			 
+			#else
+			  $xwiki.getTextArea($tdoc.content)
+			#end
+		</div>
+	</div>
+	<div id="rich_wiki_editor" style="height:80%;display:none">
+	</div>
+</div>
+#template("tagedit.vm")
+</div>
+<script type="text/javascript">
+	var obj = document.getElementById("xwikidoccontent");
+	if (document.all){
+		obj.onkeyup = forceCheck;
+		document.getElementById("content").onchange = textAdded;
+	}else{
+		obj.onkeypress = textAdded;
+	}
+</script>
+##</form>
+
+##<script type="text/javascript" src="$xwiki.getSkinFile('autosave.js')"></script>
+
+##<script>
+##document.getElementById('contentcontainer').style.visibility = "visible";
+##setVars( "wiki", '$doc.getURL("saveandcontinue", "")?autosave=1')
+##timedCount()
+##</script>
+
+
+##<div style="display:none">
+##		<form action="javascript:get(document.getElementById('myform'));" name="myform" id="myform">
+##				<textarea type="hidden" id="area1" rows="10" cols="30" >			
+##				</textarea>
+##		</form>
+##</div>

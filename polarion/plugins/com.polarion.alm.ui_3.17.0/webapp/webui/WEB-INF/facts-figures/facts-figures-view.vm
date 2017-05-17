@@ -1,0 +1,28 @@
+#macro (group $group)
+		<table class="data" border='1' width="100%" style="border:1px solid black;margin:5px;">
+		<tr>
+			<th colspan="2">$group.label</th>
+		</tr>
+		#foreach($chGroup in $group.groups)
+			<tr>
+				<th colspan="2">
+					#group($chGroup)
+				</th>				
+			</tr>
+		#end
+		#foreach($fact in $group.facts)
+			<tr>
+				<td>
+					$fact.label
+				</td>
+				<td>
+					$fact.value
+				</td>
+			</tr>
+		#end
+    </table>
+#end
+
+#foreach($chGroup in $root.groups)
+	#group($chGroup)
+#end

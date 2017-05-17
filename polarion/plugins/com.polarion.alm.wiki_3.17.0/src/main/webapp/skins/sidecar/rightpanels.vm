@@ -1,0 +1,99 @@
+#if($showRightPanels == "1" || $request.getParameter("forceRightPanels"))
+	
+##<div id="rightpanlesborder" style="z-index:-1">
+
+    #template("menucreate.vm")
+
+    ##
+    ##calculate cout of panels except Search
+    ##
+    #set($counterAll = 0)
+    #set($isSearch = false)
+    #foreach($panel in $rightPanels)
+    	#if ($panel != "Panels.Search")				
+		#set($counterAll = $counterAll + 1)
+	#else
+       		#set($isSearch = true)
+        #end
+    #end
+
+<script>
+//alert($counterAll);
+//alert($isSearch);
+  //calculate panel height
+  var panelHeight;
+  panelHeight = getBrowserHeight() - parseInt($('menuCreate').style.height) - ($counterAll * 14);
+  //search panel has fixed size
+  if ($isSearch) 
+    panelHeight = panelHeight - 90;
+  panelHeight = Math.floor(panelHeight / $counterAll) + "px";		                       
+//alert(panelHeight); 
+</script>
+
+    #set($prevPanel = "")                 
+    #set($counter = 0)
+    #foreach($panel in $rightPanels)
+	#if ($counter > 0)
+           ##splitter
+ 	   <div id="panelHorResize$prevPanel" class="splitter"></div>
+<script>
+  splitters["$prevPanel"] = {drag: {constraint:'vertical',
+  onStart:function(){}, 
+  onEnd:function(){  
+  topFinish=parseInt($('panelHorResize$prevPanel').style.top);
+//alert($('Spaces').style.height);
+  prevPanelName = getPanelName("$prevPanel"); 
+  nextPanelName = getPanelName("$panel"); 
+
+//alert(prevPanelName); 
+  $(prevPanelName).style.height = parseInt($(prevPanelName).style.height) + topFinish  + "px";
+  panelName = "content" + prevPanelName;
+  $(panelName).style.height = parseInt($(prevPanelName).style.height) - 18 + "px";  
+  $(nextPanelName).style.height = parseInt($(nextPanelName).style.height) - topFinish  + "px";
+  panelName = "content" + nextPanelName;
+  $(panelName).style.height = parseInt($(nextPanelName).style.height) - 18 + "px";  
+  //return to originalposition
+  $('panelHorResize$prevPanel').style.top = 0 + "px";
+  imgName = "imgTitle" + prevPanelName;
+  $(imgName).src="$xwiki.getSkinFile("minimize.png")";
+  imgName = "imgTitle" + nextPanelName;
+  $(imgName).src="$xwiki.getSkinFile("minimize.png")";
+//alert(imgName);
+//alert($('Spaces').style.height);
+  }}, height: '0px'} ;  
+  new  Draggable('panelHorResize$prevPanel', splitters["$prevPanel"].drag); 
+//alert("$prevPanel: " + splitters["$prevPanel"])
+</script>	
+        #end
+##<b>$panel</b> 
+ 	#set($counter = $counter + 1)
+        #if($counter == $counterAll)
+<script>
+  beforLastPanelName = getPanelName("$panel");
+</script>	
+        #end 
+	#displaypanel($panel)
+        #set($prevPanel = $panel)                 
+<script>
+//alert(panelHeight);
+ panelName = getPanelName("$panel");
+## panelName  = "Panel" + panelName;
+
+//alert(panelName);
+if (panelName == "Search")
+{
+   $(panelName).setStyle({height: "110px"});
+   panelName = "content" + panelName;
+   $(panelName).style.height = 110 - 18 + "px";  
+//alert($(panelName).style.height);
+}
+else
+{
+  $(panelName).setStyle({height: panelHeight});
+  panelName = "content" + panelName;
+  $(panelName).style.height = parseInt(panelHeight) - 18 + "px";  
+}
+</script>
+     #end
+##</div>
+#end

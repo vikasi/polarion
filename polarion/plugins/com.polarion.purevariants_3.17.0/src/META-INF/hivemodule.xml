@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="com.polarion.purevariants.util.SaveTrigger.LiveBusTrigger" version="1.0.0">
+	
+	<contribution configuration-id="com.polarion.platform.persistence.dataservice.externalCustomFields">
+		<customField factory="customTypeFactory"/>
+	</contribution>
+	
+	<service-point id="customTypeFactory" interface="com.polarion.platform.persistence.ICustomFieldType" visibility="private">
+		<create-instance class="com.polarion.purevariants.extension.PvSCLCustomType"/>
+	</service-point>
+	
+</module>
+
+

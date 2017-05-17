@@ -1,0 +1,23 @@
+#set ($hide_comments = "1")
+1 Reindex repository
+1.1 Do you want to begin reindex repository?
+#set($formatDate = "yyyy-MM-dd HH:mm")
+#if ($request.getParameter("reindex"))
+#set ($reindex = $request.getParameter("reindex") )
+#else
+#set($reindex = "")
+#end
+
+#if ($reindex != "")
+#set ($res = $xwiki.reindexAll())
+#end
+
+
+<center>
+<form name="reindex" action="reIndex">
+<div onclick="javascript:document.reindex.submit()">
+#xwikitopmenuentrystartimageButtonSearch("#" $msg.get("Reindex"))
+</div>
+<input type="hidden" name="reindex" value="yes" />
+</form>
+</center>

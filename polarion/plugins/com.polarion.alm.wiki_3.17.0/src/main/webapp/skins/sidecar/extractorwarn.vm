@@ -1,0 +1,22 @@
+##<div id="extractorWarning" style="position: absolute; left: 100px; top: 100px; z-index: 1000">
+	##warning("Not able to find a proper position of WI for the selected text. Position must be 7setup manually")
+##	<div class="warningmessage">
+##		<span class="messagetype">$msg.get("warning"): </span>
+##		$localization.getValue("wiki.message.extractorWarning")<br/><br/>
+##		<div style="text-align: center">
+##			<input class="button" style="cursor: pointer" value="$msg.get("Edit")" onclick="location.href = '$doc.getURL("edit")'"/>
+##			<input class="button" style="cursor: pointer" value="$msg.get("Cancel")" onclick="closeExtractorWarning()"/>
+##		</div>
+##	</div>	
+##	<script type="text/javascript">
+##		function closeExtractorWarning(){
+##			var extWarn = document.getElementById('extractorWarning');
+##			extWarn.parentNode.removeChild(extWarn);
+##		}
+##	</script>
+## </div>
+<div id="extractorWarning">
+  <script type="text/javascript">
+	alert("$localization.getValue("wiki.message.extractorWarning")");
+  </script>
+</div>

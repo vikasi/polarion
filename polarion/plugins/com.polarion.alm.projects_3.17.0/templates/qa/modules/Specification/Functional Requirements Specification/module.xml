@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2012-01-26 15:37:16.798 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-38"></h1><p id="polarion_new_0">Functional requirements identify the primary user functions that must be contained within the scope of the application. Functional requirements should be stated as an implementation of a user requirement.</p><div id="polarion_wiki macro name=toc"></div><div id="polarion_editor_html_block1" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">#documentPanel(true &quot;approved&quot;)</pre>
+</div><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-39"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-40"></h3><p id="polarion_merged_2">
+  <span style="font-style: italic;">Identify the purpose of this functional requirements document and its intended audience.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-41"></h3><p id="polarion_merged_3">
+  <span style="font-style: italic;">Provide a short description of the system being specified and its purpose, including relevant benefits, objectives, and goals. If a separate business requirements document is available, refer to it rather than duplicating its contents here.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-42"></h3><p id="polarion_merged_4">
+  <span style="font-style: italic;">List any other documents or Web addresses to which this functional requirements document refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-43"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-44"></h3><p id="polarion_merged_7">
+  <span style="font-style: italic;">Provide a context diagram of the system, with explanations as applicable. The context of a system refers to the connections and relationships between the system and its environment.</span>
+</p><p id="polarion_merged_1">
+  <img src="attachment:context%20diagram.png"/>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-45"></h3><p id="polarion_merged_0">
+  <span style="font-style: italic;">This template illustrates organizing the functional requirements for the product by system features, the major services provided by the product. You may prefer to organize this section by use case, mode of operation, user class, object class, functional hierarchy, or combinations of these, whatever makes the most logical sense for your product.</span>
+</p><p id="polarion_new_5">
+  <span style="font-style: italic;">Itemize the detailed functional requirements associated with this feature. These are the software capabilities that must be present in order for the user to carry out the services provided by the feature, or to execute the use case. Include how the product should respond to anticipated error conditions or invalid inputs. Requirements should be concise, complete, unambiguous, verifiable, and necessary. Use “TBD” as a placeholder to indicate when necessary information is not yet available</span>.
+</p><div id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-1"></div><div id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-4|level=1"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-46"></h2><p id="polarion_cleaned_0"></p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-47"></h3><p id="polarion_merged_9">
+  <span style="font-style: italic;">Describe the performance conditions and their associated capabilities.<br/>
+    Include such considerations as:</span>
+</p><ul id="polarion_merged_12">
+  <li><span style="font-style: italic;">Dynamic actions or changes that occur (e.g., rates, velocities, movements, and...</span></li>
+  <li><span style="font-style: italic;">Dynamic actions or changes that occur (e.g., rates, velocities, movements, and noise levels)</span></li>
+  <li><span style="font-style: italic;">Quantitative criteria covering endurance capabilities of the equipment required to meet the user needs under stipulated environmental and other conditions, including minimum total life expectancy. Indicate required operational session duration and planned utilization rate.</span></li>
+  <li><span style="font-style: italic;">Performance requirements for the operational phases and modes</span></li>
+  <li><span style="font-style: italic;">The number of terminals to be supported</span></li>
+  <li><span style="font-style: italic;">The number of simultaneous users to be supported</span></li>
+  <li><span style="font-style: italic;">The numbers of transactions and tasks and the amount of data to be processed within certain time periods for both normal and peak workload conditions</span></li>
+  <li><span style="font-style: italic;">Acceptable performance under atypical stress</span><br/>
+    </li>
+</ul><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-48"></h3><p id="polarion_merged_14">
+  <span style="font-style: italic;">Describe requirements for the quality characteristics of the system. Specify the requirements in measurable and verifiable terms. Describe any trade-offs between the characteristics (e.g., security versus portability).</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-49"></h3><p id="polarion_merged_15">
+  <span style="font-style: italic;">Specify relevant applicable laws, regulations, policies, and standards that will affect the operation or performance of the system, as well as any relevant external regulatory requirements, or constraints imposed by normal business practices. <br/>
+    Examples of policy and regulation requirements include:<br/>
+    </span>
+</p><ul id="polarion_merged_16">
+  <li><span style="font-style: italic;">Multilingual support</span></li>
+  <li><span style="font-style: italic;">Labor policies</span></li>
+  <li><span style="font-style: italic;">Protection of personnel information</span></li>
+  <li><span style="font-style: italic;">Reports to a regulatory agency</span></li>
+  <li><span style="font-style: italic;">Health and safety criteria, including those basic to the design of the system, with respect to equipment characteristics, methods of operation, and environmental influences</span></li>
+</ul><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-50"></h2><p id="polarion_merged_13">
+  <span style="font-style: italic;">Define all the terms necessary to properly interpret this document, including acronyms and abbreviations. You may wish to build a separate glossary that spans multiple projects or the entire organization, and just include terms specific to a single project in each document.<br/>
+    </span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-51"></h2><p id="polarion_merged_22">
+  <span style="font-style: italic;">Optionally, include any pertinent analysis models, such as data flow diagrams, class diagrams, state-transition diagrams, or entity-relationship diagrams.</span>
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity, status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">requirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

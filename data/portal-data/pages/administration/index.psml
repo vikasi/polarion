@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/index.psml" hidden="false">
+    <title>Index and Cache</title>
+    <short-title>Index and Cache</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_index_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_index_portlet" type="portlet" name="webui::IndexConfigurationPortlet">
+        </fragment>
+    </fragment>
+</page>

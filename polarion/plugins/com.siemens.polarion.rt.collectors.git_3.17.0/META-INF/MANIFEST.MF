@@ -1,0 +1,55 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.siemens.polarion.rt.collectors.git;singleton:
+ =true
+Export-Package: com.siemens.polarion.rt.collectors.git;x-friends:="com
+ .siemens.polarion.rt.tests",org.eclipse.jgit.api;x-friends:="com.siem
+ ens.polarion.rt.tests,com.siemens.polarion.rt.performance.jobs",org.e
+ clipse.jgit.api.errors;x-friends:="com.siemens.polarion.rt.tests",org
+ .eclipse.jgit.attributes;x-friends:="com.siemens.polarion.rt.tests",o
+ rg.eclipse.jgit.blame;x-friends:="com.siemens.polarion.rt.tests",org.
+ eclipse.jgit.diff;x-friends:="com.siemens.polarion.rt.tests",org.ecli
+ pse.jgit.dircache;x-friends:="com.siemens.polarion.rt.tests",org.ecli
+ pse.jgit.errors;x-friends:="com.siemens.polarion.rt.tests",org.eclips
+ e.jgit.events;x-friends:="com.siemens.polarion.rt.tests",org.eclipse.
+ jgit.fnmatch;x-friends:="com.siemens.polarion.rt.tests",org.eclipse.j
+ git.gitrepo;x-friends:="com.siemens.polarion.rt.tests",org.eclipse.jg
+ it.gitrepo.internal;x-friends:="com.siemens.polarion.rt.tests",org.ec
+ lipse.jgit.ignore;x-friends:="com.siemens.polarion.rt.tests",org.ecli
+ pse.jgit.ignore.internal;x-friends:="com.siemens.polarion.rt.tests",o
+ rg.eclipse.jgit.internal;x-friends:="com.siemens.polarion.rt.tests",o
+ rg.eclipse.jgit.internal.storage.dfs;x-friends:="com.siemens.polarion
+ .rt.tests",org.eclipse.jgit.internal.storage.file;x-friends:="com.sie
+ mens.polarion.rt.tests",org.eclipse.jgit.internal.storage.pack;x-frie
+ nds:="com.siemens.polarion.rt.tests",org.eclipse.jgit.lib;x-friends:=
+ "com.siemens.polarion.rt.tests",org.eclipse.jgit.merge;x-friends:="co
+ m.siemens.polarion.rt.tests",org.eclipse.jgit.nls;x-friends:="com.sie
+ mens.polarion.rt.tests",org.eclipse.jgit.notes;x-friends:="com.siemen
+ s.polarion.rt.tests",org.eclipse.jgit.patch;x-friends:="com.siemens.p
+ olarion.rt.tests",org.eclipse.jgit.revplot;x-friends:="com.siemens.po
+ larion.rt.tests",org.eclipse.jgit.revwalk;x-friends:="com.siemens.pol
+ arion.rt.tests",org.eclipse.jgit.revwalk.filter;x-friends:="com.sieme
+ ns.polarion.rt.tests",org.eclipse.jgit.storage.file;x-friends:="com.s
+ iemens.polarion.rt.tests",org.eclipse.jgit.storage.pack;x-friends:="c
+ om.siemens.polarion.rt.tests",org.eclipse.jgit.submodule;x-friends:="
+ com.siemens.polarion.rt.tests",org.eclipse.jgit.transport;x-friends:=
+ "com.siemens.polarion.rt.tests",org.eclipse.jgit.transport.http;x-fri
+ ends:="com.siemens.polarion.rt.tests",org.eclipse.jgit.transport.reso
+ lver;x-friends:="com.siemens.polarion.rt.tests",org.eclipse.jgit.tree
+ walk;x-friends:="com.siemens.polarion.rt.tests",org.eclipse.jgit.tree
+ walk.filter;x-friends:="com.siemens.polarion.rt.tests",org.eclipse.jg
+ it.util;x-friends:="com.siemens.polarion.rt.tests",org.eclipse.jgit.u
+ til.io;x-friends:="com.siemens.polarion.rt.tests"
+Bundle-Name: Polarion RT Git Collector Plugin
+Bundle-Version: 3.17.0
+Bundle-ClassPath: rtGit.jar,lib/org.eclipse.jgit-3.7.0.201502260915-r.
+ jar
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.1.2",org.ec
+ lipse.core.resources;bundle-version="3.1.2",com.siemens.polarion.rt.a
+ pi;bundle-version="3.17.0",com.polarion.platform.repository;bundle-ve
+ rsion="3.17.0",com.polarion.core.util;bundle-version="3.17.0",com.pol
+ arion.subterra.base;bundle-version="5.17.0",com.polarion.platform.rep
+ ository.external.git,com.siemens.polarion.rt
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion AG
+
+

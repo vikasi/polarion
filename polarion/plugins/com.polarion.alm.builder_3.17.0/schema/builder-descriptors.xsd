@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://polarion.com/schema/Builder/Descriptors" xmlns:tns="http://polarion.com/schema/Builder/Descriptors" elementFormDefault="qualified">
+
+    <element name="descriptors">
+        <annotation>
+        	<documentation>
+        		Describes content of .polarion/builder/descriptors.xml
+        	</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="descriptor" maxOccurs="unbounded" minOccurs="0"
+            	type="tns:DescriptorType"></element>
+          </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="ArtifactSelectorType">
+		<all>
+			<element name="groupId"
+				type="string" maxOccurs="1" minOccurs="0">
+			</element>
+			<element name="artifactId"
+				type="string" maxOccurs="1" minOccurs="0">
+			</element>
+			<element name="tag" type="string"
+				maxOccurs="1" minOccurs="0">
+			</element>
+		</all>
+    </complexType>
+    
+    <complexType name="DescriptorType">
+    	<sequence>
+    		<element name="description" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="tag" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="artifacts" maxOccurs="1" minOccurs="0">
+    			<complexType>
+    				<sequence>
+    					<element name="artifact" maxOccurs="unbounded"
+    						minOccurs="0" type="tns:ArtifactSelectorType">
+    					</element>
+    				</sequence>
+    			</complexType>
+    		</element>
+    		<element name="build" maxOccurs="1" minOccurs="0">
+    			<complexType>
+    				<sequence>
+    					<element name="properties" maxOccurs="1"
+    						minOccurs="0">
+    						<complexType>
+    							<sequence>
+    								<any></any>
+    							</sequence>
+    						</complexType>
+    					</element>
+    					<element name="rebuild-policies" maxOccurs="1"
+    						minOccurs="0">
+    						<complexType>
+    							<sequence>
+    								<element name="rebuild-policy"
+    									maxOccurs="unbounded" minOccurs="0">
+    									<complexType>
+    										<sequence>
+    											<element name="artifact"
+    												type="tns:ArtifactSelectorType" maxOccurs="1"
+    												minOccurs="1">
+    											</element>
+    											<element name="rebuild"
+    												type="boolean" maxOccurs="1" minOccurs="0">
+    											</element>
+    											<element
+    												name="build-name" type="string" maxOccurs="1"
+    												minOccurs="0">
+    											</element>
+    											<element name="project"
+    												type="string" maxOccurs="1" minOccurs="0">
+    											</element>
+    										</sequence>
+    									</complexType>
+    								</element>
+    							</sequence>
+    							<attribute name="all-by-default"
+    								type="boolean" use="optional">
+    							</attribute>
+    						</complexType>
+    					</element>
+    				</sequence>
+    			</complexType>
+    		</element>
+    		<element name="deploy" maxOccurs="1" minOccurs="0">
+    			<complexType>
+    				<sequence>
+    					<element name="copy" type="tns:SimpleDeploymentDefinition" maxOccurs="unbounded" minOccurs="0"/>
+    					<element name="item" type="tns:DerivedDeploymentDefinition" maxOccurs="unbounded" minOccurs="0"/>
+    				</sequence>
+    			</complexType></element>
+    	</sequence>
+    	<attribute name="name" type="string" use="optional"></attribute>
+    </complexType>
+
+    <complexType name="DeploymentDefinition">
+		<attribute name="todir"
+			type="string" use="required">
+		</attribute>
+		<attribute name="label"
+			type="string" use="required">
+		</attribute>
+    </complexType>
+
+    <complexType name="SimpleDeploymentDefinition">
+      <complexContent>
+        <extension base="tns:DeploymentDefinition">
+			<attribute name="dir"
+				type="string" use="required">
+			</attribute>
+			<attribute name="includes"
+				type="string" use="optional">
+			</attribute>
+			<attribute name="excludes"
+				type="string" use="optional">
+			</attribute>
+			<attribute name="defaultexcludes"
+				type="boolean" use="optional">
+			</attribute>
+        </extension>
+      </complexContent>
+    </complexType>
+    
+    <complexType name="DerivedDeploymentDefinition">
+      <complexContent>
+        <extension base="tns:DeploymentDefinition">
+			<attribute name="name" type="string"
+				use="required">
+			</attribute>
+        </extension>
+      </complexContent>
+    </complexType>
+    
+</schema>

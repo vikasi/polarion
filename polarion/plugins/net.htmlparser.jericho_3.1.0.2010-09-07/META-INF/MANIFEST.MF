@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: net.htmlparser.jericho
+Export-Package: net.htmlparser.jericho,net.htmlparser.jericho.nodoc
+Bundle-Name: Jericho HTML parser
+Bundle-Version: 3.1.0.2010-09-07
+Bundle-ClassPath: lib/jericho-html-3.1.jar
+Require-Bundle: org.apache.log4j
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Jericho
+
+

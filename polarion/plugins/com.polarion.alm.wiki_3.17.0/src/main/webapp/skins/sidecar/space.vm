@@ -1,0 +1,65 @@
+#macro(breadcrumb $doc $string)
+#set($parent = $doc.parent)
+#if($parent != "")
+#set($pdoc = $xwiki.getDocument($parent).getTranslatedDocument())
+#set($pdocurl = $pdoc.getURL("view"))
+#set($nstring = "<a class='breadcrumblink' href='$pdocurl'>${pdoc.getName()}</a> &gt; $string")
+#breadcrumb($pdoc $nstring)
+#else
+$string
+#end
+#end
+#if($context.getMode()==0) ## Visible only in a page
+
+### Show acction
+### IMA {
+#if($editor == "wiki")
+	#set ($pagemode = "(Edit-Wiki)")	
+#else #if($editor == "wysiwyg")
+      	#set ($pagemode = "(Edit-RichText)")	
+      #else #if($editor == "code")
+  		#set ($pagemode = "(Edit-Code)")	
+	    #else 
+             #set ($pagemode = "")	
+                  ##if($editor == "history")
+                	##set ($pagemode = "(Edit-Code)")	
+		  ##else
+			##set ($pagemode = "")) 
+		  ##end
+
+	    #end
+      #end
+#end
+
+#set ($revs = $request.getParameter("rev"))
+#if ($revs)
+  #if ($revs != "0")
+    #set ($pagemode = "(History - Revision:  $revs)")	
+  #end
+#end
+
+### IMA }
+
+
+### DMV {
+#*
+<table >
+<tr>
+<td width="100%" id="headerspace" class="layoutsection">
+<!--<hr/>-->
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a class='breadcrumblink' href="$spaceviewurl">$doc.web</a>: </span>
+#breadcrumb($doc "<a class='breadcrumblink' href='$doc.getURL('view')'>$doc.getName()</a>") 
+  </div>
+<!--<hr/>-->
+</td>
+<td id="headerspace" class="layoutsection" style="margin-top: 10px"><img src="$xwiki.getSkinFile("refresh.gif")" title="$msg.get("Refresh")"/></td>
+<td id="headerspace" class="layoutsection"><img src="$xwiki.getSkinFile("innewwindow.gif")"/></td>
+<td id="headerspace" class="layoutsection"><img src="$xwiki.getSkinFile("maximize.png")"/></td>
+</tr>
+</table>
+*#
+
+### DMV }
+
+#end

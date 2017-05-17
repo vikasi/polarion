@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<link href="$RiaCssLink" type="text/css" rel="stylesheet"></link>
+		<link href="/polarion/ria/css/pol_default.css" type="text/css" rel="stylesheet"></link>	
+  	</head>
+  	<style>
+  		body,html {
+				padding:5px;
+				font-size:13px;
+				font-family:arial, helvetica;
+			}
+  		.log  {
+  			display:inline;
+  			padding:0px;
+  			margin:0px;
+  		}
+  		.logtable {
+##  			font-family:Courier;
+  		}
+  	</style>
+	<body style='width:95%'>
+		#if($build)
+		<div class="buildTitle">$!build.buildArtifact.label $!build.buildStamp</div>		
+		<table>			
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.status.label"):</td>
+				<td class='featureValue'>
+					<b style="color:blue;">$localization.getValue("form.builds.running")</b>
+ 					</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.buildId.label"):</td>
+				<td class='featureValue'>$!build.buildStamp</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.project.label"):</td>
+				<td class='featureValue'>$!build.buildArtifact.groupEntity.name</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.buildArtifact.label"):</td>
+				<td class='featureValue'>$!build.buildArtifact.label</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.buildDescriptorName.label"):</td>
+				<td class='featureValue'>$!build.buildDescriptorName</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.duration.label"):</td>
+				<td class='featureValue'>$!buildDuration</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.author.label"):</td>
+				<td class='featureValue'>#formatHTML($build.author)</td>
+			</tr>
+		</table>
+
+		<br />				
+	    #set($message1 = "<a href=$logUrl>$localization.getValue('form.builds.log')</a>")
+	    #set($message2 = "<a href=$baseDirUrl>$localization.getValue('form.builds.baseDirectory')</a>")
+	    $localization.getValue("form.builds.furtherInformation", [$message1, $message2]).		
+		<hr />
+		#end
+	</body>
+</html>

@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.polarion.demo.LoginTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.009 sec <<< FAILURE!
+testLogin(com.polarion.demo.LoginTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Cannot login as Karl Xavier
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at com.polarion.demo.LoginTest.testLogin(LoginTest.java:12)
+
+testLogout(com.polarion.demo.LoginTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.RuntimeException: Cannot logout, no logged in user
+	at com.polarion.demo.LoginTest.testLogout(LoginTest.java:16)
+

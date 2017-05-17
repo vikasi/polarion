@@ -1,0 +1,190 @@
+#if($message)
+  <table class="toolbar_off" width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+	  <td style="padding:10">
+	    $!message
+	  </td>
+	</tr>
+  </table>
+#end
+
+#if($canRead)
+<div style="padding: 10px 10px 0px 10px; margin: 10px;">
+#panel("configuration_index" $localization.getValue("administration.indexAndCache.label.index") false false true false)
+
+#set($refreshIndexUrl = $renderResponse.createActionURL())
+$refreshIndexUrl.setParameter("doRefreshIndex","doRefreshIndex")
+
+#if($global)
+  #set($monitorUrl = "/polarion/#/monitor")
+#else
+  #set($monitorUrl = "/polarion/#/project/${projectId}/monitor")
+#end  
+
+
+<div style="padding: 10px 10px 0px 10px;">
+$localization.getValue("administration.indexAndCache.label.indexDescription", "<a href='$monitorUrl' target='_top'>$localization.getValue('administration.indexAndCache.label.monitor')</a>")
+</div>
+
+<form name="RefreshIndexForm" action="$refreshIndexUrl" method="post">
+<ul style="list-style: none; padding-left: 10px;">
+<li>
+        <input type="checkbox" name="index" value="Attachments"/> $localization.getValue("administration.indexAndCache.label.attachments")
+</li>
+<li>
+        <input type="checkbox" name="index" value="Baseline" /> $localization.getValue("administration.indexAndCache.label.baselines")
+</li>
+<li>
+        <input type="checkbox" name="index" value="Category" /> $localization.getValue("administration.indexAndCache.label.categories")
+</li>
+<li>
+        <input type="checkbox" name="index" value="Module" /> $localization.getValue("administration.indexAndCache.label.documents")
+</li>
+<li>
+        <input type="checkbox" name="index" value="Plan" /> $localization.getValue("administration.indexAndCache.label.plans")
+</li>
+#if($global)  
+<li>
+        <input type="checkbox" name="index" value="ProjectGroup"/> $localization.getValue("administration.indexAndCache.label.projectGroups")
+</li>
+<li>
+        <input type="checkbox" name="index" value="Project"/> $localization.getValue("administration.indexAndCache.label.projects")
+</li>
+<li>
+        <input type="checkbox" name="index" value="Revision"/> $localization.getValue("administration.indexAndCache.label.revisions")
+</li>
+#end
+#if($canUseRichPages)
+<li>
+        <input type="checkbox" name="index" value="RichPage"/> $localization.getValue("administration.indexAndCache.label.richPages")
+</li>
+#end
+<li>
+        <input type="checkbox" name="index" value="TestRun"/> $localization.getValue("administration.indexAndCache.label.testRuns")
+</li>
+<li>
+        <input type="checkbox" name="index" value="TimePoint"/> $localization.getValue("administration.indexAndCache.label.timePoints")
+</li>
+#if($global)  
+<li>
+        <input type="checkbox" name="index" value="User"/> $localization.getValue("administration.indexAndCache.label.users")
+</li>
+#end
+<li>
+        <input type="checkbox" name="index" value="WikiPage"/> $localization.getValue("administration.indexAndCache.label.wikiPages")
+</li>
+<li>
+        <input type="checkbox" name="index" value="WorkItem"/> $localization.getValue("administration.indexAndCache.label.workItems")
+</li>
+<li>
+        <input type="checkbox" name="index" value="WorkRecord"/> $localization.getValue("administration.indexAndCache.label.workRecords")
+</li>
+</ul>
+<table class="toolbar_off" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="100%" style="padding:10px 10px 10px 10px; white-space: nowrap;">
+    #set($label = $localization.getValue("administration.indexAndCache.button.refreshIndex"))
+    #if($canChange)
+      <input type="submit" value="$label" class="actionButtonBig" />
+    #if($isCluster)     
+  	  $localization.getValue("administration.indexAndCache.on")
+        <select name="riNode">
+          <option value="allNodes" selected>$localization.getValue("administration.indexAndCache.allNodes")</option>
+    #foreach($node in $nodeList)
+          <option value="$node">$node</option>
+    #end
+          </select>
+    #end        
+    #else
+      <input type="button" value="$label" disabled class="actionButtonBig" />
+    #end
+    </td>
+    <td width="100%">
+    	#if($global) $localization.getValue("administration.indexAndCache.label.refreshIndexFromAllLevels")
+    	#else $localization.getValue("administration.indexAndCache.label.refreshIndexFromCurrentProject")
+    	#end $localization.getValue("administration.indexAndCache.label.hlepsNotWorkCorrectly")
+    </td>
+  </tr>
+</table>
+
+</form>
+
+#set($checkIndexUrl = $renderResponse.createActionURL())
+$checkIndexUrl.setParameter("doCheckIndex","doCheckIndex")
+
+<form name="CheckIndexForm" action="$checkIndexUrl" method="post">
+
+<table class="toolbar_off" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="100%" style="padding:10px 10px 10px 10px; white-space: nowrap;">
+    #set($label = $localization.getValue("administration.indexAndCache.button.checkIndex"))
+    #if($canChange)
+      <input type="submit" value="$label" class="actionButtonBig" />
+    #if($isCluster)     
+  	  $localization.getValue("administration.indexAndCache.on")
+        <select name="ciNode">
+          <option value="allNodes" selected>$localization.getValue("administration.indexAndCache.allNodes")</option>
+    #foreach($node in $nodeList)
+          <option value="$node">$node</option>
+    #end
+          </select>
+    #end        
+    
+    
+    #else
+      <input type="button" value="$label" disabled class="actionButtonBig" />
+    #end
+    </td>
+    <td width="100%">
+    	#if($global) $localization.getValue("administration.indexAndCache.label.allWorkItemsFromAllProjects")
+    	#else $localization.getValue("administration.indexAndCache.label.allWorkItemsFromCurrentProject")
+    	#end
+    </td>
+  </tr>
+</table>
+
+</form>
+#endPanel()
+</div>
+<div style="padding: 10px 10px 0px 10px; margin: 10px;">
+#panel("configuration_cache" $localization.getValue("administration.indexAndCache.label.cache") false false true false)
+
+
+#set($clearCachesUrl = $renderResponse.createActionURL())
+$clearCachesUrl.setParameter("doClearCaches","doClearCaches")
+
+<form name="doClearCachesForm" action="$clearCachesUrl" method="post">
+<table class="toolbar_off" cellpadding="0" cellspacing="0">
+  <tr>    
+    <td height="100%" style="padding:10px 10px 10px 10px; white-space: nowrap;">
+#if($canChange)
+      <input type="submit" style="display: inline;" value="$localization.getValue("administration.indexAndCache.button.clearCaches")" class="actionButtonBig" /> 
+#if($isCluster)     
+	  $localization.getValue("administration.indexAndCache.on")
+      <select name="ccNode">
+        <option value="allNodes" selected>$localization.getValue("administration.indexAndCache.allNodes")</option>
+#foreach($node in $nodeList)
+        <option value="$node">$node</option>
+#end
+      </select>
+#end        
+#else
+      <input type="button" value="$label" disabled  class="actionButtonBig" />
+      #end
+    </td>
+    <td width="100%">
+    	#if(!$global) $localization.getValue("administration.indexAndCache.label.clearsAllServerCachesGlobalAction")
+    	#else $localization.getValue("administration.indexAndCache.label.clearsAllServerCaches")
+    	#end $localization.getValue("administration.indexAndCache.label.actionDescription")
+    </td>
+  </tr>
+</table>
+</form>
+
+
+#endPanel()
+</div>
+
+#else
+	Cannot read - security restriction.
+#end

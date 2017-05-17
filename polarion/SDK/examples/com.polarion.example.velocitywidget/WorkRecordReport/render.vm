@@ -1,0 +1,122 @@
+#macro(appendWorkItemRow $workItem $sum)
+	<tr class="polarion-rpw-table-content-row">
+		<td>$workItem.fields().id().get()</td>
+	#if(!$sum) 
+		#set($sumToRender = "0")
+	#else
+		#set($sumToRender = $sum.normalize().toString())
+	#end	
+		<td>$sumToRender</td>
+	</tr>
+#end
+
+#macro(appendWorkItemListItem $workItem $sum)
+	<li>
+		$workItem.fields().id().get():
+	#if(!$sum) 
+		#set($sumToRender = "0")
+	#else
+		#set($sumToRender = $sum.normalize().toString())
+	#end	
+		$sumToRender
+	</li>
+#end
+
+#macro(appendTotalRow $total)
+	<tr class="polarion-rpw-table-content-row">
+		<td style="font-weight:bold;">Total:</td>
+	#if(!$total) 
+		#set($totalToRender = "0")
+	#else
+		#set($totalToRender = $total.normalize().toString())
+	#end
+		<td style="font-weight:bold;">$totalToRender</td>
+	</tr>
+#end
+
+#macro(appendTotalListItem $total)
+	<li>
+		<span style="font-weight:bold;">Total:</span>
+	#if(!$total) 
+		#set($totalToRender = "0")
+	#else
+		#set($totalToRender = $total.normalize().toString())
+	#end
+		<span style="font-weight:bold;">$totalToRender</span>
+	</li>
+#end
+
+#macro(appendTableHeaderRow $userStory)
+	<tr class="polarion-rpw-table-header-row">
+		<th>$userStory.fields().id().get()</th>
+		<th>Time Spent:</th>
+	</tr>
+#end
+
+#macro(render $userStory $linkRoleId)
+	#if($type == "table")
+		<table class="polarion-rpw-table-content">
+		#appendTableHeaderRow($userStory)
+	#else
+		<ul>
+	#end
+
+	#foreach($linkedWorkItem in $userStory.fields().linkedWorkItems().back())
+		#set($sum = false)
+		#set($workItem = $linkedWorkItem.fields().workItem().getIfCan())
+		#set($workItemRole = $linkedWorkItem.fields().role().getIfCan())
+		#if($workItem && $workItemRole && $linkRoleId == $workItemRole.id())
+			#foreach($workRecord in $workItem.fields().workRecords())
+				#set($durationValue = $workRecord.fields().timeSpent().getIfCan())
+				#if($durationValue)
+					#if(!$sum) 
+						#set($sum = $durationValue)
+					#else
+						#set($sum = $sum.add($durationValue))
+					#end
+				#end
+			#end
+			
+			#if(!$total)
+				#set($total = $sum)
+			#else
+				#if($sum)
+					#set($total = $total.add($sum))
+				#end
+			#end
+			
+			#if($type == "table")
+				#appendWorkItemRow($workItem $sum)
+			#else
+				#appendWorkItemListItem($workItem $sum)
+			#end
+		#end
+	#end
+
+	#if($type == "table")
+		#appendTotalRow($total)
+	#else
+		#appendTotalListItem($total)
+	#end
+	
+
+	#if($type == "table")
+		</table>
+	#else
+		</ul>
+	#end
+		
+#end
+
+#set($userStoryParameter = $parameters.userStory)
+#set($linkRoleParameter = $parameters.linkRole)
+#set($userStory = $userStoryParameter.value)
+#set($type = $parameters.type.singleValue)
+
+#if (!$userStory)
+	$renderingContext.renderWarning("$userStoryParameter.label is undefined.")
+#elseif (!$linkRoleParameter || !$linkRoleParameter.singleValue)
+	$renderingContext.renderWarning("Parameter $parameters.linkRole.label is required.")
+#else
+	#render($userStory $linkRoleParameter.singleValue.id)
+#end

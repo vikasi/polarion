@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130116235439</created>
+<type>content</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+1 Unplanned Work Packages
+
+{toc}
+
+1.1 Score Board
+
+#set($bQuery = "type:workPackage AND NOT PLAN:(*)")
+
+{table:header=no}
+#typeIcon("workPackage") Unplanned Work Packages |  {workitems: $bQuery AND NOT status:(rejected verified-rejected)|display=count}
+{table}
+
+1.1 Unplanned Work Packages 
+*Work Packages* not yet planned.
+
+{workitems:query=$bQuery AND NOT status:(rejected verified-rejected)|fields=id,status,title,severity,priority,assignee|sortby=priority|display=table}
+
+
+
+ ]]></content>
+</wiki-page>

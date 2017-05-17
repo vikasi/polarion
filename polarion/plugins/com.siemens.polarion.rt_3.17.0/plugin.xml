@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="parsers" name="Resource Traceability Parsers" schema="schema/parsers.exsd"/>
+   <extension-point id="collectors" name="Resource Traceability Collectors" schema="schema/collectors.exsd"/>
+
+   <extension point="com.polarion.portal.tomcat.webapps">
+      <webapp
+            name="polarion/rt"
+            contextRoot="src/main/webapp">
+      </webapp>
+   </extension>
+   
+   <extension point="com.siemens.polarion.rt.collectors">
+      <collector
+            class="com.siemens.polarion.rt.collectors.svn.RtSvnCollector"
+            repositoryProvider="subversion">
+      </collector>
+   </extension>
+   
+   <extension point="com.siemens.polarion.rt.parsers">
+      <parser
+            class="com.siemens.polarion.rt.parsers.java.RtJavaParser"
+            name="com.siemens.polarion.rt.parsers.java">
+      </parser>
+      <parser
+            class="com.siemens.polarion.rt.parsers.xml.RtXmlParser"
+            name="com.siemens.polarion.rt.parsers.xml">
+      </parser>
+   </extension>
+
+</plugin>

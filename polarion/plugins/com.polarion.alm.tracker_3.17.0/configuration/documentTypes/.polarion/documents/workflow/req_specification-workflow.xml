@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-action="rework" initial-status="draft" prototype="Module">
+    <transitions>
+        <transition action="sendToReview" from="draft" to="inReview"/>
+        <transition action="reject" from="draft" to="rejected"/>
+        <transition action="reject" from="inReview" to="rejected"/>
+        <transition action="rework" from="rejected" to="draft"/>
+        <transition action="rework" from="approved" to="draft"/>
+        <transition action="rework" from="inReview" to="draft"/>
+        <transition action="markApproved" from="inReview" to="approved"/>
+    </transitions>
+    <actions>
+        <action id="rework" name="Rework"/>
+        <action id="sendToReview" name="Send To Review">
+            <functions>
+                <function name="InvokeAction">
+                    <param name="statusId" value="inReview"/>
+                    <param name="actionId" value="sendToReview"/>
+                    <param name="query" value="status:draft"/>
+                </function>
+            </functions>
+        </action>
+        <action id="markApproved" name="Mark Approved">
+            <conditions>
+                <condition name="ContainsNoMatchingWorkItems">
+                    <param name="query" value="status:(draft inReview)"/>
+                </condition>
+            </conditions>
+        </action>
+        <action id="reject" name="Reject"/>
+    </actions>
+</workflow>

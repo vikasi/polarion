@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portletDefinitions>
+#foreach($portlet in $result.portletDefinitions)
+	<portletDefinition>
+		<id>$portlet.id</id>
+		<name>$portlet.name</name>
+	</portletDefinition>
+#end
+</portletDefinitions>
+
+

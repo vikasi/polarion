@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="author">admin</field>
+    <field id="created">2016-03-03 00:41:30.953 +0100</field>
+    <field id="description" text-type="text/plain" type="text/html">This is a full manual test that includes all the manual test cases from the selected project.</field>
+    <field id="environmentDescription" text-type="text/plain" type="text/html">Example</field>
+    <field id="finishedOn">2016-03-03 00:50:37.397 +0100</field>
+    <field id="groupId">20160303-0028</field>
+    <field id="platform" type="enum:platform">osx</field>
+    <field id="query">testType:manual AND type:testcase AND status:active</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="comment" text-type="text/plain">Some reason...</item>
+                <item id="defect">SAMPLE-8</item>
+                <item id="duration">26.748</item>
+                <item id="executed">2016-03-03 00:42:52.361 +0100</item>
+                <item id="executedBy">admin</item>
+                <item id="result">failed</item>
+                <item id="signed">true</item>
+                <item id="testCase">SAMPLE-3</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="comment" text-type="text/plain">Failed</item>
+                            <item id="result">failed</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+        </list>
+    </field>
+    <field id="selectTestCasesBy">staticQueryResult</field>
+    <field id="status">verifiedFailed</field>
+    <field id="template">Full Manual System Test</field>
+    <field id="type">manual</field>
+    <field id="useReportFromTemplate">true</field>
+</test-run>

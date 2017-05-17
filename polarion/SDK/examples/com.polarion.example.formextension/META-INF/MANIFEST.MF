@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.example.formextension
+Bundle-Version: 1.0.0
+Bundle-Name: Form Extension Example Plug-in
+Bundle-ClassPath: formExtension.jar
+Require-Bundle: com.polarion.alm.ui;bundle-version="3.6.0",com.polario
+ n.platform.guice;bundle-version="3.6.0",com.polarion.alm.tracker;bund
+ le-version="3.6.0"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Guice-Modules: com.polarion.example.formextension.FormExtensionModule
+
+

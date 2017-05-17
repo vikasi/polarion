@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+ 
+<web-app metadata-complete="true">
+	
+	<display-name>Register</display-name>
+	
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>com.polarion.portal.internal.server.register.EncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>	
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+    <servlet>
+		<servlet-name>register
+		</servlet-name>
+		<display-name>RegisterServlet</display-name>
+		<servlet-class>com.polarion.portal.internal.server.register.RegisterServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>0</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>register</servlet-name>
+		<url-pattern>/execute/*</url-pattern>
+	</servlet-mapping>
+	
+
+</web-app>

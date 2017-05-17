@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: net.sf.ehcache
+Export-Package: net.sf.ehcache,net.sf.ehcache.config,net.sf.ehcache.di
+ stribution,net.sf.ehcache.event,net.sf.ehcache.management,net.sf.ehca
+ che.store,net.sf.ehcache.util
+Bundle-Name: Ehcache Plug-in
+Bundle-Version: 2.6.3.2015-05-27
+Bundle-Localization: plugin
+Bundle-ClassPath: lib/ehcache-core-2.6.3.jar,ehcache-polarion.jar
+Eclipse-AutoStart: true
+Require-Bundle: com.polarion.core.util,com.polarion.subterra.base
+Bundle-ManifestVersion: 2
+
+

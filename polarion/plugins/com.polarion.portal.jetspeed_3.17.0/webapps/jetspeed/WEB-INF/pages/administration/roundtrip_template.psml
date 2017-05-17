@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/roundtrip_template.psml" hidden="false">
+    <title>Round-trip Template</title>
+    <short-title>Round-trip Template</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_roundtrip_template_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_roundtrip_template_portlet" type="portlet" name="webui::FileConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/tracker/templates/roundtrip.docx</value>
+		  </preference>		  
+          <preference name="noEdit" readOnly="false">
+		    <value>true</value>
+		  </preference>		  
+        </fragment>
+    </fragment>
+</page>

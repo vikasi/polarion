@@ -1,0 +1,43 @@
+2017-05-16 12:40:09,997 [main] INFO  PolarionLicensing  - Searching for valid license file in C:\Polarion\polarion\license
+2017-05-16 12:40:09,999 [main] INFO  PolarionLicensing  - Trying to load license file polarion.lic
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - The license file contains the following fields:
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - *** License fields ***
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - VariantsConcurrentUsers = 10
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - almConcurrentUsers = 10
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - dateCreated = 15.05.2017
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - expirationDate = 31.05.2018
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - generatedBy = license@polarion.com
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - hardwareKey = 19AA-A279-41B6
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - licenseFormat = 2017
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - licenseType = TERM
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - multiInstanceRunningInstances = 3
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - proConcurrentUsers = 10
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - product = Polarion
+2017-05-16 12:40:10,007 [main] INFO  PolarionLicensing  - qaConcurrentUsers = 10
+2017-05-16 12:40:10,008 [main] INFO  PolarionLicensing  - requirementsConcurrentUsers = 10
+2017-05-16 12:40:10,008 [main] INFO  PolarionLicensing  - reviewerConcurrentUsers = 10
+2017-05-16 12:40:10,008 [main] INFO  PolarionLicensing  - userCompany = Siemens PLM Software 
+2017-05-16 12:40:10,008 [main] INFO  PolarionLicensing  - userEmail = vikas.ingale@siemens.com
+2017-05-16 12:40:10,008 [main] INFO  PolarionLicensing  - userName = Ingale, Vikas
+2017-05-16 12:40:10,008 [main] INFO  PolarionLicensing  - *** License fields END ***
+2017-05-16 12:40:10,027 [main] INFO  PolarionLicensing  - Removing allocations by null
+2017-05-16 12:40:10,030 [main] INFO  PolarionLicensing  - STATS:concurrentVariantsUser,current:0,peak:0,limit:10
+2017-05-16 12:40:10,030 [main] INFO  PolarionLicensing  - 0 namedReviewerUser assignments (out of 0) loaded: []
+2017-05-16 12:40:10,030 [main] INFO  PolarionLicensing  - 1 concurrentReviewerUser assignments (out of -1) loaded: [admin]
+2017-05-16 12:40:10,030 [main] INFO  PolarionLicensing  - STATS:concurrentReviewerUser,current:0,peak:0,limit:10
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - 0 namedProUser assignments (out of 0) loaded: []
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - 1 concurrentProUser assignments (out of -1) loaded: [admin]
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - STATS:concurrentProUser,current:0,peak:0,limit:10
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - 0 namedRequirementsUser assignments (out of 0) loaded: []
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - 1 concurrentRequirementsUser assignments (out of -1) loaded: [admin]
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - STATS:concurrentRequirementsUser,current:0,peak:0,limit:10
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - 0 namedQAUser assignments (out of 0) loaded: []
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - 1 concurrentQAUser assignments (out of -1) loaded: [admin]
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - STATS:concurrentQAUser,current:0,peak:0,limit:10
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - 0 namedALMUser assignments (out of 0) loaded: []
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - 1 concurrentALMUser assignments (out of -1) loaded: [admin]
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - STATS:concurrentALMUser,current:0,peak:0,limit:10
+2017-05-16 12:40:10,031 [main] INFO  PolarionLicensing  - 
+*******************************************************************
+ Polarion successfully activated
+*******************************************************************

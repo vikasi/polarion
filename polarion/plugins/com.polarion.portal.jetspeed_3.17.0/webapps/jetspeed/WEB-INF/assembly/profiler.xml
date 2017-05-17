@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!--
+    Copyright 2004 The Apache Software Foundation
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<beans>
+    <!-- Profiler -->
+    <bean id="profilerImpl" class="org.apache.jetspeed.profiler.impl.JetspeedProfilerImpl" name="profilerImpl" init-method="init">
+        <constructor-arg index="0">
+            <value>JETSPEED-INF/ojb/profiler_repository.xml</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>j2</value>
+        </constructor-arg>                
+        <constructor-arg index="2">
+            <ref bean="ProfileResolvers" />            
+        </constructor-arg>                   
+    </bean>
+
+    <bean id="org.apache.jetspeed.profiler.Profiler" name="profiler" parent="baseTransactionProxy">
+        <property name="proxyInterfaces">
+            <value>org.apache.jetspeed.profiler.Profiler</value>
+        </property>
+        <property name="target">
+            <ref bean="profilerImpl" />
+        </property>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="setRuleForPrincipal">PROPAGATION_REQUIRED,-org.apache.jetspeed.components.profiler.ProfilerException</prop>
+                <prop key="store*">PROPAGATION_REQUIRED,-org.apache.jetspeed.components.profiler.ProfilerException</prop>
+                <prop key="delete*">PROPAGATION_REQUIRED,-org.apache.jetspeed.components.profiler.ProfilerException</prop>
+                <prop key="*">PROPAGATION_SUPPORTS</prop>
+            </props>
+        </property>
+    </bean>
+               
+    <bean id="ProfileResolvers"  
+          class="org.apache.jetspeed.profiler.rules.impl.ProfileResolversImpl">
+        <constructor-arg index="0">          
+        <map>
+          <entry key="request">
+            <ref bean="StandardResolver" />
+          </entry>
+          <entry key="request.session">
+            <ref bean="RequestSessionResolver" />
+          </entry>
+          <entry key="path">
+            <ref bean="PathResolver" />
+          </entry>
+          <entry key="path.session">
+            <ref bean="PathSessionResolver" />
+          </entry>
+          <entry key="hard.coded">
+            <ref bean="HardCodedResolver" />
+          </entry>
+          <entry key="project">
+            <ref bean="PolarionProjectCriterionResolver" />
+          </entry>
+          <entry key="user">
+            <ref bean="UserCriterionResolver" />
+          </entry>
+          <entry key="role">
+            <ref bean="RoleCriterionResolver" />
+          </entry>
+          <entry key="group">
+            <ref bean="GroupCriterionResolver" />
+          </entry>
+          <entry key="mediatype">
+            <ref bean="MediatypeCriterionResolver" />
+          </entry>
+          <entry key="language">
+            <ref bean="LanguageCriterionResolver" />
+          </entry>
+          <entry key="country">
+            <ref bean="CountryCriterionResolver" />
+          </entry>
+          <entry key="group.role.user">
+            <ref bean="GroupRoleUserCriterionResolver" />
+          </entry>
+          <entry key="user.attribute">
+            <ref bean="UserAttributeResolver" />
+          </entry>
+          <entry key="navigation">
+            <ref bean="NavigationCriterionResolver" />
+          </entry>
+          <entry key="user.agent">
+            <ref bean="UserAgentCriterionResolver" />
+          </entry>          
+        </map>
+        </constructor-arg>                  
+    </bean>
+    
+    <bean id='StandardResolver' class='org.apache.jetspeed.profiler.rules.impl.StandardResolver'></bean>
+    <bean id='RequestSessionResolver' class='org.apache.jetspeed.profiler.rules.impl.RequestSessionResolver'></bean>
+    <bean id='PathResolver' class='org.apache.jetspeed.profiler.rules.impl.PathResolver'></bean>
+    <bean id='PathSessionResolver' class='com.polarion.portal.jetspeed.profiller.rules.impl.ProjectPathSessionResolver'></bean>
+    <bean id='HardCodedResolver' class='org.apache.jetspeed.profiler.rules.impl.HardCodedResolver'></bean>
+    <bean id='PolarionProjectCriterionResolver' class='com.polarion.portal.jetspeed.profiller.PolarionProjectCriterionResolver'></bean>
+    <bean id='UserCriterionResolver' class='org.apache.jetspeed.profiler.rules.impl.UserCriterionResolver'></bean>
+    <bean id='RoleCriterionResolver' class='org.apache.jetspeed.profiler.rules.impl.RoleCriterionResolver'></bean>
+    <bean id='GroupCriterionResolver' class='com.polarion.portal.jetspeed.profiller.RoleCriterionResolver'></bean>
+    <bean id='MediatypeCriterionResolver' class='org.apache.jetspeed.profiler.rules.impl.MediatypeCriterionResolver'></bean>
+    <bean id='LanguageCriterionResolver' class='org.apache.jetspeed.profiler.rules.impl.LanguageCriterionResolver'></bean>
+    <bean id='CountryCriterionResolver' class='org.apache.jetspeed.profiler.rules.impl.CountryCriterionResolver'></bean>
+    <bean id='GroupRoleUserCriterionResolver' class='com.polarion.portal.jetspeed.profiller.RoleCriterionResolver'></bean>
+    <bean id='UserAttributeResolver' class='org.apache.jetspeed.profiler.rules.impl.UserAttributeResolver'></bean>
+    <bean id='NavigationCriterionResolver' class='org.apache.jetspeed.profiler.rules.impl.NavigationCriterionResolver'></bean>
+    <bean id='UserAgentCriterionResolver' class='org.apache.jetspeed.profiler.rules.impl.UserAgentCriterionResolver'></bean>
+    
+</beans>

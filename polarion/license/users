@@ -1,0 +1,100 @@
+# ------------------------ DEFAULT CONCURRENT LICENSE -------------------------
+# Uncomment one the following lines to specify default concurrent license:
+# defaultUserLicense=ALM
+# defaultUserLicense=QA
+# defaultUserLicense=Requirements
+# defaultUserLicense=Pro
+# -----------------------------------------------------------------------------
+#
+# -------------------- DEFAULT CONCURRENT ADD-ON LICENSES ---------------------
+# Uncomment the following line to specify default concurrent add-on licenses:
+# defaultAddonLicenses=Variants
+# -----------------------------------------------------------------------------
+#
+# ------------------------------- POLARION ALM --------------------------------
+# NAMED USERS:
+namedALMUser1=admin
+namedALMUser2=
+namedALMUser3=
+#
+# CONCURRENT USERS:
+concurrentALMUser1=admin
+# Uncomment the following lines to specify concurrent users:
+# concurrentALMUser2=
+# concurrentALMUser3=
+#
+# CONCURRENT LICENSE GROUPS:
+# Uncomment the following lines to specify a concurrent license group:
+# concurrentALMGroupDepartmentASize=3
+# concurrentALMGroupDepartmentAUser1=
+# concurrentALMGroupDepartmentAUser2=
+# concurrentALMGroupDepartmentAUser3=
+#
+# Uncomment the following lines to specify another concurrent license group:
+# concurrentALMGroupDepartmentBSize=2
+# concurrentALMGroupDepartmentBUser1=
+# concurrentALMGroupDepartmentBUser2=
+# -----------------------------------------------------------------------------
+#
+# -------------------------------- POLARION QA --------------------------------
+# NAMED USERS:
+namedQAUser1=admin
+namedQAUser2=
+namedQAUser3=
+#
+# CONCURRENT USERS:
+concurrentQAUser1=admin
+# Uncomment the following lines to specify concurrent users:
+# concurrentQAUser2=
+# concurrentQAUser3=
+# -----------------------------------------------------------------------------
+#
+# --------------------------- POLARION REQUIREMENTS ---------------------------
+# NAMED USERS:
+namedRequirementsUser1=admin
+namedRequirementsUser2=
+namedRequirementsUser3=
+#
+# CONCURRENT USERS:
+concurrentRequirementsUser1=admin
+# Uncomment the following lines to specify concurrent users:
+# concurrentRequirementsUser2=
+# concurrentRequirementsUser3=
+# -----------------------------------------------------------------------------
+#
+# ------------------------------- POLARION PRO --------------------------------
+# NAMED USERS:
+namedProUser1=admin
+namedProUser2=
+namedProUser3=
+#
+# CONCURRENT USERS:
+concurrentProUser1=admin
+# Uncomment the following lines to specify concurrent users:
+# concurrentProUser2=
+# concurrentProUser3=
+# -----------------------------------------------------------------------------
+#
+# ----------------------------- POLARION REVIEWER -----------------------------
+# NAMED USERS:
+namedReviewerUser1=admin
+namedReviewerUser2=
+namedReviewerUser3=
+# CONCURRENT USERS:
+concurrentReviewerUser1=admin
+# Uncomment the following lines to specify concurrent users:
+# concurrentReviewerUser2=
+# concurrentReviewerUser3=
+# -----------------------------------------------------------------------------
+#
+# ------------------------- POLARION VARIANTS ADD-ON --------------------------
+# NAMED USERS:
+namedVariantsUser1=admin
+namedVariantsUser2=
+namedVariantsUser3=
+# CONCURRENT USERS:
+concurrentVariantsUser1=admin
+# Uncomment the following lines to specify concurrent users:
+# concurrentVariantsUser2=
+# concurrentVariantsUser3=
+# -----------------------------------------------------------------------------

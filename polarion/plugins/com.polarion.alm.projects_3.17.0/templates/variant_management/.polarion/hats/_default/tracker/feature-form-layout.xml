@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<formLayout xmlns="http://polarion.com/schema/WorkItems/FormLayout" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://polarion.com/schema/WorkItems/FormLayout">
+<!-- Fields can only be shown once in the form! -->
+
+    <!-- Horizontal layout element, adds components on horizontal row. Each component is in a new column. -->
+    <horizontal>
+        <!-- Vertical layout element adds components into one vertical column. Each component is in a new row. -->
+        <vertical>
+            <section>
+                <field id="type"/>
+                <field id="author"/>
+                <field id="project"/>
+            </section>     
+        </vertical>
+        <vertical>
+            <section>
+                <field id="variationType"/>
+                <field id="status"/>
+                <field id="resolution"/>
+            </section>
+        </vertical>
+    </horizontal>
+
+    <field id="description"/>
+
+    <!-- Description of panel is mandatory. -->
+    <panel description="Custom Fields">
+        <field id="@allCustomFields,-variationType"/>
+    </panel>
+
+    <!-- Complex fields should not be used in section or panel elements - there is no space for them. -->
+    <field id="comments"/>
+    <field id="linkedWorkItems"/>
+    <field id="hyperlinks"/>
+    <field id="attachments"/>
+</formLayout>

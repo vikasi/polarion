@@ -1,0 +1,87 @@
+
+#set($attachments = $doc.attachmentList)
+
+<div id="xwikiattachmentscontent" class="xwikidatacontent">
+
+  <form id="attach" action="$doc.getURL("save")?ajax=true" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="xredirect" value="" />
+    <input type="hidden" name="filename" value="" size="20" />
+   <div id="xwikiattachmentscontent" class="xwikidatacontent2" style="width:100% ;margin-left:-2px; ">
+   <div class='frmcollapsed'>
+     <table cellpadding="0" cellspacing="0" border="0" width="100%">
+       <tr>
+
+         <td width='460' class='paneltitle'>#if(!$request.getParameter("images").equals("1")) $msg.get("uploadanattachment") #else $msg.get("uploadanimage") #end</td>
+       </tr>
+     </table>
+    <table cellpadding="2" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td class="th1" width = 60>$msg.get("titlefield")</td>
+		<td class="th2">$msg.get("filename")</td>
+		<td class="th6">$msg.get("action")</td>
+	</tr>
+	<tr>
+	      <td class="t1" style='background-color: white;'>
+        	<input type="text" name="title" value="" size="15"/>
+	      </td>
+      	      <td class="t2" style='background-color: white;'>
+	        <input id="browseattachfile" type="file" name="filepath" value="" size="30" onkeypress="return false;" onChange="checkAttach();"/> 
+	      </td>
+	      <td class="t6" style='background-color: white; vertical-align: middle; text-align: center;'>
+	        <input type="button" onclick="updateAttachName(document.forms.attach); window.parent.document.forms.checkLoginA.submit();" id="attachment" name="attachment" value="" />
+	      </td>
+	</tr>
+     </table>
+  </form>
+      <br></br>	
+
+
+  #set($counter=0)
+  #foreach ($attach in $attachments)
+    #if((!$request.images)||$attach.isImage())
+      #if($counter==0)
+
+<div class='frmcollapsed'>
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+           <tr>
+    	    <td width='480' class='paneltitle'>#if(!$request.getParameter("images").equals("1"))$msg.get("pickAttLink")#else$msg.get("pickImgAtt")#end</td>
+          </tr>
+        </table>
+
+        <table width="100%">
+           <!--tr class="title"><th></th><th>$msg.get("filename")</th><th>$msg.get("version")</th><th>$msg.get("author")</th></tr-->
+            <table width="100%" cellspacing="0" cellpadding="2" border="0">
+            <tr>
+        	<!--td class="th1"></td-->
+            	<td class="th1">$msg.get("titlefield")</td>
+            	<td class="th2">$msg.get("filename")</td>
+            	<td class="th3">$msg.get("size")</td>
+	            	<td class="th4">$msg.get("author")</td>
+            	<td class="th5">$msg.get("lastmodified")</td>
+            </tr>
+      #end
+      <tr class="row#if($counter % 2 == 0) even #else odd #end">
+        <!--td class="t1">
+          #if ($attach.isImage())
+            <a href="$doc.getAttachmentURL("${attach.filename}", "download")" onclick="document.forms[0].href.value='$attach.filename'; return false;" >
+              <img src="$doc.getAttachmentURL("${attach.filename}", "download", "width=80")" alt="${attach.filename}" width="80" border="0" />
+            </a>
+          #end
+        </td-->
+        <td class="t1">$attach.getTitleBreaked(10).toLowerCase()&nbsp;</td>
+        <td class="t2"><a id="attachment${counter}" href="$doc.getAttachmentURL("${attach.filename}", "download")" onclick="document.forms[0].href.value='$attach.filename'; return false;" >$attach.getFilenameBreaked(10)</a></td>
+	<td class="t3">$attach.filesize B</td>
+        <td class="t4">$xwiki.getLocalUserName($attach.author)</td>
+        <td class="t5">$!xwiki.formatDate($attach.date, "yyyy-MM-dd HH:mm")</td>
+      </tr>
+    #end
+    #set( $counter = $counter + 1)
+  #end
+  </table>
+  </div>
+  <div class="xwikidatafooter2">
+    <div class="xwikidatafooter1">&nbsp;</div>
+    <div class="xwikidatafooter">&nbsp;</div>
+  </div>
+</div>
+</div>

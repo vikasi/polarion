@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="allowedWITypes">
+        <list>
+            <item>testcase</item>
+        </list>
+    </field>
+    <field id="author">admin</field>
+    <field id="created">2011-01-27 12:31:47.156 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-68"></h1><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-69"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-70"></h3><p id="polarion_new_7">
+  Test Case Specification collects the test cases. Each test case specifies inputs, predicted results, and a set of execution conditions for a test item.
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-71"></h3><p id="polarion_1">
+  Provide a short description of the software features being tested.
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-72"></h3><p id="polarion_2">
+  List any other documents or Web addresses to which this test case specification document refers. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-73"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-74"></h3><div id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-3"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-75"></h2><p id="polarion_merged_2">
+  <span style="font-style: italic;">Define all the terms necessary to properly interpret this document, including acronyms and abbreviations. You may wish to build a separate glossary that spans multiple projects or the entire organization, and just include terms specific to a single project in each document.</span>
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Test Case</item>
+                <item id="layouter">titleTestSteps</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity, status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">testcase</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">generic</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

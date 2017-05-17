@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Provide-Package: com.polarion.platform.internal.service.repository,com
+ .polarion.platform.internal.service.repository.cache,com.polarion.pla
+ tform.internal.service.repository.driver,com.polarion.platform.intern
+ al.service.repository.listeners.job,com.polarion.platform.repository.
+ config,com.polarion.platform.repository.external,com.polarion.platfor
+ m.repository.external.internal;x-friends:="com.polarion.platform.test
+ s",com.polarion.platform.repository.internal.config,com.polarion.plat
+ form.repository.internal.context;x-friends:="com.polarion.platform.te
+ sts",com.polarion.platform.repository.spi.config,com.polarion.platfor
+ m.service.repository,com.polarion.platform.service.repository.driver
+Bundle-SymbolicName: com.polarion.platform.repository;singleton=true
+Export-Package: com.polarion.platform.internal.service.repository.rt,c
+ om.polarion.platform.repository.external.internal.rt
+Bundle-Name: Repository Plug-in
+Bundle-Version: 3.17.0
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Bundle-ClassPath: platform-repository.jar
+Require-Bundle: com.polarion.platform.hivemind,com.polarion.platform,n
+ et.sf.ehcache,com.polarion.subterra.persistence;bundle-version="5.7.0
+ ",com.polarion.platform.guice;bundle-version="3.5.2"
+Bundle-Vendor: Polarion
+Guice-Modules: com.polarion.platform.repository.internal.guice.Reposit
+ oryModule
+
+

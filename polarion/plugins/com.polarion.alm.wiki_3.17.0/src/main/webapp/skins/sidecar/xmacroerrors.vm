@@ -1,0 +1,20 @@
+#if(!$macroitem.validate($request.getParameterMap()))
+#set($errors = $macroitem.getErrors())
+	<div id="errors_$id" class="collapsed">
+		<table>
+		 <tr>
+			<td class="expand_close" onclick="togglePanelVisibilityExpand(this.up('div'), this);"></td>
+			<td style="font-size: 11px; color: red; font-weight: bold">Errors ($errors.size())</td>
+		 </tr>
+		</table>
+		<div class="xwikipanelcontents" style="border: 1px solid red; font-size: 11px">
+		<table>
+		#foreach($error in $errors)
+			<tr>
+				<td><b>Error: </b>$error</td>
+			</tr>
+		#end
+		</table>
+		</div>
+	</div>
+#end

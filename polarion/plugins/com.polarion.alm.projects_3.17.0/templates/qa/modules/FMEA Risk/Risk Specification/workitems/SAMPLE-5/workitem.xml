@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">admin</field>
+    <field id="causes" text-type="text/plain" type="text"><![CDATA[High level sensor failed, 
+high level sensor disconnected, 
+high level sensor not started]]></field>
+    <field id="controls" text-type="text/plain" type="text">Fill timeout based on time to fill to high level sensor</field>
+    <field id="created">2012-01-04 15:09:04.517 +0100</field>
+    <field id="description" text-type="text/html">&lt;span style="font-style: italic;"&gt;Description of effects of the potential risk&lt;/span&gt;</field>
+    <field id="detectionRating" type="integer">5</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="role">assesses</item>
+                <item id="workItem">SAMPLE-1</item>
+            </struct>
+        </list>
+    </field>
+    <field id="occurrenceRating" type="integer">2</field>
+    <field id="previousStatus">analysis</field>
+    <field id="priority">50.0</field>
+    <field id="recommendedActions" text-type="text/plain" type="text">WI-71 Perform cost analysis of adding additional sensor halfway between low and high level sensors.</field>
+    <field id="severity">should_have</field>
+    <field id="severityRating" type="integer">5</field>
+    <field id="status">action-pending</field>
+    <field id="title">Potential risk</field>
+    <field id="type">risk</field>
+</work-item>

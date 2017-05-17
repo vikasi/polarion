@@ -1,0 +1,19 @@
+<script type="text/javascript">
+if (window.name == "working_area")
+{
+  if ( document.getElementById("progressbar") )
+       document.getElementById("progressbar").style.visibility="visible";
+  //document.forms['edit'].target="wiki_save_frame";
+  document.forms['edit'].submit();
+  closeLoginWiki();
+}
+else
+{
+  if (window.parent.document.getElementById("progressbar")) {
+      window.parent.document.getElementById("progressbar").style.visibility="visible";
+  }
+ // window.parent.document.forms['edit'].target="wiki_save_frame";
+  window.parent.document.forms['edit'].submit();
+  window.parent.closeLoginWiki();
+}
+</script>

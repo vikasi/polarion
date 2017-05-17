@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.synchronizer.proxy.jira
+Export-Package: com.polarion.synchronizer.proxy.jira;x-friends:="com.p
+ olarion.synchronizer.proxy.jira.test,com.polarion.synchronizer.tests"
+ ,com.polarion.synchronizer.proxy.jira.model;x-friends:="com.polarion.
+ synchronizer.proxy.jira.test",com.polarion.synchronizer.proxy.jira.tr
+ anslators;x-friends:="com.polarion.synchronizer.proxy.jira.test",com.
+ polarion.synchronizer.proxy.jira.json;x-friends:="com.polarion.synchr
+ onizer.proxy.jira.test,com.polarion.synchronizer.tests"
+Bundle-Name: Jira
+Bundle-Version: 3.17.0
+Bundle-ClassPath: jira.jar
+Require-Bundle: com.polarion.synchronizer;bundle-version="0.4.0",com.p
+ olarion.platform.guice;bundle-version="3.6.0",com.sun.jersey;bundle-v
+ ersion="1.0.0",com.polarion.synchronizer.proxy.polarion;bundle-versio
+ n="0.9.0",com.polarion.core.util;bundle-version="3.6.0",com.polarion.
+ platform.jobs;bundle-version="3.6.0"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Import-Package: com.polarion.alm.projects.model,com.polarion.alm.track
+ er,com.polarion.alm.tracker.model,com.polarion.platform.persistence,c
+ om.polarion.platform.persistence.model
+Guice-Modules: com.polarion.synchronizer.proxy.jira.GuiceModule
+
+

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Provide-Package: com.polarion.subterra.base,com.polarion.subterra.base
+ .data.identification,com.polarion.subterra.base.data.model,com.polari
+ on.subterra.base.data.model.internal;x-internal:=true,com.polarion.su
+ bterra.base.data.object,com.polarion.subterra.base.data.object.intern
+ al,com.polarion.subterra.base.data.richtext,com.polarion.subterra.bas
+ e.internal,com.polarion.subterra.base.internal.location,com.polarion.
+ subterra.base.location
+Bundle-SymbolicName: com.polarion.subterra.base
+Bundle-Name: %pluginName
+Bundle-Version: 5.17.0
+Bundle-Localization: plugin
+Bundle-ClassPath: subterra-base-core.jar,subterra-base-data.jar
+Require-Bundle: com.polarion.core.util;reprovide=true
+Bundle-Vendor: %providerName
+
+

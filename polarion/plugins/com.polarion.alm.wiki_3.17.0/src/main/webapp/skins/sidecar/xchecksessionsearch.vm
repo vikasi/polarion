@@ -1,0 +1,24 @@
+<script type="text/javascript">
+
+if (window.name == "working_area")
+{
+        closeLoginWiki();
+        if (document.getElementById("text"))
+      	 doSearch(document.search.search_in, document.getElementById("text").value);
+      	else
+  	   doSearch(document.search.search_in, document.search.text.value);
+      	var searchForm = document.getElementById("searchForm").value;
+      	document.getElementById(searchForm).submit();
+}
+else
+{
+        window.parent.closeLoginWiki();
+        if (window.parent.document.getElementById("text"))
+      	 window.parent.doSearch(window.parent.document.search.search_in, window.parent.document.getElementById("text").value);
+      	else
+  	   window.parent.doSearch(window.parent.document.search.search_in, window.parent.document.search.text.value);
+      	var searchForm = window.parent.document.getElementById("searchForm").value;
+      	window.parent.document.getElementById(searchForm).submit();
+
+}
+</script>

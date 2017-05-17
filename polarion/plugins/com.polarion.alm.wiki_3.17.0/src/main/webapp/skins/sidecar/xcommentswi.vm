@@ -1,0 +1,13 @@
+#set ( $items = $workitem.getSingleWorkItem($!request.getParameter("idwi")) )
+#foreach($item in $items)
+   <table id="xdesc_wi" cellpadding='0' cellspacing='0' style='width: 395px; border:1px solid black; margin:0; background-color:#FFFFE1;'>
+	    <tr height=15><td align=right><img height=10px src="$xwiki.getSkinFile("close_desc.gif")" border='0' style="cursor: pointer;"  onclick="closeDesc();"></td></tr>
+	    <tr>
+            <td> 
+            <div style="width: 395px; overflow-y: auto; overflow-x: auto; padding-left: 5px; padding-right: 5px; padding-bottom: 3px;">
+            $workitem.getValueComments($item, false)
+            </div>
+            </td>
+	    </tr>
+   </table>
+#end

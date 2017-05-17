@@ -1,0 +1,59 @@
+#############################################################################################
+# Configuration file for Apache that secures access to the Polarion activation application. #
+#############################################################################################
+
+#<IfModule !mod_ldap.c>
+#LoadModule ldap_module modules/mod_ldap.so
+#</IfModule>
+#<IfModule !mod_authnz_ldap.c>
+#LoadModule authnz_ldap_module modules/mod_authnz_ldap.so
+#</IfModule>
+
+<LocationMatch "/polarion/activate/(online|offline)">
+
+# No anonymous access, always require authenticated users
+Require valid-user
+  
+# How to authenticate a user.
+AuthType Basic
+AuthName "Polarion Activation"
+# For example the Polarion passwd file might be used
+#AuthUserFile "C:\Polarion\data\svn\passwd"
+#AuthUserFile "/opt/polarion/data/svn/passwd" 
+  
+# To enable authentication against LDAP:
+# - ensure that modules mod_authnz_ldap and mod_ldap are loaded: uncomment
+#   corresponding LoadModule directives at the beginning of this file
+# - uncomment LDAP options below
+# Documentation of used LDAP module and its parameters (for Apache 2.2.x) is available at
+#   http://httpd.apache.org/docs/2.2/mod/mod_authnz_ldap.html
+#   http://httpd.apache.org/docs/2.2/mod/mod_ldap.html
+<IfModule mod_authnz_ldap.c>
+
+	# Authenticate against both passwd file and LDAP
+	AuthBasicProvider file ldap
+
+	# LDAP search URL
+	# - LDAP port is 389
+	# - use ldaps:// for secure LDAP (with port 636)
+	# - basedn is the DN of the directory (sub)tree to search in
+	# - attribute is the name of user id attribute
+	# - scope is the search scope ("sub" for whole subtree under basedn)
+	# - fiter is the search filter
+	# - see more examples below
+	#AuthLDAPURL "ldap://host:port/basedn?attribute?scope?filter"
+
+	# OpenLDAP and other directories using RFC-2798-compliant inetOrgPerson object class
+	#AuthLDAPURL "ldap://host:port/dc=company,dc=com?uid?sub?(objectclass=inetOrgPerson)"
+
+	# Active Directory
+	#AuthLDAPURL "ldap://host:port/cn=users,dc=company,dc=com?sAMAccountName?sub?(objectclass=user)"
+
+	# The user and password used to login to LDAP server to perform the searches
+	# - required by Active Directory
+	#AuthLDAPBindDN "cn=[USER],cn=users,dc=company,dc=com"
+	#AuthLDAPBindPassword "[PASSWORD]"
+    
+</IfModule>  
+
+</LocationMatch>

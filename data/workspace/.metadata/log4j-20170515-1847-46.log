@@ -1,0 +1,1000 @@
+2017-05-15 18:47:46,154 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Using logging context STANDALONE
+2017-05-15 18:47:46,155 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Launchers manager started...
+2017-05-15 18:47:46,155 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Using home directory C:\Polarion\polarion
+2017-05-15 18:47:46,155 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Using root directory C:/Polarion
+2017-05-15 18:47:46,155 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Using workspace directory C:\Polarion\data\workspace
+2017-05-15 18:47:46,155 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Using config directory D:\workdir\.metadata\.plugins\org.eclipse.pde.core\New_configuration
+2017-05-15 18:47:46,155 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Loading external properties ...
+2017-05-15 18:47:46,155 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Using external property file C:\Polarion\polarion/configuration/polarion.properties
+2017-05-15 18:47:46,156 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Loading internal properties ...
+2017-05-15 18:47:46,162 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Host: pni6w2489 (146.122.190.42)
+2017-05-15 18:47:46,162 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Product: com.polarion.alm
+2017-05-15 18:47:46,162 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Version: 3.17.0
+2017-05-15 18:47:46,162 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Build: 20170314-0722
+2017-05-15 18:47:46,162 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Patches: <none>
+2017-05-15 18:47:46,163 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Extensions: <none>
+2017-05-15 18:47:46,167 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Workspace location: C:\Polarion\data\workspace
+2017-05-15 18:47:46,167 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Workspace lock acquired
+2017-05-15 18:47:46,167 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Found applications: [polarion.server, polarion.coordinator]
+2017-05-15 18:47:46,167 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Starting application: polarion.server
+2017-05-15 18:47:46,171 [main] INFO  com.polarion.core.boot.impl.AppLaunchersManager  - Application extension successfully read
+2017-05-15 18:47:46,180 [main] INFO  com.polarion.platform.startup  - ****************************************************************
+2017-05-15 18:47:46,180 [main] INFO  com.polarion.platform.startup  -                 Polarion starting, please wait!                 
+2017-05-15 18:47:46,180 [main] INFO  com.polarion.platform.startup  - ****************************************************************
+2017-05-15 18:47:46,180 [main] INFO  com.polarion.platform.startup  - Server start mode: normal
+2017-05-15 18:47:46,180 [main] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-15 18:47:46,180 [main] INFO  com.polarion.platform.startup  - Platform startup (Phase: 1/9)
+2017-05-15 18:47:46,181 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - **** Java system properties listing: 
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - adminPasswd = 
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - adminUser = admin
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - announcer.smtp.auth = false
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - announcer.smtp.host = localhost
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - announcer.smtp.password = **PASSWORD**HIDDEN**
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - announcer.smtp.port = 25
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - announcer.smtp.user = 
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - awt.toolkit = sun.awt.windows.WToolkit
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - base.url = http://localhost
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - bfh.jobs.workdir = C:\Polarion\data\workspace/polarion-data/jobs
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - BIRDir = C:\Polarion\polarion/../data/BIR
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - calculated.fields.mode = async
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.activation.activationHelpLink = http://www.polarion.com/resources/activation.php
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.activation.server = https://license.polarion.com/licenseGenerator/generator/generate
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.alm.ui.gravatar.enabled = false
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.alm.ui.gravatar.url = http://www.gravatar.com/avatar/$emailHash$?d=identicon&s=50
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.application = polarion.server
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.config = D:\workdir\.metadata\.plugins\org.eclipse.pde.core\New_configuration
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.data = C:\Polarion\polarion/../data
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.eclipse = C:\Polarion\polarion
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.home = C:\Polarion\polarion
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.licenseDir = C:\Polarion\polarion/license
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.platform.internalPG = polarion:polarion@localhost:5433
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.platform.monitoring.notifications.disabled = true
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.platform.monitoring.notifications.receivers = 
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.platform.monitoring.notifications.sender = 
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.platform.monitoring.notifications.subject.prefix = 
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.platform.persistence.notifications.disabled = false
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.propertyFile = C:\Polarion\polarion/configuration/polarion.properties
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.root = C:/Polarion
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.polarion.workspace = C:\Polarion\data\workspace
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - com.siemens.polarion.document.listStyle = 1ai
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - content.types.user.table = /C:/Polarion/polarion/plugins/com.polarion.core.boot_3.17.0/content-types.properties
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - controlHostname = localhost
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - controlPort = 8887
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - createproject.default.location = Sandbox/
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - createproject.default.useUserId = true
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - createproject.limitedAccessMessage = You may create a project in the Sandbox project group (only). Please fill in the required properties below. For example:<br/><table><tr><td>Location:</td><td>Sandbox/MyFirstProject</td></tr><tr><td>ID:</td><td>MyFirstProject</td></tr></table><br/>Or use the suggested defaults.
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - debug = false
+2017-05-15 18:47:46,199 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - default.project.template.ALM = system_engineering
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - default.project.template.Pro = system_engineering
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - default.project.template.QA = qa
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - default.project.template.Requirements = requirements_software
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - derby.system.home = C:\Polarion\polarion/../data/logs/derby
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - eclipse.application = com.polarion.core.boot.app
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - eclipse.buildId = M20060118-1600
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - eclipse.commands = -application
+com.polarion.core.boot.app
+-data
+C:\Polarion\data\workspace
+-configuration
+file:D:/workdir/.metadata/.plugins/org.eclipse.pde.core/New_configuration/
+-dev
+file:D:/workdir/.metadata/.plugins/org.eclipse.pde.core/New_configuration/dev.properties
+-os
+win32
+-ws
+win32
+-arch
+x86
+-appId
+polarion.serve
+
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - eclipse.startTime = 1494854265683
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - enableCreateAccountForm = false
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - eof = eof
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - error.report.email = 
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - feedback.email = dev@polarion.com
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - file.encoding = Cp1252
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - file.encoding.pkg = sun.io
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - file.separator = \
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - htpasswd.path = C:/Polarion/bundled/apache/bin/htpasswd.exe
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - index.activities = C:\Polarion\data\workspace/polarion-data/index
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.awt.headless = true
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.awt.printerjob = sun.awt.windows.WPrinterJob
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.class.path = C:\Polarion\polarion\startup.jar
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.class.version = 52.0
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.endorsed.dirs = C:\Program Files\Java\jre1.8.0_131\lib\endorsed
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.ext.dirs = C:\Program Files\Java\jre1.8.0_131\lib\ext;C:\windows\Sun\Java\lib\ext
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.home = C:\Program Files\Java\jre1.8.0_131
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.io.tmpdir = C:\Temp\
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.library.path = C:\Program Files\Java\jre1.8.0_131\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\Polarion\bundled\svn\bin;;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files (x86)\Google\Chrome\Application;C:\Polarion\bundled\svn\bin;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Users\s6fqxx\AppData\Local\Programs\Git\cmd;C:\Users\s6fqxx\Downloads\eclipse-jee-neon-3-win32-x86_64\eclipse;;.
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.runtime.name = Java(TM) SE Runtime Environment
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.runtime.version = 1.8.0_131-b11
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.security.policy = C:\Polarion\polarion/policy
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.specification.name = Java Platform API Specification
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.specification.vendor = Oracle Corporation
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.specification.version = 1.8
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vendor = Oracle Corporation
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vendor.url = http://java.oracle.com/
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.version = 1.8.0_131
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vm.info = mixed mode
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vm.specification.name = Java Virtual Machine Specification
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vm.specification.vendor = Oracle Corporation
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vm.specification.version = 1.8
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vm.vendor = Oracle Corporation
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - java.vm.version = 25.131-b11
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - javasvn.timeout = 10000
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - ldap.bind.password = **PASSWORD**HIDDEN**
+2017-05-15 18:47:46,200 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - licenseForNewUserAccount = 
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - line.separator = 
+
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - login = polarion
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - mavenConfigDir = C:\Polarion\polarion/../maven
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - minimalPasswordLength = **PASSWORD**HIDDEN**
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - multi-instance.configuration = C:\Polarion\polarion/configuration/multi-instance
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - multi-instance.shared.data = C:\Polarion\polarion/../data/multi-instance/shared.data
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.eclipse.lyo.oslc4j.strictDatatypes = false
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.osgi.framework.bootdelegation = *
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.osgi.framework.executionenvironment = J2SE-1.8
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.osgi.framework.language = en
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.osgi.framework.os.name = windows 10
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.osgi.framework.os.version = 10.0
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.osgi.framework.processor = amd64
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.osgi.framework.vendor = Eclipse
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.osgi.framework.version = 1.3.0
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.osgi.supports.framework.extension = true
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.xsocket.connection.client.readbuffer.usedirect = true
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - org.xsocket.connection.server.readbuffer.usedirect = true
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - os.arch = amd64
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - os.name = Windows 10
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - os.version = 10.0
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.arch = x86
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.bundles = reference:file:C:/Polarion/polarion/plugins/org.eclipse.core.runtime_3.1.2.jar@2:start,reference:file:C:/Polarion/polarion/plugins/org.eclipse.update.configurator_3.1.0.jar@3:start
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.bundles.defaultStartLevel = 4
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.bundlestore = D:\workdir\.metadata\.plugins\org.eclipse.pde.core\New_configuration\org.eclipse.osgi\bundles
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.checkConfiguration = true
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.configuration.area = file:/D:/workdir/.metadata/.plugins/org.eclipse.pde.core/New_configuration/
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.configuration.cascaded = false
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.dev = file:D:/workdir/.metadata/.plugins/org.eclipse.pde.core/New_configuration/dev.properties
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.framework = file:/C:/Polarion/polarion/plugins/org.eclipse.osgi_3.1.2.jar
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.framework.beginningstartlevel = 1
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.framework.shape = jar
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.framework.version = 3.1.2
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.install.area = file:/C:/Polarion/polarion/
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.instance.area = file:/C:/Polarion/data/workspace/
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.logfile = C:\Polarion\data\workspace\.metadata\.log
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.manifest.cache = D:\workdir\.metadata\.plugins\org.eclipse.pde.core\New_configuration\org.eclipse.osgi\manifests
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.nl = en_US
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.os = win32
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.syspath = c:\Polarion\polarion\plugins
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - osgi.ws = win32
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - password = **PASSWORD**HIDDEN**
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - path.separator = ;
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - pdfexport.config = C:\Polarion\polarion/configuration/pdfexport.xml
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - polarion.build.default.deploy.repository.id = polarion-shared
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - polarion.build.default.deploy.repository.url = file://C:\Polarion\polarion/../data/shared-maven-repo
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - polarion.build.maven.location.maven2 = C:\Polarion\polarion/../maven/distribution
+2017-05-15 18:47:46,201 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - polarion.global.doc.cache.size = 100
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - polarion.global.doc.cache.with.history = false
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - polarion.tx.doc.cache.size = 100
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - portalData = C:\Polarion\polarion/../data/portal-data
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - productLink.com.polarion.alm = https://polarion.plm.automation.siemens.com/products/polarion-alm
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - productLink.com.polarion.qa = https://polarion.plm.automation.siemens.com/products/polarion-qa
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - productLink.com.polarion.requirements = https://polarion.plm.automation.siemens.com/products/polarion-requirements
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - repo = http://localhost:80/repo/
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - repoSystem = file://C:/Polarion/data/svn/repo
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - rolesForNewUserAccount = user
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - RRDir = C:\Polarion\polarion/../data/RR
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - SDKDir = C:\Polarion\polarion/SDK
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - secure.approvals = false
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - shutdownCatchPhrase = shutdown
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - simple.profiler.enabled = false
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - skip.data.preloading = false
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - storeUrl.com.polarion.requirements = http://www.polarion.com/products/requirements/buy.php
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.arch.data.model = 64
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.boot.class.path = C:\Program Files\Java\jre1.8.0_131\lib\resources.jar;C:\Program Files\Java\jre1.8.0_131\lib\rt.jar;C:\Program Files\Java\jre1.8.0_131\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_131\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_131\lib\jce.jar;C:\Program Files\Java\jre1.8.0_131\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_131\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_131\classes;C:\Polarion\bundled\java\lib\tools.jar
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.boot.library.path = C:\Program Files\Java\jre1.8.0_131\bin
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.cpu.endian = little
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.cpu.isalist = amd64
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.desktop = windows
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.io.unicode.encoding = UnicodeLittle
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.java.command = org.eclipse.core.launcher.Main -application com.polarion.core.boot.app -data C:\Polarion\data\workspace -configuration file:D:/workdir/.metadata/.plugins/org.eclipse.pde.core/New_configuration/ -dev file:D:/workdir/.metadata/.plugins/org.eclipse.pde.core/New_configuration/dev.properties -os win32 -ws win32 -arch x86 -appId polarion.serve
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.java.launcher = SUN_STANDARD
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.jnu.encoding = Cp1252
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - sun.os.patch.level = 
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - support.contact = https://polarion.plm.automation.siemens.com/techsupport/resources
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - support.license.email = dsom.plm@siemens.com
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - support.sales.email = sales@polarion.com
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - svn.access.file = C:\Polarion\polarion/../data/svn/access
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - svn.passwd.file = C:\Polarion\polarion/../data/svn/passwd
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - svnkit.http.encoding = Cp1252
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - svnkit.library.gnome-keyring.enabled = false
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - TomcatService.ajp13-port = 8889
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - uiData = C:\Polarion\data\workspace/ui-data
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - user.country = US
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - user.dir = C:\Users\s6fqxx\Downloads\eclipse-jee-neon-3-win32-x86_64\eclipse
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - user.home = C:\Users\s6fqxx
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - user.language = en
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - user.name = s6fqxx
+2017-05-15 18:47:46,202 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - user.script = 
+2017-05-15 18:47:46,203 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - user.timezone = Asia/Calcutta
+2017-05-15 18:47:46,203 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - user.variant = 
+2017-05-15 18:47:46,203 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - userAccountVault = C:\Polarion\data\workspace/user-account-vault
+2017-05-15 18:47:46,203 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - workDir = C:\Polarion\data\workspace/polarion-data
+2017-05-15 18:47:46,203 [main] INFO  com.polarion.psvn.launcher.PolarionSVNApplication  - **** END of Java system properties
+2017-05-15 18:47:46,204 [main] INFO  com.polarion.psvn.launcher.internal.platform.PlatformService  - Starting Platform...
+2017-05-15 18:47:46,218 [main] INFO  PolarionLicensing  - Searching for valid license file in C:\Polarion\polarion\license
+2017-05-15 18:47:46,221 [main] INFO  PolarionLicensing  - Trying to load license file polarion.lic
+2017-05-15 18:47:46,228 [main] INFO  PolarionLicensing  - The license file contains the following fields:
+2017-05-15 18:47:46,228 [main] INFO  PolarionLicensing  - *** License fields ***
+2017-05-15 18:47:46,228 [main] INFO  PolarionLicensing  - VariantsConcurrentUsers = 10
+2017-05-15 18:47:46,228 [main] INFO  PolarionLicensing  - almConcurrentUsers = 10
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - dateCreated = 15.05.2017
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - expirationDate = 31.05.2018
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - generatedBy = license@polarion.com
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - hardwareKey = 19AA-A279-41B6
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - licenseFormat = 2017
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - licenseType = TERM
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - multiInstanceRunningInstances = 3
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - proConcurrentUsers = 10
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - product = Polarion
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - qaConcurrentUsers = 10
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - requirementsConcurrentUsers = 10
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - reviewerConcurrentUsers = 10
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - userCompany = Siemens PLM Software 
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - userEmail = vikas.ingale@siemens.com
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - userName = Ingale, Vikas
+2017-05-15 18:47:46,229 [main] INFO  PolarionLicensing  - *** License fields END ***
+2017-05-15 18:47:46,249 [main] INFO  PolarionLicensing  - Removing allocations by null
+2017-05-15 18:47:46,252 [main] INFO  PolarionLicensing  - STATS:concurrentVariantsUser,current:0,peak:0,limit:10
+2017-05-15 18:47:46,252 [main] INFO  PolarionLicensing  - 0 namedReviewerUser assignments (out of 0) loaded: []
+2017-05-15 18:47:46,252 [main] INFO  PolarionLicensing  - 1 concurrentReviewerUser assignments (out of -1) loaded: [admin]
+2017-05-15 18:47:46,252 [main] INFO  PolarionLicensing  - STATS:concurrentReviewerUser,current:0,peak:0,limit:10
+2017-05-15 18:47:46,252 [main] INFO  PolarionLicensing  - 0 namedProUser assignments (out of 0) loaded: []
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - 1 concurrentProUser assignments (out of -1) loaded: [admin]
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - STATS:concurrentProUser,current:0,peak:0,limit:10
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - 0 namedRequirementsUser assignments (out of 0) loaded: []
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - 1 concurrentRequirementsUser assignments (out of -1) loaded: [admin]
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - STATS:concurrentRequirementsUser,current:0,peak:0,limit:10
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - 0 namedQAUser assignments (out of 0) loaded: []
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - 1 concurrentQAUser assignments (out of -1) loaded: [admin]
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - STATS:concurrentQAUser,current:0,peak:0,limit:10
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - 0 namedALMUser assignments (out of 0) loaded: []
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - 1 concurrentALMUser assignments (out of -1) loaded: [admin]
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - STATS:concurrentALMUser,current:0,peak:0,limit:10
+2017-05-15 18:47:46,253 [main] INFO  PolarionLicensing  - 
+*******************************************************************
+ Polarion successfully activated
+*******************************************************************
+2017-05-15 18:47:46,333 [main] INFO  com.polarion.platform.internal.i18n.LanguageContributor  - Localization file /META-INF/messages_en.properties read successfully (6733 messages)
+2017-05-15 18:47:46,544 [main] INFO  com.polarion.platform.sql.internal.SqlModule  - Initializing database...
+2017-05-15 18:47:46,633 [main] INFO  com.polarion.platform.sql.internal.PgServerInfo  - PG server listening on localhost:5435
+2017-05-15 18:47:48,910 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Processing bundles:
+2017-05-15 18:47:48,910 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [0] - system.bundle
+2017-05-15 18:47:48,910 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [1] - org.eclipse.core.runtime
+2017-05-15 18:47:48,910 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [2] - org.eclipse.update.configurator
+2017-05-15 18:47:48,910 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [3] - org.eclipse.help
+2017-05-15 18:47:48,910 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [4] - org.eclipse.core.expressions
+2017-05-15 18:47:48,910 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [5] - org.eclipse.update.core.win32
+2017-05-15 18:47:48,910 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [6] - com.polarion.psvn.translations.en
+2017-05-15 18:47:48,910 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [7] - com.polarion.synchronizer
+2017-05-15 18:47:48,912 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.synchronizer to HiveMind
+2017-05-15 18:47:48,912 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [8] - org.eclipse.help.webapp
+2017-05-15 18:47:48,913 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [9] - com.polarion.subterra.persistence.document
+2017-05-15 18:47:48,913 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.subterra.persistence.document to HiveMind
+2017-05-15 18:47:48,913 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [10] - com.polarion.portal.metrics
+2017-05-15 18:47:48,914 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [11] - org.polarion.svnwebclient
+2017-05-15 18:47:48,915 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [12] - org.codehaus.groovy
+2017-05-15 18:47:48,916 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [13] - com.polarion.scripting.servlet
+2017-05-15 18:47:48,916 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [14] - org.eclipse.core.variables
+2017-05-15 18:47:48,916 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [15] - com.polarion.alm.wiki
+2017-05-15 18:47:48,919 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.alm.wiki to HiveMind
+2017-05-15 18:47:48,919 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [16] - com.polarion.subterra.persistence
+2017-05-15 18:47:48,920 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.subterra.persistence to HiveMind
+2017-05-15 18:47:48,920 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [17] - com.polarion.alm.checker
+2017-05-15 18:47:48,920 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.alm.checker to HiveMind
+2017-05-15 18:47:48,920 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [18] - com.polarion.subterra.index
+2017-05-15 18:47:48,921 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.subterra.index to HiveMind
+2017-05-15 18:47:48,921 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [19] - org.eclipse.core.boot
+2017-05-15 18:47:48,921 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [20] - org.eclipse.core.resources.win32
+2017-05-15 18:47:48,921 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [21] - org.eclipse.rcp
+2017-05-15 18:47:48,921 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [22] - com.trilead.ssh2
+2017-05-15 18:47:48,921 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [23] - net.sf.ehcache
+2017-05-15 18:47:48,922 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [24] - org.tmatesoft.sqljet
+2017-05-15 18:47:48,922 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [25] - com.siemens.polarion.rt.communication
+2017-05-15 18:47:48,923 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.siemens.polarion.rt.communication to HiveMind
+2017-05-15 18:47:48,923 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [26] - com.polarion.synchronizer.ui
+2017-05-15 18:47:48,923 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [27] - org.polarion.svncommons
+2017-05-15 18:47:48,924 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [28] - com.polarion.alm.ws.client
+2017-05-15 18:47:48,924 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [29] - javax.transaction
+2017-05-15 18:47:48,924 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [30] - com.polarion.cluster
+2017-05-15 18:47:48,924 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.cluster to HiveMind
+2017-05-15 18:47:48,924 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [31] - com.polarion.qcentre
+2017-05-15 18:47:48,925 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [32] - com.polarion.synchronizer.proxy.polarion
+2017-05-15 18:47:48,925 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [33] - com.polarion.webdav
+2017-05-15 18:47:48,925 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [34] - com.polarion.synchronizer.proxy.hpalm
+2017-05-15 18:47:48,926 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [35] - com.opensymphony.quartz
+2017-05-15 18:47:48,928 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [36] - com.polarion.alm.ws
+2017-05-15 18:47:48,929 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [37] - org.apache.hivemind
+2017-05-15 18:47:48,929 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle org.apache.hivemind to HiveMind
+2017-05-15 18:47:48,929 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [38] - com.polarion.alm.tracker
+2017-05-15 18:47:48,934 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.alm.tracker to HiveMind
+2017-05-15 18:47:48,934 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [39] - org.eclipse.core.filebuffers
+2017-05-15 18:47:48,934 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [40] - org.eclipse.ant.core
+2017-05-15 18:47:48,934 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [41] - com.polarion.platform.repository
+2017-05-15 18:47:48,934 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.platform.repository to HiveMind
+2017-05-15 18:47:48,934 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [42] - org.eclipse.update.core
+2017-05-15 18:47:48,935 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [43] - com.polarion.ooxml
+2017-05-15 18:47:48,940 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [44] - org.eclipse.tomcat
+2017-05-15 18:47:48,945 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [45] - com.siemens.polarion.rt.communication.ws
+2017-05-15 18:47:48,946 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [46] - org.eclipse.osgi.services
+2017-05-15 18:47:48,946 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [48] - com.siemens.polarion.rt.parsers.c
+2017-05-15 18:47:48,947 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [49] - org.eclipse.text
+2017-05-15 18:47:48,947 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [50] - org.eclipse.team.core
+2017-05-15 18:47:48,947 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [51] - com.polarion.synchronizer.proxy.reqif
+2017-05-15 18:47:48,950 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [52] - org.eclipse.core.commands
+2017-05-15 18:47:48,950 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [53] - com.siemens.polarion.rt.ui
+2017-05-15 18:47:48,950 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [54] - com.polarion.portal.tomcat
+2017-05-15 18:47:48,950 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.portal.tomcat to HiveMind
+2017-05-15 18:47:48,950 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [55] - com.polarion.platform.monitoring
+2017-05-15 18:47:48,951 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.platform.monitoring to HiveMind
+2017-05-15 18:47:48,951 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [57] - com.polarion.platform.repository.external.git
+2017-05-15 18:47:48,952 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.platform.repository.external.git to HiveMind
+2017-05-15 18:47:48,952 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [58] - org.eclipse.platform
+2017-05-15 18:47:48,952 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [59] - org.junit
+2017-05-15 18:47:48,952 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [60] - com.polarion.scripting
+2017-05-15 18:47:48,953 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.scripting to HiveMind
+2017-05-15 18:47:48,953 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [61] - net.htmlparser.jericho
+2017-05-15 18:47:48,953 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [62] - org.apache.log4j
+2017-05-15 18:47:48,953 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [63] - com.polarion.subterra.base
+2017-05-15 18:47:48,953 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [65] - com.polarion.platform.jobs
+2017-05-15 18:47:48,954 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.platform.jobs to HiveMind
+2017-05-15 18:47:48,954 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [66] - com.polarion.usdp.persistence
+2017-05-15 18:47:48,954 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.usdp.persistence to HiveMind
+2017-05-15 18:47:48,954 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [67] - com.sun.jersey
+2017-05-15 18:47:48,957 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [68] - com.polarion.alm.ui
+2017-05-15 18:47:48,958 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.alm.ui to HiveMind
+2017-05-15 18:47:48,958 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [69] - com.polarion.alm.ui.diagrams.mxgraph
+2017-05-15 18:47:48,958 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [70] - com.polarion.platform.persistence
+2017-05-15 18:47:48,958 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.platform.persistence to HiveMind
+2017-05-15 18:47:48,958 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [71] - org.eclipse.core.resources.compatibility
+2017-05-15 18:47:48,958 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [72] - com.polarion.purevariants
+2017-05-15 18:47:48,959 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.purevariants to HiveMind
+2017-05-15 18:47:48,959 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [73] - net.n3.nanoxml
+2017-05-15 18:47:48,959 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [74] - com.siemens.polarion.rt.api
+2017-05-15 18:47:48,960 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [75] - com.polarion.platform
+2017-05-15 18:47:48,960 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.platform to HiveMind
+2017-05-15 18:47:48,960 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [76] - com.polarion.psvn.launcher
+2017-05-15 18:47:48,960 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.psvn.launcher to HiveMind
+2017-05-15 18:47:48,960 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [77] - org.objectweb.jotm
+2017-05-15 18:47:48,960 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [78] - com.polarion.fop
+2017-05-15 18:47:48,964 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [79] - org.apache.poi
+2017-05-15 18:47:48,969 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [80] - org.eclipse.help.appserver
+2017-05-15 18:47:48,969 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [81] - org.eclipse.help.base
+2017-05-15 18:47:48,969 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [82] - com.polarion.alm.qcentre
+2017-05-15 18:47:48,969 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.alm.qcentre to HiveMind
+2017-05-15 18:47:48,969 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [83] - org.apache.lucene
+2017-05-15 18:47:48,970 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [84] - org.eclipse.team.cvs.core
+2017-05-15 18:47:48,970 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [85] - net.java.dev.jna
+2017-05-15 18:47:48,970 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [86] - com.polarion.platform.repository.driver.svn
+2017-05-15 18:47:48,970 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.platform.repository.driver.svn to HiveMind
+2017-05-15 18:47:48,970 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [87] - org.eclipse.osgi.util
+2017-05-15 18:47:48,970 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [88] - org.apache.ant
+2017-05-15 18:47:48,976 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [89] - com.polarion.alm.reindexer
+2017-05-15 18:47:48,976 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.alm.reindexer to HiveMind
+2017-05-15 18:47:48,976 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [90] - org.eclipse.core.runtime.compatibility
+2017-05-15 18:47:48,976 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [91] - org.eclipse.ltk.core.refactoring
+2017-05-15 18:47:48,976 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [93] - com.polarion.alm.builder
+2017-05-15 18:47:48,977 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.alm.builder to HiveMind
+2017-05-15 18:47:48,977 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [94] - org.apache.curator
+2017-05-15 18:47:48,980 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [95] - com.polarion.platform.guice
+2017-05-15 18:47:48,980 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [96] - com.polarion.alm.install
+2017-05-15 18:47:48,981 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [97] - org.apache.axis
+2017-05-15 18:47:48,983 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [98] - com.polarion.portal.jetspeed
+2017-05-15 18:47:48,992 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [99] - com.polarion.synchronizer.proxy.jira
+2017-05-15 18:47:48,992 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [100] - com.polarion.platform.sql
+2017-05-15 18:47:48,992 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.platform.sql to HiveMind
+2017-05-15 18:47:48,992 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [102] - com.siemens.polarion.rt
+2017-05-15 18:47:49,001 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [103] - com.siemens.polarion.rt.collectors.git
+2017-05-15 18:47:49,001 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [104] - org.eclipse.debug.core
+2017-05-15 18:47:49,002 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [105] - com.polarion.core.boot
+2017-05-15 18:47:49,002 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [106] - com.polarion.core.util
+2017-05-15 18:47:49,002 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [107] - com.polarion.alm.projects
+2017-05-15 18:47:49,002 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.alm.projects to HiveMind
+2017-05-15 18:47:49,002 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [108] - org.tmatesoft.svnkit
+2017-05-15 18:47:49,002 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [109] - com.polarion.alm.oslc
+2017-05-15 18:47:49,002 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.alm.oslc to HiveMind
+2017-05-15 18:47:49,002 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [110] - com.polarion.platform.hivemind
+2017-05-15 18:47:49,003 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  - Add bundle com.polarion.platform.hivemind to HiveMind
+2017-05-15 18:47:49,003 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [111] - com.polarion.example.servlet
+2017-05-15 18:47:49,003 [main] INFO  com.polarion.platform.hivemind.EclipseHiveMindPlatform  -   [112] - org.eclipse.core.resources
+2017-05-15 18:47:49,417 [main] INFO  com.polarion.core.util.remote.server.SocketRemoteControlServer  - Remote control server socket is ready to listen on 127.0.0.1/127.0.0.1:8887
+2017-05-15 18:47:49,417 [xServer:8887] INFO  org.xsocket.connection.Server  - server listening on 127.0.0.1:8887 (xSocket 2.5.3)
+2017-05-15 18:47:49,427 [main] INFO  com.polarion.platform.internal.cache.CacheConfigurator  - EHCache uses internal configuration
+2017-05-15 18:47:49,628 [main] INFO  com.polarion.platform.sql.internal.PgConnection  - JDBC url of database 'polarion' is: jdbc:postgresql://localhost:5433/polarion
+2017-05-15 18:47:49,631 [main] INFO  com.polarion.platform.sql.internal.PgConnection  - JDBC url of database 'polarion' is: jdbc:postgresql://localhost:5433/polarion
+2017-05-15 18:47:49,633 [main] INFO  com.polarion.platform.sql.internal.PgConnection  - JDBC url of database 'polarion_history' is: jdbc:postgresql://localhost:5433/polarion_history
+2017-05-15 18:47:49,828 [main] INFO  com.polarion.platform.sql.internal.SqlModule  - Initializing database finished [ TIME 3.28 s. ]
+2017-05-15 18:47:50,134 [main] INFO  com.polarion.cluster.ClusterService  - Initializing cluster service
+2017-05-15 18:47:50,135 [main] INFO  com.polarion.cluster.ClusterService  - Cluster service is disabled.
+2017-05-15 18:47:50,450 [main] INFO  com.polarion.platform.startup  - Opening historical database...
+2017-05-15 18:47:50,656 [main] INFO  com.polarion.platform.startup  - Opening of historical database finished [ TIME 0.206 s. ]
+2017-05-15 18:47:50,656 [main] INFO  com.polarion.platform.startup  - Opening head database...
+2017-05-15 18:47:50,709 [main] INFO  com.polarion.platform.startup  - Opening of head database finished [ TIME 0.053 s. ]
+2017-05-15 18:47:50,709 [main] INFO  com.polarion.psvn.launcher.internal.platform.PlatformService  - Platform boot started
+2017-05-15 18:47:50,768 [main] INFO  com.polarion.platform.internal.security.SecurityService  - User polarion tries to log in from system
+2017-05-15 18:47:50,809 [main] INFO  com.polarion.platform.internal.security.SecurityService  - User polarion logged in from system
+2017-05-15 18:47:50,813 [main | u:p] INFO  com.polarion.platform.internal.service.repository.PlatformRepositoryService  - Repository Service Created
+2017-05-15 18:47:50,813 [main | u:p] INFO  com.polarion.platform.internal.service.repository.PlatformRepositoryService  - Repository Service Initialized
+2017-05-15 18:47:50,821 [main | u:p] INFO  com.polarion.core.util.profiling.SimpleProfiler  - Initialization
+2017-05-15 18:47:50,846 [main | u:p] INFO  org.objectweb.jotm  - JOTM started with a local transaction factory which is not bound.
+2017-05-15 18:47:50,846 [main | u:p] INFO  org.objectweb.jotm  - CAROL initialization
+2017-05-15 18:47:50,868 [main | u:p] INFO  com.polarion.platform.internal.service.repository.PlatformRepositoryService  - END initializeService
+2017-05-15 18:47:50,871 [main | u:p] INFO  com.polarion.psvn.launcher.internal.platform.PlatformService  - Polarion startup estimation:  [ TIME 70 s. ]
+2017-05-15 18:47:50,871 [main | u:p] INFO  com.polarion.platform.startup  -  -- Polarion startup estimation:  [ TIME 70 s. ]
+2017-05-15 18:47:50,879 [main | u:p] INFO  com.polarion.platform.monitoring  - Full monitoring results are stored in file C:\Polarion\data\workspace\monitoring\results.txt
+2017-05-15 18:47:50,906 [main | u:p] INFO  com.polarion.platform.monitoring  - Executing actions from stage PREBOOT
+2017-05-15 18:47:50,908 [main | u:p] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.disk.data.free'
+2017-05-15 18:47:50,909 [main | u:p] INFO  com.polarion.platform.monitoring  - system.info.disk.data.free (Free data disk 'C:\Polarion\polarion\..\data' space) = Disk Space 
+858.08 GB
+ [Mon May 15 18:47:50 IST 2017]
+2017-05-15 18:47:50,924 [main | u:p] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.jvm.version'
+2017-05-15 18:47:50,924 [main | u:p] INFO  com.polarion.platform.monitoring  - system.info.jvm.version (JVM Version) = JVM Version 
+Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.131-b11
+ [Mon May 15 18:47:50 IST 2017]
+2017-05-15 18:47:50,932 [main | u:p] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.os.version'
+2017-05-15 18:47:50,932 [main | u:p] INFO  com.polarion.platform.monitoring  - system.info.os.version (OS Version) = OS Version 
+Windows 10 10.0 amd64
+ [Mon May 15 18:47:50 IST 2017]
+2017-05-15 18:47:50,940 [main | u:p] INFO  com.polarion.platform.monitoring  - Finished with actions from stage PREBOOT: {OK=3}
+2017-05-15 18:47:50,941 [main | u:p] INFO  com.polarion.platform.startup  - Platform startup ... took  [ TIME 4.77 s. ]
+2017-05-15 18:47:50,941 [main | u:p] INFO  TXLOGGER  - Summary for 'Platform startup': transactions: 0, DB: 0.0381 s [52% update (126x), 46% query (13x)] (206x), svn: 0.0204 s [82% checkPath (1x)] (3x)
+2017-05-15 18:47:50,941 [main | u:p] INFO  com.polarion.psvn.launcher.internal.platform.PlatformService  - calling ILowLevelPersistence.boot to start persistence
+2017-05-15 18:47:50,957 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Persistence initialization started
+2017-05-15 18:47:51,045 [main | u:p] INFO  com.polarion.platform.repository.internal.context.RepositoryContextService  - Context recognition started
+2017-05-15 18:47:51,045 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-15 18:47:51,045 [main | u:p] INFO  com.polarion.platform.startup  - Context recognition (Phase: 2/9)
+2017-05-15 18:47:51,068 [main | u:p] INFO  com.polarion.platform.repository.internal.context.RepositoryContextService  - Context recognition finished [ TIME 0.0231 s. ]
+2017-05-15 18:47:51,068 [main | u:p] INFO  com.polarion.platform.repository.internal.context.RepositoryContextService  - Context tree: 
+ROOT_CTX_NAME (ContextNature[Root], ContextId[context [global]])
++-default (ContextNature[Repository], ContextId[cluster default, context [global]])
+  +-Demo Projects (ContextNature[ProjectGroup], ContextId[cluster default, context --Demo Projects])
+  | +-elibrary (ContextNature[Project], ContextId[cluster default, context elibrary])
+  | +-drivepilot (ContextNature[Project], ContextId[cluster default, context drivepilot])
+  +-library (ContextNature[Project], ContextId[cluster default, context library])
+2017-05-15 18:47:51,068 [main | u:p] INFO  com.polarion.platform.startup  - Context recognition ... took  [ TIME 0.13 s. ]
+2017-05-15 18:47:51,068 [main | u:p] INFO  TXLOGGER  - Summary for 'Context recognition': transactions: 0, svn: 0.0519 s [44% info (3x), 28% getFile content (1x), 28% getDir2 content (2x)] (6x)
+2017-05-15 18:47:51,069 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-15 18:47:51,069 [main | u:p] INFO  com.polarion.platform.startup  - Context initialization (Phase: 3/9)
+2017-05-15 18:47:51,069 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Startup workers for phase 3: 5
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-2 | u:p | cluster: default] INFO  com.polarion.platform.startup  -  -- Initializing cluster: default (1/6)
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-3 | u:p | context: --Demo Projects] INFO  com.polarion.platform.startup  -  -- Initializing context: --Demo Projects (5/6)
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-2 | u:p | cluster: default] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Initializing context:ContextId[cluster default, context [global]] (1/6) ...
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-5 | u:p | context: elibrary] INFO  com.polarion.platform.startup  -  -- Initializing context: elibrary (4/6)
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-5 | u:p | context: elibrary] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Initializing context:ContextId[cluster default, context elibrary] (4/6) ...
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-3 | u:p | context: --Demo Projects] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Initializing context:ContextId[cluster default, context --Demo Projects] (5/6) ...
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-1 | u:p | context: [GLOBAL]] INFO  com.polarion.platform.startup  -  -- Initializing context: [GLOBAL] (3/6)
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-1 | u:p | context: [GLOBAL]] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Initializing context:ContextId[context [global]] (3/6) ...
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-4 | u:p | context: library] INFO  com.polarion.platform.startup  -  -- Initializing context: library (2/6)
+2017-05-15 18:47:51,071 [LowLevelDataService-contextInitializer-4 | u:p | context: library] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Initializing context:ContextId[cluster default, context library] (2/6) ...
+2017-05-15 18:47:51,075 [LowLevelDataService-contextInitializer-1 | u:p | context: [GLOBAL]] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Intializing context:ContextId[context [global]] (3/6) TOOK  [ TIME 0.00324 s. ]
+2017-05-15 18:47:51,075 [LowLevelDataService-contextInitializer-1 | u:p | context: drivepilot] INFO  com.polarion.platform.startup  -  -- Initializing context: drivepilot (6/6)
+2017-05-15 18:47:51,075 [LowLevelDataService-contextInitializer-1 | u:p | context: drivepilot] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Initializing context:ContextId[cluster default, context drivepilot] (6/6) ...
+2017-05-15 18:47:51,159 [LowLevelDataService-contextInitializer-2 | u:p | cluster: default] INFO  com.polarion.subterra.persistence.document.DocumentStorage  - [Statistics]: context null contains 19 primary objects (work items+comments).
+2017-05-15 18:47:51,178 [LowLevelDataService-contextInitializer-3 | u:p | context: --Demo Projects] INFO  com.polarion.platform.repository.driver.svn.internal.JavaSvnDriver  - notExistingTargetPathsCache: caching not existing path '/Demo Projects/.polarion'
+2017-05-15 18:47:51,184 [LowLevelDataService-contextInitializer-3 | u:p | context: --Demo Projects] INFO  com.polarion.platform.repository.driver.svn.internal.JavaSvnDriver  - notExistingTargetPathsCache: caching not existing path '/Demo Projects/modules'
+2017-05-15 18:47:51,190 [LowLevelDataService-contextInitializer-3 | u:p | context: --Demo Projects] INFO  com.polarion.platform.repository.driver.svn.internal.JavaSvnDriver  - notExistingTargetPathsCache: caching not existing path '/Demo Projects/documents'
+2017-05-15 18:47:51,196 [LowLevelDataService-contextInitializer-3 | u:p | context: --Demo Projects] INFO  com.polarion.platform.repository.driver.svn.internal.JavaSvnDriver  - notExistingTargetPathsCache: caching not existing path '/Demo Projects/_wiki'
+2017-05-15 18:47:51,196 [LowLevelDataService-contextInitializer-3 | u:p | context: --Demo Projects] INFO  com.polarion.subterra.persistence.document.DocumentStorage  - [Statistics]: context --Demo Projects contains 0 primary objects (work items+comments).
+2017-05-15 18:47:51,199 [LowLevelDataService-contextInitializer-3 | u:p | context: --Demo Projects] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Intializing context:ContextId[cluster default, context --Demo Projects] (5/6) TOOK  [ TIME 0.128 s. ]
+2017-05-15 18:47:51,203 [LowLevelDataService-contextInitializer-2 | u:p | cluster: default] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Intializing context:ContextId[cluster default, context [global]] (1/6) TOOK  [ TIME 0.133 s. ]
+2017-05-15 18:47:51,270 [LowLevelDataService-contextInitializer-4 | u:p | context: library] INFO  com.polarion.platform.repository.driver.svn.internal.JavaSvnDriver  - notExistingTargetPathsCache: caching not existing path '/library/documents'
+2017-05-15 18:47:51,285 [LowLevelDataService-contextInitializer-5 | u:p | context: elibrary] INFO  com.polarion.platform.repository.driver.svn.internal.JavaSvnDriver  - notExistingTargetPathsCache: caching not existing path '/Demo Projects/elibrary/documents'
+2017-05-15 18:47:51,306 [LowLevelDataService-contextInitializer-1 | u:p | context: drivepilot] INFO  com.polarion.platform.repository.driver.svn.internal.JavaSvnDriver  - notExistingTargetPathsCache: caching not existing path '/Demo Projects/drivepilot/documents'
+2017-05-15 18:47:51,312 [LowLevelDataService-contextInitializer-5 | u:p | context: elibrary] INFO  com.polarion.subterra.persistence.document.DocumentStorage  - [Statistics]: context elibrary contains 219 primary objects (work items+comments).
+2017-05-15 18:47:51,314 [LowLevelDataService-contextInitializer-4 | u:p | context: library] INFO  com.polarion.subterra.persistence.document.DocumentStorage  - [Statistics]: context library contains 287 primary objects (work items+comments).
+2017-05-15 18:47:51,315 [LowLevelDataService-contextInitializer-5 | u:p | context: elibrary] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Intializing context:ContextId[cluster default, context elibrary] (4/6) TOOK  [ TIME 0.244 s. ]
+2017-05-15 18:47:51,316 [LowLevelDataService-contextInitializer-4 | u:p | context: library] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Intializing context:ContextId[cluster default, context library] (2/6) TOOK  [ TIME 0.245 s. ]
+2017-05-15 18:47:51,391 [LowLevelDataService-contextInitializer-1 | u:p | context: drivepilot] INFO  com.polarion.subterra.persistence.document.DocumentStorage  - [Statistics]: context drivepilot contains 499 primary objects (work items+comments).
+2017-05-15 18:47:51,403 [LowLevelDataService-contextInitializer-1 | u:p | context: drivepilot] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Intializing context:ContextId[cluster default, context drivepilot] (6/6) TOOK  [ TIME 0.328 s. ]
+2017-05-15 18:47:51,404 [LowLevelDataService-contextInitializer-3 | u:p] INFO  TXLOGGER  - Summary: Total: 0.333 s, transactions: 0, svn: 0.0433 s [95% log2 (5x)] (6x)
+2017-05-15 18:47:51,404 [LowLevelDataService-contextInitializer-2 | u:p] INFO  TXLOGGER  - Summary: Total: 0.333 s, transactions: 0, ObjectMaps: 0.021 s [99% getAllPrimaryObjects (1x)] (7x)
+2017-05-15 18:47:51,404 [LowLevelDataService-contextInitializer-4 | u:p] INFO  TXLOGGER  - Summary: Total: 0.333 s, transactions: 0, svn: 0.0477 s [96% log2 (5x)] (6x), ObjectMaps: 0.0345 s [100% getAllPrimaryObjects (1x)] (7x)
+2017-05-15 18:47:51,404 [LowLevelDataService-contextInitializer-5 | u:p] INFO  TXLOGGER  - Summary: Total: 0.333 s, transactions: 0, svn: 0.0685 s [97% log2 (5x)] (6x), ObjectMaps: 0.0266 s [100% getAllPrimaryObjects (1x)] (7x)
+2017-05-15 18:47:51,405 [LowLevelDataService-contextInitializer-1 | u:p] INFO  TXLOGGER  - Summary: Total: 0.333 s, transactions: 0, svn: 0.124 s [41% log2 (5x), 21% getFile content (2x), 20% log (1x)] (12x), ObjectMaps: 0.0408 s [97% getAllPrimaryObjects (1x)] (13x)
+2017-05-15 18:47:51,405 [main | u:p] INFO  com.polarion.platform.startup  - Context initialization ... took  [ TIME 0.34 s. ]
+2017-05-15 18:47:51,405 [main | u:p] INFO  TXLOGGER  - Summary for 'Context initialization': transactions: 0, svn: 0.297 s [73% log2 (21x), 9% getFile content (2x)] (32x), ObjectMaps: 0.123 s [99% getAllPrimaryObjects (5x)] (41x)
+2017-05-15 18:47:51,411 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule  - Processing new revisions [START].
+2017-05-15 18:47:51,411 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-15 18:47:51,411 [main | u:p] INFO  com.polarion.platform.startup  - Revisions processing (Phase: 4/9)
+2017-05-15 18:47:51,423 [main | u:p] INFO  com.polarion.subterra.base.internal.location.LocationCacheContext  - Registered invalidationListener: com.polarion.platform.repository.internal.config.RepositoryConfigService$1@59a79443
+2017-05-15 18:47:51,615 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing new revisions from repository default in context ContextId[context [global]]
+2017-05-15 18:47:51,623 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule  - Processing new revisions from repository default in context ContextId[context [global]] finished
+2017-05-15 18:47:51,624 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule  - Processing new revisions [FINISHED].
+2017-05-15 18:47:51,624 [main | u:p] INFO  com.polarion.platform.startup  - Revisions processing ... took  [ TIME 0.22 s. ]
+2017-05-15 18:47:51,624 [main | u:p] INFO  TXLOGGER  - Summary for 'Revisions processing': transactions: 10, RepositoryConfigService: 0.148 s [100% getReadConfiguration (30x)] (30x), svn: 0.0796 s [84% info (11x)] (24x)
+2017-05-15 18:47:51,663 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-15 18:47:51,663 [main | u:p] INFO  com.polarion.platform.startup  - Build artifacts recognition (Phase: 5/9)
+2017-05-15 18:47:51,663 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Inspecting repository for build artifacts-related changes
+2017-05-15 18:47:51,663 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts from context ContextId[context [global]]
+2017-05-15 18:47:51,663 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts configuration from context ContextId[context [global]]
+2017-05-15 18:47:51,665 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Build artifacts configuration from context ContextId[context [global]] has been successfully processed
+2017-05-15 18:47:51,669 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... processing build artifacts from context ContextId[context [global]] finished [ TIME 0.00524 s. ]
+2017-05-15 18:47:51,669 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: [GLOBAL] (1/6)
+2017-05-15 18:47:51,669 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts from context ContextId[cluster default, context [global]]
+2017-05-15 18:47:51,669 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts configuration from context ContextId[cluster default, context [global]]
+2017-05-15 18:47:51,696 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Build artifacts configuration from context ContextId[cluster default, context [global]] has been successfully processed
+2017-05-15 18:47:51,773 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... processing build artifacts from context ContextId[cluster default, context [global]] finished [ TIME 0.104 s. ]
+2017-05-15 18:47:51,773 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from cluster: default (2/6)
+2017-05-15 18:47:51,774 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts from context ContextId[cluster default, context --Demo Projects]
+2017-05-15 18:47:51,774 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts configuration from context ContextId[cluster default, context --Demo Projects]
+2017-05-15 18:47:51,790 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Build artifacts configuration from context ContextId[cluster default, context --Demo Projects] has been successfully processed
+2017-05-15 18:47:51,811 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... processing build artifacts from context ContextId[cluster default, context --Demo Projects] finished [ TIME 0.0374 s. ]
+2017-05-15 18:47:51,811 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: --Demo Projects (3/6)
+2017-05-15 18:47:51,811 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts from context ContextId[cluster default, context library]
+2017-05-15 18:47:51,811 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts configuration from context ContextId[cluster default, context library]
+2017-05-15 18:47:51,836 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Build artifacts configuration from context ContextId[cluster default, context library] has been successfully processed
+2017-05-15 18:47:51,858 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... processing build artifacts from context ContextId[cluster default, context library] finished [ TIME 0.0466 s. ]
+2017-05-15 18:47:51,858 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: library (4/6)
+2017-05-15 18:47:51,858 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts from context ContextId[cluster default, context elibrary]
+2017-05-15 18:47:51,858 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts configuration from context ContextId[cluster default, context elibrary]
+2017-05-15 18:47:51,890 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Build artifacts configuration from context ContextId[cluster default, context elibrary] has been successfully processed
+2017-05-15 18:47:51,966 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... processing build artifacts from context ContextId[cluster default, context elibrary] finished [ TIME 0.109 s. ]
+2017-05-15 18:47:51,966 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: elibrary (5/6)
+2017-05-15 18:47:51,966 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts from context ContextId[cluster default, context drivepilot]
+2017-05-15 18:47:51,966 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Processing build artifacts configuration from context ContextId[cluster default, context drivepilot]
+2017-05-15 18:47:51,998 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Build artifacts configuration from context ContextId[cluster default, context drivepilot] has been successfully processed
+2017-05-15 18:47:52,086 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... processing build artifacts from context ContextId[cluster default, context drivepilot] finished [ TIME 0.119 s. ]
+2017-05-15 18:47:52,086 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: drivepilot (6/6)
+2017-05-15 18:47:52,087 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... repository inspection finished [ TIME 0.422 s. ]
+2017-05-15 18:47:52,087 [main | u:p] INFO  com.polarion.platform.startup  - Build artifacts recognition ... took  [ TIME 0.46 s. ]
+2017-05-15 18:47:52,087 [main | u:p] INFO  TXLOGGER  - Summary for 'Build artifacts recognition': transactions: 30, svn: 0.35 s [83% info (60x)] (103x), RepositoryConfigService: 0.315 s [100% getReadConfiguration (36x)] (36x)
+2017-05-15 18:47:52,087 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-15 18:47:52,087 [main | u:p] INFO  com.polarion.platform.startup  - BIR inspection (Phase: 6/9)
+2017-05-15 18:47:52,087 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - Inspecting BIR for new or removed builds
+2017-05-15 18:47:52,116 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... 0 build(s) were removed (including calculations from previous run)
+2017-05-15 18:47:52,116 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... 0 build(s) were added or modified
+2017-05-15 18:47:52,116 [main | u:p] INFO  com.polarion.alm.builder.internal.persistence.BuilderPersistenceModule  - ... BIR inspection finished [ TIME 0.0292 s. ]
+2017-05-15 18:47:52,116 [main | u:p] INFO  com.polarion.platform.startup  - BIR inspection ... took  [ TIME 0.03 s. ]
+2017-05-15 18:47:52,116 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-15 18:47:52,116 [main | u:p] INFO  com.polarion.platform.startup  - Data indexing (Phase: 7/9)
+2017-05-15 18:47:52,117 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.PersistenceEngineListener  - Flushing startup index events, starting iterations.
+2017-05-15 18:47:52,117 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.PersistenceEngineListener  - Iteration 1 - processing 5 events
+2017-05-15 18:47:52,123 [main | u:p] INFO  com.polarion.alm.tracker.internal.planning.PlanFieldsProvider  - livePlanXMLLocation: Location[path /default/.reports/xml/live-plan.xml]
+2017-05-15 18:47:52,133 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.PersistenceEngineListener  -  - reindexing 1 existing objects and 0 deleted objects.
+2017-05-15 18:47:52,253 [main | u:p] INFO  com.polarion.platform.startup  -  -- Refreshing 1 objects in index: Revision
+2017-05-15 18:47:52,257 [main | u:p] INFO  com.polarion.platform.startup  -  -- -- 1 from 1 objects were refreshed (100%)
+2017-05-15 18:47:52,516 [main | u:p] INFO  com.polarion.platform.persistence.internal.calcfields.DelegatingCalculatedFieldsListener  - Calculated fields mode: async
+2017-05-15 18:47:52,518 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.PersistenceEngineListener  - Flushing took  [ TIME 0.402 s. ]
+2017-05-15 18:47:52,518 [main | u:p] INFO  com.polarion.platform.startup  - Data indexing ... took  [ TIME 0.4 s. ]
+2017-05-15 18:47:52,518 [main | u:p] INFO  TXLOGGER  - Summary for 'Data indexing': transactions: 0, Lucene: 0.162 s [100% refresh (1x)] (1x), SubterraURITable: 0.0852 s [100% addIfNotExistsDB (1x)] (1x)
+2017-05-15 18:47:52,519 [main | u:p] INFO  com.polarion.platform.internal.service.repository.ListenerManager  - Starting the pulling job for repository: default
+2017-05-15 18:47:52,519 [main | u:p] INFO  com.polarion.platform.persistence.internal.pe.LowLevelDataService  - Persistence initialization finished [ TIME 1.56 s. ]
+2017-05-15 18:47:52,519 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-15 18:47:52,519 [main | u:p] INFO  com.polarion.platform.startup  - Fields recalculation (Phase: 8/9)
+2017-05-15 18:47:52,520 [main | u:p] INFO  com.polarion.platform.persistence.internal.calcfields.CalculatedFieldsStorage  - Checking integrity of calculated fields storage C:\Polarion\data\workspace\polarion-data\calculated-fields
+2017-05-15 18:47:52,528 [main | u:p] INFO  com.polarion.platform.startup  - Fields recalculation ... took  [ TIME 0.01 s. ]
+2017-05-15 18:47:52,528 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-15 18:47:52,528 [main | u:p] INFO  com.polarion.platform.startup  - Polarion startup (Phase: 9/9)
+2017-05-15 18:47:52,559 [main | u:p] INFO  com.polarion.platform.jobs.internal.service.scheduler.JobSchedulerService  - Updating local scheduler state: start
+2017-05-15 18:47:52,568 [main | u:p | u:p] INFO  org.quartz.simpl.SimpleThreadPool  - Job execution threads will use class loader of thread: main | u:p | u:p
+2017-05-15 18:47:52,575 [main | u:p | u:p] INFO  org.quartz.simpl.RAMJobStore  - RAMJobStore initialized.
+2017-05-15 18:47:52,575 [main | u:p | u:p] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-05-15 18:47:52,575 [main | u:p | u:p] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler version: 1.4.2
+2017-05-15 18:47:52,576 [main | u:p | u:p] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2017-05-15 18:47:52,576 [main | u:p | u:p] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2017-05-15 18:47:52,576 [main | u:p | u:p] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2017-05-15 18:47:52,577 [main | u:p | u:p] INFO  org.quartz.simpl.SimpleThreadPool  - Job execution threads will use class loader of thread: main | u:p | u:p
+2017-05-15 18:47:52,577 [main | u:p | u:p] INFO  org.quartz.simpl.RAMJobStore  - RAMJobStore initialized.
+2017-05-15 18:47:52,577 [main | u:p | u:p] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-05-15 18:47:52,577 [main | u:p | u:p] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler version: 1.4.2
+2017-05-15 18:47:52,577 [main | u:p | u:p] INFO  com.polarion.platform.jobs.internal.service.scheduler.JobSchedulerService  - 16 scheduled job(s) configured
+2017-05-15 18:47:52,583 [main | u:p | u:p] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-05-15 18:47:52,584 [main] INFO  com.polarion.psvn.launcher.internal.platform.PlatformService  - Platform boot finished
+2017-05-15 18:47:52,584 [main] INFO  com.polarion.psvn.launcher.internal.platform.PlatformService  - Platform started
+2017-05-15 18:47:52,589 [main] INFO  com.polarion.psvn.launcher.internal.tomcat.TomcatService  - Starting Tomcat...
+2017-05-15 18:47:52,657 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added root webapp 'WebappContribution[webappName: ROOT, contextRoot: /webapps/ROOT, plugin: com.polarion.portal.tomcat_8.0.30, isRoot: true, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,659 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: webui, contextRoot: webapp/webui, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: -10]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,660 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - jetspeed.db:C:\Polarion\polarion\..\data\portal-data
+2017-05-15 18:47:52,660 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion, contextRoot: webapps/jetspeed, plugin: com.polarion.portal.jetspeed_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,661 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/activate, contextRoot: webapp/activation, plugin: com.polarion.psvn.launcher_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,661 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/announcements, contextRoot: webapp/announcements, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,662 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/bir, contextRoot: webapp/bir, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,662 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/codemirror-modes, contextRoot: webapp/codemirror-modes, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,663 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/doorsconnector, contextRoot: webapp, plugin: com.polarion.synchronizer_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,663 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/example, contextRoot: webapp, plugin: com.polarion.example.servlet_1.0.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,664 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/export, contextRoot: webapp/export, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,664 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/fileupload, contextRoot: webapp/fileupload, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,664 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/gwt, contextRoot: war, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,665 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/icons, contextRoot: webapp/icons, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,665 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/internal-login, contextRoot: webapp/internal-login, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,666 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/module-attachment, contextRoot: webapp/attachments, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,666 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/modulehome, contextRoot: webapp/module-home, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,667 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/mxgraph, contextRoot: draw.io/war, plugin: com.polarion.alm.ui.diagrams.mxgraph_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,667 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/page-attachment, contextRoot: webapp/attachments, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,667 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/perf-testing, contextRoot: webapp/perf-testing, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,668 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/print, contextRoot: webapp/print, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,668 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/redirect, contextRoot: webapp/redirect, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,668 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/register, contextRoot: webapp/register, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,669 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/ria, contextRoot: webapp/ria, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,669 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/richpagehome, contextRoot: webapp/richpage-home, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,670 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/rt, contextRoot: src/main/webapp, plugin: com.siemens.polarion.rt_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,671 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/rt-connect, contextRoot: ws, plugin: com.siemens.polarion.rt.communication.ws_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,671 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/scripting, contextRoot: webapp/scripting, plugin: com.polarion.scripting.servlet_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,671 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/sdk, contextRoot: webapp/sdk, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,672 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/svnwebclient, contextRoot: webapp, plugin: org.polarion.svnwebclient_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,672 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/synchronizer, contextRoot: webapp, plugin: com.polarion.synchronizer.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,673 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/template-download, contextRoot: webapp/project-template, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,673 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/testrun-attachment, contextRoot: webapp/attachments, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,673 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/tour, contextRoot: webapp/tour, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,674 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/webcontent, contextRoot: webapp/webcontent, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,674 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/webdav, contextRoot: webapps/webdav, plugin: com.polarion.webdav_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,674 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/wi-attachment, contextRoot: webapp/attachments, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,675 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/wi-attachment-auth, contextRoot: webapp/wi-attachment-auth, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,675 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/widget-resource, contextRoot: webapp/widget-resource, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,676 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/wiki, contextRoot: src/main/webapp, plugin: com.polarion.alm.wiki_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,676 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/workreport, contextRoot: webapp/workreport, plugin: com.polarion.alm.ui_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,677 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/ws, contextRoot: ws, plugin: com.polarion.alm.ws_3.17.0, isRoot: false, realm: null, priority: 0]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,677 [main] INFO  com.polarion.portal.tomcat.TomcatAppServer  - TomcatAppServer.start(): added webapp 'WebappContribution[webappName: polarion/oslc, contextRoot: webapp, plugin: com.polarion.alm.oslc_3.17.0, isRoot: false, realm: null, priority: 1]'; http port: -1; https port: -1; AJP 1.3 port: 8889
+2017-05-15 18:47:52,757 [main] INFO  org.apache.coyote.ajp.AjpNioProtocol  - Initializing ProtocolHandler ["ajp-nio-8889"]
+2017-05-15 18:47:52,761 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+2017-05-15 18:47:52,765 [main] INFO  org.apache.catalina.core.StandardService  - Starting service Tomcat
+2017-05-15 18:47:52,765 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-05-15 18:47:52,876 [localhost-startStop-1] INFO  org.apache.catalina.startup.ContextConfig  - No global web.xml found
+2017-05-15 18:47:53,099 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:47:53,482 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:47:53,917 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:47:54,533 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:47:54,785 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:47:54,785 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:47:55,040 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:47:56,638 [localhost-startStop-1] WARN  org.apache.pluto.PortletContainerImpl  - org.apache.pluto.PortletContainerImpl#init(): Couldn't retrieve parameter "portletcontainer.supportsBuffering" frompassed properties object. Falling back to default value "FALSE"
+2017-05-15 18:47:56,818 [localhost-startStop-1] INFO  com.polarion.portal.velocity.VelocityPathManager  - VelocityTemplatesPath=/C:/Polarion/polarion/plugins/com.polarion.portal.jetspeed_3.17.0/webapps/jetspeed, /C:/Polarion/polarion/plugins/com.polarion.portal.jetspeed_3.17.0/webapps/j2-admin, /C:/Polarion/polarion/plugins/com.polarion.portal.jetspeed_3.17.0/webapps/rss, /C:/Polarion/polarion/plugins/com.polarion.alm.ui_3.17.0/webapp/webui/, /C:/Polarion/polarion/plugins/com.polarion.alm.wiki_3.17.0/src/main/webapp/, ., C:\Polarion\polarion\plugins\com.polarion.portal.jetspeed_3.17.0\webapps\jetspeed\
+2017-05-15 18:47:57,484 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:47:57,835 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:47:58,097 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:47:58,469 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:47:58,878 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:47:58,880 [localhost-startStop-1] INFO  org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory  - Name = XWikiDS Ignoring unknown property: value of "DB Connection" for "description" property
+2017-05-15 18:47:58,890 [localhost-startStop-1] WARN  org.apache.jasper.servlet.TldScanner  - Failed to process TLD with path [/WEB-INF/portlet.tld] and URI [http://java.sun.com/portlet]. The specified path does not exist.
+2017-05-15 18:47:59,192 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:47:59,598 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:47:59,854 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:00,087 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:00,225 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:00,336 [localhost-startStop-1] INFO  org.polarion.svncommons.commentscache.CommentsCache  - Initializing comments cache. Id: http://localhost/repo, repository: http://localhost/repo/, url: http://localhost/repo/, cache directory: C:\Polarion\data\workspace\polarion-data\log-messages-cache, cache page size: 100
+2017-05-15 18:48:00,620 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:01,220 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:01,824 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:02,173 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:02,433 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:03,035 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:03,383 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:03,637 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:03,998 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:04,274 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:04,625 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:04,884 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:05,231 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:05,494 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:05,843 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:06,109 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:06,325 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:06,916 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:06,936 [localhost-startStop-1] INFO  com.polarion.portal.velocity.VelocityPathManager  - VelocityTemplatesPath=/C:/Polarion/polarion/plugins/com.polarion.portal.jetspeed_3.17.0/webapps/jetspeed, /C:/Polarion/polarion/plugins/com.polarion.portal.jetspeed_3.17.0/webapps/j2-admin, /C:/Polarion/polarion/plugins/com.polarion.portal.jetspeed_3.17.0/webapps/rss, /C:/Polarion/polarion/plugins/com.polarion.alm.ui_3.17.0/webapp/webui/, /C:/Polarion/polarion/plugins/com.polarion.alm.wiki_3.17.0/src/main/webapp/, ., C:\Polarion\polarion\plugins\com.polarion.alm.ui_3.17.0\webapp\webui\
+2017-05-15 18:48:07,372 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:07,626 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:08,215 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:08,817 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:09,177 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:09,584 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:09,883 [localhost-startStop-1] INFO  com.siemens.polarion.rt.config.RtAppConfig  - RT server config is created
+2017-05-15 18:48:09,957 [localhost-startStop-1] INFO  com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Started.
+2017-05-15 18:48:10,048 [localhost-startStop-1] INFO  com.zaxxer.hikari.pool.PoolBase  - HikariPool-1 - Driver does not support get/set network timeout for connections. (Method org.postgresql.jdbc4.Jdbc4Connection.getNetworkTimeout() is not yet implemented.)
+2017-05-15 18:48:11,504 [localhost-startStop-1] INFO  com.siemens.polarion.rt.parsers.RtParserProviderImpl  - Initialization of RT parsers...
+2017-05-15 18:48:11,506 [localhost-startStop-1] INFO  com.siemens.polarion.rt.parsers.RtParserProviderImpl  - Found parser com.siemens.polarion.rt.parsers.c (contributed by 'com.siemens.polarion.rt.parsers.c')
+2017-05-15 18:48:11,507 [localhost-startStop-1] INFO  com.siemens.polarion.rt.parsers.RtParserProviderImpl  - Found parser com.siemens.polarion.rt.parsers.java (contributed by 'com.siemens.polarion.rt')
+2017-05-15 18:48:11,508 [localhost-startStop-1] INFO  com.siemens.polarion.rt.parsers.RtParserProviderImpl  - Found parser com.siemens.polarion.rt.parsers.xml (contributed by 'com.siemens.polarion.rt')
+2017-05-15 18:48:11,536 [localhost-startStop-1] INFO  com.siemens.polarion.rt.collectors.RtCollectorProviderImpl  - Initialization of RT collectors...
+2017-05-15 18:48:11,537 [localhost-startStop-1] INFO  com.siemens.polarion.rt.collectors.RtCollectorProviderImpl  - Found collector for subversion (contributed by 'com.siemens.polarion.rt')
+2017-05-15 18:48:11,537 [localhost-startStop-1] INFO  com.siemens.polarion.rt.collectors.RtCollectorProviderImpl  - Found collector for git (contributed by 'com.siemens.polarion.rt.collectors.git')
+2017-05-15 18:48:14,084 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:14,352 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:14,973 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:15,363 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:15,696 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:15,952 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:16,555 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:16,896 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:17,148 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:17,496 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:17,747 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:18,340 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:18,926 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:19,269 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:19,518 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:19,772 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:19,974 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:20,359 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:20,640 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:21,228 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:21,565 [localhost-startStop-1] WARN  org.apache.catalina.startup.ContextConfig  - Security role name user used in an <auth-constraint> without being defined in a <security-role>
+2017-05-15 18:48:21,814 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:22,393 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:22,411 [main] INFO  org.apache.coyote.ajp.AjpNioProtocol  - Starting ProtocolHandler ["ajp-nio-8889"]
+2017-05-15 18:48:22,415 [main] INFO  com.polarion.psvn.launcher.internal.tomcat.TomcatService  - Tomcat listening on port -1, https port -1, AJP 1.3 port 8889
+2017-05-15 18:48:22,416 [main] INFO  com.polarion.psvn.launcher.internal.help.HelpService  - Starting Help Service...
+2017-05-15 18:48:22,541 [main] INFO  org.apache.jasper.servlet.TldScanner  - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-15 18:48:22,546 [main] INFO  com.polarion.psvn.launcher.internal.help.HelpService  - Help Service started
+2017-05-15 18:48:22,971 [Thread-33] INFO  com.polarion.alm.server.util.ChartExporterStartup  - Subprocesses stream says: OK, PhantomJS is ready.
+2017-05-15 18:48:23,595 [main | u:p] INFO  com.xpn.xwiki.XWiki  - xwiki.cfg taken from /WEB-INF/xwiki.cfg because the XWikiConfig variable is not set in the context
+2017-05-15 18:48:24,078 [main | u:p] INFO  com.siemens.polarion.rt.communication.connection.RtNotifier  - RT server was successfully notified of configuration change.
+2017-05-15 18:48:24,078 [main | u:p] INFO  com.siemens.polarion.rt.communication.connection.RtNotificationStartup  - Rt notification service is started
+2017-05-15 18:48:24,094 [main | u:p] INFO  com.polarion.platform.monitoring  - Next slow periodic actions will be executed on Tue May 16 01:00:24 IST 2017
+2017-05-15 18:48:24,095 [main | u:p] INFO  com.polarion.platform.internal.startup.StartupService  - Startup contributor class com.polarion.alm.tracker.internal.HttpsConfiguratorStartup successfully initialized
+2017-05-15 18:48:24,095 [main | u:p] INFO  com.polarion.platform.internal.startup.StartupService  - Startup contributor class com.polarion.alm.server.util.ChartExporterStartup successfully initialized
+2017-05-15 18:48:24,095 [main | u:p] INFO  com.polarion.platform.internal.startup.StartupService  - Startup contributor class com.polarion.alm.wiki.WikiPlugin successfully initialized
+2017-05-15 18:48:24,095 [main | u:p] INFO  com.polarion.platform.internal.startup.StartupService  - Startup contributor class com.polarion.alm.qcentre.internal.QCentreStartup successfully initialized
+2017-05-15 18:48:24,095 [main | u:p] INFO  com.polarion.platform.internal.startup.StartupService  - Startup contributor class com.siemens.polarion.rt.communication.connection.RtNotificationStartup successfully initialized
+2017-05-15 18:48:24,095 [main | u:p] INFO  com.polarion.platform.internal.startup.StartupService  - Startup contributor class com.polarion.subterra.index.impl.IndexingJobsStartup successfully initialized
+2017-05-15 18:48:24,095 [main | u:p] INFO  com.polarion.platform.internal.startup.StartupService  - Startup contributor class com.polarion.alm.ui.server.ServerStartup successfully initialized
+2017-05-15 18:48:24,095 [main | u:p] INFO  com.polarion.platform.internal.startup.StartupService  - Startup contributor class com.polarion.platform.monitoring.internal.MonitoringServiceStart successfully initialized
+2017-05-15 18:48:24,095 [main] INFO  com.polarion.platform.monitoring  - Executing actions from stage POSTBOOT
+2017-05-15 18:48:24,095 [main] INFO  com.polarion.platform.monitoring  - Finished with actions from stage POSTBOOT: {}
+2017-05-15 18:48:24,097 [main] INFO  com.polarion.platform.startup  - Polarion startup ... took  [ TIME 31.57 s. ]
+2017-05-15 18:48:24,098 [main] INFO  TXLOGGER  - Summary for 'Polarion startup': transactions: 1, svn: 0.221 s [80% info (39x)] (56x), RepositoryConfigService: 0.0215 s [100% getReadConfiguration (2x)] (2x)
+2017-05-15 18:48:24,098 [main] INFO  com.polarion.platform.startup  - ****************************************************************
+2017-05-15 18:48:24,098 [main] INFO  com.polarion.platform.startup  -                  Polarion started:  [ TIME 37.9 s. ]
+2017-05-15 18:48:24,098 [main] INFO  com.polarion.platform.startup  - ****************************************************************
+2017-05-15 18:48:24,098 [Thread-34] INFO  com.polarion.platform.jobs.info  - Job "Attachment Indexer" has id 0c428154-927abe2a-6a3fbcb1-dc2a6e7c
+2017-05-15 18:48:24,102 [PreLoadDataService] INFO  com.polarion.psvn.launcher.internal.data.PreLoadDataService  - Preloading data ...
+2017-05-15 18:48:24,103 [Thread-34] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to UNSCHEDULED
+2017-05-15 18:48:24,109 [Thread-34] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Attachment Indexer" is C:\Polarion\data\workspace\polarion-data\jobs\20170515-1848
+2017-05-15 18:48:24,112 [Thread-34] INFO  com.polarion.platform.jobs.info  - Job "Attachment Indexer" runs as user "polarion"
+2017-05-15 18:48:24,116 [Thread-34 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to ACTIVATING
+2017-05-15 18:48:24,121 [Thread-34 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to WAITING
+2017-05-15 18:48:24,130 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to RUNNING
+2017-05-15 18:48:24,132 [Thread-34] INFO  com.polarion.platform.jobs.info  - Job "DB History Creator" has id 0c42817c-927abe2a-6a3fbcb1-dfd6aed8
+2017-05-15 18:48:24,135 [Thread-34] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to UNSCHEDULED
+2017-05-15 18:48:24,139 [Thread-34] INFO  com.polarion.platform.jobs.info  - Working directory of root job "DB History Creator" is C:\Polarion\data\workspace\polarion-data\jobs\20170515-1848_0
+2017-05-15 18:48:24,143 [Thread-34] INFO  com.polarion.platform.jobs.info  - Job "DB History Creator" runs as user "polarion"
+2017-05-15 18:48:24,146 [Thread-34 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to ACTIVATING
+2017-05-15 18:48:24,151 [Thread-34 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to WAITING
+2017-05-15 18:48:24,158 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to RUNNING
+2017-05-15 18:48:24,255 [Worker-0 | u:p | job: polarion.jobs.attachment.indexer] INFO  TXLOGGER  - Summary after AttachmentIndexer: transactions: 6, Lucene: 0.0717 s [100% add (2x)] (2x), persistence listener: 0.0712 s [91% notificationsCreatingListener (1x)] (7x), resolve: 0.0316 s [91% User (2x)] (5x), ObjectMaps: 0.0123 s [100% getPrimaryObjectLocation (2x)] (2x)
+2017-05-15 18:48:24,258 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to FINISHED
+2017-05-15 18:48:24,260 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Attachment Indexer" is OK
+2017-05-15 18:48:24,289 [DBHistoryCreator-1 | u:p] INFO  com.polarion.platform.persistence.internal.DataService  - Caches for selected uris were cleared, number of uris: 0, globalOnly: true
+2017-05-15 18:48:24,391 [PreLoadDataService | u:p | u:p | resolving: subterra:data-service:objects:/default/drivepilot${TimePoint}version1] INFO  com.polarion.platform.persistence.internal.CustomFieldsService  - Custom fields control field is not set for prototype: TestRun
+2017-05-15 18:48:24,391 [PreLoadDataService | u:p | u:p | resolving: subterra:data-service:objects:/default/drivepilot${TimePoint}version1] INFO  com.polarion.platform.persistence.internal.CustomFieldsService  - Custom fields control field is not set for prototype: Plan
+2017-05-15 18:48:24,391 [PreLoadDataService | u:p | u:p | resolving: subterra:data-service:objects:/default/drivepilot${TimePoint}version1] INFO  com.polarion.platform.persistence.internal.CustomFieldsService  - Custom fields control field is not set for prototype: Module
+2017-05-15 18:48:24,599 [PreLoadDataService | u:p] INFO  TXLOGGER  - Tx 570310a05a02a_0_570310a05a02a_0_: finished. Total: 0.494 s, svn: 0.278 s [68% getDir2 content (25x), 32% getFile content (13x)] (40x), resolve: 0.217 s [58% TimePoint (5x), 42% Category (6x)] (11x), ObjectMaps: 0.0309 s [60% getPrimaryObjectLocation (11x), 24% getPrimaryObjectProperty (11x)] (46x)
+2017-05-15 18:48:24,834 [DBHistoryCreator-1 | u:p] INFO  TXLOGGER  - Summary: Total: 0.548 s, transactions: 0
+2017-05-15 18:48:24,834 [Worker-1 | u:p | job: polarion.jobs.db.history] INFO  TXLOGGER  - Summary after DBHistoryCreator: transactions: 0, Lucene: 0.0199 s [100% add (1x)] (1x), DB: 0.000997 s [81% update (1x)] (2x)
+2017-05-15 18:48:24,834 [Worker-1 | u:p] INFO  TXLOGGER  - Summary for 'job: polarion.jobs.db.history': Total: 0.582 s, transactions: 0, SubterraURITable: 0.368 s [100% getDB (1018x)] (1018x), DB: 0.352 s [54% query (1044x), 29% update (1019x)] (5146x)
+2017-05-15 18:48:24,837 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to FINISHED
+2017-05-15 18:48:24,840 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "DB History Creator" is OK
+2017-05-15 18:48:24,949 [PreLoadDataService | u:p] INFO  TXLOGGER  - Tx 570310a0f2432_0_570310a0f2432_0_: finished. Total: 0.235 s, resolve: 0.121 s [100% User (8x)] (8x), svn: 0.11 s [67% getFile content (12x), 33% info (6x)] (19x), RepositoryConfigService: 0.0759 s [70% getReadConfiguration (56x), 30% getReadUserConfiguration (2x)] (58x), ObjectMaps: 0.0173 s [52% getPrimaryObjectLocation (8x), 27% getPrimaryObjectProperty (8x), 20% getLastPromoted (8x)] (33x)
+2017-05-15 18:48:25,539 [PreLoadDataService | u:p] INFO  TXLOGGER  - Tx 570310a143c34_0_570310a143c34_0_: finished. Total: 0.5 s, svn: 0.45 s [65% getFile content (47x), 35% getDir2 content (17x)] (65x), RepositoryConfigService: 0.329 s [100% getReadConfiguration (164x)] (180x)
+2017-05-15 18:48:25,804 [PreLoadDataService | u:p] INFO  com.polarion.platform.persistence.internal.FactoriesProvider  - Factory for unknown enumId (reqtype) created
+2017-05-15 18:48:25,811 [PreLoadDataService | u:p] INFO  com.polarion.platform.persistence.internal.FactoriesProvider  - Factory for unknown enumId (testtype) created
+2017-05-15 18:48:25,819 [PreLoadDataService | u:p] INFO  TXLOGGER  - Tx 570310a1c0c35_0_570310a1c0c35_0_: finished. Total: 0.279 s, svn: 0.257 s [51% getDir2 content (17x), 49% getFile content (21x)] (39x), RepositoryConfigService: 0.142 s [99% getReadConfiguration (88x)] (110x)
+2017-05-15 18:48:25,931 [PreLoadDataService | u:p] INFO  TXLOGGER  - Tx 570310a206c36_0_570310a206c36_0_: finished. Total: 0.112 s, svn: 0.103 s [59% getDir2 content (11x), 41% getFile content (8x)] (20x), RepositoryConfigService: 0.0488 s [99% getReadConfiguration (38x)] (54x)
+2017-05-15 18:48:25,931 [PreLoadDataService] INFO  com.polarion.psvn.launcher.internal.data.PreLoadDataService  - Preloading data FINISHED took  [ TIME 1.83 s. ]
+2017-05-15 18:48:25,931 [PreLoadDataService] INFO  TXLOGGER  - Summary for 'PreloadDataService': Total: 1.83 s, transactions: 7, svn: 1.3 s [54% getFile content (116x), 42% getDir2 content (72x)] (206x), RepositoryConfigService: 0.686 s [96% getReadConfiguration (402x)] (485x), resolve: 0.405 s [31% TimePoint (5x), 30% User (8x), 23% Category (6x)] (22x)
+2017-05-15 18:48:25,932 [PreLoadDataService] INFO  TXLOGGER  - Summary after preload: transactions: 7, svn: 1.3 s [54% getFile content (116x), 42% getDir2 content (72x)] (207x), RepositoryConfigService: 0.686 s [96% getReadConfiguration (402x)] (485x), resolve: 0.405 s [31% TimePoint (5x), 30% User (9x), 23% Category (6x)] (23x), SubterraURITable: 0.368 s [100% getDB (1018x)] (1018x), DB: 0.352 s [54% query (1044x), 29% update (1019x)] (5146x)
+2017-05-15 18:48:33,851 [ajp-nio-8889-exec-8] INFO  com.polarion.portal.tomcat.realm.PolarionRealm  - authenticate:admin
+2017-05-15 18:48:33,853 [ajp-nio-8889-exec-8 | u:p] INFO  com.polarion.platform.internal.security.SecurityService  - User admin tries to log in from portal/::1
+2017-05-15 18:48:33,859 [ajp-nio-8889-exec-8 | u:p] INFO  com.polarion.platform.internal.security.SecurityService  - User admin logged in from portal/::1
+2017-05-15 18:48:33,866 [ajp-nio-8889-exec-9] INFO  PolarionLicensing  - STATS:concurrentALMUser,current:1,peak:1,limit:10
+2017-05-15 18:48:33,866 [ajp-nio-8889-exec-9] INFO  PolarionLicensing  - STATS:concurrentVariantsUser,current:1,peak:1,limit:10
+2017-05-15 18:48:33,866 [ajp-nio-8889-exec-9] INFO  PolarionLicensing  - User 'admin' logged in with concurrent ALM
+2017-05-15 18:48:34,434 [ajp-nio-8889-exec-3 | u:admin] INFO  com.polarion.alm.ui.server.diagrams.internal.DiagramEditorsRegistry  - Registered diagram editor mxg (com.polarion.alm.ui.diagrams.mxgraph.internal.MxGraphDiagramEditor)
+2017-05-15 18:48:34,528 [ajp-nio-8889-exec-3 | u:admin] INFO  TXLOGGER  - Summary for 'PortalDataService.getInitData': Total: 0.144 s, transactions: 3, RepositoryConfigService: 0.0115 s [100% getReadConfiguration (8x)] (13x)
+2017-05-15 18:48:35,068 [ajp-nio-8889-exec-4 | u:admin] INFO  TXLOGGER  - Summary for 'PortalDataService.requestPortalSite': Total: 0.145 s, transactions: 8, svn: 0.053 s [51% info (5x), 38% getFile content (4x)] (18x), RepositoryConfigService: 0.0511 s [79% getReadConfiguration (26x), 21% getReadUserConfiguration (18x)] (50x)
+2017-05-15 18:48:35,255 [ajp-nio-8889-exec-7 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Home | wiki: view http://localhost/polarion/wiki/bin/view/project/drivepilot/page/Home] INFO  com.xpn.xwiki.XWiki  - Initializing URLFactory Service...
+2017-05-15 18:48:35,401 [ajp-nio-8889-exec-7 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Home | wiki: view http://localhost/polarion/wiki/bin/view/project/drivepilot/page/Home] INFO  com.xpn.xwiki.XWiki  - Initializing RightService...
+2017-05-15 18:48:35,807 [ajp-nio-8889-exec-7 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Home | wiki: view http://localhost/polarion/wiki/bin/view/project/drivepilot/page/Home] INFO  com.polarion.platform.persistence.internal.FactoriesProvider  - Factory for unknown enumId (workitem-type) created
+2017-05-15 18:48:36,560 [ajp-nio-8889-exec-7 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Home | wiki: view http://localhost/polarion/wiki/bin/view/project/drivepilot/page/Home] INFO  TXLOGGER  - Tx 570310ac32047_0_570310ac32047_0_: finished. Total: 0.328 s, svn: 0.235 s [85% info (36x)] (43x), resolve: 0.164 s [98% WikiPage (24x)] (38x)
+2017-05-15 18:48:36,585 [ajp-nio-8889-exec-7 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Home] INFO  RPC  - "1.342","Load Wiki Page","drivepilot/_default/Home (3)"
+2017-05-15 18:48:36,586 [ajp-nio-8889-exec-7] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/Home': Total: 1.4 s, transactions: 6, Velocity: 1.12 s [100% evaluate in Wiki (1x)] (1x), svn: 0.875 s [82% info (132x)] (163x), resolve: 0.205 s [98% WikiPage (41x)] (59x)
+2017-05-15 18:48:41,574 [ajp-nio-8889-exec-2] INFO  TXLOGGER  - Summary for 'servlet /polarion/example/': Total: 4.84 s, transactions: 0
+2017-05-15 18:49:33,822 [ajp-nio-8889-exec-4 | u:admin] INFO  TXLOGGER  - Summary for 'PortalDataService.getWikiSpacesAndPages': Total: 1.76 s, transactions: 0, resolve: 1.56 s [44% Module (13x), 41% WikiPage (76x)] (166x), svn: 1.21 s [62% info (128x), 25% getFile content (43x)] (194x)
+2017-05-15 18:51:34,391 [ajp-nio-8889-exec-9 | u:admin] INFO  TXLOGGER  - Summary for 'PortalDataService.saveUICustomizationData': Total: 1 s, transactions: 0
+2017-05-15 18:58:24,106 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing actions from stage PERIODIC with speed FAST
+2017-05-15 18:58:24,106 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.disk.data.free'
+2017-05-15 18:58:24,107 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.disk.data.free (Free data disk 'C:\Polarion\polarion\..\data' space) = Disk Space 
+858.07 GB
+ [Mon May 15 18:58:24 IST 2017]
+2017-05-15 18:58:24,115 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.garbageCollector.full.cycles'
+2017-05-15 18:58:24,115 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.garbageCollector.full.cycles (Full Garbage Collector cycles) = Full Garbage Collector cycles 
+Full GC cycles: 4; Time: 379
+ [Mon May 15 18:58:24 IST 2017]
+2017-05-15 18:58:24,121 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.garbageCollector.normal.cycles'
+2017-05-15 18:58:24,121 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.garbageCollector.normal.cycles (Normal Garbage Collector cycles) = Normal Garbage Collector cycles 
+Normal GC cycles: 107; Time: 814
+ [Mon May 15 18:58:24 IST 2017]
+2017-05-15 18:58:24,127 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.memory.nonheap.free'
+2017-05-15 18:58:24,127 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.memory.nonheap.free (Free non-heap memory) = Java Metaspace Memory 
+Unlimited
+ [Mon May 15 18:58:24 IST 2017]
+2017-05-15 18:58:24,133 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.memory.oldGen.free'
+2017-05-15 18:58:24,134 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.memory.oldGen.free (Free Old Gen memory after GC) = Java Heap Memory 
+Old Gen pool has  73.43% memory free after GC.
+ [Mon May 15 18:58:24 IST 2017]
+2017-05-15 18:58:24,140 [Monitoring] INFO  com.polarion.platform.monitoring  - Finished with actions from stage PERIODIC: {OK=5}
+2017-05-15 19:00:00,028 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 0c4d1fd8-927abe2a-6a3fbcb1-233e87c5
+2017-05-15 19:00:00,030 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-15 19:00:00,033 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\data\workspace\polarion-data\jobs\20170515-1900
+2017-05-15 19:00:00,035 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-15 19:00:00,036 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-15 19:00:00,039 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-15 19:00:00,043 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-15 19:00:01,905 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 0c4d272d-927abe2a-6a3fbcb1-aba534bb
+2017-05-15 19:00:01,907 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-15 19:00:01,909 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\data\workspace\polarion-data\jobs\20170515-1900_0
+2017-05-15 19:00:01,912 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-15 19:00:01,914 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-15 19:00:01,917 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-15 19:00:01,920 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-15 19:00:01,960 [Worker-1 | u:p | job: update.plan.refresh.index] INFO  com.polarion.subterra.index.impl.ObjectIndex  -  -- Refreshing 15 objects in index: WorkItem
+2017-05-15 19:00:02,330 [Worker-1 | u:p | job: update.plan.refresh.index] INFO  com.polarion.subterra.index.impl.ObjectIndex  -  -- -- 15 from 15 objects were refreshed (100%)
+2017-05-15 19:00:02,583 [Worker-1 | u:p] INFO  TXLOGGER  - Summary for 'job: update.plan.refresh.index': Total: 0.64 s, transactions: 0, resolve: 0.395 s [93% WorkItem (15x)] (167x), svn: 0.354 s [34% getDir2 content (16x), 33% getFile content (16x), 33% info (17x)] (50x), Lucene: 0.164 s [100% refresh (1x)] (2x), DB: 0.0666 s [88% update (181x)] (220x)
+2017-05-15 19:00:02,586 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-15 19:00:02,588 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-15 19:00:02,611 [Worker-0 | u:p] INFO  TXLOGGER  - Summary for 'job: update.plan': Total: 1.5 s, transactions: 10, resolve: 0.551 s [91% WorkItems (2x)] (96x), svn: 0.485 s [41% getFile content (21x), 32% info (26x), 27% getDir2 content (19x)] (78x), planQueryExpander: 0.121 s [100% expand (6x)] (12x)
+2017-05-15 19:00:02,613 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-15 19:00:02,615 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-15 19:00:02,979 [DBNormalHistoryCreator | u:p] INFO  com.polarion.subterra.index.impl.ObjectIndex  -  -- -- 15 from 15 objects were refreshed (100%)
+2017-05-15 19:08:24,119 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing actions from stage PERIODIC with speed FAST
+2017-05-15 19:08:24,119 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.disk.data.free'
+2017-05-15 19:08:24,120 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.disk.data.free (Free data disk 'C:\Polarion\polarion\..\data' space) = Disk Space 
+858.06 GB
+ [Mon May 15 19:08:24 IST 2017]
+2017-05-15 19:08:24,127 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.garbageCollector.full.cycles'
+2017-05-15 19:08:24,127 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.garbageCollector.full.cycles (Full Garbage Collector cycles) = Full Garbage Collector cycles 
+Full GC cycles: 4; Time: 379
+ [Mon May 15 19:08:24 IST 2017]
+2017-05-15 19:08:24,134 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.garbageCollector.normal.cycles'
+2017-05-15 19:08:24,134 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.garbageCollector.normal.cycles (Normal Garbage Collector cycles) = Normal Garbage Collector cycles 
+Normal GC cycles: 114; Time: 856
+ [Mon May 15 19:08:24 IST 2017]
+2017-05-15 19:08:24,140 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.memory.nonheap.free'
+2017-05-15 19:08:24,140 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.memory.nonheap.free (Free non-heap memory) = Java Metaspace Memory 
+Unlimited
+ [Mon May 15 19:08:24 IST 2017]
+2017-05-15 19:08:24,146 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.memory.oldGen.free'
+2017-05-15 19:08:24,147 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.memory.oldGen.free (Free Old Gen memory after GC) = Java Heap Memory 
+Old Gen pool has  73.43% memory free after GC.
+ [Mon May 15 19:08:24 IST 2017]
+2017-05-15 19:08:24,154 [Monitoring] INFO  com.polarion.platform.monitoring  - Finished with actions from stage PERIODIC: {OK=5}
+2017-05-15 19:18:24,119 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing actions from stage PERIODIC with speed FAST
+2017-05-15 19:18:24,119 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.disk.data.free'
+2017-05-15 19:18:24,119 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.disk.data.free (Free data disk 'C:\Polarion\polarion\..\data' space) = Disk Space 
+858.06 GB
+ [Mon May 15 19:18:24 IST 2017]
+2017-05-15 19:18:24,127 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.garbageCollector.full.cycles'
+2017-05-15 19:18:24,127 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.garbageCollector.full.cycles (Full Garbage Collector cycles) = Full Garbage Collector cycles 
+Full GC cycles: 4; Time: 379
+ [Mon May 15 19:18:24 IST 2017]
+2017-05-15 19:18:24,133 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.garbageCollector.normal.cycles'
+2017-05-15 19:18:24,133 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.garbageCollector.normal.cycles (Normal Garbage Collector cycles) = Normal Garbage Collector cycles 
+Normal GC cycles: 114; Time: 856
+ [Mon May 15 19:18:24 IST 2017]
+2017-05-15 19:18:24,139 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.memory.nonheap.free'
+2017-05-15 19:18:24,140 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.memory.nonheap.free (Free non-heap memory) = Java Metaspace Memory 
+Unlimited
+ [Mon May 15 19:18:24 IST 2017]
+2017-05-15 19:18:24,146 [Monitoring] INFO  com.polarion.platform.monitoring  - Executing action 'system.info.memory.oldGen.free'
+2017-05-15 19:18:24,146 [Monitoring] INFO  com.polarion.platform.monitoring  - system.info.memory.oldGen.free (Free Old Gen memory after GC) = Java Heap Memory 
+Old Gen pool has  73.43% memory free after GC.
+ [Mon May 15 19:18:24 IST 2017]
+2017-05-15 19:18:24,152 [Monitoring] INFO  com.polarion.platform.monitoring  - Finished with actions from stage PERIODIC: {OK=5}
+2017-05-15 19:19:22,543 [ContainerBackgroundProcessor[StandardEngine[Tomcat]]] INFO  com.polarion.portal.tomcat.session.PolarionSingleSignOn  - Process session event sessionId:5AF5C2FA31D446E3F0D4B80C4CB744CA, ssoId:620529FBF4782D443B9EDCF1437F8CC0
+2017-05-15 19:19:22,544 [ContainerBackgroundProcessor[StandardEngine[Tomcat]]] INFO  com.polarion.portal.tomcat.session.PolarionSingleSignOn  - Process session event sessionId:778EBC058CBA6F8538FE091BCB7E70A6, ssoId:620529FBF4782D443B9EDCF1437F8CC0
+2017-05-15 19:20:44,823 [ajp-nio-8889-exec-8 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Home | wiki: view http://localhost/polarion/wiki/bin/view/project/drivepilot/page/Home] INFO  TXLOGGER  - Tx 5703180772c59_0_5703180772c59_0_: finished. Total: 0.14 s, svn: 0.12 s [100% info (24x)] (25x)
+2017-05-15 19:20:44,848 [ajp-nio-8889-exec-8 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Home] INFO  RPC  - "0.355","Load Wiki Page","drivepilot/_default/Home (3)"
+2017-05-15 19:20:44,848 [ajp-nio-8889-exec-8] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/Home': Total: 0.385 s, transactions: 3, Velocity: 0.334 s [100% evaluate in Wiki (1x)] (1x), svn: 0.14 s [100% info (27x)] (28x)
+2017-05-15 19:20:49,295 [ajp-nio-8889-exec-9 | u:admin] INFO  TXLOGGER  - Summary for 'PortalDataService.getWikiSpacesAndPages': Total: 0.123 s, transactions: 0, svn: 0.0991 s [89% info (16x)] (18x)
+2017-05-15 19:20:51,781 [ajp-nio-8889-exec-8 | u:admin] INFO  TXLOGGER  - Tx 5703180e3a85b_0_5703180e3a85b_0_: finished. Total: 0.154 s, svn: 0.109 s [89% info (19x)] (22x)
+2017-05-15 19:20:51,787 [ajp-nio-8889-exec-8 | u:admin] INFO  TXLOGGER  - Summary for 'WikiDataService.loadWikiIndexData': Total: 0.161 s, transactions: 1, svn: 0.109 s [89% info (19x)] (22x)
+2017-05-15 19:20:54,695 [ajp-nio-8889-exec-5 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Dashboard | wiki: view http://localhost/polarion/wiki/bin/view/project/drivepilot/page/Dashboard] INFO  TXLOGGER  - Tx 57031810df45f_0_57031810df45f_0_: finished. Total: 0.361 s
+2017-05-15 19:20:54,716 [ajp-nio-8889-exec-5 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Dashboard] INFO  RPC  - "0.650","Load Wiki Page","drivepilot/_default/Dashboard (1)"
+2017-05-15 19:20:54,716 [ajp-nio-8889-exec-5] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/Dashboard': Total: 0.676 s, transactions: 5, Velocity: 0.575 s [100% evaluate in Wiki (1x)] (1x), svn: 0.146 s [87% info (24x)] (29x), resolve: 0.037 s [91% Plan (1x)] (48x)
+2017-05-15 19:21:00,262 [ajp-nio-8889-exec-3 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Dashboard] INFO  RPC  - "0.129","Load Wiki Page","drivepilot/_default/Dashboard (1)"
+2017-05-15 19:21:00,262 [ajp-nio-8889-exec-3] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/Dashboard': Total: 0.166 s, transactions: 4, Velocity: 0.116 s [100% evaluate in Wiki (1x)] (1x), svn: 0.0155 s [100% info (3x)] (3x)
+2017-05-15 19:21:05,344 [ajp-nio-8889-exec-6 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Iteration_34-burndown] INFO  RPC  - "0.163","Load Wiki Page","drivepilot/_default/Iteration_34-burndown (1)"
+2017-05-15 19:21:05,345 [ajp-nio-8889-exec-6] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/Iteration_34-burndown': Total: 0.19 s, transactions: 2, svn: 0.0929 s [94% info (13x)] (14x), Velocity: 0.073 s [100% evaluate in Wiki (1x)] (1x)
+2017-05-15 19:21:07,768 [ajp-nio-8889-exec-2 | u:admin | i:drivepilot/_default/Process Description] INFO  com.xpn.xwiki.XWiki  - Initializing URLFactory Service...
+2017-05-15 19:21:09,217 [ajp-nio-8889-exec-8 | u:admin] INFO  TXLOGGER  - Tx 5703181f3f86a_0_5703181f3f86a_0_: finished. Total: 0.164 s, svn: 0.118 s [87% info (19x)] (22x), resolve: 0.0201 s [85% RichPage (79x)] (207x), ObjectMaps: 0.0119 s [86% getPrimaryObjectLocation (72x)] (86x)
+2017-05-15 19:21:09,218 [ajp-nio-8889-exec-8 | u:admin] INFO  TXLOGGER  - Summary for 'WikiDataService.loadWikiIndexData': Total: 0.165 s, transactions: 1, svn: 0.118 s [87% info (19x)] (22x), resolve: 0.0201 s [85% RichPage (79x)] (207x), ObjectMaps: 0.0119 s [86% getPrimaryObjectLocation (72x)] (86x)
+2017-05-15 19:21:09,768 [ajp-nio-8889-exec-2 | u:admin | i:drivepilot/_default/Process Description] INFO  com.polarion.platform.persistence.internal.FactoriesProvider  - Factory for unknown enumId (oslc-link-role) created
+2017-05-15 19:21:09,854 [ajp-nio-8889-exec-2 | u:admin | i:drivepilot/_default/Process Description] INFO  TXLOGGER  - Tx 5703181dbc869_0_5703181dbc869_0_: finished. Total: 2.35 s, svn: 1.43 s [36% info (89x), 35% getDir2 content (34x), 27% getFile content (51x)] (184x), documentRenderer: 1.34 s [98% renderPart (34x)] (36x), resolve: 1.25 s [82% WorkItem (60x)] (116x), sidebars: 0.538 s [37% attachments (1x), 18% signatures (1x), 16% document (1x), 13% work-item (1x)] (10x), RepositoryConfigService: 0.193 s [92% getReadConfiguration (947x)] (1061x)
+2017-05-15 19:21:09,966 [ajp-nio-8889-exec-2 | u:admin] INFO  TXLOGGER  - Summary for 'DleModel.initialize': Total: 2.46 s, transactions: 1, svn: 1.43 s [36% info (89x), 35% getDir2 content (34x), 27% getFile content (51x)] (184x), documentRenderer: 1.34 s [98% renderPart (34x)] (36x), resolve: 1.25 s [82% WorkItem (60x)] (116x), sidebars: 0.538 s [37% attachments (1x), 18% signatures (1x), 16% document (1x), 13% work-item (1x)] (10x), RepositoryConfigService: 0.193 s [92% getReadConfiguration (947x)] (1061x)
+2017-05-15 19:21:09,966 [ajp-nio-8889-exec-2 | u:admin] INFO  RPC  - "2.825","Load Document","drivepilot/_default/Process Description (null, 1)"
+2017-05-15 19:21:21,603 [ajp-nio-8889-exec-2 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Iteration_34-burndown] INFO  RPC  - "0.096","Load Wiki Page","drivepilot/_default/Iteration_34-burndown (1)"
+2017-05-15 19:21:21,603 [ajp-nio-8889-exec-2] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/Iteration_34-burndown': Total: 0.122 s, transactions: 2, Velocity: 0.0839 s [100% evaluate in Wiki (1x)] (1x), svn: 0.0152 s [100% info (3x)] (3x)
+2017-05-15 19:21:22,550 [ContainerBackgroundProcessor[StandardEngine[Tomcat]]] INFO  com.polarion.portal.tomcat.session.PolarionSingleSignOn  - Process session event sessionId:84B6EA6E3DE39BE82D1F0E46C386524E, ssoId:620529FBF4782D443B9EDCF1437F8CC0
+2017-05-15 19:21:23,225 [ajp-nio-8889-exec-10 | u:admin | i:drivepilot/_default/Process Description] INFO  com.xpn.xwiki.XWiki  - Initializing URLFactory Service...
+2017-05-15 19:21:23,397 [ajp-nio-8889-exec-10 | u:admin | i:drivepilot/_default/Process Description] INFO  TXLOGGER  - Tx 5703182d0f46d_0_5703182d0f46d_0_: finished. Total: 0.2 s, documentRenderer: 0.149 s [91% renderPart (34x)] (36x), svn: 0.131 s [98% info (31x)] (34x), sidebars: 0.0111 s [49% document (1x), 29% attachments (1x), 14% signatures (1x)] (10x)
+2017-05-15 19:21:23,401 [ajp-nio-8889-exec-10 | u:admin] INFO  TXLOGGER  - Summary for 'DleModel.initialize': Total: 0.204 s, transactions: 1, documentRenderer: 0.149 s [91% renderPart (34x)] (36x), svn: 0.131 s [98% info (31x)] (34x), sidebars: 0.0111 s [49% document (1x), 29% attachments (1x), 14% signatures (1x)] (10x)
+2017-05-15 19:21:23,401 [ajp-nio-8889-exec-10 | u:admin] INFO  RPC  - "0.206","Load Document","drivepilot/_default/Process Description (null, 1)"
+2017-05-15 19:21:24,704 [ajp-nio-8889-exec-3 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/ProjectMacros] INFO  RPC  - "0.087","Load Wiki Page","drivepilot/_default/ProjectMacros (1)"
+2017-05-15 19:21:24,704 [ajp-nio-8889-exec-3] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/ProjectMacros': Total: 0.113 s, transactions: 2, Velocity: 0.0747 s [100% evaluate in Wiki (1x)] (1x), svn: 0.0157 s [100% info (3x)] (3x)
+2017-05-15 19:21:26,598 [ajp-nio-8889-exec-4 | u:admin] INFO  TXLOGGER  - Summary for 'PortalDataService.saveUICustomizationData': Total: 1.51 s, transactions: 0
+2017-05-15 19:21:27,248 [ajp-nio-8889-exec-1 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Version_2_0-burnup] INFO  RPC  - "0.086","Load Wiki Page","drivepilot/_default/Version_2_0-burnup (1)"
+2017-05-15 19:21:27,248 [ajp-nio-8889-exec-1] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/Version_2_0-burnup': Total: 0.128 s, transactions: 2, Velocity: 0.076 s [100% evaluate in Wiki (1x)] (1x), svn: 0.0146 s [100% info (3x)] (3x)
+2017-05-15 19:21:27,560 [ajp-nio-8889-exec-5 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/TraceabilityTableMacro | wiki: view http://localhost/polarion/wiki/bin/view/project/drivepilot/page/TraceabilityTableMacro] INFO  TXLOGGER  - Tx 5703182fe8472_0_5703182fe8472_0_: finished. Total: 1.45 s, resolve: 1.01 s [86% WorkItem (136x)] (308x), svn: 0.827 s [37% info (46x), 36% getFile content (31x), 26% getDir2 content (30x)] (111x), permissions: 0.315 s [97% readInstance (1450x)] (3386x), ObjectMaps: 0.182 s [63% getPrimaryObjectLocations (48x), 12% getPrimaryObjectLocation (32x), 9% getLastPromoted (32x)] (201x)
+2017-05-15 19:21:27,579 [ajp-nio-8889-exec-5 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/TraceabilityTableMacro] INFO  RPC  - "1.611","Load Wiki Page","drivepilot/_default/TraceabilityTableMacro (1)"
+2017-05-15 19:21:27,580 [ajp-nio-8889-exec-5] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/TraceabilityTableMacro': Total: 1.65 s, transactions: 2, Velocity: 1.54 s [100% evaluate in Wiki (1x)] (1x), resolve: 1.01 s [86% WorkItem (136x)] (323x), svn: 0.9 s [41% info (59x), 34% getFile content (32x), 24% getDir2 content (30x)] (125x), permissions: 0.315 s [97% readInstance (1467x)] (3419x), ObjectMaps: 0.182 s [63% getPrimaryObjectLocations (48x), 13% getPrimaryObjectLocation (34x), 9% getLastPromoted (32x)] (203x)
+2017-05-15 19:21:28,104 [ajp-nio-8889-exec-8 | u:admin] INFO  TXLOGGER  - Summary for 'PortalDataService.saveUICustomizationData': Total: 1.6 s, transactions: 0
+2017-05-15 19:21:28,106 [ajp-nio-8889-exec-3 | u:admin] ERROR com.polarion.portal.internal.server.rpc.UICustomizationDataProvider  - Error writing UI data for user admin - The requested operation cannot be performed on a file with a user-mapped section open
+java.io.IOException: The requested operation cannot be performed on a file with a user-mapped section open
+	at sun.nio.ch.FileDispatcherImpl.truncate0(Native Method)
+	at sun.nio.ch.FileDispatcherImpl.truncate(Unknown Source)
+	at sun.nio.ch.FileChannelImpl.truncate(Unknown Source)
+	at com.polarion.core.util.FileHelper.updateWithLock(FileHelper.java:795)
+	at com.polarion.core.util.FileHelper.updateWithLock(FileHelper.java:751)
+	at com.polarion.portal.internal.server.rpc.UICustomizationDataProvider.writeUserDataNew(UICustomizationDataProvider.java:204)
+	at com.polarion.portal.internal.server.rpc.UICustomizationDataProvider.writeUserData(UICustomizationDataProvider.java:187)
+	at com.polarion.portal.internal.server.rpc.UICustomizationDataProvider.saveData(UICustomizationDataProvider.java:170)
+	at com.polarion.alm.ui.server.navigation.internal.PortalDataServiceImpl.saveUICustomizationData(PortalDataServiceImpl.java:91)
+	at sun.reflect.GeneratedMethodAccessor245.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.gwt.user.server.rpc.RPC.invokeAndEncodeResponse(RPC.java:561)
+	at com.google.gwt.user.server.rpc.RemoteServiceServlet.processCall(RemoteServiceServlet.java:265)
+	at com.polarion.alm.ui.server.rpc.RPCServlet.processCall(RPCServlet.java:96)
+	at com.google.gwt.user.server.rpc.RemoteServiceServlet.processPost(RemoteServiceServlet.java:305)
+	at com.google.gwt.user.server.rpc.AbstractRemoteServiceServlet.doPost(AbstractRemoteServiceServlet.java:62)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.polarion.alm.ui.server.ExpiresFilterForGWT.doFilter(ExpiresFilterForGWT.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.polarion.alm.server.util.VelocityInstanceFilter.doFilter(VelocityInstanceFilter.java:61)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.polarion.portal.tomcat.servlets.DoAsFilter.doFilterAndShowUri(DoAsFilter.java:148)
+	at com.polarion.portal.tomcat.servlets.DoAsFilter.access$0(DoAsFilter.java:143)
+	at com.polarion.portal.tomcat.servlets.DoAsFilter$1.run(DoAsFilter.java:122)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.polarion.platform.internal.security.SubjectNDC.doAs(SubjectNDC.java:69)
+	at com.polarion.portal.tomcat.servlets.DoAsFilter.doFilterImpl(DoAsFilter.java:119)
+	at com.polarion.portal.tomcat.servlets.DoAsFilter.doFilterInContexts(DoAsFilter.java:96)
+	at com.polarion.portal.tomcat.servlets.DoAsFilter.doFilter(DoAsFilter.java:89)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.polarion.portal.tomcat.servlets.SecurityCheckFilter.doFilter(SecurityCheckFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:291)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.ajp.AbstractAjpProcessor.process(AbstractAjpProcessor.java:850)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2017-05-15 19:21:28,108 [ajp-nio-8889-exec-3 | u:admin] INFO  TXLOGGER  - Summary for 'PortalDataService.saveUICustomizationData': Total: 0.4 s, transactions: 0
+2017-05-15 19:21:28,386 [ajp-nio-8889-exec-2 | u:admin] INFO  TXLOGGER  - Tx 57031831fec76_0_57031831fec76_0_: finished. Total: 0.135 s, svn: 0.108 s [90% info (19x)] (22x)
+2017-05-15 19:21:28,386 [ajp-nio-8889-exec-2 | u:admin] INFO  TXLOGGER  - Summary for 'WikiDataService.loadWikiIndexData': Total: 0.136 s, transactions: 1, svn: 0.108 s [90% info (19x)] (22x)
+2017-05-15 19:21:30,828 [ajp-nio-8889-exec-6 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/?service=Overview] INFO  RPC  - "0.157","Load Wiki Page","/Panels/WikiOverview (null)"
+2017-05-15 19:21:30,828 [ajp-nio-8889-exec-6] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/?service=Overview': Total: 0.182 s, transactions: 1, Velocity: 0.15 s [100% evaluate in Wiki (1x)] (1x), svn: 0.0792 s [86% info (16x)] (18x)
+2017-05-15 19:21:32,904 [ajp-nio-8889-exec-4 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Home?spaceTitle=Default+Space | wiki: view http://localhost/polarion/wiki/bin/view/project/drivepilot/page/Home] INFO  TXLOGGER  - Tx 5703183667879_0_5703183667879_0_: finished. Total: 0.139 s, svn: 0.121 s [100% info (24x)] (25x)
+2017-05-15 19:21:32,917 [ajp-nio-8889-exec-4 | u:admin | uri:/polarion/wiki/bin/view/project/drivepilot/page/Home?spaceTitle=Default+Space] INFO  RPC  - "0.222","Load Wiki Page","drivepilot/_default/Home (3)"
+2017-05-15 19:21:32,918 [ajp-nio-8889-exec-4] INFO  TXLOGGER  - Summary for 'servlet /polarion/wiki/bin/view/project/drivepilot/page/Home?spaceTitle=Default+Space': Total: 0.252 s, transactions: 3, Velocity: 0.211 s [100% evaluate in Wiki (1x)] (1x), svn: 0.136 s [100% info (27x)] (28x)
+2017-05-15 19:22:22,553 [ContainerBackgroundProcessor[StandardEngine[Tomcat]]] INFO  com.polarion.portal.tomcat.session.PolarionSingleSignOn  - Process session event sessionId:5FD624F9239E5B635A738D894200FC2B, ssoId:620529FBF4782D443B9EDCF1437F8CC0

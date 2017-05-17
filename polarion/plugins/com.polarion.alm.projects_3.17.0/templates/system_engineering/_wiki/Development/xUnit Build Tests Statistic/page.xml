@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130204181205</created>
+<type>content</type>
+<content><![CDATA[1 xUnit Build Test Statistics
+
+{section}
+{column}
+1.1 Execution Statistics
+#set($q = '"') 
+##set($timeQuery = 'AND finishedOn:[$today-7d$ TO $today$]')
+#set($timeQuery = '')
+#set($baseQuery = "project.id:$page.getProject() AND (template.id:${q}xUnit Build Test${q}) AND NOT isTemplate:true $timeQuery")
+#set($passed = $trackerService.dataService.getInstancesCount("TestRun", "$baseQuery AND status:passed"))
+#set($failed = $trackerService.dataService.getInstancesCount("TestRun", "$baseQuery AND status:failed"))
+#set($other = $trackerService.dataService.getInstancesCount("TestRun", "$baseQuery AND NOT status:(failed passed)"))
+
+#highchartStart("" "Pie2D" 180 180  )
+#set($highchartColors = ["95d55c","d43d3d","cfcfcf"])
+#addHighchartPieDataSet("" "'Passed',$passed:'Failed', $failed:'In Progress', $other")
+#addHighchartAdditionalOptions("options.plotOptions = {pie:{dataLabels: {enabled:false},borderWidth:0,animation:false}};")
+#addHighchartAdditionalOptions("options.tooltip= {formatter: function(){ return  ''+ this.point.name + ':<b>'+ this.y + '</b>' }};")
+#highchartEnd()
+{column}
+{column}
+1.1 xUnit Build Tests
+{style:class=regiondescription}
+You need to plan and execute verification tests using "{testrun-label:xUnit Build Test}"  Test Run Template.
+{style}
+
+{recent-testruns:query=(template.id:"xUnit Build Test")|top=10}
+{column}
+{section}
+
+1.1 Open Issues triggered by xUnit Test Cases 
+
+Show open issues triggered by xUnit Test Cases 
+#set($bQuery = "project.id:$page.project AND type:issue")
+#set($sqlQ="SELECT ISSUE.C_PK FROM LUCENE_QUERY('WorkItem', '$bQuery', 'id') ISSUE WHERE EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_P_WORKITEM = ISSUE.C_PK AND LINK.FK_WORKITEM = TEST.C_PK AND LINK.C_ROLE = 'triggered_by' AND TEST.C_TYPE='unitTestCase') ") 
+
+{workitems:sqlQuery=$sqlQ|fields=id,title,status,targetVersion}]]></content>
+</wiki-page>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wiki-page>
+<lastUpdatedBy>admin</lastUpdatedBy>
+<author>admin</author>
+<created>2007-08-20 23:51</created>
+<lastUpdated>2008-10-16 16:11</lastUpdated>
+<type>active</type>
+<content><![CDATA[
+{if-page-exists:WebHome} 
+#info("*IMPORTANT* \\ The wiki architecture has changed in this release. It is recommended that you copy the content and wiki mark-up of your existing [WebHome] page to this page, replacing the ~~Getting Started Tip~~ content. You can then delete the existing [WebHome] page.") 
+{if-page-exists}  
+{section:width=100%}
+{column:width=65%}
+
+#if($xwiki.isProjectLevel())
+1 Space: ~~{space-property:title}~~
+
+Welcome to the ~~{space-property:title}~~ space. This page enables users to manage content for this space. \\ 
+
+Documents & Pages content is organized into spaces which contain one or more Documents or wiki pages. To create a new Document or page in the ~~{space-property:title}~~ space, click Expand Tools (above) to expose the page toolbar. Then click the Actions button and choose ~~New Document~~ or ~~New Page~~. Access existing Documents or pages in this space from the {portallink:/wiki/$page.getSpace().getName()/_index|addcontext=yes}Index page{portallink}.
+
+
+{hint}
+*GETTING STARTED TIP* \\
+You can change this content (and any other content on this page) to make it into a useful Home Page for the {space-property:title} space. \\
+
+For example, you might want to write some documentation about the space and provide links to important documents or pages in the space. 
+When you're ready, click on the ~~Edit~~ button in the toolbar above, and edit the page using the wiki editor.{hint}
+#else
+1 Space: ~~{space-property:title}~~
+
+Welcome to the ~~{space-property:title}~~ space. This page enables users to manage content for this space. \\ 
+
+Wiki content is organized into spaces which contain one or more pages. To create a new page in the ~~{space-property:title}~~ space, click Expand Tools (above) to expose the page toolbar. Then click the Actions button and choose ~~New Page~~. Access existing pages in this space from the {portallink:/wiki/$page.getSpace().getName()/_index|addcontext=yes}Index page{portallink}.
+
+
+{hint}
+*GETTING STARTED TIP* \\
+You can change this content (and any other content on this page) to make it into a useful Home Page for the {space-property:title} space. \\
+
+For example, you might want to write some documentation about the space and provide links to important pages in the space. 
+When you're ready, click on the ~~Edit~~ button in the toolbar above, and edit the page using the wiki editor.{hint}
+#end
+{column}
+
+
+{column:width=32%}
+
+{regiontitle}Search{regiontitle}
+{style:class=regiondescription}
+#if($xwiki.isProjectLevel())
+Search for a document or page in the space {space-property:title}.
+#else
+Search for a page in the space {space-property:title}.
+#end
+{style}
+<script>
+function onSearch() {
+  var query = document.getElementById("searchText").value;
+  var spaceId  = "$page.getSpace().getId()";
+  if (checkSubmitText(query, '$msg.get('incorectsymb')')) {
+    doSearchSpace(spaceId, query);
+  }
+}
+function handleSearchKeyPress(e) {
+  var key = e.keyCode || e.which;
+  if (key == 13) {
+    onSearch();
+  }
+}
+</script>
+<div align = "left" > 
+<table border=0> 
+<tr> 
+<td align="left">  
+  <input type="text" id="searchText" size="20" onkeypress="handleSearchKeyPress(event)"/> 
+</td>  
+<td align="left">  
+<div onclick="onSearch()"> 
+#xwikitopmenuentrystartimageButtonSearch("search.gif" $msg.get("search")) 
+</div> 
+</td> 
+</tr> 
+</table> 
+</div>
+ 
+{regiontitle}Recently Modified{regiontitle}
+{style:class=regiondescription}
+#if($xwiki.isProjectLevel())
+Listing of and links to up to 20 of the most recently modified documents or pages in the {space-property:title} space.
+#else
+Listing of and links to up to 20 of the most recently modified pages in the {space-property:title} space.
+#end
+{style}
+
+
+<div class="recentlymodifiedpanel" >
+{pages:top=20|sortby=~updated|query=space:"$page.getSpace().getName()"}
+</div>
+
+ {column}
+{section}
+]]></content>
+</wiki-page>

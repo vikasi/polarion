@@ -1,0 +1,30 @@
+#set ( $items = $puser.getUsers($request.getParameterMap()) )
+#set ( $userLink = $puser.getUserLink())
+#set ( $fields = $userLink.getFieldsArray() )
+
+#set ( $id = $puser.getId())
+
+#foreach($itm in $items)
+
+<div class="#if ($userLink.getExpand()) expanded #else collapsed #end" style="border:0px; width:99%;">
+<table>
+<tr>
+<td class ="#if ($userLink.getExpand()) expand_open  #else expand_close #end" style="vertical-align: middle;" onclick="togglePanelVisibilityExpand(this.up('div'), this);"></td>
+##<td><a style="color: #000000;font-size:11px" target="_blank" href="$puser.getUserURL($itm)"><b style="color: #440000;">$puser.getValue('id', $itm)</b><b>- $puser.getValue('name', $itm)</b></a></td>
+<td><b style="font-size:11px; color: #440000;">$puser.getValue('id', $itm)</b><b>- $puser.getValue('name', $itm)</b></td>
+</tr>
+</table>
+<div class="xwikipanelcontents">
+<table style="width: $userLink.getTableWidth(); border: 1px solid #BED8E8;">
+<tr>
+<td class="table" style="font-size:11px">
+    #foreach($fild in $fields)
+     <b>$puser.getRealNameField($fild): </b>$!puser.getValue( $fild, $itm)<br/>
+    #end
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+#end

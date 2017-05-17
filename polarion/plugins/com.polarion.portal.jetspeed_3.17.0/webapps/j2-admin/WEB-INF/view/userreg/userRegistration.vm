@@ -1,0 +1,42 @@
+#set ($MESSAGES = $portletConfig.getResourceBundle($renderRequest.Locale))
+<div id="UserRegistration"  class="portlet-section-text"> 
+	#if($registeredUserMsg)
+		<table >
+			<tr><td colspan="2" ><p class="portlet-msg-success" >$registeredUserMsg</p></td></tr>
+		</table>
+	#else
+	<form name="userRegistrationForm" action="$renderResponse.createActionURL()" method="post" >
+	<table>
+		<tr><td colspan="2" > 
+			$MESSAGES.getString('page.welcome')
+			#if($MSG )
+	 			<p class="portlet-msg-error">$!MSG</p>
+	 		#end	
+		</td></tr>
+		
+		#if($CTX_Option_Use_Email_As_Username)
+		#else
+		<tr><td>$MESSAGES.getString('page.username')</td><td><input type="text" name="user.name" value="$!{user.get("user.name")}" /></td></tr>
+		#end
+		<tr><td>$MESSAGES.getString('page.email.address')</td><td><input type="text" name="user.business-info.online.email" value="$!{user.get("user.business-info.online.email")}" /></td></tr>
+		
+		#if($CTX_Option_Generate_Passwords)
+		#else
+		<tr><td>$MESSAGES.getString('page.password')</td><td><input type="password" name="password" value="" /></td></tr>
+		<tr><td>$MESSAGES.getString('page.passwordVerify')</td><td><input type="password" name="verifyPassword" value="" /></td></tr>
+		#end
+		
+		#foreach( $fieldName in $fieldsInOrder )
+			#set($pagestring = "page.${fieldName}") 
+			#if( $optionalMap.get($fieldName) )
+			<tr><td>${MESSAGES.getString($pagestring)} $MESSAGES.getString("page.optional")</td><td><input type="text" name="$fieldName" value="$!{user.get($fieldName)}" /></td></tr>
+			#else
+			<tr><td>${MESSAGES.getString($pagestring)}</td><td><input type="text" name="$fieldName" value="$!{user.get($fieldName)}" /></td></tr>
+			#end		
+		#end
+		
+		<tr><td colspan="2" > <input type="submit" value="$MESSAGES.getString('page.button')" name="Register Me" /> </td></tr>
+	</table>
+    </form>    
+    #end
+</div>

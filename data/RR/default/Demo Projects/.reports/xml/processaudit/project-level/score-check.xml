@@ -1,0 +1,1883 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="/default/--Demo Projects${ProjectGroup}Group" id="processaudit/project-level/score-check" tag="2013-05-23">
+    <structure-element id="root" provider="root" type="root">
+        <properties>
+            <property id="label">
+                <value>Demo Projects</value>
+            </property>
+            <property id="scope">
+                <value>group/Demo Projects</value>
+            </property>
+        </properties>
+        <value-fact-element id="Total" provider="score-check-aggregation" type="Total">
+            <value type="java.lang.Double">0.601</value>
+            <value-fact-element id="Release Planning" provider="Score" tag="20130523_1550" type="ScoreGroup">
+                <value type="java.lang.Double">0.25</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Release Planning</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>0.5</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>-1.0</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>-1.0</value>
+                    </property>
+                </properties>
+                <value-fact-element id="CurrentReleasePlanning" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">0.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isCurrentReleaseExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UserStoriesExistence" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isWorkitemsExist">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="ReleasePlanExistence" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current release isn't planned</value>
+                        </property>
+                        <property id="isCurrentReleaseExist">
+                            <value>false</value>
+                        </property>
+                        <property id="assignedUserStories">
+                            <value>0</value>
+                        </property>
+                        <property id="isUserStoryExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CorrectUserStoriesNumber" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current release isn't planned</value>
+                        </property>
+                        <property id="isCurrentReleasePlanExist">
+                            <value>false</value>
+                        </property>
+                        <property id="userStoriesEstimate">
+                            <value>0.0</value>
+                        </property>
+                        <property id="releaseDuration">
+                            <value>0.0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="SplitReleasesToIterations" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current release isn't planned</value>
+                        </property>
+                        <property id="isCurrentReleaseExist">
+                            <value>false</value>
+                        </property>
+                        <property id="iterations">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CorrectlyCreatedUserStories" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Project Customer role doesn't exist</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStoryCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UserStoriesCorrectEsimation" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Work item Risk field custom field doesn't exist</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStoriesCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="RightIterationDuration" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current release isn't planned</value>
+                        </property>
+                        <property id="isCurrentReleaseExist">
+                            <value>false</value>
+                        </property>
+                        <property id="violatedIterationCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalIterationCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="SpikeSolution" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Spike solution work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="violationCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStories">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+            <value-fact-element id="Iteration Planning" provider="Score" tag="20130523_1550" type="ScoreGroup">
+                <value type="java.lang.Double">0.75</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Iteration Planning</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>0.5</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>-1.0</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>-1.0</value>
+                    </property>
+                </properties>
+                <value-fact-element id="CurrentIterationPlanning" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">0.5</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isCurrentIterationExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="TaskExistence" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isWorkitemsExist">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="IterationPlanningOrganization" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Plan for current iteration isn't defined</value>
+                        </property>
+                        <property id="isCurrentIterationExist">
+                            <value>false</value>
+                        </property>
+                        <property id="isUserStoryExist">
+                            <value>true</value>
+                        </property>
+                        <property id="isTaskExist">
+                            <value>true</value>
+                        </property>
+                        <property id="assignedUserStories">
+                            <value>0</value>
+                        </property>
+                        <property id="assignedTasks">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="KeepProjectVelocity" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Iteration plan doesn't exist for previous or current iterations</value>
+                        </property>
+                        <property id="totalIterationEstimation">
+                            <value>0.0</value>
+                        </property>
+                        <property id="projectVelocity">
+                            <value>0.0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UserStoryToTaskDetalization" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Plan for current iteration isn't defined</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStories">
+                            <value>0</value>
+                        </property>
+                        <property id="isIterationExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="TaskCorrectEsimation" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Plan for current iteration isn't defined</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalTasks">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="PlanningFailedAcceptanceTests" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current iteration doesn't exist</value>
+                        </property>
+                        <property id="unplannedAcceptanceFailures">
+                            <value>0</value>
+                        </property>
+                        <property id="totalAcceptanceFailures">
+                            <value>0</value>
+                        </property>
+                        <property id="isCurrentIterationExist">
+                            <value>false</value>
+                        </property>
+                        <property id="isAcceptanceTestsExist">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="PlanningFailedAutomaticTests" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Work item Unit Test field custom field doesn't exist</value>
+                        </property>
+                        <property id="isCurrentIterationExist">
+                            <value>false</value>
+                        </property>
+                        <property id="unplannedAutomaticFailures">
+                            <value>0</value>
+                        </property>
+                        <property id="totalAutomaticFailures">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+            <value-fact-element id="Schedule Control" provider="Score" tag="20130523_1550" type="ScoreGroup">
+                <value type="java.lang.Double">0.67</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Schedule Control</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>-1.0</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>0.67</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>-1.0</value>
+                    </property>
+                </properties>
+                <value-fact-element id="ChangeIterationPlan" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Plan for current iteration isn't defined</value>
+                        </property>
+                        <property id="overdueCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalWorkitemsCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="TaskInAdvance" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current release isn't planned or isn't split to iterations</value>
+                        </property>
+                        <property id="totalIterations">
+                            <value>0</value>
+                        </property>
+                        <property id="advanceScheduledIterations">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UnfinishedUserStories" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Passed releases don't exist</value>
+                        </property>
+                        <property id="totalPassedReleasesCount">
+                            <value>0</value>
+                        </property>
+                        <property id="violatedReleases">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UnfinishedWorkitems" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">0.67</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="violatedIterations">
+                            <value>1</value>
+                        </property>
+                        <property id="totalPassedIterationsCount">
+                            <value>3</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="NotChangedTaskUserStoryEstimates" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Plan for current iteration isn't defined</value>
+                        </property>
+                        <property id="violationCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalWorkitems">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+            <value-fact-element id="Quality Control" provider="Score" tag="20130523_1550" type="ScoreGroup">
+                <value type="java.lang.Double">0.835</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Quality Control</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>1.0</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>0.6</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>-1.0</value>
+                    </property>
+                </properties>
+                <value-fact-element id="TestsInPlace" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="totalProjects">
+                            <value>1</value>
+                        </property>
+                        <property id="projectsWithTests">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="AcceptanceTestsExistence" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isWorkitemsExist">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CreateAcceptanceTest" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current release isn't planned</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStories">
+                            <value>0</value>
+                        </property>
+                        <property id="isReleaseExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="TestSuccessRatio" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">0.6</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="errorsCount">
+                            <value>1</value>
+                        </property>
+                        <property id="failuresCount">
+                            <value>1</value>
+                        </property>
+                        <property id="testsCount">
+                            <value>5</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+            <value-fact-element id="Process Organization" provider="Score" tag="20130523_1550" type="ScoreGroup">
+                <value type="java.lang.Double">0.5</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Process Organization</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>0.5</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>0.5</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>0.5</value>
+                    </property>
+                </properties>
+                <value-fact-element id="OftenBuilds" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">0.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isFreshBuilds">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="StaffedProjectTeam" provider="Score" tag="20130523_1550" type="Scorerule-precondition-error">
+                    <value type="java.lang.Double">NaN</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Project Customer role doesn't exist</value>
+                        </property>
+                        <property id="totalRequiredRoles">
+                            <value>0</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CollectiveCodeOwnership" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isSourceCodeExistInRepository">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="MovePeopleAround" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">0.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="totalProcessedPackages">
+                            <value>2</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>2</value>
+                        </property>
+                        <property id="hasSourceDirectories">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="OftenIntegration" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="hasCodeIntegration">
+                            <value>true</value>
+                        </property>
+                        <property id="hasCodeIntegrationData">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CodingGuidelinesExistence" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">0.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="isGuidelinesExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="ChooseSystemMetaphor" provider="Score" tag="20130523_1550" type="Scoreexecution">
+                    <value type="java.lang.Double">1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="isMetaphorExist">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+        </value-fact-element>
+        <structure-element id="elibrary" provider="Score" tag="20130523_1550" type="entity">
+            <value-fact-element id="elibrary/Total" provider="Score" tag="20130523_1550" type="Total">
+                <value>0.61</value>
+                <value-fact-element id="elibrary/Release Planning" provider="Score" tag="20130523_1550" type="Group">
+                    <value>0.5</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Release Planning</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>0.5</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>-1.0</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>-1.0</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="elibrary/CurrentReleasePlanning" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isCurrentReleaseExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/UserStoriesExistence" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isWorkitemsExist">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/ReleasePlanExistence" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current release isn't planned</value>
+                            </property>
+                            <property id="isCurrentReleaseExist">
+                                <value>false</value>
+                            </property>
+                            <property id="assignedUserStories">
+                                <value>0</value>
+                            </property>
+                            <property id="isUserStoryExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/CorrectUserStoriesNumber" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current release isn't planned</value>
+                            </property>
+                            <property id="isCurrentReleasePlanExist">
+                                <value>false</value>
+                            </property>
+                            <property id="userStoriesEstimate">
+                                <value>0.0</value>
+                            </property>
+                            <property id="releaseDuration">
+                                <value>0.0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/SplitReleasesToIterations" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current release isn't planned</value>
+                            </property>
+                            <property id="isCurrentReleaseExist">
+                                <value>false</value>
+                            </property>
+                            <property id="iterations">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/CorrectlyCreatedUserStories" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Project Customer role doesn't exist</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStoryCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/UserStoriesCorrectEsimation" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Work item Risk field custom field doesn't exist</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStoriesCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/RightIterationDuration" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current release isn't planned</value>
+                            </property>
+                            <property id="isCurrentReleaseExist">
+                                <value>false</value>
+                            </property>
+                            <property id="violatedIterationCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalIterationCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/SpikeSolution" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Spike solution work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="violationCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStories">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+                <value-fact-element id="elibrary/Iteration Planning" provider="Score" tag="20130523_1550" type="Group">
+                    <value>0.5</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Iteration Planning</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>0.5</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>-1.0</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>-1.0</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="elibrary/CurrentIterationPlanning" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isCurrentIterationExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/TaskExistence" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isWorkitemsExist">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/IterationPlanningOrganization" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Plan for current iteration isn't defined</value>
+                            </property>
+                            <property id="isCurrentIterationExist">
+                                <value>false</value>
+                            </property>
+                            <property id="isUserStoryExist">
+                                <value>true</value>
+                            </property>
+                            <property id="isTaskExist">
+                                <value>true</value>
+                            </property>
+                            <property id="assignedUserStories">
+                                <value>0</value>
+                            </property>
+                            <property id="assignedTasks">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/KeepProjectVelocity" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Iteration plan doesn't exist for previous or current iterations</value>
+                            </property>
+                            <property id="totalIterationEstimation">
+                                <value>0.0</value>
+                            </property>
+                            <property id="projectVelocity">
+                                <value>0.0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/UserStoryToTaskDetalization" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Plan for current iteration isn't defined</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStories">
+                                <value>0</value>
+                            </property>
+                            <property id="isIterationExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/TaskCorrectEsimation" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Plan for current iteration isn't defined</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalTasks">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/PlanningFailedAcceptanceTests" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current iteration doesn't exist</value>
+                            </property>
+                            <property id="unplannedAcceptanceFailures">
+                                <value>0</value>
+                            </property>
+                            <property id="totalAcceptanceFailures">
+                                <value>0</value>
+                            </property>
+                            <property id="isCurrentIterationExist">
+                                <value>false</value>
+                            </property>
+                            <property id="isAcceptanceTestsExist">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/PlanningFailedAutomaticTests" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Work item Unit Test field custom field doesn't exist</value>
+                            </property>
+                            <property id="isCurrentIterationExist">
+                                <value>false</value>
+                            </property>
+                            <property id="unplannedAutomaticFailures">
+                                <value>0</value>
+                            </property>
+                            <property id="totalAutomaticFailures">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+                <value-fact-element id="elibrary/Schedule Control" provider="Score" tag="20130523_1550" type="Group">
+                    <value>0.67</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Schedule Control</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>-1.0</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>0.67</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>-1.0</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="elibrary/ChangeIterationPlan" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Plan for current iteration isn't defined</value>
+                            </property>
+                            <property id="overdueCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalWorkitemsCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/TaskInAdvance" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current release isn't planned or isn't split to iterations</value>
+                            </property>
+                            <property id="totalIterations">
+                                <value>0</value>
+                            </property>
+                            <property id="advanceScheduledIterations">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/UnfinishedUserStories" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Passed releases don't exist</value>
+                            </property>
+                            <property id="totalPassedReleasesCount">
+                                <value>0</value>
+                            </property>
+                            <property id="violatedReleases">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/UnfinishedWorkitems" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.67</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="violatedIterations">
+                                <value>1</value>
+                            </property>
+                            <property id="totalPassedIterationsCount">
+                                <value>3</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/NotChangedTaskUserStoryEstimates" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Plan for current iteration isn't defined</value>
+                            </property>
+                            <property id="violationCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalWorkitems">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+                <value-fact-element id="elibrary/Quality Control" provider="Score" tag="20130523_1550" type="Group">
+                    <value>0.87</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Quality Control</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>1.0</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>0.6</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>-1.0</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="elibrary/TestsInPlace" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="totalProjects">
+                                <value>1</value>
+                            </property>
+                            <property id="projectsWithTests">
+                                <value>1</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/AcceptanceTestsExistence" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isWorkitemsExist">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/CreateAcceptanceTest" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current release isn't planned</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStories">
+                                <value>0</value>
+                            </property>
+                            <property id="isReleaseExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/TestSuccessRatio" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.6</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="errorsCount">
+                                <value>1</value>
+                            </property>
+                            <property id="failuresCount">
+                                <value>1</value>
+                            </property>
+                            <property id="testsCount">
+                                <value>5</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+                <value-fact-element id="elibrary/Process Organization" provider="Score" tag="20130523_1550" type="Group">
+                    <value>0.5</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Process Organization</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>0.5</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>0.5</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>0.5</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="elibrary/OftenBuilds" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isFreshBuilds">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/StaffedProjectTeam" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Project Customer role doesn't exist</value>
+                            </property>
+                            <property id="totalRequiredRoles">
+                                <value>0</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/CollectiveCodeOwnership" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isSourceCodeExistInRepository">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/MovePeopleAround" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="totalProcessedPackages">
+                                <value>2</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>2</value>
+                            </property>
+                            <property id="hasSourceDirectories">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/OftenIntegration" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="hasCodeIntegration">
+                                <value>true</value>
+                            </property>
+                            <property id="hasCodeIntegrationData">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/CodingGuidelinesExistence" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="isGuidelinesExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="elibrary/ChooseSystemMetaphor" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="isMetaphorExist">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+            </value-fact-element>
+        </structure-element>
+        <structure-element id="drivepilot" provider="Score" tag="20130523_1550" type="entity">
+            <value-fact-element id="drivepilot/Total" provider="Score" tag="20130523_1550" type="Total">
+                <value>0.57</value>
+                <value-fact-element id="drivepilot/Release Planning" provider="Score" tag="20130523_1550" type="Group">
+                    <value>0.0</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Release Planning</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>0.0</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>-1.0</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>-1.0</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="drivepilot/CurrentReleasePlanning" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isCurrentReleaseExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/UserStoriesExistence" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>User story work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="isWorkitemsExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/ReleasePlanExistence" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>User story work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="isCurrentReleaseExist">
+                                <value>false</value>
+                            </property>
+                            <property id="assignedUserStories">
+                                <value>0</value>
+                            </property>
+                            <property id="isUserStoryExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/CorrectUserStoriesNumber" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>User story work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="isCurrentReleasePlanExist">
+                                <value>false</value>
+                            </property>
+                            <property id="userStoriesEstimate">
+                                <value>0.0</value>
+                            </property>
+                            <property id="releaseDuration">
+                                <value>0.0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/SplitReleasesToIterations" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current release isn't planned</value>
+                            </property>
+                            <property id="isCurrentReleaseExist">
+                                <value>false</value>
+                            </property>
+                            <property id="iterations">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/CorrectlyCreatedUserStories" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>User story work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStoryCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/UserStoriesCorrectEsimation" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>User story work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStoriesCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/RightIterationDuration" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current release isn't planned</value>
+                            </property>
+                            <property id="isCurrentReleaseExist">
+                                <value>false</value>
+                            </property>
+                            <property id="violatedIterationCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalIterationCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/SpikeSolution" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>User story work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="violationCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStories">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+                <value-fact-element id="drivepilot/Iteration Planning" provider="Score" tag="20130523_1550" type="Group">
+                    <value>1.0</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Iteration Planning</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>1.0</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>-1.0</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>-1.0</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="drivepilot/CurrentIterationPlanning" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isCurrentIterationExist">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/TaskExistence" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isWorkitemsExist">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/IterationPlanningOrganization" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>User story work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="isCurrentIterationExist">
+                                <value>false</value>
+                            </property>
+                            <property id="isUserStoryExist">
+                                <value>false</value>
+                            </property>
+                            <property id="isTaskExist">
+                                <value>false</value>
+                            </property>
+                            <property id="assignedUserStories">
+                                <value>0</value>
+                            </property>
+                            <property id="assignedTasks">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/KeepProjectVelocity" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value> Work item type false doesn't exist in Tracker</value>
+                            </property>
+                            <property id="totalIterationEstimation">
+                                <value>0.0</value>
+                            </property>
+                            <property id="projectVelocity">
+                                <value>0.0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/UserStoryToTaskDetalization" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value> Work item type requirement doesn't exist</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStories">
+                                <value>0</value>
+                            </property>
+                            <property id="isIterationExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/TaskCorrectEsimation" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Plan for current iteration isn't defined</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalTasks">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/PlanningFailedAcceptanceTests" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Defect work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="unplannedAcceptanceFailures">
+                                <value>0</value>
+                            </property>
+                            <property id="totalAcceptanceFailures">
+                                <value>0</value>
+                            </property>
+                            <property id="isCurrentIterationExist">
+                                <value>false</value>
+                            </property>
+                            <property id="isAcceptanceTestsExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/PlanningFailedAutomaticTests" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Defect work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="isCurrentIterationExist">
+                                <value>false</value>
+                            </property>
+                            <property id="unplannedAutomaticFailures">
+                                <value>0</value>
+                            </property>
+                            <property id="totalAutomaticFailures">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+                <value-fact-element id="drivepilot/Schedule Control" provider="Score" tag="20130523_1550" type="Group">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Schedule Control</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>-1.0</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>-1.0</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>-1.0</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="drivepilot/ChangeIterationPlan" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Plan for current iteration isn't defined</value>
+                            </property>
+                            <property id="overdueCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalWorkitemsCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/TaskInAdvance" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Current release isn't planned or isn't split to iterations</value>
+                            </property>
+                            <property id="totalIterations">
+                                <value>0</value>
+                            </property>
+                            <property id="advanceScheduledIterations">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/UnfinishedUserStories" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>User story work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="totalPassedReleasesCount">
+                                <value>0</value>
+                            </property>
+                            <property id="violatedReleases">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/UnfinishedWorkitems" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value> Work item type false doesn't exist</value>
+                            </property>
+                            <property id="violatedIterations">
+                                <value>0</value>
+                            </property>
+                            <property id="totalPassedIterationsCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/NotChangedTaskUserStoryEstimates" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>User story work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="violationCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalWorkitems">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+                <value-fact-element id="drivepilot/Quality Control" provider="Score" tag="20130523_1550" type="Group">
+                    <value>0.8</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Quality Control</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>1.0</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>0.6</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>-1.0</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="drivepilot/TestsInPlace" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="totalProjects">
+                                <value>1</value>
+                            </property>
+                            <property id="projectsWithTests">
+                                <value>1</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/AcceptanceTestsExistence" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Acceptance Test work item type doesn't exist in Tracker</value>
+                            </property>
+                            <property id="isWorkitemsExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/CreateAcceptanceTest" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value> Work item type testcase doesn't exist</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                            <property id="totalUserStories">
+                                <value>0</value>
+                            </property>
+                            <property id="isReleaseExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/TestSuccessRatio" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.6</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="errorsCount">
+                                <value>1</value>
+                            </property>
+                            <property id="failuresCount">
+                                <value>1</value>
+                            </property>
+                            <property id="testsCount">
+                                <value>5</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+                <value-fact-element id="drivepilot/Process Organization" provider="Score" tag="20130523_1550" type="Group">
+                    <value>0.5</value>
+                    <properties>
+                        <property id="domainName">
+                            <value>Process Organization</value>
+                        </property>
+                        <property id="level-score1">
+                            <value>0.5</value>
+                        </property>
+                        <property id="level-score2">
+                            <value>0.5</value>
+                        </property>
+                        <property id="level-score3">
+                            <value>0.5</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="drivepilot/OftenBuilds" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isFreshBuilds">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/StaffedProjectTeam" provider="Score" tag="20130523_1550" type="rule-precondition-error">
+                        <value>-1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="rule-precondition-error-reason">
+                                <value>Project Customer role doesn't exist</value>
+                            </property>
+                            <property id="totalRequiredRoles">
+                                <value>0</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>0</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/CollectiveCodeOwnership" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>1</value>
+                            </property>
+                            <property id="isSourceCodeExistInRepository">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/MovePeopleAround" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="totalProcessedPackages">
+                                <value>2</value>
+                            </property>
+                            <property id="violationsCount">
+                                <value>2</value>
+                            </property>
+                            <property id="hasSourceDirectories">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/OftenIntegration" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>2</value>
+                            </property>
+                            <property id="hasCodeIntegration">
+                                <value>true</value>
+                            </property>
+                            <property id="hasCodeIntegrationData">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/CodingGuidelinesExistence" provider="Score" tag="20130523_1550" type="execution">
+                        <value>0.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="isGuidelinesExist">
+                                <value>false</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                    <value-fact-element id="drivepilot/ChooseSystemMetaphor" provider="Score" tag="20130523_1550" type="execution">
+                        <value>1.0</value>
+                        <properties>
+                            <property id="level">
+                                <value>3</value>
+                            </property>
+                            <property id="isMetaphorExist">
+                                <value>true</value>
+                            </property>
+                        </properties>
+                    </value-fact-element>
+                </value-fact-element>
+            </value-fact-element>
+        </structure-element>
+    </structure-element>
+</factbase>

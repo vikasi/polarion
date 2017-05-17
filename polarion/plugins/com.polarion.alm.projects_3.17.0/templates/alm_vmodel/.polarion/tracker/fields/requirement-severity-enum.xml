@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enumeration>
+    <option color="#dd0000" iconURL="/polarion/icons/default/enums/severity_blocker.gif" id="must_have" name="Must Have" sortOrder="1"/>
+    <option color="#aa0000" default="true" iconURL="/polarion/icons/default/enums/severity_major.gif" id="should_have" name="Should Have" sortOrder="2"/>
+    <option color="#440000" iconURL="/polarion/icons/default/enums/priority_medium.gif" id="nice_to_have" name="Nice to Have" sortOrder="3"/>
+    <option color="#444444" iconURL="/polarion/icons/default/enums/severity_trivial.gif" id="will_not_have" name="Will not Have" sortOrder="4"/>
+</enumeration>

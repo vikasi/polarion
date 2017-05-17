@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu>
+  <item childInModule="true"/>
+  <item copyFields="categories" label="Implementing Task" role="implements" titlePrefix="Implement: " type="task"/>
+  <item copyFields="categories" label="Implementing Defect" role="implements" type="defect"/>
+  <item copyFields="categories" label="Refining Requirement" role="refines" type="requirement"/>
+  <item copyFields="categories" label="Verifying Test Case" role="verifies" titlePrefix="Test: " type="testcase"/>
+  <item copyFields="categories" label="Related Defect" role="relates_to" type="defect"/>
+  <separator/>
+  <item label="Related" role="relates_to"/>
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <plugins>
+    <plugin>
+      <name>Polarion Builder Plugin</name>
+      <prefix>builder</prefix>
+      <artifactId>maven-builder-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <name>LiveCMMI Report</name>
+      <prefix>livecmmi</prefix>
+      <artifactId>maven-livecmmi-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <name>Polarion Samples for Maven</name>
+      <prefix>samples</prefix>
+      <artifactId>maven-samples-plugin</artifactId>
+    </plugin>
+  </plugins>
+</metadata>

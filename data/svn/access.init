@@ -1,0 +1,31 @@
+[groups]
+everyone = admin
+admin = admin
+user = admin
+
+[/]
+* =
+@user = r
+@admin = rw
+polarion = r
+
+[/.polarion/user-management/users]
+@user = rw
+polarion = rw
+
+[/.polarion/security]
+polarion = rw
+
+[/.polarion/tracker/import_configurations]
+@user = rw
+
+[/.polarion/oslc/configuration.xml]
+* =
+polarion = rw
+@admin = rw
+
+[/Sandbox]
+* =
+@user = rw
+@admin = rw
+polarion = r

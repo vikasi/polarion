@@ -1,0 +1,23 @@
+.polarion-dle-wiki-block {
+  margin-top: 1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  line-height: 1.7em;
+  position: relative;
+  left: -40px;
+  width: 754px;
+  border-left: 6px dotted #DDDDDD;
+  padding-left: 34px;
+}
+
+.polarion-dle-wiki-block-icon {
+  cursor: pointer !important;
+  position: absolute;
+  margin-left: -60px;
+}
+
+.polarion-dle-wiki-block-source {
+  position: absolute;
+  margin-left: -100000px;
+  display: none;
+}

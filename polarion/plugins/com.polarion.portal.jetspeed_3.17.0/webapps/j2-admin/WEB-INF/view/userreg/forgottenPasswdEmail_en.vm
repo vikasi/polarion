@@ -1,0 +1,15 @@
+Hello  $!{map.get("user.name.given")} $!{map.get("user.name.family")}:
+
+You have requested a new password for your account. 
+The account username: $!{map.get("username")}
+The new password is : $!{map.get("password")}
+To activate the new password you MUST click on the following link:
+$!{map.get("returnURL")}
+If you have received this email in error, and do NOT want to update your password,
+please do NOT click on the link above, and your account will remain using your
+original password.
+
+Thanks,  
+
+The Jetspeed Team.
+

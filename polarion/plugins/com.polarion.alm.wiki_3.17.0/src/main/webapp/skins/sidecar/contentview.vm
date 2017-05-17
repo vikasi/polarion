@@ -1,0 +1,9 @@
+###
+### Display document contents in normal "view" mode
+###
+###
+<div id="mainlayoutsubsection" class="main layoutsubsection">
+$cdoc.getRenderedContent()
+#template("pagetitle.vm")
+</div>
+<div class="clearfloats"></div>                                        

@@ -1,0 +1,341 @@
+table.list {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: black;
+	border-collapse:collapse;
+    border: 1px solid #75A8E2;
+    padding:0px;
+    margin:0px;
+}
+
+.list th {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 8pt;
+	background: #75A8E2;
+	color: black;
+	border-top: 0px;
+	border-bottom: 3px solid #CCD8E5;
+	border-right: 1px solid #CCD8E5;
+	padding: 2 5 2 5;
+}
+
+.list th a, .list th a:active, .list th a:link, .list th a:visited, .list th a:hover {
+	font-weight: bold;
+	color: black;
+}
+
+.list td a, .list td a:active, .list td a:link, .list td a:visited, .list td a:hover {
+	color: black;
+}
+
+.list tr {
+}
+
+.list tr.first {
+}
+
+.list tr.second {
+}
+
+.list td {
+	font-family: Arial;
+	font-size:11px;
+	background: #E9F3FA;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border: 1px solid #C0DAEA;
+}
+
+.list td.internal {
+	font-family: Arial;
+	font-size:11px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+}
+
+.internalheader td {
+	font-family: Arial;
+	font-size:11px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+	background: #75A8E2;
+}
+
+.list tr.first td {
+	background: #E9F3FA;
+}
+
+.list tr.second td {
+	background: white;
+}
+
+.list tr.active td {
+	background: #FFCC00;
+}
+
+.list tr.selected td {
+	background: #FFE88A;
+}
+
+.list tr.first td.ascending {
+	background: #fae9e9;
+}
+
+.list tr.second td.ascending {
+	background: white;
+}
+
+.list tr.first td.descending {
+	background: #e9fae9;
+}
+
+.list tr.second td.descending {
+	background: white;
+}
+
+.list tr.first td.restricted {
+	background: #F9E4BC;
+}
+
+.list tr.second td.restricted {
+	background: white;
+}
+
+/* images */
+.list tr td.imageascending, .list tr td.imagedescending, .list tr td.imagenormal, .list tr td.imagerestricted {
+	border-right: 0px hidden;
+	padding-right: 0;
+	text-align: left;
+}
+
+.list tr.first td.imageascending {
+	background: #fae9e9;
+}
+
+.list tr.second td.imageascending {
+	background: white;
+}
+
+.list tr.first td.imagedescending {
+	background: #e9fae9;
+}
+
+.list tr.second td.imagedescending {
+	background: white;
+}
+
+.list tr.first td.imagenormal {
+	background: #e9f3fa;
+}
+
+.list tr.second td.imagenormal {
+	background: white;
+}
+
+.list tr.first td.imagerestricted {
+	background: #F9E4BC;
+}
+
+.list tr.second td.imagerestricted {
+	background: white;
+}
+
+/* names */
+.list tr td.nameascending, .list tr td.namedescending, .list tr td.namenormal, .list tr td.namerestricted {
+	border-left: 0px hidden; 
+	padding-left: 3px; 
+	text-align: left;	
+}
+
+.list tr.first td.nameascending {
+	background: #fae9e9;
+}
+
+.list tr.second td.nameascending {
+	background: white;
+}
+
+.list tr.first td.namedescending {
+	background: #e9fae9;
+}
+
+.list tr.second td.namedescending {
+	background: white;
+}
+
+.list tr.first td.namenormal {
+	background: #e9f3fa;
+}
+
+.list tr.second td.namenormal {
+	background: white;
+}
+
+.list tr.first td.namerestricted {
+	background: #F9E4BC;
+}
+
+.list tr.second td.namerestricted {
+	background: white;
+}
+
+
+/* other */
+.list td.repository {
+	background: #c0daea;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.list td.ok { background-color: #00DD00 }
+.list td.warn { background-color: #00DD00 }
+.list td.error { background-color: #DD0000 }
+.list td.fatal { background-color: #DD0000 }
+
+table.pagenavi {
+	
+}
+
+.pagenavi td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #00425e;
+	padding-top: 0;
+	padding-right: 2;
+	padding-bottom: 0;
+	padding-left: 2;
+}
+
+.pagenavi .selected {
+	background-color: #e0edf4;
+}
+
+td.preview {
+	border:5px solid #999999;
+}
+
+.list a:link img, .list a:visited img, .list a:active img { 
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+table.valueList {
+	border: 1px solid #C0DAEA;
+	border-top-width: 0px;
+}
+
+.valueListTitle {
+	background-image: url("../images/local_title.jpg");
+	height:19px;
+}
+
+.valueListTitle td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: white;
+	padding-bottom: 1px;
+	font-weight: bold;
+}
+
+.pl { 
+    padding-left: 10px;
+}
+
+.pr0 {
+	PADDING-RIGHT: 5px
+}
+
+table.overview {
+}
+
+.overview td.label {
+	text-align: right;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: black;
+	vertical-align: top;
+}
+
+.overview td {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size:11px;
+	color: black;
+}
+
+.overview td, .overview a, .overview a:link, .overview a:active, .overview a:visited {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: black;
+}
+
+.navigation {
+	background-color: #E8F1FB;
+
+}
+
+.navigation td {
+	padding: 2 2 2 2;
+}
+
+.actionbar {
+	font-size: 11px;	
+	background-color: #75A8E2 !important;
+	height:40;
+	border-bottom: 1px solid black;
+}
+
+.actionbar_head {
+	font-size: 11px;	
+	background-color: #d3e7f5;
+	height:40;
+	border-bottom: 1px solid black;
+	background-image:url("../images/bg_c.gif");
+}
+
+.actionButton, .actionbar .actionButton {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #c0daea;
+	border: 1px solid #00425e;
+	font-size: 11px;
+	height: 22px;
+	width: 70px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.linenumber td {
+    height: 15px !important;
+	font-family: Arial;
+	font-size:11px;
+	background: #E9F3FA;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #C0DAEA;
+	border-right: 1px solid #C0DAEA;	
+}
+
+.codeline td {
+    height: 15px !important;
+	font-family: Courier New, monospace;
+	font-size:11px;
+	background: white;	
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid white;
+	border-right: 1px solid white;	
+}

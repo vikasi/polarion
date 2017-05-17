@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<formFilter xmlns="http://polarion.com/schema/WorkItems/FormFilter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://polarion.com/schema/WorkItems/FormFilter">
+<workflow>
+<actions>
+    <action fieldNames="@required,description,linkedWorkItems,-type,-status" refId="_create"/>
+    <action fieldNames="@required,status,title,description,severity,categories,comments" refId="_default"/>
+</actions>
+
+<states>
+    <state fieldNames="status,title,description,severity,categories" refId="_default"/>
+    <state fieldNames="title,severity" refId="active"/>
+</states>
+
+
+</workflow>
+</formFilter>

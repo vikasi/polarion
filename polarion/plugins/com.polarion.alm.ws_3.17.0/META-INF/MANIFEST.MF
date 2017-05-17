@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.alm.ws;singleton:=true
+Require-Bundle: org.eclipse.core.runtime,org.apache.axis,com.polarion.
+ platform,com.polarion.subterra.persistence,com.polarion.alm.tracker;b
+ undle-version="3.4.2",com.polarion.alm.builder,com.polarion.platform.
+ guice;bundle-version="3.5.3",com.polarion.platform.repository,com.sie
+ mens.polarion.rt.communication
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Import-Package: com.polarion.platform.repository.external,com.polarion
+ .platform.service.repository
+Export-Package: com.polarion.alm.ws;x-friends:="com.polarion.alm.ws.te
+ sts,com.siemens.polarion.rt.communication.ws",com.polarion.alm.ws.con
+ figuration;x-friends:="com.siemens.polarion.rt.communication.ws",com.
+ polarion.alm.ws.encoding;x-friends:="com.siemens.polarion.rt.communic
+ ation.ws",com.polarion.alm.ws.handlers;x-friends:="com.siemens.polari
+ on.rt.communication.ws",com.polarion.alm.ws.mapping;x-friends:="com.s
+ iemens.polarion.rt.communication.ws",com.polarion.alm.ws.providers;x-
+ friends:="com.siemens.polarion.rt.communication.ws",com.polarion.alm.
+ ws.services;x-friends:="com.polarion.alm.ws.tests,com.siemens.polario
+ n.rt.communication.ws"
+Bundle-Name: Sample Plug-in
+Bundle-Version: 3.17.0
+Bundle-Localization: plugin
+Bundle-ClassPath: services.jar,ws/WEB-INF/
+Eclipse-AutoStart: true
+Bundle-Activator: com.polarion.alm.ws.WsActivator
+
+

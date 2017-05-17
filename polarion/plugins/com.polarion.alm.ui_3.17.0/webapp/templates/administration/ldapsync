@@ -1,0 +1,72 @@
+1 LDAP Configuration
+1.1 Synchronize Users with LDAP
+
+{ldap-sync}
+
+1.1 Quick Help
+
+1.1.1 LDAP Server Connection Settings
+
+1.1.1.1.1.1 LDAP Host Url
+The Url of the LDAP server, e.g. ldap://localhost:389
+
+1.1.1.1.1.1 User ID Attribute
+The LDAP attribute that constitutes the user ID for Polarion users. It is usually ~~uid~~ or ~~sAMAccountName~~. For Active Directory it is displayed as "Login Name (for systems older than Windows 2000)" in the Active Directory administration. \\ 
+
+Make sure that a Polarion user ID does not contain non US-ASCII or any other unsupported characters (i.e. \/:?\"<>|#';$^`%~ [space]).
+
+1.1.1.1.1 User Search Options
+The set of user nodes that Polarion is aware of and can synchronize with. (The intersection of a set of nodes below a base node that satisfies a search filter, optionally in the whole sub-tree, and a set of nodes in an LDAP group if the user group is configured).
+
+1.1.1.1.1.1 Base DN
+The name of the LDAP node to search for users in. Often in the form <tt>cn=Users,dc=company,dc=com</tt>.
+
+1.1.1.1.1.1 Search Filter 
+A Filter expression that refines found user results. (Can be any valid LDAP query). When doing the search it is concatenated (linked) with <tt>& USER_ID_ATTRIBUTE=*</tt>. 
+
+1.1.1.1.1.1 Search Subtree
+Set to "~~false~~" to limit the search to users directly under the base DN.
+
+1.1.1.1.1.1  Search Size Limit
+Limits the number of users in the search result. If the search returns a higher number of users, an error will occur.
+
+1.1.1.1.1 User Group Options
+
+1.1.1.1.1.1 Group DN
+The name of the LDAP node that represents a group of Polarion users, e.g. in the form <tt>cn=Polarion Users,dc=company,dc=com</tt>.
+ 
+1.1.1.1.1.1 Group Member Attribute
+A multi-valued attribute of a group DN node that contains the members of a group. (Often a member from the ~~groupOfNames~~ object class ).
+
+1.1.1.1.1 Bind Options
+1.1.1.1.1.1 Bind DN
+The name to use when searching for users. Leave this field empty for an anonymous search.
+
+1.1.1.1.1.1 Bind Password
+The bind password can be set using the <tt>ldap.bind.password</tt> Polarion property. (In the <tt>polarion.properties</tt> file).
+
+1.1.1 User Synchronization with LDAP
+
+1.1.1.1.1.1 Enable LDAP Synchronization
+The above synchronization of user accounts with an LDAP server is not available until the ~~Enable LDAP Synchronization~~ box is checked. If left unchecked, the accounts of auto-created users will not be updated with information from the LDAP server.
+
+1.1.1.1.1 Mappings
+An unlimited number of LDAP user attributes can be mapped to Polarion <tt>Name</tt>, <tt>Email</tt> and <tt>Description</tt> user fields. The first applicable mapping is always used. (A mapping is applied if the attributes present in the mapping string are present and populated in the LDAP user node.)
+* Name Mapping , e.g. <tt>%firstName% %lastName%</tt>
+* Email Mapping , e.g. <tt>%uid%@mydomain.com</tt>
+* Description Mappings , e.g. <tt>%description%</tt>
+
+1.1.1.1.1 User Roles
+Global roles for users created by LDAP synchronization can be set using the Polarion <tt>rolesForNewUserAccount</tt> system property in the <tt>polarion.properties</tt> file.\\
+This file resides on the server's file system: \\
+* Windows: <tt>%POLARION_HOME%\\\polarion\\\configuration</tt> \\
+* Linux: <tt>%POLARION_HOME%/etc/</tt>
+
+1.1.1 Alternative Authentication via LDAP in a Single Sign-on Environment
+
+1.1.1.1.1.1 Allow for Web Services
+Allows for credentialed authentication against the configured LDAP server. (If Polarion is configured for single sign-on authentication.) This setting is needed when using Web Service clients that cannot use single sign-on authentication.
+
+1.1.1.1.1.1 Allow for e-Signatures
+Enables the validation of electronic signatures against the configured LDAP server. (If Polarion is configured for single sign-on authentication.)
+\\

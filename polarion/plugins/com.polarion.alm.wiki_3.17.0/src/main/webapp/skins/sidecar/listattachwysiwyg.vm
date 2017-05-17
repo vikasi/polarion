@@ -1,0 +1,45 @@
+#set($attachments = $doc.attachmentList)
+
+
+
+<div id="xwikiattachmentscontent" class="xwikidatacontent2" style="margin-left:2px;">
+    #set($counter=0)
+
+    <div class='frmcollapsed'>
+      ## table caption
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+         <tr>
+           <td colspan = "6" width='100%' class='paneltitle'>$msg.get("attachments")</td>
+         </tr>
+         <tr>
+	            	<td class="th1"></td>
+        	    	<td class="th2">$msg.get("titlefield")</td>
+            		<td class="th3">$msg.get("filename")</td>
+	            	<td class="th4">$msg.get("length")</td>
+        	    	<td class="th5">$msg.get("author")</td>
+	            	<td class="th6">$msg.get("created")</td>
+         </tr>
+    ## out data
+    #if ($attachments.size() > 0)       	
+      #foreach ($attach in $attachments)
+        #if((!$request.images)||$attach.isImage())
+
+      	  <tr class="row#if($counter % 2 == 0) even #else odd #end">
+	                <td align="center" class="t1"><table><tr><td><a href="#" onclick="document.forms[0].attach_file.value='$attach.filename'; return false;"><img src="images/tinyMCE_arrow.gif" width="13" height="13" border="0" /></a></td><td><a href="#" onclick="document.forms[0].attach_file.value='$attach.filename'; return false;">select</a></td></tr></table></td>
+                        <td align="left" class="t2">$attach.getTitle().toLowerCase()</td>
+                        <td class="t3" id="attachment${counter}">$attach.filename</td>
+                        <td class="t4">$attach.filesize</td>
+                        <td class="t5">$xwiki.getLocalUserName($attach.author)</td>
+                        <td class="t6">$xwiki.formatDate($attach.date, "yyyy-MM-dd")</td>
+          </tr>
+        #end
+        #set( $counter = $counter + 1)
+      #end
+    #else
+     <tr>
+       <td colspan = "6">$msg.get("noattachmentsonthispage")</td>
+     </tr>
+    #end
+    </table>
+  </div>
+</div>

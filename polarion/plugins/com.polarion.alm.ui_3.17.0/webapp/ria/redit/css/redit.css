@@ -1,0 +1,43 @@
+.rbutton{
+	width:23px;
+	height:22px;
+	border:0px solid black;
+	margin-bottom:1px;
+	background:transparent;
+	cursor:pointer;
+}
+.rbutton_over{
+	width:23px;
+	height:22px;
+	border:0px solid black;
+	margin-bottom:1px;
+	background-image:url('/polarion/redit/images/over.jpg');
+	background-position: top;
+	cursor:pointer;
+}
+.rbutton_img{
+	width:23px;
+	height:22px;
+}
+
+
+.riframe{
+	width:99%;
+	height:100px;	
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+}
+
+.rselect{
+	font-size:12px;
+	margin-bottom:3px;
+}
+
+.rpanel {
+	height:25px !important;
+	padding:1px;
+	background-image:url('/polarion/redit/images/bg.jpg');
+}
+
+p{margin:0px}

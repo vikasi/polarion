@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/projects/projectgroup/overview.psml" hidden="false" version="">
+    <security-constraints>
+        <security-constraints-ref>users</security-constraints-ref>
+    </security-constraints>
+    <title>Overview</title>
+    <short-title>Overview</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="polarion"/>
+    <fragment id="overview.project.group" type="layout" name="jetspeed-layouts::Table">        
+        <fragment id="overview.projectgroup.annoucements" type="portlet" name="webui::announcements" >
+		    <title>Announcements</title>        
+            <property name="row" value="0"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="rowspan='2' style='height:*;width:50%'" />
+            <property name="portlet-style" value="style='height:400px'"/>
+            <!-- if false use project group announencements -->            
+        	<preference name="top" >
+				  <value>true</value>
+			</preference>
+        </fragment>
+        <fragment id="overview.projectgroup.aboutpg" type="portlet"
+            name="webui::ProjectGroupOverview" >
+		    <title>Overview</title>        
+            <property name="row" value="0"/>
+            <property name="column" value="1"/>
+            <property name="layoutData" value="style='height:120px;width:50%;'"/>
+            <property name="portlet-style" value="style='height:90px'"/>
+        </fragment>
+        <fragment id="overview.projectgroup.projectsizes" type="portlet"
+            name="webui::metric" >
+		    <title>Project Sizes</title>            
+            <property name="row" value="1"/>
+            <!-- see vspan for announcements -->
+            <property name="column" value="0"/>
+            <property name="layoutData" value="style='height:310px;'" />            
+            <property name="portlet-style" value="style='height:280px'"/>            
+        	<preference name="reportPath" >
+				  <value>charts/repo-statistics-Pie3D.xml</value>
+			</preference>
+            <preference name="calculation" >
+				    <value>repoanalysis</value>
+			</preference>			
+        </fragment>        
+        <fragment id="overview.projectgroup.projectstable" type="portlet"
+            name="webui::projects" >
+		    <title>Projects</title>        
+            <property name="row" value="2"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="colspan='2' style='width:100%;'"/>
+            <property name="portlet-style" value="style=''"/>            
+        </fragment>        
+    </fragment>
+</page>

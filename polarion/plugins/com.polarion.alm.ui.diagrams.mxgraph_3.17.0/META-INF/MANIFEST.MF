@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.alm.ui.diagrams.mxgraph;singleton:=t
+ rue
+Export-Package: com.polarion.alm.ui.diagrams.mxgraph.internal;x-friend
+ s:="com.polarion.alm.tracker.web.tests"
+Bundle-Name: mxGraph Diagrams Extension
+Bundle-Version: 3.17.0
+Bundle-ClassPath: diagrams-mxgraph.jar,polarion-mxgraph-core.jar
+Require-Bundle: com.polarion.portal.tomcat;bundle-version="5.5.24",com
+ .polarion.alm.ui;bundle-version="3.6.1",com.polarion.platform.guice;b
+ undle-version="3.6.1",com.polarion.platform;bundle-version="3.6.3"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+Import-Package: com.polarion.alm.tracker.internal.url
+Guice-Modules: com.polarion.alm.ui.diagrams.mxgraph.internal.MxGraphMo
+ dule
+
+

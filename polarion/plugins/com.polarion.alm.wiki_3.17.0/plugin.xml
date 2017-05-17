@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension point="com.polarion.portal.tomcat.webapps">
+   <webapp name="polarion/wiki" contextRoot="src/main/webapp" />
+   </extension>
+</plugin>

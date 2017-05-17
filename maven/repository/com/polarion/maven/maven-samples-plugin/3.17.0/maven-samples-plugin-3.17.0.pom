@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.polarion.maven</groupId>
+  <artifactId>maven-samples-plugin</artifactId>
+  <packaging>maven-plugin</packaging>
+  <version>3.17.0</version>
+  <name>Polarion Samples for Maven</name>
+  <description>Samples for Polarion Builder 3 + Maven 2</description>
+  <dependencies>
+    <dependency>
+      <groupId>com.polarion.maven</groupId>
+      <artifactId>maven-plugins-base-plugin</artifactId>
+      <version>3.17.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.polarion.maven</groupId>
+      <artifactId>plugins-provided</artifactId>
+      <version>3.17.0</version>
+      <!-- will be available on a classpath -->
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.reporting</groupId>
+      <artifactId>maven-reporting-impl</artifactId>
+      <version>2.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

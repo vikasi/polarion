@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.polarion.svnwebclient; singleton:=true
+Export-Package: .,org.polarion.svnwebclient,org.polarion.svnwebclient.
+ authorization,org.polarion.svnwebclient.authorization.impl,org.polari
+ on.svnwebclient.configuration,org.polarion.svnwebclient.data,org.pola
+ rion.svnwebclient.data.javasvn,org.polarion.svnwebclient.data.model,o
+ rg.polarion.svnwebclient.decorations,org.polarion.svnwebclient.decora
+ tions.impl,org.polarion.svnwebclient.highlight,org.polarion.svnwebcli
+ ent.util,org.polarion.svnwebclient.util.contentencoding,org.polarion.
+ svnwebclient.web,org.polarion.svnwebclient.web.controller,org.polario
+ n.svnwebclient.web.controller.directory,org.polarion.svnwebclient.web
+ .controller.file,org.polarion.svnwebclient.web.model,org.polarion.svn
+ webclient.web.model.data,org.polarion.svnwebclient.web.model.data.dir
+ ectory,org.polarion.svnwebclient.web.model.data.file,org.polarion.svn
+ webclient.web.model.sort,org.polarion.svnwebclient.web.resource,org.p
+ olarion.svnwebclient.web.servlet,org.polarion.svnwebclient.web.servle
+ t.utils,org.polarion.svnwebclient.web.support
+Generated-from: 1409778876210;type=2
+Bundle-Name: %pluginName
+Bundle-Version: 3.17.0
+Bundle-ClassPath: svnwebclient.jar,lib/commons-codec-1.3.jar,lib/commo
+ ns-compress-1.2.jar,lib/mail-1.3.1.jar,lib/activation.jar,lib/jhighli
+ ght-1.0.jar,lib/mockrunner-servlet.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: org.eclipse.core.runtime,com.polarion.portal.tomcat,or
+ g.apache.log4j,org.junit;resolution:=optional,com.polarion.alm.projec
+ ts,com.polarion.platform.repository,com.polarion.platform,org.polario
+ n.svncommons,org.tmatesoft.svnkit,com.polarion.alm.tracker,com.polari
+ on.core.boot
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+
+

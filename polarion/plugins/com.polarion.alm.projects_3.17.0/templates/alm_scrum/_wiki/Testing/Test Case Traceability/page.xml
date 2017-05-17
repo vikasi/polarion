@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20110831110602</created>
+<type>content</type>
+<content><![CDATA[#set($queries = "Target Version: Version 1.0>targetVersion.KEY:Version_1_0,Target Version: Version 1.1>targetVersion.KEY:Version_1_1,Severity: Must have>severity:must_have,Severity: Must or Should have>severity:(must_have OR should_have),Status: Verified>status:verified,Status: Implemented>status:implemented")
+#set($allowedQueries = "")
+#foreach($q in $queries.split(","))
+#set($counter = 0)
+#foreach($el in $q.split(">"))
+    #if($counter==0)
+        #set($ql = $el)
+    #elseif($counter==1)
+        #set($qv = $el)
+    #end
+    #set($counter = $counter + 1)
+#end
+#if($allowedQueries.length()>0)#set($allowedQueries = "$allowedQueries,")#end
+#set($allowedQueries = "$allowedQueries,$ql")
+#end
+{include-macros:_default.TraceabilityTableMacro}
+{parameter:rootQueryAdditional|type=string|allow-no-value=true|allowed-values=$allowedQueries|value=}
+{parameter:unresolvedDefects|type=boolean|value=true}
+#set( $unresolvedDefects= $pageParameters.unresolvedDefects )
+#set($rootQueryAdditional = $pageParameters.rootQueryAdditional)
+#foreach($q in $queries.split(","))
+#set($counter = 0)
+#foreach($el in $q.split(">"))
+    #if($counter==0)
+        #set($ql = $el)
+    #elseif($counter==1)
+        #set($qv = $el)
+    #end
+    #set($counter = $counter + 1)
+#end
+#if($pageParameters.rootQueryAdditional.equals("$ql"))
+#set($rootQueryAdditional = $qv)
+#end
+#end
+
+#set($projectId=$doc.getProject($doc.getSpace()))
+#set( $projectId = $doc.getProject($doc.space) )
+#set( $middleRoleQuery = "verifies=")
+#set( $endRoleQuery = "triggered_by=")
+#set( $sortRows = "id")
+#if ($rootQueryAdditional && $rootQueryAdditional.trim().length()>0) 
+    #set( $rootQuery  = "type:userstory AND project.id:$projectId AND $rootQueryAdditional")
+#else
+    #set( $rootQuery  = "type:userstory AND project.id:$projectId")
+#end
+#if ($unresolvedDefects) 
+    #set( $defectsQuery  = "type:defect AND project.id:$projectId AND status:open")
+#else
+    #set( $defectsQuery  = "type:defect AND project.id:$projectId")
+#end
+
+1 User Stories - Test Cases - Defects - Traceability
+
+{parameter-form}
+Filter User Stories: {parameter-editor:rootQueryAdditional|width=210} {parameter-form-submit} {parameter-form-save}\\
+{parameter-editor:unresolvedDefects} Show open defects only\\
+{parameter-form}
+
+#TraceabilityTable("$rootQuery"  "type:testcase AND project.id:$projectId" "$defectsQuery"  "description,status")]]></content>
+</wiki-page>

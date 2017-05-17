@@ -1,0 +1,157 @@
+body,html {
+	margin:0px;
+}
+
+
+TD {
+	font-family: Arial, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+DIV {
+	font-family: Arial, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.input {
+	width: 263px;
+	height: 22px;
+	padding: 6px 3px 7px 10px;
+	color: #0E4075;
+	font-size: 18px;
+	font-family: Arial,Helvetica,sans-serif;
+	border: 1px solid #bbbbbb;
+	transition: all 0.40s ease-in-out;
+	-webkit-transition: all 0.30s ease-in-out;
+ 	-moz-transition: all 0.30s ease-in-out;	
+	outline:none;
+	border-radius:3px;
+}
+ 
+input:focus {
+	box-shadow: 0 0 5px rgba(81, 155, 238, 1);
+	-webkit-box-shadow: 0 0 5px rgba(81, 155, 238, 1);
+	-moz-box-shadow: 0 0 5px rgba(81, 155, 238, 1);	
+	border: 1px solid #78b8e5;
+
+}
+
+.select {
+	width: 278px;
+	height: 42px;
+	padding: 8px 3px 7px 10px;
+	color: #0E4075;
+	font-size: 18px;
+	font-family: Arial,Helvetica,sans-serif;
+	background: #FCFCFC;
+	border: 1px solid #bbbbbb;
+	transition: all 0.40s ease-in-out;
+	-webkit-transition: all 0.30s ease-in-out;
+ 	-moz-transition: all 0.30s ease-in-out;	
+	outline:none;
+	border-radius:3px;
+}
+
+select:focus {
+	box-shadow: 0 0 5px rgba(81, 155, 238, 1);
+	-webkit-box-shadow: 0 0 5px rgba(81, 155, 238, 1);
+	-moz-box-shadow: 0 0 5px rgba(81, 155, 238, 1);	
+	border: 1px solid #78b8e5;
+
+}
+
+.main{
+	width:100%;
+}
+
+.container{
+	background-color: white;
+	position: absolute;
+	top: 30vh;
+	margin-top:-10vh;
+	float:left;
+	padding:20px 0px 20px 40px;
+	color: #235b82;
+}
+
+#createbutton{
+	width: 278px;
+	height: 42px;
+	padding: 0px;
+	border: 1px solid #89adce;
+	color: #00346d;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #D1E4F2 url("/polarion/ria/images/backgrounds/bg_form_btn.gif") repeat-x scroll 0 0;
+	cursor: pointer;
+	border-radius:4px;	
+}
+.name{
+	width: 130px;
+	padding-right: 15px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#info{
+	background: white;
+	color:black;
+	padding:10px;
+	border:2px solid red;
+	margin-top:20px;
+	width:300px;
+}
+
+#heading {
+	width: 550px;
+	font-size: 23px;
+	font-weight:bold;
+	font-family:arial;
+	border-bottom: 2px white solid;
+	margin-top: 7px;
+	color: #235b82;
+}
+.heading2{
+	width: 500px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#00ADF5;
+	padding-bottom:2px;
+	padding-top:15px;
+	border-bottom:4px solid #F8F8F8;
+}
+.headingSub{
+	padding-top:10px;
+	color:#A1A1CA;
+}
+.headingSub a{
+	color:#A1A1CA;
+}
+#info{
+	background: white;
+	color:black;
+	padding:10px;
+	border:2px solid red;
+	margin-top:20px;
+	width:300px;
+}
+
+#background {
+	background-repeat: no-repeat; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position:center center;
+	background-attachment:fixed;
+}
+
+#companyAndContainer {
+	width:605px;
+	height:740px;
+	right:0px;
+	display: block;
+	margin-left: auto;
+ 	margin-right: auto;
+}

@@ -1,0 +1,75 @@
+1 Scheduler
+\\
+{scheduler-start-stop}
+#info("Scheduler allows you to configure *scheduled jobs* such as builds, dashboard updates, system cleanup, etc. Polarion comes with a default set of scheduled jobs. You can alter the properties of scheduled jobs, such as the day of the week when the job should run. You can also add additional scheduled jobs to the default set, or remove jobs from the default jobs set.\\
+You can optionally invoke any job explicitly in the *Monitor* topic. Order of the jobs in Monitor is defined by their order in the configuration file.")
+
+1.1 Scheduled Jobs Configuration
+{xmleditor:scheduler}
+\\
+1.1 Quick Help
+Each job is defined by a <tt>job</tt> element. The ~~name~~, ~~id~~ and ~~scope~~ parameters are required. Sub-elements are job-specific. Here is the basic syntax for defining a scheduled job:\\
+<tt>
+  &lt;job name="Job Name" id="job.id" cronExpression="0 0 0 ? \* \*" disabled="true|__false__" scope="system"&gt;\\
+    &nbsp;&nbsp;&lt;subElement1&gt;value&lt;/subElement1&gt;\\
+  &lt;/job&gt;
+</tt>
+
+1.1.1.1.1.1 Parameter: ~~name~~
+Name of the job that is shown in the jobs table in Monitor topic. Required.
+
+1.1.1.1.1.1 Parameter: ~~id~~
+Job id as it is specified in its deployment. Required.
+
+1.1.1.1.1.1 Parameter: ~~scope~~
+Scope of the job. Must be one of:
+* <tt>project:&lt;project_id&gt;</tt>
+* <tt>path:&lt;repository_path&gt;</tt>
+* <tt>system</tt>
+Required.
+
+1.1.1.1.1.1 Parameter: ~~disabled~~
+Set <tt>disabled="true"</tt> to disable automatic scheduling of the particular job. The job still appears in the Jobs table and can be started manually.
+
+1.1.1.1.1.1 Parameter: ~~node~~
+Set a cluster node where job will be executed. Possible values are:
+* ~~unspecified~~ - scheduler will choose one of the nodes
+* <tt>node="\*"</tt> - will be executed on all nodes in a cluster
+* <tt>node="&lt;nodeId&gt;"</tt> - will be executed only on specified node
+
+1.1.1.1.1.1 Parameter: ~~cronExpression~~
+UNIX cron-like specification of points in time when the job should be started.
+{table}
+Field Name| Allowed Values| Allowed Special Characters
+Seconds| 0-59| , - * /
+Minutes| 0-59| , - * /
+Hours| 0-23| , - * /
+Day Of Month| 1-31| , - * ? / L W
+Month| 1-12 or JAN-DEC| , - * /
+Day Of Week| 1-7 or SUN-SAT| , - * ? / L #
+Year (optional)| empty, 1970-2099| , - * /
+{table}
+(* = all values; ? = no specific value; - = range specification; , = additional value specification; / = increments specification)
+
+See *Examples* below or refer to <a href="http://www.quartz-scheduler.org/documentation/quartz-2.1.x/tutorials/tutorial-lesson-06.html" target="_blank" style="text-decoration:underline">CronTrigger Tutorial</a> for more details.\\
+{table}
+Expression| Meaning
+"0 0 12 * * ?"| Fire at 12pm (noon) every day
+"0 15 10 ? * *"| Fire at 10:15am every day
+"0 15 10 * * ?"| Fire at 10:15am every day
+"0 15 10 * * ? *"| Fire at 10:15am every day
+"0 15 10 * * ? 2005"| Fire at 10:15am every day during the year 2005
+"0 * 14 * * ?"| Fire every minute starting at 2pm and ending at 2:59pm, every day
+"0 0/5 14 * * ?"| Fire every 5 minutes starting at 2pm and ending at 2:55pm, every day
+"0 0/5 14,18 * * ?"| Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire every 5 minutes starting at 6pm and ending at 6:55pm, every day
+"0 0-5 14 * * ?"| Fire every minute starting at 2pm and ending at 2:05pm, every day
+"0 10,44 14 ? 3 WED"| Fire at 2:10pm and at 2:44pm every Wednesday in the month of March
+"0 15 10 ? * MON-FRI"| Fire at 10:15am every Monday, Tuesday, Wednesday, Thursday and Friday
+"0 15 10 15 * ?"| Fire at 10:15am on the 15th day of every month
+"0 15 10 L * ?"| Fire at 10:15am on the last day of every month
+"0 15 10 ? * 6L"| Fire at 10:15am on the last Friday of every month
+"0 15 10 ? * 6L"| Fire at 10:15am on the last Friday of every month
+"0 15 10 ? * 6L 2002-2005"| Fire at 10:15am on every last friday of every month during the years 2002, 2003, 2004 and 2005
+"0 15 10 ? * 6#3"| Fire at 10:15am on the third Friday of every month
+{table}
+\\

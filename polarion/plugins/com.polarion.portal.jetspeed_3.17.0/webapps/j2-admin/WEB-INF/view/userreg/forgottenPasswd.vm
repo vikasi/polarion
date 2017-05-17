@@ -1,0 +1,24 @@
+#set ($MESSAGES = $portletConfig.getResourceBundle($renderRequest.Locale))
+
+<div id="ForgottenPassword"  class="portlet-section-text"> 
+	#if($updatedPWMsg)
+		<table>
+			<tr><td colspan="2" ><p class="portlet-msg-success">$updatedPWMsg</p></td></tr>
+		</table>
+	#else	
+		<form name="forgottenPasswordForm" action="$renderResponse.createActionURL()" method="post" >
+		<table>
+			<tr><td colspan="2" >
+				$MESSAGES.getString('page.message') 
+				#if($MSG )
+		 			<br>
+		 			<p class="portlet-msg-error">$!MSG</p>
+		 		#end
+			</td></tr>
+			
+			<tr><td>$MESSAGES.getString('page.email')</td><td><input type="text" name="email" value="$!email" /></td></tr>
+			<tr><td colspan="2" > <input type="submit" value="$MESSAGES.getString('page.button')"  name="Request New Password" /> </td></tr>
+		</table>
+	    </form>
+    #end
+</div>

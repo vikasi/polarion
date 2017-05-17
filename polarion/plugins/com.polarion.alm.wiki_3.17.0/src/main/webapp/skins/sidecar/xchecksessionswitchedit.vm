@@ -1,0 +1,14 @@
+<script type="text/javascript">
+
+if (window.name == "working_area")
+{
+   closeLoginWiki();
+   switchToRich();
+}
+else
+{
+  window.parent.closeLoginWiki();
+  window.parent.switchToRich();
+}
+
+</script>

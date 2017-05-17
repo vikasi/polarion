@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="AC_OETags.js" language="javascript"></script>
+    <title>
+      Work Items
+    </title>
+    <link title="Style" type="text/css" rel="stylesheet" href="/polarion/ria/css/processaudit.css"/>
+	 <script type="text/javascript" src="/polarion/ria/javascript/pa/toggle.js"></script>
+	 <script type="text/javascript" src="/polarion/ria/javascript/pa/selection.js"></script>
+	 <script type="text/javascript" src="/polarion/ria/javascript/pa/resize.js"></script>
+  </head>
+  <body>
+    <table cellspacing="0" cellpadding="0" width="100%">
+<tr>
+	<td valign="top" >
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Metrics','/polarion/ria/images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Metrics</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Metrics','/polarion/ria/images/')"><img title="Minimize" id="Metrics.img" src="/polarion/ria/images/control/minimize_portlet.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+			<div id="Metrics.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+				<table width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="100%" valign="top">
+<table id="Metrics.panel.table" class="summarylist" height="100%" width="100%">
+	<tbody>
+		<tr>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="50%">
+Item
+			</th>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="50%"> 
+Value
+			</th>
+		</tr>
+<tr class="report" id="Metrics">
+   <td class="left" id="Metrics.Planning">
+           <a href="javascript:toggleList('Planning_report','Metrics.panel.table','Metrics.Planning','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Planning_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Planning">Planning</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Planning.PLANNING-COVERAGE" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Estimated vs. Not Estimated Work Items
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Estimated" class="distribution_bar_td" style="width:45%;background:#00FF00;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary AND HAS_VALUE:initialEstimate AND HAS_VALUE:timeSpent) OR (project.id:elibrary AND HAS_VALUE:initialEstimate AND HAS_VALUE:remainingEstimate)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary AND HAS_VALUE:initialEstimate AND HAS_VALUE:timeSpent) OR (project.id:elibrary AND HAS_VALUE:initialEstimate AND HAS_VALUE:remainingEstimate)&personal=all&resolution=all' target='_top'> 67</a></a></td><td title="Not Estimated" class="distribution_bar_td" style="width:54%;background:#FF0000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary AND NOT HAS_VALUE:initialEstimate) OR (project.id:elibrary AND NOT HAS_VALUE:remainingEstimate AND NOT HAS_VALUE:timeSpent)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary AND NOT HAS_VALUE:initialEstimate) OR (project.id:elibrary AND NOT HAS_VALUE:remainingEstimate AND NOT HAS_VALUE:timeSpent)&personal=all&resolution=all' target='_top'> 80</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Planning.WORKITEMS-PLANNING-ACCURACY" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;In Time vs. Underestimated Work Items
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="In Time" class="distribution_bar_td" style="width:94%;background:#00FF00;">63</td><td title="Underestimated" class="distribution_bar_td" style="width:5%;background:#FF0000;">4</td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Planning.PROJECT-PLAN-ACCURACY" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Project Plan Accuracy
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Accurate" class="distribution_bar_td" style="width:97%;background:#00FF00;">0,98</td><td title="Inaccurate" class="distribution_bar_td" style="width:2%;background:#FF0000;">0,02</td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Planning.ESTIMATE-ACCURACY" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Estimate Accuracy
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Accurate" class="distribution_bar_td" style="width:97%;background:#00FF00;">0,98</td><td title="Inaccurate" class="distribution_bar_td" style="width:2%;background:#FF0000;">0,02</td></tr></table></div></div>
+	</td>
+</tr>
+<tr class="report" id="Metrics">
+   <td class="left" id="Metrics.Quality Audit">
+           <a href="javascript:toggleList('Quality Audit_report','Metrics.panel.table','Metrics.Quality Audit','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Quality Audit_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Quality Audit">Quality Audit</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.OPEN-BY-SEVERITY" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Unresolved by Severity
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Nice to Have" class="distribution_bar_td" style="width:9%;background:#36C900;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 11</a></a></td><td title="Basic" class="distribution_bar_td" style="width:10%;background:#36C900;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 12</a></a></td><td title="Normal" class="distribution_bar_td" style="width:10%;background:#44BB00;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:normal AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:normal AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 12</a></a></td><td title="Normal" class="distribution_bar_td" style="width:10%;background:#5EA100;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:normal AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:normal AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 12</a></a></td><td title="Smoke" class="distribution_bar_td" style="width:5%;background:#6C9300;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:smoke AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:smoke AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 6</a></a></td><td title="Major" class="distribution_bar_td" style="width:3%;background:#798600;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:major AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:major AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 4</a></a></td><td title="Nice to Have" class="distribution_bar_td" style="width:9%;background:#798600;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 11</a></a></td><td title="Major" class="distribution_bar_td" style="width:3%;background:#877800;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:major AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:major AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 4</a></a></td><td title="Nice to Have" class="distribution_bar_td" style="width:9%;background:#FF7000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 11</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:8%;background:#FF7000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 10</a></a></td><td title="Critical" class="distribution_bar_td" style="width:2%;background:#AF5000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:critical AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:critical AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 3</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:8%;background:#BC4300;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 10</a></a></td><td title="Critical" class="distribution_bar_td" style="width:2%;background:#BC4300;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:critical AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:critical AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 3</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:8%;background:#F80000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 10</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.RESOLVED-BY-SEVERITY" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Resolved by Severity
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Nice to Have" class="distribution_bar_td" style="width:5%;background:#36C900;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 6</a></a></td><td title="Normal" class="distribution_bar_td" style="width:17%;background:#44BB00;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:normal AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:normal AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 19</a></a></td><td title="Normal" class="distribution_bar_td" style="width:17%;background:#5EA100;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:normal AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:normal AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 19</a></a></td><td title="Major" class="distribution_bar_td" style="width:0%;background:#798600;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:major AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:major AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Nice to Have" class="distribution_bar_td" style="width:5%;background:#798600;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 6</a></a></td><td title="Major" class="distribution_bar_td" style="width:0%;background:#877800;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:major AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:major AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Nice to Have" class="distribution_bar_td" style="width:5%;background:#FF7000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 6</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:7%;background:#FF7000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 8</a></a></td><td title="Critical" class="distribution_bar_td" style="width:0%;background:#AF5000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:critical AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:critical AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:7%;background:#BC4300;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 8</a></a></td><td title="Critical" class="distribution_bar_td" style="width:0%;background:#BC4300;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:critical AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:critical AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:7%;background:#F80000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 8</a></a></td><td title="Blocker" class="distribution_bar_td" style="width:0%;background:#D72800;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:blocker AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:blocker AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:7%;background:#D72800;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 8</a></a></td><td title="Blocker" class="distribution_bar_td" style="width:0%;background:#E51A00;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:blocker AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:blocker AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:7%;background:#F20D00;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 8</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:7%;background:#FF0000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 8</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.RESOLVED-RATIO" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Resolved vs. Unresolved
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Resolved" class="distribution_bar_td" style="width:29%;background:#00FF00;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 44</a></a></td><td title="Unresolved" class="distribution_bar_td" style="width:70%;background:#FF0000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution&personal=all&resolution=all' target='_top'> 103</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.ASSIGNMENT-RATIO" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Assigned vs. Unassigned
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Assigned" class="distribution_bar_td" style="width:19%;background:#00FF00;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id&personal=all&resolution=all' target='_top'> 20</a></a></td><td title="Unassigned" class="distribution_bar_td" style="width:80%;background:#FF0000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:assignee.id&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:assignee.id&personal=all&resolution=all' target='_top'> 83</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.TRACEABILITY-COMMITS-REQUIREMENTS" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Traceability Commits to Work Items
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Traceable Commits" class="distribution_bar_td" style="width:50%;background:#00FF00;">1</td><td title="Untraceable Commits" class="distribution_bar_td" style="width:50%;background:#FF0000;">1</td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.TRACEABILITY-REQUIREMENTS-COMMITS" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Traceability Work Items to Commits
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Untraceable Work Items" class="distribution_bar_td" style="width:290%;background:#FF0000;">128</td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.PLANNING-RATIO" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Scheduled vs. Unscheduled
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Scheduled" class="distribution_bar_td" style="width:19%;background:#00FF00;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id&personal=all&resolution=all' target='_top'> 20</a></a></td><td title="Unscheduled" class="distribution_bar_td" style="width:80%;background:#FF0000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:timePoint.id&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:timePoint.id&personal=all&resolution=all' target='_top'> 83</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.SUSPECT-RATIO" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Not Suspect vs. Suspect Work Items
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Not suspect" class="distribution_bar_td" style="width:99%;background:#00FF00;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND NOT suspect:true&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND NOT suspect:true&personal=all&resolution=all' target='_top'> 102</a></a></td><td title="Suspect" class="distribution_bar_td" style="width:0%;background:#FF0000;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND suspect:true&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND NOT HAS_VALUE:resolution AND suspect:true&personal=all&resolution=all' target='_top'> 1</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+      </tbody>
+</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td valign="top" style="padding-top: 15px;">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Statistics','/polarion/ria/images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Statistics</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Statistics','/polarion/ria/images/')"><img title="Minimize" id="Statistics.img" src="/polarion/ria/images/control/minimize_portlet.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+			<div id="Statistics.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+				<table width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="100%" valign="top">
+<table id="Statistics.panel.table" class="summarylist" height="100%" width="100%">
+	<tbody>
+		<tr>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="50%">
+Item
+			</th>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="50%"> 
+Value
+			</th>
+		</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Statistics">
+           <a href="javascript:toggleList('Statistics_report','Statistics.panel.table','Statistics.Statistics','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Statistics_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Statistics">Statistics</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Statistics.OPEN-BY-PRIORITY" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Unresolved by Priority
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Medium" class="distribution_bar_td" style="width:100%;background:#798600;"><a target='_top' href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (priority:medium AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (priority:medium AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 58</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Statistics.MEI" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Most Work Items Entered by an Individual
+	</td>
+	<td class="right" align="right">
+141 (System Administrator)
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Statistics.MSI" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Most Work Items Solved by an Individual
+	</td>
+	<td class="right" align="right">
+14 (Steve Developer)
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Statistics.MAI" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Most Work Items Assigned to an Individual
+	</td>
+	<td class="right" align="right">
+26 (Steve Developer)
+	</td>
+</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Totals">
+           <a href="javascript:toggleList('Totals_report','Statistics.panel.table','Statistics.Totals','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Totals_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Totals">Totals</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr class="report" id="Statistics.Totals">
+   <td class="left" id="Statistics.Totals.All">
+&nbsp;&nbsp;&nbsp;           <a href="javascript:toggleList('All_report','Statistics.panel.table','Statistics.Totals.All','/polarion/ria/images/');"><img name="hideBranch" border="0" id="All_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="All">All</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.userstory" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:userstory)&personal=all&resolution=all" target="_top">User Story</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:userstory)&personal=all&resolution=all' target='_top'> 25</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.changerequest" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:changerequest)&personal=all&resolution=all" target="_top">Change Request</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:changerequest)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.testcase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testcase)&personal=all&resolution=all" target="_top">Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testcase)&personal=all&resolution=all' target='_top'> 18</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.testing" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testing)&personal=all&resolution=all" target="_top">Testing</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testing)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.documentation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:documentation)&personal=all&resolution=all" target="_top">Documentation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:documentation)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.task" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:task)&personal=all&resolution=all" target="_top">Task</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:task)&personal=all&resolution=all' target='_top'> 29</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.implementation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:implementation)&personal=all&resolution=all" target="_top">Implementation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:implementation)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.requirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:requirement)&personal=all&resolution=all" target="_top">Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:requirement)&personal=all&resolution=all' target='_top'> 16</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.analysis" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:analysis)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:analysis)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.defect" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:defect)&personal=all&resolution=all" target="_top">Defect</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:defect)&personal=all&resolution=all' target='_top'> 12</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics.Totals">
+   <td class="left" id="Statistics.Totals.Unresolved">
+&nbsp;&nbsp;&nbsp;           <a href="javascript:toggleList('Unresolved_report','Statistics.panel.table','Statistics.Totals.Unresolved','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Unresolved_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Unresolved">Unresolved</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.userstory" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">User Story</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 11</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.changerequest" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Change Request</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.testcase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 18</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.testing" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Testing</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.documentation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Documentation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.task" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Task</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 10</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.implementation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Implementation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.requirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 8</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.analysis" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.defect" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Defect</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 9</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics.Totals">
+   <td class="left" id="Statistics.Totals.Assigned (Unresolved)">
+&nbsp;&nbsp;&nbsp;           <a href="javascript:toggleList('Assigned (Unresolved)_report','Statistics.panel.table','Statistics.Totals.Assigned (Unresolved)','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Assigned (Unresolved)_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Assigned (Unresolved)">Assigned (Unresolved)</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.userstory" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">User Story</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.changerequest" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Change Request</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.testcase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.testing" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Testing</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.documentation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Documentation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.task" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Task</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 10</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.implementation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Implementation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.requirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 3</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.analysis" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.defect" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Defect</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 7</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics.Totals">
+   <td class="left" id="Statistics.Totals.Scheduled (Unresolved)">
+&nbsp;&nbsp;&nbsp;           <a href="javascript:toggleList('Scheduled (Unresolved)_report','Statistics.panel.table','Statistics.Totals.Scheduled (Unresolved)','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Scheduled (Unresolved)_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Scheduled (Unresolved)">Scheduled (Unresolved)</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.userstory" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">User Story</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 7</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.changerequest" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Change Request</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.testcase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.testing" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Testing</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.documentation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Documentation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.task" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Task</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 10</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.implementation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Implementation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.requirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.analysis" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.defect" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Defect</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 3</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Unresolved by Category">
+           <a href="javascript:toggleList('Unresolved by Category_report','Statistics.panel.table','Statistics.Unresolved by Category','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Unresolved by Category_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Unresolved by Category">Unresolved by Category</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Category.UNRESOLVED-BY-CATEGORY._uncategorized" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND NOT HAS_VALUE:categories.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Uncategorized</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND NOT HAS_VALUE:categories.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 85</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Category.UNRESOLVED-BY-CATEGORY.Persistence" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (categories.id:Persistence)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Persistence</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (categories.id:Persistence)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 1</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Category.UNRESOLVED-BY-CATEGORY.Searching" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (categories.id:Searching)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Searching</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (categories.id:Searching)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 6</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Category.UNRESOLVED-BY-CATEGORY.UI" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (categories.id:UI)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">UI</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (categories.id:UI)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 11</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Unresolved by Assignee">
+           <a href="javascript:toggleList('Unresolved by Assignee_report','Statistics.panel.table','Statistics.Unresolved by Assignee','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Unresolved by Assignee_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Unresolved by Assignee">Unresolved by Assignee</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE._unassigned" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND NOT HAS_VALUE:assignee.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Unassigned</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND NOT HAS_VALUE:assignee.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 83</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.aSeller" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:aSeller)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Alex Seller</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:aSeller)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.cUser" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:cUser)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Carl User</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:cUser)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.jRequirement" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:jRequirement)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">John Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:jRequirement)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 3</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.mTest" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:mTest)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Mark Test</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:mTest)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 3</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.pGUI" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:pGUI)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Philip GUI</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:pGUI)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 5</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.rProject" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:rProject)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Robert Project</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:rProject)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.sDeveloper" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:sDeveloper)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Steve Developer</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:sDeveloper)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 12</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.admin" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:admin)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">System Administrator</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (assignee.id:admin)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Unresolved by Time Point">
+           <a href="javascript:toggleList('Unresolved by Time Point_report','Statistics.panel.table','Statistics.Unresolved by Time Point','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Unresolved by Time Point_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Unresolved by Time Point">Unresolved by Time Point</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT._unscheduled" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND NOT HAS_VALUE:timePoint.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Unscheduled</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND NOT HAS_VALUE:timePoint.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 83</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT.version0.9" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (timePoint.id:version0.9)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Version 0.9</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (timePoint.id:version0.9)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT.Sprint33" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (timePoint.id:Sprint33)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Sprint 33</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (timePoint.id:Sprint33)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT.Sprint34" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (timePoint.id:Sprint34)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Sprint 34</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (timePoint.id:Sprint34)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 20</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT.version1.0" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (timePoint.id:version1.0)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Version 1.0</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/elibrary/workitems/?query=((project.id:elibrary) AND (timePoint.id:version1.0)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+      </tbody>
+</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+    </table>
+  </body>
+</html>

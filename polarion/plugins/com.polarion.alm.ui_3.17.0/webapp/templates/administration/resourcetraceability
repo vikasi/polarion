@@ -1,0 +1,218 @@
+1 Resource Traceability
+\\
+{executeRTConfigurationButton}
+\\
+#info("Click *Save* before clicking on *Run Config...*")
+(Click *Run Config...* to test a new configuration or bypass the scheduled wait time.)
+
+
+
+1.1 Current Configuration
+{xmleditor:resource-traceability}
+ 
+1.1 Quick Help
+1.1.1 Overview
+Configure ~~Where~~, ~~When~~ and ~~How~~ Resource Traceability data is processed.
+\\ 
+\\
+This {style:type=span|border=none|color=darkblue}*Quick Help*{style} section focuses on how to customize the <tt>resource-traceability.xml</tt> file above to process “~~Linked Resources~~”. 
+\\
+ 
+1.1.1 Configure Resource Traceability 
+*Before configuring the resource-traceability.xml file, complete the <a href="/polarion/help/topic/com.polarion.xray.doc.user/agConfigTraceableResources.html#add_linked_resources_to_work_items" target="_blank" style="text-decoration:underline">Resource Traceability Configuration Checklist</a>.* 
+\\
+
+
+ 
+1.1.1.1 XML Parameters 
+
+
+*Customize the values in {style:type=span|border=none|color=red}red{style}*.
+---- 
+
+{style:type=span|border=none|color=darkblue}&lt;categories&gt;{style}
+\\
+The wrapper tag used for the <tt>&lt;category id="first_category" name="Codebase"&gt;</tt> tag.
+\\
+For Resource Traceability, a category lets administrators organize one or more <tt>&lt;repositoryConfiguration&gt;</tt> tags by similar criteria (e.g. Codebase, Marketing Material etc.).
+\\
+The configuration file must contain one <tt>&lt;categories&gt;</tt> tag with one or multiple <tt>&lt;category&gt;</tt> tags defined for each project.
+\\
+
+{style:type=span|border=none|color=darkblue}&lt;category id="{style}{style:type=span|border=none|color=red}first_category{style}{style:type=span|border=none|color=darkblue}" 
+name="{style}{style:type=span|border=none|color=red}Codebase{style}{style:type=span|border=none|color=darkblue}"&gt;{style}
+\\
+The <tt>&lt;category&gt;</tt> tag lets administrators create multiple configurations, based on different criteria, within the single resource-traceability.xml file.  
+\\
+\\
+If <tt>parser</tt> and/or <tt>scheduler</tt> are set on the <tt>category</tt> level then it will apply to all repositories inside that category, unless explicitly set on the <tt>&lt;repositoryConfiguration&gt;</tt> level.
+\\
+\\
+Multiple repositories can be configured on this level by creating a <tt>&lt;repositoryConfiguration&gt;</tt> for each.
+\\
+Define a ~~unique~~ system <tt>*id*</tt> and common <tt>*name*</tt>.
+The system <tt>*id*</tt> is used by Polarion to identify the <tt>*category*</tt> and the <tt>*name*</tt> is what appears in the ~~Linked Resources~~ section of a configured Work Item.   
+
+----
+ 
+
+{style:type=span|border=none|color=darkblue}&lt;repositories&gt;{style}
+\\
+The wrapper tag used for the <tt>&lt;repositoryConfiguration&gt;</tt> tag. 
+\\
+This tag must be used inside a <tt>&lt;category&gt;</tt> tag. Here you can define one or more <tt>&lt;repositoryConfiguration&gt;</tt>.
+\\
+\\
+{style:type=span|border=none|color=darkblue}&lt;repositoryConfiguration&gt;{style}
+\\
+~~Where~~, Resource Traceability searches for, and processes data.  
+\\
+One or more <tt>&lt;repositoryConfiguration&gt;</tt> tag can be defined per <tt>&lt;category&gt;</tt> tag. (At least one ~~must~~ be defined for each.)
+\\
+\\
+{style:type=span|border=none|color=darkblue}&lt;repositoryConfiguration id="{style}{style:type=span|border=none|color=red}configuration1{style}{style:type=span|border=none|color=darkblue}" repository="{style}{style:type=span|border=none|color=red}default{style:type=span|border=none|color=darkblue}"&gt;{style} 
+\\
+Use this tag to define multiple configurations for a single repository by entering a ~~unique~~ name for each configuration in <tt>*id=*</tt>.
+\\
+Use the id of the repository defined on the Repositories administration page as the <tt>*repository=*</tt> value.
+
+----
+
+{style:type=span|border=none|color=darkblue}&lt;branches&gt;{style}
+\\
+The wrapper tag used for the <tt>&lt;branch id="Version 0.9" path="Demo Projects/elibrary/branches/0.9"/&gt;</tt> tag.
+\\
+\\
+{style:type=span|border=none|color=darkblue}&lt;branch id="{style}{style:type=span|border=none|color=red}Version 0.9{style}{style:type=span|border=none|color=darkblue}" path="{style}{style:type=span|border=none|color=red}Demo Projects/elibrary/branches/0.9"/{style}{style:type=span|border=none|color=darkblue}&gt;{style}
+\\
+A duplication of resources for version variants or testing. 
+\\
+\\
+The behaviour of this tag differs, depending on the Repository type. (Git or SVN)
+\\
+-For *SVN*, multiple branches can be defined or none at all.
+\\
+(If none is specified the default "~~Trunk~~" repository is used.)
+\\
+-*GIT* requires that only a single branch be defined, and currently does not support multiple branches.
+\\
+(If no branch is specified for a GIT repository then the "~~Master~~" branch will be used by default.)
+\\
+\\
+<tt>*Branch id=*</tt> The branch id that appears in the Linked Resources section of a configured Work Item.
+\\
+<tt>*path=*</tt> The absolute location of the branch starting from the root of the repository. (Can include the Project and/or Project Group.)  
+----
+
+{style:type=span|border=none|color=darkblue}&lt;paths&gt;{style}
+\\
+The wrapper tag used for the <tt>&lt;path dir="elibrary/trunk/src/main/java"/&gt;</tt> tag.  
+\\
+\\ 
+{style:type=span|border=none|color=darkblue}&lt;path dir="{style}{style:type=span|border=none|color=red}elibrary/trunk/src/main/java{style}{style:type=span|border=none|color=darkblue}"/&gt; {style}
+\\
+The file and folder locations processed by the parser.
+\\
+One or more paths can be defined per Repository.
+\\
+If branches are used, specify, if needed, the specific path location(s) inside the branches that should be processed by the parser. 
+\\
+If not specified the whole branch directory will be processed.
+\\
+If branches are not used, set the absolute location of the path starting from the root of the repository, including the "~~Project~~" and/or "~~Project Group~~".
+
+---- 
+
+{style:type=span|border=none|color=darkblue}&lt;fileParsers&gt;{style}
+\\
+The wrapper tag used for the <tt>&lt;fileParser id="javaParser" name="com.siemens.polarion.rt.parsers.java" extensions=".java"&gt;</tt> tag 
+\\
+\\
+{style:type=span|border=none|color=darkblue}&lt;fileParser id="{style}{style:type=span|border=none|color=red}javaParser{style}{style:type=span|border=none|color=darkblue}" name="{style}{style:type=span|border=none|color=red}com.siemens.polarion.rt.parsers.java{style}{style:type=span|border=none|color=darkblue}" extensions="{style}{style:type=span|border=none|color=red}.java{style}{style:type=span|border=none|color=darkblue}"&gt;{style} 
+\\
+The parser (Java, C etc.) used to extract the traced content and populate the links that appear in the Linked Resources section of a configured Work Item.
+\\
+One or more parsers can be defined per <tt>&lt;repositoryConfiguration&gt;</tt> or <tt>&lt;category&gt;</tt> tag.
+\\
+Define a ~~unique~~ parser system <tt>*id*</tt>, the parser's <tt>*Name*</tt>, and the file <tt>*Extension*</tt> it should search for.
+
+*Available Parsers:*
+
+For ~~Java~~ - <tt>&lt;fileParser id="javaParser" name="com.siemens.polarion.rt.parsers.java" extensions=".java"&gt;</tt>
+\\
+For ~~C~~ - <tt>&lt;fileParser id="cParser" name="com.siemens.polarion.rt.parsers.c" extensions=".c"&gt;</tt>
+\\
+For ~~XML~~ - <tt>&lt;fileParser id="xmlParser" name="com.siemens.polarion.rt.parsers.xml" extensions=".xml"&gt;</tt>
+
+
+
+----
+
+{style:type=span|border=none|color=darkblue}&lt;schedulers&gt;{style}
+\\
+The wrapper tag for the <tt>&lt;scheduler cron="0 \*/60 \* \* \* \*"/&gt;</tt> tag.
+\\ 
+One or more <tt>&lt;schedulers&gt;</tt> can be defined per  <tt>&lt;category&gt;</tt> or <tt>&lt;repositoryConfiguration&gt;</tt> tag.
+\\
+\\  
+{style:type=span|border=none|color=darkblue}&lt;scheduler cron="{style}{style:type=span|border=none|color=red}0 \*/60 \* \* \* \*{style}{style:type=span|border=none|color=darkblue}"/&gt;{style}
+\\ 
+~~When~~ or ~~If~~ the associated parser is executed. 
+\\
+Use Cron syntax below within the <tt>cron=</tt> tag to set the parsing schedule.
+\\ 
+\\
+#info("{style:type=span|border=none|color=red}*Warning!*{style} If a configuration is deleted from the <tt>resource-traceability.xml</tt> file above, *all the associated links will also be removed.*")
+\\
+{style:type=span|border=none|color=darkblue}*Recommendation*:{style} To keep existing links but stop processing a configuration's new links: 
+\\ 
+Remove the <tt>&lt;scheduler cron=&quot;0 \*/60 \* \* \* \*&quot;/&gt;</tt> tag from the target <tt>&lt;category&gt;</tt> or <tt>&lt;repositoryConfiguration&gt;</tt> tags.
+\\
+\\ 
+----
+ 
+1.1.1.1 Set Parsing Schedule
+ 
+1.1.1.1.1 CronExpression Syntax
+UNIX cron-like specification of points in time when the job should be started.
+{table}
+Field Name| Allowed Values| Allowed Special Characters
+Seconds| 0-59| , - * /
+Minutes| 0-59| , - * /
+Hours| 0-23| , - * /
+Day Of Month| 1-31| , - * ? / L W
+Month| 1-12 or JAN-DEC| , - * /
+Day Of Week| 1-7 or SUN-SAT| , - * ? / L #
+Year (optional)| empty, 1970-2099| , - * /
+{table}
+\\
+(* = all values; ? = no specific value; - = range specification; , = additional value specification; / = increments specification)
+\\
+
+See *Examples* below or refer to <a href="http://www.quartz-scheduler.org/documentation/quartz-2.1.x/tutorials/tutorial-lesson-06.html" target="_blank" style="text-decoration:underline">CronTrigger Tutorial</a> for more details.
+\\
+
+{table}
+Expression| Meaning
+"0 0 12 * * ?"| Fire at 12pm (noon) every day
+"0 15 10 ? * *"| Fire at 10:15am every day
+"0 15 10 * * ?"| Fire at 10:15am every day
+"0 15 10 * * ? *"| Fire at 10:15am every day
+"0 15 10 * * ? 2005"| Fire at 10:15am every day during the year 2005
+"0 * 14 * * ?"| Fire every minute starting at 2pm and ending at 2:59pm, every day
+"0 0/5 14 * * ?"| Fire every 5 minutes starting at 2pm and ending at 2:55pm, every day
+"0 0/5 14,18 * * ?"| Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire every 5 minutes starting at 6pm and ending at 6:55pm, every day
+"0 0-5 14 * * ?"| Fire every minute starting at 2pm and ending at 2:05pm, every day
+"0 10,44 14 ? 3 WED"| Fire at 2:10pm and at 2:44pm every Wednesday in the month of March
+"0 15 10 ? * MON-FRI"| Fire at 10:15am every Monday, Tuesday, Wednesday, Thursday and Friday
+"0 15 10 15 * ?"| Fire at 10:15am on the 15th day of every month
+"0 15 10 L * ?"| Fire at 10:15am on the last day of every month
+"0 15 10 ? * 6L"| Fire at 10:15am on the last Friday of every month
+"0 15 10 ? * 6L"| Fire at 10:15am on the last Friday of every month
+"0 15 10 ? * 6L 2002-2005"| Fire at 10:15am on every last friday of every month during the years 2002, 2003, 2004 and 2005
+"0 15 10 ? * 6#3"| Fire at 10:15am on the third Friday of every month
+{table}
+
+\\
+\\
+

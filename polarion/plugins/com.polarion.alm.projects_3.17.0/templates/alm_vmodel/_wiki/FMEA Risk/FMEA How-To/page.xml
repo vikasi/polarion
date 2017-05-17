@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20120105112637</created>
+<type>content</type>
+<content><![CDATA[{section:width=100%}
+{column}
+    1 FMEA How-To
+    
+    {toc}
+    
+    Product development and operations managers can run a *failure modes and effects analysis (FMEA)* to analyze potential failure risks within systems, classifying them according to severity and likelihood, based on past experience with similar products or processes. The FMEA objective is to help design identified failures out of the system with the least cost in terms of time and money.
+    
+    FMEA defines the term ~~failure mode~~ to identify defects or errors, potential or actual, in a product design or process, with emphasis on those affecting the customer or end user.
+    
+    A ~~failure effect~~ is the result of a failure mode on the product or system function as perceived by the user. Failure effects can be described in terms of what the end user may see or experience. The study of consequences of identified failures is called ~~effects analysis~~.
+    
+    FMEA prioritizes failures according to ~~severity~~, ~~frequency~~, and ~~detectability~~. Severity describes the seriousness of failure consequences. Frequency describes how often failures can occur. Detectability refers to degree of difficulty in detecting failures. FMEA also involves documenting current knowledge about failure risks.
+    
+    FMEA seeks to mitigate risk at all levels with resulting prioritized actions that prevent failures or at least reduce their severity and/or probability of occurrence. It also defines and aids in selecting remedial activities that mitigate the impact and consequences of failures.
+    
+    FMEA can be employed from the earliest design and conceptual stages onward through development and testing processes, into process control during ongoing operations throughout the life of the product or system.
+    
+    1.1 Step 1: Identify Potential Failures and Effects
+    The first FMEA step is to analyze functional requirements and their effects to identify all failure modes.
+    
+    Examples: warping, electrical short circuit, oxidation, fracture.
+    
+    Remember that failure modes in one component can induce them in others. List all failure modes per function in technical terms, considering the ultimate effect(s) of each failure mode and noting the failure effect(s). 
+    
+    Examples of failure effects include: overheating, noise, abnormal shutdown, user injury.
+    
+    1.1 Step 2: Determine Severity
+    Severity is the seriousness of failure consequences of failure effects. Usual practice rates failure effect severity (S) on a scale of 1 to 10 where 1 is lowest severity and 10 is highest. The following table shows typical FMEA severity ratings and their meanings:
+    
+    {table}
+    Rating 	|Meaning
+    1 	|No effect, no danger
+    2 	|Very minor – usually noticed only by discriminating or very observant users
+    3 	|Minor – only minor part of the system affected; noticed by average users
+    4-6 |Moderate – most users are inconvenienced and/or annoyed
+    7-8 |High - loss of primary function; users are dissatisfied
+    9-10 |Very high – hazardous. Product becomes inoperative, customers angered. Failure constitutes a safety hazard and can cause injury or death.
+    {table}
+    
+    1.1 Step 3: Gauge Likelihood of Occurrence
+    Examine cause(s) of each failure mode and how often failure occurs. Look at similar processes or products and their documented failure modes. All potential failure causes should be identified and documented in technical terms. Failure causes are often indicative of weaknesses in the design.
+    
+    Examples of causes include: incorrect algorithm, insufficient or excess voltage, operating environment too hot, cold, humid etc. 
+    
+    Failure modes are assigned an occurrence ranking (O), again from 1–10, as shown in the following table.
+    
+    {table}
+    Rating |	Meaning
+    1 	|No documented failures on similar products/processes
+    2-3 	|Low – relatively few failures
+    4-6 	|Moderate – some occasional failures
+    7-8 	|High – repeated failures
+    9-10 	|Very high – failure is almost certain
+    {table}
+    
+    1.1 Step 4: Failure Detection
+    After determining remedial actions, they should be tested for efficacy and efficiency. Also, the design should be verified and inspections procedures specified.
+    
+    1. Engineers inspect current system controls that prevent failure mode occurrence, or detect failures before they impact the user/customer.
+    1. Identify techniques used with similar products/systems to detect failures.
+    
+    These steps enable engineers to determine the likelihood of identifying or detecting failures. Then, each combination from Steps 1 and 2 is assigned a detection value (D), which indicates how likely it is that failures will be detected, and ranks the ability of identified actions to remedy or remove defects or detect failures. The higher the value of D, the more likely the failure will not be detected.
+    
+    {table}
+    Rating 	|Meaning
+    1 	|Fault is certain be caught by testing
+    2 	|Fault almost certain to be caught by testing
+    3 	|High probability that tests will catch fault
+    4-6 	|Moderate probability that tests will catch fault
+    7-8 	|Low probability that tests will catch fault
+    9-10 	|Fault will be passed undetected to user/customer
+    {table}
+    
+    1.1  Risk priority number (RPN)
+    After the foregoing basic steps, risk assessors calculate Risk Priority Numbers (RPN). These influence the choice of action against failure modes. RPN is calculated from the values of S, O and D as follows: \
+    
+    {code}
+    RPN = S \* O \* D (or RPN = S × O × D)
+    {code}
+    
+    RPN should be calculated for the entire design and/or process and documented in the FMEA. Results should reveal the most problematic areas, and the highest RPNs should get highest priority for corrective measures.
+    These measures can include a variety of actions: new inspections, tests, or procedures, design changes, different components, added redundancy, modified limits, etc. Goals of corrective measures include, in order of desirability:
+    
+    * Eliminate failure modes (some are more preventable than others)
+    * Minimize the severity of failure modes 
+    * Reduce the occurrence of failure modes
+    * Improve detection of failure modes
+    
+    When corrective measures are implemented, RPN is calculated again and the results documented in the FMEA. \\
+    \\
+    <hr />
+    <div style="font-size:smaller; margin: 1em 2em; background:#eeeeee; padding:1em; width:50%;">
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br />
+    <span xmlns:dct="http://purl.org/dc/terms/" style="font-size: smaller;" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">FMEA How-To</span> by 
+    <a xmlns:cc="http://creativecommons.org/ns#" style="font-size: smaller;" href="http://www.polarion.com/resources/index.php?cat=docs" property="cc:attributionName" rel="cc:attributionURL">Polarion Software</a> 
+    is licensed under a 
+    <a rel="license" style="font-size: smaller;" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />
+    Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" style="font-size: smaller;" href="http://en.wikipedia.org/wiki/Failure_mode_and_effects_analysis" rel="dct:source">en.wikipedia.org</a>.
+    
+    <div>
+
+
+{column}
+{column:width=300}
+
+{regiontitle}Process{regiontitle}
+{table:header=no|border=no}{image:FMEA.png}
+{table}
+
+
+{regiontitle}When to use FMEA{regiontitle}
+
+* When a process, product or service is being designed or redesigned, after quality function deployment.
+* When an existing process, product or service is being applied in a new way.
+* Before developing control plans for a new or modified process.
+* When improvement goals are planned for an existing process, product or service.
+* When analyzing failures of an existing process, product or service.
+* Periodically throughout the life of the process, product or service
+
+{column}
+{section}
+]]></content>
+</wiki-page>

@@ -1,0 +1,64 @@
+<a style="cursor:pointer;" onclick="navigateFromFrame('#page:workitems/readonly')" ><< Return to Read-only Fields</a>
+
+1 Read-only Fields Configuration
+
+*View:* [hatName]
+\\
+*Work Item Type:* [typeName]
+
+{readonlyfields:[hatId]|type=[typeId]}
+
+1.1 Quick Help
+Standard Work Item fields as well as custom fields specified in the ~~Fields~~ input will be read-only when a Work Item has the status defined by the particular ~~Status ID~~. \\
+
+Note that read-only fields should ~~not~~ be considered as a security feature. Administrators should be sure to properly configure user permissions, among other things.
+
+1.1.1.1.1 Available Statuses
+A list of available statuses is defined in Administration &gt; Work Items &gt; Enumerations &gt; status-enum.xml, *{hyperlink:/administration/workitems/enumerations}*.\\
+Two constants are defined for ~~Status ID~~:
+* ~~_default~~ - this configuration is used when no status-specific configuration exists
+* ~~_create~~ - this configuration is used when a new Work Item is in process of being created but is not yet saved
+
+1.1.1.1.1 Making Most Fields Read-only 
+The special *<tt>@all</tt>* command used in the ~~Fields~~ column enables you to more easily specify just a few writable fields making all other fields read-only. When specified, 
+all standard and custom fields in the Work Item form will be read-only. You can then specify exceptions by listing fields to be writable, using the prefix '*-*' (dash character) 
+before each field ID, delimiting everything with commas: \\ 
+
+~~SYNTAX:~~ <tt>@all,\[-field1,-field2,...\]</tt> \\
+
+~~EXAMPLE:~~ \\
+*StatusID:* <tt>_default</tt> *Fields:* <tt>@all,-status,-comments,-assignee</tt> \\
+
+With the above, all standard and custom fields are read-only for the specified status ~~except~~ fields <tt>status</tt>, <tt>comments</tt> and <tt>assignee</tt>. 
+
+1.1.1.1.1 Available Fields
+* approvals
+* assignee
+* attachments
+* author
+* categories
+* comments
+* description
+* dueDate
+* hyperlinks
+* initialEstimate
+* linkedRevisions
+* linkedWorkItems
+* plannedEnd
+* plannedIn
+* plannedStart
+* planningConstraints
+* previousStatus
+* priority
+* remainingEstimate
+* resolution
+* severity
+* status
+* timePoint
+* timeSpent
+* title
+* type
+* workRecords
+
+#info("A list of available custom fields is defined in Administration &gt; Work Items &gt; Custom Fields, *{hyperlink:/administration/workitems/customfields}*.")
+\\

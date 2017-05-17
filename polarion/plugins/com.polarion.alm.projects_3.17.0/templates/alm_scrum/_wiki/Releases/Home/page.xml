@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20070820235100</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.macros}
+{section:width=100%}
+{column}
+1 Release Planning
+
+Once a user story is reviewed, it should be accepted by the development team.  To accept a user story the team should:
+
+* Estimate the effort to implement it 
+* Create a list of tasks required to fully cover the implementation process. 
+
+A complement of the acceptance process is release planning. To assign a user story to a release, open the Release Plan and add it to the Plan.
+
+1.1 Releases
+{plans:query=template.id:release AND project.id:$page.project|child-template=release}
+
+1.1 Unplanned Items 
+* *[Unplanned>Unplanned]* - reviewed but not yet planned items
+
+1.1 Acceptance and Planning
+
+{table:header=no}
+#scoreEntry("Reviewed" "type:userstory AND status:reviewed" "req_status_reviewed.gif")
+#scoreEntry("Accepted" "type:userstory AND status:accepted" "req_status_accepted.gif")
+{table}
+
+{column}
+{column:width=2px}
+{column}
+{column:width=300px}
+
+{regiontitle}New Release{regiontitle}
+{style:type=div|class=regiondescription}
+Setup a new Version of your product.
+{style}
+
+<div onclick="javascript:top.createChildPlan('$page.project', null,'${page.project}/release','Release')" class="polarion-MultiButton-default-buttons polarion-MultiButton-default-buttons-isFirst polarion-MultiButton-default-buttons-isLast" style="color: rgb(94, 94, 94); text-shadow: rgb(234, 248, 215) 1px 1px; border-color: rgb(124, 180, 44); background-color: rgb(138, 201, 50); background-position: initial initial; background-repeat: initial initial;"><table  style="table-layout: fixed; width: 100%; height: 100%; word-wrap: break-word;" ><tr><td align="center" style="vertical-align: middle;"><div  class="polarion-CreateTestRunButton-labelText" >New Release</div></td></tr></table></div>
+{regiontitle}Workflow{regiontitle}
+<a href="../Workflow Schema">{image:user_story_planning.png}</a>
+
+{column}
+{section}]]></content>
+</wiki-page>

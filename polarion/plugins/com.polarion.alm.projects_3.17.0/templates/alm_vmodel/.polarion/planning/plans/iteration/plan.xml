@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plan>
+    <field id="allowedTypes">
+        <list>
+            <item>requirement</item>
+        </list>
+    </field>
+    <field id="author">admin</field>
+    <field id="calculationType">timeBased</field>
+    <field id="color">#e67e22</field>
+    <field id="created">2015-09-30 12:53:00.000 +0200</field>
+    <field id="description" text-type="text/plain">Iterations are short time frames (timeboxes) that typically last from one to four weeks.</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client4" class="polarion-rp-widget-part" data-widget="com.polarion.planLabel">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="plan">
+        <sub id="paths">
+          <sub>@current</sub>
+        </sub>
+      </sub>
+      <sub id="childTemplate"></sub>
+      <sub id="showAddButton">false</sub>
+    </span>
+  </div>
+  <p id="polarion_client5"></p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 70%;">
+  <div id="polarion_client6" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2&gt;Plan Status - $plan.fields.status.render.withIcon(false)&lt;/h2&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <div id="polarion_client9" class="polarion-rp-widget-part" data-widget="com.polarion.planProgress">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="plan">
+        <sub id="paths">
+          <sub>@current</sub>
+        </sub>
+      </sub>
+      <sub id="showIdealProgress">true</sub>
+      <sub id="showLabel">true</sub>
+      <sub id="advanced">
+        <sub id="width">80%</sub>
+      </sub>
+    </span>
+  </div>
+  <div id="polarion_client15" class="polarion-rp-widget-part" data-widget="com.polarion.burnDownChart">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="title"></sub>
+      <sub id="plan">
+        <sub id="paths">
+          <sub>@current</sub>
+        </sub>
+      </sub>
+      <sub id="timeAxis">
+        <sub id="scaleType">day</sub>
+        <sub id="baseDate">1</sub>
+      </sub>
+      <sub id="advanced">
+        <sub id="yAxisName"></sub><sub id="height"></sub>
+        <sub id="width">80%</sub>
+      </sub>
+    </span>
+  </div>
+  <h2 id="polarion_client16">Plan Board</h2>
+  <div id="polarion_client18" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub style="white-space:pre;" id="script">#if(!$widgetContext.target.pdf)  
+&lt;style&gt;
+.plan-links{
+	padding-bottom:5px;
+}
+.plan-links &gt; a {
+	padding-left:5px;
+    padding-right:5px;
+    font-weight:bold;
+}
+&lt;/style&gt;
+&lt;div class=&quot;plan-links&quot;&gt;
+  &lt;a target=&quot;_top&quot; href=&quot;$plan.utils.prioritizationLink&quot;&gt;
+      &lt;img src=&quot;/polarion/icons/default/actions/prioritizePlan.png&quot;/&gt;
+      Prioritize Planned Items&lt;/a&gt;
+## See Page Script for definition of links
+  &lt;a target=&quot;_top&quot; href=&quot;$pageContext.addWorkItemsLink&quot;&gt;
+      &lt;img src=&quot;/polarion/icons/default/actions/create_link.gif&quot;/&gt;
+      Add Work Items to the Plan&lt;/a&gt;
+  &lt;a target=&quot;_top&quot; href=&quot;$pageContext.browseAllPlannedLink&quot;&gt;
+      &lt;img src=&quot;/polarion/icons/default/actions/openInTable.png&quot;/&gt;
+      Browse All Planned Items&lt;/a&gt;
+&lt;/div&gt;
+#end</sub>
+      </sub>
+    </span>
+  </div>
+  <div id="polarion_client22" class="polarion-rp-widget-part" data-widget="com.polarion.plan.workItemsBoard">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="plan">
+        <sub id="paths">
+          <sub>@current</sub>
+        </sub>
+      </sub>
+      <sub id="columns">
+        <sub id="elements">
+          <sub>
+            <sub id="columnTitle">Open</sub>
+            <sub id="columnStatuses">
+              <sub id="values">
+                <sub>open</sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="columnTitle">In Progress</sub>
+            <sub id="columnStatuses">
+              <sub id="values">
+                <sub>inprogress</sub>
+                <sub>reopened</sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="columnTitle">Done</sub>
+            <sub id="columnStatuses">
+              <sub id="values">
+                <sub>done</sub>
+                <sub>rejected</sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="columnTitle">Verified</sub>
+            <sub id="columnStatuses">
+              <sub id="values">
+                <sub>verified-done</sub>
+                <sub>verified-rejected</sub>
+              </sub>
+            </sub>
+          </sub>
+        </sub>
+      </sub>
+      <sub id="roles"></sub>
+      <sub id="compactStatuses">
+        <sub id="values">
+          <sub>verified-done</sub>
+          <sub>verified-rejected</sub>
+        </sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client12"></p>
+</div>
+<div class="polarion-rp-column" style="width: 30%;" data-print="0" data-pdf="0">
+  <div id="polarion_client54" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">##
+##  Hints Panel
+##
+&lt;style&gt;
+.hints-panel{
+ padding: 20px;
+  border-radius: 5px;
+  text-align:left;
+  background-color:rgb(189,237,228);
+  color:rgb(64,157,139) !important;
+  padding-bottom:15px;
+ padding-top:10px;
+  line-height:25px;
+  margin-top:20px
+  }
+.hints-panel a{
+  color:rgb(64,157,139) !important;
+}
+&lt;/style&gt;
+#if(!$plan.fields.dueDate.get || !$plan.fields.startDate.get || $plan.items.isEmpty)
+&lt;div class=&quot;hints-panel&quot;&gt; 
+    &lt;span style=&quot;font-size:14px;font-weight:bold;&quot;&gt;Next Steps&lt;br/&gt;&lt;/span&gt;
+    #if(!$plan.fields.dueDate.get || !$plan.fields.startDate.get) 
+              &lt;span style=&quot;font-size:25px;font-weight:bold&quot;&gt;&amp;#9744;&lt;/span&gt; 
+            &lt;a style=&quot;color:rgb(64,157,139)&quot; target=&quot;_top&quot; href=&quot;/polarion/#/project/$plan.reference.projectId/plan?id=$plan.reference.id&amp;tab=properties&quot;&gt;
+                    Set &lt;b&gt;Start&lt;/b&gt; and &lt;b&gt;Due&lt;/b&gt; Date.
+    &lt;/a&gt;&lt;br/&gt;
+#end
+#if($plan.items.isEmpty) 
+    &lt;span style=&quot;font-size:25px;font-weight:bold&quot;&gt;&amp;#9744;&lt;/span&gt; 
+    &lt;a style=&quot;color:rgb(64,157,139)&quot; target=&quot;_top&quot; href=&quot;$pageContext.addWorkItemsLink&quot;&gt;
+        &lt;b&gt;Add&lt;/b&gt;  Work Items to the Plan.
+&lt;/a&gt;&lt;br/&gt;
+#end
+&lt;/div&gt;
+#end
+        </sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client62" style="text-align: center;">
+    <span class="polarion-rp-inline-widget" data-widget="com.polarion.planStatusButton"><span class="polarion-rp-widget-parameters"></span></span>
+  </p>
+  <div id="polarion_client64" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;style&gt;
+.plan-bluepanel{
+background-color: #edf6ff;
+padding: 20px;
+border-radius: 5px;
+margin: auto;
+text-align:left
+}
+&lt;/style&gt;
+&lt;div class=&quot;plan-bluepanel&quot;&gt;
+	&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span class=&quot;polarion-rp-inline-widget&quot; data-widget=&quot;com.polarion.planOpenInTableButton&quot; polarion-inline-block-widget=&quot;true&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;br/&gt;
+	&lt;a target=&quot;_top&quot; href=&quot;$pageContext.addWorkItemsLink&quot;&gt;
+    	&lt;span style=&quot;;padding-left:23px;font-size:14px;line-height:30px;font-weight:bold;&quot;&gt;
+        	&lt;img src=&quot;/polarion/icons/default/actions/create_link.gif&quot;/&gt; 
+            Add Work Items to the Plan
+ 		&lt;/span&gt;
+	&lt;/a&gt;
+	&lt;ul&gt;
+		&lt;li&gt; 
+			&lt;a target=&quot;_top&quot; href=&quot;$plan.utils.prioritizationLink&quot;&gt;
+            	Prioritize Planned Items
+            &lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a target=&quot;_top&quot; href=&quot;$pageContext.browseAllPlannedLink&quot;&gt;
+            	Browse All Planned Items
+            &lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+        </sub>
+      </sub>
+    </span>
+  </div>
+  <h2 id="polarion_client65">Activities</h2>
+  <div id="polarion_client67" class="polarion-rp-widget-part" data-widget="com.polarion.planActivityStream">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="plan">
+        <sub id="paths">
+          <sub>@current</sub>
+        </sub>
+      </sub>
+      <sub id="advanced">
+        <sub id="top"></sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client3"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<pre id="polarion-rp-page-script">### $pageContext.planQuery
+#set($planQuery=&quot;PLAN:($plan.reference.toPath)&quot;)
+$!pageContext.put(&quot;planQuery&quot;,$planQuery)
+### $pageContext.browseAllPlannedLink
+### $pageContext.scope
+#set($projectFragment = &quot;/project/$plan.reference.projectId&quot;)
+#set($scope = &quot;$plan.reference.projectId&quot;)
+#set($prioritizationField = &quot;$plan.fields.prioritizationField.get&quot;)
+#set($projectSpanQuery= &quot;&quot;)
+#if(!$plan.fields.projectSpan.isEmpty())
+    #if($plan.fields.projectSpan.size()&gt;1)
+        #set($projectFragment = &quot;&quot;)
+	    #set($projectSpanQuery = &quot; AND project.id:(&quot;)
+		#foreach($pSpan in $plan.fields.projectSpan)
+    		#set($projectSpanQuery= &quot;$projectSpanQuery $pSpan.reference.id&quot;)			
+        #end
+        #set($projectSpanQuery= &quot;$projectSpanQuery )&quot;)
+        #set($scope = &quot;/&quot;)
+    #else
+    	#set($pSpan = $plan.fields.projectSpan.iterator.next)
+        #set($projectFragment = &quot;/project/$pSpan.reference.projectId&quot;)
+        ##set($scope = &quot;$pSpan.reference.projectId&quot;)
+        #set($scope = &quot;/&quot;)
+    #end
+#end
+$!pageContext.put(&quot;browseAllPlannedLink&quot;,&quot;/polarion/${esc.h}$projectFragment/workitems?query=$planQuery&amp;sorting=~$prioritizationField&quot;)
+$!pageContext.put(&quot;scope&quot;,&quot;$scope&quot;)
+$!pageContext.put(&quot;prioritizationField&quot;,&quot;$prioritizationField&quot;)
+##
+### $pageContext.addWorkItemsLink
+#set($allowedTypes =false)
+#foreach($t in $plan.fields.allowedTypes)
+	#if($allowedTypes)
+    	#set($allowedTypes =&quot;$allowedTypes $t.id&quot;)
+    #else
+    	#set($allowedTypes =&quot;type:($t.id&quot;)
+    #end
+#end
+#if($allowedTypes)
+	#set($allowedTypes =&quot;$allowedTypes)&quot;)
+#else
+	#set($allowedTypes =&quot;&quot;)
+#end
+#set($parentQ =&quot;&quot;)
+#set($parentPlan = $plan.fields.parent)
+#if($parentPlan.get)
+	#if($allowedTypes.length()&gt;0)
+    	#set($parentQ =&quot;AND PLAN:($parentPlan.get.reference.toPath)&quot;)
+    #else
+    	#set($parentQ =&quot;PLAN:($parentPlan.get.reference.toPath)&quot;)
+    #end
+#end
+$!pageContext.put(&quot;addWorkItemsLink&quot;,&quot;/polarion/${esc.h}$projectFragment/workitems?query=$allowedTypes$parentQ$projectSpanQuery&amp;sorting=~$prioritizationField&amp;sidebar=planning&amp;plan=$plan.reference.toPath&quot;)
+##
+### Display debug info
+planQuery: $planQuery &lt;br/&gt;&lt;br/&gt;
+scope: $scope &lt;br/&gt;&lt;br/&gt;
+browseAllPlannedLink: $pageContext.browseAllPlannedLink &lt;br/&gt;&lt;br/&gt;
+addWorkItemsLink: $pageContext.addWorkItemsLink &lt;br/&gt;&lt;br/&gt;
+prioritizationField: $pageContext.prioritizationField &lt;br/&gt;&lt;br/&gt;</pre>]]></field>
+    <field id="isTemplate">true</field>
+    <field id="name">Iteration</field>
+    <field id="prioritizationField">priority</field>
+    <field id="status">open</field>
+    <field id="useReportFromTemplate">true</field>
+</plan>

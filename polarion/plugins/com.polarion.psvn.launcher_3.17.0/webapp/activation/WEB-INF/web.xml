@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app metadata-complete="true">
+
+	<display-name>Activation</display-name>
+
+	<servlet>
+		<servlet-name>offlineActivation</servlet-name>
+		<display-name>OfflineActivation</display-name>
+		<servlet-class>com.polarion.psvn.launcher.internal.activation.OfflineActivationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>offlineActivation</servlet-name>
+		<url-pattern>/offline/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>onlineActivation</servlet-name>
+		<display-name>onlineActivation</display-name>
+		<servlet-class>com.polarion.psvn.launcher.internal.activation.OnlineActivationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>onlineActivation</servlet-name>
+		<url-pattern>/online</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>activationEntry</servlet-name>
+		<display-name>activationEntry</display-name>
+		<servlet-class>com.polarion.psvn.launcher.internal.activation.ActivationEntryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>activationEntry</servlet-name>
+		<url-pattern>/entry</url-pattern>
+	</servlet-mapping>
+
+    <!-- temporary START -->
+	<servlet>
+		<servlet-name>generatelicense</servlet-name>
+		<display-name>generatelicense</display-name>
+		<servlet-class>com.polarion.psvn.launcher.internal.activation.LicenseGeneratorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>generatelicense</servlet-name>
+		<url-pattern>/generatelicense/*</url-pattern>
+	</servlet-mapping>
+    <!-- temporary END -->
+
+</web-app>

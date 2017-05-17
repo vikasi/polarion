@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20131111174448</created>
+<type>content</type>
+<content><![CDATA[#set($h = '#') 
+#set($d = '$') 
+ 
+1 Wiki Highcharts Documentation
+ 
+{toc}
+
+#macro(exampleLineBasedSimple $type $description)
+Chart of type ~~*$type*~~ $description\\ \\
+{section:width=100%}
+{column:width=410}
+*Example:*
+#highchartStart("This is $type" "$type" 400 300)
+#setHighchartCategories("1995:2000:2005:2010")
+#addHighchartDataSet("Apple" "10:20:30:25")
+#addHighchartDataSet("Orange" "20:15:30:35")
+#addHighchartDataSet("Kiwi" "30:20:20:10")
+#highchartEnd()
+{column}
+{column}
+*Source:*
+#exampleLineBasedSimpleDescription($type)
+{column}
+{section}
+#end
+
+#macro(exampleLineBasedSimpleDescription $type)
+<div class="code"><pre>
+${h}highchartStart("This is $type" "$type" 400 300)
+${h}setHighchartCategories("1995:2000:2005:2010")
+${h}addHighchartDataSet("Apple" "10:20:30:25")
+${h}addHighchartDataSet("Orange" "20:15:30:35")
+${h}addHighchartDataSet("Kiwi" "30:20:20:10")
+${h}highchartEnd()
+</pre></div>
+#end 
+
+#macro(examplePieSimple)
+~~*Piechart*~~ shows values as proportionate parts of a circle.\\ \\
+{section:width=100%}
+{column:width=410}
+*Example:*
+#highchartStart("This is pie" "" 400 400)
+#addHighchartPieDataSet("Share" "'1995',10 : '2000',20 : '2005',30")
+#highchartEnd()
+{column}
+{column}
+*Source:*
+<div class="code"><pre>${h}highchartStart("This is pie" "" 400 400)
+${h}addHighchartPieDataSet("Share" "'1995',10 : '2000',20 : '2005',30")
+${h}highchartEnd()
+</pre></div>
+{column}
+{section}
+#end 
+
+#macro(exampleXYScalable $type)
+This line chart uses integer values and can be zoomed in both axes.\\ \\
+*Example:*
+#highchartStart("Scalable $type chart" "$type" 400 300)
+#addHighchartXYDataSet("John" "10,10 : 13,20 : 15,30 : 19,36")
+#addHighchartXYDataSet("Kate" "10,11 : 12,18 : 16,33 : 20,42")
+#addHighchartXYDataSet("Will" "10,14 : 12,22 : 16,27 : 20,38")
+#addHighchartAdditionalOptions("options.chart.zoomType= 'xy';")
+#highchartEnd()
+*Source:*
+<div class="code"><pre>${h}highchartStart("Scalable $type chart" "$type" 400 300)
+${h}addHighchartXYDataSet("John" "10,10 : 13,20 : 15,30 : 19,36")
+${h}addHighchartXYDataSet("Kate" "10,11 : 12,18 : 16,33 : 20,42")
+${h}addHighchartXYDataSet("Will" "10,14 : 12,22 : 16,27 : 20,38")
+${h}addHighchartAdditionalOptions("options.chart.zoomType= 'xy';")
+${h}highchartEnd()
+</pre></div>
+#end 
+
+#macro(exampleXYStacked $type)
+This an example of interactive stacked area chart where values are accumulated in Y axis. You can hide any data set by clicking on its legend and the values are automatically recalculated.\\ \\
+*Example:*
+#highchartStart("Stacked $type" "$type" 400 300)
+#addHighchartXYDataSet("Apple" "10,10 : 12,20 : 16,30")
+#addHighchartXYDataSet("Orange" "10,12 : 12,18 : 16,33")
+#addHighchartXYDataSet("Kiwi" "10,14 : 12,22 : 16,27")
+#addHighchartAdditionalOptions("options.plotOptions = {area:{stacking: 'normal'}};")
+#highchartEnd()
+*Source:*
+<div class="code"><pre>${h}highchartStart("Stacked $type" "$type" 400 300)
+${h}addHighchartXYDataSet("Apple" "10,10 : 12,20 : 16,30")
+${h}addHighchartXYDataSet("Orange" "10,12 : 12,18 : 16,33")
+${h}addHighchartXYDataSet("Kiwi" "10,14 : 12,22 : 16,27")
+${h}addHighchartAdditionalOptions("options.plotOptions = {area:{stacking: 'normal'}};")
+${h}highchartEnd()
+</pre></div>
+#end 
+
+#macro(exampleXYDates $type)
+This spline chart uses dates in the X values, and it can be also be zoomed in this axis by selection a part of the area with your pointing device (e.g. mouse).\\ \\
+*Example:*
+#highchartStart("Dates with zooming" "$type" 400 300 )
+#addHighchartXYDataSet("Apple" "Date.UTC(2000,10,03),10 : Date.UTC(2000,10,04),20 : Date.UTC(2000,10,06),30 : Date.UTC(2000,10,10),32")
+#addHighchartXYDataSet("Orange" "Date.UTC(2000,10,03),20 : Date.UTC(2000,10,04),30 : Date.UTC(2000,10,07),35 : Date.UTC(2000,10,12),5")
+#addHighchartAdditionalOptions("options.xAxis.type = 'datetime';")
+#addHighchartAdditionalOptions("options.chart.zoomType= 'x';")
+#highchartEnd()
+*Source:*
+<div class="code"><pre>${h}highchartStart("Dates with zooming" "$type" 400 300 )
+${h}addHighchartXYDataSet("apple" "Date.UTC(2000,10,03),10 : Date.UTC(2000,10,04),20 : Date.UTC(2000,10,06),30 : Date.UTC(2000,10,10),32")
+${h}addHighchartXYDataSet("orange" "Date.UTC(2000,10,03),20 : Date.UTC(2000,10,04),30 : Date.UTC(2000,10,07),35 : Date.UTC(2000,10,12),5")
+${h}addHighchartAdditionalOptions("options.xAxis.type = 'datetime';")
+${h}addHighchartAdditionalOptions("options.chart.zoomType= 'x';")
+${h}highchartEnd()
+</pre></div>
+#end 
+
+#macro(exampleAdvancedPie)
+This example shows how charts can display data from Polarion.\\ \\
+*Example:*
+#highchartStart("Defects" "" 400 400)
+#set($numberOfBlocker = $trackerService.dataService.getInstancesCount("WorkItem", "severity:blocker"))
+#set($numberOfCritical = $trackerService.dataService.getInstancesCount("WorkItem", "severity:critical"))
+#set($numberOfMajor = $trackerService.dataService.getInstancesCount("WorkItem", "severity:major"))
+#addHighchartPieDataSet("Count" "'Critical',$numberOfCritical : 'Blocker',$numberOfBlocker : 'Major',$numberOfMajor")
+#highchartEnd()
+*Source:*
+<div class="code"><pre>${h}highchartStart("Defects" "" 400 400)
+${h}set(${d}numberOfBlocker = ${d}trackerService.dataService.getInstancesCount("WorkItem", "severity:blocker"))
+${h}set(${d}numberOfCritical = ${d}trackerService.dataService.getInstancesCount("WorkItem", "severity:critical"))
+${h}set(${d}numberOfMajor = ${d}trackerService.dataService.getInstancesCount("WorkItem", "severity:major"))
+${h}addHighchartPieDataSet("Count" "'Critical',${d}numberOfCritical : 'Blocker',${d}numberOfBlocker : 'Major',${d}numberOfMajor")
+${h}highchartEnd()
+</pre></div>
+#end 
+
+#macro(exampleAdvanced $type)
+This example shows how additional Highcharts options can be used. See http://api.highcharts.com/highcharts for a more detailed Highcharts API documentation.\\ \\
+*Example:*
+#highchartStart("Advanced $type" "$type" 400 300 )
+#set($highchartColors = ["F08080","FFA500","6B8E23"])
+#setHighchartCategories("1995:2000:2005:2010")
+#addHighchartDataSet("apple" "10:20:40:27")
+#addHighchartDataSet("orange" "20:15:30:22")
+#addHighchartDataSet("kiwi" "30:20:25:33")
+#addHighchartAdditionalOptions("options.xAxis.labels={rotation:-20, y:10, style:{fontSize:'9px'}};")
+#addHighchartAdditionalOptions("options.plotOptions={series: {fillOpacity:0.3}, $type:{marker:{enabled:false}}};")
+#addHighchartAdditionalOptions("options.yAxis.title.text='';")
+#addHighchartAdditionalOptions("options.tooltip={shared:true, shadow:false};")
+#addHighchartAdditionalOptions("options.credits={enabled:true, text:'Polarion.com', href:'http://www.polarion.com'};")
+#highchartEnd()
+*Source:*
+<div class="code"><pre>${h}highchartStart("Advanced $type" "$type" 400 300 )
+${h}set(${d}highchartColors = \["F08080","FFA500","6B8E23"\])
+${h}setHighchartCategories("1995:2000:2005:2010")
+${h}addHighchartDataSet("apple" "10:20:40:27")
+${h}addHighchartDataSet("orange" "20:15:30:22")
+${h}addHighchartDataSet("kiwi" "30:20:25:33")
+${h}addHighchartAdditionalOptions("options.xAxis.labels={rotation:-20, y:10, style:{fontSize:'9px'}};")
+${h}addHighchartAdditionalOptions("options.plotOptions={series: {fillOpacity:0.3}, $type:{marker:{enabled:false}}};")
+${h}addHighchartAdditionalOptions("options.yAxis.title.text='';")
+${h}addHighchartAdditionalOptions("options.tooltip={shared:true, shadow:false};")
+${h}addHighchartAdditionalOptions("options.credits={enabled:true, text:'Polarion.com', href:'http://www.polarion.com'};")
+${h}highchartEnd()
+</pre></div>
+#end 
+
+1.1 Category-based Charts
+Categories are lists of strings that are used as values on a chart's axes. Categories and values in data sets are separated by *:* (colon).\\
+To render this kind of chart on your page, use the code fragment next to the rendered chart.\\ \\
+
+1.1.1 Bar
+#exampleLineBasedSimple("bar" "shows values horizontally across the X axis of a graph.")
+1.1.1 Column
+#exampleLineBasedSimple("column" "shows values vertically in the Y axis of a graph.")
+1.1.1 Line
+#exampleLineBasedSimple("line" "shows values as intersecting points on the X and Y axes of a graph, with points connected by straight lines.")
+1.1.1 Line-spline
+#exampleLineBasedSimple("spline" "shows values as intersecting points on the X and Y axes of a graph, with points connected by vector curves.")
+1.1.1 Area
+#exampleLineBasedSimple("area" "is same as the line chart, except that the area is shaded between zero on the Y axis and the lines.")
+1.1.1 Area with Splines
+#exampleLineBasedSimple("areaspline" "is same as the spline chart, except that the area is shaded between zero on the Y axis and the edges of the vector curves.")
+
+1.1 Pie chart
+#examplePieSimple()
+
+1.1 XY charts
+Charts can also use ordered types (integers, floats, dates) as values on both axes. Groups of values in data sets are separated using the colon character, while the values in the group are separated by commas.\\
+To render this kind of chart on your page, use the code fragment next to the rendered chart.
+
+1.1.1 Scalable XY Line chart
+#exampleXYScalable("line")
+1.1.1 Stacked Area 
+#exampleXYStacked("area")
+1.1.1 Scalable chart with dates on X axis
+#exampleXYDates("spline")
+
+1.1 Use values from Polarion
+#exampleAdvancedPie()
+
+1.1 Advanced example
+#exampleAdvanced("areaspline")
+
+]]></content>
+</wiki-page>

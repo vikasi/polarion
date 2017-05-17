@@ -1,0 +1,13 @@
+lib/commons-logging.jar
+ - org.apache.commons.logging.impl.LogFactoryImpl was modified to overcome
+   problems in eclipse ("org.apache.commons.logging.impl.Log4JLogger does not implement Log").
+   The change is in method loadClass(String), where lines
+         ClassLoader threadCL = getContextClassLoader();
+         if (threadCL != null) {
+           try {
+             return threadCL.loadClass(name);
+           } catch( ClassNotFoundException ex ) {
+             // ignore
+           }
+         }
+  were commented out.   

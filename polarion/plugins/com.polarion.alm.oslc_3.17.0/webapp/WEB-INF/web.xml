@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-app_2_4.xsd" version="2.4"
+	metadata-complete="true">
+	<display-name>com.polarion.alm.oslc</display-name>
+
+	<servlet-mapping>
+		<servlet-name>jsp</servlet-name>
+		<url-pattern>/rootservices</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>JAX-RS Services</servlet-name>
+		<servlet-class>
+			org.apache.wink.guice.server.internal.servlet.GuiceRestServlet
+		</servlet-class>
+		<init-param>
+			<param-name>javax.ws.rs.Application</param-name>
+			<param-value>com.polarion.alm.oslc.servlet.Application</param-value>
+		</init-param>
+		<init-param>
+			<param-name>deploymentConfiguration</param-name>
+			<param-value>com.polarion.alm.oslc.provider.GuiceDeploymentConfiguration</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JAX-RS Services</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>DoAsFilter</filter-name>
+		<filter-class>com.polarion.portal.tomcat.servlets.DoAsFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>DoAsFilter</filter-name>
+		<url-pattern>/services/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>FixHeaderFilter</filter-name>
+		<filter-class>com.polarion.alm.oslc.provider.FixHeaderFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FixHeaderFilter</filter-name>
+		<url-pattern>/services/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>FixForwardedHostFilter</filter-name>
+		<filter-class>com.polarion.alm.oslc.provider.FixForwardedHostFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FixForwardedHostFilter</filter-name>
+		<url-pattern>/services/oauth/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>OAuthCallback</servlet-name>
+		<display-name>OAuth Callback</display-name>
+		<description>OAuth Callback</description>
+		<servlet-class>com.polarion.alm.oslc.internal.oauth.OAuthCallbackServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OAuthCallback</servlet-name>
+		<url-pattern>/oauthcallback</url-pattern>
+	</servlet-mapping>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Catalog</web-resource-name>
+			<url-pattern>/services/catalog</url-pattern>
+		</web-resource-collection>
+		<web-resource-collection>
+			<web-resource-name>Projects</web-resource-name>
+			<url-pattern>/services/projects/*</url-pattern>
+		</web-resource-collection>
+		<web-resource-collection>
+			<web-resource-name>OAuth Consumers</web-resource-name>
+			<url-pattern>/services/projects/oauth/consumers</url-pattern>
+		</web-resource-collection>
+		<!-- Used to connect collected credentials from login to oauth token -->
+		<web-resource-collection>
+			<web-resource-name>Approve Key</web-resource-name>
+			<url-pattern>/services/oauth/approveKey</url-pattern>
+		</web-resource-collection>
+		<!-- Used for login to enter credentials -->
+		<web-resource-collection>
+			<web-resource-name>Authorize Key</web-resource-name>
+			<url-pattern>/services/oauth/authorize</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>user</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>PolarionRealm</realm-name>
+		<form-login-config>
+			<form-login-page>/login/login</form-login-page>
+			<form-error-page>/login/error</form-error-page>
+		</form-login-config>
+	</login-config>
+
+</web-app>

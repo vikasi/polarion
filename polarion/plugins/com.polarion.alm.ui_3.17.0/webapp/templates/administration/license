@@ -1,0 +1,111 @@
+1 License Assignment and Usage
+{reactivate-polarion}
+1.1 License Assignment
+{users-file}
+1.1 License Usage
+1.1.1 Concurrent License
+{license-usage-overview:type=concurrent}
+1.1.1 Named License
+{license-usage-overview:type=named}
+1.1.1 Usage Details
+{license-usage}
+\\
+\\
+#info("Don't know what the columns mean? Click <a href=\"/polarion/help/index.jsp?tab=links&contextId=com.polarion.xray.web.license_ref\" target=\"_blank\">here</a>.")
+\\
+
+1.1 Quick Help
+
+On this page you can:
+* Assign Polarion user IDs to named license slots for different Polarion products according to the licenses you have purchased.  
+* Assign concurrent users, if necessary. Please see ~~Concurrent Users~~ below to determine if you actually need to specify concurrent users.
+* If applicable, define groups of concurrent license users.
+* Reactivate Polarion.
+* View current license assignments and usage.
+
+1.1.1 Concurrent Users
+1. You need to specify concurrent users ~~only~~ if their number is limited by the license (see #2 below). If their number is unlimited, then any user not listed in this configuration is treated as a concurrent user with that license.
+1. You may set property ~~defaultUserLicense~~ to the name of the concurrent license that will be assigned to users who are not listed in this configuration.
+
+1.1.1 Concurrent License Groups
+You can split users into concurrent license groups so that different groups have different limits on how many users can be logged at one time. For example, one department may license some number of concurrent users and not want its limits affected by the concurrent users of another department. You can specify one or more groups in the License Assignment editor on this page, within the section of any applicable product or add-on license ( within POLARION ALM, or POLARION VARIANTS ADD-ON, for example). 
+
+1.1.1.1 How to Specify a Concurrent License Group
+You need to specify two properties for every group: the group size, and the group users. The structure of the properties are as follows:
+* ~~Group Size:~~ *<tt>concurrent\[LICENSE\]Group\[NAME\]Size=\[NNN\]</tt>* where...
+** \[LICENSE\] is the product licensed (e.g. ALM, Requirements, etc.) 
+** \[Name\] is a unique group name you specify (no spaces) 
+** \[NNN\] is a number denoting the number of concurrent user license slots for the group named in \[NAME\].
+* ~~Group User:~~ *<tt>concurrent\[LICENSE\]Group\[NAME\]User\[NNN\]=\[User ID\]</tt>* where...
+** \[LICENSE\] is the product licensed (e.g. ALM, Requirements, etc.) 
+** \[Name\] is the group name you specified when defining the group size
+** \[NNN\] is the number of the slot for the user you are adding to the group (e.g. 1, 2, 3). NNN is simply a counter - see ~~Concurrent License Assignments~~, below.
+** \[User ID\] is the Polarion user ID of the user you are assigning to this slot in the group.
+
+*Example of a 3-user group for ALM concurrent license:* \\
+<tt>concurrentALMGroupEastOfficeSize=3 \\
+concurrentALMGroupEastOfficeUser1=jonesd \\
+concurrentALMGroupEastOfficeUser2=gunterk \\
+concurrentALMGroupEastOfficeUser3=chanr \\ </tt>
+
+1.1.1.1 Key Points About Concurrent License Groups
+* License groups for ~~different~~ concurrent licenses do not influence each other.
+* Rules within groups are the same as for normal non-grouped concurrent licenses (see ~~Concurrent License Assignments~~ below).
+* Concurrent users who are not assigned in any user-defined license group are treated as an unnamed group, the size of which equals the remaining number of concurrent license slots available.
+* A user can only be part of one concurrent license group (within one concurrent license). If the same user is included in more more than one group, that user is ignored in all groups defined after the first group that includes the user. The discrepancy is noted in the licensing log. 
+* If the specified size of a license group is greater than the remaining number of concurrent licenses, then the group's size is reduced accordingly, even to zero. The auto-reduction is reported in the licensing log.
+* Note that the <tt>defaultUserLicense</tt> property in License Assignment cannot specify a concurrent license group.
+* The Polarion system property ~~licenseForNewUserAccount~~ can specify a license group: <tt>concurrent\[LICENSE\]Group\[NAME\]</tt> (e.g. <tt>concurrentRequirementsGroupWestOffice</tt>)
+ 
+1.1.1 How To obtain User IDs
+To obtain the user IDs of users to be assigned to named license slots:
+1. Log in to the Polarion portal with global administrator rights. 
+1. Open Administration. If you see that you are logged in to a project, click "Global Administration" in the top section of Navigation. (Alternately, you can select "Repository" in the Project selector.) 
+1. Expand the "User Management" topic and select "Users". 
+1. Use the Search field to locate the account(s) of the user(s) you want to assign in this configuration. You need the value that appears in the ID field of each user's account.
+
+For Polarion installations where user accounts are auto-created from a configured LDAP server, you can specify LDAP user IDs rather then Polarion IDs 
+in the assignments in the ~~License Assignments~~ editor, above.
+
+1.1.1 How To Make User Assignments
+The default version of this configuration comes with lines for 3 user slots for each product in the current product line, and license type. Lines without user IDs are ignored. If you have more 
+than 3 users for any license, add lines in the appropriate section in the ~~License Assignment~~ editor, above.\\
+
+The following table indicates the forms of the various assignments you may make in this configuration:
+
+{table:table-align=left}
+License | Named Assignment |Concurrent Assignment
+ALM | namedALMUserNNN=UserID | concurrentALMUserNNN=UserID
+QA | namedQAUserNNN=UserID | concurrentQAUserNNN=UserID
+Requirements | namedRequirementsUserNNN=UserID | concurrentRequirementsUserNNN=UserID
+PRO | namedProUserNNN=UserID | concurrentProUserNNN=UserID
+Reviewer | namedReviewerUserNNN=UserID | concurrentReviewerUserNNN=UserID
+Variants Add-on | namedVariantsUserNNN=UserID | concurrentVariantsUserNNN=UserID
+{table}
+
+1.1.1.1 Named License Assignments
+For a named user license, NNN is a number from one to the maximum allowed by the license. So if your license is for 5 named users, NNN would be a number 
+between 1 and 5 inclusive.
+
+1.1.1.1 Concurrent License Assignments
+For a concurrent license, NNN is simply a counter. You may list as many users as you want to allow concurrent access to the portal. The maximum number of 
+users that will actually be able to log in to the portal concurrently is controlled by the license. 
+
+1.1.1.1 Default Concurrent License Assignments
+Users not named in this configuration are treated as concurrent users, and will utilize the default concurrent license specified in the configuration. If the default concurrent license is not specified,
+then these users will use the "highest" license having an unlimited number of concurrent users. If all are limited, then these users 
+will use the "lowest" license with the highest number of concurrent users. If all licenses have zero, then these users will not be assigned a license  
+and will not be able to log in.  
+
+1.1.1.1 Default Concurrent Add-on License Assignments
+Optionally, you can configure that all users who log into Polarion are automatically assigned a concurrent add-on license together with their basic license. If no concurrent add-on license is 
+available, none will be assigned and users can still log in with the basic license. Specify the list of concurrent add-on licenses to be assigned automatically as a comma-separated list.
+
+1.1.1 Reactivating Polarion
+The *Reactivate Polarion* 
+button displays the activation page, where you will have the option to reactivate Polarion online or offline. You will need to reactivate your Polarion installation if you add more licenses 
+or users, or if you install Polarion to a different physical or virtual machine. Only use this feature if instructed to do so by some communication from Polarion Sales or Technical Support. 
+
+1.1.1 Viewing Current Usage
+The ~~License Usage~~ section of this page provides details about the current usages of all configured licenses. The subsections are collapsible and show information for different 
+license types. Statistics are current when the page loads. Refresh the page to see updated information.  

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wiki-page>
+<lastUpdatedBy>admin</lastUpdatedBy>
+<author>admin</author>
+<type>active</type>
+<created>2011-06-29 12:54</created>
+<lastUpdated>2015-03-24 20:09</lastUpdated>
+<content><![CDATA[{parameter:id=taskQuery|type=string|value=assignee.id:$me AND type:(task OR defect) AND NOT HAS_VALUE:resolution}
+{section:width="100%"}
+{column:width=60%}
+1 My Polarion
+
+Welcome *{user:$me|display=long}*! This is your personal Polarion home page. You can fully customize it to show the information of greatest interest to you.
+
+1.1 My Tasks and Defects
+{style:class=regiondescription}By default these tables show items from all your projects that are assigned to you and not yet resolved. To include more item types, or restrict the list to items of particular interest right now, modify the query in the <tt>taskQuery</tt> page parameter (visible when you edit this page).{style}
+{workitems:$pageParameters.taskQuery|sortby=severity|top=10|fields=id,title,severity as image-text,project|group=/}
+
+1.1 Documents Awaiting My Signature
+<table class="itemsTable">
+<thead><tr><th>Document</th><th>Project / Space </th><th>Sign</th></tr></thead>
+#foreach($d in $transaction.documents.search().query("signatures:invited=$me").sort("id"))
+<tr>
+   <td> $d.render.withSpace(false).withLinks </td>
+   <td> $d.fields.project.render.withIcon(false) / $d.fields.moduleFolder.render.withIcon(false)</td>
+   <td> {portallink:/wiki/$d.fields.moduleFolder.get/$d.fields.moduleName.get?sidebar=signatures&mySignatures=true|addcontext=yes}<img src="/polarion/icons/default/actions/invite_for_approval.png">{portallink} </td>
+</tr>
+#end
+</table>
+
+1.1 Work Items Awaiting My Approval
+{style:class=regiondescription}This table shows Work Items that are waiting for your approval.{style}
+{workitems:approvals:fullxxxwaitingxxx$me|sortby=~plannedStart priority severity|top=20|fields=id,title,priority,project|group=/}
+
+1.1 Potential Change Impact
+{style:class=regiondescription}This table shows Work Items assigned to you, which contain outgoing links marked as "suspect". If a linked item changes, you should be sure to review your assigned item for possible impact.{style}
+{workitems:assignee.id:$me AND suspect:true|sortby=~plannedStart priority severity|top=20|fields=id,title,priority,project|group=/}
+
+{column}
+{column:width=1%}
+&nbsp;
+{column}
+{column:width=37%}
+{regiontitle}Links{regiontitle}
+{style:class=regiondescription}You can add your own links here ...{style}
+* <a href="/polarion/#/user?id=$me" target="_top">My account</a>
+* <a href="/polarion/help/index.jsp" target="_top">Help</a>
+* {portallink:/project/elibrary}E-Library{portallink} - a polarion project showcase
+
+{regiontitle}Activities{regiontitle}
+{activity-stream:activities=workitems,commits,builds:finished,builds:finished_with_failures,builds:failed,testruns}
+{column}
+{section}
+]]></content>
+</wiki-page>

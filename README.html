@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Polarion&reg; README</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+    body {
+    text-align:center;
+    }
+    #container {
+    margin:0px auto 0px auto;
+    width:800px;
+    text-align:left;
+    font-family: arial;
+    }
+    html body {
+      color:Black;
+      font-family:Arial,Helvetica,Verdana,Geneva,sans-serif;
+      font-size:80%;
+      margin:0;
+      padding:0;
+      line-height:145%;
+    }
+    code {
+      font-size:130%; font-weight: bold;
+    }
+    a.small {
+      font-size:8pt;
+    }
+    div#hdr {
+      color:white;
+      font-family:arial black,helvetica;
+      font-weight:bold;
+      height:70px;
+      line-height:30px;
+      vertical-align:middle;
+      text-align:left;
+      margin-left: -37px;
+    }
+    div#hdr h1 {
+      font-size:170%;
+      font-weight:bold;
+      margin:0;
+      padding:20px 0 0 38px;
+    }
+    div#hdr span.tl {
+      font-size:12px;
+      font-style:italic;
+      padding-left:42px;
+    }
+    div#hdr sup {
+      font-size:12px;
+      font-weight:normal;
+    }
+    div#nav {
+      background-color:inherit;
+      color:#191970;
+      font-size:90%;
+      margin-top: 19px; margin-bottom: 19px;      
+    }
+    div#nav ul {
+      display:block;
+      list-style-image:none;
+      list-style-position:outside;
+      list-style-type:none;
+      margin:0;
+      padding:0;
+    }
+    div#nav ul li {
+      display:inline;
+      padding-right:12px;
+    }
+    div#nav a, div#nav a:link, div#nav a:visited, div#nav a:hover {
+      // background-color:#00AEEF;
+      background-color:#55a0b9;
+      color:white;
+      font-weight:bold;
+      padding:5px 10px 5px 10px;
+      text-decoration:none;
+    }
+    div#nav a:hover {
+      // background-color:#FF8C00;
+      background-color: #307389;
+      color:white;
+      font-weight: bold;
+    }
+    div#cont {
+      width: 800px;
+      background-color:White;
+      color:inherit;
+    }
+    div#cont h1 {
+      background-color:inherit;
+      border-bottom:1px solid #CCCCCC;
+      font-size:160%;
+      padding-bottom:4px;
+    }
+    div#cont h2, div#cont h3 {
+      background-color:inherit;
+      color:black;
+      font-size:135%;
+
+      font-weight:bold;
+      margin:18px 16px 2px;
+      padding:0;
+    }
+    div#cont h3 {
+      font-size:115%;
+      font-style:normal;
+    }
+    div#cont p {
+      margin:0 16px 8px;
+      padding:0;
+    }
+    div#cont p.top {
+      font-size:80%;
+      font-weight:bold;
+      text-align:right;
+    }
+    div#cont p.procHdr {
+      font-style:italic;
+      margin-bottom:2px;
+    }
+
+    div#cont ul, div#cont ol {
+      margin:0 1em;
+      padding-left:1em;
+    }
+    div#cont ul li {
+      list-style-image:none;
+      list-style-position:outside;
+      list-style-type:square;
+      margin:0 28px 8px;
+    }
+    div#cont ol li {
+      margin:0 28px 8px;
+    }
+    div#cont a:link, div#cont a:visited {
+      background-color:inherit;
+      border-bottom:1px dotted #135E83;
+      // color:#00AEEF;
+      color: #55a0b9;
+      text-decoration:none;
+      font-weight: bold;
+    }
+    div#cont a:hover {
+      // background-color:#FFFFE0;
+      background-color: #307389;
+      border-bottom:1px dotted #307389;
+      color:#FFF;
+      font-weight: bold;
+    }
+    
+    div#ftr {
+      // background-color:#00AEEF;
+      background-color: #55a0b9;
+      background-position:left center;
+      background-repeat:no-repeat;
+      color:white;
+      font-size:13px;
+      height:70px;
+      margin:0 0 6px;
+      padding:0 1em 0 8px;
+      text-align:right;
+    }
+    div#ftr p {
+      padding:0 18px 0 0;
+    }
+    div.note {
+      background-color:#EEEEEE;
+      border-color:#CCCCCC #999999 #999999 #CCCCCC;
+      border-style:solid;
+      border-width:1px 2px 2px 1px;
+      margin:18px 5%;
+    }
+    div#cont div.note h2 {
+      background-color:inherit;
+      color:Blue;
+      margin-top:6px;
+    }
+    table {
+      background-color:#FFFFFF;
+      border:1px solid #CCCCCC;
+      margin:18px 12px;
+    }
+    th, td {
+      border:1px solid #EEEEEE;
+      padding:4px 1em;
+      text-align:left;
+    }
+    th {
+      background-color:#CCCCCC;
+    }
+    .shad {
+      background-color:#F9F9F9;
+    }
+    .ctr {text-align:center;}
+    .sm {font-size:smaller;}
+	</style>
+</head>
+
+<body>
+	<div style="width: 100%; background-color:#55a0b9; height: 70px">
+	<div id="container">
+	<div id="hdr">
+		<h1>Polarion<sup>&reg;</sup> ALM&trade; Lifecycle Management Solutions</h1>
+	</div>
+	<div id="nav">
+		<ul>
+			<li><a href="#relnotes" title="Last-minute info, caveats">Release Notes</a></li>
+			<li><a href="#browsers" title="Information about supported browsers and versions">Web Browsers</a></li>
+			<li><a href="#install" title="Where to find installation &amp; other docs">Installation</a></li>
+			<li><a href="#links" title="Potentially useful WWW links">Links</a></li>
+			<li><a href="http://www.plm.automation.siemens.com/se_se/support/gtac/" title="Access to the Polarion Customer Support portal">Customer Support Portal</a></li>
+		</ul>
+	</div>
+
+	<div id="cont">
+		<div id="intro">
+			<h1 style="color:#55a0b9;">Polarion&nbsp;ALM 17&nbsp;README File</h1>
+
+			<p> Thanks for using or evaluating this Polarion product. This is the README file for version <strong>17</strong> of the Polarion ALM product family. 
+				Unless otherwise noted, the information is applicable to:   
+			</p>
+			<ul>
+				<li>Polarion ALM</li>
+				<li>Polarion REQUIREMENTS</li>
+				<li>Polarion QA</li>
+			</ul>
+			<p>
+				The navigation menu above leads to information in this file.
+			</p>
+		</div>
+		
+		<div id="news">
+			<h1>About This Release</h1>
+			<p>
+				This is a major version release that rolls up features and enhancements released to customers during the last several Service Releases, and adds some 
+				new features and enhancements, including a first iteration of a new Resource Traceability feature, which enables linking Work Items to specific 
+				blocks in source code that implement them. It also adopts different version numbering for consistency with other products in the Siemens PLM Software product line.  
+				To learn more about what&#039;s in the release, please read the <strong>blog article:</strong> 
+				<a href="http://blog.polarion.com/polarion-alm-17-whats-new-and-noteworthy">Polarion ALM 17 &ndash; What's New and Noteworthy</a>.
+			</p>
+		  	
+      <ul>
+      	<li>
+      		If you are interested in knowing what specific tracker issues have been addressed since the last release, a report of Resolved Issues is published online. 
+      		You can find the link on the <a href="https://polarion.plm.automation.siemens.com/downloads">product download</a> pages.
+      	</li>
+      	<li>
+      		If you are interested in the development history of the product(s) you are using, check the Version History file bundled with each product distribution.
+      	</li>
+      	
+      </ul>
+			
+			<p class="top"><a href="#hdr">TOP&nbsp;^</a></p>
+		</div><!-- /#news -->
+		
+		<div id="relnotes">
+			<h1>Release Notes</h1>
+
+			<p>This section contains important information about the release including general notes and any known issues that you should be aware of.</p>
+
+			
+			<h2>Updating an Existing Production Installation</h2>
+			
+			<p>
+				Updating an existing installation requires a different package than those provided for new installations on the product download pages of the Polarion products web site. 
+				The following table describes how to obtain the correct package you need to update an existing product installation to the current release.
+			</p>
+			<table cellpadding="0" cellspacing="1">
+				<tr>
+					<th>Product</th>
+					<th>Your current version</th>
+					<th>Your OS</th>
+					<th>What you need</th>
+					<th>Link</th>
+				</tr>
+				<tr>
+					<td rowspan="2"><span style="color: #002e67; font-weight:bold;">Polarion ALM</span></td>
+					<td>3.1 or newer</td>
+					<td rowspan="2">Any supported</td>
+					<td>Cumulative Update Package</td>
+					<td><a href="https://polarion.plm.automation.siemens.com/downloads/update">GO TO DOWNLOAD</a></td>
+				</tr>
+				<tr>
+					<td>Earlier than 3.1</td>
+					<td>You need to migrate to 3.1.x before you can update to the current Polarion ALM release.</td>
+					<td><a href="http://www.plm.automation.siemens.com/se_se/support/gtac/">Contact Polarion Technical Support</a></td>
+				</tr>
+				<tr>
+					<td><span style="color: #002e67; font-weight:bold;">Polarion REQUIREMENTS</span></td>
+					<td>1.0 or newer</td>
+					<td rowspan="3">Any supported</td>
+					<td rowspan="3">Cumulative Update Package</td>
+					<td><a href="https://polarion.plm.automation.siemens.com/downloads/update">GO TO DOWNLOAD</a></td>
+				</tr>
+				<tr>
+					<td><span style="color:#002e67; font-weight:bold;">Polarion QA</span></td>
+					<td>2012 or newer</td>
+					<td><a href="https://polarion.plm.automation.siemens.com/downloads/update">GO TO DOWNLOAD</a></td>
+				</tr>
+			</table>
+			<p>
+				<strong>NOTE:</strong> If you want to update an existing Polarion version prior to version 2012, please contact Polarion Technical Support via the   
+				<a href="http://www.plm.automation.siemens.com/se_se/support/gtac/" title="Access to the Polarion Customer Support portal">Polarion Customer Support Portal</a> for assistance.
+			</p>
+			<h3>Evaluating the Current Release</h3>
+			<p>
+				If you want to try out the latest release as a separate installation before updating your production system, <strong>the Update distribution described above will not 
+					work for this.</strong> Please use the DOWNLOAD button for your operating system on any of these web pages to get an evaluation copy:  
+			</p>
+			<ul>
+				<li><a href="https://polarion.plm.automation.siemens.com/downloads/alm">Polarion ALM Download Page</a> </li>
+				<li><a href="https://polarion.plm.automation.siemens.com/downloads/requirements">Polarion REQUIREMENTS Download Page</a> </li>
+				<li><a href="https://polarion.plm.automation.siemens.com/downloads/qa">Polarion QA Download Page</a> </li>
+			</ul>
+			
+			<h2>License Compatibility</h2>
+			<p>
+				If your maintenance subscription is current, you can update from version 2015 to version 2016 and Service Releases using the License Key Code you already have. You only need to activate your  
+				updated installation, which you can do online or offline. For details, see the bundled HOW_TO_INSTALL_THIS_UPDATE.txt in the update distribution.
+			</p>
+			<p>
+				If you want to update from version 2014 (including Service Releases) or earlier, you will need to obtain a new license key. You can request it online at <a href="https://polarion.plm.automation.siemens.com/getlicense">https://polarion.plm.automation.siemens.com/getlicense</a>. 
+			</p> 
+			<p>
+				If you have questions about, or need help with licensing issues please contact the Technical Support team via one of the options listed <a href="https://polarion.plm.automation.siemens.com/techsupport/resources">HERE</a>.  
+				
+			</p>
+		  
+			<h2 id="browsers">Supported Web Browsers &amp; Versions</h2>
+			<table cellpadding="0" cellspacing="1">
+				<tr>
+					<th>Browser</th>
+					<th>Version(s)</th>
+					<th>Notes</th>
+				</tr>
+				<tr>
+					<td><strong>Google Chrome</strong></td>
+					<td>Latest</td>
+					<td>
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Mozilla Firefox</strong></td>
+					<td>45 or newer</td>
+					<td>
+					 Version 51 is recommended for users hoping to tap into the very latest features and improvements.
+					<br /><br /> For organizations or individuals looking for extended support, use <a href="https://www.mozilla.org/en-US/firefox/organizations/faq/">Version 45 ESR</a> .
+					 
+					 </td>
+				</tr>
+				<tr>
+					<td><strong>Microsoft Internet Explorer</strong></td>
+					<td>11</td>
+					<td>
+						Please be sure to review the following important <a href="#ienotes">additional notes</a>.
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Microsoft Edge</strong></td>
+					<td>Latest</td>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+			<h3 id="ienotes">Additional Notes for Microsoft Internet Explorer</h3>
+			<ul>
+				<li> 
+					When using Internet Explorer on Windows 8.1, running Windows 8.1 in the desktop mode is recommended. Polarion's Flash-based features (LivePlan, etc.) may not work,  
+					and various dialogs as well as Clipboard access may be blocked if the Windows 8 style user interface (sometimes called "Metro") is used.
+				</li>
+				
+				<li> 
+					Polarion can be installed on Windows 8.1 for evaluation purposes. In order to use Internet Explorer, it may be necessary to define <code>http://localhost</code> 
+					(and <code>http://127.0.0.1</code> for Metro mode) as an intranet site in: Tools &gt; Internet Options &gt; Security tab &gt; Local Intranet &gt; Sites &gt; Advanced.
+				</li>
+				<li>
+					<p>If running Internet Explorer on Windows Server 2012 (e.g. for testing):</p>
+					<ul>
+						<li>If prompted by the browser, you will need to add "about:blank" as a trusted server.</li>
+						<li>You may need to add the local Polarion server and any remote Polarion server as trusted servers.</li>
+						<li>You need to enable javascript for the Polarion server</li>
+					</ul>
+					<p>(The above points do not apply when accessing Polarion running on Windows Server 2012 from other clients)</p>					
+				</li>
+				
+				<li>
+					Users of Internet Explorer are recommended to specify their Polarion server in the Local Intranet security zone while ensuring that Compatibility View is not used.
+				</li>
+				<li>
+					There can be performance issues on client computers running Internet Explorer due to browser memory requirements. Occasional restarts of the browser are recommended.
+				</li>
+			</ul>
+			
+			<h2>Integrated Database Replaced for All Installations</h2>
+			<p>
+				In version 2015 SR2, Polarion replaced the integrated H2 database with PostgreSQL in new installations, and continues this with the current release. 
+			</p>
+			<p> 
+				In version 2016 and Service Releases, the <a href="https://polarion.plm.automation.siemens.com/downloads/update">update</a> package for contains installation scripts that automatically install PostgreSQL to  
+				existing installations and update the system configuration to use PostgreSQL. <strong>Before updating a pre-2016 system to this release, please be sure to read the information in the 
+					<code>Configuration.txt</code> file, bundled in the update distribution.</strong> 
+			</p>
+			
+			<h2>Pre-2014 &quot;Multi-Instance&quot; Topography No Longer Supported</h2>
+			<p>
+				Several versions prior to version 2014 supported a topography of multiple Polarion instances which was called "Multi-Instance" setup, and it continued to work in Version 2014 
+				and subsequent versions. <em>It is no longer supported in Version 17.</em> If you still use this setup, your administrator should review the <code>Configuration.txt</code> 
+				file bundled in the update distribution for Version 17 before updating your system.
+			</p>
+			
+			<h2>32-bit Windows, Windows 7 No Longer Supported</h2>
+			<p>
+				Polarion no longer supports installation on 32-bit Windows systems. Bundled Apache, Java, Subversion, and PostgreSQL are all 64-bit versions in the installation
+				archives for Windows. A 64-bit OS is now required, and the installer will fail with a message if run on 32-bit Windows. The main potential for impact is on evaluations, 
+				for which some people would use 32-bit Windows. 
+			</p>
+			<p>Polarion no longer supports Windows 7 for evaluation installations. Versions 8.1 and 10 are supported. </p>
+			
+			<h2>Java 8 Required</h2>
+			<p>
+				Polarion no longer supports Java versions prior to version 8. For more information, see the installation guide document for your OS, and the bundled 
+				<code>Configuration.txt</code> file.
+			</p>
+			
+			<h3>Impact of Java 8 on JavaScript Scripts</h3>
+			<p>
+				Some JavaScripts may not work after updating to Java 8, because the JavaScript engine in Java 8 is not fully backwards compatible. It is recommended to migrate
+				your scripts according to the migration manual: <a href=" https://wiki.openjdk.java.net/display/Nashorn/Rhino+Migration+Guide">https://wiki.openjdk.java.net/display/Nashorn/Rhino+Migration+Guide</a>. 
+			    However, we provide you the possibility to temporarily run scripts in &quot;Java 7 compatible&quot; mode by setting the property <code>com.polarion.scripting.useRhinoJsEngine=true</code> 
+				in the <code>polarion.properties</code> system configuration file.
+			</p>
+			
+			<h2>SLES 11 Service Pack 3 Required</h2>
+			<p>
+				New Polarion installations on SUSE Linux Enterprise Server (SLES) 11 require that Service Pack 3 be installed, or the installation will fail. Existing installations 
+				running on SLES 11 with Service Pack 2 can be updated. However, updating SLES 11 to Service Pack 3 is recommended.
+			</p>
+	<p class="top"><a href="#hdr">TOP&nbsp;^</a></p>
+
+		</div><!-- /3relnotes -->
+		<div id="install">
+
+			<h1>Installation Documentation</h1>
+
+			<h2>New Installations</h2>
+			<p>PDF documentation outlining relevant system requirements and installation procedures is bundled in the root folder of all installation archives. 
+				The Installation Guides for Windows and Linux are also provided as separate downloads on the <a href="https://polarion.plm.automation.siemens.com/guides-and-manuals">
+			Guides and Manuals</a> page on the Polarion Software web site.</p>
+					
+			<h2>Updating Existing Production Installations</h2>
+			<p>
+				For instructions on how to update an existing Polarion installation, please refer to the <code style="font-weight:bold;">HOW_TO_INSTALL_THIS_UPDATE.txt</code> file 
+				in the root folder of the  cumulative update archive after you have downloaded and unpacked it. 	
+			</p>
+			<h2>Clustered Multi-server Setup</h2>
+			<p>
+				Customers who want to use Polarion in a clustered, multi-server environment should download the Polarion Enterprise Setup Guide (PDF), available from the 
+				<a href="https://polarion.plm.automation.siemens.com/guides-and-manuals">Guides and Manuals</a> page of the Polarion Software web site, in addition to the Installation Guide 
+				for the relevant operating system(s). 
+			</p>
+			<p class="top"><a href="#hdr">TOP&nbsp;^</a></p>
+		</div><!-- /#install -->
+		
+			  
+		<div id="links">
+			<h1>Links</h1>
+			<p>Here are some links to online resources that you may find helpful, especially if you are new to Polarion solutions.</p>
+
+			<ul>
+                <li><a href="http://blog.polarion.com">Polarion Blog</a></li>
+				<li><a href="https://polarion.plm.automation.siemens.com/guides-and-manuals">Guides, Documentation and Tutorials</a></li>
+				<li><a href="https://polarion.plm.automation.siemens.com/resources/white-papers">Whitepapers</a></li>
+				<li><a href="https://polarion.plm.automation.siemens.com/company/events">Events &amp; Webinars</a></li>
+                <li><a href="http://extensions.polarion.com">Polarion Extensions Portal</a></li>
+				<li><a href="https://polarion.plm.automation.siemens.com/training-and-consulting">Polarion Training &amp; Consulting Services</a></li>
+				<li><a href="https://polarion.plm.automation.siemens.com/products/overview">Polarion Lifecycle Management Solutions </a></li>
+			</ul>
+			<h2>Industry Solutions</h2>
+			<ul>
+				<li><a href="https://polarion.plm.automation.siemens.com/products/automotive/functional-safety-iso-26262-automotive-spice-cmmi">Automotive</a></li>
+				<li><a href="https://polarion.plm.automation.siemens.com/products/medical">Medical Devices</a></li>
+				<li><a href="https://polarion.plm.automation.siemens.com/products/polarion-embedded-systems">Embedded Systems</a></li>
+				<li><a href="https://polarion.plm.automation.siemens.com/products/polarion-for-aerospace-transportation">Aerospace &amp; Transportation</a></li>
+			</ul>
+			<h2>Functional Solutions</h2>
+			<ul>
+				<li><a href="https://polarion.plm.automation.siemens.com/products/agile-software-development/index">Agile Software Development</a></li>
+				<li> <a href="https://polarion.plm.automation.siemens.com/products/cloud">SaaS</a></li>
+				<li> <a href="https://polarion.plm.automation.siemens.com/polarion-alm-plm-integration">ALM-PLM Integration</a></li>
+			</ul>
+			<p class="top"><a href="#hdr">TOP&nbsp;^</a></p>
+		</div><!-- /#links -->
+	</div><!-- /#cont -->
+
+	
+</div>
+	<div style="margin-bottom: 0px; height: 44px;" id="ftr">
+		<p style="padding-right: 13px; margin-top: 0px; padding-top: 15px; margin-bottom: 0px;">&copy; 2017 Polarion AG</p>
+	</div>
+</div>
+
+
+</body>
+</html>

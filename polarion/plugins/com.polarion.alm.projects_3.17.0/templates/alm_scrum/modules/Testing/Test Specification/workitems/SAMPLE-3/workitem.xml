@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="initialEstimate">1/2h</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="workItem">SAMPLE-4</item>
+                <item id="suspect">false</item>
+                <item id="role">verifies</item>
+            </struct>
+        </list>
+    </field>
+    <field id="type">testcase</field>
+    <field id="author">admin</field>
+    <field id="title">Test Case verifying related implementation task</field>
+    <field id="created">2011-02-11 12:06:22.873 +0100</field>
+    <field id="priority">50.0</field>
+    <field id="remainingEstimate">1/2h</field>
+    <field id="status">active</field>
+    <field id="severity">smoke</field>
+    <field id="previousStatus">draft</field>
+    <field id="testType" type="enum:testtype">manual</field>
+    <field id="testSteps" type="struct:TestSteps">
+        <struct>
+            <item id="keys">
+                <list>
+                    <item>step</item>
+                    <item>description</item>
+                    <item>expectedResult</item>
+                </list>
+            </item>
+            <item id="steps">
+                <list>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">Do something</item>
+                                <item text-type="text/html">in some specific way</item>
+                                <item text-type="text/html">and check the result</item>
+                            </list>
+                        </item>
+                    </struct>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">Do something in step 2</item>
+                                <item text-type="text/html">with some specific data</item>
+                                <item text-type="text/html">expected outcome of step 2</item>
+                            </list>
+                        </item>
+                    </struct>
+                </list>
+            </item>
+        </struct>
+    </field>
+</work-item>

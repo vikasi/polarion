@@ -1,0 +1,43 @@
+<table width="100%" height="100%" cellpadding="0" cellspacing="0">
+	#if($project)
+		<tr>
+			<td align="left" width="100%">
+				<table cellspacing="3" cellpadding="0">
+					<tr>
+						<td class="featureLabel pr" style="padding-bottom:5px;padding-top:5px" nowrap="nowrap" valign="top">Project:</td>
+						<td class="featureValue" style="padding-bottom:5px;padding-top:5px" colspan="3">
+							#escape("$!project.name")
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="featureLabel pr" nowrap="nowrap" valign="top" >Test Success Ratio:</td>
+						<td class="featureValue" width="200" >#if($test-results)$test-results#else N/A #end</td>
+						<td class="featureLabel pr pl" nowrap="nowrap" valign="top">Build Frequency:</td>
+						<td class="featureValue" width="200" >#if($lastBuilds)$lastBuilds build(s) in last 7 days#else N/A #end</td>
+					</tr>
+					<tr>
+						<td class="featureLabel pr" nowrap="nowrap" valign="top">Test Coverage:</td>
+						<td class="featureValue"   valign="top" >#if($test-coverage)$test-coverage#else N/A #end</td>
+						<td class="featureLabel pr pl" nowrap="nowrap" valign="top" >Build Success Ratio:</td>
+						<td class="featureValue"   valign="top" >#if($buildsRatio)$buildsRatio#else N/A #end</td>						
+					</tr>
+					<tr>
+						<td class="featureLabel pr" style="padding-top:5px" nowrap="nowrap" valign="top" >Traceability Commits to Work Items:</td>
+						<td class="featureValue"  style="padding-top:5px" width="200"  >#if($tracebilityCR)$tracebilityCR #else N/A #end</td>
+						<td class="featureLabel pr pl" style="padding-top:5px" nowrap="nowrap" valign="top" >Traceability Work Items to Commits:</td>
+						<td class="featureValue"  style="padding-top:5px" width="200"  >#if($tracebilityRC) $tracebilityRC #else N/A #end</td>
+						 
+					</tr>
+				</table>
+			</td>
+		</tr>
+	#else
+		<tr>
+			<td class="pt pr pb pl">
+				<b style="color:red">No project selected</b>
+			</td>
+		</tr>
+	#end
+</table>
+

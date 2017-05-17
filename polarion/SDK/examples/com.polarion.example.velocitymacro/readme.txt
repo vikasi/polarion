@@ -1,0 +1,1 @@
+See Polarion Widget SDK for detailed instructions.

@@ -1,0 +1,607 @@
+<script>
+
+   var tempalePage = "";
+   function setSpaceForTemplate(space)
+   {
+     tempalePage = space;
+   }
+
+   function openSubWindow(){
+      document.getElementById("viewcontent").style.overflow = "hidden";
+   //	  document.getElementById("subWindow").action = '$doc.getURL("view","xpage=requesttopdfdialog&makroPicker=true&rev=$doc.getVersion()")';
+	  executeCommand('$doc.getURL("viewrev","xpage=requesttopdfdialog&makroPicker=true&rev=$doc.getVersion()")', checkCallBack);
+   	//  document.getElementById("subWindow").submit();
+   	  hiddeMenuAll();
+   }
+   
+   function handlePrint(){
+   		var url = "$doc.getURL("print","rev=$doc.getVersion()")";
+   		top.handleWikiPrint(url + "&" + getQueryString());
+   }
+   
+   function handlePDFNew(){
+   		var url = "$doc.getURL("pdf","")";
+   		top.exportWikiPDF(url, "$doc.getVersion()", getQueryString());
+   }
+   
+   function handlePlanSwitchToRichPage() {
+        #if(!$plan.isTemplate() && $plan.getTemplate().can().read() && $plan.getTemplate().isRichPagePlan())
+            #set($showChbox = "true")
+        #else
+            #set($showChbox = "false")
+        #end
+        top.switchPlanWikiToRP("$plan.getId()", "$plan.getProjectId()", $showChbox);
+   }
+  
+   function handleTestRunSwitchToRichPage() {
+        #if(!$testRun.isTemplate() && $testRun.getTemplate().can().read() && $testRun.getTemplate().isRichPageTestRun())
+            #set($showChbox = "true")
+        #else
+            #set($showChbox = "false")
+        #end
+        top.switchTestRunWikiToRP("$testRun.getId()", "$testRun.getProjectId()", $showChbox);
+   }
+   
+   function handleSpaceHomePageSwitchToRichPage() {
+       top.switchSpaceHomePageWikiToRP('$doc.projectId()', '$doc.getDocSpace()', '$doc.name');
+   }
+  
+   function handleChangeWikiTitle(){
+   		top.changeWikiTitle("$doc.getDocSpace()","$doc.name", "true");
+   }
+   
+   function handleChangeSpaceTitle(spaceId){
+   		top.changeWikiTitle(spaceId ,"Home", "false");
+   }	
+
+   function loadPagesNew(docName, docSpace, docProject, docParent, overviewSpace)
+   {
+      //alert(docName+" | "+docSpace+" | "+docProject+" | "+docParent+" | "+overviewSpace);
+
+      document.getElementById("viewcontent").style.overflow = "hidden";
+      document.getElementById("createType").value       = "Page";
+      document.getElementById("createDocName").value    = docName;
+      document.getElementById("createDocSpace").value   = docSpace;
+      document.getElementById("createDocProject").value = docProject;
+      document.getElementById("createDocParent").value  = docParent;
+      document.getElementById("createOverviewSpace").value  = overviewSpace;
+      //document.getElementById("checkLoginC").submit();
+
+      var param = "createType=Page"+
+                  "&createDocName="+docName+
+                  "&createDocSpace="+ docSpace+
+                  "&createDocProject="+ docProject+
+                  "&createDocParent="+ docParent+
+                  "&createOverviewSpace="+overviewSpace;
+
+      executeCommandPost(document.getElementById('checkLoginC').action, checkCallBack, param);
+      hiddeMenuAll();
+   }
+
+   function loadSpaces(docName, docSpace, docProject, docParent, overviewSpace)
+   {
+      //alert(docName+" | "+docSpace+" | "+docProject+" | "+docParent+" | "+overviewSpace);
+
+      document.getElementById("viewcontent").style.overflow = "hidden";
+      document.getElementById("createType").value       = "Space";
+      document.getElementById("createDocName").value    = docName;
+      document.getElementById("createDocSpace").value   = docSpace;
+      document.getElementById("createDocProject").value = docProject;
+      document.getElementById("createDocParent").value  = docParent;
+      document.getElementById("createOverviewSpace").value  = overviewSpace;
+      //document.getElementById("checkLoginC").submit();
+
+      var param = "createType=Space"+
+                  "&createDocName="+docName+
+                  "&createDocSpace="+ docSpace+
+                  "&createDocProject="+ docProject+
+                  "&createDocParent="+ docParent+
+                  "&createOverviewSpace="+overviewSpace;
+
+
+      executeCommandPost(document.getElementById('checkLoginC').action, checkCallBack, param);
+      hiddeMenuAll();
+   }
+
+   function loadWindow(type, docName, docSpace, docProject, docParent, docOverviewSpace)
+   {
+     showProgressIn(true);
+     var w = (screen.availWidth-850)/2;
+     var h = "60px"; 
+
+     loadSpacesList("/polarion/wiki/bin/edit/page/_default", type, docName, docSpace, docProject, docParent, docOverviewSpace);
+
+     $('createnewpagewindow').style.left = w;
+     $('createnewpagewindow').style.top =  h;
+     $('createnewpagewindow').style.display = '';   
+   }
+   
+   function loadSubWindow(url){
+	    showProgressIn(true);
+	    var w = (screen.availWidth-850)/2;
+	    var h = "60px"; 
+	
+        showProgress(true);
+        executeCommand(url, loadSubWindowCallback);
+	
+	    $('createnewpagewindow').style.left = w;
+	    $('createnewpagewindow').style.top =  h;
+	    $('createnewpagewindow').style.display = '';  
+
+   }
+
+   function showProgressIn(val) 
+   {
+
+     $('createnewpagewindow').innerHTML = "<div style='text-align: center; width: 100%; height: 300px; border: 2px solid #3E5F80;'>"+
+     "<table><tr><td height=150px>&nbsp;</td></tr><tr><td width=200px>&nbsp;</td><td width=300px>"+
+     "<table>"+
+     "<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='$xwiki.getSkinFile('progress.gif')'/></td></tr>"+
+     "<tr><td id='progress_operation' style='text-align: center;'>$localization.getValue('wiki.form.progress.label.loading')</td></tr>"+
+     "</table>"+
+     "</td></tr><tr><td height=150px>&nbsp;</td></tr></table></div>";
+   }
+
+   
+
+   function showProgress(val) 
+   {
+/*
+     if (val)
+     {
+       var w = (screen.availWidth-540)/2;
+       var h = (screen.availHeight-250)/2;
+       $('progressbar').style.left = w;
+       $('progressbar').style.top =  h;
+       $('progressbar').style.display = '';
+     }
+     else   
+     {
+       $('progressbar').style.display = 'none';
+     }
+*/
+   }
+
+
+    function loadSpacesList(baseurl, type, docName, docSpace, docProject, docParent, docOverviewSpace) 
+    {
+        showProgress(true);
+        var url = baseurl + "?xpage=spaceslistoverview&type=" + type+ "&ajax=1"+"&docName="+docName+"&docSpace="+docSpace+"&docProject="+docProject+"&docParent="+docParent+"&docOverviewSpace="+docOverviewSpace;
+        executeCommand(url, loadSpacesListCallback);
+    }
+
+
+    function loadSpacesListCallback(e) 
+    {
+
+        var main = document.getElementById("xwikimaincontainer");
+        if (main)
+            main.style.overflow="hidden";
+
+      if (document.all)
+      {
+      /*
+        var macroEl = document.getElementById("createnewpagewindow");
+        macroEl.innerHTML = e;
+        $('template').title.focus();
+
+        createDraggable($('createnewpagewindow'));
+
+      */
+
+        var macroEl = document.getElementById("createnewpagewindow");
+        macroEl.innerHTML = e;
+        try
+        {
+           $('template').title.focus();
+        }catch(e){}
+        var p3 = document.createElement("iframe");
+        p3.id= "coverFrame";
+        (document.getElementsByTagName('body'))[0].appendChild(p3);
+        //$('coverFrame').style.height= $('createnewpagewindow').style.height;
+        createDraggable($('createnewpagewindow'));
+
+        
+      }
+      else
+      {
+        var p3 = document.createElement("div");
+        p3.id = "coverFF";
+        p3.className = "com_polarion_reina_web_js_widgets_WindowCover_Css";
+        (document.getElementsByTagName('body'))[0].appendChild(p3);
+        
+        var p4 = document.createElement("div");
+        p4.id= "createnewpagewindowFF";
+        $('createnewpagewindow').style.display = 'none';
+        p4.innerHTML = e;
+        p4.style.display = "block";
+        var w = (screen.availWidth-850)/2;
+        var h = (screen.availHeight-780)/2;
+        p4.style.left = w;
+        p4.style.top =  h;
+        p4.style.position =  "absolute";
+        createDraggable(p4);
+
+        (document.getElementsByTagName('body'))[0].appendChild(p4);
+      }
+
+      var title = document.getElementById("title");
+      if (title)
+         title.focus(); 
+
+    }
+    
+    function loadSubWindowCallback(e) 
+    {
+      if (document.all)
+      {
+       /*
+        var macroEl = document.getElementById("createnewpagewindow");
+        macroEl.innerHTML = e;
+        try
+        {
+          $('template').title.focus();
+        }catch(e){}	
+        createDraggable($('createnewpagewindow'));
+       */
+
+        var macroEl = document.getElementById("createnewpagewindow");
+        macroEl.innerHTML = e;
+
+        try
+        {
+           $('template').title.focus();
+
+        }catch(e){}
+
+        var p3 = document.createElement("iframe");
+        p3.id= "coverFrame";
+        (document.getElementsByTagName('body'))[0].appendChild(p3);
+        //$('coverFrame').style.height= $('createnewpagewindow').style.height;
+        createDraggable($('createnewpagewindow'));
+
+
+      }
+      else
+      {
+        var p3 = document.createElement("div");
+        p3.id = "coverFF";
+        p3.className = "com_polarion_reina_web_js_widgets_WindowCover_Css";
+        (document.getElementsByTagName('body'))[0].appendChild(p3);
+        
+        var p4 = document.createElement("div");
+        p4.id= "createnewpagewindowFF";
+        $('createnewpagewindow').style.display = 'none';
+        p4.innerHTML = e;
+        p4.style.display = "block";
+        var w = (screen.availWidth-850)/2;
+        var h = (screen.availHeight-780)/2;
+        p4.style.left = w;
+        p4.style.top =  h;
+        p4.style.position =  "absolute";
+        createDraggable(p4);
+
+        (document.getElementsByTagName('body'))[0].appendChild(p4);
+      }
+      
+      refreshSizes();
+    }
+
+    function createDraggable(element){
+        var drag = new Draggable(element, {canDrag: function(event){
+          var pos = Position.cumulativeOffset(drag.element);
+          var delta = event.clientY - pos[1];
+          return delta < 24;},
+         starteffect:function(){}, endeffect:function(){},
+         onStart:function(event)
+         {
+          element.style.border = '';
+         }
+	});	
+    }
+
+    function loadPagesList(baseurl, space) 
+    {
+//alert("baseurl: " + baseurl);
+        var url = baseurl + "?xpage=pageslist&space=" + space;
+        executeCommand(url, loadPagesListCallback);
+    }
+
+    function loadPagesListCallback(e) 
+    {
+//alert(e);
+      var macroEl = document.getElementById("pageslist");
+      macroEl.innerHTML = e;
+      showPagesOption(true);
+      showProgress(false);
+    }
+
+   function showPagesOption(val) 
+   {
+     var macroEl = document.getElementById("pageslist");
+     var macroElT = document.getElementById("pageslisttitle");
+     if (val) 
+     {
+       macroEl.style.display = "";
+       macroElT.style.display = "";
+     }
+     else
+     {
+       macroEl.style.display = "none";
+       macroElT.style.display = "none";
+     }
+   }
+
+   function currentPage()
+   {
+     var pageopt = document.forms['template'].page;
+     return pageopt.options[pageopt.selectedIndex].value;
+   }
+
+   function currentSpace()
+   {
+     var spaceopt = document.forms['template'].space;
+     return spaceopt.options[spaceopt.selectedIndex].value;
+   }
+
+
+   function spacesChanged(type){
+    if(type.toLowerCase()=="page")
+    {
+       space = currentSpace();
+//alert(space);
+       if (space == "$msg.get("notemplate")")
+       {
+         showPagesOption(false);
+       }
+       else
+       {
+//alert("loadPagesList");
+         showProgress(true);
+         loadPagesList("/polarion/wiki/bin/edit/$doc.getSpace()", space)
+         showPagesOption(true);
+       }
+     }
+   }
+   
+var requestURL = "$xwiki.getRequestURLNotDecoded()";  
+var msAlredyExist = "Error in function createUrl";
+var newspaceURL = "";
+
+    function validateListCallback(e) 
+    {
+//alert("e=" + e)
+      if (e.toString() == "false")
+      {
+          document.getElementById("viewcontent").style.overflow = "auto";
+//     alert("newurl: " + newspaceURL);
+ 	  location.href = newspaceURL;
+ 	  return false;
+      }
+      else
+      {
+        showWizardError(msAlredyExist);
+      }	
+    }
+
+
+
+    function createUrl(type, docName, docSpace, docProject, docParent, docOverviewSpace)
+    {
+
+          //alert( type+" | "+ docName+" | "+ docSpace+" | "+ docProject+" | "+ docParent+" | "+ docOverviewSpace);
+
+          var urlc = "";
+          var page = "";
+          var isNewSpace = true;
+          var spaceName = "";
+          if(type.toLowerCase() == "page")
+          {
+
+             var isNewSpace = false;
+             page = document.getElementById('title').value;
+             
+             if ( (docName == "Home" && docSpace.indexOf('/_default') != -1 ) || (docName == "WikiOverview" && docOverviewSpace == "") )
+                 spaceName = document.getElementById('spaces2').value;
+             else if (docOverviewSpace != "")
+                 spaceName = docParent.replace("/_default", "/" + docOverviewSpace);
+             else if (docName == "SpaceIndex")
+                 spaceName = docParent;
+             else
+                 spaceName = docSpace;
+
+
+             initUrl = "/polarion/wiki/bin/edit/"+spaceName+"/"+page;
+
+             var pageDocType = document.template.docType;
+             var docType = "content";
+
+             for (var i=0; i < pageDocType.length; i++)
+             {
+                if (pageDocType[i].checked)
+                {
+                   docType = pageDocType[i].value;
+                }
+             }
+
+             if (docName == "WikiOverview")
+               docParent = docParent.replace("/_default", "/?service=Overview");
+             else if (docName == "SpaceIndex")
+               docParent = docParent+"/?service=SpaceIndex";
+             else
+               docParent = docParent+"/"+docName;
+                
+
+             urlc = initUrl + "?doctype="+docType+"&editor=wiki&parent=" + docParent + "&" + "create=0";
+             urlc = urlc+"&parentSpace="+docParent;
+
+             //alert(urlc);
+
+          }
+          else
+          {
+
+             initUrl = "/polarion/wiki/bin/view/";
+             page = document.getElementById('title').value;
+             
+             var n  = docParent.lastIndexOf("page/");
+             spaceName = docParent.substring(0,n+5)+page;
+             urlc = initUrl + spaceName+ "/Home";
+
+             //alert(urlc);
+          }
+
+          var ms;
+
+          if (page == "")
+          {
+            ms = "Please fill the required fields: ";
+            if (isNewSpace)
+              ms +=  "Space name";
+            else
+              ms +=  "Page name"; 
+          }
+          else
+          {
+            ms = "Please enter a valid name, following charters are not allowed: " + invalidChars;
+            if (isNewSpace)
+              msAlredyExist = "space";
+            else
+              msAlredyExist = "page";
+            msAlredyExist = "Please enter a different name, " + msAlredyExist + " with this name already exists.";
+          }	
+          var defineName = false;
+          if (page != "" && isNewSpace && !isDocumentPage(page) )
+          {
+             ms = "Please enter a different space name, this one is use by Wiki. The system reserved names are: " + wikiDefineNames;
+             checkSubmitTextTitleDefine(page, ms);
+             defineName = true;
+          }
+
+
+          requestURL  = urlc;
+          newspaceURL = urlc;
+
+          if (checkSubmitTextTitle(page, ms) && !defineName)
+          {
+	
+	    if (isNewSpace) 
+	    {
+    	        spaceName  = page;
+	        page       = "";
+	    }
+            var url = "/polarion/wiki/bin/validatespace/_default/Home?xpage=xvalidspace&page=" + page + "&space=" + spaceName + "&project=" + docParent;
+            executeCommand(url, validateListCallback);
+ 	    return false;
+ 	  }
+    }
+
+    function end()
+    {
+		$('createnewpagewindow').style.display = 'none';
+	
+		var p1 = document.getElementById("coverFrame");
+		var p2 = document.getElementById("createnewpagewindowFF");
+		var p3 = document.getElementById("coverFF");
+	
+		if (p1)
+	          document.getElementsByTagName('body')[0].removeChild(p1);
+	        if (p2)
+	          document.getElementsByTagName('body')[0].removeChild(p2);
+	        if (p3)
+	          document.getElementsByTagName('body')[0].removeChild(p3);
+	
+		document.getElementById("viewcontent").style.overflow = "auto";
+    }
+
+
+	
+	function refreshSizes(){
+      	
+      	var orientation = document.getElementsByName("orientation")[0].checked?'P':'L';
+      	
+      	var width = 0;
+        var height = 0;
+        var paperElement = document.getElementById('paper');
+		var selected = paperElement[paperElement.selectedIndex].value;
+
+		if(selected == 'A4'){
+			width = '8.26';
+			height = '11.69';
+		}else if(selected == 'A3'){
+			width = '11.69';
+			height = '16.53';
+		} else if (selected == 'letter'){
+			width = '8.5';
+			height = '11';
+		} else if (selected == 'legal'){
+			width = '8.5';
+			height = '14';
+		} else if (selected == 'tabloid'){
+			width = '11';
+			height = '17';
+		}
+
+		if(orientation == 'L'){
+			var tmp = width;
+			width = height;
+			height = tmp;
+		}
+
+		var wikiSize = parseInt(document.getElementsByName("wikiSize")[0].value);
+		var widthInPixel = width * 96;
+		var recScale = Math.round(widthInPixel / wikiSize * 100) / 100;
+		
+			
+		var scaleElement = document.getElementsByName('scaleSelect')[0];//getElementById('scale');
+      	//alert('refreshSizes:' + recScale);
+      	document.getElementsByName("recScale")[0].value = recScale;
+        document.getElementsByName("pageWidth")[0].value = width;
+        document.getElementsByName("pageHeight")[0].value = height;
+        
+     }
+     
+   	 
+   	 function export2pdf(){
+   	 	var link = document.getElementById("pdfExportLink2").innerHTML;
+   	 	var headerFooter = document.getElementsByName("headerfooter")[0].checked?'true':'false';
+   	 	var adjustWidth = document.getElementsByName("fitpage")[0].checked?'true':'false';
+   	 	var bookmarks = document.getElementsByName("bookmarks")[0].checked?'true':'false';
+   	 	var orientationElement = document.getElementById('orientation');
+   	 	var orientation = orientationElement[orientationElement.selectedIndex].value;
+   	 	var paperElement = document.getElementById('paper');
+   	 	var paper = paperElement[paperElement.selectedIndex].value;
+   	 	var rev = document.getElementsByName("pdfRev")[0].value;
+   	 	if(rev == ''){
+   	 		rev = '';
+   	 	} else {
+   	 		rev = 'rev=' + rev + '&';
+   	 	}
+   	 	
+   	 	document.getElementById('ExportElement').innerHTML = "Reexport";
+   	 	document.getElementById('exportInfo').style.display = "block";
+		
+		document.getElementById('pdfLoadingFrame').style.display="block";
+		
+		if(document.all){
+			window.location = link + '?' + rev+ '&headerFooter=' + headerFooter+ '&bookmarks=' + bookmarks+ '&adjustWidth=' + adjustWidth + '&bookmarks=' + bookmarks+ '&orientation=' + orientation + '&paper=' + paper + '&' + getQueryString();
+		}else{
+			window.open(link + '?' + rev+ '&headerFooter=' + headerFooter+ '&bookmarks=' + bookmarks+ '&adjustWidth=' + adjustWidth + '&bookmarks=' + bookmarks+ '&orientation=' + orientation + '&paper=' + paper + '&' + getQueryString(),"loadingPDF");
+		}
+
+   	 }
+   	 
+   	 function confirmClose(){
+   	 	var link = document.getElementsByName("closeLink")[0].value;
+   	 	var tempdir = document.getElementsByName("tempDirName")[0].value;
+   	 	
+   	 	window.checkFrame.location.href = link + '?tempdir=' + tempdir;
+   	 	end();
+   	 }
+   	 
+   	 function getQueryString() {
+   	 	hu = window.location.search.substring(1);
+		return hu;
+   	 }
+
+</script>

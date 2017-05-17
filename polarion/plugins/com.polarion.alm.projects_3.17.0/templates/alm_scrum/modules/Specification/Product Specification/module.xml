@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="allowedWITypes">
+        <list>
+            <item>userstory</item>
+        </list>
+    </field>
+    <field id="author">admin</field>
+    <field id="created">2011-01-27 15:35:31.861 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-6"></h1><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-7"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-9"></h3><p id="polarion_new_14">A Product Specification is a complete description of the behavior of the product to be developed. It includes a set of user stories that describe all the interactions the users will have with the software. In addition to user stories, this document also contains nonfunctional (or supplementary) requirements.</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-10"></h3><p id="polarion_new_15">
+  <span style="font-style: italic;">Provide a short description of the software being specified and its purpose, including relevant benefits, objectives, and goals. If a separate business requirements document is available, refer to it rather than duplicating its contents here.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-11"></h3><p id="polarion_new_16">
+  <span style="font-style: italic;">List any other documents or Web addresses to which this document refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-13"></h2><p id="polarion_new_8">
+  <span style="font-style: italic;">Provide an overall background description of the system. This is a very client oriented view, and should be understandable by a general audience.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-14"></h2><p id="polarion_merged_0">
+  <span style="font-style: italic;">The product backlog is a high-level list that is maintained throughout the entire project. It aggregates backlog items: broad descriptions of all potential features, prioritized as an absolute ordering by business value. It is therefore the “What” that will be built, sorted by importance. It is open and editable by anyone and contains rough estimates of both business value and development effort. Those estimates help the Product Owner to gauge the timeline and, to a limited extent prioritize. For example, if the “add spellcheck” and “add table support” features have the same business value, the one with the smallest development effort will probably have higher priority, because the <a href="http://en.wikipedia.org/wiki/Return_on_investment" target="_blank" class="mw-redirect"><a href="http://en.wikipedia.org/wiki/Return_on_investment" target="_top" class="descriptionLink">Return on investment</a> </a>is higher.</span>
+</p><p id="polarion_merged_11">
+  <span style="font-style: italic;">The Product Backlog, and business value of each listed item is the property of the product owner. The associated development effort is however set by the Team.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-15"></h3><p id="polarion_merged_13">
+  <span style="font-style: italic;">Describe a top-level objective here and introduce its clear direction, benefits (why bother), scenarios (list few business process behind), etc.</span>
+</p><p id="polarion_new_20">
+  <span style="font-style: italic;">Now you need to break an epic into User Stories to specify the user requirements and expectations. User stories are later planned to release and sprint based on ROI.<br/>
+    </span>
+</p><p id="polarion_new_21">
+  <span style="font-style: italic;">You can easily mark any text as a newuser story or delete following sample user story using following actions:<br/>
+    </span><span style="font-weight: bold;font-style: italic;"><img src="attachment:mark_and_delete.png" style="margin-left: auto;margin-right: auto;display: block;"/><br/>
+    </span> 
+</p><div id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-1"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-16"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-17"></h3><p id="polarion_merged_1">
+  <span style="font-style: italic;">If there are performance requirements for the product under various circumstances, state them here and explain their rationale, to help the developers understand the intent and make suitable design choices. Specify the timing relationships for real time systems. Make such requirements as specific as possible. You may need to state performance requirements for individual functional requirements or features.</span>
+</p><div id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-2|layout=1"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-18"></h3><p id="polarion_merged_2">
+  <span style="font-style: italic;">Specify those requirements that are concerned with possible loss, damage, or harm that could result from the use of the product. Define any safeguards or actions that must be taken, as well as actions that must be prevented. Refer to any external policies or regulations that state safety issues that affect the product’s design or use. Define any safety certifications that must be satisfied.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-19"></h3><p id="polarion_merged_4">
+  <span style="font-style: italic;">Specify any requirements regarding security or privacy issues surrounding use of the product or protection of the data used or created by the product. Define any user identity authentication requirements. Refer to any external policies or regulations containing security issues that affect the product. Define any security or privacy certifications that must be satisfied.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-20"></h3><p id="polarion_merged_6">
+  <span style="font-style: italic;">Specify any additional quality characteristics for the product that will be important to either the customers or the developers. Some to consider are: adaptability, availability, correctness, flexibility, interoperability, maintainability, portability, reliability, reusability, robustness, testability, and usability. Write these to be specific, quantitative, and verifiable when possible. At the least, clarify the relative preferences for various attributes, such as ease of use over ease of learning.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-21"></h3><p id="polarion_merged_7">
+  <span style="font-style: italic;">Define any other requirements not covered elsewhere in the specification. This might include database requirements, internationalization requirements, legal requirements, reuse objectives for the project, and so on. Add any new sections that are pertinent to the project.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-22"></h2><p id="polarion_merged_8">
+  <span style="font-style: italic;">Define all the terms necessary to properly interpret this document, including acronyms and abbreviations. You may wish to build a separate glossary that spans multiple projects or the entire organization, and just include terms specific to a single project in each document.<br/>
+    </span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-23"></h2><p id="polarion_merged_9">
+  <span style="font-style: italic;">Optionally, include any pertinent analysis models, such as data flow diagrams, class diagrams, state-transition diagrams, or entity-relationship diagrams.<br/>
+    </span>
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">User Story</item>
+                <item id="layouter">section</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity, status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">userstory</item>
+            </struct>
+            <struct>
+                <item id="label">Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity, status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">requirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">generic</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

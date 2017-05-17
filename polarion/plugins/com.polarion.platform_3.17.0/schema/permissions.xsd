@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://polarion.com/schema/Security/Permissions" xmlns:tns="http://polarion.com/schema/Security/Permissions" elementFormDefault="qualified">
+
+    <element name="permissions">
+        <annotation>
+        	<documentation>
+        		Describes content of .polarion/security/permissions.xml
+        	</documentation>
+        </annotation>
+    	<complexType>
+    	<sequence>
+    		<choice maxOccurs="unbounded" minOccurs="0">
+	    		<element name="permission" type="tns:Permission">
+	    		</element>
+	    		<element name="role" type="tns:Role">
+	    		</element>
+    		</choice>
+    	</sequence>
+    	</complexType>
+    </element>
+    
+
+    <complexType name="Permission">
+    	<sequence>
+    		<choice maxOccurs="unbounded" minOccurs="0">
+	    		<element name="permission" type="tns:Permission">
+	    		</element>
+	    		<element name="role" type="tns:Role">
+	    		</element>
+    		</choice>
+    	</sequence>
+    	<attribute name="name" type="string" use="optional">
+    		<annotation>
+    			<documentation>
+    				Permission name prefix or infix if deeply nested (optional).
+    			</documentation>
+    		</annotation></attribute>
+    </complexType>
+    
+    <complexType name="Role">
+        <annotation>
+        	<documentation>
+        		Grants or denies permissions for given role.
+        	</documentation>
+        </annotation>
+        <sequence>
+    		<choice maxOccurs="unbounded" minOccurs="0">
+                <element name="deny" type="tns:GrantDeny"></element>
+                <element name="grant" type="tns:GrantDeny"></element>
+    		</choice>
+    	</sequence>
+    	<attribute name="name" type="string" use="required">
+    		<annotation>
+    			<documentation>Role name.</documentation>
+    		</annotation></attribute>
+    </complexType>
+
+    <complexType name="GrantDeny">
+    	<attribute name="permission" type="string" use="optional">
+    		<annotation>
+    			<documentation>
+    				Permission suffix (optional).
+    			</documentation>
+    		</annotation></attribute>
+    </complexType>
+</schema>

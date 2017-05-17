@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">jRequirement</field>
+    <field id="created">2015-03-25 16:07:14.632 +0100</field>
+    <field id="headingSidebarFields">severity,status</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=WS-78"></h1><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=WS-23"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-24"></h3><p id="polarion_8">The Feature Model (Variability) describes Product Line characteristics (Features) that may differ among members of the Product Line. The differences between members may be captured from multiple viewpoints such as functionality, quality attributes, environments in which the members are used, users, constraints, and internal mechanisms that realize the functionality and quality attributes (ISO 26550:2013). </p><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-25"></h3><p id="polarion_9">Steps to construct the Feature Model:</p><ol id="polarion_10">
+  <li>Create Work Items of type <span style="font-style: italic;">Feature</span>.<br/>
+    </li>
+  <li>Construct a tree of parent-child relationships between Feature items.<br/>
+    Indent a Feature item to make it a child (i.e. sub-Feature) of the previous Feature item.</li>
+  <li>Select a Variation Type for each Feature (see Feature Properties, below).</li>
+</ol><h3 id="polarion_wiki macro name=module-workitem;params=id=WS-26"></h3><p id="polarion_2">After creating a new Feature item, you can specify these properties:</p><ul id="polarion_3">
+  <li><span style="font-weight: bold;">Feature Title</span><br/>
+    Represents the feature in reports, charts, specifications, etc. When you create a new Feature item, you can enter the title immediately.<br/>
+    </li>
+  <li><span style="font-weight: bold;">Feature Description</span><br/>
+    Fully describes the product feature. Start on the line following the title and write normally using any available formatting features. Optionally insert images, tables, diagrams, etc.<br/>
+    </li>
+  <li><span style="font-weight: bold;">Variation Type</span><br/>
+    Describes a Feature&#39;s inclusion in different product specifications. A Feature can have one of four Variation types:</li>
+  <ul>
+    <li><span style="font-weight: bold;font-style: italic;">Mandatory feature</span> - Feature must be included in every product of the Product Line, or if a sub-feature, must be <br/>
+      included if its parent feature is included.</li>
+    <li> <span style="font-weight: bold;font-style: italic;">Alternative feature</span> - Feature is one in a group, of which exactly one (and not more) <span style="font-style: normal;">must</span> be included if the parent is included.</li>
+    <li><span style="font-weight: bold;font-style: italic;">Optional feature</span> - Independent Feature that can be, but does not have to be included.</li>
+    <li><span style="font-weight: bold;font-style: italic;">Or feature</span> - Feature is one of a group, at least one of which must be included if the parent is included.<br/>
+      </li>
+  </ul>
+  <li><span style="font-weight: bold;">Additional relations</span><br/>
+    Links between Features that denote additional relationships depending on the link role:<br/>
+      &gt; <span style="font-style: italic;">Requires</span> - one Feature requires another one to be selected<br/>
+      &gt; <span style="font-style: italic;">Conflicts with</span> - one feature requires another one NOT to be selected</li>
+</ul><p id="polarion_4">
+  <span style="font-style: italic;"><span style="font-weight: bold;">TIP:</span> To edit the Variation Type field of a Feature item, you need to show it in the Work Item Properties sidebar:</span>
+</p><ol id="polarion_1">
+  <li><span style="font-style: italic;font-size: 10pt;line-height: 1.5;">Select a Feature item in the Features section below, and open the Work Item Properties sidebar (if hidden). </span></li>
+  <li><span style="font-style: italic;font-size: 10pt;line-height: 1.5;">Click the Gear icon in the header and select &quot;Show Fields&quot;.</span></li>
+  <li><span style="font-style: italic;font-size: 10pt;line-height: 1.5;">In the box on the right, select &quot;Variation Type&quot;, choose the option &quot;Show in Sidebar and Document&quot;, and click the Apply button.</span></li>
+</ol><h2 id="polarion_wiki macro name=module-workitem;params=id=WS-27"></h2><p id="polarion_template_0">Create your Feature type Work Items here.</p><p id="polarion_5">
+  <span style="font-style: italic;">TIPS: Click the Feature icon in the toolbar above to create a new Feature item. Click the icon of an existing Feature for a menu of options. You can delete the sample items below, or modify them to be actual features of your Feature Model.</span>
+</p><div id="polarion_wiki macro name=module-workitem;params=id=WS-6"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-7|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-8|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-11|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-13|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-14"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-15|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-16|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-17"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-21|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-22|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-18"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-28|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-29|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-19"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-30|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-31|level=2"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-32|level=2"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-33|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-34|level=2"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-20"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-35|level=1"></div><div id="polarion_wiki macro name=module-workitem;params=id=WS-36|level=1"></div><p id="polarion_11"></p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Feature</item>
+                <item id="layouter">section</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">variationType as image,id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                            <item id="value">false</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                        <struct>
+                            <item id="key">sidebarWorkItemFields</item>
+                            <item id="value">severity,status,variationType</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">feature</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">published</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="title">Feature Model</field>
+    <field id="type">featureModel</field>
+    <field id="usesOutlineNumbering">true</field>
+    <field id="version" type="string">1.0</field>
+</module>

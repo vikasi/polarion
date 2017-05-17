@@ -1,0 +1,47 @@
+#background{
+	background-repeat: no-repeat; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position:center center;
+	background-attachment:fixed;
+}
+
+#companyLogo {
+	position:relative;
+	background-color:white;
+	padding:5vh 7vh 2vh 2vh;
+	height: 5vh;
+	z-index:-75;
+	float:left;
+	visibility: hidden;
+}
+
+#container{
+	position: absolute;
+	top: 40vh;
+	margin-top:-10vh;
+	float:left;
+	color: #235b82;
+}
+
+#siemensLogo{
+	height: 15%;
+	position: fixed;
+	left: 165px;
+	z-index:-50;
+}
+
+#options{
+	padding-bottom: 10px;
+	font-size: 11px;
+}
+
+#copyright{
+	font-size:8pt;
+}
+
+.polarionLink {
+    color: #235b82;
+}

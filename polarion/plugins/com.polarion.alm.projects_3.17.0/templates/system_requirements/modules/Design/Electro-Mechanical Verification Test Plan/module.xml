@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2013-01-15 13:11:49.294 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-260"></h1><p id="polarion_merged_3">
+  <span style="font-style: italic;"><span style="font-weight: bold;">NOTE TO AUTHOR: </span> Highlighted, italicized text throughout this template is provided solely as background information to assist you in creating this document.  Please delete all such text, as well as the instructions in each section, prior to submitting this document.  <span style="font-weight: bold;">ONLY YOUR PROJECT-SPECIFIC INFORMATION SHOULD APPEAR IN THE FINAL VERSION OF THIS DOCUMENT.</span></span>
+</p><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-261"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-262"></h3><p id="polarion_new_26">
+  <span style="font-style: italic;">INFO: The Electro-Mechanical Verification Plan document outlines the planned tasks and expectations for verification of Electrical and Mechanical Requirements.<br/>
+    </span>
+</p><ul id="polarion_merged_0">
+  <li><span style="font-style: italic;">WHO will be responsible for completion, review, and approval of these tasks.</span></li>
+  <li><span style="font-style: italic;">HOW the verification will be performed including failure resolution.<br/>
+      </span></li>
+  <li><span style="font-style: italic;">WHAT documentation/deliverables will be generated.</span></li>
+</ul><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-264"></h3><p id="polarion_merged_5">
+  <span style="font-style: italic;">TO DO: List any other documents or Web addresses to which this document refers. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location. E.g.:</span>
+</p><ul id="polarion_merged_2">
+  <li><span class="polarion-rte-link" data-type="document" id="fake" data-item-name="Project Scope" data-space-name="Concept" data-option-id="default"></span><br/>
+    </li>
+  <li><span class="polarion-rte-link" data-type="document" id="fake" data-item-name="System Validation and Verification Plan" data-space-name="Requirements" data-option-id="default"></span></li>
+</ul><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-265"></h2><p id="polarion_new_21">All the Electrical and Mechanical Requirements need to be verified:</p><ul id="polarion_merged_6">
+  <li><span class="polarion-rte-link" data-type="document" id="fake" data-item-name="Electro-Mechanical Design Specification" data-space-name="Design" data-option-id="default"></span></li>
+</ul><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-266"></h2><p id="polarion_new_27">
+  <span style="font-style: italic;">TO DO: Describe an approach how to perform the verification procedures on test items.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-267"></h3><p id="polarion_new_28">
+  <span style="font-style: italic;">TO DO: Specify test pass conditions and what to do in case of test failure.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-268"></h3><p id="polarion_new_29">
+  <span style="font-style: italic;">TO DO: Specify the criteria used to suspend all or a portion of the testing activity on the test items associated with this plan. Specify the testing activities that must be repeated, when testing is resumed.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-269"></h2><p id="polarion_new_30">
+  <span style="font-style: italic;">TO DO: List all the environments on what the tests need to be performed.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-270"></h2><p id="polarion_new_31">
+  <span style="font-style: italic;">INFO: The following sections contain Task items that define what is necessary to prepare for and perform testing.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-271"></h3><div id="polarion_wiki macro name=module-workitem;params=id=TMPLT-272"></div><div id="polarion_wiki macro name=module-workitem;params=id=TMPLT-273"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-274"></h3><div id="polarion_wiki macro name=module-workitem;params=id=TMPLT-275"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-276"></h2><p id="polarion_new_32">
+  <span style="font-style: italic;">TO DO: Cover responsibilities, staffing and training needs, risks and contingencies, and the test schedule.</span>
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Task</item>
+                <item id="layouter">section</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status,assignee</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">task</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">generic</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

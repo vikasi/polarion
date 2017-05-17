@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20110209150415</created>
+<type>active</type>
+<content><![CDATA[#macro(TraceabilityTableCommits $rootQuery $rootQueryOption $middleQuery $middleQueryOption $endQuery $endQueryOption $fields)
+  #set( $middleImpactQuery = "" )
+  #set( $endImpactQuery = "" )
+  #if( !$middleRoleQuery || $middleRoleQuery == "")    #set( $middleRoleQuery = "") #end
+  #if( !$endRoleQuery || $endRoleQuery == "")    #set( $endRoleQuery = "") #end
+  #if( !$rootQuery || $rootQuery == "")    #set( $rootQuery = "*:*") #end
+  #if( !$middleQuery || $middleQuery == "" )  #set( $middleQuery = "*:*") #end
+  #if( !$endQuery || $endQuery == "")      #set( $endQuery = "*:*" ) #end
+  #if( !$fields)        #set( $fields = "description,comments" ) #end
+  #set( $sortRows = "id" )
+  #if ($debug == "true")
+    rootQuery: $rootQuery \\
+    rootQueryOption : $rootQueryOption \\
+    middleQuery: $middleQuery \\
+    middleQueryOption: $middleQueryOption \\
+    endQuery: $endQuery \\
+    endQueryOption: $endQueryOption \\
+    fields:$fields
+    sortRows: $sortRows
+  #end
+  #set( $rootItems = $trackerService.queryWorkItems( $rootQuery, "$sortRows") )
+<table width=99% cellspacing="0" cellpadding="4" style="table-layout:fixed;border:1px solid black;border-collapse:collapse;" rules="all">
+<tr><th>$rootQuery</th><th>$middleQuery</th><th>$endQuery</th></tr>
+    #foreach($wi in $rootItems)
+      #set  ($totalRevStr = "" )
+      #set ($rootCell = "")
+      #set ($middleCell = "")
+      #set ($endCell = "")
+      #set( $wiProject = $wi.getProject().getId() )
+      #if($rootQueryOption && $rootQueryOption != "")
+        #set ( $linkedRevisions = $wi.getLinkedRevisions() )
+        #set  ($revStr = "" )
+        #foreach($rev in $linkedRevisions)
+          #set ( $revStr = "&nbsp;&nbsp;&nbsp;&nbsp;<a href='/polarion/svnwebclient/revisionDetails.jsp?rev=$rev.name' target='_new'>$rev.name - $rev.message </a><br> " )
+          #set ( $totalRevStr = "$revStr $totalRevStr" )
+        #end  
+      #end
+      #set ( $firstCell = "{workitem:$wiProject/$wi.id|display=long|expand=no|fields=$fields} ${totalRevStr} " )
+      #set( $middleImpactQuery = "linkedWorkItems:$middleRoleQuery$wiProject/$wi.id AND ($middleQuery)")
+      #set( $middleItems = $trackerService.queryWorkItems( "$middleImpactQuery", "$sortRows") ) 
+      #foreach($middleItem in $middleItems)
+        #set  ($totalMidRevStr = "" )
+        #set( $middleItemProject = $middleItem.getProject().getId() )
+        #if($middleQueryOption && $middleQueryOption != "")
+          #set ( $linkedMidRevisions = $middleItem.getLinkedRevisions() )
+          #set  ($midRevStr = "" )
+          #foreach($midRev in $linkedMidRevisions)
+            #set ( $midRevStr = "&nbsp;&nbsp;&nbsp;&nbsp;<a href='/polarion/svnwebclient/revisionDetails.jsp?rev=$midRev.name' target='_new'>$midRev.name - $midRev.message </a><br> " )
+            #set ( $totalMidRevStr = "$midRevStr $totalMidRevStr" )
+          #end  
+        #end
+        #set( $middleCell = "{workitem:$middleItemProject/$middleItem.id|display=long|expand=no|fields=$fields} ${totalMidRevStr} $middleCell" )
+        #set( $endImpactQuery = "linkedWorkItems:$endRoleQuery$middleItemProject/$middleItem.id AND ($endQuery)")
+        #set ( $endItems = $trackerService.queryWorkItems( "$endImpactQuery", "$sortRows") )
+        #foreach($endItem in $endItems)
+          #set  ($totalEndRevStr = "" )
+          #set( $endItemProject = $endItem.getProject().getId() )  
+          #if($endQueryOption && $endQueryOption != "")
+            #set ( $linkedEndRevisions = $endItem.getLinkedRevisions() )
+            #set  ($endRevStr = "" )
+            #foreach($endRev in $linkedEndRevisions)
+              ##set ($endRevStr = "{portallink:/repository/browser?tab=revisionDetails&rev=$endRev.name}$endRev.name - $endRev.message {portallink}<br> " )
+              #set ( $endRevStr = "&nbsp;&nbsp;&nbsp;&nbsp;<a href='/polarion/svnwebclient/revisionDetails.jsp?rev=$endRev.name' target='_new'>$endRev.name - $endRev.message </a><br> " )
+              #set ( $totalEndRevStr = "$endRevStr $totalEndRevStr" )
+            #end  
+          #end
+          #set( $endCell = "{workitem:$endItemProject/$endItem.id|display=long|expand=no|fields=$fields} ${totalEndRevStr}  $endCell" )   
+        #end
+      #end
+<tr><td>$firstCell</td><td>$middleCell</td><td>$endCell</td></tr>
+    #end
+</table>
+#end
+
+#macro(TraceabilityTableProcessParameters $rootQueryDefault $middleQueryDefault $endQueryDefault)
+#set( $projectId = $doc.getProject($doc.space) )
+#set( $middleRoleQuery = "verifies=")
+#set( $endRoleQuery = "relates_to=") 
+#set( $mySession = $request.getSession() )
+#set( $debug = "false")
+#set( $sortRows = $request.getParameter("sortRows") )
+#if( !$sortRows )     #set( $sortRows    = "id" ) #end
+##
+## getting passed parameters and setting default values
+## storing parameters in a session object (this is needed for printing as session object is also available in PDF export). 
+## Otherwise passed parameters would not be used for printing
+##
+#set( $rootQuery = $request.getParameter("rootQuery") )
+#if ( $rootQuery )
+  $mySession.setAttribute("rootQuery", $rootQuery )
+  #set( $rootQuery = $mySession.getAttribute("rootQuery") )
+#end
+#if (!$rootQuery) 
+  #set( $rootQuery = $mySession.getAttribute("rootQuery") )
+  #if (!$rootQuery)
+    #set( $rootQuery  = $rootQueryDefault)
+  #else
+
+  #end
+#end
+#set( $middleQuery = $request.getParameter("middleQuery") )
+#if ( $middleQuery )
+  $mySession.setAttribute("middleQuery", $middleQuery)
+  #set( $middleQuery = $mySession.getAttribute("middleQuery") )
+#end
+#if (!$middleQuery) 
+  #set( $middleQuery = $mySession.getAttribute("middleQuery") )
+  #if (!$middleQuery)
+    #set( $middleQuery = $middleQueryDefault)
+  #end
+#end
+#set( $endQuery = $request.getParameter("endQuery") )
+#if ( $endQuery )
+  $mySession.setAttribute("endQuery", $endQuery)
+  #set( $endQuery = $mySession.getAttribute("endQuery") )
+#end
+#if (!$endQuery) 
+  #set( $endQuery = $mySession.getAttribute("endQuery") )
+  #if (!$endQuery)
+    #set( $endQuery = $endQueryDefault)
+  #end
+#end
+#set( $wiFields = $request.getParameter("wiFields") )
+#if ( $wiFields)
+  $mySession.setAttribute("wiFields", $wiFields)
+  #set( $wiFields = $mySession.getAttribute("wiFields") )
+#end
+#if (!$wiFields) 
+  #set( $wiFields = $mySession.getAttribute("wiFields") )
+  #if (!$wiFields)
+    #set( $wiFields = "description")
+  #end
+#end
+#set( $rootQueryOption = $request.getParameter("rootQueryOption") )
+#if ( $rootQueryOption)
+  $mySession.setAttribute("rootQueryOption", $rootQueryOption)
+  #set( $rootQueryOption = $mySession.getAttribute("rootQueryOption") )
+#end
+#if (!$rootQueryOption) 
+  #set( $rootQueryOption = $mySession.getAttribute("rootQueryOption") )
+  #if (!$rootQueryOption)
+    #set( $rootQueryOption = "")
+  #end
+#end
+#set( $middleQueryOption = $request.getParameter("middleQueryOption") )
+#if ( $middleQueryOption)
+  $mySession.setAttribute("middleQueryOption", $middleQueryOption)
+  #set( $middleQueryOption = $mySession.getAttribute("middleQueryOption") )
+#end
+#if (!$middleQueryOption) 
+  #set( $middleQueryOption = $mySession.getAttribute("middleQueryOption") )
+  #if (!$middleQueryOption)
+    #set( $middleQueryOption = "")
+  #end
+#end
+#set( $endQueryOption = $request.getParameter("endQueryOption") )
+#if ( $endQueryOption)
+  $mySession.setAttribute("endQueryOption", $endQueryOption)
+  #set( $endQueryOption = $mySession.getAttribute("endQueryOption") )
+#end
+#if (!$endQueryOption) 
+  #set( $endQueryOption = $mySession.getAttribute("endQueryOption") )
+  #if (!$endQueryOption)
+    #set( $endQueryOption = "")
+  #end
+#end
+#end
+
+#macro(TraceabilityTable $rootQuery $middleQuery $endQuery $fields)
+ #TraceabilityTableCommits($rootQuery "" $middleQuery "" $endQuery "" $fields)
+#end
+
+
+#if($doc.name.equals("TraceabilityTableMacro"))
+  #info("this page contains macros to display a traceability table with three columns\\ *ATTENTION*: you should make the __first query as detailed as possible__. \\ *RECOMMENDATION:*: Always add the project scope to first query, otherwise calculation is done on repository scope which will take some time. For large queries make sure you have enough memory on the server for the java process.")
+#set ( $debug = "false" )
+1.1 How to Use
+It is recommended to set following property in polarion.properties on the server: {code}luceneMaxClauseCount=10000 {code}
+Include at the beginning of your wiki page following include:\\
+Then just use following 2 macros and adjust them as described bellow
+{code}
+&#123;include-macros:_default.TraceabilityTableMacro}
+\#TraceabilityTable("type:requirement AND project.id:elibrary" "type:testcase" "type:defect" "id,title,status")
+{code}
+or
+{code}
+&#123;include-macros:_default.TraceabilityTableMacro}
+\#TraceabilityTableCommits("type:requirement AND project.id:elibrary" "checked" "type:solution" "checked" "type:testcase" "checked" "id,title,status")
+{code}
+##
+## Examples
+##
+1.1 Traceability Table
+{code}
+\#TraceabilityTable("type:requirement AND project.id:elibrary" "type:testcase" "type:defect" "id,title,status,linkedWorkItems)
+{code}
+*Paramters*:
+* rootQuery: Any polarion query e.g. "type:requirement AND project.id:elibrary"
+* middleQuery: Any polarion query e.g. "type:testcase"
+* endQuery: Any polarion query e.g. "type:defect"
+* fields: fields which should be displayed e.g. "id,title,status"
+
+#TraceabilityTable("type:requirement AND project.id:elibrary" "type:testcase" "type:defect" "id,title,status,linkedWorkItems")
+
+1.1 Traceability Table With Commits 
+{code}
+\#TraceabilityTableCommits("type:requirement AND project.id:elibrary" "" "type:testcase" "" "type:defect" "checked" "id,title,status,linkedWorkItems")
+{code}
+*Paramters*:
+* rootQuery: Any polarion query e.g. "type:requirement AND project.id:elibrary"
+* rootQueryOption: if value = "checked" all linked svn commits will be shown. Set value to "" if no commits should be shown.
+* middleQuery: Any polarion query e.g. "type:testcase"
+* middleQueryOption: if value = "checked" all linked svn commits will be shown. Set value to "" if no commits should be shown.
+* endQuery: Any polarion query e.g. "type:defect"
+* fields: fields which should be displayed e.g. "id,title,status"
+* endQueryOption: if value = "checked" all linked svn commits will be shown. Set value to "" if no commits should be shown.
+#TraceabilityTableCommits("type:requirement AND project.id:elibrary" "" "type:testcase" "" "type:defect" "checked" "id,title,status,linkedWorkItems")
+#end]]></content>
+</wiki-page>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+	<application>drawdotio</application>
+	<!-- IMPORTANT! DO NOT CHANGE THIS VALUE IN CVS! -->
+	<version>test</version>
+	
+	<!-- Configure java.util.logging -->
+	<system-properties>
+		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+	</system-properties>
+
+  <sessions-enabled>false</sessions-enabled>
+  <threadsafe>false</threadsafe>
+  
+  <static-files>
+  	<include path="*.html" />
+	<include path="/*.html" />
+	<include path="*.ico" />
+	<include path="/*.ico" />
+	<include path="*.txt" />
+	<include path="/*.txt" />
+	<include path="images/**" />
+	<include path="/images/**" />
+	<include path="img/**" />
+	<include path="/img/**" />
+	<include path="js/**" />
+	<include path="/js/**" />
+	<include path="plugins/**" />
+	<include path="/plugins/**" />
+	<include path="resources/**" />
+	<include path="/resources/**" />
+	<include path="templates/**" />
+	<include path="/templates/**" />
+	<include path="www/**" />
+	<include path="/www/**" />
+    <include path="mxgraph/**">
+      <http-header name="Access-Control-Allow-Origin" value="*" />
+  	</include>
+    <include path="/mxgraph/**">
+      <http-header name="Access-Control-Allow-Origin" value="*" />
+  	</include>
+    <include path="shapes/**">
+      <http-header name="Access-Control-Allow-Origin" value="*" />
+  	</include>
+    <include path="/shapes/**">
+      <http-header name="Access-Control-Allow-Origin" value="*" />
+  	</include>
+    <include path="stencils/**">
+      <http-header name="Access-Control-Allow-Origin" value="*" />
+  	</include>
+    <include path="/stencils/**">
+      <http-header name="Access-Control-Allow-Origin" value="*" />
+  	</include>
+    <include path="styles/**">
+      <http-header name="Access-Control-Allow-Origin" value="*" />
+  	</include>
+    <include path="/styles/**">
+      <http-header name="Access-Control-Allow-Origin" value="*" />
+  	</include>
+  </static-files>
+
+</appengine-web-app>

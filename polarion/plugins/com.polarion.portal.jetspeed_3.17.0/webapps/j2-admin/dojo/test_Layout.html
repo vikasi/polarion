@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Application facade Demo</title>
+
+<script type="text/javascript">
+
+	var djConfig = {isDebug: true};
+
+	//djConfig.debugAtAllCosts = true;
+
+</script>
+<script type="text/javascript" src="dojo.js"></script>
+<script language="JavaScript" type="text/javascript">
+
+	dojo.require("dojo.widget.HtmlLayoutPane");
+	dojo.require("dojo.widget.HtmlSplitPane");
+	dojo.require("dojo.widget.HtmlColorPalette");
+	dojo.require("dojo.widget.Accordion");
+	dojo.require("dojo.jetspeed.JetspeedAjax");
+	dojo.hostenv.writeIncludes();	
+	
+</script>
+<script type="text/javascript">
+
+	function byId(id)
+	{
+		return document.getElementById(id);
+	}
+
+	function init()
+	{
+		portlets = byId("portlets");
+		alert("portlets = " + portlets);
+		dojo.jetspeed.getFragments(portlets);
+	}
+</script>
+  <style>
+    html, body{	
+		width: 100%;	/* make the body expand to fill the visible window */
+		height: 100%;
+		overflow: hidden;	/* erase window level scrollbars */
+		/*border: dotted blue;	/* for debugging */
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+    }
+   </style>
+</head>
+<body >
+<div dojoType="LayoutPane"
+	layoutChildPriority='top-bottom'
+	style="border: 2px solid black; width: 100%; height: 100%;">
+	<div dojoType="LayoutPane" layoutAlign="top" style="background-color: #274383; color: white;">
+		<b>Jetspeed Site Customizer</b>
+	</div>
+	<div dojoType="LayoutPane" layoutAlign="bottom" style="background-color: #274383; color: white;">
+		Status:
+	</div>
+	<div dojoType="LayoutPane" layoutAlign="client">
+		<div dojoType="SplitPane"
+			orientation="horizontal"
+			sizerWidth="5"
+			activeSizing="0"
+			style="width: 100%; height: 100%;"
+		>
+		
+<!-- Folders -------------------------------------------------------------------- -->		
+			<div dojoType="SplitPanePanel" sizeMin="20" sizeShare="20">
+			    <b>Site</b>
+				<div dojoType="Accordion"
+					orientation="vertical"
+					activeSizing="1"
+					style="border: 2px solid black; float: left; margin-right: 30px;  width: 300px; height: 600px;"
+				>
+					<div dojoType="AccordionPanel" open="true">
+						<div dojoType="Label">
+						  Folders	
+						</div>
+						<div dojoType="InitialContent">
+							this is some initial content
+						</div>
+						
+			            General Folders go here...
+			        </div>
+					<div dojoType="AccordionPanel" open="true">
+						<div dojoType="Label">
+						  Users	
+						</div>
+			            Users go here...
+			        </div>
+					<div dojoType="AccordionPanel" open="true">
+						<div dojoType="Label">
+						  Roles
+						</div>
+			            Roles go here...
+			        </div>
+					<div dojoType="AccordionPanel" open="true">
+						<div dojoType="Label">
+						  Groups
+						</div>
+			            Groups go here...
+			        </div>			        
+			    </div>    				
+			</div>
+			
+<!-- Portlets -------------------------------------------------------------------- -->					
+			<div dojoType="SplitPanePanel" sizeMin="20" sizeShare="20">
+			    <b>Portlets</b>
+				<select id="portlets" name="portlets">
+				  <option name='1'>one</option>
+				</select>
+			</div>			
+			<div dojoType="SplitPanePanel" sizeMin="50" sizeShare="50">
+				<div dojoType="SplitPane"
+					orientation="vertical"
+					sizerWidth="5"
+					activeSizing="0"
+					style="width: 100%; height: 100%;"
+				>
+					<div dojoType="SplitPanePanel" sizeMin="20" sizeShare="70">
+						Page Customization
+					</div>
+					<div dojoType="SplitPanePanel" sizeMin="20" sizeShare="30">
+						Pages
+						<div dojoType="ColorPalette"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

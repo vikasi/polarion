@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">jRequirement</field>
+    <field id="categories">
+        <list>
+            <item>sensors</item>
+        </list>
+    </field>
+    <field id="created">2015-03-25 10:00:53.713 +0100</field>
+    <field id="description" text-type="text/html">&lt;span style="font-style: normal;"&gt;The system transmits the measured data using a wired link to a base station.&lt;/span&gt;</field>
+    <field id="previousStatus">reviewed</field>
+    <field id="priority">50.0</field>
+    <field id="pvRestriction" type="text/x-pvscl">WS-15</field>
+    <field id="reqtype" type="enum:reqtype">functional</field>
+    <field id="severity">should_have</field>
+    <field id="status">approved</field>
+    <field id="type">requirement</field>
+</work-item>

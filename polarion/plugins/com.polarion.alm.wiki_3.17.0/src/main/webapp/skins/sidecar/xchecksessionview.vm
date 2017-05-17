@@ -1,0 +1,17 @@
+<script type="text/javascript">
+if (window.name == "working_area")
+{
+  closeLoginWiki();
+  if ( document.getElementById("progressbar") )
+     document.getElementById("progressbar").style.visibility="visible";
+  document.forms['attachFormMain'].submit();
+}
+else
+{
+  window.parent.closeLoginWiki();
+  if ( window.parent.document.getElementById("progressbar") )
+     window.parent.document.getElementById("progressbar").style.visibility="visible";
+  window.parent.document.forms['attachFormMain'].submit();
+
+}
+</script>

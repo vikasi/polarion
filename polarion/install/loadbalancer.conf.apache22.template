@@ -1,0 +1,49 @@
+<IfModule !proxy_module>
+LoadModule proxy_module modules/mod_proxy.so
+</IfModule>
+
+<IfModule !proxy_http_module>
+LoadModule proxy_http_module modules/mod_proxy_http.so
+</IfModule>
+
+<IfModule !proxy_balancer_module>
+LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+</IfModule>
+
+
+#AuthUserFile - location of the file used in authentication for balancer-manager 
+#Linux: "/opt/polarion/data/svn/passwd"
+#Windows: "C:\Polarion\data\svn\passwd"
+<Location /balancer-manager>
+  SetHandler balancer-manager
+  Order Deny,Allow
+  Deny from all
+  AuthType Basic
+  AuthName "BalancerManager"
+  AuthUserFile "/opt/polarion/data/svn/passwd" 
+  Satisfy Any
+  require valid-user
+</Location>
+
+Header add Set-Cookie "ROUTEID=.%{BALANCER_WORKER_ROUTE}e; path=/" env=BALANCER_ROUTE_CHANGED
+
+#Adjust the BalancerMembers to point to the address of each node 
+<Proxy balancer://polarion_cluster>
+  BalancerMember http://example-node1/ route=node1
+  BalancerMember http://example-node2/ route=node2
+  ProxySet stickysession=ROUTEID failonstatus=503 lbmethod=byrequests
+</Proxy>
+
+ProxyPass /polarion balancer://polarion_cluster/polarion
+#Adjust the ProxyPassReverse to point to the address of each node 
+ProxyPassReverse /polarion http://example-node1/polarion
+ProxyPassReverse /polarion http://example-node2/polarion
+LogLevel debug
+
+#To monitor the routes in the load balancer, use the following extra LogFormat:
+#LogFormat "%h %l %u %t %{BALANCER_WORKER_NAME}e %{JSESSIONID}C %{BALANCER_SESSION_STICKY}e %{BALANCER_SESSION_ROUTE}e \"%{BALANCER_WORKER_ROUTE}e\" \"%{BALANCER_ROUTE_CHANGED}e\" \"%r\" %>s %b" extra
+#Example:
+#<IfModule log_config_module>
+#  LogFormat "%h %l %u %t %{BALANCER_WORKER_NAME}e %{JSESSIONID}C %{BALANCER_SESSION_STICKY}e %{BALANCER_SESSION_ROUTE}e \"%{BALANCER_WORKER_ROUTE}e\" \"%{BALANCER_ROUTE_CHANGED}e\" \"%r\" %>s %b" extra
+#  CustomLog "logs/access_extra_log" extra
+#</IfModule>

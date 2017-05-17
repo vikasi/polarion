@@ -1,0 +1,76 @@
+<div id = "menuPreview" style="position: relative; display: none; z-index:5;"  class="menubar">
+<h3 id="xwikimenuPrevietitle" class="hidden">$localization.getValue('wiki.label.topMenu')</h3>
+##
+## Preview menu
+##
+<div class="leftmenu">
+<table border=0 height=25>
+<tr>
+###
+##  Save  button
+###
+<td>
+   <div name="formaction_preview_save" id="formaction_preview_save" value="_save_" class ="saveclass" onclick="if (this.className == 'enab') return executeSave(true);">
+     #xwikitopmenuentrystartimageButton("save.gif" $localization.getValue('definition.save'))
+   </div>
+</td>
+###
+##  Save and close button
+###
+<td>
+   <div name="formaction_preview_save2" id="formaction_preview_save2" value="_save_" class ="saveclass" onclick="if (this.className == 'enab') return executeSave(false);">
+     #xwikitopmenuentrystartimageButton("save.gif" $localization.getValue('wiki.toolbar.button.saveAndClose'))
+   </div>
+</td>
+###
+## Cancel button
+###
+<td>
+      <div id="formaction_cancel_preview" name="formaction_cancel" class="enab"  value="_cancel_" onclick="if(this.className == 'enab') if (checkDiscardChanges()){disableEditButtons(true); showProgressBar('$localization.getValue("wiki.form.progress.label.canceling")');cancelEdit();}">
+    	#xwikitopmenuentrystartimageButton("cancel.gif" $localization.getValue('definition.cancel'))
+      </div>
+</td>
+###
+##  Back to Edit
+###
+<td>
+  <div id="previewbutton" name="formaction_preview" value="_preview_" class="enab" onclick="if(this.className == 'enab') backToEdit();">
+   #xwikitopmenuentrystartimageButton("#" $localization.getValue('wiki.toolbar.button.backToEdit'))
+  </div>
+</td>   
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+function executeSave(saveOnly) {
+	if (!canEdit()) {
+		return;
+	}
+	
+	saveWiki(saveOnly); // published in WikiDocumentSaveDialog - calls executeSaveInternal when successful
+	return false;	
+}
+function executeSaveInternal(saveOnly) {
+	if(checkContentLinks()) { 
+		fullSave = !saveOnly;
+		//document.forms.${formname}.backtoedit.value="true";
+		document.forms.${formname}.saveonly.value="true";
+		document.forms.${formname}.target='wiki_save_frame';
+		document.forms.${formname}.action='$doc.getURL("save", $param)';
+		if (document.forms.${formname}.onsubmit)  {
+			document.forms.${formname}.onsubmit();
+		}
+		if (checkDocumentContent()) {
+			if (updateAttachNameMult2(document.forms['edit'], '$localization.getValue("wiki.label.doYouWantToReplaceFileNameWith")', '$localization.getValue("wiki.label.saveChangedFields")')) { 
+				disableEditButtons(true);
+				cancelCancelEditFlag=false;
+				executeCommand(document.getElementById('checkLogin').action, checkCallBack);
+			} 
+		}
+		return false;
+	} else {
+		alert('$localization.getValue("wiki.message.wikiUnsupportedLinks")')
+	}
+}
+</script>
+</div>

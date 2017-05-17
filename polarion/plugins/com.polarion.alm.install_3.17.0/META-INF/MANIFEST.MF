@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.alm.install
+Export-Package: com.polarion.alm.install,com.polarion.alm.install.pars
+ ers,com.polarion.alm.install.utils
+Bundle-Name: Install
+Bundle-Version: 3.17.0
+Bundle-ClassPath: install.jar
+Require-Bundle: org.codehaus.groovy;bundle-version="1.5.7",org.tmateso
+ ft.svnkit;bundle-version="1.2.3",org.apache.ant;bundle-version="1.6.5
+ ",com.polarion.qcentre;bundle-version="3.3.1"
+Bundle-ManifestVersion: 2
+
+

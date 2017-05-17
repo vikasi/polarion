@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.webdav; singleton:=true
+Export-Package: com.polarion.webdav.servlet,org.eclipse.webdav,org.ecl
+ ipse.webdav.client,org.eclipse.webdav.dom,org.eclipse.webdav.http.cli
+ ent,org.eclipse.webdav.internal.authentication,org.eclipse.webdav.int
+ ernal.kernel,org.eclipse.webdav.internal.kernel.utils,org.eclipse.web
+ dav.internal.utils
+Generated-from: 1409778274163;type=2
+Bundle-Name: %pluginName
+Bundle-Version: 3.17.0
+Bundle-ClassPath: webdav.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: org.apache.log4j,com.polarion.platform,com.polarion.pl
+ atform.repository,com.polarion.core.util,com.polarion.portal.tomcat
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+
+

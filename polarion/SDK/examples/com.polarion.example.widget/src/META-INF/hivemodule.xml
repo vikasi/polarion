@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="com.polarion.example.widget" version="1.0.0">
+	<!--
+		For more details see:
+		/com.polarion.alm.ui/ui.jar/META-INF/richpages-hivemodule.xml
+	-->
+	
+	<contribution configuration-id="com.polarion.alm.richpages.widgets">
+		<widget id="com.polarion.example.workRecordReportWidget" instance="instance:com.polarion.example.widget.WorkRecordReportWidget"/>
+	</contribution>
+</module>

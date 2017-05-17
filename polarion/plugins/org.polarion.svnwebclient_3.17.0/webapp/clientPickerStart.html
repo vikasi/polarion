@@ -1,0 +1,122 @@
+
+<html>
+
+<head>    
+    <link href="style/table.css" type="text/css" rel="stylesheet" media="screen"/>
+    <script type="text/javascript" src="script/selection.js" media="screen"></script>
+    <script type="text/javascript" src="script/picker.js" media="screen"></script>     
+
+</head>
+
+<body>
+
+<table width="100%">
+    <tr>
+        <td>
+            Single selection
+        </td>
+    <tr>    
+        <td>
+            <form name="detailFormSingle">                    
+                <input type="hidden" name="clear" value="clear"/>
+                
+                <table class="list" cellpadding="0" cellspacing="0" rules="all" width="100%" border="1">
+                    <tbody>       
+                        <tr>
+                            <th>Url</th>
+                            <th>Actions</th>
+                        </tr>
+        
+                        <tr>
+                        
+                	        <td nowrap="true" style="margin:0;font-size:11px;">
+                			    <input id="svnUrlSingle" name="svnUrlSingle" value="" type="text" style="width: 200px;">
+                			</td>                
+                			<td>
+            				    <a onclick="javascript:open_svn_url_picker_single(document.detailFormSingle.svnUrlSingle, 'pickerDirectoryContent.jsp')">
+            				        <img src="images/plus.gif" alt="Select url" title="Select url">
+            				    </a>    			    
+                	        </td>									
+                		</tr>								
+                	</tbody>
+                </table>
+            </form>            
+        </td>        
+    </tr>
+    
+    <tr>
+        <td>
+            Multiple selection
+        </td>
+    <tr>    
+        <td>
+            <form name="detailFormMultiple">
+                    
+                <input type="hidden" id="hiddenField" name="hiddenField" value=""/>
+                <input type="hidden" name="clear" value="clear"/>
+                
+                <table class="list" cellpadding="0" cellspacing="0" rules="all" width="100%" border="1">
+                    <tbody>
+        
+                        <tr>
+                            <th>Url</th>
+                            <th>Actions</th>
+                        </tr>
+        
+                        <tr>
+                        
+                	        <td nowrap="true" style="margin:0;font-size:11px;">
+                			    <input id="svnUrlMultiple" name="svnUrlMultiple" value="" type="text" style="width: 200px;">
+                			</td>                
+                			<td>
+            				    <a  id="calledLink" onclick="javascript:open_svn_url_picker(document.detailFormMultiple.hiddenField, true, true, 'pickerDirectoryContent.jsp')">
+            				        <img src="images/plus.gif" alt="Select url" title="Select url">
+            				    </a>    			    
+                	        </td>									
+                		</tr>								
+                	</tbody>
+                </table>
+            </form>            
+        </td>        
+    </tr>    
+</table>
+      
+
+<script type="text/javascript">
+        
+    function update() {        
+        var field = document.detailFormMultiple.hiddenField.value;
+                        
+        var elems = field.split(',');
+        for (var i = 0; i < elems.length; i ++) {
+            var elem = elems[i];        
+            var url = '';
+            var revision = '';                    
+            
+            if (elem.lastIndexOf(':') != -1) {
+                var candidate = elem.substr(elem.lastIndexOf(':') + 1);    
+                
+                if (isNumber(candidate)) {
+                      url = elem.substr(0, elem.lastIndexOf(':'));
+                      revision = candidate;  
+                } else {
+                    url = elem;    
+                }
+            }            
+                        
+            var whereToWrite = document.getElementById('svnUrlMultiple');
+            whereToWrite.value = url;
+            
+            var sender = document.getElementById('calledLink');
+            appendRowResource(sender, ['svnUrlMultiple']);
+        }           
+    }
+    
+    function singleUpdate() {
+        //TODO    
+    }
+    
+</script>
+
+</body>
+</html>

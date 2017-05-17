@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.polarion.svncommons;singleton:=true
+Export-Package: org.polarion.svncommons.commentscache,org.polarion.svn
+ commons.commentscache.authentication,org.polarion.svncommons.comments
+ cache.configuration,org.polarion.svncommons.commentscache.storage,org
+ .polarion.svncommons.commentscache.task,org.w3c.tools.crypt,org.w3c.u
+ til
+Bundle-Name: %pluginName
+Bundle-Version: 3.17.0
+Bundle-ClassPath: svncommons.jar,lib/backport-util-concurrent.jar
+Bundle-Localization: plugin
+Require-Bundle: org.tmatesoft.svnkit, org.apache.log4j
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+
+

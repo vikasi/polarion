@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Provide-Package: com.polarion.platform.repository,com.polarion.platfor
+ m.repository.driver.svn.internal;x-friends:="com.polarion.platform.te
+ sts",com.polarion.platform.repository.driver.svn.internal.security;x-
+ friends:="com.polarion.platform.tests",com.polarion.platform.reposito
+ ry.driver.svn.internal.external;x-friends:="com.polarion.platform.tes
+ ts"
+Bundle-SymbolicName: com.polarion.platform.repository.driver.svn
+Export-Package: com.polarion.platform.repository.driver.svn
+Bundle-Name: Svn Driver Plug-in
+Bundle-Version: 3.17.0
+Bundle-ClassPath: svn.jar
+Bundle-Localization: plugin
+Require-Bundle: com.polarion.platform.repository,com.polarion.platform
+ ,org.tmatesoft.svnkit,net.sf.ehcache,com.polarion.platform.jobs,com.p
+ olarion.cluster,com.siemens.polarion.rt.api;bundle-version="3.17.0"
+Bundle-Vendor: Polarion Software
+
+

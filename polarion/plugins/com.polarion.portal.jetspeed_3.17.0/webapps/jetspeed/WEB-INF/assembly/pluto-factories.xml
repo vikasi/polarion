@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans> 
+   
+  <!-- PortalContextProvider implementations.  Just a facade over the true PortletContext
+	   that is created when the Engine is started -->	
+  <bean id="PortalContextProvider" class="org.apache.jetspeed.engine.core.PortalContextProviderImpl">
+	<constructor-arg>
+		<ref bean="PortalContext" />
+	</constructor-arg>
+  </bean>
+  
+  <bean id="JetspeedNamespaceMapper" class="org.apache.jetspeed.container.namespace.JetspeedNamespaceMapperImpl">
+       <constructor-arg index="0"><value>js_</value></constructor-arg>
+  </bean>
+  
+  <bean id="LocalPortletInvoker"
+        class="org.apache.jetspeed.container.invoker.LocalPortletInvoker" singleton="false"
+  />   
+          
+  <bean id="ServletPortletInvoker"
+        class="org.apache.jetspeed.container.invoker.ServletPortletInvoker" singleton="false"
+  /> 	
+	
+  <bean id="javax.portlet.ActionRequest"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.ActionRequestFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <bean id="javax.portlet.RenderRequest"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.RenderRequestFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+       <property name="props">
+       	<map>
+       	 <entry key="myproperty">
+       	 	<value>myvalue</value>
+       	 </entry>
+       	</map>       	
+       </property>
+  </bean>
+  
+  <bean id="javax.portlet.RenderResponse"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.RenderResponseFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <bean id="javax.portlet.PortletSession"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.PortletSessionFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <bean id="javax.portlet.PortletConfig"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.PortletConfigFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <bean id="javax.portlet.PortletContext"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.PortletContextFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <bean id="javax.portlet.PortalContext"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.PortalContextFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <bean id="javax.portlet.ActionResponse"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.ActionResponseFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <bean id="javax.portlet.PortletURL"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.jetspeed.container.url.impl.PortletURLFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <bean id="javax.portlet.PortletPreferences"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.PortletPreferencesFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <!-- Problem???
+  <bean id="javax.portlet.PreferencesValidator"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.pluto.factory.impl.PreferencesValidatorFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  -->
+  
+   <bean id="org.apache.pluto.invoker.PortletInvoker"
+        class="org.apache.jetspeed.container.invoker.PortletInvokerFactoryImpl"
+  >     
+    <constructor-arg index="0">
+		<ref bean="ServletConfig" />
+	</constructor-arg>
+	<constructor-arg index="1">
+		<ref bean="PortalContext" />
+	</constructor-arg>
+    <constructor-arg index="2">
+		<ref bean="portletFactory" />
+	</constructor-arg>
+	<constructor-arg index="3">
+		<ref bean="ServletPortletInvoker"/>
+	</constructor-arg>
+	<constructor-arg index="4">
+		<ref bean="LocalPortletInvoker"/>
+	</constructor-arg>
+  </bean>
+  
+  <bean id="org.apache.pluto.util.NamespaceMapper"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.jetspeed.container.namespace.JetspeedNamespaceMapperFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+       <property name="props">
+        <map>
+         <entry key="JetspeedNamespaceMapper">
+             <ref bean="JetspeedNamespaceMapper" />
+         </entry>
+        </map>          
+       </property>
+  </bean>
+  
+  <bean id="StaticInformationProvider" class="org.apache.jetspeed.services.information.StaticInformationProviderImpl">
+	<constructor-arg>
+		<ref bean="javax.servlet.ServletConfig"/>
+	</constructor-arg>
+	<constructor-arg>
+		<ref bean="PortalContextProvider" />
+	</constructor-arg>
+	<constructor-arg>
+		<ref bean="org.apache.jetspeed.components.portletregistry.PortletRegistry" />
+	</constructor-arg>	
+  </bean>
+  
+  <bean id="org.apache.pluto.services.information.InformationProviderService" class="org.apache.jetspeed.services.information.InformationProviderServiceImpl"
+	     name="org.apache.pluto.services.information.StaticInformationProvider,org.apache.pluto.services.information.DynamicInformationProvider,org.apache.pluto.services.information.PortletActionProvider,org.apache.pluto.services.information.PortalContextProvider">
+	<constructor-arg>
+		<ref bean="StaticInformationProvider" />
+	</constructor-arg>
+	<constructor-arg>
+		<ref bean="javax.servlet.ServletConfig"/>
+	</constructor-arg>
+  </bean>
+ 
+   
+  <bean id="ServletRequestFactory" 
+	    name="javax.servlet.http.HttpServletRequest" 
+	    class="org.apache.jetspeed.engine.servlet.ServletRequestFactoryImpl" />
+  
+   <bean id="ServletResponseFactory" 
+	    name="javax.servlet.http.HttpServletResponse" 
+	    class="org.apache.jetspeed.engine.servlet.ServletResponseFactoryImpl" />
+
+  
+  <bean id="org.apache.pluto.om.ControllerFactory"
+        class="org.apache.jetspeed.components.factorybeans.PlutoFactoryFactoryBean"
+  >             
+       <property name="className"><value>org.apache.jetspeed.om.ControllerFactoryImpl</value></property>
+       <property name="servletConfig"><ref bean="javax.servlet.ServletConfig"/></property>
+  </bean>
+  
+  <bean id="org.apache.pluto.services.log.LogService"
+        class="org.apache.jetspeed.container.services.log.PlutoLogService"
+  />  
+  
+  <bean id="org.apache.pluto.services.title.DynamicTitleService"  
+	    name="DynamicTitleService"	   
+        class="org.apache.jetspeed.services.title.DynamicTitleServiceImpl" />             
+
+	
+</beans>

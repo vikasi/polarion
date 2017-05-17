@@ -1,0 +1,13 @@
+1 Notification Settings
+
+{notification-settings}
+
+1.1 Quick Help
+
+1.1.1.1.1.1 Subject Prefix
+Value specified here will be added to the beginning of the subject line of all notification emails sent by your Polarion system. A prefix can help users quickly identify messages coming from your Polarion system, and enable them to create rules in mail clients to manage such emails.
+
+The default value is <tt>\[Polarion\]</tt>. So a notification about a Work Item status change would have a subject line like: "~~\[Polarion\] Event: ID: Title \[Assignee: Name\]~~". You may prefer to specify something relevant to your organization. For example, if you specify <tt>\[R &amp; D\]</tt>, the emails would have a subject line like: "~~\[R &amp; D\]  Event: ID: Title \[Assignee: Name\]~~".
+
+1.1.1.1.1.1 Sender Address
+This is where you can specify the address for the Polarion system to use as the sender address for notification emails. You can enter any valid email address. Nothing is ever sent to this address by Polarion. You can configure the address on your email server to handle any incoming mail from other sources, including making it a no-reply address.

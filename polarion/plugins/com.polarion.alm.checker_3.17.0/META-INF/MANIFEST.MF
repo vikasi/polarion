@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.alm.checker
+Bundle-Name: ALM Checker Plug-in
+Bundle-Version: 3.17.0
+Bundle-Localization: plugin
+Bundle-ClassPath: checker.jar
+Require-Bundle: com.polarion.platform.jobs,com.polarion.alm.tracker,co
+ m.polarion.subterra.index
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+
+

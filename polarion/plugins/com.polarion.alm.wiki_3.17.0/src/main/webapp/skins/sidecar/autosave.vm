@@ -1,0 +1,63 @@
+#template("startpage.vm")
+#xwikimessageboxstart($msg.get("notice") $msg.get("revconflict"))
+<p class="textLabel" style="font-weight: bold; margin: 40" >$msg.get("autosave")</p>
+
+
+<div style="margin: 40">
+
+	#set( $url = $xwiki.getRequestURL())
+	#set( $quest = $url.indexOf("?"))
+	
+	#if( $quest != -1)
+		#set( $url = $url.substring( 0, $quest))
+	#end
+	
+	#set( $NewDoc = $xwiki.getAutosavedDocument() )
+	#set( $OldDoc = $xwiki.getSvnDocument())
+
+	#set( $OldDocRev = $OldDoc.getRecentRevisions(1,$xwiki.getContext()) )
+	#set( $NewDocRev = $NewDoc.getRecentRevisions(1,$xwiki.getContext()) )
+
+	#foreach ($version in $OldDocRev) 
+		#set( $OldDocVers = $version )
+	#end
+
+	#foreach ($version in $NewDocRev) 
+		#set( $NewDocVers = $version )
+	#end
+
+	#set( $OldUrl = $url.concat("?page=old"))
+	#set( $NewUrl = $url.concat("?page=autosaved"))
+
+
+
+	<table class="xwikidatatable" style="width: 100%">
+		<tr height=20>
+		  <td class="th1">$msg.get("wikiname")</td>
+		  <td class="th1">$msg.get("author")</td>
+		  <td class="th1">$msg.get("update")</td>
+		  <td class="th1">$msg.get("revision")</td>
+		</tr>
+		<tr>
+          		<td class="th2"></td>
+          		<td class="th2"></td>
+          		<td class="th2"></td>
+          		<td class="th2"></td>           
+        	</tr>
+		<tr class="row even">
+		  <td><a href="$OldUrl">$msg.get("orpage")</a></td>
+		  <td>$OldDoc.getAuthor()</td>
+		  <td>$xwiki.formatDate($OldDoc.getDate(), "yyyy-MM-dd HH:mm")</td>
+		  <td>$OldDocVers</td>
+		</tr>
+		<tr class="row odd">
+		  <td><a href="$NewUrl">$msg.get("autopage")</a></td>
+		  <td>$NewDoc.getAuthor()</td>
+		  <td>$xwiki.formatDate($NewDoc.getDate(), "yyyy-MM-dd HH:mm")</td>
+		  <td></td>
+		</tr>
+	</table>
+
+</div>
+#xwikimessageboxend()
+#template("endpage.vm")

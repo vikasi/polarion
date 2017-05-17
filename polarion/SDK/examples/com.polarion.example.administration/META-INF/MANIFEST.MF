@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.example.administration;singleton:=tr
+ ue
+Bundle-Name: Administration Example Plug-in
+Bundle-Version: 1.0.0
+Bundle-ClassPath: example-administration.jar
+Require-Bundle: com.polarion.portal.tomcat,com.polarion.alm.tracker
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion Software
+
+

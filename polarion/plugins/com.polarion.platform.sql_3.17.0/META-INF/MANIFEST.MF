@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.platform.sql;singleton:=true
+Export-Package: com.polarion.platform.sql;uses:="javax.sql",com.polari
+ on.platform.sql.internal;x-friends:="com.polarion.alm.tracker.tests",
+ com.polarion.platform.sql.internal.def;x-friends:="com.polarion.alm.t
+ racker.tests",com.polarion.platform.sql.internal.fulltext;x-friends:=
+ "com.polarion.alm.tracker.tests",com.polarion.platform.sql.internal.h
+ 2;x-friends:="com.polarion.alm.tracker.tests",com.polarion.platform.s
+ ql.internal.runtime;x-friends:="com.polarion.alm.tracker.tests",com.p
+ olarion.platform.sql.internal.runtime.txactions;x-friends:="com.polar
+ ion.alm.tracker.tests",com.polarion.platform.sql.internal.test;x-frie
+ nds:="com.polarion.alm.tracker.tests",com.polarion.platform.sql.testi
+ ng.fakes;x-friends:="com.polarion.platform.tests"; uses:="javax.sql, 
+  com.polarion.platform.sql.internal.runtime",org.postgresql;x-friends
+ :="com.siemens.polarion.rt"
+Bundle-Name: SQL Database Support
+Bundle-Version: 3.17.0
+Eclipse-AutoStart: true
+Bundle-ClassPath: platform-sql.jar,lib/h2-1.3.176.jar,lib/postgresql-9
+ .4-1201.jdbc41.jar
+Require-Bundle: com.polarion.platform.guice,com.polarion.core.util,com
+ .polarion.subterra.base,com.polarion.platform,com.polarion.platform.p
+ ersistence,com.polarion.subterra.index;visibility:=reexport,net.sf.eh
+ cache,com.polarion.platform.jobs,com.polarion.platform.monitoring,org
+ .eclipse.core.runtime,com.polarion.alm.tracker
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+Guice-Modules: com.polarion.platform.sql.internal.SqlModule
+
+

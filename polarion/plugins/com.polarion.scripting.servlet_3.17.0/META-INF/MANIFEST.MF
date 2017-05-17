@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.scripting.servlet;singleton:=true
+Bundle-Name: Servlet
+Bundle-Version: 3.17.0
+Bundle-ClassPath: scripting-servlet.jar,src/,META-INF/
+Require-Bundle: com.polarion.portal.tomcat,com.polarion.alm.ui;bundle-
+ version="3.6.0",com.polarion.scripting,com.polarion.platform.jobs
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+
+

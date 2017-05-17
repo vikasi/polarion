@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20150325000414</created>
+<type>active</type>
+<content><![CDATA[1 Welcome to the ~~{project-property:name}~~ project
+
+{style:type=div|float=center|height=300px}
+{portallink:/wiki/Variants/Variant%20Report?variant=%project-id%/WS-10|addcontext=yes}{image:basic.jpg|300 |}{portallink}
+{portallink:/wiki/Variants/Variant%20Report?variant=%project-id%/WS-75|addcontext=yes}{image:trendline.jpg|300 |}{portallink}
+{portallink:/wiki/Variants/Variant%20Report?variant=%project-id%/WS-72|addcontext=yes}{image:pro.jpg|300 |}{portallink}
+{style}
+
+{project-property:description}
+
+#clearFloats()
+
+<style>
+.homepanel a {
+  font-size:16px !important;
+}
+.homepanel {
+   padding: 20px 60px 0 40px;
+}
+
+</style>
+<div  class="homepanel">
+{section} 
+{column:padding=10px}
+<img src="/polarion/icons/default/topicIcons/Color_009-featuremodel.png" width='70' height='72'>
+{column} 
+{column:padding=20px}
+{portallink:/wiki/Features/Feature%20Model|addcontext=yes}<b>Feature Model</b>{portallink} \\ 
+ Here you can construct a Feature Model that describes every feature of your Product Line.
+{column} 
+{section}
+
+{section}
+{column:padding=10px}
+<img src="/polarion/icons/default/topicIcons/Color_010-masterspecification.png" width='70' height='72'>
+{column}
+{column:padding=20px}
+{portallink:/wiki/Master%20Specifications/Home|addcontext=yes}<b>Master Specifications</b>{portallink} \\
+~~Master Specifications~~ are Documents that contain all component specifications for all products in a product line, such as feature requirements, test cases, etc. 
+{column}
+{section}
+
+{section} 
+{column:padding=10px}
+<img src="/polarion/icons/default/topicIcons/Color_011-variant.png" width='70' height='72'>
+{column}
+{column:padding=20px}
+{portallink:/wiki/Variants/Home|addcontext=yes}<b>Variants</b>{portallink} \\
+A ~~Variant~~ describes one product from a product line. In this space you can define all product Variants and generate their ~~Variant Specification Documents~~.
+{column}
+{section}
+
+</div>]]></content>
+</wiki-page>

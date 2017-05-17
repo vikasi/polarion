@@ -1,0 +1,51 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.ooxml
+Export-Package: com.polarion.ooxml,com.polarion.ooxml.html,com.polario
+ n.ooxml.html.api,com.polarion.ooxml.html.wml,com.polarion.ooxml.inter
+ nal,com.polarion.ooxml.oleconverter,com.polarion.ooxml.sml,com.polari
+ on.ooxml.util,com.polarion.ooxml.wml,com.polarion.ooxml.wml.html,com.
+ polarion.ooxml.wml.internal;x-friends:="com.polarion.ooxml.tests",com
+ .polarion.ooxml.wml.internal.html.pict;x-friends:="com.polarion.ooxml
+ .tests",org.docx4j,org.docx4j.convert.in,org.docx4j.convert.out,org.d
+ ocx4j.convert.out.flatOpcXml,org.docx4j.convert.out.html,org.docx4j.c
+ onvert.out.pdf,org.docx4j.convert.out.pdf.viaXSLFO,org.docx4j.customX
+ mlProperties,org.docx4j.customxml,org.docx4j.diff,org.docx4j.dml,org.
+ docx4j.dml.chart,org.docx4j.dml.chartDrawing,org.docx4j.dml.compatibi
+ lity,org.docx4j.dml.diagram,org.docx4j.dml.lockedCanvas,org.docx4j.dm
+ l.picture,org.docx4j.dml.wordprocessingDrawing,org.docx4j.docProps.co
+ re,org.docx4j.docProps.core.dc.elements,org.docx4j.docProps.core.dc.t
+ erms,org.docx4j.docProps.custom,org.docx4j.docProps.extended,org.docx
+ 4j.docProps.variantTypes,org.docx4j.document.wordprocessingml,org.doc
+ x4j.fonts,org.docx4j.fonts.microsoft,org.docx4j.fonts.substitutions,o
+ rg.docx4j.jaxb,org.docx4j.math,org.docx4j.model,org.docx4j.model.data
+ storage,org.docx4j.model.images,org.docx4j.model.listnumbering,org.do
+ cx4j.model.properties,org.docx4j.model.properties.paragraph,org.docx4
+ j.model.properties.run,org.docx4j.model.properties.table,org.docx4j.m
+ odel.properties.table.tblStyle,org.docx4j.model.properties.table.tc,o
+ rg.docx4j.model.properties.table.tr,org.docx4j.model.sdt,org.docx4j.m
+ odel.structure,org.docx4j.model.structure.jaxb,org.docx4j.model.style
+ s,org.docx4j.model.table,org.docx4j.openpackaging,org.docx4j.openpack
+ aging.contenttype,org.docx4j.openpackaging.exceptions,org.docx4j.open
+ packaging.io,org.docx4j.openpackaging.packages,org.docx4j.openpackagi
+ ng.parts,org.docx4j.openpackaging.parts.DrawingML,org.docx4j.openpack
+ aging.parts.PresentationML,org.docx4j.openpackaging.parts.Wordprocess
+ ingML,org.docx4j.openpackaging.parts.relationships,org.docx4j.relatio
+ nships,org.docx4j.samples,org.docx4j.utils,org.docx4j.vml,org.docx4j.
+ vml.officedrawing,org.docx4j.wml,org.docx4j.xmlPackage
+Bundle-Name: Polarion Office Open XML
+Bundle-Version: 3.17.0
+Bundle-ClassPath: lib/avalon-framework-api-4.3.1.jar,lib/avalon-framew
+ ork-impl-4.3.1.jar,lib/commons-codec-1.3.jar,lib/commons-io-1.3.1.jar
+ ,lib/commons-lang-2.4.jar,lib/commons-vfs-patched-1.9.1.jar,lib/docx4
+ j-2.5.0.jar,lib/fop-patched-0.95.756437.jar,lib/hwpf-3.4.0.jar,lib/jc
+ r-1.0.jar,lib/jdom-1.0.jar,lib/minium-0.1.jar,lib/parent-pointer-plug
+ in-1.0.jar,lib/wmf2svg-0.8.3.jar,lib/xalan-patched-2.7.0.jar,lib/xmlg
+ raphics-commons-1.3.757686.jar,lib/htmlcleaner2_1.jar,lib/cssparser-0
+ .9.5.jar,ooxml.jar,lib/xml-apis-ext-1.3.04.jar
+Require-Bundle: com.polarion.core.util;bundle-version="3.4.1",org.apac
+ he.poi;bundle-version="3.7.0",com.polarion.platform;bundle-version="3
+ .5.1",com.polarion.platform.jobs;bundle-version="3.5.3"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion Software
+
+

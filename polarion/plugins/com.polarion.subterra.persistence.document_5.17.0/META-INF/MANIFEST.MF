@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.subterra.persistence.document
+Export-Package: com.polarion.subterra.persistence.document,com.polario
+ n.subterra.persistence.document.internal
+Bundle-Name: %pluginName
+Bundle-Version: 5.17.0
+Bundle-ClassPath: subterra-document-persistence.jar
+Bundle-Localization: plugin
+Require-Bundle: com.polarion.subterra.persistence,com.polarion.platfor
+ m,com.polarion.subterra.index,com.polarion.platform.jobs
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+
+

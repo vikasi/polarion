@@ -1,0 +1,1020 @@
+<script></script>
+###
+###    Separator
+###
+### Insert a span containing a |
+###
+
+### IMA {
+###macro (sep)
+###<span class="separator"> | </span>
+###end
+### IMA }
+
+### IMA {
+#macro (sep)
+ <span class="separator"><img src=$xwiki.getSkinFile("separator.gif") alt="|"/> </span>
+#end
+### IMA }
+
+###
+###    useravatar
+###
+### Display the avatar of a user, or a standard image if the user has no avatar
+###
+### @param username The name of the user whose avatar will be displayed
+###
+#macro(useravatar $username)
+  #if(!$picturelist)
+    #set($picturelist = $xwiki.hashMap)
+  #end
+  #if(!$picturelist.containsKey($username))
+    #set($picture = "<img src='")
+
+    #set($picture = $picture.concat($xwiki.getSkinFile("noavatar.png")))
+    #set($picture = $picture.concat("' alt='$username' title='$username'/>"))
+    #set($profiledoc = $xwiki.getDocument($username))
+    #if(!$profiledoc.isNew())
+      #set($profileobj = $profiledoc.getObject("XWikiUsers", 0))
+      #if($profiledoc.attachmentList.size() != 0)
+        #set($hasavatar = 0)
+        #if($profileobj.avatar && $profileobj.avatar != "")
+          #foreach ($attach in $profiledoc.attachmentList)
+            #if($attach.filename == $profileobj.avatar)
+              #set($hasavatar = 1)
+            #end
+          #end
+        #end
+        #if($hasavatar == 1)
+          #set($pictureurl = $profiledoc.getAttachmentURL($profileobj.avatar))
+          #set($picture = "<img src='")
+          #set($picture = $picture.concat($pictureurl))
+          #set($picture = $picture.concat("' alt='"))
+          #set($picture = $picture.concat($username))
+          #set($picture = $picture.concat("' title='"))
+          #set($picture = $picture.concat($username))
+          #set($picture = $picture.concat("'/>"))
+        #end
+      #end
+    #end
+    $!picturelist.put($username, $picture)
+  #end
+  $picturelist.get($username)
+#end
+
+###
+###    mimetypeimg
+###
+### Display an icon according to the mimetype
+###
+### @param mime The reported mimetype of the file
+### @param fname The name of the file
+###
+#macro(mimetypeimg $mime $fname)
+#set($idx = $fname.lastIndexOf("."))
+#set($idx = $idx + 1)
+#if(($idx != 0) && ($idx != -1))
+#set($ext = $fname.substring($idx))
+#else
+#set($ext = "")
+#end
+#####    images
+#if($mime.equals("image/svg"))
+<img src="$xwiki.getSkinFile("mimetypes/vectorgfx.png")" alt="[svg]" title="[svg]"/>#elseif($mime.equals("application/svg+xml"))
+<img src="$xwiki.getSkinFile("mimetypes/vectorgfx.png")" alt="[svg]" title="[svg]"/>#elseif($mime.startsWith("image/"))
+<img src="$xwiki.getSkinFile("mimetypes/jpg.png")" alt="[img]" title="[img]"/>#####    text based
+#elseif($mime.equals("text/plain"))
+<img src="$xwiki.getSkinFile("mimetypes/txt.png")" alt="[text]" title="[text]"/>#elseif($mime.equals("text/html"))
+<img src="$xwiki.getSkinFile("mimetypes/html.png")" alt="[html]" title="[html]"/>#elseif($mime.equals("text/css"))
+<img src="$xwiki.getSkinFile("mimetypes/url.png")" alt="[css]" title="[css]"/>#elseif($mime.startsWith("text/"))
+<img src="$xwiki.getSkinFile("mimetypes/txt.png")" alt="[text]" title="[text]"/>#####    documents
+#elseif($mime.equals("application/xml"))
+<img src="$xwiki.getSkinFile("mimetypes/xml.png")" alt="[xml]" title="[xml]"/>#elseif($mime.equals("application/pdf"))
+<img src="$xwiki.getSkinFile("mimetypes/pdf.png")" alt="[pdf]" title="[pdf]"/>#elseif($mime.equals("application/postscript"))
+<img src="$xwiki.getSkinFile("mimetypes/ps.png")" alt="[ps]" title="[ps]"/>#elseif($mime.equals("application/msword"))
+<img src="$xwiki.getSkinFile("mimetypes/word.png")" alt="[doc]" title="[doc]"/>#elseif($mime.equals("application/powerpoint"))
+<img src="$xwiki.getSkinFile("mimetypes/ppt.png")" alt="[ppt]" title="[ppt]"/>#elseif($mime.equals("application/x-shockwave-flash"))
+<img src="$xwiki.getSkinFile("mimetypes/swf.png")" alt="[swf]" title="[swf]"/>#####    archives
+#elseif($mime.equals("application/x-tar"))
+<img src="$xwiki.getSkinFile("mimetypes/tar.png")" alt="[tar]" title="[tar]"/>#elseif($mime.equals("application/zip"))
+<img src="$xwiki.getSkinFile("mimetypes/zip1.png")" alt="[zip]" title="[zip]"/>#elseif($mime.equals("application/x-gzip"))
+<img src="$xwiki.getSkinFile("mimetypes/tar_gz.png")" alt="[gz]" title="[gz]"/>#elseif($mime.equals("application/java-archive"))
+<img src="$xwiki.getSkinFile("mimetypes/jar.png")" alt="[jar]" title="[jar]"/>#####    media
+#elseif($mime.startsWith("audio/"))
+<img src="$xwiki.getSkinFile("mimetypes/wav.png")" alt="[audio]" title="[audio]"/>#elseif($mime.startsWith("video/"))
+<img src="$xwiki.getSkinFile("mimetypes/video.png")" alt="[video]" title="[video]"/>#####    octet-streams extensions
+#elseif($mime.equals("application/octet-stream"))
+#if($ext.equals("xls"))
+<img src="$xwiki.getSkinFile("mimetypes/excel.png")" alt="[xls]" title="[xls]"/>#elseif($ext.equals("bz") || $ext.equals("bz2") || $ext.equals("tbz"))
+<img src="$xwiki.getSkinFile("mimetypes/tar_bz.png")" alt="[bz]" title="[bz]"/>#elseif($ext.equals("tgz"))
+<img src="$xwiki.getSkinFile("mimetypes/tar_gz.png")" alt="[gz]" title="[gz]"/>#elseif($ext.equals("rar"))
+<img src="$xwiki.getSkinFile("mimetypes/zip1.png")" alt="[rar]" title="[rar]"/>#elseif($ext.equals("odp") || $ext.equals("odt") || $ext.equals("odf") || $ext.equals("sxw") || $ext.equals("stw"))
+<img src="$xwiki.getSkinFile("mimetypes/openoffice.png")" alt="[odf]" title="[odf]"/>#else
+<img src="$xwiki.getSkinFile("mimetypes/bin.png")" alt="[bin]" title="[bin]"/>#end
+#elseif($mime.startsWith("application/"))
+<img src="$xwiki.getSkinFile("mimetypes/exec.png")" alt="[app]" title="[app]"/>#end
+#end
+
+
+###
+###    mimetypeimg
+###
+### Display an icon according to the mimetype
+###
+### @param mime The reported mimetype of the file
+### @param fname The name of the file
+###
+#macro(mimetypeimgPanel $mime $fname)
+#set($idx = $fname.lastIndexOf("."))
+#set($idx = $idx + 1)
+#if(($idx != 0) && ($idx != -1))
+#set($ext = $fname.substring($idx))
+#else
+#set($ext = "")
+#end
+#####    images
+#if($mime.equals("image/svg"))
+<img src="$xwiki.getSkinFile("mimetypes/vectorgfx.png")"/>#elseif($mime.equals("application/svg+xml"))
+<img src="$xwiki.getSkinFile("mimetypes/vectorgfx.png")"/>#elseif($mime.startsWith("image/"))
+<img src="$xwiki.getSkinFile("mimetypes/jpg.png")"/>#####    text based
+#elseif($mime.equals("text/plain"))
+<img src="$xwiki.getSkinFile("mimetypes/txt.png")"/>#elseif($mime.equals("text/html"))
+<img src="$xwiki.getSkinFile("mimetypes/html.png")"/>#elseif($mime.equals("text/css"))
+<img src="$xwiki.getSkinFile("mimetypes/url.png")"/>#elseif($mime.startsWith("text/"))
+<img src="$xwiki.getSkinFile("mimetypes/txt.png")"/>#####    documents
+#elseif($mime.equals("application/xml"))
+<img src="$xwiki.getSkinFile("mimetypes/xml.png")"/>#elseif($mime.equals("application/pdf"))
+<img src="$xwiki.getSkinFile("mimetypes/pdf.png")"/>#elseif($mime.equals("application/postscript"))
+<img src="$xwiki.getSkinFile("mimetypes/ps.png")"/>#elseif($mime.equals("application/msword"))
+<img src="$xwiki.getSkinFile("mimetypes/word.png")"/>#elseif($mime.equals("application/powerpoint"))
+<img src="$xwiki.getSkinFile("mimetypes/ppt.png")"/>#elseif($mime.equals("application/x-shockwave-flash"))
+<img src="$xwiki.getSkinFile("mimetypes/swf.png")"/>#####    archives
+#elseif($mime.equals("application/x-tar"))
+<img src="$xwiki.getSkinFile("mimetypes/tar.png")"/>#elseif($mime.equals("application/zip"))
+<img src="$xwiki.getSkinFile("mimetypes/zip1.png")"/>#elseif($mime.equals("application/x-gzip"))
+<img src="$xwiki.getSkinFile("mimetypes/tar_gz.png")"/>#elseif($mime.equals("application/java-archive"))
+<img src="$xwiki.getSkinFile("mimetypes/jar.png")"/>#####    media
+#elseif($mime.startsWith("audio/"))
+<img src="$xwiki.getSkinFile("mimetypes/wav.png")"/>#elseif($mime.startsWith("video/"))
+<img src="$xwiki.getSkinFile("mimetypes/video.png")"/>#####    octet-streams extensions
+#elseif($mime.equals("application/octet-stream"))
+#if($ext.equals("xls"))
+<img src="$xwiki.getSkinFile("mimetypes/excel.png")"/>#elseif($ext.equals("bz") || $ext.equals("bz2") || $ext.equals("tbz"))
+<img src="$xwiki.getSkinFile("mimetypes/tar_bz.png")"/>#elseif($ext.equals("tgz"))
+<img src="$xwiki.getSkinFile("mimetypes/tar_gz.png")"/>#elseif($ext.equals("rar"))
+<img src="$xwiki.getSkinFile("mimetypes/zip1.png")"/>#elseif($ext.equals("odp") || $ext.equals("odt") || $ext.equals("odf") || $ext.equals("sxw") || $ext.equals("stw"))
+<img src="$xwiki.getSkinFile("mimetypes/openoffice.png")"/>#else
+<img src="$xwiki.getSkinFile("mimetypes/bin.png")"/>#end
+#elseif($mime.startsWith("application/"))
+<img src="$xwiki.getSkinFile("mimetypes/exec.png")"/>#end
+#end
+
+
+
+
+###
+###    packName
+###
+### Display a shorter version of a string
+###
+### @param name The processed string
+###
+#macro(packName $name)
+#if(!$maxnamelength)
+#set($maxnamelength = 25)
+#end
+#set($idx = $name.lastIndexOf("."))
+#if(($idx != 0) && ($idx != -1))
+#set($ext = $name.substring($idx))
+#else
+#set($ext = "")
+#set($idx = $name.length())
+#end
+#set($fname = $name.substring(0, $idx))
+#if($fname.length() > $maxnamelength)$fname.substring(0, $maxnamelength)~$ext#else$name#end
+#end
+
+
+###
+###    packName
+###
+### Display a shorter version of a string
+###
+### @param name The processed string
+###
+#macro(packNameWi $name $len)
+#set($maxnamelength = $len)
+#set($ext = "")
+#set($idx = $name.length())
+#set($fname = $name.substring(0, $idx))
+#if($fname.length() > $maxnamelength)$fname.substring(0, $maxnamelength) ...$ext#else$name#end
+#end
+
+###
+###    packName
+###
+### Display a shorter version of a string
+###
+### @param name The processed string
+###
+#macro(packNameDesc $name $len)
+#set($maxnamelength = $len)
+#set($idx = $name.lastIndexOf("."))
+#if(($idx != 0) && ($idx != -1))
+#set($ext = $name.substring($idx))
+#else
+#set($ext = "")
+#set($idx = $name.length())
+#end
+#set($fname = $name.substring(0, $idx))
+#if($fname.length() > $maxnamelength)$fname.substring(0, $maxnamelength) $ext#else$name#end
+#end
+
+
+
+### 
+#macro(imgHelp $title)
+	#if($title == "Attachments")
+		#set($helpContextId = "ug_wiki_common_ops_attachments")
+	#elseif($title == "Comments")
+		#set($helpContextId = "ug_wiki_common_ops_update_page_add_comment")
+	#elseif($title == "Search")
+		#set($helpContextId = "ug_wiki_searching")		
+	#elseif($title == "Spaces")
+		#set($helpContextId = "ug_wiki_getStart_navSpaces")
+	#elseif($title == "Recently Visited")
+		#set($helpContextId = "ug_wiki_getStart_navSpaces")
+	#elseif($title == "Backlinks")
+		#set($helpContextId = "ug_wiki_common_ops_backlinks")
+	#else
+		#set($helpContextId = "ug_wiki_editing_pages_wiki_editor_syntaxHelp")
+	#end
+    <div onclick='top.open("/polarion/help/index.jsp?tab=links&amp;contextId=com.polarion.xray.web.$helpContextId","Help", "");'>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+#end
+
+
+###
+###    Panel header
+###
+### Generate the starting html code for a panel
+###
+### @param title The panel caption title
+###
+###  {
+#macro(panelheader $title)
+#set($id=$title.replaceAll(" ", ""))
+<div id="$id" class="portlet" >
+   <div style ="position:relative; display: block; height: 18px; width:100%;">
+     <table>
+      <tr>
+       <td width="100%" valign="middle" class="xwikipaneltitle">&nbsp;$title</td>
+       <td class="xwikipaneltitle" style="cursor: pointer;" onclick="togglePortletVisibility('$id', '$xwiki.getSkinFile("maximize.png")', '$xwiki.getSkinFile("minimize.png")');"><img id="imgTitle$id" src="$xwiki.getSkinFile("minimize.png")"/></td>
+       <td class="xwikipaneltitle" style="cursor: pointer;">#imgHelp($title)</td>
+      </tr>
+     </table>
+    </div>
+  <div id="content$id">
+#end
+
+
+#macro(panelheader1 $title)
+#set($id=$title.replaceAll(" ", ""))
+<div id="$id" class="portlet" >
+   <div style ="position:relative; display: block; height: 18px; width:100%;">
+     <table>
+      <tr>
+       <td width="100%" valign="middle" class="xwikipaneltitle">&nbsp;$title</td>
+       <td class="xwikipaneltitle" style="cursor: pointer;" onclick="resetButtons('$doc.getURL('view')')" title="$msg.get('close')">
+         <img id="imgTitle$id" src="$xwiki.getSkinFile("close.png")"/>
+       </td>
+       <td class="xwikipaneltitle">#imgHelp($title)</td>
+      </tr>
+     </table>
+    </div>
+##  <div id="content$id" class="portletcontents">
+  <div id="content$id">
+#end
+
+#macro(panelhiddenheader $title)
+<div class="panel expanded">
+<h5 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">$title</h5>
+<div class="xwikipanelcontents">
+#end
+
+### DMV {
+#macro(largepanelheader $title)
+##<table border="0" width="99%"><tr><td>
+<div class="wiki-section" id="$title">
+  <table cellspacing="0" cellpadding="0" style="width:100%">
+    <tbody>
+      <tr>
+      #if($title == $localization.getValue('wiki.form.label.attachments'))
+	    #set($anchorId = "attachments")
+		#set($imgURL = "/polarion/ria/images/fields/attachments.png")
+      #elseif($title == "Comments")
+	    #set($anchorId = "comments")
+	    
+	  #elseif($title == "Backlinks")
+	    #set($anchorId = "backlinks")
+	    #set($imgURL = "/polarion/ria/images/fields/linkedWorkItems.png")	    
+	
+      #elseif($title == "Code")
+	    #set($anchorId = "code")
+      #end
+        
+      #if($imgURL)
+      <td>
+        <img src="$imgURL" style="vertical-align:middle;margin-left:4px;">
+      </td>
+      #end
+      <td id="DOM_687" class="wiki-section-title">
+      	<span id="$anchorId">$title</span>
+      </td>
+    
+    
+   </tr>
+  </tbody>
+  </table>
+  </div>
+#end
+
+
+###
+###    Panel footer
+###
+### Generate the ending html code for a panel
+###
+#macro(panelfooter)
+  </div>
+</div>
+##</td></tr></table>
+#end
+
+###
+###    Display Panel
+###
+### Extract and display the panel code from the panel object
+###
+#macro(displaypanel $name)
+  #set($obj = "")
+  #set($paneldoc = $xwiki.getDocument($name))
+  #set($obj = $paneldoc.getObject("Panels.PanelClass"))
+  #if($obj == "") ## discarded
+    #else $doc.display("content", "view", $obj)
+  #end
+#end
+###
+### Horizontal spage
+###
+#macro(gap )
+  <div style="height: 10px; dispay: block"> </div>
+#end
+
+
+###
+### Extract and display the panel code from template page
+###
+#macro(displayTemplatePage $name $caption $id)
+ 
+  <div id=$id style="display: none;">
+    #largepanelheader($caption)
+      #set($obj = "")
+      #set($paneldoc = $xwiki.getDocument($name))
+      #set($obj = $paneldoc.getObject("Panels.PanelClass"))
+      #if($obj == "") ## discarded
+      #else 
+        $doc.display("content", "view", $obj)
+     #end
+    
+    #gap()    
+  </div>
+#end
+
+#macro(displayPropName $prop)
+#if($msg.get("$class.getName()_$prop.name") == "$class.getName()_$prop.name")
+$prop.prettyName#else
+$msg.get($prop.name)#end
+#end
+
+###
+###    Display Panel content
+###
+###
+#macro(displaypanelcontent $doc $obj)
+$doc.display("content", $obj)
+#end
+
+###
+###    Toplevel Menu entry with subitems
+###
+### Generate a menu entry and start the subitem section
+###
+### @param actionurl The URL this entry points to
+### @param linktext The menu item text
+###
+
+
+
+### DMV {
+#macro(xwikitopmenuentrystartimage $image $actionurl $linktext)
+#if ($image != "#")
+
+
+<table cellspacing="0" cellpadding="0" border=0 class="com_polarion_reina_web_js_widgets_JSPopupButton_Button">
+<tr>
+<td style="width: 3px;">
+<img src="$xwiki.getSkinFile("spacer.gif")" style="width: 3px; height: 1px;"/>
+</td>
+<td style="filter:alpha(opacity=60); opacity:0.6; width: 20px; text-align: left; vertical-align: middle; background: url('$xwiki.getSkinFile("$image")') no-repeat center center;">
+<img src="$xwiki.getSkinFile("spacer.gif")" style="width: 20px; height: 1px;"/>
+</td>
+<td title="" style="line-height:5pt; white-space: nowrap; vertical-align: middle; padding-left: 0px; padding-right: 0px; vertical-align: middle;">$linktext</td>
+<td style="filter:alpha(opacity=60); opacity:0.6; text-align: left; vertical-align: middle;  padding-left: 3px; padding-right: 3px;"><img src="$xwiki.getSkinFile("combo_box_arrow_small.png")" style="width: 5px; height: 6px; vertical-align: middle;"/></td>
+<td style="width: 3px;">
+<img src="$xwiki.getSkinFile("spacer.gif")" style="width: 3px; height: 1px;"/>
+</td>
+</tr>
+</table>
+
+#else
+
+<table cellspacing="0" cellpadding="0" border=0 class="com_polarion_reina_web_js_widgets_JSPopupButton_Button">
+<tr>
+<td title="" class="bt-arrow-label">$linktext</td>
+<td class="bt-arrow"><img src="$xwiki.getSkinFile("button_arrow2.gif")" style="width: 5px; height: 5px; vertical-align: middle;"/></td>
+</tr>
+</table>
+
+#end
+
+<span class="hidden menucolon">: </span><span class="submenu hidden">
+#end
+
+
+#macro(xwikitopmenuentrystart $actionurl $linktext)
+<div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);"><a href="$actionurl"><strong>$linktext</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden" >
+#end
+
+
+#macro(xwikitopmenuentrystartimagedisabled $image $actionurl $linktext)
+#if ($image != "#")
+
+
+<table class="com_polarion_reina_web_js_widgets_JSPopupButton_Button" style="filter:alpha(opacity=50); opacity:0.5;" cellspacing="0" cellpadding="0" border=0>
+<tr>
+<td style="width: 3px;">
+<img src="$xwiki.getSkinFile("spacer.gif")" style="width: 3px; height: 1px;"/>
+</td>
+<td style="width: 16px; text-align: left; vertical-align: middle; background: url('$xwiki.getSkinFile("$image")') no-repeat center center;">
+<img src="$xwiki.getSkinFile("spacer.gif")" style="width: 16px; height: 1px;"/>
+</td>
+<td title="" style="line-height:5pt; white-space: nowrap; vertical-align: middle; padding-left: 0px; padding-right: 0px; vertical-align: middle;">$linktext</td>
+<td style="text-align: left; vertical-align: middle; padding-left: 3px; padding-right: 3px;"><img src="$xwiki.getSkinFile("button_arrow2.gif")" style="width: 5px; height: 6px; vertical-align: middle;"/></td>
+<td style="width: 3px;">
+<img src="$xwiki.getSkinFile("spacer.gif")" style="width: 3px; height: 1px;"/>
+</td>
+</tr>
+</table>
+
+#else
+
+<table class="com_polarion_reina_web_js_widgets_JSPopupButton_Button" style="filter:alpha(opacity=50); opacity:0.5;"  cellspacing="0" cellpadding="0" border=0>
+<tr>
+<td class="bt-label" title="">$linktext</td>
+<td style="text-align: left; vertical-align: middle; padding-left: 3px; padding-right: 3px;"><img src="$xwiki.getSkinFile("button_arrow2.gif")" style="width: 5px; height: 6px; vertical-align: middle;"/></td>
+</tr>
+</table>
+
+#end
+
+<span class="hidden menucolon">: </span><span class="submenu hidden">
+#end
+
+### DMV }
+
+
+### DMV {
+#macro(xwikitopmenuaction $image $actionurl $linktext)
+<div onclick = "$actionurl">
+<table class="com_polarion_reina_web_js_widgets_JSPopupButton_Button" cellspacing="0" cellpadding="0" >
+<tbody>
+<tr>
+<td title="" style="padding-left: 2px; padding-right: 2px; white-space: nowrap; text-align: left; vertical-align: middle; width: 100%;">
+#if ($image != "#")<img src="$xwiki.getSkinFile("$image")" style="border: 0; vertical-align: middle;"/>#else<img src="$xwiki.getSkinFile("spacer.gif")" style="width: 2px; height: 5px; vertical-align: middle;"/>#end
+</td>
+<td title="" style="padding-left: 2px; padding-right: 2px; white-space: nowrap; text-align: left; vertical-align: middle; width: 100%;">
+$linktext&nbsp;
+</td>
+</tr>
+</tbody>
+</table>
+<span class="hidden menucolon">: </span><span class="submenu hidden">
+#end
+### DMV }
+
+### DMV {
+#macro(xwikitopmenuentrystartjustimageButton $image $tooltip)
+
+<table cellspacing="0" cellpadding="0" border=0 class="com_polarion_reina_web_js_widgets_JSPopupButton_Button" title="$tooltip">
+<tr>
+<td style="width: 16px; padding-left:6px; padding-right:6px;">
+<img src="$xwiki.getSkinFile("$image")" style="width: 16px; height: 16px;"/>
+</td>
+</tr>
+</table>
+
+#end
+### DMV }
+ 
+### DMV {
+#macro(xwikitopmenuentrystartimageButton $image $linktext)
+
+#if ($image != "#")
+
+<table cellspacing="0" cellpadding="0" border=0 class="com_polarion_reina_web_js_widgets_JSPopupButton_Button">
+<tr>
+<td class="bt-icon">
+<img src="$xwiki.getSkinFile("$image")" style="width: 16px; height: 16px;"/>
+</td>
+<td class="bt-icon-label">$linktext</td>
+</tr>
+</table>
+
+#else
+
+<table cellspacing="0" cellpadding="0" border=0 class="com_polarion_reina_web_js_widgets_JSPopupButton_Button">
+<tr>
+<td class="bt-label" title="">$linktext</td>
+</tr>
+</table>
+
+#end
+
+
+#end
+### DMV }                                 
+
+### PBO
+#macro(xwikitopmenuentrystartimageButtonAtt $image $linktext $count)
+
+<table cellspacing="0" cellpadding="0" border=0 class="com_polarion_reina_web_js_widgets_JSPopupButton_Button">
+<tr>
+<td style="width: 16px; text-align: left; vertical-align: middle; background: url('$xwiki.getSkinFile("$image")') no-repeat center center;">
+<img src="$xwiki.getSkinFile("spacer.gif")" style="width: 16px; height: 1px;"/>
+</td>
+<td title="" class="bt-label">$linktext ($count)</td>
+
+</tr>
+</table>
+
+#end
+
+#macro(xwikitopmenuentrystartimageButtonJS $image $linktext $actionurl $title)
+
+#if (!$title)
+ #set($title = $linktext)
+#end
+#set($class = "enab")
+#if($actionurl == "#")
+ #set($class = "disab")
+#end
+#if($image)
+  #if(!$image.startsWith("/polarion"))
+     #set($image = $xwiki.getSkinFile("$image"))
+  #end
+#end
+
+<div class="$class" title="$title" style="line-height: 3pt">
+
+
+<table cellspacing="0" cellpadding="0" border=0 class="com_polarion_reina_web_js_widgets_JSPopupButton_Button">
+<tr>
+
+<td class="bt-icon">
+<img src="$image" style="width: 16px; height: 16px;"/>
+</td>
+<td class="bt-icon-label" style=" #if ($actionurl=="#") color: grey; cursor: text #end" #if ($actionurl!="#") onclick="$actionurl;" #end >$linktext</td>
+
+</tr>
+</table>
+
+</div>
+#end
+
+### for rich / plain wiki formatting button
+#macro(xwikitopmenuentrystartformatButton $id $linktext $style)
+
+<table id="$id" cellspacing="0" cellpadding="0" border=0 class="$style">
+<tr>
+<td title="" class="bt-label">$linktext</td>
+</tr>
+</table>
+
+#end
+
+### DMV {
+#macro(xwikitopmenuentrystartimageButtonSearch $image $linktext)
+<table class="com_polarion_portal_js_internal_Header_SearchButton" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td title="" style="padding-left: 2px; padding-right: 2px; vertical-align: middle; white-space: nowrap; text-align: left; width: 100%;">$linktext</td>
+</tr>
+</tbody>
+</table>
+#end
+### DMV }
+
+
+###
+###    Toplevel Menu entry without subitems
+###
+### Generate a menu entry withut subitems
+###
+### @param actionurl The URL this entry points to
+### @param linktext The menu item text
+###
+#macro(xwikitopmenuentry $actionurl $linktext)
+<div class="topmenuentry"><a href="$actionurl"><strong>$linktext</strong></a></div>
+#end
+
+
+#macro(xwikitopmenuentryimg $actionurl $linktext $img)
+<div class="topmenuentry"><a href="$actionurl"><img src="$img" border="0" />&nbsp;<strong>$linktext</strong></a></div>
+#end
+
+###
+###    Menu subitem entry
+###
+### Generate a submenu entry
+###
+### @param actionurl The URL this entry points to
+### @param linktext The menu item text
+###
+#macro(submenuitem $actionurl $linktext) 
+<span class="submenuitem"><a href="$actionurl">$linktext</a></span>
+#end
+
+
+#macro(submenuitemimg $actionurl $linktext $img) 
+
+<span class="submenuitem" onmouseover="this.className='submenuitem submenuitemover'" onmouseout="this.className='submenuitem'">
+<table  cellspacing="0" cellpadding="0" style="" border=0 width=170>
+<tr>
+<td height="20" width="20"><a href="$actionurl"><img src="$img" border="0" height="16" width="16" /></a></td><td style="text-align: left; vertical-align: middle; width: 160;"><a href="$actionurl">&nbsp;$linktext&nbsp;&nbsp;</a></td></tr></table></span>
+
+#end
+
+#macro(submenuitemimgJS $id $onClick $linktext $img) 
+
+<span class="submenuitem" onmouseover="this.className='submenuitem submenuitemover'" onmouseout="this.className='submenuitem'"><table id="$id" cellspacing="0" cellpadding="0" style="font-size: 11px" border=0 width=170><tr onclick=$onClick><td height="20" width="20"><img src="$img" border="0" height="16" width="16" style="vertical-align: middle;" /></td><td style="white-space:nowrap; text-align: left; vertical-align: middle; width: 160;">&nbsp;$linktext</td></tr></table></span>
+
+#end
+
+#macro (submenuitemimgdisabled $actionurl $linktext $img)
+	<span class="submenuitem disabled" >
+		<table cellspacing="0" cellpadding="0" border=0 width=160>
+			<tr>
+				<td height="20" width="20">
+					<span><img src="$img" border="0" height="16" width="16" style="vertical-align: inherit;" /></span>
+				</td>
+				<td style="text-align: left; vertical-align: middle; width: 160; cursor: text; " >
+					<span style="color:#B4B4B4; white-space:nowrap;">&nbsp;$linktext&nbsp;&nbsp;</span>
+				</td>
+			</tr>
+		</table>
+	</span>
+#end
+
+#macro(submenuitemimgPDF $actionurl $linktext $img) 
+  #submenuitemimgPDFtarget($actionurl $linktext $img "")
+#end
+
+#macro(submenuitemimgPDFtarget $actionurl $linktext $img $target) 	
+  #if($actionurl=="#")
+   <span class="submenuitem disabled">
+   	<table  cellspacing="0" cellpadding="0" border=0 width=205>
+   		<tr>
+   			<td height="20" width="20">
+   				<span><img src="$img" border="0" height="16" width="16" style="vertical-align: middle;"/></span>
+ 			</td>
+ 			<td style="text-align: left; vertical-align: middle; width: 195;">
+ 				<span style="color:#B4B4B4;">&nbsp;$linktext&nbsp;&nbsp;</span>
+			</td>
+		</tr>
+	</table>
+   </span>
+  #else
+   <span class="submenuitem" onmouseover="this.className='submenuitem submenuitemover'" onmouseout="this.className='submenuitem'">
+   	<table  cellspacing="0" cellpadding="0" border=0 width=205>
+   		<tr>
+			#set($targetstr = "")
+   			#if (!($target==""))
+   				#set($targetstr = " target=$target")
+   			#end
+   			<td height="20" width="20"><a href="$actionurl"$targetstr><img src="$img" border="0" height="16" width="16" /></a></td>
+   			<td style="text-align: left; vertical-align: middle; width: 195;">
+   				
+   				<a href="$actionurl"$targetstr>&nbsp;$linktext&nbsp;&nbsp;</a>
+  			</td>
+  		</tr>
+  	</table>
+   </span>
+  #end
+#end
+
+#macro(submenuitemimgPrint $actionurl $linktext $img) 	
+  #if($actionurl=="#")
+   <span class="submenuitem disabled">
+   	<table  cellspacing="0" cellpadding="0" border=0 width=190>
+   		<tr>
+   			<td height="20" width="20">
+   				<span><img src="$img" border="0" height="16" width="16" style="vertical-align: middle;"/></span>
+ 			</td>
+ 			<td style="text-align: left; vertical-align: middle; width: 180;">
+ 				<span style="color:#B4B4B4;">&nbsp;$linktext&nbsp;&nbsp;</span>
+			</td>
+		</tr>
+	</table>
+   </span>
+  #else
+   <span class="submenuitem" onmouseover="this.className='submenuitem submenuitemover'" onmouseout="this.className='submenuitem'">
+   	<table  cellspacing="0" cellpadding="0" border=0 width=160>
+   		<tr>
+   			<td height="20" width="20"><a href="$actionurl" ><img src="$img" border="0" height="16" width="16" /></a></td>
+   			<td style="text-align: left; vertical-align: middle; width: 180;">
+   				<a href="$actionurl" >&nbsp;$linktext&nbsp;&nbsp;</a>
+  			</td>
+  		</tr>
+  	</table>
+   </span>
+  #end
+#end
+
+
+#macro(submenuitemimgCheck $actionurl $linkShowText $linkHideText $img $id) 
+
+  #if($actionurl=="#")
+    <span class="submenuitem disabled"><table  cellspacing="0" cellpadding="0" border=0 width=160><tr><td height="20" width="20"><span><img src="$img" border="0" height="16" width="16" style="vertical-align: middle;"/></span></td><td style="text-align: left; vertical-align: middle; width: 100;"><span>&nbsp;</span></td></tr></table></span>
+  #else
+    <span id="hide$id" class="submenuitem" style="display: none; white-space: nowrap;"><table  cellspacing="0" cellpadding="0" border="0" width="190"><tr><td height="20" width="20"><a href="$actionurl"><img src="$img" border="0" height="16" width="16" style="vertical-align: middle;"/></a></td><td style="text-align: left; vertical-align: middle; width: 160;"><a href="$actionurl">&nbsp;$linkHideText</a></td></tr></table></span>
+    <span id="show$id" class="submenuitem" style="display: block; white-space: nowrap;"><table  cellspacing="0" cellpadding="0" border="0" width="190"><tr><td height="20" width="20"><a href="$actionurl"><img src="$img" border="0" height="16" width="16" style="vertical-align: middle;"/></a></td><td style="text-align: left; vertical-align: middle; width: 160;"><a href="$actionurl">&nbsp;$linkShowText</a></td></tr></table></span>
+  #end
+
+#end
+
+#macro(submenuSeparator) 
+    <span style="display: block; height: 3px; font-size: 1.0pt; line-height: 1.0pt"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td class="menusepartor" width="160"></td></tr></table></span>
+#end
+
+#macro(submenuitemimgedit $actionurl $linktext $img) 
+
+<span class="submenuitem"><table  cellspacing="0" cellpadding="0" style="" border=0 width=90><tr><td height="20" width="20"><a href="$actionurl" onclick="document.forms.edit.action='$doc.getURL("edit", "editor=wiki&amp;create=1&amp;$param")'; 
+if (document.forms.edit.onsubmit) 
+	document.forms.edit.onsubmit(); 
+document.forms.edit.submit(); 
+return false;"><img src="$img" border="0" height="16" width="16" style="vertical-align: middle;" /></a>
+</td><td style="text-align: left; vertical-align: middle; width: 70;"><a href="$actionurl" 
+onclick="disableEditButtons(true); if (!document.forms.edit){ showProgressBar('$msg.get('loading')'); return true;}  document.forms.edit.action='$doc.getURL("edit", "editor=wiki&amp;create=1&amp;$param")'; 
+if (document.forms.edit.onsubmit) 
+	document.forms.edit.onsubmit(); showProgressBarSetText('$msg.get('loading')');
+executeCommand(document.getElementById('checkLogin').action, checkCallBack);
+return false;">
+&nbsp;$linktext&nbsp;&nbsp;</a></td></tr></table></span>
+
+#end
+
+
+#macro(submenuitemimgeditw $actionurl $linktext $img) 
+<span class="submenuitem">
+<table  cellspacing="0" cellpadding="0" style="" border=0 width=90 height=20>
+<tr>
+<td height="20" width="20"><a href="$actionurl" onclick=" if (checkAdvancedContent('$msg.get("checkadvancedcontent")')==false) return false; document.forms.edit.action='$doc.getURL("edit", "editor=wysiwyg&amp;create=1&amp;$param")'; if (document.forms.edit.onsubmit) document.forms.edit.onsubmit(); document.forms.edit.submit(); return false;"><img src="$img" border="0" height="16" width="16" /></a></td>
+<td style="text-align: left; vertical-align: middle; width: 70;">
+<a href="$actionurl" onclick="disableEditButtons(true); if (checkAdvancedContent('$msg.get("checkadvancedcontent")')==false){return false;}else if (checkAdvancedContent('$msg.get("checkadvancedcontent")')==5){ showProgressBar('$msg.get('loading')'); return true;} document.forms.edit.action='$doc.getURL("edit", "editor=wysiwyg&amp;create=1&amp;$param")'; if (document.forms.edit.onsubmit) document.forms.edit.onsubmit(); showProgressBarSetText('$msg.get('loading')'); executeCommand(document.getElementById('checkLogin').action, checkCallBack); return false;">
+&nbsp;$linktext&nbsp;&nbsp;</a>
+</td>
+</tr>
+</table>
+</span>
+
+#end
+
+
+###
+###    Toplevel Menu entry end
+###
+### End the subitem section
+###
+#macro(xwikitopmenuentryend)
+</span></div>
+#end
+
+#macro(xwikimessageboxstart $title $message)
+<table width="98%">  
+ <tr>
+  <td>
+    <span class="xwikimessage" style="padding: 5px;">
+	<table>
+         </tr>
+	 <tr>
+	  <td style="vertical-align: middle;">
+           <img src="$xwiki.getSkinFile('tube.PNG')" alt="no image"></img>
+          </td>
+	  <td width="10px">
+           &nbsp;
+          </td>
+          <td  style="vertical-align: middle;">
+           <b>$title $message</b>
+           <b style="display:none;" id="messageTitle">$message</b>
+          </td>
+          </tr>
+        </table>
+        <script>
+        	if(parent != null && parent.handleErrorMessage != null){
+        		parent.handleErrorMessage2(document.getElementById("messageTitle"));
+        	}
+        </script>
+<div style="margin:15px;">
+#end
+
+
+#macro(xwikimessageboxstartValid $title $message)
+<table width="98%"> 
+ <tr
+  <td>
+    <span class="xwikimessage"  style="padding: 5px;">
+	<table>
+         </tr>
+	 <tr>
+	  <td style="vertical-align: middle;">
+           <img src="$xwiki.getSkinFile('tube.PNG')" alt="no image"></img>
+          </td>
+	  <td width="10px">
+           &nbsp;
+          </td>
+          <td  style="vertical-align: middle;">
+           <b>$title  $message</b>
+          </td>
+          </tr>
+        </table>
+<div style="margin-left:5;margin-top:5">
+#end
+
+
+#macro(xwikimessageboxend)
+     </div>
+    </span>
+  </td> 
+ </tr>
+</table>
+#end
+
+#macro(xwikimessagebox $title $message $urlyes $urlno $msgyes $msgno)
+#xwikimessageboxstart($title $message)
+  <div class="buttons"><a href="$urlyes"><input type="button" class="button" value="$msgyes" onclick="location='$urlyes'; return false;"/></a><a href="$urlno"><input type="button" class="button" value="$msgno" onclick="location='$urlno'; return false;"/></a></div>
+#xwikimessageboxend()
+#end
+
+#macro(xwikimessageboxfield $fielddoc $fieldname $fieldtext $html)
+<div class="xmblabel">$fieldtext</div>
+<div class="xmbfield">
+#if($fieldname!="")
+$fielddoc.display($fieldname, "edit")
+#end
+#if($html!="")
+$html
+#end
+</div>
+#end
+
+#macro(xwikimessageboxsubmit $submittext)
+<div class="xmbbutton">
+<input type="submit" value="$submittext" />
+</div>
+#end
+
+#macro(flickr $rss)
+#flickr_innner("${rss}?format=rss_200")
+#end
+
+#macro(flickr_innner $rss)
+{rss:feed=${rss}|full=1}
+#end
+
+#macro(flickrtag $tag)
+#flickr_innner("http://www.flickr.com/services/feeds/photos_public.gne?tags=${tag}&format=rss_200")
+#end
+
+#macro(flickruser $id)
+#flickr_innner("http://www.flickr.com/services/feeds/photos_public.gne?id=${id}&format=rss_200")
+#end
+
+#macro(flickrusertag $id $tag)
+#flickr_innner("http://www.flickr.com/services/feeds/photos_public.gne?id=${id}&tags=${tag}&format=rss_200")
+#end
+
+#macro(csscolorproperty $csspropname $fieldname)
+#set($objcolor = $colors.get($fieldname))
+#if($objcolor && $objcolor != "")
+  $csspropname: $objcolor;
+#end
+#end
+
+#macro(csscolorpropertyimportant $csspropname $fieldname)
+#set($objcolor = $colors.get($fieldname))
+#if($objcolor && $objcolor != "")
+  $csspropname: $objcolor !important;
+#end
+#end
+
+#macro(mindmap $mindmap $width $height)
+#if(!$width)
+#set($width="100%")
+#end
+#if(!$height)
+#set($height="600")
+#end
+#if(!$mindmap)
+#set($mindmap = "")
+#set($mmurl = "")
+#else
+#if($mindmap.startsWith("http"))
+#set($mmurl = $mindmap)
+#else
+#set($mmurl1 = $doc.getAttachmentURL($mindmap,"download"))
+#set($mmurl = "http://${request.serverName}:${request.serverPort}${mmurl1}")
+#end
+#end
+<applet code="freemind.main.FreeMindApplet.class" archive="/sidecar/freemind/freemind.jar" width="${width}" height="${height}">
+<param name="type" value="application/x-java-applet;version=1.4" />
+<param name="scriptable" value="false" />
+<param name="modes" value="freemind.modes.browsemode.BrowseMode" />
+<param name="browsemode_initial_map" value="$mmurl" />
+<param name="initial_mode" value="Browse" />
+<param name="selection_method" value="selection_method_direct" />
+</applet>
+#end
+
+#macro(message $text)
+<div class="plainmessage">$text</div>
+#end
+
+#macro(info $text)
+<div class="infomessage"><span class="messagetype">$localization.getValue('definition.info')$localization.getValue('definition.colon') </span>$text</div>
+#end
+
+#macro(error $text)
+<div class="errormessage"><span class="messagetype">$localization.getValue('definition.error')$localization.getValue('definition.colon') </span>$text</div>
+#end
+
+#macro(warning $text)
+<div class="warningmessage"><span class="messagetype">$localization.getValue('definition.warning')$localization.getValue('definition.colon') </span>$text</div>
+#end
+
+#macro(pagetype $text)
+#if($text=="content")$msg.get("contentpage")
+#elseif($text=="portal" )$msg.get("reportpage")
+#elseif($text=="active" )$msg.get("activepage")
+#else ""
+#end
+
+#end
+
+#macro(missingParameter $macro $parameter)
+  <span style="font-size: 11px; color: red; font-weight: bold;">Error in macro "{$macro}". Missing parameter $parameter.</span><br/>
+#end
+
+#macro(_showPrefix $prefix $variableName $notPrefix)
+  #if($_isClosingShowPrefix)
+    #set($_isClosingShowPrefix = false)
+    #if($_shouldCloseShow)
+      {show}
+    #end
+  #else
+    #set($_isClosingShowPrefix = true)
+    #if($prefix.length() == 0)
+      #missingParameter("showPrefix" "prefix")
+    #end
+  	#if(($page.getName().startsWith($prefix) && !$notPrefix) || (!$page.getName().startsWith($prefix) && $notPrefix))
+  	  ##Store name without prefix.
+  	  #if(!$notPrefix && $variableName.length() > 0)
+        #set($_void = $!xwiki.getContext().get("vcontext").put($variableName,$page.getName().substring($prefix.length())))
+      #end
+      #set($_shouldCloseShow = false)
+    #else
+      ##Hide content using show macro
+      #set($_shouldCloseShow = true)
+      {show:none}
+    #end
+  #end
+#end
+
+#macro(showNotPrefix $prefix)
+  #_showPrefix($prefix "" true)
+#end
+
+#macro(showPrefix $prefix $variableName)
+  #_showPrefix($prefix $variableName false)
+#end
+
+

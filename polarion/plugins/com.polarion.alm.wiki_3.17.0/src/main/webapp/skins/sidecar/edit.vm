@@ -1,0 +1,219 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+###
+### Main "edit" template
+###
+### General wrapper for edit actions
+###
+##set($qs = $request.queryString)
+##$response.sendRedirect($xwiki.getURL("/polarion/login/proxy"))
+
+##
+## Determine what editor to show
+##
+#if((!$editor) || ($editor == ""))
+	#set($editor = $request.getParameter("editor"))
+	#if((!$editor) || ($editor == ""))
+		#if(($xwiki.getUserPreference("editor")=="Wysiwyg")&&(!$doc.isAdvancedContent()))
+			#set($editor="wysiwyg")
+		#else
+			#set($editor="wiki")
+		#end
+	#end
+#end
+
+##Check permissions
+#if ($xwiki.hasPermission("modify") || ($doc.isNew() && $xwiki.hasPermission("create")) || ($editor=="changes"))
+
+##
+## "Compute" the title
+##
+
+#set($doctype = $doc.getType())
+#if ($doc.getDoc().getSpace() == "Panels")
+  #set($doctype = "service")
+#end
+
+##
+## Header
+##
+#template("xwikivars.vm")
+#template("layoutvars.vm")
+#template("htmlheader.vm")
+#template("header.vm")
+#template("descrpwi.vm")
+
+<div class="layoutsection" id="contentcontainer" style="visibility: hidden;">
+<input type="hidden" name="ViewMode" id="ViewMode" value="edit"/>
+
+  <div id="popupWindow" style="display:none; width: 502px; height: 422px; position: absolute; z-index: 80; border:0px solid black;">
+  </div>
+
+##
+## Content
+##
+	#set($force = $!request.get("force"))
+	#if (($tdoc.getLocked()==true)&&(!$force))
+		#xwikimessageboxstart($msg.get("notice") "$msg.get('doclockedby') $xwiki.getLocalUserName($doc.getLockingUser())")
+		<a href="$doc.getURL("edit", "$!{request.getQueryString().replace('&', '&amp;').replace('&amp;amp;', '&amp;')}&amp;force=1")">$msg.get("forcelock")</a>
+		#xwikimessageboxend()
+	#else
+
+		#template("progressbar.vm")		
+
+                <div id="panelView" style="position:absolute; width: 700px; height:99%; border: 0px solid black; z-index: 1;top:0;">  
+                    ##
+  	            ## Main Editor 
+                    ##
+      	            <div id="panelMain" class="editor" style="display: block; position: absolute; left: 0px; width:720px; background: #fff; height:100%; top:0; overflow-x: hidden; overflow-y: hidden;  z-index: 1;">
+                        ##
+   		        ## Edit block
+                        ##
+		        #if ($editor != "changes")
+			    #template("menuview.vm")
+			    #template("menupreview.vm")
+                        #else
+                            #template("menuchanges.vm")
+		        #end
+		        #set($contentZIndex = 1)
+                	<div id="viewcontent" style="position: relative; width: 100%; height: 10px; border: 0px solid magenta; overflow-y: auto; overflow-x: auto; z-index: $contentZIndex;" onmouseover="hiddeMenuAll()">
+			#set($show = $!request.getParameter("show"))
+			#if(!$show || ($show != "current" && $show != "history"))
+ 				#set($show = "current")
+			#end  
+                       
+ 	                               #if ( ($editor == "wiki") || ($editor == "wysiwyg") ) 	                                       	                                    
+ 	                                  	  <form name="edit" id="edit" method="post" action="$doc.getURL("save")" enctype="multipart/form-data" style="width: 100%; margin-bottom: 0px;">
+		                                  <input type="hidden" name="savetype" id="savetype" value=""/>
+		                                  <input type="hidden" name="saveonly" id="saveonly" value="false"/>
+		                                  <input type="hidden" name="backtoedit" id="backtoedit" value="false"/>
+		                                  <input type="hidden" name="isEdit" id="isEdit" value="$doc.IsEdit()"/>
+		                                  <input type="hidden" name="pageTitle" id="pageTitle" value="$esc.escapeForHtmlTag($doc.getPageTitle())"/>
+		                                  #set($revision = $request.getParameter("revision"))		                                  
+		                                  <input type="hidden" name="revision" id="revision" value="#if($revision)$revision#else$doc.getRevision()#end"/>
+		                       #end
+                                    
+ 				       #template("edit${editor}.vm")
+ 				       #if ($editor != "changes")
+	 			         #template("pagetitle.vm")
+                       #end 
+
+						##
+						##  Comments and attachmensts
+						## 
+
+						#if($show == "current")
+						    #if (!$hide_comments)
+								#if($plan)
+									<div style="display:none">
+								#end
+								#largepanelheader("$localization.getValue('wiki.form.label.attachments')")
+								#template("attachmentsinline.vm")
+								#if($plan)
+									</div>
+								#end	
+								
+						    #end					    
+					        #elseif($show == "history")
+							#template("historyinline.vm")
+						#end
+
+		                        #if ( ($editor == "wiki") || ($editor == "wysiwyg"))
+		                                  </form>
+
+                                                  <div style="display:none">
+                                               		<form action="javascript:get(document.getElementById('myform'));" name="myform" id="myform">
+                                               				<textarea type="hidden" id="area1" rows="10" cols="30" >			
+                                               				</textarea>
+                                               		</form>
+                                                  </div>
+		                        #end
+##
+			</div>
+                        ##
+   		        ## Preview
+                        ##
+        	        <div id="xpreview" style="display: none; position: relative; width: 100%; height: 10px; border: 0px solid magenta; overflow-y: auto; overflow-x: auto; z-index: 8; background: #fff;">			
+      		        </div>
+
+		     </div>
+
+                 #if ($editor != "changes") 		
+                     ##			
+                     ##Split panel
+                     ##	     	         	     
+	     	     <div id="panelResize" style="position: absolute; display: block; top: 0px; width: 1px; left:701px; height:100%; margin-left: -1px;z-index: 500;">
+		         </div>
+                     ##			
+                     ##Right panel
+                     ##			
+		     <div id="panelHelp" style="position: absolute; z-index: 10; display: block; top: 0px; left:707px; height:30px; width: 240px; overflow: hidden; background-color: #fff;">
+			   #if($editor == "wiki" || $editor == "wysiwyg")
+		        	#set($SyntaxHelpPanel = "Panels.SyntaxHelp")
+				#template("menuhelp.vm")
+				#displaypanel($SyntaxHelpPanel)
+			   #end
+		     </div>
+		 #else
+		 #end
+                    </div>     
+                    ##
+                    ##Tab bar
+                    ##
+                    <div id="panelTab" style="position:absolute; left: 4px; width:99%; height: 26px; top:-36px; border: 0px solid black;  z-index: 4">		
+                      
+                    </div>		
+   #if ($editor != "changes")
+		<script>
+                //set initial width of the main panel
+                $('panelResize').style.left = getBrowserWidth() - helpPanelWidth + "px";  
+                calcPanelsWidth();
+
+                new Draggable('panelResize',{constraint:'horizontal',
+                onStart:function(){
+                  $('panelResize').style.border = "1px solid #000000";
+                  $('panelResize').style.backgroundColor = "#000000"; 
+                  if ($('mce_editor_0')) 
+                   $('viewcontent').style.zIndex = "-1";
+                },
+                onEnd:function(){  
+                 $('panelResize').style.border = "1px solid #CECECE";
+                 $('panelResize').style.backgroundColor = "#fff"; 
+                 //restore z-index
+                 if ($('mce_editor_0')) 
+                   $('viewcontent').style.zIndex = "$contentZIndex";
+                 //this hide scrollbar appearense and wrong getBrowserWidth() when panel moved to right
+                 $('panelHelp').style.width=0;
+                 calcPanelsWidth();
+//alert($('panelHelp').style.left);
+                }}); 
+              </script>	
+   #end
+
+		</div>
+	#end
+    
+</div>    
+
+
+##
+## Footer
+##
+
+   #template("footer.vm")
+   #template("htmlfooter.vm")
+
+   #if (($editor != "wysiwyg"))
+	#if ( ($editor != "changes") )
+	<script>
+	   //document.getElementById('contentcontainer').style.visibility = "visible";
+	</script>
+	#end
+   #end
+
+#else
+        ## No permissions
+	#template("accessdenied.vm")
+#end

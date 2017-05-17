@@ -1,0 +1,119 @@
+#set($rev1= $request.get("rev1"))
+#set($rev2= $request.get("rev2"))
+#set($type= $request.get("type"))
+#set($leftName = $request.get("leftName"))
+#set($rightName= $request.get("rightName"))
+#set($leftSpace = $request.get("leftSpace"))
+#set($rightSpace= $request.get("rightSpace"))
+
+#if ($type == 'wiki')
+  #set($wikiclass = 'toggle')
+  #set($htmlclass = 'enab')
+  #set($attachclass = 'enab') 
+  #set($witemsclass = 'enab') 
+  #set($content = 'inline') 
+  #set($attachments = 'none') 
+#else
+  #if ($type == 'workitems')
+    #set($wikiclass = 'enab')
+    #set($htmlclass = 'enab')
+    #set($attachclass = 'enab')
+    #set($witemsclass = 'toggle')
+    #set($content = 'inline') 
+    #set($attachments = 'none')
+  #else
+   #if ($type == 'html')
+    #set($wikiclass = 'enab')
+    #set($htmlclass = 'toggle')
+    #set($attachclass = 'enab')
+    #set($witemsclass = 'enab')
+    #set($content = 'inline') 
+    #set($attachments = 'none')
+   #else
+    #set($wikiclass = 'enab')
+    #set($htmlclass = 'enab')
+    #set($attachclass = 'toggle')
+    #set($witemsclass = 'enab')
+    #set($content = 'none') 
+    #set($attachments = 'inline')
+  #end
+  #end
+#end
+<div id="menuChnages" class="menubar">
+<div class="leftmenu">
+<table width=100% border=0>
+  <tr>
+    <td align="left" style="vertical-align: middle;width:100%;">
+
+     <table>
+      <tr>
+           <td>
+                <div id="history_back" onclick="document.location.href='$doc.getURL("history", "show=history", true)'">#xwikitopmenuentrystartimageButton("#" $localization.getValue("wiki.toolbar.button.backToHistory"))</div>
+           </td>
+           <td>
+		<img id="splitter1" style="vertical-align: top;" src="$xwiki.getSkinFile('separatorbig.gif')"/>
+	   </td>
+           <td>
+		<div id="type_html" class="$htmlclass" onclick="changeCompareView('$doc.getURL("compare", "editor=changes&rev1=${rev1}&rev2=${rev2}&type=html&leftName=${leftName}&rightName=${rightName}&leftSpace=${leftSpace}&rightSpace=${rightSpace}")')" #if ($type != 'html') style="cursor: pointer;"#end> #xwikitopmenuentrystartimageButton("#" $localization.getValue("wiki.toolbar.button.page"))</div>	
+	   </td>
+	   <td>
+		<div id="type_wiki" class="$wikiclass"  onclick="changeCompareView('$doc.getURL("compare", "editor=changes&rev1=${rev1}&rev2=${rev2}&type=wiki&leftName=${leftName}&rightName=${rightName}&leftSpace=${leftSpace}&rightSpace=${rightSpace}")')" #if ($type != 'wiki') style="cursor: pointer;"#end>#xwikitopmenuentrystartimageButton("#" $localization.getValue("wiki.toolbar.button.source"))</div>	
+	   </td>
+       <td>
+        <div id="type_attach"  class="$attachclass" onclick="changeCompareView('$doc.getURL("compare", "editor=changes&rev1=${rev1}&rev2=${rev2}&type=attach&leftName=${leftName}&rightName=${rightName}&leftSpace=${leftSpace}&rightSpace=${rightSpace}")');" #if ($type != 'attach') style="cursor: pointer;"#end>#xwikitopmenuentrystartimageButton("#" $localization.getValue("wiki.compare.button.attachments"))</div>
+       </td>
+       #if($xwiki.isModulesWorkitemsHistory($origdoc))
+	       <td>
+	        <div id="type_witems"  class="$witemsclass" onclick="changeCompareView('$doc.getURL("compare", "editor=changes&rev1=${rev1}&rev2=${rev2}&type=workitems&leftName=${leftName}&rightName=${rightName}&leftSpace=${leftSpace}&rightSpace=${rightSpace}")');" #if ($type != 'workitems') style="cursor: pointer;"#end>#xwikitopmenuentrystartimageButton("#" $localization.getValue("wiki.toolbar.button.workitems"))</div>
+	       </td>
+	   #end
+      </tr>
+
+     </table>
+     
+     </td>
+     
+     <td>
+    <div class="enab"  title="$localization.getValue('definition.history')">		
+  	<table cellspacing="0" cellpadding="0" onmouseover="" onmouseout="" onclick="" class="com_polarion_reina_web_js_widgets_JSPopupButton_Button active">
+  		<tbody>
+  			<tr>
+  				<td style="padding-left:6px;text-align:right;width:16px;vertical-align:middle;padding-right:6px;">
+						<a href="#if($odoc)$odoc.getURL($odoc, "view", "show=current", true)#else$doc.getURL("view", "show=current", true) #end" onclick="return changeDiscard('$localization.getValue("wiki.message.discardChanges")');">
+							<img id="DOM_932" src="/polarion/ria/images/control/history.png" class="GtwaxwzKSB">
+						</a>
+										  				
+  				</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	</div>  
+  </td>
+     
+     <td style="padding: 0 6px;">
+     	<img id="refresh_splitter" src="$xwiki.getSkinFile('separatorbig.gif')"/>
+     </td>
+     
+     <td style="padding-right: 4px;">
+		<div class="enab">			
+		  <table cellspacing="0" cellpadding="0" class="com_polarion_reina_web_js_widgets_JSPopupButton_Button">
+				<tbody>
+					<tr>
+						<td style="padding: 0 6px;width:16px;">
+						 		<a href="#if($odoc)$odoc.getURL($odoc, "view", "show=current", true)#else$doc.getURL("view", "show=current", true)#end" onclick="return changeDiscard('$localization.getValue("wiki.message.discardChanges")');">
+							 		<img id="refresh_image" src="/polarion/ria/images/actions/refreshBtn.png" onclick="refreshWikiWindow();" style="cursor:pointer;" title="$localization.getValue("definition.refresh")"/>
+							 </a>	 				  				
+						</td>
+					</tr>
+				</tbody>
+			</table> 
+		</div>
+
+     </td>
+
+  </tr>
+</table>
+</div>
+</div>
+
+

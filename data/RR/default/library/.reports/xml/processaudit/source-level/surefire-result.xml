@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factbase artifact="library" id="surefire-result" tag="20081028_2110">
+<structure-element id="root" provider="root" type="root">
+<value-fact-element id="TestSuccessRatio" provider="SurefireTestProvider" type="execution">
+<value/>
+<properties>
+<property id="has-source-directories">
+<value>false</value>
+</property>
+</properties>
+</value-fact-element>
+<value-fact-element id="TestsInPlace" provider="SurefireTestProvider" type="execution">
+<value/>
+<properties>
+<property id="has-source-directories">
+<value>false</value>
+</property>
+</properties>
+</value-fact-element>
+</structure-element>
+</factbase>

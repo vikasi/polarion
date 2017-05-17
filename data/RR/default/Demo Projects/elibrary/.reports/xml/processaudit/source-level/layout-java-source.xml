@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="elibrary" id="layout-java-source" tag="20130523_1550">
+    <structure-element id="root" provider="root" tag="20130523_1546" type="root">
+        <structure-element id="src/main/java" provider="layout-java" tag="20090812_1125" type="java-source-folder">
+            <properties>
+                <property id="path">
+                    <value>src/main/java</value>
+                </property>
+                <property id="isTestFolder">
+                    <value>false</value>
+                </property>
+                <property id="url">
+                    <value>http://localhost:81/repo/Demo%20Projects/elibrary/trunk/src/main/java</value>
+                </property>
+                <property id="revision">
+                    <value>1</value>
+                </property>
+            </properties>
+            <structure-element id="com" provider="layout-java" tag="20090812_1125" type="java-package">
+                <properties>
+                    <property id="name">
+                        <value>com</value>
+                    </property>
+                </properties>
+                <structure-element id="com.polarion" provider="layout-java" tag="20090812_1125" type="java-package">
+                    <properties>
+                        <property id="name">
+                            <value>polarion</value>
+                        </property>
+                    </properties>
+                    <structure-element id="com.polarion.demo" provider="layout-java" tag="20090812_1125" type="java-package">
+                        <properties>
+                            <property id="name">
+                                <value>demo</value>
+                            </property>
+                        </properties>
+                        <structure-element id="com.polarion.demo.Book" provider="layout-java" tag="20090812_1125" type="java-type">
+                            <properties>
+                                <property id="name">
+                                    <value>Book</value>
+                                </property>
+                                <property id="isInterface">
+                                    <value>false</value>
+                                </property>
+                                <property id="packageName">
+                                    <value>com.polarion.demo</value>
+                                </property>
+                                <property id="modifiers">
+                                    <value type="java.util.ArrayList">[public]</value>
+                                </property>
+                                <property id="startPosition">
+                                    <value>32</value>
+                                </property>
+                                <property id="startLine">
+                                    <value>4</value>
+                                </property>
+                                <property id="endPosition">
+                                    <value>1129</value>
+                                </property>
+                                <property id="endLine">
+                                    <value>54</value>
+                                </property>
+                                <property id="startDeclarationLine">
+                                    <value>4</value>
+                                </property>
+                                <property id="endDeclarationLine">
+                                    <value>4</value>
+                                </property>
+                            </properties>
+                            <structure-element id="com.polarion.demo.Book.Book(String,String,String,int)" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>Book</value>
+                                    </property>
+                                    <property id="parameters">
+                                        <value/>
+                                        <properties>
+                                            <property id="title">
+                                                <value>String</value>
+                                            </property>
+                                            <property id="author">
+                                                <value>String</value>
+                                            </property>
+                                            <property id="publisher">
+                                                <value>String</value>
+                                            </property>
+                                            <property id="publicationYear">
+                                                <value>int</value>
+                                            </property>
+                                        </properties>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>185</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>11</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>573</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>24</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>19</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>19</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Book.getTitle()" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>getTitle</value>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>String</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>581</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>26</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>696</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>31</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>29</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>29</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Book.getAuthor()" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>getAuthor</value>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>String</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>708</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>33</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>826</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>38</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>36</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>36</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Book.getPublisher()" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>getPublisher</value>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>String</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>838</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>40</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>965</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>45</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>43</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>43</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Book.getPublicationYear()" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>getPublicationYear</value>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>int</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>977</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>47</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>1120</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>52</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>50</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>50</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                        </structure-element>
+                        <structure-element id="com.polarion.demo.Example" provider="layout-java" tag="20090812_1125" type="java-type">
+                            <properties>
+                                <property id="name">
+                                    <value>Example</value>
+                                </property>
+                                <property id="isInterface">
+                                    <value>false</value>
+                                </property>
+                                <property id="packageName">
+                                    <value>com.polarion.demo</value>
+                                </property>
+                                <property id="modifiers">
+                                    <value type="java.util.ArrayList">[public]</value>
+                                </property>
+                                <property id="startPosition">
+                                    <value>59</value>
+                                </property>
+                                <property id="startLine">
+                                    <value>5</value>
+                                </property>
+                                <property id="endPosition">
+                                    <value>751</value>
+                                </property>
+                                <property id="endLine">
+                                    <value>21</value>
+                                </property>
+                                <property id="startDeclarationLine">
+                                    <value>5</value>
+                                </property>
+                                <property id="endDeclarationLine">
+                                    <value>5</value>
+                                </property>
+                            </properties>
+                            <structure-element id="com.polarion.demo.Example.main(String[])" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>main</value>
+                                    </property>
+                                    <property id="parameters">
+                                        <value/>
+                                        <properties>
+                                            <property id="args">
+                                                <value>String[]</value>
+                                            </property>
+                                        </properties>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public, static]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>void</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>93</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>7</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>742</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>19</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>7</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>7</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                        </structure-element>
+                        <structure-element id="com.polarion.demo.Library" provider="layout-java" tag="20090812_1125" type="java-type">
+                            <properties>
+                                <property id="name">
+                                    <value>Library</value>
+                                </property>
+                                <property id="isInterface">
+                                    <value>false</value>
+                                </property>
+                                <property id="packageName">
+                                    <value>com.polarion.demo</value>
+                                </property>
+                                <property id="modifiers">
+                                    <value type="java.util.ArrayList">[public]</value>
+                                </property>
+                                <property id="startPosition">
+                                    <value>114</value>
+                                </property>
+                                <property id="startLine">
+                                    <value>7</value>
+                                </property>
+                                <property id="endPosition">
+                                    <value>1677</value>
+                                </property>
+                                <property id="endLine">
+                                    <value>68</value>
+                                </property>
+                                <property id="startDeclarationLine">
+                                    <value>7</value>
+                                </property>
+                                <property id="endDeclarationLine">
+                                    <value>7</value>
+                                </property>
+                            </properties>
+                            <structure-element id="com.polarion.demo.Library.Library()" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>Library</value>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>175</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>11</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>298</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>17</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>15</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>15</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Library.add(Book)" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>add</value>
+                                    </property>
+                                    <property id="parameters">
+                                        <value/>
+                                        <properties>
+                                            <property id="book">
+                                                <value>Book</value>
+                                            </property>
+                                        </properties>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>void</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>306</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>19</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>450</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>26</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>24</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>24</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Library.remove(Book)" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>remove</value>
+                                    </property>
+                                    <property id="parameters">
+                                        <value/>
+                                        <properties>
+                                            <property id="book">
+                                                <value>Book</value>
+                                            </property>
+                                        </properties>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>boolean</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>458</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>28</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>711</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>36</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>34</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>34</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Library.getSize()" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>getSize</value>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>int</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>723</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>38</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>854</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>43</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>41</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>41</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Library.search(String)" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>search</value>
+                                    </property>
+                                    <property id="parameters">
+                                        <value/>
+                                        <properties>
+                                            <property id="word">
+                                                <value>String</value>
+                                            </property>
+                                        </properties>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>Book[]</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>866</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>45</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>1358</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>58</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>49</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>49</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Library.matches(Book,String)" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>matches</value>
+                                    </property>
+                                    <property id="parameters">
+                                        <value/>
+                                        <properties>
+                                            <property id="book">
+                                                <value>Book</value>
+                                            </property>
+                                            <property id="word">
+                                                <value>String</value>
+                                            </property>
+                                        </properties>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[private]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>boolean</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>1370</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>60</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>1548</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>62</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>60</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>60</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.Library.matches(String,String)" provider="layout-java" tag="20090812_1125" type="java-method">
+                                <properties>
+                                    <property id="name">
+                                        <value>matches</value>
+                                    </property>
+                                    <property id="parameters">
+                                        <value/>
+                                        <properties>
+                                            <property id="s">
+                                                <value>String</value>
+                                            </property>
+                                            <property id="word">
+                                                <value>String</value>
+                                            </property>
+                                        </properties>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[private]</value>
+                                    </property>
+                                    <property id="returnType">
+                                        <value>boolean</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>1560</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>64</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>1668</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>66</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>64</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>64</value>
+                                    </property>
+                                    <property id="lastDeclarationAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDeclarationDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastDeclarationRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="lastAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="lastDate">
+                                        <value>12.08.2009 11:10:34</value>
+                                    </property>
+                                    <property id="lastRevision">
+                                        <value>1</value>
+                                    </property>
+                                    <property id="firstAuthor">
+                                        <value>admin</value>
+                                    </property>
+                                    <property id="firstDate">
+                                        <value>12.08.2009 11:25:31</value>
+                                    </property>
+                                    <property id="firstRevision">
+                                        <value>1</value>
+                                    </property>
+                                </properties>
+                            </structure-element>
+                        </structure-element>
+                        <structure-element id="com.polarion.demo.reuse" provider="layout-java" tag="20090812_1125" type="java-package">
+                            <properties>
+                                <property id="name">
+                                    <value>reuse</value>
+                                </property>
+                            </properties>
+                            <structure-element id="com.polarion.demo.reuse.ReusingClass" provider="layout-java" tag="20090812_1125" type="java-type">
+                                <properties>
+                                    <property id="name">
+                                        <value>ReusingClass</value>
+                                    </property>
+                                    <property id="isInterface">
+                                        <value>false</value>
+                                    </property>
+                                    <property id="packageName">
+                                        <value>com.polarion.demo.reuse</value>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>254</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>8</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>679</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>23</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>8</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>8</value>
+                                    </property>
+                                </properties>
+                                <structure-element id="com.polarion.demo.reuse.ReusingClass.reuseCommonsPrimitives()" provider="layout-java" tag="20090812_1125" type="java-method">
+                                    <properties>
+                                        <property id="name">
+                                            <value>reuseCommonsPrimitives</value>
+                                        </property>
+                                        <property id="modifiers">
+                                            <value type="java.util.ArrayList">[public]</value>
+                                        </property>
+                                        <property id="returnType">
+                                            <value>void</value>
+                                        </property>
+                                        <property id="startPosition">
+                                            <value>293</value>
+                                        </property>
+                                        <property id="startLine">
+                                            <value>10</value>
+                                        </property>
+                                        <property id="endPosition">
+                                            <value>485</value>
+                                        </property>
+                                        <property id="endLine">
+                                            <value>16</value>
+                                        </property>
+                                        <property id="startDeclarationLine">
+                                            <value>10</value>
+                                        </property>
+                                        <property id="endDeclarationLine">
+                                            <value>10</value>
+                                        </property>
+                                        <property id="lastDeclarationAuthor">
+                                            <value>admin</value>
+                                        </property>
+                                        <property id="lastDeclarationDate">
+                                            <value>12.08.2009 11:10:34</value>
+                                        </property>
+                                        <property id="lastDeclarationRevision">
+                                            <value>1</value>
+                                        </property>
+                                        <property id="lastAuthor">
+                                            <value>admin</value>
+                                        </property>
+                                        <property id="lastDate">
+                                            <value>12.08.2009 11:10:34</value>
+                                        </property>
+                                        <property id="lastRevision">
+                                            <value>1</value>
+                                        </property>
+                                        <property id="firstAuthor">
+                                            <value>admin</value>
+                                        </property>
+                                        <property id="firstDate">
+                                            <value>12.08.2009 11:25:31</value>
+                                        </property>
+                                        <property id="firstRevision">
+                                            <value>1</value>
+                                        </property>
+                                    </properties>
+                                </structure-element>
+                                <structure-element id="com.polarion.demo.reuse.ReusingClass.reuseCommonsConfiguration()" provider="layout-java" tag="20090812_1125" type="java-method">
+                                    <properties>
+                                        <property id="name">
+                                            <value>reuseCommonsConfiguration</value>
+                                        </property>
+                                        <property id="modifiers">
+                                            <value type="java.util.ArrayList">[public]</value>
+                                        </property>
+                                        <property id="returnType">
+                                            <value>void</value>
+                                        </property>
+                                        <property id="startPosition">
+                                            <value>497</value>
+                                        </property>
+                                        <property id="startLine">
+                                            <value>18</value>
+                                        </property>
+                                        <property id="endPosition">
+                                            <value>674</value>
+                                        </property>
+                                        <property id="endLine">
+                                            <value>21</value>
+                                        </property>
+                                        <property id="startDeclarationLine">
+                                            <value>18</value>
+                                        </property>
+                                        <property id="endDeclarationLine">
+                                            <value>18</value>
+                                        </property>
+                                        <property id="lastDeclarationAuthor">
+                                            <value>admin</value>
+                                        </property>
+                                        <property id="lastDeclarationDate">
+                                            <value>12.08.2009 11:10:34</value>
+                                        </property>
+                                        <property id="lastDeclarationRevision">
+                                            <value>1</value>
+                                        </property>
+                                        <property id="lastAuthor">
+                                            <value>admin</value>
+                                        </property>
+                                        <property id="lastDate">
+                                            <value>12.08.2009 11:10:34</value>
+                                        </property>
+                                        <property id="lastRevision">
+                                            <value>1</value>
+                                        </property>
+                                        <property id="firstAuthor">
+                                            <value>admin</value>
+                                        </property>
+                                        <property id="firstDate">
+                                            <value>12.08.2009 11:25:31</value>
+                                        </property>
+                                        <property id="firstRevision">
+                                            <value>1</value>
+                                        </property>
+                                    </properties>
+                                </structure-element>
+                            </structure-element>
+                            <structure-element id="com.polarion.demo.reuse.SubClass" provider="layout-java" tag="20090812_1125" type="java-type">
+                                <properties>
+                                    <property id="name">
+                                        <value>SubClass</value>
+                                    </property>
+                                    <property id="isInterface">
+                                        <value>false</value>
+                                    </property>
+                                    <property id="packageName">
+                                        <value>com.polarion.demo.reuse</value>
+                                    </property>
+                                    <property id="modifiers">
+                                        <value type="java.util.ArrayList">[public]</value>
+                                    </property>
+                                    <property id="startPosition">
+                                        <value>73</value>
+                                    </property>
+                                    <property id="startLine">
+                                        <value>5</value>
+                                    </property>
+                                    <property id="endPosition">
+                                        <value>169</value>
+                                    </property>
+                                    <property id="endLine">
+                                        <value>11</value>
+                                    </property>
+                                    <property id="startDeclarationLine">
+                                        <value>5</value>
+                                    </property>
+                                    <property id="endDeclarationLine">
+                                        <value>5</value>
+                                    </property>
+                                </properties>
+                                <structure-element id="com.polarion.demo.reuse.SubClass.SubClass()" provider="layout-java" tag="20090812_1125" type="java-method">
+                                    <properties>
+                                        <property id="name">
+                                            <value>SubClass</value>
+                                        </property>
+                                        <property id="modifiers">
+                                            <value type="java.util.ArrayList">[public]</value>
+                                        </property>
+                                        <property id="startPosition">
+                                            <value>120</value>
+                                        </property>
+                                        <property id="startLine">
+                                            <value>7</value>
+                                        </property>
+                                        <property id="endPosition">
+                                            <value>164</value>
+                                        </property>
+                                        <property id="endLine">
+                                            <value>9</value>
+                                        </property>
+                                        <property id="startDeclarationLine">
+                                            <value>7</value>
+                                        </property>
+                                        <property id="endDeclarationLine">
+                                            <value>7</value>
+                                        </property>
+                                        <property id="lastDeclarationAuthor">
+                                            <value>admin</value>
+                                        </property>
+                                        <property id="lastDeclarationDate">
+                                            <value>12.08.2009 11:10:34</value>
+                                        </property>
+                                        <property id="lastDeclarationRevision">
+                                            <value>1</value>
+                                        </property>
+                                        <property id="lastAuthor">
+                                            <value>admin</value>
+                                        </property>
+                                        <property id="lastDate">
+                                            <value>12.08.2009 11:10:34</value>
+                                        </property>
+                                        <property id="lastRevision">
+                                            <value>1</value>
+                                        </property>
+                                        <property id="firstAuthor">
+                                            <value>admin</value>
+                                        </property>
+                                        <property id="firstDate">
+                                            <value>12.08.2009 11:25:31</value>
+                                        </property>
+                                        <property id="firstRevision">
+                                            <value>1</value>
+                                        </property>
+                                    </properties>
+                                </structure-element>
+                            </structure-element>
+                        </structure-element>
+                    </structure-element>
+                </structure-element>
+            </structure-element>
+        </structure-element>
+    </structure-element>
+</factbase>

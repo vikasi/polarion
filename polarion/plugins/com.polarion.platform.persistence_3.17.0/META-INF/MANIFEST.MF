@@ -1,0 +1,58 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.platform.persistence
+Export-Package: com.polarion.platform.persistence,com.polarion.platfor
+ m.persistence.calcfields,com.polarion.platform.persistence.calcfields
+ .eval,com.polarion.platform.persistence.diff,com.polarion.platform.pe
+ rsistence.events,com.polarion.platform.persistence.hivemind.translato
+ rs;x-friends:="com.polarion.platform.persistence.tests",com.polarion.
+ platform.persistence.hivemind.translators.types;x-friends:="com.polar
+ ion.platform.persistence.tests",com.polarion.platform.persistence.int
+ ernal; x-friends:="com.polarion.platform.persistence.tests,  com.pola
+ rion.alm.tracker.tests,  com.polarion.alm.ui,  com.polarion.alm.wiki,
+   com.polarion.refdata.generator,  com.polarion.alm.builder.tests,  c
+ om.polarion.platform.sql,  com.polarion.alm.tracker,  com.polarion.ps
+ vn.launcher",com.polarion.platform.persistence.internal.cache;x-frien
+ ds:="com.polarion.platform.persistence.tests,com.polarion.alm.tracker
+ .tests,com.polarion.usdp.persistence.tests",com.polarion.platform.per
+ sistence.internal.calcfields,com.polarion.platform.persistence.intern
+ al.config;x-friends:="com.polarion.platform.persistence.tests,com.pol
+ arion.alm.builder",com.polarion.platform.persistence.internal.config.
+ prototypes;x-friends:="com.polarion.platform.persistence.tests",com.p
+ olarion.platform.persistence.internal.customfields,com.polarion.platf
+ orm.persistence.internal.diff,com.polarion.platform.persistence.inter
+ nal.events,com.polarion.platform.persistence.internal.guice,com.polar
+ ion.platform.persistence.internal.index;x-friends:="com.polarion.plat
+ form.persistence.tests",com.polarion.platform.persistence.internal.mo
+ del,com.polarion.platform.persistence.internal.notifications;x-friend
+ s:="com.polarion.platform.persistence.tests",com.polarion.platform.pe
+ rsistence.internal.pe;x-friends:="com.polarion.platform.persistence.t
+ ests,com.polarion.alm.tracker.tests,com.polarion.alm.tracker",com.pol
+ arion.platform.persistence.internal.pe.idgenerator;x-friends:="com.po
+ larion.platform.persistence.tests,com.polarion.alm.tracker",com.polar
+ ion.platform.persistence.internal.pobjects;x-friends:="com.polarion.p
+ latform.persistence.tests",com.polarion.platform.persistence.internal
+ .spi;x-friends:="com.polarion.alm.builder,com.polarion.alm.tracker,co
+ m.polarion.alm.projects",com.polarion.platform.persistence.model,com.
+ polarion.platform.persistence.notifications,com.polarion.platform.per
+ sistence.spi,com.polarion.platform.persistence.spi.context,com.polari
+ on.platform.persistence.spi.diff,com.polarion.platform.persistence.sp
+ i.index
+Bundle-Name: Platform Persistence Plug-in
+Bundle-Version: 3.17.0
+Bundle-ClassPath: platform-persistence.jar,platform-persistence-hivemi
+ nd.jar
+Require-Bundle: com.polarion.platform;visibility:=reexport,com.polario
+ n.subterra.index,org.apache.hivemind,com.polarion.platform.repository
+ ;visibility:=reexport,com.polarion.subterra.persistence,com.polarion.
+ subterra.persistence.document,net.sf.ehcache,com.polarion.platform.jo
+ bs,org.objectweb.jotm;bundle-version="1.4.3",com.polarion.core.boot,c
+ om.polarion.platform.guice;bundle-version="3.5.1",com.polarion.cluste
+ r
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+Import-Package: com.polarion.platform.repository.driver.svn.internal.e
+ xternal
+Guice-Modules: com.polarion.platform.persistence.internal.guice.Persis
+ tenceModule
+
+

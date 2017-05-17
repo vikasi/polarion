@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plan>
+    <field id="allowedTypes">
+        <list>
+            <item>userstory</item>
+        </list>
+    </field>
+    <field id="author">admin</field>
+    <field id="calculationType">customFieldBased</field>
+    <field id="capacity">30.0</field>
+    <field id="created">2015-09-30 12:44:00.000 +0200</field>
+    <field id="description" text-type="text/plain">The release plan specifies which Work Items are going to be implemented for each system release and dates for those releases. These selected Work Items are then translated into individual tasks to be implemented during the iteration to complete the Work Items.</field>
+    <field id="estimationField">storyPoints</field>
+    <field id="name">Version 1.0</field>
+    <field id="prioritizationField">priority</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="item">SAMPLE-1</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">open</field>
+    <field id="template">release</field>
+    <field id="useReportFromTemplate">true</field>
+</plan>

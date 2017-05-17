@@ -1,0 +1,27 @@
+###
+### Display page title
+###
+
+#set ($spaceName = $xwiki.getSpaceAliasWithProjectName($doc.getDoc().getDocSpace()))
+
+
+#if (($doctype == "content" || $doctype == "portal" || $doctype == "active") && $editor != "")
+<div style="padding: 0 12px 12px;font-size:13px">	
+      $localization.getValue("wiki.label.pageType")$localization.getValue('definition.colon')      
+       <select  id="page_type" name="page_type" onclick="textAdded()"> 
+         <option value="content" #if($doctype=="content")selected#end>$localization.getValue("wiki.pageType.contentPage")</option> 
+         <option value="portal"  #if($doctype=="portal" )selected#end>$localization.getValue("wiki.pageType.portalPage")</option> 
+         <option value="active"  #if($doctype=="active" )selected#end>$localization.getValue("wiki.pageType.activePage")</option>              
+       </select>	
+      
+  <script>
+  	 #if($request.getParameter("docType") != "")
+	 	try{
+	 	document.getElementById('page_type').value = "$request.getParameter("docType")";
+		}catch(e){
+		}
+	 #end
+  </script>
+</div>
+
+#end

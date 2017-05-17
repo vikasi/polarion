@@ -1,0 +1,19 @@
+<script type="text/javascript">
+if (window.name == "working_area")
+{
+  closeLoginWiki();
+  var width = document.getElementById("viewcontent").scrollWidth;
+  var link = '$doc.getURL("pdfdialogaction", "rev=$doc.getVersion()")';
+  var link2 = link + '&width=' + width;
+  loadSubWindow(link2);
+}
+else
+{
+  window.parent.closeLoginWiki();
+  var width = window.parent.document.getElementById("viewcontent").scrollWidth;
+  var link = '$doc.getURL("pdfdialogaction", "rev=$doc.getVersion()")';
+  var link2 = link + '&width=' + width;
+  window.parent.loadSubWindow(link2);
+
+}
+</script>

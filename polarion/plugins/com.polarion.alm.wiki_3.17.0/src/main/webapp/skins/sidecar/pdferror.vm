@@ -1,0 +1,52 @@
+#template("startpage.vm")
+
+<div class="main layoutsubsection">
+ <div style="border: 8px solid #FFE9AB; padding: 5px; background-color: #FFFBF1;">
+  <div>
+    <img src="$xwiki.getSkinFile('tube.PNG')" alt="no image"></img>
+    <b>$!msg.get("error") - $!msg.get("pdfexception")</b>
+  </div>
+
+  #set($message = $xwiki.parseMessagePDF())
+  #if($message)
+
+  <div style="border:0px solid red;  overflow-y: auto;; overflow-x: auto; padding-top: 8px; padding-bottom: 10px;">
+   <b style="color: red;">$!xwiki.getCustomMessage()</b>
+   <br/>
+  </div>
+
+  <div id="errorPDF" class="collapsed" style="border:0px solid red;  overflow-y: auto;; overflow-x: auto;">
+    <table>
+     <tr>
+      <td class ="expand_close" style="vertical-align: middle;" onclick="togglePanelVisibilityExpand(document.getElementById('errorPDF'), this);"></td>
+      <td>Error description.</td>
+     </tr>
+    </table>
+
+    <div class="xwikipanelcontents" style="border: 0px solid red;">
+    <table style="width: 99%; border: 1px solid #BED8E8; font-size: 11px;">
+    <tr>
+    <td style="padding: 5px;">
+    $message
+    </td>
+    </tr>
+    </table>
+    </div>
+
+  </div>
+
+#end
+  
+  <div style="text-align: center; border: 0px solid blue;"> 
+  #set( $url = $xwiki.getRequestURL() )
+  <a href="$xwiki.getActionURL($url,'view')">back to view</a>
+  </div>
+
+  <div class="clearfloats"></div>
+
+ </div>
+
+</div>
+
+#template("endpage.vm")
+     		

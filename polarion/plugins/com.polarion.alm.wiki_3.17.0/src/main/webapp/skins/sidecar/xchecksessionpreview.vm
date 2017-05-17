@@ -1,0 +1,14 @@
+<script type="text/javascript">
+
+if (window.name == "working_area")
+{
+   closeLoginWiki();
+   loadPreview('$doc.getURL("preview")');
+}
+else
+{
+  window.parent.closeLoginWiki();
+  window.parent.loadPreview('$doc.getURL("preview")');
+}
+
+</script>

@@ -1,0 +1,77 @@
+<script language="javascript">
+
+function onPrefEntrySelected(selectedOption)
+{
+   var sVal = selectedOption.value.split("::");
+   if(sVal[0] == "prefvalue")
+   {
+     document.getElementById("addPrefValueBlock").style.display="none";
+     document.getElementById("editPrefValueBlock").style.display="inline";
+	 document.getElementById("selectedPrefValue").value=sVal[3];
+   }
+   else if(sVal[0] == "pref")
+   {     
+	 document.getElementById("addPrefValueBlock").style.display="inline";
+	 document.getElementById("editPrefValueBlock").style.display="none"
+   }
+   else
+   {
+     document.getElementById("editPrefValueBlock").style.display="none"
+	 document.getElementById("addPrefValueBlock").style.display="none";
+   }
+
+}
+
+function onRemovePref()
+{
+   if(confirm("Are you sure you want to delete this preference?"))
+   {
+     getElement('EditFormAction').value='removePref';
+	 return true;
+   }
+   else
+   {
+     return false;
+   }
+}
+
+</script>
+
+#set($url = $renderResponse.createActionURL())
+
+<div id="PortletEntityEditor" style="display:none">
+   <p>
+	 <span style="font-weight: bold">You are Editing Entity: </span><span id="entityIdLabel"></span>     
+   </p>
+   <form name="EditForm" method="POST" action="${url}">
+	  <input type="hidden" id="EditFormAction" name="action" />
+	  <input type="hidden" id="portletEntityId" name="portletEntityId" />
+      <h2 class="portlet-section-subheader">Add New Preference</h2>
+      Name: <input class="portlet-form-field-label" type="text" id="newPreferenceName" name="newPreferenceName" onKeyUp="enableIfComplete('newPreferenceName,newPreferenceValue', 'addPrefButton');" />
+      <br/>
+      Value: <input class="portlet-form-field-label" type="text" id="newPreferenceValue" name="newPreferenceValue" onKeyUp="enableIfComplete('newPreferenceName,newPreferenceValue', 'addPrefButton');" />
+      <br/>
+      <input type="Submit" value="Done" class="portlet-form-button" id="addPrefButton" style="display:none;" onClick="this.form.elements['action'].value='addPref'"/>
+	  
+	  <h2 class="portlet-section-subheader">Update Existing Prefences</h2>
+	  <select size="4" class="portlet-form-field-label" name="selectedPref" id="selectedPref" style="width:350px;" onChange="onPrefEntrySelected(this.options[this.selectedIndex]);"></select> 
+  	
+   
+     <div id="editPrefValueBlock" style="display:none">
+	  <p>
+	    <input type="text" class="portlet-form-field-label" name="selectedPrefValue" id="selectedPrefValue" onKeyUp="enableIfComplete('selectedPrefValue', 'updatePrefValueButton');"/> 
+	    <input type="submit" id="updatePrefValueButton" value="Update Value" class="portlet-form-button" onClick="this.form.elements['action'].value='updateValue'" />
+	    <input type="submit" value="Remove Value" class="portlet-form-button" onClick="this.form.elements['action'].value='removeValue'" />
+	  </p>
+     </div>
+	 
+	 <div id="addPrefValueBlock" style="display:none">
+	  <p>
+	    <span style="font-weight: bold">New Value:</span>
+		<input type="text" class="portlet-form-field-label" name="newPrefValue" id="newPrefValue" onKeyUp="enableIfComplete('newPrefValue', 'addValueButton');"/> 
+	    <input type="submit" class="portlet-form-button" id="addValueButton" value="Add Value" style="display:none;" onClick="this.form.elements['action'].value='addValue'"  />
+		<input type="submit" class="portlet-form-button" id="removePrefButton" value="Remove Preference "  onClick="return onRemovePref();"  />
+	  </p>
+     </div>
+   </form>
+</div>

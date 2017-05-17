@@ -1,0 +1,41 @@
+#set ( $items = $puser.getUsers($request.getParameterMap()) )
+#set ( $userLink = $puser.getUserLink())
+#set ( $fields = $userLink.getFieldsArray() )
+
+#set ( $id = $puser.getId())
+
+#if ( ($workitem.getSelector()) == "query")
+	#set( $panelTitle = $userLink.getQueryProject() + $userLink.getQuery())
+#else
+	#set( $panelTitle = $userLink.getProject())
+#end
+
+#if ($userLink.getOutputType() == "table")
+	
+ <div class="panel" style="margin-right:-2px;border:0px;">
+  <table><tr>
+ 	<td width="100%" valign="middle" class="xwikipaneltitle1">$panelTitle</td>
+ 	<td class="xwikipaneltitle" onclick="togglePanelVisibility(this.up('div'));"><img src="$xwiki.getSkinFile('minimize.png')"/></td>
+	<td class="xwikipaneltitle"></td>
+  </tr></table>
+  
+  <div class="xwikipanelcontents">
+  	<div>
+  	
+   <input type="hidden" id="itemTableRows_$id" value="$!puser.getSize()"/>
+   <input type="hidden" id="itemTableCols_$id" value="$!userLink.getCollCount()"/> 
+   <input type="hidden" id="itemTableHeight_$id" value="$!userLink.getTableHeight()"/> 
+   <input type="hidden" id="itemTableWidth_$id" value="$!userLink.getTableWidth()"/> 
+   <input type="hidden" id="itemTableSortBy_$id" value="$!userLink.getSortBy()"/> 
+   <input type="hidden" id="itemClass_$id" value="#if ($userLink.getExpand()) expanded #else collapsed #end"/>	
+  	
+	#template("xuserviewtable.vm")
+  </div>
+  </div>
+ </div>
+ 
+#else
+	#template("xuserviewlist.vm")
+#end
+#set($macroitem = $puser)
+#template("xmacroerrors.vm")

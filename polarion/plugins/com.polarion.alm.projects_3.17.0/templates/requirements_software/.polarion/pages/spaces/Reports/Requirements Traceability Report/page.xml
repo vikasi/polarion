@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2015-03-03 16:52:39.975 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <h1 id="polarion_hardcoded_0">Design Coverage Traceability Report</h1><p id="polarion_hardcoded_1"></p><div id="polarion_client2" class="polarion-rp-widget-part" data-widget="traceability">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="workItems"><sub id="prototype">WorkItem</sub><sub id="queryType">lucene</sub><sub id="luceneQuery" style="white-space:pre;">type:requirement AND status:(accepted active changes_needed done draft implemented inprogress in_progress inactive open rejected reopened reviewed verified verified\-done verified\-rejected)</sub></sub><sub id="linkRole"></sub><sub id="linkedItemType"></sub><sub id="showLinkingItems">false</sub></span>
+</div><p id="polarion_client3"></p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 70%;">
+  <p id="polarion_hardcoded_2"></p>
+</div>
+<div class="polarion-rp-column" style="width: 30%;">
+  <p id="polarion_hardcoded_3"></p>
+</div>
+<div class="polarion-rp-row-separator"></div><span id="polarion-rp-parameters"></span>]]></field>
+    <field id="title">Requirements Traceability Report</field>
+</rich-page>

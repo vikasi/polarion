@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="elibrary" id="surefire-result" tag="20130523_1550">
+    <structure-element id="root" provider="root" type="root">
+        <violation-fact-element category="" description="" id="TestSuccessRatio:com.polarion.demo.LoginTest:testLogout" provider="SurefireTestProvider" rule="TestSuccessRatio" severity="" tag="23-05-13" type="TestRatioViolationType">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="name">
+                    <value>testLogout</value>
+                </property>
+                <property id="suite-name">
+                    <value>com.polarion.demo.LoginTest</value>
+                </property>
+                <property id="source-prefix">
+                    <value/>
+                </property>
+                <property id="is multi-repository">
+                    <value>false</value>
+                </property>
+                <property id="violation type">
+                    <value>error violation</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="TestSuccessRatio:com.polarion.demo.LoginTest:testLogin" provider="SurefireTestProvider" rule="TestSuccessRatio" severity="" tag="23-05-13" type="TestRatioViolationType">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="name">
+                    <value>testLogin</value>
+                </property>
+                <property id="suite-name">
+                    <value>com.polarion.demo.LoginTest</value>
+                </property>
+                <property id="source-prefix">
+                    <value/>
+                </property>
+                <property id="is multi-repository">
+                    <value>false</value>
+                </property>
+                <property id="violation type">
+                    <value>failure violation</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <value-fact-element id="TestSuccessRatio" provider="SurefireTestProvider" type="execution">
+            <value/>
+            <properties>
+                <property id="has-source-directories">
+                    <value>true</value>
+                </property>
+                <property id="hasTests">
+                    <value>true</value>
+                </property>
+                <property id="errorsCount">
+                    <value>1</value>
+                </property>
+                <property id="failuresCount">
+                    <value>1</value>
+                </property>
+                <property id="testsCount">
+                    <value>5</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="TestsInPlace" provider="SurefireTestProvider" type="execution">
+            <value/>
+            <properties>
+                <property id="has-source-directories">
+                    <value>true</value>
+                </property>
+                <property id="hasTest">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+    </structure-element>
+</factbase>

@@ -1,0 +1,6 @@
+1 Calculated Fields
+\\
+{recalc-fields}
+#info("Calculated Fields *derive their value* from a calculation based on values of other fields in the same Work Item, or fields in child Work Items.")
+#warning("Be careful when modifying this configuration - *data already stored* in the fields that become calculated in new a configuration *will be lost*!")
+{calculated-fields-form}

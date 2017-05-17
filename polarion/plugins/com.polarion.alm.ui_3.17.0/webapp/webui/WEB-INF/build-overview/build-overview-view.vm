@@ -1,0 +1,98 @@
+<table width="100%" height="100%" cellpadding="0" cellspacing="0">
+	#if(!$project)
+		<tr>
+			<td class="pt pr pb pl">
+				<b style="color:red">No project selected</b>
+			</td>
+		</tr>
+	#elseif(!$buildArtifact)
+		<tr>
+			<td class="pt pr pb pl">
+				<b >No buildable artifact defined</b>
+			</td>
+		</tr>
+	#elseif(!$build)
+		<tr>
+			<td class="pt pr pb pl" style="padding:10px">
+				<b>No build available</b>
+			</td>
+		</tr>
+	#else
+##		<tr>
+##			<td align="left">
+##				<table cellspacing="3" cellpadding="0">
+##					<tr> 
+##						<td class="featureLabel pr" nowrap="nowrap" valign="top">Latest Build:</td>
+##					</tr>
+##				</table>
+##			</td>
+##		</tr>
+		<tr>
+			<td >			
+				<table>
+					<tr>
+						<td align="left">
+							<table cellspacing="3" cellpadding="0">
+								<tr>
+									<td class="featureLabel pr" nowrap="nowrap" valign="top">
+										Artifact:
+									</td>
+									<td class="featureValue" colspan="3">
+										#formatHTML("$!build.buildArtifact.label")
+									</td>
+								</tr>
+								<tr>
+									<td class="featureLabel pr" nowrap="nowrap" valign="top">
+										Tag:
+									</td>
+									<td class="featureValue" colspan="3">
+										#formatHTML("$!build.buildTag")
+									</td>
+								</tr>
+								<tr>
+									<td class="featureLabel pr" nowrap="nowrap" valign="top">
+										Created on:
+									</td>
+									<td class="featureValue" colspan="3">
+										#formatHTML("$!build.finishTime")
+									</td>
+								</tr>
+								<tr>
+									<td class="featureLabel pr" nowrap="nowrap" valign="top">
+										Author:
+									</td>
+									<td class="featureValue" colspan="3">
+										#formatHTML($!build.author)
+									</td>
+								</tr>
+							</table>
+						</td>						
+						<td align="left" style="padding:10pt" valign="top">
+							<a href="$baseDirUrl" target="_blank"><img src="/polarion/ria/images/download.gif" border="0"/></a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>  
+			<td>
+				<table width="100%" cellpadding="0" cellspacing="0" class="com_polarion_alm_reports_web_js_ReportStatusFooter_Css">
+					<tr>
+						<td align="right" nowrap="nowrap">		
+						</td>
+						<td width="100%" style="padding-left:3px">
+						</td>
+						<td style="padding-top:1px;padding-right:3px;">
+							<img src="/polarion/ria/images/backgrounds/portlet_splitter.gif">
+						</td>
+						<td align="left" nowrap="nowrap"  style="padding-right:3px;">
+				    		#set($moreUrl = "/polarion/#/project/$projectId/builds")				    		
+                            <a href="$moreUrl" class="linkLikeText"  target="_top">More</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	#end
+</table>
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="elibrary" id="repo-analysis" tag="2013-05-23">
+    <structure-element id="root" provider="root" type="root">
+        <properties>
+            <property id="label">
+                <value>E-Library</value>
+            </property>
+        </properties>
+        <value-fact-element id="NOU" provider="repo-statistics" type="NOU">
+            <value type="java.lang.Integer">8</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Users</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NOF" provider="repo-statistics" type="NOF">
+            <value type="java.lang.Integer">163</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Files</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NOD" provider="repo-statistics" type="NOD">
+            <value type="java.lang.Integer">1</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Developers</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NODD" provider="repo-statistics" type="NODD">
+            <value type="java.lang.Integer">1</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Developers for Last Day</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NODW" provider="repo-statistics" type="NODW">
+            <value type="java.lang.Integer">1</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Developers for Last Week</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NODM" provider="repo-statistics" type="NODM">
+            <value type="java.lang.Integer">1</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Developers for Last Month</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NOC" provider="repo-statistics" type="NOC">
+            <value type="java.lang.Integer">1</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Changes</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NOCD" provider="repo-statistics" type="NOCD">
+            <value type="java.lang.Integer">1</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Changes for Last Day</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NOCW" provider="repo-statistics" type="NOCW">
+            <value type="java.lang.Integer">1</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Changes for Last Week</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NOCM" provider="repo-statistics" type="NOCM">
+            <value type="java.lang.Integer">1</value>
+            <properties>
+                <property id="label">
+                    <value>Number of Changes for Last Month</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="NOC_BY_DEVELOPERS" provider="repo-statistics" type="NOC_BY_DEVELOPERS">
+            <value/>
+            <properties>
+                <property id="label">
+                    <value>Number of Commits by Developers</value>
+                </property>
+            </properties>
+            <value-fact-element id="NOC_BY_DEVELOPERS/NOC:admin" provider="repo-statistics" type="NOC_BY_DEVELOPERS.ITEM">
+                <value type="java.lang.Integer">1</value>
+                <properties>
+                    <property id="label">
+                        <value>Number of Changes by admin</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+        </value-fact-element>
+        <value-fact-element id="MAD" provider="repo-statistics" type="MAD">
+            <value type="java.lang.Integer">1</value>
+            <properties>
+                <property id="label">
+                    <value>Most Active Developer</value>
+                </property>
+            </properties>
+            <value-fact-element id="MAD/MAD/target" provider="repo-statistics" type="MAD/target">
+                <value type="data-instance">/default/${User}admin</value>
+                <properties>
+                    <property id="label">
+                        <value>Most Active Developer</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+        </value-fact-element>
+        <value-fact-element id="LAT" provider="repo-statistics" type="LAT">
+            <value type="java.util.Date">Thu May 23 15:21:33 CEST 2013</value>
+            <properties>
+                <property id="label">
+                    <value>Last Activity Time</value>
+                </property>
+            </properties>
+        </value-fact-element>
+    </structure-element>
+</factbase>

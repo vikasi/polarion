@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="/default/${ProjectGroup}Group" id="workitems-data" tag="2013-05-23">
+    <structure-element id="root" provider="root" type="root">
+        <properties>
+            <property id="label">
+                <value>default</value>
+            </property>
+            <property id="scope">
+                <value>group/</value>
+            </property>
+            <property id="revision">
+                <value>1</value>
+            </property>
+        </properties>
+        <value-fact-element id="ALL" provider="WorkItemsAnalysis" type="ALL">
+            <value type="java.lang.Double">748.0</value>
+            <properties>
+                <property id="label">
+                    <value>All Work Items</value>
+                </property>
+                <property id="query">
+                    <value>*:*</value>
+                </property>
+                <property id="trendable">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="RESOLVED-UNRESOLVED" provider="WorkItemsAnalysis" type="RESOLVED-UNRESOLVED">
+            <value/>
+            <properties>
+                <property id="kind">
+                    <value>distribution</value>
+                </property>
+                <property id="label">
+                    <value>Resolved vs. Unresolved</value>
+                </property>
+                <property id="trendable">
+                    <value>true</value>
+                </property>
+            </properties>
+            <value-fact-element id="RESOLVED-UNRESOLVED.RESOLVED" provider="WorkItemsAnalysis" type="RESOLVED-UNRESOLVED.ITEM">
+                <value type="java.lang.Double">64.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Resolved</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:library OR project.id:elibrary OR project.id:drivepilot)) AND (HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-UNRESOLVED.UNRESOLVED" provider="WorkItemsAnalysis" type="RESOLVED-UNRESOLVED.ITEM">
+                <value type="java.lang.Double">684.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Unresolved</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:library OR project.id:elibrary OR project.id:drivepilot)) AND NOT HAS_VALUE:resolution</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+        </value-fact-element>
+        <value-fact-element id="UNRESOLVED-BY-PROJECT" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-PROJECT">
+            <value/>
+            <properties>
+                <property id="kind">
+                    <value>distribution</value>
+                </property>
+                <property id="label">
+                    <value>Unresolved by Project</value>
+                </property>
+                <property id="trendable">
+                    <value>true</value>
+                </property>
+            </properties>
+            <value-fact-element id="UNRESOLVED-BY-PROJECT.library" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-PROJECT.ITEM">
+                <value type="java.lang.Double">271.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Document Library</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:library) AND NOT HAS_VALUE:resolution) AND ((NOT HAS_VALUE:resolution))</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="UNRESOLVED-BY-PROJECT.elibrary" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-PROJECT.ITEM">
+                <value type="java.lang.Double">103.0</value>
+                <properties>
+                    <property id="label">
+                        <value>E-Library</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:elibrary) AND NOT HAS_VALUE:resolution) AND ((NOT HAS_VALUE:resolution))</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="UNRESOLVED-BY-PROJECT.drivepilot" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-PROJECT.ITEM">
+                <value type="java.lang.Double">310.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Drive Pilot</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:drivepilot) AND NOT HAS_VALUE:resolution) AND ((NOT HAS_VALUE:resolution))</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+        </value-fact-element>
+        <value-fact-element id="UNRESOLVED-BY-ENTITY" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ENTITY">
+            <value/>
+            <properties>
+                <property id="kind">
+                    <value>distribution</value>
+                </property>
+                <property id="label">
+                    <value>Unresolved by Child Entity</value>
+                </property>
+                <property id="trendable">
+                    <value>true</value>
+                </property>
+            </properties>
+            <value-fact-element id="UNRESOLVED-BY-ENTITY.Demo Projects" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ENTITY.ITEM">
+                <value type="java.lang.Double">413.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Demo Projects</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:elibrary OR project.id:drivepilot)) AND NOT HAS_VALUE:resolution</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="UNRESOLVED-BY-ENTITY.library" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ENTITY.ITEM">
+                <value type="java.lang.Double">271.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Document Library</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:library) AND NOT HAS_VALUE:resolution) AND ((NOT HAS_VALUE:resolution))</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+        </value-fact-element>
+    </structure-element>
+</factbase>

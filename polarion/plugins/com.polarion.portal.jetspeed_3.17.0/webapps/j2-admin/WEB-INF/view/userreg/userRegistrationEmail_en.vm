@@ -1,0 +1,14 @@
+Hello $!{map.get("user.name.given")} $!{map.get("user.name.family")}:
+
+Welcome to Jetspeed! 
+Thanks you for registering.  Jetspeed is a powerful component based
+portlet container system conforming to JSR-168.
+
+Your username is: $!{map.get("user.name")}
+Your password is: $!{map.get("password")}
+
+You may change your password online. Follow the link to login:
+$!{map.get("returnURL")}
+
+Thanks
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20121221150019</created>
+<type>portal</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+1 {project-property:name}
+
+{style:type=div|float=left}
+{image:project_logo.jpg}
+{style}
+
+{project-property:description}
+
+#clearFloats()
+
+<center>
+#spacePanel("Concept.Home" "/polarion/icons/default/topicIcons/Color_001-presentation.png" "Your project starts here. The resources in this space describe the high-level concepts including business case, feasibility, and risks. [More...>Concept.Home]")
+#spacePanel("Requirements.Home" "/polarion/icons/default/topicIcons/Color_002-map.png" "This space contains resources that transform stakeholder needs into verifiable requirements in specification Documents that describe ~~what~~ the system will do (but not ~~how~~). [More...>Requirements.Home]")
+#spacePanel("Design.Home" "/polarion/icons/default/topicIcons/Color_003-sketchbook.png" "Resources in this space constitute the system design specification, based on the system requirements. Includes specifications for subsystems and components. [More...>Design.Home]")
+#spacePanel("Risks.Home" "/polarion/icons/default/topicIcons/Color_004-weather.png" "When necessary, this space can be used to collect, analyze, and document information about risks entailed in pursuing and developing the project, including FMEA studies. [More...>Risks.Home]")
+#spacePanel("Development.Home" "/polarion/icons/default/topicIcons/Color_005-gear.png" "How is the project's progress? Are you just guessing? The reports here can help eliminate guesswork and provide a realistic picture of the status of development based on actual project data. [More...>Development.Home]")
+#spacePanel("Maintenance.Home" "/polarion/icons/default/topicIcons/Color_006-dancesteps.png" "A product developed through the project is finally released... but the project doesn't usually end there. This space contains resources that report issues related to ongoing maintenance. [More...>Maintenance.Home]")
+</center>]]></content>
+</wiki-page>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<build>
+    <field id="author">admin</field>
+    <field id="buildArtifact">drivepilot:drivepilot:</field>
+    <field id="buildDescriptorName">All Tests</field>
+    <field id="buildEvents">
+        <struct>
+            <item id="errorCount">2</item>
+            <item id="events">
+                <list>
+                    <struct>
+                        <item id="message"><![CDATA[BUILD FAILURE
+
+There are test failures.
+
+Please refer to C:\Polarion\data\workspace\polarion-data\jobs\20160228-2237\sources\drivepilot\drivepilot\drivepilot\null\target\surefire-reports for the individual test results.]]></item>
+                        <item id="severity">ERROR</item>
+                    </struct>
+                    <struct>
+                        <item id="message">Tester reports 1 failure(s) and 1 error(s) for 5 test(s) (0 test(s) skipped)</item>
+                        <item id="severity">ERROR</item>
+                    </struct>
+                </list>
+            </item>
+            <item id="fatalCount">0</item>
+            <item id="warnCount">0</item>
+        </struct>
+    </field>
+    <field id="buildStamp">20160228-2237</field>
+    <field id="buildTag">20160228-2237</field>
+    <field id="buildTestResults">
+        <struct>
+            <item id="errorCount">1</item>
+            <item id="failureCount">1</item>
+            <item id="skippedCount">0</item>
+            <item id="testCount">5</item>
+        </struct>
+    </field>
+    <field id="creationTime">2016-02-28 22:37:56.556 +0100</field>
+    <field id="deployedArtifacts">
+        <list>
+            <struct>
+                <item id="label">Default Maven 2 build results for DrivePilot - App</item>
+                <item id="location">results/drivepilot/drivepilot</item>
+            </struct>
+        </list>
+    </field>
+    <field id="finishTime">2016-02-28 22:38:07.122 +0100</field>
+    <field id="jobId">29d1014c-c0a801cc-081eba6b-0b6f57f7</field>
+    <field id="logFiles">
+        <list>
+            <item>log</item>
+        </list>
+    </field>
+    <field id="startTime">2016-02-28 22:37:56.708 +0100</field>
+</build>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fields>
+    <field description="Failure Severity Rating" id="severityRating" name="Severity Rating" type="integer"/>
+    <field description="Cause Occurrence Rating" id="occurrenceRating" name="Occurrence Rating" type="integer"/>
+    <field description="Control Detection Rating" id="detectionRating" name="Detection Rating" type="integer"/>
+    <field description="Risk Priority Number" id="rpn" name="Risk Priority " type="integer"/>
+    <field description="Potential Cause(s)" id="causes" name="Potential Cause(s)" type="text"/>
+    <field description="Current Controls" id="controls" name="Current Controls" type="text"/>
+    <field description="Characteristic" id="characteristic" name="Characteristic" type="text"/>
+    <field description="Recommended Actions" id="recommendedActions" name="Recommended Actions" type="text"/>
+    <field description="Actions Taken" id="takenActions" name="Taken Actions" type="text"/>
+    <field description="New Occurrence Rating after Actions" id="occurrenceRatingNew" name="New Occurrence Rating" type="integer"/>
+    <field description="New Detection Rating after Actions" id="detectionRatingNew" name="New Detection Rating" type="integer"/>
+    <field description="New Severity Rating after Actions" id="severityRatingNew" name="New Severity Rating" type="integer"/>
+    <field description="New Risk Priority Number after Actions" id="rpnNew" name="New Risk Priority" type="integer"/>
+</fields>

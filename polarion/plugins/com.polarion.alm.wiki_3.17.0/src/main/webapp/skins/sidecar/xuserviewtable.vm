@@ -1,0 +1,22 @@
+#set ( $items = $puser.getUsers($request.getParameterMap()) )
+#set ( $userLink = $puser.getUserLink())
+#set ( $fields = $userLink.getFieldsArray() )
+
+	<table id="itemTable_$puser.getId()" class="ricoLiveGrid">
+	<colgroup> #foreach($fild in $fields) <col/> #end </colgroup>
+	<thead><tr>
+	#foreach($field in $fields)
+		<th> $puser.getRealNameField($field)</th>	
+	#end
+	</tr></thead>
+	
+	#foreach($item in $items)
+		<tr>
+		#foreach($fld in $fields)
+			<td>
+				$!puser.getValue($fld, $item)
+			</td>
+		#end
+		</tr>
+	#end
+	</table>

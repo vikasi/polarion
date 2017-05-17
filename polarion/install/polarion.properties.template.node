@@ -1,0 +1,18 @@
+#Shared folder between the machines that make up the cluster
+#default Linux: com.polarion.shared=/opt/polarion/shared
+#default Windows: com.polarion.shared=\\<shared_services_host>\Polarion
+com.polarion.shared=
+com.polarion.nodeId=
+TomcatService.ajp13-port=
+
+#Url of node in load balancer
+com.polarion.loadBalancer.workerUrl=
+
+# Control port and host name for shutdown requests
+controlPort=
+controlHostname=
+
+#Node-specific url of the node. 
+#It is used in calculations to access Polarion via web services
+#calc.base.url=http://example-node
+calc.base.url=

@@ -1,0 +1,124 @@
+#set($tab = $!request.getParameter("tab"))
+#if (!$tab)
+#set($tab = "")
+#end
+
+###
+### List document comments
+###            C:\Sidecar\workspace\com.polarion.alm.wiki\src\main\webapp\skins\sidecar\commentsinline.vmdd
+### TODO: web service?
+###
+## #if(!$showcomments)
+## #set($showcomments = $xwiki.getWebPreference("showcomments"))
+## #end
+## #if($showcomments!="no")
+#if($xwiki.getWebPreferenceAsInt("commentsorder",1)==1)
+#set($comments = $doc.getComments())
+#else
+#set($comments = $doc.getComments(false))
+#end
+<div id="commentscontent" class="xwikipanelcontent">
+<h4 class="xwikiintratitle">$msg.get("comments")</h4>
+#if($comments.size()>0)
+#set($count=0)
+#foreach($comment in $comments)
+#if($count > 0)    
+## <hr/>
+#end
+#set($count=$count+1)
+
+    <div id="xwikicomment_${count}" class="xwikicomment" >
+### IMA{
+###      <div class="commentavatar">#useravatar($comment.author)</div>
+### IMA}
+      <div class="commentheader">Comment added by <span class="commentauthor">$!xwiki.getLocalUserName($doc.display('author','view',$comment))</span>#set($date = $doc.display("date","view",$comment))
+#if($date != "") &ndash; <span class="commentdate">$date</span>#end
+#if($hasedit)
+
+#if ($tab != "history")
+#if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor) )
+<span class="commentdelete">
+<a class="commentremove" href="$doc.getURL("objectremove" , "classname=XWiki.XWikiComments&amp;classid=${comment.number}&amp;xredirect=${request.getRequestURL()}")"
+    onclick="return confirm('$msg.get("confirmcommentremove")')"><img src="$xwiki.getSkinFile("minus.gif")" title="$msg.get("removethiscomment")"/></a>
+</span>
+#else
+<span style="cursor: pointer;" onclick="if (confirm('$msg.get("confirmcommentremove")')) {document.forms['edit'].action='$doc.getURL("objectremove" , "classname=XWiki.XWikiComments&amp;classid=${comment.number}&amp;xredirect=${request.getRequestURL()}")';   document.forms['edit'].submit();}  "><img src="$xwiki.getSkinFile("minus.gif")" title="$msg.get("removethiscomment")"/></span>
+#end
+#end
+#end
+
+      </div>
+      <div class="commentcontent" > $doc.getRenderedContent($doc.display("comment","view",$comment))</div>
+    </div>
+#end
+#else
+<span style="border: 0px solid red; padding: 0px; font-size: 11px; font-family: Verdana;">$msg.get("noitems")</span>
+#end
+
+#if ($tab != "history")
+#if($xwiki.hasAccessLevel("comment"))
+#set($cclass = $xwiki.getDocument("XWiki.XWikiComments").getxWikiClass())
+#set($comment = $cclass.newObject())
+
+      #if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor) )
+      <form name="commentFormMain" action="$doc.getURL("commentadd")" method="post">
+      #end
+
+      <div style="border-top: 1px solid #dddddd; margin-top:14px; margin-bottom: 4px;">       
+        #if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor) )
+        <fieldset class="collapsed" id="commentform" style="border:0px; margin-bottom:-6px; padding-left: 4px;//margin-bottom:-14px;">
+        <legend  onclick="toggleForm(this.form)"style="text-decoration: none; border: 0px; background: none; margin-left: -8px; margin-bottom:-14px;//margin-bottom:-2px;">
+        #else
+        <fieldset class="expanded" id="commentform" style="border:0px; margin-bottom:-6px; padding-left: 4px;">
+ 	<legend  onclick="toggleForm(document.forms['edit'])"style="text-decoration: none; border: 0px; background: none; margin-left: -8px; margin-bottom:2px; font-size: 11px;color: #22395E;text-decoration: none;font-family:Verdana;">
+        #end
+        <span class="expands" style="font-weight: normal; font-size: 11px;color: #22395E;text-decoration: none;font-family:Verdana;"><img src=$xwiki.getSkinFile("add.png") alt=""/>$msg.get("add")</span>
+        </legend>            
+
+        <input type="hidden" name="xredirect" value="${doc.getURL("view")}" />
+        <input type="hidden" name="XWiki.XWikiComments_author" value="$context.user"/>
+        <input type="hidden" name="XWiki.XWikiComments_date" value=""/>
+        <div><table height=24><tr><td><b class="commentcontent">$msg.get("addcomment")</b></td></tr></table>
+             <textarea #if ( ($editor == "wiki") || ($editor == "wysiwyg") ) onkeypress="textAdded()" #else onKeyup="commentChanged()" #end  id='XWiki.XWikiComments_comment' rows='5' name='XWiki.XWikiComments_comment' style="width: 100%;">#if( $doc.getComment() != "core.comment.addComment")$doc.getComment()#end</textarea>
+        </div>
+        <div style="margin-bottom: -10px; //margin-bottom: -1px;">
+        ##<div style="margin-bottom: -10px; margin-bottom: 10px;">
+        <table>
+        <tr>
+        <td>
+        #if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor) )
+      	<div name="saveComments" id="saveComments" class="disab"  onclick="document.forms['commentFormMain'].submit();" style="cursor:pointer; margin-left: -10px;font-size: 11px;color: #22395E;text-decoration: none;font-family:Verdana;">
+      	&nbsp;&nbsp;<img src=$xwiki.getSkinFile("save.gif") alt=""/>$msg.get("Save")
+      	#else
+      	##<div onclick="document.getElementById('savetype').value='savecomments'; document.forms['edit'].submit();" style="cursor:pointer; margin-left: -10px;">
+      	#end
+        ## Save
+      	##xwikitopmenuentrystartimageButton("#" $msg.get("Add Comments"))
+      	</div>
+	</td>
+	<td width=5>&nbsp;</td>
+	<td>
+       	<div onclick="hideForm(document.forms['commentFormMain']);">
+        ## Cancel
+       	##xwikitopmenuentrystartimageButton("#" $msg.get("Cancel"))
+       	</div>
+	</td>
+	</tr>
+	</table>
+
+        </div>
+        </fieldset>
+        </div>
+      #if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor))
+      </form>
+      #end
+
+      <script type="text/javascript">
+//<!--
+//document.getElementById("commentform").className = "collapsed";
+//-->
+      </script>
+#end
+#end
+  </div>
+## #end

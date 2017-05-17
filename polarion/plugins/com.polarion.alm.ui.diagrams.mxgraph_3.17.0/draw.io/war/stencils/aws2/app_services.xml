@@ -1,0 +1,2024 @@
+<shapes name="mxgraph.aws2.app_services">
+<shape aspect="variable" h="72" name="CloudSearch" strokewidth="inherit" w="59.5">
+<connections>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.5" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0" y="0.21" perimeter="0" name="NW"/>
+	<constraint x="1" y="0.21" perimeter="0" name="NE"/>
+	<constraint x="0" y="0.71" perimeter="0" name="SW"/>
+	<constraint x="1" y="0.71" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="24.92" y="15.85"/>
+<line x="29.81" y="14.38"/>
+<line x="53.53" y="21.5"/>
+<line x="49.07" y="22.17"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="34.59" y="15.85"/>
+<line x="29.69" y="14.38"/>
+<line x="5.97" y="21.5"/>
+<line x="10.43" y="22.17"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FAD791"/>
+        <path>
+<move x="29.75" y="47.11"/>
+<line x="24.86" y="46.35"/>
+<line x="49.07" y="43.06"/>
+<line x="53.53" y="43.4"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="29.75" y="47.11"/>
+<line x="34.65" y="46.35"/>
+<line x="10.43" y="43.06"/>
+<line x="5.97" y="43.4"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="59.5" y="23.29"/>
+<line x="29.75" y="14.37"/>
+<line x="29.75" y="0"/>
+<line x="59.5" y="14.88"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="59.5" y="50.89"/>
+<line x="29.75" y="61.48"/>
+<line x="29.75" y="47.11"/>
+<line x="59.5" y="42.47"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="53.53" y="12.02"/>
+<line x="59.5" y="14.99"/>
+<line x="59.5" y="50.89"/>
+<line x="53.53" y="53.01"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="38.65" y="48.5"/>
+<line x="29.73" y="50.28"/>
+<line x="29.73" y="72"/>
+<line x="38.65" y="67.52"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="49.07" y="22.17"/>
+<line x="53.53" y="21.5"/>
+<line x="53.53" y="43.4"/>
+<line x="49.07" y="43.06"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="0" y="23.29"/>
+<line x="29.75" y="14.37"/>
+<line x="29.75" y="0"/>
+<line x="0" y="14.88"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="0" y="50.89"/>
+<line x="29.75" y="61.48"/>
+<line x="29.75" y="47.11"/>
+<line x="0" y="42.47"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="5.97" y="12.02"/>
+<line x="0" y="14.99"/>
+<line x="0" y="50.89"/>
+<line x="5.97" y="53.01"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="20.85" y="48.5"/>
+<line x="29.77" y="50.28"/>
+<line x="29.77" y="72"/>
+<line x="20.85" y="67.52"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="10.43" y="22.17"/>
+<line x="5.97" y="21.5"/>
+<line x="5.97" y="43.4"/>
+<line x="10.43" y="43.06"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="56.0" name="CloudSearch SDF metadata" strokewidth="inherit" w="52.0">
+<connections>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.38" perimeter="0" name="W"/>
+	<constraint x="1" y="0.38" perimeter="0" name="E"/>
+	<constraint x="0.075" y="0" perimeter="0" name="NW"/>
+	<constraint x="0.925" y="0" perimeter="0" name="NE"/>
+	<constraint x="0.075" y="1" perimeter="0" name="SW"/>
+	<constraint x="0.925" y="1" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#876929"/>
+        <rect h="2.35" w="44.0" x="3.98" y="53.65"/>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="3.98" y="0.0"/>
+<line x="3.98" y="53.65"/>
+<line x="47.98" y="53.65"/>
+<line x="47.98" y="0.0"/>
+<line x="3.98" y="0.0"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <rect h="6.0" w="34.0" x="9.0" y="4.0"/>
+        <fillstroke/>
+        <rect h="5.0" w="34.0" x="9.0" y="12.0"/>
+        <fillstroke/>
+        <rect h="5.0" w="34.0" x="9.0" y="19.0"/>
+        <fillstroke/>
+        <rect h="5.0" w="34.0" x="9.0" y="27.0"/>
+        <fillstroke/>
+        <rect h="4.0" w="34.0" x="9.0" y="35.0"/>
+        <fillstroke/>
+        <rect h="5.0" w="34.0" x="9.0" y="42.0"/>
+        <fillstroke/>
+        <strokecolor color="#FFFFFF"/>
+        <fillcolor color="#D9A741"/>
+        <strokewidth width="2"/>
+        <miterlimit limit="10"/>
+        <path>
+<move x="0.0" y="13.93"/>
+<line x="6.75" y="21.42"/>
+<line x="0.0" y="28.92"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="52.0" y="28.92"/>
+<line x="45.25" y="21.42"/>
+<line x="52.0" y="13.93"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="72.0" name="Elastic Transcoder" strokewidth="inherit" w="59.69">
+<connections>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.5" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0" y="0.21" perimeter="0" name="NW"/>
+	<constraint x="1" y="0.21" perimeter="0" name="NE"/>
+	<constraint x="0" y="0.79" perimeter="0" name="SW"/>
+	<constraint x="1" y="0.79" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="59.64" y="25.57"/>
+<line x="54.7" y="24.35"/>
+<line x="54.7" y="12.43"/>
+<line x="59.64" y="14.9"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#624A1E"/>
+        <path>
+<move x="59.69" y="25.58"/>
+<line x="53.37" y="26.23"/>
+<line x="48.13" y="25.17"/>
+<line x="54.79" y="24.38"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="54.7" y="12.43"/>
+<line x="48.13" y="14.03"/>
+<line x="48.13" y="25.17"/>
+<line x="54.7" y="24.39"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="59.63" y="42.28"/>
+<line x="29.84" y="46.75"/>
+<line x="29.84" y="25.58"/>
+<line x="59.63" y="29.88"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="51.8" y="23.64"/>
+<line x="44.7" y="21.89"/>
+<line x="44.7" y="7.43"/>
+<line x="51.8" y="10.98"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="37.6" y="23.06"/>
+<line x="44.7" y="21.91"/>
+<line x="44.7" y="7.43"/>
+<line x="37.6" y="9.76"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#624A1E"/>
+        <path>
+<move x="51.8" y="23.64"/>
+<line x="44.96" y="24.54"/>
+<line x="37.6" y="23.06"/>
+<line x="44.75" y="21.9"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="40.77" y="20.92"/>
+<line x="29.84" y="18.23"/>
+<line x="29.84" y="0.0"/>
+<line x="40.77" y="5.46"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="0.05" y="25.57"/>
+<line x="4.99" y="24.35"/>
+<line x="4.99" y="12.43"/>
+<line x="0.05" y="14.9"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#624A1E"/>
+        <path>
+<move x="0.0" y="25.58"/>
+<line x="6.32" y="26.23"/>
+<line x="11.56" y="25.17"/>
+<line x="4.9" y="24.38"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="4.99" y="12.43"/>
+<line x="11.56" y="14.03"/>
+<line x="11.56" y="25.17"/>
+<line x="4.99" y="24.39"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="0.06" y="42.28"/>
+<line x="29.84" y="46.75"/>
+<line x="29.84" y="25.58"/>
+<line x="0.06" y="29.88"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="7.89" y="23.64"/>
+<line x="14.99" y="21.89"/>
+<line x="14.99" y="7.43"/>
+<line x="7.89" y="10.98"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="22.09" y="23.06"/>
+<line x="14.99" y="21.91"/>
+<line x="14.99" y="7.43"/>
+<line x="22.09" y="9.76"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#624A1E"/>
+        <path>
+<move x="7.89" y="23.64"/>
+<line x="14.73" y="24.54"/>
+<line x="22.09" y="23.06"/>
+<line x="14.94" y="21.9"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="18.91" y="20.92"/>
+<line x="29.84" y="18.23"/>
+<line x="29.84" y="0.0"/>
+<line x="18.91" y="5.46"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#624A1E"/>
+        <path>
+<move x="40.77" y="20.92"/>
+<line x="29.84" y="22.9"/>
+<line x="18.91" y="20.92"/>
+<line x="29.84" y="18.23"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="59.64" y="46.43"/>
+<line x="54.7" y="47.64"/>
+<line x="54.7" y="59.57"/>
+<line x="59.64" y="57.1"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FAD791"/>
+        <path>
+<move x="59.69" y="46.42"/>
+<line x="53.37" y="45.77"/>
+<line x="48.13" y="46.83"/>
+<line x="54.79" y="47.62"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="54.7" y="59.57"/>
+<line x="48.13" y="57.97"/>
+<line x="48.13" y="46.83"/>
+<line x="54.7" y="47.61"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="51.8" y="48.36"/>
+<line x="44.7" y="50.11"/>
+<line x="44.7" y="64.57"/>
+<line x="51.8" y="61.02"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="37.6" y="48.94"/>
+<line x="44.7" y="50.09"/>
+<line x="44.7" y="64.57"/>
+<line x="37.6" y="62.24"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FAD791"/>
+        <path>
+<move x="51.8" y="48.36"/>
+<line x="44.96" y="47.46"/>
+<line x="37.6" y="48.94"/>
+<line x="44.75" y="50.1"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="40.77" y="51.08"/>
+<line x="29.84" y="53.77"/>
+<line x="29.84" y="72.0"/>
+<line x="40.77" y="66.54"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="0.05" y="46.43"/>
+<line x="4.99" y="47.64"/>
+<line x="4.99" y="59.57"/>
+<line x="0.05" y="57.1"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FAD791"/>
+        <path>
+<move x="0.0" y="46.42"/>
+<line x="6.32" y="45.77"/>
+<line x="11.56" y="46.83"/>
+<line x="4.9" y="47.62"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="4.99" y="59.57"/>
+<line x="11.56" y="57.97"/>
+<line x="11.56" y="46.83"/>
+<line x="4.99" y="47.61"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="7.89" y="48.36"/>
+<line x="14.99" y="50.11"/>
+<line x="14.99" y="64.57"/>
+<line x="7.89" y="61.02"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="22.09" y="48.94"/>
+<line x="14.99" y="50.09"/>
+<line x="14.99" y="64.57"/>
+<line x="22.09" y="62.24"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FAD791"/>
+        <path>
+<move x="7.89" y="48.36"/>
+<line x="14.73" y="47.46"/>
+<line x="22.09" y="48.94"/>
+<line x="14.94" y="50.1"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="18.91" y="51.08"/>
+<line x="29.84" y="53.77"/>
+<line x="29.84" y="72.0"/>
+<line x="18.91" y="66.54"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FAD791"/>
+        <path>
+<move x="40.77" y="51.08"/>
+<line x="29.84" y="49.1"/>
+<line x="18.91" y="51.08"/>
+<line x="29.84" y="53.77"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="54.14" name="Email" strokewidth="inherit" w="73.62">
+<connections>
+	<constraint x="0.5" y="0.155" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0.14" y="0.51" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0.07" y="0.06" perimeter="0" name="NW"/>
+	<constraint x="1" y="0.22" perimeter="0" name="NE"/>
+	<constraint x="0.14" y="1" perimeter="0" name="SW"/>
+	<constraint x="1" y="1" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <save/>
+        <save/>
+        <save/>
+        <save/>
+        <save/>
+        <save/>
+        <save/>
+        <save/>
+        <save/>
+        <save/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="73.62" y="11.91"/>
+<curve x1="73.62" x2="73.62" x3="73.62" y1="11.91" y2="11.91" y3="51.78"/>
+<curve x1="73.62" x2="73.62" x3="10.490002" y1="51.78" y2="51.78" y3="51.78"/>
+<curve x1="10.490002" x2="10.490002" x3="10.490002" y1="51.78" y2="51.77" y3="27.279999"/>
+<curve x1="11.460002" x2="12.470001" x3="13.480001" y1="27.48" y2="27.579998" y3="27.579998"/>
+<curve x1="18.11" x2="22.250002" x3="25.010002" y1="27.579998" y2="25.509998" y3="22.249998"/>
+<curve x1="28.530003" x2="33.780003" x3="41.65" y1="24.539997" y2="27.949997" y3="33.07"/>
+<line x="73.62" y="11.91"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="73.62" y="51.78"/>
+<line x="73.62" y="54.14"/>
+<curve x1="73.62" x2="73.62" x3="10.490002" y1="54.14" y2="54.14" y3="54.14"/>
+<line x="10.490002" y="51.78"/>
+<curve x1="73.62" x2="73.62" x3="73.62" y1="51.78" y2="51.78" y3="51.78"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="73.62" y="51.78"/>
+<line x="73.62" y="54.14"/>
+<curve x1="73.62" x2="73.62" x3="10.490002" y1="54.14" y2="54.14" y3="54.14"/>
+<line x="10.490002" y="51.78"/>
+<curve x1="73.62" x2="73.62" x3="73.62" y1="51.78" y2="51.78" y3="51.78"/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#503C78"/>
+        <path>
+<move x="28.54" y="9.92"/>
+<line x="28.54" y="12.29"/>
+<curve x1="28.54" x2="28.52" x3="28.460001" y1="11.77" y2="11.24" y3="10.74"/>
+<line x="28.46" y="8.38"/>
+<curve x1="28.52" x2="28.54" x3="28.54" y1="8.88" y2="9.4" y3="9.92"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#503C78"/>
+        <path>
+<move x="28.54" y="9.93"/>
+<line x="28.54" y="12.29"/>
+<curve x1="28.54" x2="28.52" x3="28.460001" y1="11.77" y2="11.24" y3="10.74"/>
+<line x="28.46" y="8.38"/>
+<curve x1="28.52" x2="28.54" x3="28.54" y1="8.88" y2="9.4" y3="9.93"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="28.46" y="8.38"/>
+<curve x1="35.02" x2="47.489998" x3="71.16" y1="8.38" y2="8.38" y3="8.38"/>
+<line x="41.64" y="27.91"/>
+<curve x1="41.64" x2="41.52" x3="26.14" y1="27.91" y2="27.83" y3="18.02"/>
+<curve x1="27.65" x2="28.539999" x3="28.539999" y1="15.68" y2="12.91" y3="9.93"/>
+<curve x1="28.54" x2="28.52" x3="28.46" y1="9.4" y2="8.88" y3="8.38"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="71.16" y="8.38"/>
+<line x="71.16" y="10.75"/>
+<line x="41.64" y="30.27"/>
+<line x="41.64" y="27.91"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="41.64" y="27.9"/>
+<line x="41.64" y="30.27"/>
+<curve x1="41.64" x2="41.52" x3="26.14" y1="30.27" y2="30.19" y3="20.380001"/>
+<line x="26.14" y="18.010002"/>
+<curve x1="41.52" x2="41.64" x3="41.64" y1="27.83" y2="27.9" y3="27.9"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="41.64" y="27.91"/>
+<line x="41.64" y="30.27"/>
+<curve x1="41.64" x2="41.52" x3="26.14" y1="30.27" y2="30.19" y3="20.380001"/>
+<line x="26.14" y="18.02"/>
+<curve x1="41.52" x2="41.64" x3="41.64" y1="27.83" y2="27.91" y3="27.91"/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="17.52" y="10.47"/>
+<curve x1="17.52" x2="17.52" x3="17.52" y1="10.690001" y2="10.91" y3="11.13"/>
+<line x="17.52" y="13.49"/>
+<curve x1="17.52" x2="17.52" x3="17.52" y1="13.2699995" y2="13.05" y3="12.84"/>
+<curve x1="17.52" x2="17.52" x3="17.52" y1="12.13" y2="11.18" y3="10.47"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="17.52" y="10.48"/>
+<line x="17.52" y="12.839999"/>
+<curve x1="17.52" x2="17.52" x3="17.52" y1="13.059999" y2="13.2699995" y3="13.489999"/>
+<line x="17.52" y="11.129999"/>
+<curve x1="17.52" x2="17.52" x3="17.52" y1="10.91" y2="10.69" y3="10.48"/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="14.54" y="13.32"/>
+<line x="14.54" y="15.679999"/>
+<curve x1="14.54" x2="14.54" x3="14.54" y1="15.639999" y2="15.599999" y3="15.549999"/>
+<line x="14.54" y="13.19"/>
+<curve x1="14.54" x2="14.54" x3="14.54" y1="13.23" y2="13.27" y3="13.32"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="14.54" y="13.32"/>
+<line x="14.54" y="15.679999"/>
+<curve x1="14.54" x2="14.54" x3="14.54" y1="15.639999" y2="15.599999" y3="15.549999"/>
+<line x="14.54" y="13.19"/>
+<curve x1="14.54" x2="14.54" x3="14.54" y1="13.23" y2="13.28" y3="13.32"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="24.11" y="5.45"/>
+<curve x1="25.76" x2="25.68" x3="24.59" y1="8.549999" y2="11.969999" y3="15.11"/>
+<curve x1="23.99" x2="22.92" x3="21.07" y1="16.68" y2="18.289999" y3="19.18"/>
+<curve x1="20.529999" x2="19.91" x3="19.289999" y1="19.49" y2="19.62" y3="19.62"/>
+<curve x1="17.71" x2="16.07" x3="15.349998" y1="19.62" y2="18.76" y3="17.560001"/>
+<curve x1="15.229999" x2="15.119999" x3="14.959998" y1="17.380001" y2="17.210001" y3="16.990002"/>
+<curve x1="13.789998" x2="12.969998" x3="11.449998" y1="18.170002" y2="18.520002" y3="18.520002"/>
+<curve x1="9.649998" x2="8.259998" x3="8.259998" y1="18.520002" y2="17.430002" y3="15.220002"/>
+<curve x1="8.259998" x2="9.199998" x3="10.529999" y1="13.520002" y2="12.350002" y3="11.770002"/>
+<curve x1="11.689999" x2="13.299999" x3="14.539999" y1="11.280003" y2="11.180002" y3="11.040003"/>
+<line x="14.54" y="10.76"/>
+<curve x1="14.54" x2="14.58" x3="14.28" y1="10.26" y2="9.67" y3="9.2300005"/>
+<curve x1="14.009999" x2="13.5199995" x3="13.08" y1="8.84" y2="8.68" y3="8.68"/>
+<curve x1="12.2699995" x2="11.54" x3="11.37" y1="8.68" y2="9.09" y3="9.950001"/>
+<curve x1="11.34" x2="11.2" x3="11.01" y1="10.14" y2="10.330001" y3="10.340001"/>
+<line x="8.93" y="10.120001"/>
+<curve x1="8.76" x2="8.570001" x3="8.610001" y1="10.080001" y2="9.940001" y3="9.680001"/>
+<curve x1="9.09" x2="11.35" x3="13.390001" y1="7.1900015" y2="6.4400015" y3="6.4400015"/>
+<curve x1="14.420001" x2="15.770001" x3="16.590002" y1="6.4400015" y2="6.7200017" y3="7.5000014"/>
+<curve x1="17.620003" x2="17.520002" x3="17.520002" y1="8.450002" y2="9.740002" y3="11.130001"/>
+<line x="17.520002" y="14.430001"/>
+<curve x1="17.520002" x2="17.930002" x3="18.310003" y1="15.410002" y2="15.840001" y3="16.36"/>
+<curve x1="18.550003" x2="18.840004" x3="19.130003" y1="16.550001" y2="16.640001" y3="16.640001"/>
+<curve x1="20.110003" x2="21.270002" x3="21.890003" y1="16.640001" y2="15.650002" y3="14.060001"/>
+<curve x1="22.750004" x2="22.850002" x3="21.710003" y1="11.790001" y2="8.840002" y3="6.740001"/>
+<curve x1="20.260002" x2="16.830002" x3="13.460003" y1="4.050001" y2="2.5200014" y3="2.5200014"/>
+<curve x1="11.520002" x2="9.590003" x3="8.100002" y1="2.5200014" y2="3.0400014" y3="4.1300015"/>
+<curve x1="3.7700024" x2="2.4800024" x3="5.5700026" y1="7.1000013" y2="13.810001" y3="18.190002"/>
+<curve x1="7.4500027" x2="10.850002" x3="14.310002" y1="21.160002" y2="22.730003" y3="22.730003"/>
+<curve x1="16.250002" x2="18.200003" x3="19.920002" y1="22.730003" y2="22.240004" y3="21.220003"/>
+<curve x1="20.090002" x2="20.240002" x3="20.390001" y1="21.120003" y2="21.080004" y3="21.080004"/>
+<curve x1="20.7" x2="21.010002" x3="21.180002" y1="21.080004" y2="21.240004" y3="21.540003"/>
+<curve x1="21.430002" x2="21.270002" x3="20.830002" y1="21.970003" y2="22.520002" y3="22.760002"/>
+<curve x1="18.840002" x2="16.490002" x3="14.140001" y1="24.020002" y2="24.630003" y3="24.630003"/>
+<curve x1="10.130001" x2="6.090001" x3="3.8200016" y1="24.630003" y2="22.860003" y3="19.380003"/>
+<curve x1="1.66893E-6" x2="1.3000016" x3="6.6700015" y1="14.090003" y2="6.050003" y3="2.170004"/>
+<curve x1="8.620002" x2="11.150002" x3="13.590002" y1="0.6600039" y2="3.8146973E-6" y3="3.8146973E-6"/>
+<curve x1="14.420002" x2="15.240002" x3="16.010002" y1="3.8146973E-6" y2="0.08000381" y3="0.23000382"/>
+<curve x1="19.13" x2="22.44" x3="24.11" y1="0.7" y2="2.37" y3="5.45"/>
+<close/>
+<move x="14.13" y="15.43"/>
+<curve x1="14.55" x2="14.54" x3="14.54" y1="14.700001" y2="14.02" y3="13.190001"/>
+<line x="14.54" y="12.740001"/>
+<curve x1="13.0" x2="11.37" x3="11.37" y1="12.740001" y2="13.06" y3="14.860001"/>
+<curve x1="11.37" x2="11.84" x3="12.66" y1="15.77" y2="16.390001" y3="16.390001"/>
+<curve x1="13.26" x2="13.8" x3="14.13" y1="16.39" y2="16.03" y3="15.43"/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="72.0" name="SES" strokewidth="inherit" w="61.74">
+<connections>
+	<constraint x="0.58" y="0" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.48" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0.235" y="0.16" perimeter="0" name="NW"/>
+	<constraint x="1" y="0.24" perimeter="0" name="NE"/>
+	<constraint x="0.235" y="0.8" perimeter="0" name="SW"/>
+	<constraint x="1" y="0.79" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="14.6" y="11.48"/>
+<line x="0.0" y="34.73"/>
+<line x="14.6" y="58.13"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="30.91" y="53.81"/>
+<line x="14.6" y="57.98"/>
+<line x="14.6" y="11.48"/>
+<line x="30.91" y="15.66"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="42.79" y="29.45"/>
+<line x="50.35" y="40.27"/>
+<line x="61.73" y="17.33"/>
+<line x="53.87" y="18.63"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="40.74" y="29.83"/>
+<line x="50.35" y="29.27"/>
+<line x="35.82" y="0.0"/>
+<line x="26.85" y="3.93"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="35.82" y="0.0"/>
+<line x="59.86" y="12.02"/>
+<line x="50.35" y="29.27"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="61.73" y="17.33"/>
+<line x="61.74" y="56.58"/>
+<line x="30.91" y="72.0"/>
+<line x="30.91" y="4.99"/>
+<line x="50.35" y="40.27"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="30.91" y="4.99"/>
+<line x="30.91" y="72.0"/>
+<line x="21.68" y="67.38"/>
+<line x="21.68" y="8.68"/>
+<line x="30.91" y="4.99"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="60.12" name="SNS" strokewidth="inherit" w="60.0">
+<connections>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.71" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.48" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0" y="0.25" perimeter="0" name="NW"/>
+	<constraint x="1" y="0.25" perimeter="0" name="NE"/>
+	<constraint x="0" y="0.74" perimeter="0" name="SW"/>
+	<constraint x="1" y="0.74" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#B8852E"/>
+        <path>
+<move x="23.17" y="54.38"/>
+<line x="16.98" y="52.65"/>
+<line x="11.12" y="45.97"/>
+<line x="17.65" y="46.51"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="23.17" y="54.38"/>
+<line x="27.61" y="45.09"/>
+<line x="23.47" y="44.51"/>
+<line x="17.65" y="46.51"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#B8852E"/>
+        <path>
+<move x="8.85" y="49.98"/>
+<line x="5.36" y="49.0"/>
+<line x="2.07" y="45.24"/>
+<line x="5.6" y="45.26"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="8.85" y="49.98"/>
+<line x="11.34" y="44.75"/>
+<line x="9.01" y="44.42"/>
+<line x="5.6" y="45.26"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="0.0" y="44.77"/>
+<line x="3.56" y="45.5"/>
+<line x="3.56" y="13.11"/>
+<line x="0.0" y="15.14"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="17.33" y="16.34"/>
+<line x="17.33" y="44.22"/>
+<line x="3.56" y="45.5"/>
+<line x="3.56" y="13.11"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="7.96" y="46.44"/>
+<line x="14.07" y="47.67"/>
+<line x="14.07" y="7.92"/>
+<line x="7.96" y="11.01"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="48.92" y="19.11"/>
+<line x="48.92" y="43.18"/>
+<line x="14.07" y="47.67"/>
+<line x="14.07" y="7.92"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#B8852E"/>
+        <path>
+<move x="42.62" y="60.12"/>
+<line x="33.81" y="57.65"/>
+<line x="25.49" y="48.16"/>
+<line x="34.77" y="48.93"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="42.62" y="60.12"/>
+<line x="48.92" y="46.92"/>
+<line x="43.03" y="46.08"/>
+<line x="34.77" y="48.93"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="21.0" y="48.97"/>
+<line x="29.98" y="50.71"/>
+<line x="29.98" y="0.0"/>
+<line x="21.0" y="4.49"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="29.98" y="50.71"/>
+<line x="60.0" y="44.7"/>
+<line x="60.0" y="15.01"/>
+<line x="29.98" y="0.0"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="56.02" name="SNS Email Notification" strokewidth="inherit" w="89.67">
+<connections>
+	<constraint x="0.5" y="0.075" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0.085" y="0.5" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0.035" y="0.04" perimeter="0" name="NW"/>
+	<constraint x="1" y="0.075" perimeter="0" name="NE"/>
+	<constraint x="0.085" y="1" perimeter="0" name="SW"/>
+	<constraint x="1" y="1" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <save/>
+        <save/>
+        <save/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="22.43" y="9.13"/>
+<line x="22.43" y="11.62"/>
+<curve x1="22.43" x2="22.08" x3="21.470001" y1="9.87" y2="8.21" y3="6.66"/>
+<line x="21.470001" y="4.18"/>
+<curve x1="22.08" x2="22.43" x3="22.43" y1="5.71" y2="7.38" y3="9.13"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="22.43" y="9.12"/>
+<line x="22.43" y="11.62"/>
+<curve x1="22.43" x2="22.08" x3="21.460001" y1="9.87" y2="8.2" y3="6.66"/>
+<line x="21.460001" y="4.17"/>
+<curve x1="22.08" x2="22.43" x3="22.43" y1="5.71" y2="7.38" y3="9.12"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#EA2227"/>
+        <path>
+<move x="9.23" y="0.0"/>
+<curve x1="14.34" x2="18.46" x3="18.46" y1="0.0" y2="4.11" y3="9.16"/>
+<curve x1="18.46" x2="14.339999" x3="9.23" y1="14.23" y2="18.33" y3="18.33"/>
+<curve x1="4.1399994" x2="0.0" x3="0.0" y1="18.33" y2="14.23" y3="9.16"/>
+<curve x1="0.0" x2="4.14" x3="9.23" y1="4.11" y2="0.0" y3="0.0"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#8D090A"/>
+        <path>
+<move x="18.46" y="9.17"/>
+<line x="18.46" y="11.65"/>
+<curve x1="18.46" x2="14.339999" x3="9.23" y1="16.72" y2="20.82" y3="20.82"/>
+<curve x1="4.1399994" x2="0.0" x3="0.0" y1="20.82" y2="16.72" y3="11.65"/>
+<line x="0.0" y="9.17"/>
+<curve x1="0.0" x2="4.14" x3="9.24" y1="14.24" y2="18.33" y3="18.33"/>
+<curve x1="14.34" x2="18.46" x3="18.46" y1="18.33" y2="14.24" y3="9.17"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#8D090A"/>
+        <path>
+<move x="18.46" y="9.16"/>
+<line x="18.46" y="11.65"/>
+<curve x1="18.46" x2="18.429998" x3="18.369999" y1="12.099999" y2="12.54" y3="12.969999"/>
+<line x="18.369999" y="10.48"/>
+<curve x1="18.43" x2="18.46" x3="18.46" y1="10.05" y2="9.61" y3="9.16"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="18.37" y="10.48"/>
+<line x="18.37" y="12.969999"/>
+<curve x1="18.29" x2="18.18" x3="18.03" y1="13.48" y2="13.969999" y3="14.449999"/>
+<line x="18.03" y="11.959999"/>
+<curve x1="18.18" x2="18.29" x3="18.37" y1="11.48" y2="10.99" y3="10.48"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="18.3" y="11.28"/>
+<line x="18.029999" y="14.45"/>
+<curve x1="17.839998" x2="17.609999" x3="17.329998" y1="15.01" y2="15.55" y3="16.06"/>
+<line x="17.329998" y="13.57"/>
+<curve x1="17.609999" x2="17.849998" x3="18.029999" y1="13.059999" y2="12.5199995" y3="11.96"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="17.33" y="16.06"/>
+<curve x1="15.76" x2="12.73" x3="9.23" y1="18.89" y2="20.82" y3="20.82"/>
+<curve x1="4.1299996" x2="0.0" x3="0.0" y1="20.82" y2="16.72" y3="11.65"/>
+<line x="0.0" y="9.16"/>
+<curve x1="0.0" x2="4.14" x3="9.23" y1="14.23" y2="18.33" y3="18.33"/>
+<curve x1="12.73" x2="15.98" x3="17.55" y1="18.33" y2="15.25" y3="12.41"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="89.67" y="4.17"/>
+<line x="89.67" y="19.2"/>
+<line x="17.74" y="19.2"/>
+<curve x1="20.61" x2="22.43" x3="22.43" y1="16.77" y2="13.17" y3="9.120001"/>
+<curve x1="22.43" x2="22.08" x3="21.460001" y1="7.380001" y2="5.710001" y3="4.170001"/>
+<line x="89.67" y="4.17"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.49" w="71.94" x="17.74" y="19.2"/>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="7.78" y="23.65"/>
+<line x="89.67" y="23.65"/>
+<line x="89.67" y="36.18"/>
+<line x="7.78" y="36.18"/>
+<line x="7.78" y="23.65"/>
+<close/>
+<move x="87.02" y="33.53"/>
+<line x="87.02" y="26.3"/>
+<line x="10.45" y="26.3"/>
+<line x="10.45" y="33.53"/>
+<line x="87.02" y="33.53"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.49" w="81.89" x="7.78" y="36.18"/>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="7.78" y="41.0"/>
+<line x="89.67" y="41.0"/>
+<line x="89.67" y="53.52"/>
+<line x="7.78" y="53.52"/>
+<line x="7.78" y="41.0"/>
+<close/>
+<move x="87.02" y="50.89"/>
+<line x="87.02" y="43.64"/>
+<line x="10.45" y="43.64"/>
+<line x="10.45" y="50.89"/>
+<line x="87.02" y="50.89"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.49" w="81.89" x="7.78" y="53.53"/>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <path>
+<move x="44.02" y="6.36"/>
+<line x="44.02" y="8.04"/>
+<line x="40.36" y="8.04"/>
+<line x="40.36" y="10.440001"/>
+<line x="43.8" y="10.440001"/>
+<line x="43.8" y="12.120001"/>
+<line x="40.36" y="12.12"/>
+<line x="40.36" y="14.86"/>
+<line x="44.16" y="14.86"/>
+<line x="44.16" y="16.539999"/>
+<line x="38.29" y="16.539999"/>
+<line x="38.29" y="6.36"/>
+<line x="44.02" y="6.36"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="45.14" y="8.87"/>
+<line x="47.04" y="8.87"/>
+<line x="47.04" y="9.65"/>
+<line x="47.07" y="9.65"/>
+<curve x1="47.57" x2="48.18" x3="49.02" y1="8.96" y2="8.67" y3="8.67"/>
+<curve x1="49.920002" x2="50.58" x3="50.8" y1="8.67" y2="9.11" y3="9.9"/>
+<line x="50.82" y="9.9"/>
+<curve x1="51.13" x2="51.84" x3="52.78" y1="9.089999" y2="8.67" y3="8.67"/>
+<curve x1="54.09" x2="54.699997" x3="54.699997" y1="8.67" y2="9.4800005" y3="10.96"/>
+<line x="54.699997" y="16.54"/>
+<line x="52.719997" y="16.54"/>
+<line x="52.719997" y="11.18"/>
+<curve x1="52.719997" x2="52.499996" x3="51.949997" y1="10.54" y2="10.18" y3="10.18"/>
+<curve x1="51.319996" x2="50.909996" x3="50.909996" y1="10.18" y2="10.610001" y3="11.5"/>
+<line x="50.909996" y="16.54"/>
+<line x="48.929996" y="16.54"/>
+<line x="48.929996" y="11.18"/>
+<curve x1="48.929996" x2="48.719997" x3="48.159996" y1="10.54" y2="10.18" y3="10.18"/>
+<curve x1="47.529995" x2="47.129997" x3="47.129997" y1="10.18" y2="10.610001" y3="11.5"/>
+<line x="47.129997" y="16.54"/>
+<line x="45.139996" y="16.54"/>
+<line x="45.14" y="8.87"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="56.02" y="11.22"/>
+<line x="56.02" y="11.04"/>
+<curve x1="56.02" x2="57.23" x3="58.73" y1="9.27" y2="8.67" y3="8.67"/>
+<curve x1="61.079998" x2="61.53" x3="61.53" y1="8.67" y2="9.64" y3="11.02"/>
+<line x="61.53" y="15.06"/>
+<curve x1="61.53" x2="61.57" x3="61.77" y1="15.77" y2="16.1" y3="16.54"/>
+<line x="59.88" y="16.54"/>
+<curve x1="59.75" x2="59.690002" x3="59.63" y1="16.300001" y2="16.0" y3="15.740001"/>
+<line x="59.600002" y="15.740001"/>
+<curve x1="59.15" x2="58.58" x3="57.640003" y1="16.54" y2="16.740002" y3="16.740002"/>
+<curve x1="56.260002" x2="55.770004" x3="55.770004" y1="16.740002" y2="15.570002" y3="14.540002"/>
+<curve x1="55.770004" x2="56.360004" x3="57.720005" y1="13.110002" y2="12.520002" y3="12.150002"/>
+<line x="58.840004" y="11.850001"/>
+<curve x1="59.430004" x2="59.630005" x3="59.630005" y1="11.6900015" y2="11.470001" y3="10.950002"/>
+<curve x1="59.630005" x2="59.370007" x3="58.720005" y1="10.370002" y2="10.010002" y3="10.010002"/>
+<curve x1="58.110004" x2="57.800007" x3="57.800007" y1="10.010002" y2="10.410002" y3="11.010002"/>
+<line x="57.800007" y="11.220002"/>
+<line x="56.02" y="11.22"/>
+<close/>
+<move x="59.63" y="12.7"/>
+<curve x1="59.36" x2="59.030003" x3="58.79" y1="12.9" y2="13.03" y3="13.09"/>
+<curve x1="57.98" x2="57.670002" x3="57.670002" y1="13.26" y2="13.650001" y3="14.33"/>
+<curve x1="57.670002" x2="57.88" x3="58.410004" y1="14.92" y2="15.4" y3="15.4"/>
+<curve x1="58.940006" x2="59.630005" x3="59.630005" y1="15.4" y2="15.059999" y3="14.219999"/>
+<line x="59.63" y="12.7"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="63.01" y="6.25"/>
+<line x="64.99" y="6.25"/>
+<line x="64.99" y="7.93"/>
+<line x="63.01" y="7.93"/>
+<line x="63.01" y="6.25"/>
+<close/>
+<move x="63.01" y="8.87"/>
+<line x="64.99" y="8.87"/>
+<line x="64.99" y="16.54"/>
+<line x="63.01" y="16.54"/>
+<line x="63.01" y="8.87"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="66.46" y="6.36"/>
+<line x="68.44" y="6.36"/>
+<line x="68.44" y="16.54"/>
+<line x="66.46" y="16.54"/>
+<line x="66.46" y="6.36"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="56.39" name="SNS HTTP Notification" strokewidth="inherit" w="90.24">
+<connections>
+	<constraint x="0.5" y="0.075" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0.085" y="0.5" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0.035" y="0.04" perimeter="0" name="NW"/>
+	<constraint x="1" y="0.075" perimeter="0" name="NE"/>
+	<constraint x="0.085" y="1" perimeter="0" name="SW"/>
+	<constraint x="1" y="1" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <save/>
+        <save/>
+        <save/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="22.56" y="9.42"/>
+<line x="22.56" y="11.93"/>
+<curve x1="22.56" x2="22.22" x3="21.59" y1="10.17" y2="8.5" y3="6.9600005"/>
+<line x="21.59" y="4.4400005"/>
+<curve x1="22.22" x2="22.56" x3="22.56" y1="5.99" y2="7.65" y3="9.42"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="22.56" y="9.42"/>
+<line x="22.56" y="11.940001"/>
+<curve x1="22.56" x2="22.22" x3="21.59" y1="10.17" y2="8.5" y3="6.9600005"/>
+<line x="21.59" y="4.450001"/>
+<curve x1="22.22" x2="22.56" x3="22.56" y1="5.99" y2="7.66" y3="9.42"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#EA2227"/>
+        <path>
+<move x="9.3" y="0.0"/>
+<curve x1="14.43" x2="18.58" x3="18.58" y1="0.0" y2="4.14" y3="9.23"/>
+<curve x1="18.58" x2="14.43" x3="9.3" y1="14.32" y2="18.439999" y3="18.439999"/>
+<curve x1="4.17" x2="0.0" x3="0.0" y1="18.439999" y2="14.319999" y3="9.229999"/>
+<curve x1="0.0" x2="4.17" x3="9.3" y1="4.13" y2="0.0" y3="0.0"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#8D090A"/>
+        <path>
+<move x="18.58" y="9.22"/>
+<line x="18.58" y="11.74"/>
+<curve x1="18.58" x2="14.43" x3="9.3" y1="16.83" y2="20.95" y3="20.95"/>
+<curve x1="4.17" x2="0.0" x3="0.0" y1="20.95" y2="16.830002" y3="11.740001"/>
+<line x="0.0" y="9.220001"/>
+<curve x1="0.0" x2="4.17" x3="9.3" y1="14.320002" y2="18.440002" y3="18.440002"/>
+<curve x1="14.43" x2="18.58" x3="18.58" y1="18.44" y2="14.32" y3="9.22"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#8D090A"/>
+        <path>
+<move x="18.58" y="9.23"/>
+<line x="18.58" y="11.74"/>
+<curve x1="18.58" x2="18.55" x3="18.48" y1="12.19" y2="12.63" y3="13.059999"/>
+<line x="18.48" y="10.549999"/>
+<curve x1="18.55" x2="18.58" x3="18.58" y1="10.12" y2="9.68" y3="9.23"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="18.48" y="10.55"/>
+<line x="18.48" y="13.06"/>
+<curve x1="18.41" x2="18.3" x3="18.14" y1="13.570001" y2="14.070001" y3="14.55"/>
+<line x="18.14" y="12.04"/>
+<curve x1="18.3" x2="18.41" x3="18.48" y1="11.55" y2="11.06" y3="10.55"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="18.28" y="11.5"/>
+<line x="18.140001" y="14.55"/>
+<curve x1="17.960001" x2="17.730001" x3="17.44" y1="15.110001" y2="15.66" y3="16.17"/>
+<line x="17.44" y="13.65"/>
+<curve x1="17.730001" x2="17.960001" x3="18.140001" y1="13.139999" y2="12.599999" y3="12.04"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="17.66" y="13.0"/>
+<line x="17.44" y="16.17"/>
+<curve x1="15.860001" x2="12.81" x3="9.3" y1="19.02" y2="20.96" y3="20.96"/>
+<curve x1="4.1600003" x2="0.0" x3="0.0" y1="20.96" y2="16.829998" y3="11.739999"/>
+<line x="0.0" y="9.229999"/>
+<curve x1="0.0" x2="4.16" x3="9.3" y1="14.319999" y2="18.439999" y3="18.439999"/>
+<curve x1="12.81" x2="15.860001" x3="17.44" y1="18.439999" y2="16.509998" y3="13.649999"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="90.24" y="4.45"/>
+<line x="90.24" y="19.55"/>
+<line x="17.85" y="19.55"/>
+<curve x1="20.73" x2="22.560001" x3="22.560001" y1="17.119999" y2="13.49" y3="9.419999"/>
+<curve x1="22.560001" x2="22.220001" x3="21.590002" y1="7.659999" y2="5.989999" y3="4.439999"/>
+<line x="90.24" y="4.44"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.52" w="72.39" x="17.85" y="19.55"/>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="7.83" y="23.8"/>
+<line x="90.240005" y="23.8"/>
+<line x="90.240005" y="36.4"/>
+<line x="7.83" y="36.4"/>
+<line x="7.83" y="23.8"/>
+<close/>
+<move x="87.56" y="33.75"/>
+<line x="87.56" y="26.45"/>
+<line x="10.51" y="26.45"/>
+<line x="10.51" y="33.75"/>
+<line x="87.56" y="33.75"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.52" w="82.4" x="7.83" y="36.4"/>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="7.83" y="41.26"/>
+<line x="90.240005" y="41.26"/>
+<line x="90.24" y="53.87"/>
+<line x="7.83" y="53.87"/>
+<line x="7.83" y="41.26"/>
+<close/>
+<move x="87.56" y="51.22"/>
+<line x="87.56" y="43.920002"/>
+<line x="10.51" y="43.92"/>
+<line x="10.51" y="51.219997"/>
+<line x="87.56" y="51.22"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.51" w="82.4" x="7.83" y="53.87"/>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <path>
+<move x="38.68" y="7.38"/>
+<line x="40.77" y="7.38"/>
+<line x="40.77" y="11.32"/>
+<line x="43.21" y="11.32"/>
+<line x="43.21" y="7.3799996"/>
+<line x="45.3" y="7.3799996"/>
+<line x="45.3" y="17.67"/>
+<line x="43.21" y="17.67"/>
+<line x="43.21" y="13.1"/>
+<line x="40.77" y="13.1"/>
+<line x="40.77" y="17.67"/>
+<line x="38.68" y="17.67"/>
+<line x="38.68" y="7.38"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="52.81" y="7.38"/>
+<line x="52.81" y="9.08"/>
+<line x="50.550003" y="9.08"/>
+<line x="50.550003" y="17.67"/>
+<line x="48.46" y="17.67"/>
+<line x="48.46" y="9.08"/>
+<line x="46.2" y="9.08"/>
+<line x="46.2" y="7.38"/>
+<line x="52.81" y="7.38"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="59.77" y="7.38"/>
+<line x="59.77" y="9.08"/>
+<line x="57.510002" y="9.08"/>
+<line x="57.510002" y="17.67"/>
+<line x="55.420002" y="17.67"/>
+<line x="55.420002" y="9.08"/>
+<line x="53.160004" y="9.08"/>
+<line x="53.160004" y="7.38"/>
+<line x="59.77" y="7.38"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="60.68" y="7.38"/>
+<line x="64.33" y="7.38"/>
+<curve x1="66.450005" x2="67.17" x3="67.17" y1="7.38" y2="8.93" y3="10.47"/>
+<curve x1="67.17" x2="65.85" x3="63.879997" y1="12.6" y2="13.56" y3="13.56"/>
+<line x="62.76" y="13.56"/>
+<line x="62.76" y="17.67"/>
+<line x="60.68" y="17.67"/>
+<line x="60.68" y="7.38"/>
+<close/>
+<move x="62.76" y="12.04"/>
+<line x="63.69" y="12.04"/>
+<curve x1="64.52" x2="65.08" x3="65.08" y1="12.04" y2="11.55" y3="10.5"/>
+<curve x1="65.08" x2="64.68" x3="63.640003" y1="9.49" y2="8.91" y3="8.91"/>
+<line x="62.760002" y="8.91"/>
+<line x="62.76" y="12.04"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="56.17" name="SNS Topic" strokewidth="inherit" w="89.15">
+<connections>
+	<constraint x="0.25" y="0" perimeter="0" name="N1"/>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.75" y="0" perimeter="0" name="N2"/>
+	<constraint x="0.25" y="1" perimeter="0" name="S1"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0.75" y="1" perimeter="0" name="S2"/>
+	<constraint x="0" y="0.25" perimeter="0" name="W1"/>
+	<constraint x="0" y="0.5" perimeter="0" name="W"/>
+	<constraint x="0" y="0.75" perimeter="0" name="W2"/>
+	<constraint x="1" y="0.25" perimeter="0" name="E1"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="1" y="0.75" perimeter="0" name="E2"/>
+	<constraint x="0" y="0" perimeter="0" name="NW"/>
+	<constraint x="1" y="0" perimeter="0" name="NE"/>
+	<constraint x="0" y="1" perimeter="0" name="SW"/>
+	<constraint x="1" y="1" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#D9A741"/>
+        <rect h="16.34" w="89.14" x="0.0" y="0.0"/>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.51" w="89.14" x="0.0" y="16.34"/>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="0.0" y="21.12"/>
+<line x="89.15" y="21.12"/>
+<line x="89.15" y="34.760002"/>
+<line x="0.0" y="34.76"/>
+<line x="0.0" y="21.12"/>
+<close/>
+<move x="86.25" y="31.89"/>
+<line x="86.25" y="24.0"/>
+<line x="2.89" y="24.0"/>
+<line x="2.89" y="31.89"/>
+<line x="86.25" y="31.89"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.51" w="89.14" x="0.0" y="34.76"/>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="0.0" y="40.03"/>
+<line x="89.15" y="40.03"/>
+<line x="89.15" y="53.66"/>
+<line x="0.0" y="53.66"/>
+<line x="0.0" y="40.03"/>
+<close/>
+<move x="86.25" y="50.77"/>
+<line x="86.25" y="42.9"/>
+<line x="2.89" y="42.9"/>
+<line x="2.89" y="50.77"/>
+<line x="86.25" y="50.77"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.51" w="89.14" x="0.0" y="53.66"/>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="72.0" name="SQS" strokewidth="inherit" w="59.65">
+<connections>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.5" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0" y="0.21" perimeter="0" name="NW"/>
+	<constraint x="1" y="0.21" perimeter="0" name="NE"/>
+	<constraint x="0" y="0.79" perimeter="0" name="SW"/>
+	<constraint x="1" y="0.79" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="34.29" y="45.51"/>
+<line x="3.81" y="49.79"/>
+<line x="3.81" y="22.2"/>
+<line x="34.29" y="26.49"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="0.0" y="23.34"/>
+<line x="29.83" y="14.4"/>
+<line x="29.83" y="0.0"/>
+<line x="0.0" y="14.91"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="0.02" y="48.65"/>
+<line x="29.82" y="57.6"/>
+<line x="29.82" y="72.0"/>
+<line x="0.02" y="57.09"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="59.65" y="23.35"/>
+<line x="29.83" y="14.4"/>
+<line x="29.83" y="0.0"/>
+<line x="59.65" y="14.91"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="59.63" y="48.66"/>
+<line x="29.82" y="57.6"/>
+<line x="29.82" y="72.0"/>
+<line x="59.63" y="57.1"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="3.81" y="58.99"/>
+<line x="0.0" y="57.09"/>
+<line x="0.0" y="14.91"/>
+<line x="3.81" y="13.0"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="18.84" y="43.76"/>
+<line x="29.82" y="45.16"/>
+<line x="29.83" y="26.83"/>
+<line x="18.84" y="28.23"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="7.78" y="42.35"/>
+<line x="14.91" y="43.26"/>
+<line x="14.91" y="28.73"/>
+<line x="7.78" y="29.64"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#624A1E"/>
+        <path>
+<move x="3.81" y="22.2"/>
+<line x="29.83" y="14.4"/>
+<line x="59.65" y="23.35"/>
+<line x="34.31" y="26.5"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FAD791"/>
+        <path>
+<move x="3.81" y="49.79"/>
+<line x="29.82" y="57.6"/>
+<line x="59.63" y="48.66"/>
+<line x="34.29" y="45.51"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="59.63" y="41.33"/>
+<line x="29.82" y="45.09"/>
+<line x="29.83" y="26.83"/>
+<line x="59.63" y="30.63"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="42.64" name="SQS Message" strokewidth="inherit" w="37.76">
+<connections>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.5" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0" y="0" perimeter="0" name="NW"/>
+	<constraint x="1" y="0" perimeter="0" name="NE"/>
+	<constraint x="0" y="1" perimeter="0" name="SW"/>
+	<constraint x="1" y="1" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#D9A741"/>
+        <rect h="39.25" w="10.01" x="0.0" y="0.0"/>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="3.38" w="10.01" x="0.0" y="39.25"/>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="13.87" y="0.0"/>
+<line x="23.869999" y="0.0"/>
+<line x="23.88" y="39.25"/>
+<line x="13.87" y="39.25"/>
+<line x="13.87" y="0.0"/>
+<close/>
+<move x="21.77" y="37.16"/>
+<line x="21.77" y="2.09"/>
+<line x="15.9800005" y="2.09"/>
+<line x="15.9800005" y="37.16"/>
+<line x="21.77" y="37.16"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="3.38" w="10.01" x="13.87" y="39.25"/>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="27.74" y="0.0"/>
+<line x="37.760002" y="0.0"/>
+<line x="37.760002" y="39.25"/>
+<line x="27.74" y="39.25"/>
+<line x="27.74" y="0.0"/>
+<close/>
+<move x="35.65" y="37.16"/>
+<line x="35.65" y="2.09"/>
+<line x="29.840002" y="2.09"/>
+<line x="29.840002" y="37.16"/>
+<line x="35.65" y="37.16"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="3.38" w="10.02" x="27.74" y="39.25"/>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="42.64" name="SQS Queue" strokewidth="inherit" w="65.68">
+<connections>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.5" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0" y="0" perimeter="0" name="NW"/>
+	<constraint x="1" y="0" perimeter="0" name="NE"/>
+	<constraint x="0" y="1" perimeter="0" name="SW"/>
+	<constraint x="1" y="1" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="0.0" y="0.0"/>
+<line x="65.68" y="0.0"/>
+<line x="65.68" y="39.73"/>
+<line x="0.0" y="39.73"/>
+<line x="0.0" y="0.0"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.91" w="65.68" x="0.0" y="39.73"/>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <path>
+<move x="6.55" y="26.5"/>
+<line x="6.48" y="14.12"/>
+<line x="11.91" y="20.31"/>
+<line x="6.55" y="26.5"/>
+<close/>
+<move x="23.6" y="35.31"/>
+<line x="16.93" y="35.31"/>
+<line x="16.93" y="5.35"/>
+<line x="23.6" y="5.35"/>
+<line x="23.6" y="35.31"/>
+<close/>
+<move x="36.51" y="35.31"/>
+<line x="29.829998" y="35.31"/>
+<line x="29.83" y="5.35"/>
+<line x="36.51" y="5.35"/>
+<line x="36.51" y="35.31"/>
+<close/>
+<move x="48.35" y="35.31"/>
+<line x="41.67" y="35.31"/>
+<line x="41.67" y="5.35"/>
+<line x="48.35" y="5.35"/>
+<line x="48.35" y="35.31"/>
+<close/>
+<move x="53.85" y="26.51"/>
+<line x="53.769997" y="14.13"/>
+<line x="59.2" y="20.32"/>
+<line x="53.85" y="26.51"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="72.0" name="SWF" strokewidth="inherit" w="59.65">
+<connections>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.5" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0" y="0.21" perimeter="0" name="NW"/>
+	<constraint x="1" y="0.21" perimeter="0" name="NE"/>
+	<constraint x="0" y="0.79" perimeter="0" name="SW"/>
+	<constraint x="1" y="0.79" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="25.59" y="51.8"/>
+<line x="55.84" y="58.85"/>
+<line x="55.84" y="13.01"/>
+<line x="25.59" y="20.1"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="51.27" y="61.28"/>
+<line x="45.7" y="64.06"/>
+<line x="45.7" y="7.94"/>
+<line x="51.27" y="10.73"/>
+<close/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="59.65" y="57.09"/>
+<line x="55.84" y="58.99"/>
+<line x="55.84" y="13.01"/>
+<line x="59.65" y="14.91"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="25.59" y="14.36"/>
+<line x="25.59" y="57.7"/>
+<line x="45.7" y="64.14"/>
+<line x="45.7" y="7.94"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FAD791"/>
+        <path>
+<move x="3.81" y="49.8"/>
+<line x="29.71" y="57.57"/>
+<line x="38.74" y="54.86"/>
+<line x="12.03" y="48.64"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="12.03" y="48.64"/>
+<line x="3.81" y="49.8"/>
+<line x="3.81" y="22.2"/>
+<line x="12.03" y="23.36"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#624A1E"/>
+        <path>
+<move x="38.74" y="17.14"/>
+<line x="12.03" y="23.36"/>
+<line x="3.81" y="22.2"/>
+<line x="29.71" y="14.43"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="38.74" y="67.54"/>
+<line x="29.82" y="72.0"/>
+<line x="29.82" y="0.0"/>
+<line x="38.74" y="4.46"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="29.82" y="0.0"/>
+<line x="0.0" y="14.91"/>
+<line x="0.02" y="57.1"/>
+<line x="29.82" y="72.0"/>
+<line x="29.82" y="0.0"/>
+<close/>
+<move x="20.9" y="54.92"/>
+<line x="3.8099995" y="49.8"/>
+<line x="3.81" y="22.2"/>
+<line x="20.9" y="17.080002"/>
+<line x="20.9" y="54.92"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="57.38" name="SWF Decider" strokewidth="inherit" w="55.16">
+<connections>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0" y="0.5" perimeter="0" name="W"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="0.145" y="0.145" perimeter="0" name="NW"/>
+	<constraint x="0.855" y="0.145" perimeter="0" name="NE"/>
+	<constraint x="0.145" y="0.855" perimeter="0" name="SW"/>
+	<constraint x="0.855" y="0.855" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <save/>
+        <save/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="27.59" y="0.0"/>
+<curve x1="42.82" x2="55.16" x3="55.16" y1="0.0" y2="12.26" y3="27.39"/>
+<curve x1="55.16" x2="42.82" x3="27.59" y1="42.51" y2="54.769997" y3="54.769997"/>
+<curve x1="12.34" x2="0.0" x3="0.0" y1="54.769997" y2="42.509995" y3="27.389997"/>
+<curve x1="0.0" x2="12.34" x3="27.59" y1="12.26" y2="0.0" y3="0.0"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="55.16" y="27.39"/>
+<line x="55.16" y="30.0"/>
+<curve x1="55.16" x2="42.82" x3="27.59" y1="45.12" y2="57.379997" y3="57.379997"/>
+<curve x1="12.34" x2="0.0" x3="0.0" y1="57.379997" y2="45.119995" y3="29.999998"/>
+<line x="0.0" y="27.379997"/>
+<curve x1="0.0" x2="12.34" x3="27.59" y1="42.499996" y2="54.769997" y3="54.769997"/>
+<curve x1="42.82" x2="55.16" x3="55.16" y1="54.77" y2="42.5" y3="27.39"/>
+<close/>
+</path>
+        <fillstroke/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <fillcolor color="#876929"/>
+        <path>
+<move x="55.16" y="27.39"/>
+<line x="55.16" y="30.0"/>
+<curve x1="55.16" x2="55.07" x3="54.88" y1="31.33" y2="32.64" y3="33.91"/>
+<line x="54.88" y="31.3"/>
+<curve x1="55.07" x2="55.16" x3="55.16" y1="30.02" y2="28.71" y3="27.39"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="54.88" y="31.3"/>
+<line x="54.88" y="33.91"/>
+<curve x1="54.670002" x2="54.32" x3="53.86" y1="35.43" y2="36.9" y3="38.33"/>
+<line x="53.86" y="35.710003"/>
+<curve x1="54.32" x2="54.67" x3="54.88" y1="34.29" y2="32.82" y3="31.3"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="53.86" y="35.71"/>
+<line x="53.86" y="38.329998"/>
+<curve x1="53.32" x2="52.62" x3="51.78" y1="40.01" y2="41.62" y3="43.14"/>
+<line x="51.78" y="40.53"/>
+<curve x1="52.62" x2="53.32" x3="53.86" y1="39.01" y2="37.4" y3="35.71"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="51.78" y="40.53"/>
+<line x="51.78" y="43.14"/>
+<curve x1="47.1" x2="38.019997" x3="27.589998" y1="51.629997" y2="57.379997" y3="57.379997"/>
+<curve x1="12.339998" x2="-1.9073486E-6" x3="-1.9073486E-6" y1="57.379997" y2="45.119995" y3="29.999998"/>
+<line x="-1.9073486E-6" y="27.389997"/>
+<curve x1="-1.9073486E-6" x2="12.339998" x3="27.589998" y1="42.499996" y2="54.769997" y3="54.769997"/>
+<curve x1="38.02" x2="47.1" x3="51.78" y1="54.77" y2="49.01" y3="40.53"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <rect h="12.47" w="1.49" x="17.58" y="10.56"/>
+        <fillstroke/>
+        <rect h="12.47" w="1.49" x="17.58" y="28.92"/>
+        <fillstroke/>
+        <path>
+<move x="38.37" y="42.42"/>
+<line x="36.88" y="42.42"/>
+<line x="36.88" y="26.88"/>
+<line x="18.1" y="26.88"/>
+<line x="18.1" y="25.41"/>
+<line x="38.37" y="25.41"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <path>
+<move x="18.16" y="32.82"/>
+<line x="27.08" y="26.28"/>
+<line x="18.16" y="19.74"/>
+<line x="9.64" y="25.89"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <path>
+<move x="18.14" y="33.75"/>
+<line x="8.419999" y="25.86"/>
+<line x="18.169998" y="18.82"/>
+<line x="28.329998" y="26.279999"/>
+<line x="18.14" y="33.75"/>
+<close/>
+<move x="10.85" y="25.93"/>
+<line x="18.19" y="31.89"/>
+<line x="25.82" y="26.279999"/>
+<line x="18.16" y="20.649998"/>
+<line x="10.85" y="25.93"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <rect h="7.12" w="12.06" x="31.83" y="38.3"/>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <path>
+<move x="44.63" y="46.15"/>
+<line x="31.08" y="46.15"/>
+<line x="31.08" y="37.56"/>
+<line x="44.63" y="37.56"/>
+<line x="44.63" y="46.15"/>
+<close/>
+<move x="32.57" y="39.04"/>
+<line x="32.57" y="44.68"/>
+<line x="43.14" y="44.68"/>
+<line x="43.14" y="39.04"/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <rect h="7.12" w="12.06" x="12.41" y="7.68"/>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <path>
+<move x="25.21" y="15.54"/>
+<line x="11.66" y="15.54"/>
+<line x="11.66" y="6.95"/>
+<line x="25.21" y="6.95"/>
+<line x="25.21" y="15.54"/>
+<close/>
+<move x="13.15" y="14.06"/>
+<line x="23.72" y="14.06"/>
+<line x="23.72" y="8.42"/>
+<line x="13.15" y="8.42"/>
+<line x="13.15" y="14.06"/>
+<close/>
+</path>
+        <fillstroke/>
+        <fillcolor color="#D9A741"/>
+        <rect h="7.12" w="12.06" x="12.29" y="38.3"/>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <path>
+<move x="25.09" y="46.15"/>
+<line x="11.54" y="46.15"/>
+<line x="11.54" y="37.56"/>
+<line x="25.09" y="37.56"/>
+<line x="25.09" y="46.15"/>
+<close/>
+<move x="13.03" y="44.68"/>
+<line x="23.61" y="44.68"/>
+<line x="23.61" y="39.04"/>
+<line x="13.03" y="39.04"/>
+<line x="13.03" y="44.68"/>
+<close/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="56.21" name="SWF Worker" strokewidth="inherit" w="53.76">
+<connections>
+	<constraint x="0.25" y="0" perimeter="0" name="N1"/>
+	<constraint x="0.5" y="0" perimeter="0" name="N"/>
+	<constraint x="0.75" y="0" perimeter="0" name="N2"/>
+	<constraint x="0.25" y="1" perimeter="0" name="S1"/>
+	<constraint x="0.5" y="1" perimeter="0" name="S"/>
+	<constraint x="0.75" y="1" perimeter="0" name="S2"/>
+	<constraint x="0" y="0.25" perimeter="0" name="W1"/>
+	<constraint x="0" y="0.5" perimeter="0" name="W"/>
+	<constraint x="0" y="0.75" perimeter="0" name="W2"/>
+	<constraint x="1" y="0.25" perimeter="0" name="E1"/>
+	<constraint x="1" y="0.5" perimeter="0" name="E"/>
+	<constraint x="1" y="0.75" perimeter="0" name="E2"/>
+	<constraint x="0" y="0" perimeter="0" name="NW"/>
+	<constraint x="1" y="0" perimeter="0" name="NE"/>
+	<constraint x="0" y="1" perimeter="0" name="SW"/>
+	<constraint x="1" y="1" perimeter="0" name="SE"/>
+</connections>
+    <foreground>
+        <fillcolor color="#D9A741"/>
+        <rect h="53.69" w="53.76" x="0.0" y="0.0"/>
+        <fillstroke/>
+        <fillcolor color="#876929"/>
+        <rect h="2.52" w="53.76" x="0.0" y="53.68"/>
+        <fillstroke/>
+        <fillcolor color="#FFFFFF"/>
+        <path>
+<move x="49.95" y="31.77"/>
+<line x="49.95" y="22.330002"/>
+<line x="46.34" y="22.330002"/>
+<curve x1="45.84" x2="44.78" x3="43.27" y1="20.440002" y2="17.870003" y3="15.640001"/>
+<line x="45.8" y="13.540001"/>
+<line x="40.3" y="8.27"/>
+<line x="37.66" y="10.89"/>
+<curve x1="35.41" x2="33.19" x3="29.97" y1="9.39" y2="8.43" y3="7.9300003"/>
+<line x="29.97" y="3.8300004"/>
+<line x="21.8" y="3.8300004"/>
+<line x="21.8" y="8.030001"/>
+<curve x1="19.9" x2="17.259998" x3="15.199999" y1="8.550001" y2="9.530001" y3="10.880001"/>
+<line x="12.919999" y="8.470001"/>
+<line x="7.4899993" y="13.950001"/>
+<line x="9.889999" y="15.4800005"/>
+<curve x1="8.33" x2="7.2599993" x3="6.7399993" y1="17.74" y2="20.44" y3="22.33"/>
+<line x="3.7599993" y="22.33"/>
+<line x="3.7599993" y="31.77"/>
+<line x="6.829999" y="31.77"/>
+<curve x1="7.369999" x2="8.399999" x3="9.819999" y1="34.22" y2="36.690002" y3="38.79"/>
+<line x="7.289999" y="41.3"/>
+<line x="12.789999" y="46.76"/>
+<line x="15.029999" y="44.239998"/>
+<curve x1="17.13" x2="19.899998" x3="21.8" y1="45.649998" y2="46.67" y3="47.199997"/>
+<line x="21.8" y="50.449997"/>
+<line x="29.97" y="50.449997"/>
+<line x="29.97" y="47.299995"/>
+<curve x1="33.19" x2="35.53" x3="37.82" y1="46.789997" y2="45.679996" y3="44.119995"/>
+<line x="40.52" y="46.749996"/>
+<line x="46.05" y="41.289997"/>
+<line x="43.36" y="38.619995"/>
+<curve x1="44.73" x2="45.74" x3="46.260002" y1="36.559994" y2="32.899994" y3="31.769995"/>
+<line x="50.000004" y="31.739994"/>
+<line x="49.95" y="31.77"/>
+<close/>
+<move x="26.43" y="41.42"/>
+<curve x1="18.970001" x2="12.700001" x3="12.530001" y1="41.359997" y2="35.19" y3="27.819998"/>
+<curve x1="12.340001" x2="19.2" x3="26.54" y1="19.989998" y2="13.669998" y3="13.649998"/>
+<curve x1="34.440002" x2="40.93" x3="40.83" y1="13.629997" y2="20.009998" y3="27.849998"/>
+<curve x1="40.73" x2="34.35" x3="26.43" y1="35.41" y2="41.48" y3="41.42"/>
+</path>
+        <fillstroke/>
+        <path>
+<move x="34.72" y="27.14"/>
+<curve x1="34.72" x2="31.210001" x3="26.880001" y1="31.449999" y2="34.94" y3="34.94"/>
+<curve x1="22.550001" x2="19.04" x3="19.04" y1="34.94" y2="31.449999" y3="27.14"/>
+<curve x1="19.04" x2="22.550001" x3="26.880001" y1="22.83" y2="19.349998" y3="19.349998"/>
+<curve x1="31.21" x2="34.72" x3="34.72" y1="19.35" y2="22.84" y3="27.14"/>
+</path>
+        <fillstroke/>
+    </foreground>
+</shape>
+</shapes>

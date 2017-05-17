@@ -1,0 +1,57 @@
+###
+### Delete page confirm messge
+###
+###
+#set($isdeleteview = true)
+#set($attachments = $doc.attachmentList)
+#set($blinks = $doc.getBacklinks())
+
+#template("startpage.vm")
+<div class="main layoutsubsection">
+#if($message)
+<div id="xwikimessage">$message</div>
+#end
+#set($mess = "<br/>" )
+#set($mess = $mess.concat($localization.getValue("wiki.label.thisActionIsNotReversible")) )
+#if($doc.name.equals("Home"))
+  #set($mess = $mess.concat("<br/>") )
+  #set($mess=$mess.concat($localization.getValue("wiki.label.confirmDeleteSpaceHome")) )
+#end
+
+#if ($attachments.size() > 0)
+#set($mess = $mess.concat("<br/>") )
+#set($mess = $mess.concat($localization.getValue("wiki.label.someAttachmentsWillAlsoBeDeleted")) )
+#end
+
+#if($blinks.size()>0)
+#set($mess = $mess.concat("<br/>") )
+#set($mess = $mess.concat($localization.getValue("wiki.label.deleteOperationWillCauseSomeBrokenBacklinks")) )
+#end
+#xwikimessagebox($localization.getValue("definition.delete") $mess $doc.getURL("delete", "confirm=1&amp;$languageparams") $doc.getURL("view") $localization.getValue("definition.yes") $localization.getValue("definition.no"))
+</div>
+<br/>
+<br/>
+#if ($attachments.size() > 0)
+
+<div id="attachmentPanel">
+  #largepanelheader("$localization.getValue('wiki.form.label.attachments')")
+   #template("attachmentsinline.vm")
+  ##panelfooter()
+  #gap()
+</div>
+
+#end
+
+#if($blinks.size() > 0)
+
+<div id="backlinks">
+  #largepanelheader("$localization.getValue('wiki.form.label.backlinks')")
+   #template("backlinks.vm")
+  ##panelfooter()
+  #gap()
+</div>
+
+#end
+
+<div class="clearfloats"></div>
+#template("endpage.vm")

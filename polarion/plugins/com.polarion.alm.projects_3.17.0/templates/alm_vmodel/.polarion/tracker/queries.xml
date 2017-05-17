@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+    <query name="Awaiting Review" query="status:draft AND type:requirement"/>
+    <query name="Planned for Version 1.0" query="PLAN:(%project-id%/Version_1_0)"/>
+</queries>

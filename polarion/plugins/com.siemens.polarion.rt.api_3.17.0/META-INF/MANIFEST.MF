@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.siemens.polarion.rt.api;singleton:=true
+Export-Package: com.siemens.polarion.rt.collectors.api,com.siemens.pol
+ arion.rt.collectors.api.model,com.siemens.polarion.rt.parsers.api,com
+ .siemens.polarion.rt.parsers.api.exceptions,com.siemens.polarion.rt.p
+ arsers.api.model
+Bundle-Name: Polarion RT API Plugin
+Bundle-Version: 3.17.0
+Bundle-ClassPath: rtApi.jar
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.1.2",org.ec
+ lipse.core.resources;bundle-version="3.1.2",com.polarion.subterra.bas
+ e;bundle-version="5.17.0",com.polarion.platform.repository
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion AG
+
+

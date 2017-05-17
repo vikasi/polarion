@@ -1,0 +1,24 @@
+###
+### 
+###
+###
+#template("startpage.vm")
+<div class="main layoutsubsection">
+
+#xwikimessageboxstart($msg.get("notice") $msg.get("fileuploadislarge"))
+<b><div style="text-align: center"> 
+
+#set( $url = $xwiki.getRequestURL() )
+
+<br/>
+
+  <div style="text-align: center; border: 0px solid blue;"> 
+  #set( $url = $xwiki.getRequestURL() )
+  <a href="$xwiki.getActionURL($url,'view')">back to view</a>
+  </div>
+
+#xwikimessageboxend()
+</div></b>
+<div class="clearfloats"></div>
+</div>
+#template("endpage.vm")

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2013-01-15 13:43:31.061 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-286"></h1><p id="polarion_merged_6">
+  <span style="font-style: italic;"><span style="font-weight: bold;">NOTE TO AUTHOR: </span> Highlighted, italicized text throughout this template is provided solely as background information to assist you in creating this document.  Please delete all such text, as well as the instructions in each section, prior to submitting this document.  <span style="font-weight: bold;">ONLY YOUR PROJECT-SPECIFIC INFORMATION SHOULD APPEAR IN THE FINAL VERSION OF THIS DOCUMENT.</span></span>
+</p><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-287"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-339"></h3><p id="polarion_merged_5">
+  <span style="font-style: italic;">INFO: The SoftwareTest Case Specification document collects the test cases that verifies the Software Requirements. Each test case specifies inputs, predicted results, and a set of execution conditions for a test item.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-344"></h3><p id="polarion_merged_4">
+  <span style="font-style: italic;">TO DO: List any other documents or Web addresses to which this document refers. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-372"></h2><p id="polarion_merged_8">All the Software Requirements need to be covered by test cases collected in this document.</p><ul id="polarion_merged_7">
+  <li><span class="polarion-rte-link" data-type="document" id="fake" data-item-name="Software Design Specification" data-space-name="Design" data-option-id="default"></span> </li>
+</ul><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-373"></h2><p id="polarion_merged_1">The approach described in the following test plan should be used to perform the testing:</p><ul id="polarion_merged_9">
+  <li><span class="polarion-rte-link" data-type="document" id="fake" data-item-name="Software Verification Test Plan" data-space-name="Design" data-option-id="default"></span></li>
+</ul><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-291"></h2><div id="polarion_wiki macro name=module-workitem;params=id=TMPLT-471"></div><p id="polarion_1"></p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">SW Test Case</item>
+                <item id="layouter">titleTestSteps</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">softwareTestCase</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">generic</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

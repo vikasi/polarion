@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-action="init" initial-status="draft">
+    <transitions>
+        <transition action="start_analysis" from="draft" to="analysis"/>
+        <transition action="reject" from="analysis" to="rejected"/>
+        <transition action="reject" from="action-pending" to="rejected"/>
+        <transition action="reject" from="draft" to="rejected"/>
+        <transition action="return-draft" from="rejected" to="action-pending"/>
+        <transition action="plan_actions" from="analysis" to="action-pending"/>
+        <transition action="return-analysis" from="action-taken" to="analysis"/>
+        <transition action="return-draft" from="action-taken" to="draft"/>
+        <transition action="take_actions" from="action-pending" to="action-taken"/>
+        <transition action="return-draft" from="action-pending" to="draft"/>
+        <transition action="return-analysis" from="action-pending" to="analysis"/>
+        <transition action="complete" from="action-taken" to="completed"/>
+        <transition action="return-draft" from="analysis" to="draft"/>
+    </transitions>
+    <actions>
+        <action id="init" name="Initialization">
+            <cleared>
+                <field name="resolution"/>
+            </cleared>
+        </action>
+        <action id="start_analysis" name="Start Analysis">
+            <required>
+                <field name="severityRating"/>
+                <field name="occurrenceRating"/>
+                <field name="detectionRating"/>
+                <field name="causes"/>
+                <field name="controls"/>
+            </required>
+        </action>
+        <action id="plan_actions" name="Plan Actions">
+            <required>
+                <field name="recommendedActions"/>
+            </required>
+        </action>
+        <action id="complete" name="Complete">
+            <required>
+                <field name="resolution"/>
+            </required>
+            <conditions>
+                <condition name="LinkedWorkItemsStatus">
+                    <param name="back.link.roles" value="parent"/>
+                    <param name="link.roles" value="depends_on"/>
+                    <param name="valid.states" value="closed"/>
+                </condition>
+            </conditions>
+        </action>
+        <action id="return-draft" name="Return to Draft"/>
+        <action id="return-analysis" name="Return to Analysis"/>
+        <action id="reject" name="Reject">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+        <action id="take_actions" name="Take Actions">
+            <required>
+                <field name="severityRatingNew"/>
+                <field name="occurrenceRatingNew"/>
+                <field name="detectionRatingNew"/>
+                <field name="takenActions"/>
+            </required>
+        </action>
+    </actions>
+</workflow>

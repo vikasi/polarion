@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.psvn.launcher; singleton:=true
+Export-Package: com.polarion.psvn.core.internal.notifications,com.pola
+ rion.psvn.core.internal.notifications.creators,com.polarion.psvn.core
+ .internal.notifications.targets,com.polarion.psvn.core.notifications,
+ com.polarion.psvn.core.notifications.spi,com.polarion.psvn.launcher,c
+ om.polarion.psvn.launcher.internal.platform
+Generated-from: 1408685310618;type=2
+Bundle-Name: Launcher Plug-in
+Bundle-Version: 3.17.0
+Bundle-ClassPath: launcher.jar
+Eclipse-AutoStart: true
+Require-Bundle: com.polarion.core.boot;visibility:=reexport,org.apache
+ .log4j;visibility:=reexport,com.polarion.portal.tomcat;visibility:=re
+ export,com.polarion.core.util;visibility:=reexport,com.polarion.platf
+ orm;visibility:=reexport,com.polarion.platform.hivemind;visibility:=r
+ eexport,org.apache.hivemind,com.polarion.alm.tracker,com.polarion.alm
+ .builder,org.eclipse.core.runtime,org.eclipse.help,org.eclipse.help.w
+ ebapp,com.polarion.platform.monitoring,com.polarion.platform.guice,co
+ m.polarion.cluster,org.codehaus.groovy;bundle-version="[1.5.7,2.0.0)"
+ ,org.apache.ant;bundle-version="[1.7.0,2.0.0)",com.polarion.alm.insta
+ ll;bundle-version="[3.7.3,4.0.0)",com.polarion.subterra.persistence,c
+ om.polarion.platform.sql
+Bundle-ManifestVersion: 2
+Bundle-Activator: com.polarion.psvn.launcher.PSVNLauncherActivator
+Bundle-Vendor: POLARION
+
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-action="rework" initial-status="draft" prototype="WorkItem">
+    <transitions>
+        <transition action="sendToReview" from="draft" to="inReview"/>
+        <transition action="markDefined" from="draft" to="defined"/>
+        <transition action="reject" from="draft" to="rejected"/>
+        <transition action="markDefined" from="inReview" to="defined"/>
+        <transition action="reject" from="inReview" to="rejected"/>
+        <transition action="reject" from="defined" to="rejected"/>
+        <transition action="rework" from="rejected" to="draft"/>
+        <transition action="rework" from="inReview" to="draft"/>
+        <transition action="rework" from="defined" to="draft"/>
+    </transitions>
+    <actions>
+        <action id="rework" name="Rework">
+            <cleared>
+                <field name="resolution"/>
+            </cleared>
+        </action>
+        <action id="sendToReview" name="Send To Review">
+            <required>
+                <field name="assignee"/>
+            </required>
+        </action>
+        <action id="markDefined" name="Mark Defined"/>
+        <action id="reject" name="Reject">
+            <required>
+                <field name="assignee"/>
+                <field name="resolution"/>
+            </required>
+        </action>
+    </actions>
+</workflow>

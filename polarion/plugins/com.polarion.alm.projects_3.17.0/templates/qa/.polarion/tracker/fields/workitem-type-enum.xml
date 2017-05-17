@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option description="A User requirement" iconURL="/polarion/icons/default/enums/type_businesscase.gif" id="businesscase" name="Business Case" sortOrder="1"/>
+    <option default="true" description="A Design input requirement Teir 1" iconURL="/polarion/icons/default/enums/type_requirement.gif" id="requirement" name="Requirement" sortOrder="2"/>
+    <option description="A Verification test protocol" iconURL="/polarion/icons/default/enums/type_test.gif" id="testcase" name="Test Case" sortOrder="6"/>
+    <option description="A task that needs to be done." iconURL="/polarion/icons/default/enums/type_task.gif" id="task" name="Task" sortOrder="8"/>
+    <option description="A change request." iconURL="/polarion/icons/default/enums/type_changerequest.gif" id="changerequest" name="Change Request" sortOrder="9"/>
+    <option description="A problem which impairs or prevents the functions of the product." iconURL="/polarion/icons/default/enums/type_bug.gif" id="defect" name="Defect" sortOrder="10"/>
+    <option iconURL="/polarion/icons/default/enums/type_risk.gif" id="risk" name="Risk" sortOrder="11"/>
+</enumeration>

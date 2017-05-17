@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/calculatedfields.psml" hidden="false">
+    <title>Calculated Fields</title>
+    <short-title>Calculated Fields</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_calculatedfields_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_calculatedfields_portlet" type="portlet" name="webui::CalculatedFieldsConfigurationPortlet">
+          <preference name="confFolder" readOnly="false">
+		    <value>.polarion/tracker/fields</value>
+		  </preference>
+		  <preference name="confMatch" readOnly="false">
+		    <value>.*calculated-fields\.xml</value>
+		  </preference>
+		  <preference name="notMatchMessage" readOnly="false">
+		    <value>The filename must be either calculated-fields.xml or [WI_TYPE]-calculated-fields.xml.</value>
+		  </preference>
+		  <preference name="configurationsTitle" readOnly="false">
+		    <value>administration.workItems.calculatedFieldDefinitions</value>
+		  </preference>
+		  <preference name="uploadConfigurationTitle" readOnly="false">
+		    <value>administration.workItems.calculatedFieldDefinition</value>
+		  </preference>
+		  <preference name="uploadDescription" readOnly="false">
+		    <value>administration.workItems.calculatedFieldsFilenameMustBeEitherOrThe</value>
+		  </preference>		  		 
+		</fragment>
+    </fragment>
+</page>

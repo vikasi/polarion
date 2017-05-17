@@ -1,0 +1,7 @@
+#set ($MESSAGES = $portletConfig.getResourceBundle($renderRequest.Locale))
+
+<h2 class="portlet-section-header">$MESSAGES.getString('doc.order')</h2>
+
+<a href="$forward.getView('folder-view')">$MESSAGES.getString('folder.details')</a>
+
+#ErrorMessages($ERRORS)

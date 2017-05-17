@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20111125125554</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.macros}
+{section:width=100%}
+{column}
+1 Specification
+
+1.1 Specification Documents
+{pages:space=Specification|query=NOT type:(active content portal)|fields=pageLink,updatedBy, updated}
+
+#set($projectId = $page.project)
+
+1.1 V-Board
+
+<style>
+.bubble{
+    width:210px; height:80px; text-align:left;
+}
+.bubble_number a{
+    font-size:28px; font-weight:bold; color:rgb(51, 102, 153) !important;
+}
+.bubble_number{
+    float:left;height:80px;padding-right:10px;
+}
+.v_board th{
+    color:gray;background-color:white;font-weight:weight;border-bottom:1px solid lightgray;font-size:15px;
+}
+.v_board td{
+    padding-top:10px;
+}
+</style>
+
+#macro(bubble $label $labelSub $queryReq $tdParam)
+#set($fullLabel ="$label $labelSub")
+<td #if($tdParam)$tdParam#end ><div class="bubble">
+<div class="bubble_number">{workitems:$queryReq|display=count}</div> $label
+\\
+<a href="/polarion/#/project/$projectId/wiki/Reports/Requirements%20Test%20Coverage?query=$queryReq&label=$fullLabel" target="_top">Test Coverage</a>
+</div></td>
+#end
+
+<table class="v_board">
+<tr><th >Specification</th><th>Production</th><th>Verified</th></tr>
+<tr>
+#bubble("Business Cases" "in Specification" "type:businesscase AND status:(draft OR inReview OR approved OR rejected)" false )
+<td></td>
+#bubble("Business Cases" "Verified" "type:businesscase AND status:(verified)" "align=right") 
+</tr>
+<tr>
+#bubble("User Requirements" "in Specification" "type:requirement AND reqtype.KEY:user AND status:(draft OR inReview OR approved OR rejected)" "style='padding-left:40px'")
+#bubble("User Requirements" "in Production" "type:requirement AND reqtype.KEY:user AND status:(accepted OR implemented)" false) 
+#bubble("User Requirements" "Verified" "type:requirement AND reqtype.KEY:user AND status:(verified)" "style='padding-right:40px' align=right" )
+</tr>
+<tr>
+#bubble("Functional Requirements" "in Specification" "type:requirement AND reqtype.KEY:functional AND status:(draft OR inReview OR approved OR rejected)" "style='padding-left:80px'")
+#bubble("Functional Requirements" "in Production" "type:requirement AND reqtype.KEY:functional AND status:(accepted OR implemented)" false) 
+#bubble("Functional Requirements" "Verified" "type:requirement AND reqtype.KEY:functional AND status:(verified)" "style='padding-right:80px' align=right") 
+</tr>
+</table>
+
+1.1 Traceability
+
+* {portallink:/workitems/businesscase?resolution=unresolved&tree_depth=4&tab=tree|addcontext=yes}Business Case Traceability View{portallink} - browse business requirements down to test cases
+* *[Test Case Traceability Table>Testing.Test Case Traceability]* - review how well are the requirements covered by test cases
+{column}
+{column:width=2}
+{column}
+{column:width=300}
+
+{regiontitle}Import{regiontitle}
+{style:type=div|class=regiondescription}
+Import Microsoft Word .docx document and configure what elements should be tagged as Work Items.
+{style}
+
+<a href="javascript:top.importDocument('Specification','$page.space.projectId')">
+{image:import.png}
+</a>
+
+{regiontitle}Workflow{regiontitle}
+{table:header=no|border=no}
+<a href="../Workflow Schema">{image:rms.png|250}</a>
+{table}
+
+{column}
+{section}]]></content>
+</wiki-page>

@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.platform.monitoring
+Export-Package: com.polarion.platform.monitoring
+Bundle-Name: System Monitoring, Audit And Repair
+Bundle-Version: 3.17.0
+Bundle-ClassPath: monitoring.jar
+Require-Bundle: com.polarion.platform.jobs,com.polarion.cluster;bundle
+ -version="3.7.3"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+
+

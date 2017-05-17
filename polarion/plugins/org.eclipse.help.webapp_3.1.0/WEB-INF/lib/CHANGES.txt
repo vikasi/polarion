@@ -1,0 +1,10 @@
+CHANGES
+=======
+
+org.eclipse.help.webapp_3.1.0 - WEB-INF/lib/servlets.jar
+(original version saved as servletssrc_orig.zip, patched version saved as servletssrc_patched.zip)
+
+* class org.eclipse.help.internal.webapp.servlet.EclipseConnector
+- change transfer method to do not allow requests for files outside plugin root
+
+See DPP-44698

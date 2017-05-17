@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20111029214632</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+{section:width=100%}
+{column}
+1 Risks
+
+Failure Modes and Effects Analysis (FMEA) is a step-by-step approach for identifying all possible failures (as risk items) in a design, a manufacturing or assembly process, or a product or service, and assessing the consequences of failures.
+
+“Failure modes” means the ways, or modes, in which something might fail. Failures are any errors or defects, especially ones that affect the customer, and can be potential or actual.
+
+“Effects analysis” refers to studying the consequences of those failures.
+
+The Risks space provides a default Document for a risk specification, and several default pages with risk metrics, plus information about risk analysis according to FMEA.
+
+1.1.1 OBJECTIVE
+Identify all possible failures (as risk items) in a design, a manufacturing or assembly process, or a product or service. And study the consequences of those failures.
+
+1.1.1  INPUT
+* {document:Requirements/System Requirements}
+
+1.1.1 OUTPUT
+
+* {document:Risk Specification} ([FMEA Worksheet>FMEA Worksheet]) 
+
+1.1.1 REVIEW
+* [FMEA Worksheet> FMEA Worksheet] - Browse the standard FMEA Worksheet
+* {portallink:/wiki/Reports/Items%20By%20Status?wiType=risk|addcontext=yes}Risk by Status{portallink}
+* {portallink:/workitems/risk?query=NOT%20HAS_VALUE:resolution&link_role=assesses&tree_depth=2&tree_direction=traceability&tab=tree|addcontext=yes}Risk Items - Requirements  Traceability Tree{portallink} - browse the Risk items and related Requirements in Work Items Traceability Tree Table. Or open a {portallink:/wiki/Reports/Traceability%20Report?linkRole=assesses&linkedItemType=&sort=id&direction=Linked&query=&columns=Link%20Role,Suspect,Status&type=risk | addcontext=yes} Wiki Report{portallink}
+
+{column}
+{column:width=2px}
+{column}
+{column:width=400px}
+
+{regiontitle}FMEA Resources{regiontitle}
+* [FMEA How-To>FMEA How-To]
+
+{regiontitle}Tasks and Activities{regiontitle}
+#getProcessTaskHeading("Risks")
+{workitems:linkedWorkItems:${page.project}/$processTaskHeading.id|fields=id,title|sortby=outlineNumber}
+
+{column}
+{section}]]></content>
+</wiki-page>

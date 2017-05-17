@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20110509141357</created>
+<type>content</type>
+<content><![CDATA[1 Unplanned
+
+{toc}
+
+1.1 Score Board
+
+{table:header=no}
+<img src="/polarion/icons/default/enums/CMMI_stakeholders.gif"/> Unplanned Business Cases |  {workitems: type:businesscase AND status:approved AND NOT HAS_VALUE:targetVersion.KEY|display=count}
+<img src="/polarion/icons/default/enums/type_requirement.gif"/> Unplanned Requirements |  {workitems: type:requirement AND status:approved AND NOT PLAN:(*)|display=count}
+{table}
+
+
+To plan an item for release select {portallink:/plans?query=template.id:release|addcontext=yes}a Plan{portallink}, and add the item to the list of planned items.
+
+1.1 Unplanned Business Cases
+*Business Cases* approved by stakeholders but not yet planned.
+
+{workitems:query=type:businesscase AND status:approved AND NOT HAS_VALUE:targetVersion.KEY|fields=id,status, title, severity, priority, assignee|sortby=priority|display=table}
+
+
+1.1 Unplanned  Requirements
+*Requirements* approved by stakeholders but not yet planned.
+
+{workitems:query=type:requirement AND status:approved AND NOT PLAN:(*)|fields=id,status, title, severity, priority, assignee|sortby=priority|display=table}
+
+ ]]></content>
+</wiki-page>

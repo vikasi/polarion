@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<chart alternateHGridAlpha="20" connectNullData="1" divLineAlpha="30" drawAnchors="1" labelDisplay="rotate" lineThickness="2" numVDivLines="10" pallete="4" setAdaptiveYMin="1" showValues="0" slantLabels="1" yAxisMinValue="0">
+    <categories>
+        <category name="2011-06-09"/>
+        <category name="2011-06-10"/>
+        <category name="2011-06-11"/>
+        <category name="2011-06-12"/>
+        <category name="2011-06-13"/>
+        <category name="2011-06-14"/>
+        <category name="2011-06-15"/>
+        <category name="2011-06-16"/>
+        <category name="2011-06-17"/>
+        <category name="2011-06-18"/>
+        <category name="2011-06-19"/>
+        <category name="2011-06-20"/>
+        <category name="2011-06-21"/>
+        <category name="2011-06-22"/>
+    </categories>
+    <dataset color="000000" seriesname="TOTAL-PASS-RATIO">
+        <set value="null"/>
+        <set value="null"/>
+        <set value="null"/>
+        <set value="null"/>
+        <set value="null"/>
+        <set value="0.75"/>
+        <set value="0.75"/>
+        <set value="0.75"/>
+        <set value="0.75"/>
+        <set value="0.75"/>
+        <set value="0.75"/>
+        <set value="0.75"/>
+        <set value="0.75"/>
+        <set value="0.75"/>
+    </dataset>
+    <styles>
+        <definition>
+            <style duration="0.5" name="XScaleAnim" param="_xScale" start="0" type="ANIMATION"/>
+            <style duration="0.5" name="YScaleAnim" param="_yscale" start="0" type="ANIMATION"/>
+            <style duration="0.5" name="XAnim" param="_yscale" start="0" type="ANIMATION"/>
+            <style duration="0.5" name="AlphaAnim" param="_alpha" start="0" type="ANIMATION"/>
+        </definition>
+        <application>
+            <apply styles="XScaleAnim, YScaleAnim,AlphaAnim" toObject="CANVAS"/>
+            <apply styles="XScaleAnim,AlphaAnim" toObject="DIVLINES"/>
+            <apply styles="YScaleAnim,AlphaAnim" toObject="VDIVLINES"/>
+            <apply styles="YScaleAnim,AlphaAnim" toObject="HGRID"/>
+        </application>
+    </styles>
+</chart>

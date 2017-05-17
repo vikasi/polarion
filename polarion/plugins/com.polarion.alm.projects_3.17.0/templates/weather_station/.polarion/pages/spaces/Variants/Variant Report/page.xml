@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2015-03-25 11:41:12.901 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client3" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">#if(!$pageParameters.variant.value  || $pageParameters.variant.value.isEmpty())
+&lt;h1&gt;Variant Report&lt;/h1&gt;
+&lt;div class=&quot;polarion-rp-widget-warning&quot;&gt;
+&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+No Variant selected! Please select a Variant through the hyperlink on Variants Home page.
+&lt;script&gt;
+if(confirm(&quot;You have to select a variant first.&quot;))
+	window.top.location = &quot;/polarion/#/project/$page.reference.projectId/wiki/Variants/Home&quot;;
+&lt;/script&gt;
+#else
+
+#set($projectId = $page.reference.projectId)
+#set($itemId = $pageParameters.variant.value)
+#if($itemId.indexOf(&quot;/&quot;)!=-1)
+   #set($idArray = $itemId.split(&quot;/&quot;))
+   #set($projectId = $lists.get($idArray,0))
+   #set($itemId = $lists.get($idArray,1))
+#end
+#set($vItem = $transaction.workItems.getBy.ids($projectId,$itemId))
+
+&lt;h1&gt; $itemId - $vItem.fields.title.render&lt;/h1&gt;
+
+$vItem.render.withTitle.withLinks &lt;br/&gt;&lt;br/&gt;
+$vItem.fields.description.render
+#end
+
+        </sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client9"></p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 64.24603%;">
+  <h2 id="polarion_client6">Included Features</h2>
+  <div id="polarion_client19" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub style="white-space:pre;" id="script">#if(!$pageParameters.variant.value  || $pageParameters.variant.value.isEmpty())
+Variant not selected!
+#else
+#set($projectId = $page.reference.projectId)
+#set($itemId = $pageParameters.variant.value)
+#if($itemId.indexOf(&quot;/&quot;)!=-1)
+   #set($idArray = $itemId.split(&quot;/&quot;))
+   #set($projectId = $lists.get($idArray,0))
+   #set($itemId = $lists.get($idArray,1))
+#end
+#set($vItem = $transaction.workItems.getBy.ids($projectId,$itemId))
+
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td valign=&quot;top&quot;&gt;
+#set($included = 0)
+#set($excluded = 0)
+#set($q =  &quot;id:(&quot;)
+#foreach($f in $vItem.fields.featureSelection.selections)
+#if($f.fields.link.get.id.equals(&quot;included&quot;))
+	#set($included = $included + 1)
+	#set($q =  &quot;$q $f.fields.workItem.get.reference.toPath&quot;)
+#else
+	#set($excluded = $excluded + 1)
+#end
+##&lt;li&gt;$f.fields.workItem.get.fields.outlineNumber.render - $f.fields.workItem.render.withTitle.withLinks ($f.fields.link.render)&lt;/li&gt;
+#end
+#set($q =  &quot;$q)&quot;)
+#foreach($f in $transaction.workItems.search.query($q).sort(&quot;outlineNumber&quot;))
+&lt;div style=&quot;padding-left:$math.mul($f.fields.outlineNumber.get.length(),10)px&quot;&gt;$f.fields.outlineNumber.render.withLinks() - $f.fields.title.render &lt;/div&gt;
+#end
+&lt;/td&gt;
+&lt;td&gt;
+#set($html = $widgetContext.createHtmlFragmentBuilder())
+#set($chart = $widgetContext.createChartBuilder())
+#set($pie = $chart.pie().name(&quot;included Features&quot;))
+
+#set($nonIncluded = $math.sub($transaction.workItems.search.query(&quot;project.id:$page.reference.projectId AND type:feature&quot;).size(),$included))
+#set($nonIncluded = $math.sub($nonIncluded,$excluded))
+$!pie.addValue(&quot;Included&quot;, $included).color(&quot;green&quot;).null
+$!pie.addValue(&quot;Excluded&quot;, $excluded).color(&quot;red&quot;).null
+$!pie.addValue(&quot;Non-Included&quot;, $nonIncluded).color(&quot;gray&quot;).null
+
+$!chart.build().title().text(&quot;&quot;).null
+$!chart.build().plotOptions().pie().addRawAttribute(&quot;tooltip&quot;, &quot;{pointFormat: &#39;&lt;b&gt;{point.y}&lt;/b&gt;&#39;}&quot;).null
+$!chart.build().render($html, 350,350).null
+
+$html
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+#end</sub>
+      </sub>
+    </span>
+  </div>
+  <h2 id="polarion_client16">Variant Specifications Documents</h2>
+  <div id="polarion_client4" class="polarion-rp-widget-part" data-widget="com.polarion.table">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="dataSet">
+        <sub id="prototype">Document</sub>
+        <sub id="queryType">luceneVelocity</sub>
+        <sub id="luceneQuery" style="white-space:pre;">#if(!$pageParameters.variant.value  || $pageParameters.variant.value.isEmpty())
+_XXXXXXXNULL
+#else
+#set($projectId = $page.reference.projectId)
+#set($itemId = $pageParameters.variant.value)
+#if($itemId.indexOf(&quot;/&quot;)!=-1)
+   #set($idArray = $itemId.split(&quot;/&quot;))
+   #set($projectId = $lists.get($idArray,0))
+   #set($itemId = $lists.get($idArray,1))
+#end
+#set($vItem = $transaction.workItems.getBy.ids($projectId,$itemId))
+variant.id:&quot;$vItem.fields.id.get&quot;
+#end</sub>
+        <sub id="children">
+          <sub id="columns">
+            <sub>
+              <sub id="id">title</sub>
+            </sub>
+            <sub>
+              <sub id="id">status</sub>
+            </sub>
+            <sub>
+              <sub id="id">updated</sub>
+            </sub>
+            <sub>
+              <sub id="id">updatedBy</sub>
+            </sub>
+          </sub>
+          <sub id="sortBy"></sub>
+        </sub>
+      </sub>
+      <sub id="advanced">
+        <sub id="top">50</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client5"></p>
+</div>
+<div class="polarion-rp-column" style="width: 35.753967%;">
+  <h2 id="polarion_client11">Referenced Documents</h2>
+  <ul id="polarion_client14">
+    <li><span class="polarion-rte-link" data-type="document" id="fake" data-item-name="Feature Model" data-space-name="Features" data-option-id="default"></span></li>
+    <li><span class="polarion-rte-link" data-type="wikiPage" id="fake" data-item-name="Home" data-space-name="Master Specifications" data-option-id="default"></span></li>
+  </ul>
+  <p id="polarion_client8"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<span id="polarion-rp-parameters">
+  <sub id="variant" data-label="variant" data-type="String"></sub>
+</span>]]></field>
+    <field id="title">Variant Report</field>
+</rich-page>

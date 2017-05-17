@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.alm.projects
+Export-Package: com.polarion.alm.projects,com.polarion.alm.projects.in
+ ternal; x-friends:="com.polarion.alm.projects.tests,  com.polarion.al
+ m.tracker,  com.polarion.usdp.persistence,  com.polarion.alm.builder,
+   com.polarion.xray.webui.server,  com.polarion.alm.ui,  com.polarion
+ .platform.jobs.tests",com.polarion.alm.projects.internal.auth;x-frien
+ ds:="com.polarion.alm.projects.tests",com.polarion.alm.projects.inter
+ nal.ldap;x-friends:="com.polarion.alm.projects.tests,com.polarion.alm
+ .ws",com.polarion.alm.projects.internal.model;x-friends:="com.polario
+ n.alm.projects.tests,com.polarion.alm.tracker",com.polarion.alm.proje
+ cts.internal.template,com.polarion.alm.projects.ldap,com.polarion.alm
+ .projects.model
+Bundle-Name: Projects Plug-in
+Bundle-Version: 3.17.0
+Bundle-Localization: plugin
+Bundle-ClassPath: projects.jar
+Require-Bundle: com.polarion.platform.persistence,com.polarion.subterr
+ a.persistence,com.polarion.platform.jobs,com.polarion.subterra.index,
+ com.polarion.platform.guice;bundle-version="3.5.1"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+Guice-Modules: com.polarion.alm.projects.internal.ProjectsModule
+
+

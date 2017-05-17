@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.purevariants;singleton:=true
+Export-Package: com.polarion.purevariants.extension;x-friends:="com.po
+ larion.alm.tracker.tests",com.polarion.purevariants.server;x-friends:
+ ="com.polarion.alm.tracker.tests,com.polarion.purevariants.tests"
+Bundle-Name: Purevariants
+Bundle-Version: 3.17.0
+Bundle-ClassPath: purevariants.jar,lib/activation.jar,lib/antlr-2.7.5.
+ jar,lib/mail.jar,lib/pvcore.jar,lib/soap.jar,lib/xpp3-1.1.4c.jar
+Eclipse-AutoStart: false
+Require-Bundle: com.polarion.platform.guice;bundle-version="3.8.3",com
+ .polarion.alm.tracker;bundle-version="3.8.3",com.polarion.alm.ui;bund
+ le-version="3.8.3",com.polarion.subterra.index
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Import-Package: com.polarion.subterra.index.ext,org.apache.ecs.xhtml
+Guice-Modules: com.polarion.purevariants.GuiceModule
+
+

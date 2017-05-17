@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.example.widget
+Bundle-Name: Widget Example
+Bundle-Version: 1.0.0
+Bundle-ClassPath: example-widget.jar
+Require-Bundle: com.polarion.alm.ui,com.polarion.platform,com.polarion
+ .alm.tracker
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion Software
+
+

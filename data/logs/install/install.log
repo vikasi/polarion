@@ -1,0 +1,450 @@
+5-15-2017 15:35:50 : Creating shortcuts.
+5-15-2017 15:35:50 : Executing command: 'C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\MarkRunAsAdmin.exe' with parameters '"C:\Polarion\polarion shortcuts\Start Polarion Server.lnk"'
+5-15-2017 15:35:50 : Executing command: 'C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\MarkRunAsAdmin.exe' with parameters '"C:\Polarion\polarion shortcuts\Shutdown Polarion Server.lnk"'
+5-15-2017 15:35:50 : Executing command: 'C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\MarkRunAsAdmin.exe' with parameters '"C:\Polarion\polarion shortcuts\Start Apache, PostgreSQL and Polarion Server.lnk"'
+5-15-2017 15:35:50 : Executing command: 'C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\MarkRunAsAdmin.exe' with parameters '"C:\Polarion\polarion shortcuts\Start PostgreSQL Service.lnk"'
+5-15-2017 15:35:50 : Executing command: 'C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\MarkRunAsAdmin.exe' with parameters '"C:\Polarion\polarion shortcuts\Shutdown PostgreSQL Service.lnk"'
+5-15-2017 15:35:50 : Executing command: 'C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\MarkRunAsAdmin.exe' with parameters '"C:\Polarion\polarion shortcuts\Start Apache Service.lnk"'
+5-15-2017 15:35:50 : Executing command: 'C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\MarkRunAsAdmin.exe' with parameters '"C:\Polarion\polarion shortcuts\Shutdown Apache Service.lnk"'
+5-15-2017 15:35:50 : Editing configuration files...
+5-15-2017 15:35:50 : Setting up environment for Subversion...
+5-15-2017 15:35:50 :   - extending PATH with C:\Polarion\bundled\svn\bin
+5-15-2017 15:35:50 : Going to change PATH...
+5-15-2017 15:35:50 :  - setting default root
+5-15-2017 15:35:50 :  - getting PATH value
+5-15-2017 15:35:50 :  - setting PATH value
+5-15-2017 15:35:50 :  - refreshing environment
+5-15-2017 15:35:50 :  - setting variable
+5-15-2017 15:35:50 :  - PATH change done
+5-15-2017 15:35:50 :   - setting APR_ICONV_PATH
+5-15-2017 15:35:50 :   - done
+5-15-2017 15:35:50 : File C:\Polarion\bundled\apache\bin\stopApache.js. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:50 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:50 : File C:\Polarion\bundled\apache\conf\httpd.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:50 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:50 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:50 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:50 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:50 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:50 : File C:\Polarion\bundled\apache\conf\httpd.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:50 :      #ServerPort# replaced with 80
+5-15-2017 15:35:51 :      #ServerPort# replaced with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\httpd.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 :      #ServerAdmin# replaced with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\httpd.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 :      #ServerName# replaced with localhost
+5-15-2017 15:35:51 :      #ServerName# replaced with localhost
+5-15-2017 15:35:51 :      #ServerName# replaced with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\httpd.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\httpd.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\httpd.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\httpd.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\httpd.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-autoindex.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-autoindex.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-autoindex.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-autoindex.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-autoindex.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-autoindex.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-autoindex.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-autoindex.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-autoindex.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-dav.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-dav.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-dav.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-dav.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-dav.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-dav.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-dav.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-dav.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-dav.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-info.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-info.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-info.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-info.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-info.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-info.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-info.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-info.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-info.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-manual.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-manual.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-manual.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-manual.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-manual.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-manual.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-manual.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-manual.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-manual.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-multilang-errordoc.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-multilang-errordoc.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-multilang-errordoc.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-multilang-errordoc.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-multilang-errordoc.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-multilang-errordoc.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-multilang-errordoc.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-multilang-errordoc.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-multilang-errordoc.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-ssl.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-ssl.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-ssl.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 :      #ServerAdmin# replaced with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-ssl.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 :      #ServerName# replaced with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-ssl.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-ssl.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-ssl.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-ssl.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-ssl.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-vhosts.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-vhosts.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 :      #ServerPort# replaced with 80
+5-15-2017 15:35:51 :      #ServerPort# replaced with 80
+5-15-2017 15:35:51 :      #ServerPort# replaced with 80
+5-15-2017 15:35:51 :      #ServerPort# replaced with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-vhosts.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-vhosts.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 :      #ServerName# replaced with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-vhosts.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-vhosts.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-vhosts.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-vhosts.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-vhosts.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-mpm.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-mpm.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-mpm.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-mpm.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-mpm.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-mpm.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-mpm.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-mpm.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\httpd-mpm.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarion.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarion.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarion.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarion.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarion.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarion.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarion.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarion.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 :      #HomePath# replaced with C:\Polarion\polarion
+5-15-2017 15:35:51 :      #HomePath# replaced with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarion.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 :      #TomCatPort# replaced with 8889
+5-15-2017 15:35:51 :      #TomCatPort# replaced with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarionSVN.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarionSVN.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarionSVN.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarionSVN.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarionSVN.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarionSVN.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 :      #RepositoryPath# replaced with C:/Polarion/data/svn
+5-15-2017 15:35:51 :      #RepositoryPath# replaced with C:/Polarion/data/svn
+5-15-2017 15:35:51 :      #RepositoryPath# replaced with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarionSVN.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarionSVN.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\extra\polarionSVN.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\httpd.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\httpd.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 :      #ServerPort# replaced with 80
+5-15-2017 15:35:51 :      #ServerPort# replaced with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\httpd.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 :      #ServerAdmin# replaced with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\httpd.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 :      #ServerName# replaced with localhost
+5-15-2017 15:35:51 :      #ServerName# replaced with localhost
+5-15-2017 15:35:51 :      #ServerName# replaced with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\httpd.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\httpd.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\httpd.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\httpd.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\httpd.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-autoindex.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-autoindex.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-autoindex.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-autoindex.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-autoindex.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-autoindex.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-autoindex.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-autoindex.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-autoindex.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-dav.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-dav.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-dav.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-dav.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-dav.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-dav.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-dav.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-dav.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-dav.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-info.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-info.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-info.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-info.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-info.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-info.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-info.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-info.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-info.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-manual.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-manual.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-manual.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-manual.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-manual.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-manual.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-manual.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-manual.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-manual.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-multilang-errordoc.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-multilang-errordoc.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-multilang-errordoc.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-multilang-errordoc.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-multilang-errordoc.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-multilang-errordoc.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-multilang-errordoc.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-multilang-errordoc.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-multilang-errordoc.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-ssl.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-ssl.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-ssl.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:51 :      #ServerAdmin# replaced with admin@mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-ssl.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:51 :      #ServerName# replaced with localhost
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-ssl.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-ssl.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-ssl.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-ssl.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-ssl.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-vhosts.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:51 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-vhosts.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:52 :      #ServerPort# replaced with 80
+5-15-2017 15:35:52 :      #ServerPort# replaced with 80
+5-15-2017 15:35:52 :      #ServerPort# replaced with 80
+5-15-2017 15:35:52 :      #ServerPort# replaced with 80
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-vhosts.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-vhosts.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:52 :      #ServerName# replaced with localhost
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-vhosts.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:52 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:52 :      #Domain# replaced with mydomain.com
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-vhosts.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-vhosts.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:52 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:52 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:52 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:52 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-vhosts.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-vhosts.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-mpm.conf. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-mpm.conf. Replacing #ServerPort# with 80
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-mpm.conf. Replacing #ServerAdmin# with admin@mydomain.com
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-mpm.conf. Replacing #ServerName# with localhost
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-mpm.conf. Replacing #Domain# with mydomain.com
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-mpm.conf. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-mpm.conf. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:52 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-mpm.conf. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:52 : File C:\Polarion\bundled\apache\conf\original\extra\httpd-mpm.conf. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:52 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #ServerName# with localhost
+5-15-2017 15:35:52 :      #ServerName# replaced with localhost
+5-15-2017 15:35:52 :      #ServerName# replaced with localhost
+5-15-2017 15:35:52 :      #ServerName# replaced with localhost
+5-15-2017 15:35:52 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #ServerRoot# with C:/Polarion/bundled/apache
+5-15-2017 15:35:52 :      #ServerRoot# replaced with C:/Polarion/bundled/apache
+5-15-2017 15:35:52 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #ServerPort# with 80
+5-15-2017 15:35:52 :      #ServerPort# replaced with 80
+5-15-2017 15:35:52 :      #ServerPort# replaced with 80
+5-15-2017 15:35:52 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #RepositoryPath# with C:/Polarion/data/svn
+5-15-2017 15:35:52 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #TomCatPort# with 8889
+5-15-2017 15:35:52 :      #TomCatPort# replaced with 8889
+5-15-2017 15:35:52 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #ShutdownPort# with 8887
+5-15-2017 15:35:52 :      #ShutdownPort# replaced with 8887
+5-15-2017 15:35:52 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #UserName# with polarion
+5-15-2017 15:35:53 :      #UserName# replaced with polarion
+5-15-2017 15:35:53 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #UserPassword# with aurora
+5-15-2017 15:35:53 :      #UserPassword# replaced with aurora
+5-15-2017 15:35:53 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #PolarionRoot# with C:/Polarion
+5-15-2017 15:35:53 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #SmtpHost# with localhost
+5-15-2017 15:35:53 :      #SmtpHost# replaced with localhost
+5-15-2017 15:35:53 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #PGPassword# with polarion
+5-15-2017 15:35:53 :      #PGPassword# replaced with polarion
+5-15-2017 15:35:53 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #PGPort# with 5433
+5-15-2017 15:35:53 :      #PGPort# replaced with 5433
+5-15-2017 15:35:53 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #IsSmtpAutorization# with false
+5-15-2017 15:35:53 :      #IsSmtpAutorization# replaced with false
+5-15-2017 15:35:53 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #SmtpAccountName# with 
+5-15-2017 15:35:53 :      #SmtpAccountName# replaced with 
+5-15-2017 15:35:53 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #SmtpPassword# with 
+5-15-2017 15:35:53 :      #SmtpPassword# replaced with 
+5-15-2017 15:35:53 : File C:\Polarion\polarion\configuration\polarion.properties. Replacing #SmtpHost# with localhost
+5-15-2017 15:35:53 : File C:\Polarion\polarion\run.bat. Replacing #FullPath# with C:\Polarion\bundled\svn\bin;C:\Polarion\bundled\java\bin;C:\Polarion\bundled\apache\bin
+5-15-2017 15:35:53 :      #FullPath# replaced with C:\Polarion\bundled\svn\bin;C:\Polarion\bundled\java\bin;C:\Polarion\bundled\apache\bin
+5-15-2017 15:35:53 : File C:\Polarion\polarion\run.bat. Replacing #StartApacheLink# with C:\Polarion\polarion shortcuts\Start Apache Service.lnk
+5-15-2017 15:35:53 :      #StartApacheLink# replaced with C:\Polarion\polarion shortcuts\Start Apache Service.lnk
+5-15-2017 15:35:53 : File C:\Polarion\polarion\run.bat. Replacing #StartPolarionLink# with C:\Polarion\polarion shortcuts\Start Polarion Server.lnk
+5-15-2017 15:35:53 :      #StartPolarionLink# replaced with C:\Polarion\polarion shortcuts\Start Polarion Server.lnk
+5-15-2017 15:35:53 : File C:\Polarion\polarion\run.bat. Replacing #StartPostgresLink# with C:\Polarion\polarion shortcuts\Start PostgreSQL Service.lnk
+5-15-2017 15:35:53 :      #StartPostgresLink# replaced with C:\Polarion\polarion shortcuts\Start PostgreSQL Service.lnk
+5-15-2017 15:35:53 : File C:\Polarion\polarion\run.bat. Replacing #StartPostgresService# with PostgreSQLPolarion
+5-15-2017 15:35:53 :      #StartPostgresService# replaced with PostgreSQLPolarion
+5-15-2017 15:35:53 : File C:\Polarion\polarion\exec.bat. Replacing #JrePath# with C:\Polarion\bundled\java
+5-15-2017 15:35:53 :      #JrePath# replaced with C:\Polarion\bundled\java
+5-15-2017 15:35:53 : File C:\Polarion\maven\settings.xml. Replacing #PolarionRoot# with C:/Polarion
+5-15-2017 15:35:53 :      #PolarionRoot# replaced with C:/Polarion
+5-15-2017 15:35:53 :      #PolarionRoot# replaced with C:/Polarion
+5-15-2017 15:35:53 :      #PolarionRoot# replaced with C:/Polarion
+5-15-2017 15:35:53 :      #PolarionRoot# replaced with C:/Polarion
+5-15-2017 15:35:53 :      #PolarionRoot# replaced with C:/Polarion
+5-15-2017 15:35:53 : File C:\Polarion\polarion\shutdown.bat. Replacing #PolarionPath# with C:\Polarion
+5-15-2017 15:35:53 : File C:\Polarion\polarion\shutdown.bat. Replacing #JrePath# with C:\Polarion\bundled\java
+5-15-2017 15:35:53 : File C:\Polarion\polarion\shutdown.bat. Replacing #ShutdownPort# with 8887
+5-15-2017 15:35:53 : File C:\Polarion\polarion\shutdown.bat. Replacing #ServerName# with localhost
+5-15-2017 15:35:53 : File C:\Polarion\polarion\polarion.ini. Replacing #JrePath# with C:\Polarion\bundled\java
+5-15-2017 15:35:53 :      #JrePath# replaced with C:\Polarion\bundled\java
+5-15-2017 15:35:53 :      #JrePath# replaced with C:\Polarion\bundled\java
+5-15-2017 15:35:53 : File C:\Polarion\polarion\polarion.ini. Replacing #FullPath# with C:\Polarion\bundled\svn\bin;C:\Polarion\bundled\java\bin;C:\Polarion\bundled\apache\bin
+5-15-2017 15:35:53 : File C:\Polarion\polarion\polarion.ini. Replacing #HomePath# with C:\Polarion\polarion
+5-15-2017 15:35:53 :      #HomePath# replaced with C:\Polarion\polarion
+5-15-2017 15:35:53 :      #HomePath# replaced with C:\Polarion\polarion
+5-15-2017 15:35:53 :      #HomePath# replaced with C:\Polarion\polarion
+5-15-2017 15:35:53 : File C:\Polarion\polarion\Polarion Web Portal.url. Replacing #ServerName# with localhost
+5-15-2017 15:35:53 :      #ServerName# replaced with localhost
+5-15-2017 15:35:53 : File C:\Polarion\polarion\Polarion Web Portal.url. Replacing #ServerPort# with 80
+5-15-2017 15:35:53 :      #ServerPort# replaced with 80
+5-15-2017 15:35:53 : Install Apache Service
+5-15-2017 15:35:53 : executing: command='"C:/Polarion/bundled/apache\bin\httpd.exe"', args='-k stop -n "Apache2Polarion"'
+5-15-2017 15:35:53 :  - nonzero return code: 2
+5-15-2017 15:35:53 : executing: command='"C:/Polarion/bundled/apache\bin\httpd.exe"', args='-k uninstall -n "Apache2Polarion"'
+5-15-2017 15:35:54 :  - nonzero return code: 2
+5-15-2017 15:35:54 : executing: command='"C:/Polarion/bundled/apache\bin\httpd.exe"', args='-k install -n "Apache2Polarion" -f "C:/Polarion/bundled/apache\conf\httpd.conf" -d "C:/Polarion/bundled/apache\."'
+5-15-2017 15:35:54 : 
+5-15-2017 15:35:54 : Start Apache Service
+5-15-2017 15:35:54 : Executing command: '"C:/Polarion/bundled/apache\bin\httpd.exe"' with parameters ' -k start -n "Apache2Polarion"'
+5-15-2017 15:35:56 : 
+5-15-2017 15:35:56 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_sta.bat. Replacing #WinSysDir# with C:\windows\SysWOW64\
+5-15-2017 15:35:56 :      #WinSysDir# replaced with C:\windows\SysWOW64\
+5-15-2017 15:35:56 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_sta.bat. Replacing #SupportDir# with C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\
+5-15-2017 15:35:56 :      #SupportDir# replaced with C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\
+5-15-2017 15:35:56 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_sta.bat. Replacing #CheckFile# with C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_sta.tmp
+5-15-2017 15:35:56 :      #CheckFile# replaced with C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_sta.tmp
+5-15-2017 15:35:56 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\checkStarted_.js. Replacing #LogsDir# with C:/Polarion/data/logs/apache
+5-15-2017 15:35:56 :      #LogsDir# replaced with C:/Polarion/data/logs/apache
+5-15-2017 15:35:56 : Executing command: 'C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_sta.bat' with parameters ''
+5-15-2017 15:35:56 : Initializing PostgreSQL database. Please wait...
+5-15-2017 15:35:56 : Initializing PostgreSQL database with command:
+5-15-2017 15:35:56 : C:\Polarion\bundled\postgres\configure_postgres.bat "C:\Polarion\data\postgres-data" 5433 "polarion" > "C:\Polarion\data\configure_postgres.log" 2>&1
+5-15-2017 15:35:56 : executing: command='C:\Polarion\bundled\postgres\configure_postgres.bat', args='"C:\Polarion\data\postgres-data" 5433 "polarion" > "C:\Polarion\data\configure_postgres.log" 2>&1'
+5-15-2017 15:36:43 : 
+5-15-2017 15:36:43 : Optimizing PostgreSQL database for use with Polarion® ALM(TM). Please wait...
+5-15-2017 15:36:43 : executing: command='C:\Polarion\bundled\postgres\optimize_postgres_config.bat', args='"C:\Polarion\data\postgres-data"'
+5-15-2017 15:36:43 : 
+5-15-2017 15:36:43 : Registering service PostgreSQLPolarion with command
+5-15-2017 15:36:43 : "C:\Polarion\bundled\postgres\bin\pg_ctl.exe" register -N PostgreSQLPolarion -D "C:\Polarion\data\postgres-data" -o "-p 5433"
+5-15-2017 15:36:43 : Registering PostgreSQLPolarion service...
+5-15-2017 15:36:43 : executing: command='"C:\Polarion\bundled\postgres\bin\pg_ctl.exe"', args='register -N PostgreSQLPolarion -D "C:\Polarion\data\postgres-data" -o "-p 5433"'
+5-15-2017 15:36:44 : 
+5-15-2017 15:36:44 : executing: command='SC', args='description PostgreSQLPolarion "PostgreSQL service for Polarion."'
+5-15-2017 15:36:44 : start service PostgreSQLPolarion with command
+5-15-2017 15:36:44 : net start PostgreSQLPolarion
+5-15-2017 15:36:44 : Starting PostgreSQLPolarion...
+5-15-2017 15:36:44 : executing: command='net', args='start PostgreSQLPolarion'
+5-15-2017 15:36:46 : 
+5-15-2017 15:36:46 : Install Polarion Service
+5-15-2017 15:36:46 : executing: command='"C:\Polarion\polarion\service.bat"', args='-uninstall'
+5-15-2017 15:36:48 : executing: command='"C:\Polarion\polarion\service.bat"', args='-install'
+5-15-2017 15:36:50 : 
+5-15-2017 15:36:50 : Creating Repository. Please wait...
+5-15-2017 15:36:50 : Executing command: '"C:\Polarion\polarion\create_repository.bat"' with parameters '-noinit -demo -debug 1>"C:\Polarion\data\logs\install\create_repository.log" 2>&1'
+5-15-2017 15:36:51 : Creating Repository. Please wait...
+5-15-2017 15:36:51 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_rep_.bat. Replacing #UserName# with polarion
+5-15-2017 15:36:51 :      #UserName# replaced with polarion
+5-15-2017 15:36:51 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_rep_.bat. Replacing #UserPassword# with aurora
+5-15-2017 15:36:51 :      #UserPassword# replaced with aurora
+5-15-2017 15:36:51 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_rep_.bat. Replacing #RepositoryURL# with http://localhost:80/repo
+5-15-2017 15:36:51 :      #RepositoryURL# replaced with http://localhost:80/repo
+5-15-2017 15:36:51 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_rep_.bat. Replacing #CheckFile# with C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_rep.tmp
+5-15-2017 15:36:51 :      #CheckFile# replaced with C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_rep.tmp
+5-15-2017 15:36:51 : Executing command: 'C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_rep_.bat' with parameters ''
+5-15-2017 15:36:51 : First-time data initialization. It may take a while. Please wait...
+5-15-2017 15:36:51 : executing: command='"C:\Polarion\polarion\init_repository.bat"', args='-user admin -password admin -demo -debug 1>"C:\Polarion\data\logs\install\init_repository.log" 2>&1'
+5-15-2017 15:38:12 : Installation completed successfully
+5-15-2017 15:38:22 : Starting Polarion® ALM(TM) server. Please wait...
+5-15-2017 15:38:22 : Executing command: 'net' with parameters 'start Polarion'
+5-15-2017 15:38:25 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat. Replacing #SCFile# with C:\windows\SysWOW64\sc.exe
+5-15-2017 15:38:25 :      #SCFile# replaced with C:\windows\SysWOW64\sc.exe
+5-15-2017 15:38:25 : File C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat. Replacing #CheckFile# with C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.tmp
+5-15-2017 15:38:25 :      #CheckFile# replaced with C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.tmp
+5-15-2017 15:38:25 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:28 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:31 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:34 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:37 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:40 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:43 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:46 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:49 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:52 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:55 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:38:58 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:01 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:05 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:08 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:11 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:14 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:17 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:20 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:23 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:26 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:29 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:29 : executing: command='C:\Temp\{7B796049-ECD0-4D55-8444-766A7EE1A523}\{C351CE0D-4478-4DC2-9683-F1B87A081424}\check_service.bat', args='Polarion'
+5-15-2017 15:39:29 : Show Polarion user credentials
+5-15-2017 15:39:34 : Opening Polarion® ALM(TM) portal page...
+5-15-2017 15:39:34 : Portal started
+5-15-2017 15:39:34 : Installation process is finished

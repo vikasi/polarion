@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.synchronizer.proxy.polarion
+Export-Package: com.polarion.synchronizer.proxy.polarion,com.polarion.
+ synchronizer.proxy.polarion.internal;x-friends:="com.polarion.synchro
+ nizer.proxy.polarion.tests",com.polarion.synchronizer.proxy.polarion.
+ internal.actions,com.polarion.synchronizer.proxy.polarion.model
+Bundle-Name: Polarion
+Bundle-Version: 3.17.0
+Bundle-ClassPath: polarion.jar
+Require-Bundle: com.polarion.synchronizer;bundle-version="0.4.0",com.p
+ olarion.platform.guice;bundle-version="3.6.0",com.polarion.alm.tracke
+ r;bundle-version="3.6.0",com.polarion.alm.ui;bundle-version="3.7.1"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Import-Package: com.polarion.platform.jobs
+Guice-Modules: com.polarion.synchronizer.proxy.polarion.internal.Guice
+ Module
+
+

@@ -1,0 +1,1354 @@
+<shapes name="mxGraph.ios7.misc">
+<shape aspect="variable" h="100" name="Add" strokewidth="inherit" w="100">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1"/>
+        <constraint name="W" perimeter="0" x="0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1" y="0.5"/>
+    </connections>
+    <background>
+        <ellipse h="100" w="100" x="0" y="0"/>
+    </background>
+    <foreground>
+        <fill/>
+        <strokewidth width="2"/>
+        <path>
+            <move x="50" y="20"/>
+            <line x="50" y="80"/>
+            <move x="20" y="50"/>
+            <line x="80" y="50"/>
+        </path>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="15.0" name="Adjust" strokewidth="inherit" w="50.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <roundrect arcsize="33.33" h="15.0" w="50.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fillstroke/>
+        <path>
+            <move x="25.0" y="0.0"/>
+            <line x="25.0" y="15.0"/>
+        </path>
+        <stroke/>
+        <fillcolor color="#0080f0"/>
+        <rect h="2.0" w="9.0" x="8.0" y="6.5"/>
+        <fill/>
+        <rect h="9.0" w="2.0" x="36.5" y="3.0"/>
+        <fill/>
+        <rect h="2.0" w="9.0" x="33.0" y="6.5"/>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="157.0" name="Call Pad" strokewidth="inherit" w="146.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <fillcolor color="#48d070"/>
+        <roundrect arcsize="13.64" h="22.0" w="146.0" x="0.0" y="135.0"/>
+    </background>
+    <foreground>
+        <fill/>
+        <fontcolor color="#222222"/>
+        <fontsize size="12"/>
+        <text str="1" align="center" valign="middle" x="15.0" y="14.0"/>
+        <text str="2" align="center" valign="middle" x="73.0" y="14.0"/>
+        <text str="3" align="center" valign="middle" x="131.0" y="14.0"/>
+        <text str="4" align="center" valign="middle" x="15.0" y="47.0"/>
+        <text str="5" align="center" valign="middle" x="73.0" y="47.0"/>
+        <text str="6" align="center" valign="middle" x="131.0" y="47.0"/>
+        <text str="7" align="center" valign="middle" x="15.0" y="80.0"/>
+        <text str="8" align="center" valign="middle" x="73.0" y="80.0"/>
+        <text str="9" align="center" valign="middle" x="131.0" y="80.0"/>
+        <text str="0" align="center" valign="middle" x="73.0" y="112.5"/>
+        <text str="*" align="center" valign="middle" x="15.0" y="112.5"/>
+        <text str="#" align="center" valign="middle" x="131.0" y="112.5"/>
+        <fontsize size="7"/>
+        <fontcolor color="#c0c0c0"/>
+        <text str="ABC" align="center" valign="middle" x="73.0" y="23.0"/>
+        <text str="DEF" align="center" valign="middle" x="131.0" y="23.0"/>
+        <text str="GHI" align="center" valign="middle" x="15.0" y="56.0"/>
+        <text str="JKL" align="center" valign="middle" x="73.0" y="56.0"/>
+        <text str="MNO" align="center" valign="middle" x="131.0" y="56.0"/>
+        <text str="PQRS" align="center" valign="middle" x="15.0" y="89.0"/>
+        <text str="TUV" align="center" valign="middle" x="73.0" y="89.0"/>
+        <text str="WXYZ" align="center" valign="middle" x="131.0" y="89.0"/>
+        <text str="+" align="center" valign="middle" x="73.0" y="121.5"/>
+        <strokecolor color="#c0c0c0"/>
+        <ellipse h="30.0" w="30.0" x="0.0" y="0.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="0.0" y="33.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="0.0" y="66.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="0.0" y="99.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="58.0" y="0.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="58.0" y="33.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="58.0" y="66.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="58.0" y="99.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="116.0" y="0.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="116.0" y="33.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="116.0" y="66.0"/>
+        <stroke/>
+        <ellipse h="30.0" w="30.0" x="116.0" y="99.0"/>
+        <stroke/>
+        <fontcolor color="#ffffff"/>
+        <text str="Call" valign="bottom" x="70.0" y="150.0"/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="60.0" name="Check" strokewidth="inherit" w="70.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="30.0"/>
+            <line x="15.0" y="60.0"/>
+            <line x="70.0" y="0.0"/>
+        </path>
+    </background>
+    <foreground>
+        <strokewidth width="2"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Circle" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <foreground>
+        <ellipse h="100.0" w="100.0" x="0.0" y="0.0"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="30.0" name="Contacts Bar" strokewidth="inherit" w="174.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <rect h="30.0" w="174.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fill/>
+        <strokewidth width="2"/>
+        <path>
+            <move x="23.0" y="5.33"/>
+            <line x="11.0" y="15.33"/>
+            <line x="23.0" y="25.33"/>
+            <move x="47.0" y="5.33"/>
+            <line x="59.33" y="15.33"/>
+            <line x="47.0" y="25.33"/>
+            <move x="88.6" y="8.8"/>
+            <line x="94.67" y="8.8"/>
+            <line x="94.67" y="25.0"/>
+            <line x="77.67" y="25.0"/>
+            <line x="77.67" y="8.8"/>
+            <line x="83.74" y="8.8"/>
+            <move x="81.31" y="8.28"/>
+            <line x="86.17" y="5.33"/>
+            <line x="91.02" y="8.28"/>
+            <move x="86.17" y="5.33"/>
+            <line x="86.17" y="19.22"/>
+            <move x="110.83" y="24.0"/>
+            <arc large-arc-flag="0.0" rx="11.21" ry="11.21" sweep-flag="1.0" x="109.67" x-axis-rotation="0.0" y="22.83"/>
+            <line x="109.67" y="6.5"/>
+            <arc large-arc-flag="0.0" rx="8.36" ry="8.36" sweep-flag="1.0" x="110.83" x-axis-rotation="0.0" y="5.33"/>
+            <line x="120.17" y="5.33"/>
+            <arc large-arc-flag="0.0" rx="4.38" ry="4.38" sweep-flag="1.0" x="121.33" x-axis-rotation="0.0" y="6.5"/>
+            <arc large-arc-flag="0.0" rx="3.89" ry="3.89" sweep-flag="1.0" x="122.5" x-axis-rotation="0.0" y="5.33"/>
+            <line x="131.83" y="5.33"/>
+            <arc large-arc-flag="0.0" rx="1.17" ry="1.17" sweep-flag="1.0" x="133.0" x-axis-rotation="0.0" y="6.5"/>
+            <line x="133.0" y="22.83"/>
+            <arc large-arc-flag="0.0" rx="7.32" ry="7.32" sweep-flag="1.0" x="131.83" x-axis-rotation="0.0" y="24.0"/>
+            <close/>
+            <move x="121.33" y="6.5"/>
+            <line x="121.33" y="25.17"/>
+            <move x="144.67" y="5.33"/>
+            <line x="165.97" y="5.33"/>
+            <line x="165.97" y="7.7"/>
+            <line x="168.33" y="7.7"/>
+            <line x="168.33" y="23.08"/>
+            <line x="147.03" y="23.08"/>
+            <line x="147.03" y="20.72"/>
+            <line x="144.67" y="20.72"/>
+            <close/>
+            <move x="147.03" y="20.72"/>
+            <line x="147.03" y="7.7"/>
+            <line x="165.97" y="7.7"/>
+        </path>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Current Location" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <save/>
+        <ellipse h="100.0" w="100.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fillcolor color="#c6e2ff"/>
+        <alpha alpha="0.5"/>
+        <fill/>
+        <restore/>
+        <rect/>
+        <stroke/>
+        <strokewidth width="2"/>
+        <ellipse h="20.0" w="20.0" x="40.0" y="40.0"/>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Delete" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <ellipse h="100.0" w="100.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fill/>
+        <strokewidth width="2"/>
+        <path>
+            <move x="20.0" y="50.0"/>
+            <line x="80.0" y="50.0"/>
+        </path>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="60.0" name="Down" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="0.0"/>
+            <line x="50.0" y="60.0"/>
+            <line x="100.0" y="0.0"/>
+        </path>
+    </background>
+    <foreground>
+        <strokewidth width="2"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Dunno5" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <ellipse h="100.0" w="100.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fill/>
+        <strokewidth width="2"/>
+        <ellipse h="80.0" w="80.0" x="10.0" y="10.0"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="95.0" name="Dunno6" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <ellipse h="60.0" w="60.0" x="0.0" y="35.0"/>
+    </background>
+    <foreground>
+        <fillcolor color="#999999"/>
+        <alpha alpha="0.7"/>
+        <fill/>
+        <fillcolor color="#555555"/>
+        <ellipse h="60.0" w="60.0" x="20.0" y="0.0"/>
+        <fill/>
+        <fillcolor color="#000000"/>
+        <ellipse h="60.0" w="60.0" x="40.0" y="35.0"/>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="30.0" name="Edit Bar" strokewidth="inherit" w="174.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <rect h="30.0" w="174.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fill/>
+        <rect h="17.33" w="16.98" x="9.0" y="7.01"/>
+        <stroke/>
+        <path>
+            <move x="26.36" y="5.66"/>
+            <arc large-arc-flag="0.0" rx="6.64" ry="6.78" sweep-flag="1.0" x="27.3" x-axis-rotation="0.0" y="6.62"/>
+            <line x="15.6" y="18.56"/>
+            <arc large-arc-flag="0.0" rx="4.66" ry="4.76" sweep-flag="1.0" x="14.66" x-axis-rotation="0.0" y="17.6"/>
+            <close/>
+            <move x="42.33" y="12.16"/>
+            <line x="49.43" y="5.33"/>
+            <line x="49.43" y="9.88"/>
+            <arc large-arc-flag="0.0" rx="11.54" ry="14.78" sweep-flag="1.0" x="60.08" x-axis-rotation="0.0" y="24.67"/>
+            <arc large-arc-flag="0.0" rx="10.65" ry="13.65" sweep-flag="0.0" x="49.43" x-axis-rotation="0.0" y="15.57"/>
+            <line x="49.43" y="20.12"/>
+            <close/>
+            <move x="88.6" y="8.8"/>
+            <line x="94.67" y="8.8"/>
+            <line x="94.67" y="25.0"/>
+            <line x="77.67" y="25.0"/>
+            <line x="77.67" y="8.8"/>
+            <line x="83.74" y="8.8"/>
+            <move x="81.31" y="8.28"/>
+            <line x="86.17" y="5.33"/>
+            <line x="91.02" y="8.28"/>
+            <move x="86.17" y="5.33"/>
+            <line x="86.17" y="19.22"/>
+            <move x="110.0" y="8.61"/>
+            <arc large-arc-flag="0.0" rx="7.98" ry="7.98" sweep-flag="1.0" x="111.11" x-axis-rotation="0.0" y="7.5"/>
+            <line x="113.34" y="7.5"/>
+            <arc large-arc-flag="0.0" rx="6.72" ry="6.72" sweep-flag="1.0" x="114.45" x-axis-rotation="0.0" y="8.61"/>
+            <line x="131.14" y="8.61"/>
+            <arc large-arc-flag="0.0" rx="1.11" ry="1.11" sweep-flag="1.0" x="132.25" x-axis-rotation="0.0" y="9.72"/>
+            <line x="132.25" y="20.85"/>
+            <arc large-arc-flag="0.0" rx="5.71" ry="5.71" sweep-flag="1.0" x="131.14" x-axis-rotation="0.0" y="21.96"/>
+            <line x="111.11" y="21.96"/>
+            <arc large-arc-flag="0.0" rx="10.0" ry="10.0" sweep-flag="1.0" x="110.0" x-axis-rotation="0.0" y="20.85"/>
+            <close/>
+            <move x="110.0" y="9.72"/>
+            <line x="132.25" y="9.72"/>
+            <move x="148.5" y="6.23"/>
+            <line x="164.25" y="6.23"/>
+            <line x="163.27" y="6.23"/>
+            <line x="162.28" y="23.95"/>
+            <arc large-arc-flag="0.0" rx="8.1" ry="8.1" sweep-flag="1.0" x="161.3" x-axis-rotation="0.0" y="24.94"/>
+            <line x="151.45" y="24.94"/>
+            <arc large-arc-flag="0.0" rx="9.31" ry="9.31" sweep-flag="1.0" x="150.47" x-axis-rotation="0.0" y="23.95"/>
+            <line x="149.48" y="6.23"/>
+            <line x="148.5" y="6.23"/>
+            <close/>
+            <move x="154.41" y="6.23"/>
+            <arc large-arc-flag="0.0" rx="3.46" ry="3.46" sweep-flag="1.0" x="155.39" x-axis-rotation="0.0" y="5.25"/>
+            <line x="157.36" y="5.25"/>
+            <arc large-arc-flag="0.0" rx="2.33" ry="2.33" sweep-flag="1.0" x="158.34" x-axis-rotation="0.0" y="6.23"/>
+            <move x="156.38" y="7.22"/>
+            <line x="156.38" y="23.95"/>
+            <move x="159.82" y="7.22"/>
+            <line x="159.33" y="23.95"/>
+            <move x="152.93" y="7.22"/>
+            <line x="153.42" y="23.95"/>
+        </path>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="18.0" name="Expand" strokewidth="inherit" w="98.54">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="2.77" y="10.3"/>
+            <line x="49.27" y="0.0"/>
+            <line x="95.77" y="10.3"/>
+            <arc large-arc-flag="0.0" rx="4.0" ry="4.0" sweep-flag="1.0" x="94.27" x-axis-rotation="0.0" y="18.0"/>
+            <line x="49.27" y="8.0"/>
+            <line x="4.27" y="18.0"/>
+            <arc large-arc-flag="0.0" rx="4.0" ry="4.0" sweep-flag="1.0" x="2.77" x-axis-rotation="0.0" y="10.3"/>
+            <close/>
+        </path>
+    </background>
+    <foreground>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Flagged" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="50.0" y="0.0"/>
+            <line x="50.0" y="100.0"/>
+            <move x="0.0" y="50.0"/>
+            <line x="100.0" y="50.0"/>
+        </path>
+    </background>
+    <foreground>
+        <strokewidth width="2"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Increase" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <ellipse h="100.0" w="100.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <strokewidth width="2"/>
+        <fillstroke/>
+        <path>
+            <move x="50.0" y="20.0"/>
+            <line x="50.0" y="80.0"/>
+            <move x="20.0" y="50.0"/>
+            <line x="80.0" y="50.0"/>
+        </path>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Info" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <ellipse h="100.0" w="100.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <strokewidth width="2"/>
+        <fillstroke/>
+        <fillcolor color="#0080f0"/>
+        <path>
+            <move x="42.0" y="35.0"/>
+            <line x="55.0" y="35.0"/>
+            <line x="55.0" y="80.0"/>
+            <arc large-arc-flag="0.0" rx="3.0" ry="3.0" sweep-flag="0.0" x="58.0" x-axis-rotation="0.0" y="83.0"/>
+            <line x="42.0" y="83.0"/>
+            <arc large-arc-flag="0.0" rx="3.0" ry="3.0" sweep-flag="0.0" x="45.0" x-axis-rotation="0.0" y="80.0"/>
+            <line x="45.0" y="38.0"/>
+            <arc large-arc-flag="0.0" rx="3.0" ry="3.0" sweep-flag="0.0" x="42.0" x-axis-rotation="0.0" y="35.0"/>
+        </path>
+        <fill/>
+        <ellipse h="10.0" w="10.0" x="45.0" y="20.0"/>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Keyboard (Letters)" strokewidth="inherit" w="174.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <rect h="100.0" w="174.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fillcolor color="#e0e0e0"/>
+        <fill/>
+        <fillcolor color="#ffffff"/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="46.0" y="78.0"/>
+        <fill/>
+        <fillcolor color="#c0c0c0"/>
+        <roundrect arcsize="13.68" h="19.0" w="18.27" x="23.5" y="78.0"/>
+        <fill/>
+        <strokecolor color="#222222"/>
+        <ellipse h="12.0" w="12.0" x="26.5" y="81.5"/>
+        <stroke/>
+        <path>
+            <move x="26.5" y="87.5"/>
+            <line x="38.5" y="87.5"/>
+            <move x="32.5" y="81.5"/>
+            <line x="32.5" y="93.5"/>
+            <move x="32.5" y="93.5"/>
+            <arc large-arc-flag="0.0" rx="8.0" ry="8.0" sweep-flag="1.0" x="32.5" x-axis-rotation="0.0" y="81.5"/>
+            <arc large-arc-flag="0.0" rx="8.0" ry="8.0" sweep-flag="1.0" x="32.5" x-axis-rotation="0.0" y="93.5"/>
+            <close/>
+            <move x="28.0" y="83.5"/>
+            <arc large-arc-flag="0.0" rx="8.0" ry="8.0" sweep-flag="0.0" x="37.0" x-axis-rotation="0.0" y="83.5"/>
+            <move x="28.0" y="91.5"/>
+            <arc large-arc-flag="0.0" rx="8.0" ry="8.0" sweep-flag="1.0" x="37.0" x-axis-rotation="0.0" y="91.5"/>
+            <move x="50.5" y="83.5"/>
+            <arc large-arc-flag="0.0" rx="2.25" ry="2.25" sweep-flag="1.0" x="55.0" x-axis-rotation="0.0" y="83.5"/>
+            <line x="55.0" y="88.0"/>
+            <arc large-arc-flag="0.0" rx="2.25" ry="2.25" sweep-flag="1.0" x="50.5" x-axis-rotation="0.0" y="88.0"/>
+            <close/>
+            <move x="49.0" y="87.5"/>
+            <line x="49.0" y="88.0"/>
+            <arc large-arc-flag="0.0" rx="3.75" ry="3.75" sweep-flag="0.0" x="56.5" x-axis-rotation="0.0" y="88.0"/>
+            <line x="56.5" y="87.5"/>
+            <move x="52.75" y="91.75"/>
+            <line x="52.75" y="95.0"/>
+            <move x="50.5" y="95.0"/>
+            <line x="55.0" y="95.0"/>
+        </path>
+        <stroke/>
+        <fillcolor color="#ffffff"/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="2.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="20.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="38.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="56.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="13.16" h="19.0" w="72.0" x="63.0" y="78.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="73.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="90.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="107.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="124.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="141.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="158.0" y="3.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="11.0" y="29.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="29.0" y="29.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="47.0" y="29.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="65.0" y="29.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="82.0" y="29.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="99.0" y="29.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="116.0" y="29.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="133.0" y="29.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="150.0" y="29.0"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="133.0" y="53.5"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="116.0" y="53.5"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="99.0" y="53.5"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="82.0" y="53.5"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="65.0" y="53.5"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="47.0" y="53.5"/>
+        <fill/>
+        <roundrect arcsize="18.52" h="19.0" w="13.5" x="29.0" y="53.5"/>
+        <fill/>
+        <fillcolor color="#c0c0c0"/>
+        <roundrect arcsize="13.16" h="19.0" w="21.9" x="150.0" y="53.5"/>
+        <fill/>
+        <roundrect arcsize="13.16" h="19.0" w="22.0" x="2.0" y="53.5"/>
+        <fill/>
+        <roundrect arcsize="13.68" h="19.0" w="18.27" x="2.0" y="78.0"/>
+        <fill/>
+        <roundrect arcsize="13.16" h="19.0" w="34.0" x="138.0" y="78.0"/>
+        <fill/>
+        <strokecolor color="#222222"/>
+        <linejoin join="round"/>
+        <linecap cap="round"/>
+        <path>
+            <move x="11.0" y="63.0"/>
+            <line x="9.0" y="63.0"/>
+            <line x="13.0" y="58.0"/>
+            <line x="17.0" y="63.0"/>
+            <line x="15.0" y="63.0"/>
+            <line x="15.0" y="67.0"/>
+            <line x="11.0" y="67.0"/>
+            <close/>
+            <move x="159.0" y="59.0"/>
+            <line x="167.0" y="59.0"/>
+            <line x="167.0" y="67.0"/>
+            <line x="159.0" y="67.0"/>
+            <line x="155.0" y="63.0"/>
+            <close/>
+            <move x="161.0" y="61.0"/>
+            <line x="165.0" y="65.0"/>
+            <move x="165.0" y="61.0"/>
+            <line x="161.0" y="65.0"/>
+        </path>
+        <stroke/>
+        <fontsize size="10"/>
+        <text str="Q" align="center" valign="middle" x="9.0" y="12.5"/>
+        <text str="W" align="center" valign="middle" x="27.0" y="12.5"/>
+        <text str="E" align="center" valign="middle" x="44.5" y="12.5"/>
+        <text str="R" align="center" valign="middle" x="62.5" y="12.5"/>
+        <text str="T" align="center" valign="middle" x="80.0" y="12.5"/>
+        <text str="Y" align="center" valign="middle" x="97.0" y="12.5"/>
+        <text str="U" align="center" valign="middle" x="113.5" y="12.5"/>
+        <text str="I" align="center" valign="middle" x="131.0" y="12.5"/>
+        <text str="O" align="center" valign="middle" x="147.5" y="12.5"/>
+        <text str="P" align="center" valign="middle" x="164.5" y="12.5"/>
+        <text str="A" align="center" valign="middle" x="17.5" y="38.0"/>
+        <text str="S" align="center" valign="middle" x="35.5" y="38.0"/>
+        <text str="D" align="center" valign="middle" x="53.5" y="38.0"/>
+        <text str="F" align="center" valign="middle" x="72.0" y="38.0"/>
+        <text str="G" align="center" valign="middle" x="88.5" y="38.0"/>
+        <text str="H" align="center" valign="middle" x="106" y="38.0"/>
+        <text str="J" align="center" valign="middle" x="123.0" y="38.0"/>
+        <text str="K" align="center" valign="middle" x="139.5" y="38.0"/>
+        <text str="L" align="center" valign="middle" x="156.5" y="38.0"/>
+        <text str="Z" align="center" valign="middle" x="35.5" y="63.0"/>
+        <text str="X" align="center" valign="middle" x="53.5" y="63.0"/>
+        <text str="C" align="center" valign="middle" x="71.5" y="63.0"/>
+        <text str="V" align="center" valign="middle" x="88.5" y="63.0"/>
+        <text str="B" align="center" valign="middle" x="105.5" y="63.0"/>
+        <text str="N" align="center" valign="middle" x="122.5" y="63.0"/>
+        <text str="M" align="center" valign="middle" x="139.0" y="63.0"/>
+        <text str="123" align="center" valign="middle" x="11.0" y="86.5"/>
+        <text str="space" align="center" valign="middle" x="97.5" y="86.5"/>
+        <text str="return" align="center" valign="middle" x="154.5" y="86.78"/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Left" strokewidth="inherit" w="60.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="60.0" y="0.0"/>
+            <line x="0.0" y="50.0"/>
+            <line x="60.0" y="100.0"/>
+        </path>
+    </background>
+    <foreground>
+        <strokewidth width="2"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Loading Circle" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <roundrect arcsize="50.0" h="25.0" w="8.0" x="46.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fillcolor color="#cccccc"/>
+        <fill/>
+        <roundrect arcsize="50.0" h="8.0" w="25.0" x="75.0" y="46.0"/>
+        <fill/>
+        <path>
+            <move x="68.33" y="9.0"/>
+            <line x="61.22" y="22.21"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="63.26" x-axis-rotation="28.28" y="28.98"/>
+            <line x="61.5" y="28.03"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="68.27" x-axis-rotation="28.28" y="26.0"/>
+            <line x="75.38" y="12.79"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="73.34" x-axis-rotation="28.28" y="6.02"/>
+            <line x="75.1" y="6.97"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="68.33" x-axis-rotation="28.28" y="9.0"/>
+            <close/>
+            <move x="87.57" y="24.77"/>
+            <line x="74.3" y="31.75"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="72.2" x-axis-rotation="62.24" y="38.51"/>
+            <line x="71.27" y="36.74"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="78.03" x-axis-rotation="62.24" y="38.83"/>
+            <line x="91.3" y="31.85"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="93.4" x-axis-rotation="62.24" y="25.09"/>
+            <line x="94.33" y="26.86"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="87.57" x-axis-rotation="62.24" y="24.77"/>
+            <close/>
+            <move x="24.43" y="12.73"/>
+            <line x="31.8" y="25.8"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="38.61" x-axis-rotation="-29.44" y="27.69"/>
+            <line x="36.87" y="28.68"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="38.77" x-axis-rotation="-29.44" y="21.87"/>
+            <line x="31.4" y="8.8"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="24.59" x-axis-rotation="-29.44" y="6.91"/>
+            <line x="26.33" y="5.92"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="24.43" x-axis-rotation="-29.44" y="12.73"/>
+            <close/>
+            <move x="25.8" y="31.94"/>
+            <line x="12.68" y="24.66"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="5.88" x-axis-rotation="119.02" y="26.61"/>
+            <line x="6.85" y="24.86"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="8.8" x-axis-rotation="119.02" y="31.66"/>
+            <line x="21.92" y="38.94"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="28.72" x-axis-rotation="119.02" y="36.99"/>
+            <line x="27.75" y="38.74"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="25.8" x-axis-rotation="119.02" y="31.94"/>
+            <close/>
+        </path>
+        <fill/>
+        <fillcolor color="#000000"/>
+        <roundrect arcsize="50.0" h="8.0" w="25.0" x="0.0" y="46.0"/>
+        <fill/>
+        <fillcolor color="#999999"/>
+        <path>
+            <move x="74.0" y="68.54"/>
+            <line x="87.27" y="75.53"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="94.03" x-axis-rotation="-62.22" y="73.44"/>
+            <line x="93.09" y="75.21"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="91.0" x-axis-rotation="-62.22" y="68.46"/>
+            <line x="77.73" y="61.47"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="70.97" x-axis-rotation="-62.22" y="63.56"/>
+            <line x="71.91" y="61.79"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="74.0" x-axis-rotation="-62.22" y="68.54"/>
+            <close/>
+            <move x="61.14" y="78.22"/>
+            <line x="68.49" y="91.3"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="75.3" x-axis-rotation="-29.33" y="93.21"/>
+            <line x="73.55" y="94.19"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="75.46" x-axis-rotation="-29.33" y="87.38"/>
+            <line x="68.11" y="74.3"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="61.3" x-axis-rotation="-29.33" y="72.39"/>
+            <line x="63.05" y="71.41"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="61.14" x-axis-rotation="-29.33" y="78.22"/>
+            <close/>
+        </path>
+        <fill/>
+        <fillcolor color="#666666"/>
+        <roundrect arcsize="50.0" h="25.0" w="8.0" x="46.0" y="75.0"/>
+        <fill/>
+        <path>
+            <move x="31.77" y="74.3"/>
+            <line x="24.45" y="87.39"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="26.37" x-axis-rotation="29.24" y="94.2"/>
+            <line x="24.62" y="93.22"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="31.43" x-axis-rotation="29.24" y="91.3"/>
+            <line x="38.75" y="78.21"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="36.83" x-axis-rotation="29.24" y="71.4"/>
+            <line x="38.58" y="72.38"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="31.77" x-axis-rotation="29.24" y="74.3"/>
+            <close/>
+        </path>
+        <fill/>
+        <fillcolor color="#333333"/>
+        <path>
+            <move x="21.82" y="61.2"/>
+            <line x="8.8" y="68.65"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="6.95" x-axis-rotation="60.23" y="75.47"/>
+            <line x="5.95" y="73.74"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="12.78" x-axis-rotation="60.23" y="75.6"/>
+            <line x="25.8" y="68.15"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="27.65" x-axis-rotation="60.23" y="61.33"/>
+            <line x="28.65" y="63.06"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="21.82" x-axis-rotation="60.23" y="61.2"/>
+            <close/>
+        </path>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="30.0" name="Message Bar" strokewidth="inherit" w="174.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <rect h="30.0" w="174.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fill/>
+        <path>
+            <move x="6.5" y="6.44"/>
+            <arc large-arc-flag="0.0" rx="15.19" ry="15.19" sweep-flag="1.0" x="16.62" x-axis-rotation="0.0" y="6.44"/>
+            <arc large-arc-flag="0.0" rx="15.19" ry="15.19" sweep-flag="0.0" x="26.75" x-axis-rotation="0.0" y="6.44"/>
+            <line x="26.75" y="15.55"/>
+            <arc large-arc-flag="0.0" rx="15.19" ry="15.19" sweep-flag="1.0" x="16.62" x-axis-rotation="0.0" y="15.55"/>
+            <arc large-arc-flag="0.0" rx="15.19" ry="15.19" sweep-flag="0.0" x="6.5" x-axis-rotation="0.0" y="15.55"/>
+            <line x="6.5" y="25.68"/>
+            <close/>
+            <move x="39.75" y="7.95"/>
+            <arc large-arc-flag="0.0" rx="1.2" ry="1.2" sweep-flag="1.0" x="40.95" x-axis-rotation="0.0" y="6.75"/>
+            <line x="43.35" y="6.75"/>
+            <arc large-arc-flag="0.0" rx="2.06" ry="2.06" sweep-flag="1.0" x="44.55" x-axis-rotation="0.0" y="7.95"/>
+            <line x="62.55" y="7.95"/>
+            <arc large-arc-flag="0.0" rx="9.32" ry="9.32" sweep-flag="1.0" x="63.75" x-axis-rotation="0.0" y="9.15"/>
+            <line x="63.75" y="21.15"/>
+            <arc large-arc-flag="0.0" rx="10.46" ry="10.46" sweep-flag="1.0" x="62.55" x-axis-rotation="0.0" y="22.35"/>
+            <line x="40.95" y="22.35"/>
+            <arc large-arc-flag="0.0" rx="5.33" ry="5.33" sweep-flag="1.0" x="39.75" x-axis-rotation="0.0" y="21.15"/>
+            <close/>
+            <move x="39.75" y="9.15"/>
+            <line x="63.75" y="9.15"/>
+            <move x="75.75" y="5.0"/>
+            <line x="98.0" y="5.0"/>
+            <line x="98.0" y="8.34"/>
+            <line x="96.89" y="8.34"/>
+            <line x="96.89" y="25.02"/>
+            <line x="76.86" y="25.02"/>
+            <line x="76.86" y="8.34"/>
+            <line x="75.75" y="8.34"/>
+            <close/>
+            <move x="76.86" y="8.34"/>
+            <line x="96.89" y="8.34"/>
+            <move x="92.44" y="10.56"/>
+            <arc large-arc-flag="0.0" rx="7.27" ry="7.27" sweep-flag="1.0" x="92.44" x-axis-rotation="0.0" y="12.79"/>
+            <line x="81.31" y="12.79"/>
+            <arc large-arc-flag="0.0" rx="2.89" ry="2.89" sweep-flag="1.0" x="81.31" x-axis-rotation="0.0" y="10.56"/>
+            <close/>
+            <move x="109.25" y="12.15"/>
+            <line x="118.78" y="5.0"/>
+            <line x="118.78" y="9.77"/>
+            <arc large-arc-flag="0.0" rx="15.49" ry="15.49" sweep-flag="1.0" x="133.08" x-axis-rotation="0.0" y="25.25"/>
+            <arc large-arc-flag="0.0" rx="14.3" ry="14.3" sweep-flag="0.0" x="118.78" x-axis-rotation="0.0" y="15.72"/>
+            <line x="118.78" y="20.49"/>
+            <close/>
+        </path>
+        <stroke/>
+        <rect h="18.64" w="18.64" x="146.25" y="6.36"/>
+        <stroke/>
+        <path>
+            <move x="165.3" y="4.91"/>
+            <arc large-arc-flag="0.0" rx="0.63" ry="0.63" sweep-flag="1.0" x="166.34" x-axis-rotation="0.0" y="5.95"/>
+            <line x="153.5" y="18.79"/>
+            <arc large-arc-flag="0.0" rx="7.66" ry="7.66" sweep-flag="1.0" x="152.46" x-axis-rotation="0.0" y="17.75"/>
+            <close/>
+        </path>
+        <fillstroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="30.0" name="Misc Bar" strokewidth="inherit" w="174.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <rect h="30.0" w="174.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fill/>
+        <path>
+            <move x="17.25" y="6.75"/>
+            <line x="19.72" y="13.05"/>
+            <line x="26.25" y="13.05"/>
+            <line x="21.05" y="16.45"/>
+            <line x="23.55" y="22.95"/>
+            <line x="17.25" y="18.88"/>
+            <line x="10.95" y="22.95"/>
+            <line x="13.45" y="16.45"/>
+            <line x="8.25" y="13.05"/>
+            <line x="14.8" y="13.05"/>
+            <close/>
+            <move x="52.0" y="6.25"/>
+            <line x="52.0" y="15.25"/>
+            <line x="47.0" y="15.25"/>
+            <move x="78.8" y="21.15"/>
+            <arc large-arc-flag="0.0" rx="11.2" ry="5.6" sweep-flag="1.0" x="84.54" x-axis-rotation="0.0" y="18.69"/>
+            <arc large-arc-flag="0.0" rx="6.27" ry="6.27" sweep-flag="0.0" x="85.26" x-axis-rotation="0.0" y="18.08"/>
+            <arc large-arc-flag="0.0" rx="4.47" ry="4.47" sweep-flag="0.0" x="83.92" x-axis-rotation="0.0" y="14.59"/>
+            <arc large-arc-flag="0.0" rx="3.06" ry="7.65" sweep-flag="1.0" x="83.92" x-axis-rotation="0.0" y="12.34"/>
+            <arc large-arc-flag="0.0" rx="4.54" ry="4.54" sweep-flag="1.0" x="87.0" x-axis-rotation="0.0" y="8.64"/>
+            <arc large-arc-flag="0.0" rx="6.56" ry="6.56" sweep-flag="1.0" x="90.08" x-axis-rotation="0.0" y="12.34"/>
+            <arc large-arc-flag="0.0" rx="5.55" ry="13.87" sweep-flag="1.0" x="90.08" x-axis-rotation="0.0" y="14.59"/>
+            <arc large-arc-flag="0.0" rx="7.31" ry="7.31" sweep-flag="0.0" x="88.74" x-axis-rotation="0.0" y="18.08"/>
+            <arc large-arc-flag="0.0" rx="7.59" ry="7.59" sweep-flag="0.0" x="89.46" x-axis-rotation="0.0" y="18.69"/>
+            <arc large-arc-flag="0.0" rx="15.69" ry="7.84" sweep-flag="1.0" x="95.2" x-axis-rotation="0.0" y="21.15"/>
+            <move x="149.0" y="19.5"/>
+            <line x="163.25" y="19.5"/>
+        </path>
+        <stroke/>
+        <ellipse h="20.0" w="20.0" x="42.0" y="5.25"/>
+        <stroke/>
+        <ellipse h="20.5" w="20.5" x="76.75" y="4.75"/>
+        <stroke/>
+        <ellipse h="5.67" w="5.67" x="111.25" y="4.75"/>
+        <stroke/>
+        <ellipse h="5.67" w="5.67" x="118.54" y="4.75"/>
+        <stroke/>
+        <ellipse h="5.67" w="5.67" x="125.83" y="4.75"/>
+        <stroke/>
+        <ellipse h="5.67" w="5.67" x="111.25" y="12.04"/>
+        <stroke/>
+        <ellipse h="5.67" w="5.67" x="118.54" y="12.04"/>
+        <stroke/>
+        <ellipse h="5.67" w="5.67" x="125.83" y="12.04"/>
+        <stroke/>
+        <ellipse h="5.67" w="5.67" x="111.25" y="19.33"/>
+        <stroke/>
+        <ellipse h="5.67" w="5.67" x="118.54" y="19.33"/>
+        <stroke/>
+        <ellipse h="5.67" w="5.67" x="125.83" y="19.33"/>
+        <stroke/>
+        <ellipse h="9.5" w="9.5" x="144.25" y="10.0"/>
+        <stroke/>
+        <ellipse h="9.5" w="9.5" x="158.5" y="10.0"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="50.0" name="More" strokewidth="inherit" w="30.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="0.0"/>
+            <line x="30.0" y="25.0"/>
+            <line x="0.0" y="50.0"/>
+        </path>
+    </background>
+    <foreground>
+        <strokewidth width="2"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="50.0" name="More 2" strokewidth="inherit" w="40.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="10.0" y="0.0"/>
+            <line x="40.0" y="25.0"/>
+            <line x="10.0" y="50.0"/>
+            <move x="0.0" y="0.0"/>
+            <line x="30.0" y="25.0"/>
+            <line x="0.0" y="50.0"/>
+        </path>
+    </background>
+    <foreground>
+        <strokewidth width="2"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="132.0" name="Number Pad" strokewidth="inherit" w="174.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <save/>
+        <save/>
+        <rect h="132.0" w="174.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <strokecolor color="#c0c0c0"/>
+        <fillcolor color="#e0e0e0"/>
+        <fillstroke/>
+        <fillcolor color="#c0c0c0"/>
+        <rect h="33.0" w="58.0" x="0.0" y="99.0"/>
+        <fill/>
+        <strokecolor color="#c0c0c0"/>
+        <path>
+            <move x="0.0" y="66.0"/>
+            <line x="174.0" y="66.0"/>
+            <move x="0.0" y="33.0"/>
+            <line x="174.0" y="33.0"/>
+            <move x="0.0" y="99.0"/>
+            <line x="174.0" y="99.0"/>
+            <move x="116.0" y="0.0"/>
+            <line x="116.0" y="132.0"/>
+            <move x="58.0" y="0.0"/>
+            <line x="58.0" y="132.0"/>
+        </path>
+        <stroke/>
+        <rect h="33.0" w="58.0" x="116.0" y="99.0"/>
+        <fill/>
+        <fontsize size="18"/>
+        <fontcolor color="#222222"/>
+        <text str="1" valign="middle" align="center" x="29.0" y="13.0"/>
+        <text str="2" valign="middle" align="center" x="87.0" y="13.0"/>
+        <text str="3" valign="middle" align="center" x="145.0" y="13.0"/>
+        <text str="4" valign="middle" align="center" x="29.0" y="47.0"/>
+        <text str="5" valign="middle" align="center" x="87.0" y="47.0"/>
+        <text str="6" valign="middle" align="center" x="145.0" y="47.0"/>
+        <text str="7" valign="middle" align="center" x="29.0" y="80.0"/>
+        <text str="8" valign="middle" align="center" x="87.0" y="80.0"/>
+        <text str="9" valign="middle" align="center" x="145.0" y="80.0"/>
+        <text str="0" valign="middle" align="center" x="87.0" y="112.5"/>
+        <fontsize size="10"/>
+        <fontcolor color="#c0c0c0"/>
+        <text str="ABC" valign="middle" align="center" x="87.0" y="26.0"/>
+        <text str="DEF" valign="middle" align="center" x="145.0" y="26.0"/>
+        <text str="GHI" valign="middle" align="center" x="29.0" y="59.0"/>
+        <text str="JKL" valign="middle" align="center" x="87.0" y="59.0"/>
+        <text str="MNO" valign="middle" align="center" x="145.0" y="59.0"/>
+        <text str="PQRS" valign="middle" align="center" x="29.0" y="92.0"/>
+        <text str="TUV" valign="middle" align="center" x="87.0" y="92.0"/>
+        <text str="WXYZ" valign="middle" align="center" x="145.0" y="92.0"/>
+        <strokecolor color="#222222"/>
+        <linejoin join="round"/>
+        <linecap cap="round"/>
+        <path>
+            <move x="143.0" y="111.5"/>
+            <line x="151.0" y="111.5"/>
+            <line x="151.0" y="119.5"/>
+            <line x="143.0" y="119.5"/>
+            <line x="139.0" y="115.5"/>
+            <close/>
+            <move x="145.0" y="113.5"/>
+            <line x="149.0" y="117.5"/>
+            <move x="149.0" y="113.5"/>
+            <line x="145.0" y="117.5"/>
+        </path>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="50.0" name="Options" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="0.0"/>
+            <line x="100.0" y="0.0"/>
+            <line x="100.0" y="10.0"/>
+            <line x="0.0" y="10.0"/>
+            <close/>
+            <move x="0.0" y="20.0"/>
+            <line x="100.0" y="20.0"/>
+            <line x="100.0" y="30.0"/>
+            <line x="0.0" y="30.0"/>
+            <close/>
+            <move x="0.0" y="40.0"/>
+            <line x="100.0" y="40.0"/>
+            <line x="100.0" y="50.0"/>
+            <line x="0.0" y="50.0"/>
+            <close/>
+        </path>
+    </background>
+    <foreground>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Pause" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <ellipse h="100.0" w="100.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fillstroke/>
+        <fillcolor color="#0080f0"/>
+        <rect h="50.0" w="10.0" x="35.0" y="25.0"/>
+        <fill/>
+        <rect h="50.0" w="10.0" x="55.0" y="25.0"/>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="71.0" name="Picker" strokewidth="inherit" w="174.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="29.0"/>
+            <line x="174.0" y="29.0"/>
+            <move x="0.0" y="43.0"/>
+            <line x="174.0" y="43.0"/>
+        </path>
+    </background>
+    <foreground>
+        <stroke/>
+        <rect h="71.0" w="174.0" x="0.0" y="0.0"/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.08" name="Remove" strokewidth="inherit" w="121.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="50.04"/>
+            <line x="37.0" y="13.24"/>
+            <arc large-arc-flag="0.0" rx="50.0" ry="50.0" sweep-flag="1.0" x="71.0" x-axis-rotation="0.0" y="0.04"/>
+            <arc large-arc-flag="1.0" rx="50.0" ry="50.0" sweep-flag="1.0" x="71.0" x-axis-rotation="0.0" y="100.04"/>
+            <arc large-arc-flag="0.0" rx="50.0" ry="50.0" sweep-flag="1.0" x="37.0" x-axis-rotation="0.0" y="86.84"/>
+            <close/>
+        </path>
+    </background>
+    <foreground>
+        <fill/>
+        <strokewidth width="2"/>
+        <path>
+            <move x="51.0" y="30.04"/>
+            <line x="91.0" y="70.04"/>
+            <move x="91.0" y="30.04"/>
+            <line x="51.0" y="70.04"/>
+        </path>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Right" strokewidth="inherit" w="60.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="0.0"/>
+            <line x="60.0" y="50.0"/>
+            <line x="0.0" y="100.0"/>
+        </path>
+    </background>
+    <foreground>
+        <fillcolor color="none"/>
+        <strokewidth width="2"/>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="10.0" name="Scroll (Horizontal)" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="95.0" y="0.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="95.0" x-axis-rotation="0.0" y="10.0"/>
+            <line x="5.0" y="10.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="5.0" x-axis-rotation="0.0" y="0.0"/>
+            <close/>
+        </path>
+    </background>
+    <foreground>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Scroll (Vertical)" strokewidth="inherit" w="10.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="95.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="10.0" x-axis-rotation="0.0" y="95.0"/>
+            <line x="10.0" y="5.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="0.0" x="0.0" x-axis-rotation="0.0" y="5.0"/>
+            <close/>
+        </path>
+    </background>
+    <foreground>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="100.0" name="Select" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <ellipse h="100.0" w="100.0" x="0.0" y="0.0"/>
+    </background>
+    <foreground>
+        <fill/>
+        <strokewidth width="2"/>
+        <path>
+            <move x="20.0" y="55.0"/>
+            <line x="30.0" y="70.0"/>
+            <line x="85.0" y="25.0"/>
+        </path>
+        <stroke/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="30.0" name="Select Bar 1" strokewidth="inherit" w="165.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="5.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="5.0" x-axis-rotation="0.0" y="0.0"/>
+            <line x="160.0" y="0.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="165.0" x-axis-rotation="0.0" y="5.0"/>
+            <line x="165.0" y="20.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="160.0" x-axis-rotation="0.0" y="25.0"/>
+            <line x="125.0" y="25.0"/>
+            <line x="120.0" y="30.0"/>
+            <line x="115.0" y="25.0"/>
+            <line x="5.0" y="25.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="0.0" x-axis-rotation="0.0" y="20.0"/>
+            <close/>
+            <move x="65.0" y="0.0"/>
+            <line x="65.0" y="25.0"/>
+            <move x="145.0" y="0.0"/>
+            <line x="145.0" y="25.0"/>
+        </path>
+    </background>
+    <foreground>
+        <fillstroke/>
+        <fillcolor color="#ffffff"/>
+        <path>
+            <move x="152.0" y="8.0"/>
+            <line x="160.0" y="12.5"/>
+            <line x="152.0" y="17.0"/>
+            <close/>
+        </path>
+        <fill/>
+        <fontcolor color="#ffffff"/>
+        <text str="Select" valign="middle" align="center" x="32" y="12.5"/>
+        <text str="Select All" valign="middle" align="center" x="105" y="12.5"/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="30.0" name="Select Bar 2" strokewidth="inherit" w="165.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <save/>
+        <path>
+            <move x="0.0" y="5.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="5.0" x-axis-rotation="0.0" y="0.0"/>
+            <line x="160.0" y="0.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="165.0" x-axis-rotation="0.0" y="5.0"/>
+            <line x="165.0" y="20.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="160.0" x-axis-rotation="0.0" y="25.0"/>
+            <line x="125.0" y="25.0"/>
+            <line x="120.0" y="30.0"/>
+            <line x="115.0" y="25.0"/>
+            <line x="5.0" y="25.0"/>
+            <arc large-arc-flag="0.0" rx="5.0" ry="5.0" sweep-flag="1.0" x="0.0" x-axis-rotation="0.0" y="20.0"/>
+            <close/>
+            <move x="42.0" y="0.0"/>
+            <line x="42.0" y="25.0"/>
+            <move x="145.0" y="0.0"/>
+            <line x="145.0" y="25.0"/>
+            <move x="100.0" y="0.0"/>
+            <line x="100.0" y="25.0"/>
+        </path>
+    </background>
+    <foreground>
+        <fillstroke/>
+        <fillcolor color="#ffffff"/>
+        <path>
+            <move x="152.0" y="8.0"/>
+            <line x="160.0" y="12.5"/>
+            <line x="152.0" y="17.0"/>
+            <close/>
+        </path>
+        <fill/>
+        <fontcolor color="#ffffff"/>
+        <text str="Select" valign="middle" align="center" x="20" y="12.5"/>
+        <text str="Select All" valign="middle" align="center" x="70" y="12.5"/>
+        <text str="Paste" valign="middle" align="center" x="122" y="12.5"/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="90.0" name="Star" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="50.0" y="0.0"/>
+            <line x="63.7" y="35.0"/>
+            <line x="100.0" y="35.0"/>
+            <line x="71.1" y="53.9"/>
+            <line x="85.0" y="90.0"/>
+            <line x="50.0" y="67.4"/>
+            <line x="15.0" y="90.0"/>
+            <line x="28.9" y="53.9"/>
+            <line x="0.0" y="35.0"/>
+            <line x="36.4" y="35.0"/>
+            <close/>
+        </path>
+    </background>
+    <foreground>
+        <fill/>
+    </foreground>
+</shape>
+<shape aspect="variable" h="60.0" name="Up" strokewidth="inherit" w="100.0">
+    <connections>
+        <constraint name="N" perimeter="0" x="0.5" y="0.0"/>
+        <constraint name="S" perimeter="0" x="0.5" y="1.0"/>
+        <constraint name="W" perimeter="0" x="0.0" y="0.5"/>
+        <constraint name="E" perimeter="0" x="1.0" y="0.5"/>
+    </connections>
+    <background>
+        <path>
+            <move x="0.0" y="60.0"/>
+            <line x="50.0" y="0.0"/>
+            <line x="100.0" y="60.0"/>
+        </path>
+    </background>
+    <foreground>
+        <strokewidth width="2"/>
+        <stroke/>
+    </foreground>
+</shape>
+</shapes>

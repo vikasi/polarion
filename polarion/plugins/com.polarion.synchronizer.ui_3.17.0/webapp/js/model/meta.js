@@ -1,0 +1,1 @@
+App.Option = Ember.Resource.extend({});

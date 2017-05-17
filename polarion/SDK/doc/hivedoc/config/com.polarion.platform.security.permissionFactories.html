@@ -1,0 +1,67 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../hivemind.css">
+<title>HiveMind Registry -  Configuration Point com.polarion.platform.security.permissionFactories</title>
+</head>
+<body>
+<div class="title"> Module <a href="../module/com.polarion.platform.security.html">com.polarion.platform.security</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+<hr>
+<table class="top-level-object" cellspacing="0">
+<tr>
+<th class="object-id"><img src="../public.png" width="20" height="20" alt="[public]"> Configuration Point com.polarion.platform.security.permissionFactories</th><th>Occurs:</th><td> unbounded </td>
+</tr>
+<tr>
+<th colspan="3" class="section">Schema</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;factory&gt; </th>
+</tr>
+<tr>
+<th class="sub-id">Attribute prefix</th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute service (required) </th><th> Translator: </th><td>service</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;push-attribute <span class="attribute">attribute</span>="<span class="attribute-value">service</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+            
+        
+            
+        
+            
+            
+            
+            
+            
+            
+        
+</table>
+<hr>
+<div class="title"> Module <a href="../module/com.polarion.platform.security.html">com.polarion.platform.security</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+</body>
+</html>

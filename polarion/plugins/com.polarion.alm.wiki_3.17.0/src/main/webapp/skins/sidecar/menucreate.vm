@@ -1,0 +1,51 @@
+#set($hascreate = $xwiki.hasPermission("create"))
+#if($context.getMode()==0)## Visible only in a page
+<div id="menuCreate" style="height: 28px; z-index: 20;" class="menubar">
+<h3 id="xwikimenutitle" class="hidden">$msg.get("menu")</h3>
+<div class="leftmenu">
+##
+## Create menu
+##
+#if(!$isReadOnly)
+  <table border=0 height=25;>
+    <tr>
+      <td>
+         #if( $doc.isDocumentPage() )
+           <div onclick = "startmenu(this);" class="enab">
+           #if($hascreate)	
+           	#xwikitopmenuentrystartimage("add.gif" "#" $msg.get("Create"))
+          	
+          	 #if ($xwiki.isWikiRestricted())
+           		 #if ($xwiki.isSpaceDefault())
+           		 	#submenuitemimg("javascript:loadPages();" "Page" $xwiki.getSkinFile("/images/page.gif"))
+         		 #else
+         		 	#set($msgRestricted = $msg.get("creationrestricted"))
+           			#submenuitemimgdisabled("javascript: alert('$msgRestricted')" "Page" $xwiki.getSkinFile("/images/page.gif"))
+          		#end
+          		#set($msgSpaceRestricted = $msg.get("spacecreationrestricted"))
+           		#submenuitemimgdisabled("javascript: alert('$msgSpaceRestricted')" "Space" $xwiki.getSkinFile("/images/space.png"))
+         	 #else
+           	    #if($hascreate)
+          			#submenuitemimg("javascript:loadPages();" "Page" $xwiki.getSkinFile("/images/page.gif"))
+           			#submenuitemimg("javascript:loadSpaces();" "Space" $xwiki.getSkinFile("/images/space.png"))   
+           		#else
+           			#submenuitemimgdisabled("#" "Page" $xwiki.getSkinFile("/images/page.gif"))     		
+           			#submenuitemimgdisabled("#" "Space" $xwiki.getSkinFile("/images/space.png"))
+           		#end
+          	 #end
+           #else
+           	#xwikitopmenuentrystartimagedisabled("add.gif" "#" $msg.get("Create"))
+           #end
+           
+           #xwikitopmenuentryend()
+         #end
+      </td>
+    </tr>
+  </table>
+#end
+
+</div>
+</div>
+
+#template("createscripts.vm")
+#end

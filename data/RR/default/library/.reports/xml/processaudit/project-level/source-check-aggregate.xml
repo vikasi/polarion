@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="library" id="source-check-aggregate" tag="20130523_1550">
+    <structure-element id="root" provider="root" type="root">
+        <value-fact-element id="overall-test-coverage" provider="source-check-aggregate" type="overall-test-coverage">
+            <value/>
+            <properties>
+                <property id="number-of-valid-lines">
+                    <value>0</value>
+                </property>
+                <property id="number-of-covered-lines">
+                    <value>0</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="overall-test-results" provider="source-check-aggregate" type="overall-test-results">
+            <value/>
+            <properties>
+                <property id="hasTests">
+                    <value>false</value>
+                </property>
+                <property id="errorsCount">
+                    <value>0</value>
+                </property>
+                <property id="failuresCount">
+                    <value>0</value>
+                </property>
+                <property id="testsCount">
+                    <value>0</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="OftenIntegration" provider="SourceAggregate" type="execution">
+            <value/>
+            <properties>
+                <property id="hasCodeIntegration">
+                    <value>false</value>
+                </property>
+                <property id="hasCodeIntegrationData">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <violation-fact-element category="" description="" id="CollectiveCodeOwnership" provider="SourceAggregate" rule="CollectiveCodeOwnership" severity="" tag="23-05-13" type="SourceAggregateViolation">
+            <properties>
+                <property id="author">
+                    <value/>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <value-fact-element id="CollectiveCodeOwnership" provider="SourceAggregate" type="execution">
+            <value/>
+            <properties>
+                <property id="isSourceCodeExistInRepository">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+    </structure-element>
+</factbase>

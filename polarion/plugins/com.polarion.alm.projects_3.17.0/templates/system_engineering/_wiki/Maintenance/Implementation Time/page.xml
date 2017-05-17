@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130110202718</created>
+<type>content</type>
+<content><![CDATA[1 Fix Time
+
+#set($maxWeeks = 20)
+
+
+The graph shows number of change requests implemented in NUM weeks after the creation.
+I.e. items where ResolvedOn-CreatedOn = X weeks
+
+#set($sqlItems="SELECT WI.C_PK FROM WORKITEM WI, PROJECT PROJECT WHERE WI.FK_URI_PROJECT = PROJECT.C_URI AND PROJECT.C_ID = '$page.project' AND WI.C_TYPE='changerequest'  AND WI.C_STATUS='verified-done' ")
+#set($itemsSize = $trackerService.dataService.sqlSearch($sqlItems).size())
+
+
+#if($itemsSize==0 )
+#info("No Change Requests tracked")
+#else
+
+#set($itemsPer="0")
+#set($items="0")
+#set($category="0")
+
+#macro (searchInWeeks $weeks) 
+#set($days = ($weeks * 7))
+#set($daysBefore = $days - 8)
+#set($sqlDatePart="AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))<$days AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))>$daysBefore")
+#set($num = $trackerService.dataService.sqlSearch("$sqlItems $sqlDatePart").size())
+#set($items = "$!items:$num")
+#set($fl = $num * 100 / $itemsSize )
+#set($itemsPer = "$!itemsPer:$fl")
+#set($category = "$!category:$weeks week(s) ")
+#end
+
+#macro (searchInDays $d) 
+#set($days = $d + 1)
+#set($daysBefore = $days - 2)
+#set($sqlDatePart="AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))<$days AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))>$daysBefore")
+#set($num = $trackerService.dataService.sqlSearch("$sqlItems $sqlDatePart").size())
+#set($items = "$!items:$num")
+#set($fl = $num * 100 / $hiAll )
+#set($itemsPer = "$!itemsPer:$fl")
+#set($category = "$!category:$d days(s)")
+#end
+
+#macro (searchMoreWeeks $weeks)
+#set($days = ($weeks * 7) )
+#set($sqlDatePart="AND (cast(WI.C_RESOLVEDON as date) - cast(WI.C_CREATED as date))>$days")
+#set($num = $trackerService.dataService.sqlSearch("$sqlItems $sqlDatePart").size())
+#set($items = "$!items:$num")
+#set($num = $num * 100 / $hiAll)
+#set($itemsPer = "$!itemsPer:$num")
+#set($category = "$!category:More")
+#end
+
+#foreach($i  in [1..$maxWeeks]) 
+#searchInWeeks($i) 
+#end
+#searchMoreWeeks($maxWeeks) 
+
+#highchartStart("Percentage of Change Requests impemented in weeks" "areaspline" 800 500)
+#set($highchartColors = ["FF5904","99cc99"])
+#setHighchartCategories("$category")
+#if($itemsSize!=0)#addHighchartDataSet("% Change Requests" "$itemsPer")#end
+#addHighchartAdditionalOptions("options.plotOptions ={areaspline: {animation: false}};")
+#addHighchartAdditionalOptions("options.xAxis.labels = {rotation: -40, y: 10, style:{fontSize:'9px'}};")
+#addHighchartAdditionalOptions("options.yAxis = {min:0,title:{text:'Percentage'}};")
+#highchartEnd()
+
+#highchartStart("Num of change requests implemented in weeks" "areaspline" 800 500)
+#set($highchartColors = ["FF5904","99cc99"])
+#setHighchartCategories("$category")
+#if($itemsSize!=0)#addHighchartDataSet("Change Requests" "$items")#end
+#addHighchartAdditionalOptions("options.plotOptions ={areaspline: {animation: false}};")
+#addHighchartAdditionalOptions("options.xAxis.labels = {rotation: -40, y: 10, style:{fontSize:'9px'}};")
+#addHighchartAdditionalOptions("options.yAxis = {min:0,title:{text:'Number of change requests'}};")
+#highchartEnd()
+
+#end]]></content>
+</wiki-page>

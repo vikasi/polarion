@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://polarion.com/schema/Persistence/XMLDocument" xmlns:tns="http://polarion.com/schema/Persistence/XMLDocument" elementFormDefault="qualified">
+
+    <annotation>
+    	<documentation>
+    		Element name is based on prototype's name (lowercased with
+    		CamelCased words delimited by hyphen).
+    	</documentation>
+    </annotation>
+    <element name="work-item" type="tns:DataObjectType"></element>
+    
+    <complexType name="DataObjectType">
+    	<annotation>
+    		<documentation>
+    			First normal fields then custom fields. If normal fields
+    			are null or empty list or struct then they are skipped,
+    			but custom fields are always serialized.
+
+    			Fields of unknown type are serialized as primitive
+    			values of type java.lang.String.
+    		</documentation>
+    	</annotation>
+    	<sequence>
+    		<element name="field" type="tns:FieldType"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    	</sequence>
+    	<attribute name="version" use="optional">
+    		<annotation>
+    			<documentation>
+    				File format version. Default is zero. Serialized
+    				only if greater than zero.
+    				
+    				Format described here is version number zero.
+    			</documentation>
+    		</annotation>
+    		<simpleType>
+    			<restriction base="int">
+    				<enumeration value="0"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+    
+    <complexType name="FieldType">
+        <complexContent>
+    		<extension base="tns:NamedItemType">
+
+    			<attribute name="multi" type="boolean" use="optional">
+    				<annotation>
+    					<documentation>
+    						Only for custom fields. Default value is
+    						"false".
+    						
+    						Custom field can contain list if and only if this attribute is "true".
+    					</documentation>
+    				</annotation></attribute>
+
+    			<attribute name="type" type="string" use="optional">
+    				<annotation>
+    					<documentation>
+    						Only for custom fields. Default value is
+    						"string".
+    					</documentation>
+    				</annotation></attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="NamedItemType">
+    	<complexContent>
+    		<extension base="tns:ItemType">
+    			<attribute name="id" type="string" use="required"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+    
+    <complexType name="StructType">
+        <annotation>
+        	<documentation>
+        		If this structure is empty then it is not serialized at all.
+        	</documentation>
+        </annotation>
+    	<sequence>
+    		<element name="item" type="tns:NamedItemType" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="ListType">
+        <annotation>
+        	<documentation>
+        		If the item is structure or list then the "item" element is
+        		skipped.
+        		
+        		If this list is empty then it is not serialized at all.
+        	</documentation>
+        </annotation>
+        <choice maxOccurs="unbounded" minOccurs="0">
+    		<element name="struct" type="tns:StructType" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="list" type="tns:ListType" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="item" type="tns:ItemType" maxOccurs="unbounded" minOccurs="0"></element>
+    	</choice>
+    </complexType>
+
+    <complexType name="ItemType" mixed="true">
+    	<annotation>
+    		<documentation>
+    			This is either textual content, structure or list.
+    		</documentation>
+    	</annotation>
+    	<choice maxOccurs="1" minOccurs="0">
+    		<element name="struct" type="tns:StructType" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="list" type="tns:ListType" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    	</choice>
+    	<attribute name="text-type" use="optional">
+    		<annotation>
+    			<documentation>
+    				Valid only for primitive values of type com.polarion.core.util.types.Text.
+    			</documentation>
+    		</annotation>
+		    <simpleType>
+		    	<restriction base="string">
+		    		<enumeration value="text/plain"></enumeration>
+		    		<enumeration value="text/html"></enumeration>
+		    	</restriction>
+		    </simpleType>
+    	</attribute>
+    </complexType>
+
+</schema>

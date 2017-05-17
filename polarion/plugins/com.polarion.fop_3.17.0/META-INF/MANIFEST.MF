@@ -1,0 +1,41 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.fop
+Export-Package: com.polarion.fop,org.apache.avalon.framework.configura
+ tion,org.apache.fop,org.apache.fop.apps,org.apache.fop.area,org.apach
+ e.fop.area.inline,org.apache.fop.cli,org.apache.fop.datatypes,org.apa
+ che.fop.fo,org.apache.fop.fo.expr,org.apache.fop.fo.extensions,org.ap
+ ache.fop.fo.extensions.destination,org.apache.fop.fo.extensions.svg,o
+ rg.apache.fop.fo.extensions.xmp,org.apache.fop.fo.flow,org.apache.fop
+ .fo.flow.table,org.apache.fop.fo.pagination,org.apache.fop.fo.paginat
+ ion.bookmarks,org.apache.fop.fo.properties,org.apache.fop.fonts,org.a
+ pache.fop.fonts.apps,org.apache.fop.fonts.autodetect,org.apache.fop.f
+ onts.base14,org.apache.fop.fonts.truetype,org.apache.fop.fonts.type1,
+ org.apache.fop.hyphenation,org.apache.fop.image.loader.batik,org.apac
+ he.fop.layoutmgr,org.apache.fop.layoutmgr.inline,org.apache.fop.layou
+ tmgr.list,org.apache.fop.layoutmgr.table,org.apache.fop.pdf,org.apach
+ e.fop.render,org.apache.fop.render.afp,org.apache.fop.render.afp.exce
+ ptions,org.apache.fop.render.afp.extensions,org.apache.fop.render.afp
+ .fonts,org.apache.fop.render.afp.modca,org.apache.fop.render.afp.tool
+ s,org.apache.fop.render.awt,org.apache.fop.render.awt.viewer,org.apac
+ he.fop.render.bitmap,org.apache.fop.render.java2d,org.apache.fop.rend
+ er.pcl,org.apache.fop.render.pcl.extensions,org.apache.fop.render.pdf
+ ,org.apache.fop.render.print,org.apache.fop.render.ps,org.apache.fop.
+ render.ps.extensions,org.apache.fop.render.rtf,org.apache.fop.render.
+ rtf.rtflib.exceptions,org.apache.fop.render.rtf.rtflib.rtfdoc,org.apa
+ che.fop.render.rtf.rtflib.tools,org.apache.fop.render.txt,org.apache.
+ fop.render.txt.border,org.apache.fop.render.xml,org.apache.fop.servle
+ t,org.apache.fop.svg,org.apache.fop.text.linebreak,org.apache.fop.too
+ ls,org.apache.fop.tools.anttasks,org.apache.fop.traits,org.apache.fop
+ .util,org.w3c.css.sac
+Bundle-Name: Polarion FOP
+Bundle-Version: 3.17.0
+Bundle-ClassPath: lib/avalon-framework-4.2.0.jar,lib/batik-all-1.7.jar
+ ,lib/commons-io-1.3.1.jar,lib/fop.jar,lib/serializer-2.7.0.jar,lib/xa
+ lan-2.7.0.jar,lib/xercesImpl-2.7.1.jar,lib/xml-apis-1.3.04.jar,lib/xm
+ l-apis-ext-1.3.04.jar,lib/xmlgraphics-commons-1.3.1.jar,polarion-fop.
+ jar
+Require-Bundle: com.polarion.core.util,org.eclipse.core.runtime
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/projects/project/overview.psml" hidden="false">
+    <security-constraints>
+        <security-constraints-ref>public-edit</security-constraints-ref>
+    </security-constraints>
+    <title>Project Overview</title>
+    <short-title>Overview</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="polarion"/>
+    <fragment id="project.overview" type="layout" name="jetspeed-layouts::Table">
+        <fragment id="project.overview.overview" type="portlet" name="webui::ProjectOverview">
+            <property name="row" value="0"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="colspan='2' style='width:100%'" />
+        </fragment>
+        <fragment id="project.overview.annoucements" type="portlet" name="webui::announcements">
+            <property name="row" value="1"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="rowspan='3' style='width:50%;height:100%'" />
+        </fragment>
+        <fragment id="project.overview.wi.overview" type="portlet" name="webui::wi-overview">
+		    <title>Work Items</title>       
+            <property name="row" value="1"/>
+            <property name="column" value="1"/>
+            <property name="layoutData" value="style='width:50%'" />
+        </fragment>
+        <fragment id="project.overview.BuildOverview" type="portlet" name="webui::BuildOverview">
+		    <title>Builds</title>       
+            <property name="row" value="2"/>
+            <property name="column" value="1"/>
+            <property name="layoutData" value="style='width:50%'" />
+        </fragment>
+        <fragment id="project.overview.RepoOverview" type="portlet" name="webui::repo-overview">
+		    <title>Repository</title>       
+            <property name="row" value="3"/>
+            <property name="column" value="1"/>
+            <property name="layoutData" value="style='width:50%'" />
+        </fragment>
+    </fragment>
+</page>

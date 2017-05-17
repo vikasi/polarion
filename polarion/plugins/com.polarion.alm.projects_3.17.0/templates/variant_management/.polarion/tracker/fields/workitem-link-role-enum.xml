@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option default="true" description="A generic relation type, more concrete link should be used where possible" id="relates_to" name="relates to" oppositeName="is related to" sortOrder="1"/>
+    <option id="parent" name="has parent" oppositeName="is parent of" parent="true" sortOrder="2">
+        <rule sameType="true"/>
+    </option>
+
+    <option id="refines" name="refines" oppositeName="is refined by" parent="true" sortOrder="3">
+        <rule from="requirement" to="requirement"/>
+    </option>
+
+    <option id="duplicates" name="duplicates" oppositeName="is duplicated by" sortOrder="5">
+        <rule sameType="true"/>
+    </option>
+
+    <option id="verifies" name="verifies" oppositeName="is verified by" sortOrder="7">
+        <rule from="testcase" to="requirement"/>
+    </option>
+
+    <option id="pvRequires" name="requires" oppositeName="is required by" sortOrder="8">
+        <rule from="feature" to="feature"/>
+    </option>
+
+    <option id="pvConflicts" name="conflicts with" oppositeName="is in conflict with" sortOrder="9">
+        <rule from="feature" to="feature"/>
+    </option>
+    
+    <option id="derived_from" name="is derived from" oppositeName="is derived by" sortOrder="10">
+        <rule from="__other" to="__other"/>
+    </option>
+
+    <option id="branched_from" name="is branched from" oppositeName="has branch" sortOrder="11">
+        <rule from="__other" to="__other"/>
+    </option>
+</enumeration>

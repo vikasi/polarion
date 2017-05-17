@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<Gridline color="#B4B4B4"/> 
+	<ResProjectLine color="#0000FF"/>
+	<TimePoint LineColor="#EE1D25" LabelColor="#EE1D25"/>
+	<ToolTipBackground color="#FFFFFF"/>
+	<UnassignedBackground color="#FFE88A"/>
+	<TodayBackground color="#FDDE64"/>
+	<DayOffBackgroundColor color="#EDEDED"/>	
+<!--	<DayOffBackgroundColor color="#0000FF"/>	-->
+
+	<TaskOverdue OuterColor="#FF0000" InnerColor="#FFFFFF"/>	
+	<TaskLabel color="#FFFFFF"/>	
+	<TaskDayOff color="#EDEDED" alpha="0.5"/>	
+<!--	<TaskDayOff color="#0000FF" alpha="0.5"/>	-->
+	<TaskFaded color="#A0A0A0"/>
+	<chartAxes color="#000000"/>
+	<EvenRow color="#E7F0FA"/>
+
+	<TooltipFiltered BorderColor="#000000" />
+</configuration>

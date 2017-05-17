@@ -1,0 +1,23 @@
+org.objectweb.jotm
+------------------
+
+Used JOTM is version 1.4.3 from http://jotm.objectweb.org/.
+
+Changes made:
+
+1. in class org.objectweb.jotm.Current
+
+  private transient ThreadLocal eventListStack = new ThreadLocal();
+
+changed to
+
+  private transient static ThreadLocal eventListStack = new ThreadLocal();
+
+2. exception causes added into class org.objectweb.jotm.TransactionImpl
+
+3. trace SubCoordinator.setRollbackOnly() calls if there is a subsequent commit
+
+4. exception causes added into class org.objectweb.jotm.SubCoordinator
+
+5. added com.polarion.platform.ExtendedSynchronization and changed
+   org.objectweb.jotm.SubCoordinator.commit_one_phase() to support it

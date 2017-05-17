@@ -1,0 +1,37 @@
+1 User Account Vault
+
+{user-account-vault}
+
+1.1 Quick Help
+
+*{style:type=span|border=none|color=darkblue}User Account Vault{style}* is a secure way to store user credentials. 
+
+Some Polarion features need to be configured with a user name and a password, but for security reasons *~~avoid storing these user credentials in the underlying file system configuration file.~~*
+\\
+\\
+*Example*:
+\\
+\\ 
+{style:type=span|border=none|color=darkblue}A scheduled job that imports automated test results requires the credentials of the user it creates the Test Cases and Test Runs for.{style} 
+\\
+\\
+Rather than specifying the *user name* and *password* directly in the configuration, specify a *key* from the *User Accounts Vault* instead. 
+Generally the credentials of actual users should not be specified, but instead special user accounts created specifically for automated data access should be used. 
+\\
+\\
+*Example*:
+\\
+\\
+{style:type=span|border=none|color=darkblue}The system user "~~polarion~~" is needed for some jobs. {style}
+\\
+\\
+*Create a key for that user here* and specify it the
+in job or other configurations rather than a concrete user name and password.
+\\
+\\
+Use this Administration page to add keys to the vault and associate them with user names and passwords.
+\\
+\\
+#info("In a single sign-on environment the password is not used because Polarion manages access to Subversion. However it is still required for all entries in the event that single sign-on is no longer configured at some point in the future.")
+\\
+ 

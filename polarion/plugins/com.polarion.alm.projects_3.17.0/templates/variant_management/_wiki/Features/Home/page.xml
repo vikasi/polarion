@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20150325122733</created>
+<title>Features</title>
+<type>content</type>
+<content><![CDATA[
+1 Features
+The ~~Feature Model~~ is the superset of all features that may be included in variant products in a product line. The differences between variant products may be captured from multiple viewpoints such as functionality, quality attributes, environments in which the members are used, users, constraints, and internal mechanisms that realize the functionality and quality attributes (ISO 26550:2013).
+
+This space provides a pre-defined Document, {portallink:/wiki/Features/Feature%20Model | addcontext=yes}Feature Model{portallink}, which you can use to develop your product line's Feature Model. 
+
+#info("The Feature Model must be complete before you can begin creating and managing ~~Variants~~.")
+
+1.1.1 OBJECTIVE
+Develop a Feature Model for your product line.
+
+1.1.1  INPUT
+
+Add:
+* Constraints (required legacy system interfaces, hardware/software platform, etc.) 
+* Restrictions to Feature Model characteristics
+
+1.1.1 OUTPUT
+* {portallink:/wiki/Features/Feature%20Model | addcontext=yes}Feature Model{portallink} 
+
+]]></content>
+</wiki-page>

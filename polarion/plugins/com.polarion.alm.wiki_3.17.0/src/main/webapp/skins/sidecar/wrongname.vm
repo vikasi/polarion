@@ -1,0 +1,19 @@
+#template("startpage.vm")
+<div id="xwikicontent">
+	#xwikimessageboxstart($localization.getValue('macro.general.incorrectPageName') $localization.getValue('macro.general.invalidCharactersPageCanNotBeCreated'))
+	$xwiki.getCustomMessage()
+
+<div style="text-align: center; border: 0px solid blue;"> 
+#set($parent2 = $request.getParameter("parent"))
+#set($parentSp = $request.getParameter("parentSpace"))
+#if( $parent2 )
+<a href="$xwiki.getURL("$!{parent2}")#if($parentSp)?parentSpace=$parentSp#end">$localization.getValue('macro.general.backToView')</a>
+#else
+<a href="$xwiki.getURL("_default/Home")">$localization.getValue('macro.general.backToView')</a>
+#end
+</div>
+<div class="clearfloats"></div>
+
+	#xwikimessageboxend()
+</div>
+#template("endpage.vm") 

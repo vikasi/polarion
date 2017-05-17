@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: javax.transaction
+Export-Package: javax.transaction,javax.transaction.xa
+Generated-from: 1409779386487;type=2
+Bundle-Name: %pluginName
+Bundle-Version: 1.0.1.2014-10-06
+Bundle-ClassPath: lib/jta-spec1_0_1.jar
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime;bundle-version="2.1",org.ecli
+ pse.core.runtime.compatibility
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.eclipse.core.internal.compatibility.PluginActiva
+ tor
+Bundle-Vendor: %providerName
+
+

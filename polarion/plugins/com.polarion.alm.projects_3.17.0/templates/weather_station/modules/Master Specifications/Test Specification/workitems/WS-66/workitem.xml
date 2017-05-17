@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">mTest</field>
+    <field id="categories">
+        <list>
+            <item>sensors</item>
+        </list>
+    </field>
+    <field id="created">2015-03-25 10:32:18.278 +0100</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="role">verifies</item>
+                <item id="workItem">WS-37</item>
+            </struct>
+        </list>
+    </field>
+    <field id="previousStatus">draft</field>
+    <field id="priority">50.0</field>
+    <field id="pvRestriction" type="text/x-pvscl">WS-7</field>
+    <field id="severity">basic</field>
+    <field id="status">active</field>
+    <field id="testSteps" type="struct:TestSteps">
+        <struct>
+            <item id="keys">
+                <list>
+                    <item>step</item>
+                    <item>description</item>
+                    <item>expectedResult</item>
+                </list>
+            </item>
+            <item id="steps">
+                <list>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Place system in heating chamber set to higher  temperature limit and let it warm up.&lt;/span&gt;</item>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Measure system temperature using a contactless thermometer. Wait until no further increase can be seen.&lt;/span&gt;</item>
+                                <item text-type="text/html"/>
+                            </list>
+                        </item>
+                    </struct>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Get readout of temperature from system.&lt;/span&gt;</item>
+                                <item text-type="text/html"/>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Measured temperature is within 1K of set temperature of chamber.&lt;/span&gt;</item>
+                            </list>
+                        </item>
+                    </struct>
+                </list>
+            </item>
+        </struct>
+    </field>
+    <field id="testType" type="enum:testtype">manual</field>
+    <field id="title">Test Temperature Measurement Accuracy On High End of Temperature Range</field>
+    <field id="type">testcase</field>
+</work-item>

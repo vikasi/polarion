@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="com.polarion.example.enumerationfactory" version="1.0.0">
+	<contribution configuration-id="com.polarion.platform.persistence.dataservice.typedInterfacesConfig">
+		<enum id="@myTimePoints" factory="myTimePointsEnumFactory"/>
+	</contribution>
+	<service-point id="myTimePointsEnumFactory" interface="com.polarion.platform.persistence.IEnumObjectFactory" visibility="private">
+		<invoke-factory>
+			<construct class="com.polarion.example.enumerationfactory.MyTimePointsEnumFactory">
+			</construct>
+		</invoke-factory>
+	</service-point>
+</module>

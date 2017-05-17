@@ -1,0 +1,10 @@
+###
+##  Page preview panel is loaded by AJAX
+###
+     <div class="main layoutsubsection" style="background-color: #FFFFFF;">
+        $pdoc.getPreviewRenderedContent($pdoc.content)
+     </div>
+	
+
+
+

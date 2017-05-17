@@ -1,0 +1,64 @@
+log4j logging directory was set to C:\Polarion\polarion\..\data\logs\main\
+Local log4j configuration file c:\Polarion\polarion\configuration\log4j.properties was not found
+log4j has been configured from platform:/plugin/org.apache.log4j_1.2.17.2015-05-04/log4j.properties in context STANDALONE
+****************************************************************
+                Polarion starting, please wait!                 
+****************************************************************
+Server start mode: normal
+------------------------------
+Platform startup (Phase: 1/9)
+Opening historical database...
+Opening of historical database finished [ TIME 1.91 s. ]
+Opening head database...
+Opening of head database finished [ TIME 1.07 s. ]
+ -- Polarion startup estimation:  [ TIME 64 s. ]
+Platform startup ... took  [ TIME 133.32 s. ]
+------------------------------
+Context recognition (Phase: 2/9)
+Context recognition ... took  [ TIME 0.56 s. ]
+------------------------------
+Context initialization (Phase: 3/9)
+ -- Initializing context: --Demo Projects (4/6)
+ -- Initializing context: [GLOBAL] (1/6)
+ -- Initializing cluster: default (5/6)
+ -- Initializing context: elibrary (3/6)
+ -- Initializing context: library (2/6)
+ -- Initializing context: drivepilot (6/6)
+Context initialization ... took  [ TIME 2.37 s. ]
+------------------------------
+Revisions processing (Phase: 4/9)
+ -- Processing new revisions from repository default in context ContextId[context [global]]
+Revisions processing ... took  [ TIME 0.45 s. ]
+------------------------------
+Build artifacts recognition (Phase: 5/9)
+ -- Processing build artifacts from context: [GLOBAL] (1/6)
+ -- Processing build artifacts from cluster: default (2/6)
+ -- Processing build artifacts from context: --Demo Projects (3/6)
+ -- Processing build artifacts from context: library (4/6)
+ -- Processing build artifacts from context: elibrary (5/6)
+ -- Processing build artifacts from context: drivepilot (6/6)
+Build artifacts recognition ... took  [ TIME 0.95 s. ]
+------------------------------
+BIR inspection (Phase: 6/9)
+BIR inspection ... took  [ TIME 0.18 s. ]
+------------------------------
+Data indexing (Phase: 7/9)
+ -- Refreshing 1 objects in index: Revision
+ -- -- 1 from 1 objects were refreshed (100%)
+Data indexing ... took  [ TIME 2.9 s. ]
+------------------------------
+Fields recalculation (Phase: 8/9)
+Fields recalculation ... took  [ TIME 0.09 s. ]
+------------------------------
+Polarion startup (Phase: 9/9)
+JetspeedContainerServlet: starting initialization of Portlet Application at: polarion/wiki
+JetspeedContainerServlet: initialization done for Portlet Application at: polarion/wiki
+JetspeedContainerServlet: starting initialization of Portlet Application at: webui
+JetspeedContainerServlet: initialization done for Portlet Application at: webui
+Polarion startup ... took  [ TIME 54.24 s. ]
+****************************************************************
+                 Polarion started:  [ TIME 195 s. ]
+****************************************************************
+2017-05-15 17:16:25,946 [PreLoadDataService] INFO  com.polarion.psvn.launcher.internal.data.PreLoadDataService  - Preloading data ...
+2017-05-15 17:16:27,701 [PreLoadDataService] INFO  com.polarion.psvn.launcher.internal.data.PreLoadDataService  - Preloading data FINISHED took  [ TIME 1.76 s. ]
+hostname = localhost, port=8887, catchPhrase=shutdown

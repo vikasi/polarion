@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Provide-Package: com.polarion.hivemind,org.apache.hivemind,org.apache.
+ hivemind.ant,org.apache.hivemind.conditional,org.apache.hivemind.even
+ ts,org.apache.hivemind.impl,org.apache.hivemind.impl.servicemodel,org
+ .apache.hivemind.internal,org.apache.hivemind.internal.ser,org.apache
+ .hivemind.lib,org.apache.hivemind.lib.chain,org.apache.hivemind.lib.f
+ actory,org.apache.hivemind.lib.groovy,org.apache.hivemind.lib.impl,or
+ g.apache.hivemind.lib.pipeline,org.apache.hivemind.lib.strategy,org.a
+ pache.hivemind.lib.util,org.apache.hivemind.management,org.apache.hiv
+ emind.management.impl,org.apache.hivemind.management.log4j,org.apache
+ .hivemind.management.mbeans,org.apache.hivemind.methodmatch,org.apach
+ e.hivemind.order,org.apache.hivemind.parse,org.apache.hivemind.schema
+ ,org.apache.hivemind.schema.impl,org.apache.hivemind.schema.rules,org
+ .apache.hivemind.service,org.apache.hivemind.service.impl,org.apache.
+ hivemind.servlet,org.apache.hivemind.test,org.apache.hivemind.util
+Bundle-SymbolicName: org.apache.hivemind
+Bundle-Name: Hivemind Plug-in
+Bundle-Version: 1.1.1.2014-03-06
+Bundle-ClassPath: polarion-hivemind.jar,hivemind-jmx-1.1.1.jar,hivemin
+ d-lib-1.1.1.jar,hivemind-1.1.1.jar,lib/jakarta-oro-2.0.8.jar,lib/java
+ ssist.jar
+Bundle-Localization: plugin
+Require-Bundle: org.apache.log4j,com.polarion.core.util,com.polarion.c
+ ore.boot
+
+

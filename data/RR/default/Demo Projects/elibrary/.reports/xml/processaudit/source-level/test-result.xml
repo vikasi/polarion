@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="elibrary" id="test-result" tag="20130523_1550">
+    <structure-element id="root" provider="root" type="root">
+        <structure-element id="null:com.polarion.demo.BookTest" provider="surefire-test" type="test-suite">
+            <properties>
+                <property id="name">
+                    <value>com.polarion.demo.BookTest</value>
+                </property>
+                <property id="errors">
+                    <value>0</value>
+                </property>
+                <property id="failures">
+                    <value>0</value>
+                </property>
+                <property id="tests">
+                    <value>1</value>
+                </property>
+                <property id="time">
+                    <value>0.01</value>
+                </property>
+                <property id="source-prefix">
+                    <value/>
+                </property>
+                <property id="system-properties">
+                    <value/>
+                    <properties>
+                        <property id="java.runtime.name">
+                            <value>Java(TM) SE Runtime Environment</value>
+                        </property>
+                        <property id="sun.boot.library.path">
+                            <value>C:\Program Files\Java\jdk6\jre\bin</value>
+                        </property>
+                        <property id="java.vm.version">
+                            <value>20.13-b02</value>
+                        </property>
+                        <property id="java.vm.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="java.vendor.url">
+                            <value>http://java.sun.com/</value>
+                        </property>
+                        <property id="path.separator">
+                            <value>;</value>
+                        </property>
+                        <property id="java.vm.name">
+                            <value>Java HotSpot(TM) 64-Bit Server VM</value>
+                        </property>
+                        <property id="file.encoding.pkg">
+                            <value>sun.io</value>
+                        </property>
+                        <property id="user.country">
+                            <value>CZ</value>
+                        </property>
+                        <property id="sun.java.launcher">
+                            <value>SUN_STANDARD</value>
+                        </property>
+                        <property id="sun.os.patch.level">
+                            <value>Service Pack 1</value>
+                        </property>
+                        <property id="java.vm.specification.name">
+                            <value>Java Virtual Machine Specification</value>
+                        </property>
+                        <property id="user.dir">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null</value>
+                        </property>
+                        <property id="java.runtime.version">
+                            <value>1.6.0_38-b05</value>
+                        </property>
+                        <property id="java.awt.graphicsenv">
+                            <value>sun.awt.Win32GraphicsEnvironment</value>
+                        </property>
+                        <property id="basedir">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null</value>
+                        </property>
+                        <property id="java.endorsed.dirs">
+                            <value>C:\Program Files\Java\jdk6\jre\lib\endorsed</value>
+                        </property>
+                        <property id="os.arch">
+                            <value>amd64</value>
+                        </property>
+                        <property id="surefire.real.class.path">
+                            <value>C:\Windows\TEMP\surefirebooter6178621110310217976.jar</value>
+                        </property>
+                        <property id="java.io.tmpdir">
+                            <value>C:\Windows\TEMP\</value>
+                        </property>
+                        <property id="line.separator">
+                            <value> </value>
+                        </property>
+                        <property id="java.vm.specification.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="user.variant">
+                            <value/>
+                        </property>
+                        <property id="os.name">
+                            <value>Windows 7</value>
+                        </property>
+                        <property id="sun.jnu.encoding">
+                            <value>Cp1250</value>
+                        </property>
+                        <property id="java.library.path">
+                            <value>C:\Program Files\Java\jdk6\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Polarion\polarion\imagemagick;C:\Polarion\bundled\svn\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Dell\DW WLAN Card;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Data Protection\Access\Advanced\Wave\Gemalto\Access Client\v5\;C:\Program Files (x86)\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Java\jdk6\bin;C:\Program Files (x86)\PuTTY\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Google\Google Apps Sync\;C:\Program Files (x86)\Google\Google Apps Migration\;C:\Program Files\OpenVPN\bin;;.</value>
+                        </property>
+                        <property id="surefire.test.class.path">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\test-classes;C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\classes;C:\Polarion\data\maven-repo\junit\junit\3.8.1\junit-3.8.1.jar;C:\Polarion\data\maven-repo\log4j\log4j\1.2.8\log4j-1.2.8.jar;C:\Polarion\data\maven-repo\commons-configuration\commons-configuration\1.2\commons-configuration-1.2.jar;C:\Polarion\data\maven-repo\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Polarion\data\maven-repo\commons-lang\commons-lang\2.1\commons-lang-2.1.jar;C:\Polarion\data\maven-repo\dom4j\dom4j\1.4\dom4j-1.4.jar;C:\Polarion\data\maven-repo\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Polarion\data\maven-repo\jaxen\jaxen\1.0-FCS\jaxen-1.0-FCS.jar;C:\Polarion\data\maven-repo\saxpath\saxpath\1.0-FCS\saxpath-1.0-FCS.jar;C:\Polarion\data\maven-repo\msv\msv\20020414\msv-20020414.jar;C:\Polarion\data\maven-repo\relaxngDatatype\relaxngDatatype\20020414\relaxngDatatype-20020414.jar;C:\Polarion\data\maven-repo\isorelax\isorelax\20020414\isorelax-20020414.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging-api\1.0.4\commons-logging-api-1.0.4.jar;C:\Polarion\data\maven-repo\commons-digester\commons-digester\1.6\commons-digester-1.6.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils\1.6\commons-beanutils-1.6.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging\1.0\commons-logging-1.0.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils-core\1.7.0\commons-beanutils-core-1.7.0.jar;C:\Polarion\data\maven-repo\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Polarion\data\maven-repo\xerces\xercesImpl\2.2.1\xercesImpl-2.2.1.jar;C:\Polarion\data\maven-repo\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Polarion\data\maven-repo\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Polarion\data\maven-repo\commons-primitives\commons-primitives\1.0\commons-primitives-1.0.jar;</value>
+                        </property>
+                        <property id="java.specification.name">
+                            <value>Java Platform API Specification</value>
+                        </property>
+                        <property id="java.class.version">
+                            <value>50.0</value>
+                        </property>
+                        <property id="sun.management.compiler">
+                            <value>HotSpot 64-Bit Tiered Compilers</value>
+                        </property>
+                        <property id="os.version">
+                            <value>6.1</value>
+                        </property>
+                        <property id="user.home">
+                            <value>C:\</value>
+                        </property>
+                        <property id="user.timezone">
+                            <value/>
+                        </property>
+                        <property id="java.awt.printerjob">
+                            <value>sun.awt.windows.WPrinterJob</value>
+                        </property>
+                        <property id="file.encoding">
+                            <value>Cp1250</value>
+                        </property>
+                        <property id="java.specification.version">
+                            <value>1.6</value>
+                        </property>
+                        <property id="java.class.path">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\test-classes;C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\classes;C:\Polarion\data\maven-repo\junit\junit\3.8.1\junit-3.8.1.jar;C:\Polarion\data\maven-repo\log4j\log4j\1.2.8\log4j-1.2.8.jar;C:\Polarion\data\maven-repo\commons-configuration\commons-configuration\1.2\commons-configuration-1.2.jar;C:\Polarion\data\maven-repo\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Polarion\data\maven-repo\commons-lang\commons-lang\2.1\commons-lang-2.1.jar;C:\Polarion\data\maven-repo\dom4j\dom4j\1.4\dom4j-1.4.jar;C:\Polarion\data\maven-repo\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Polarion\data\maven-repo\jaxen\jaxen\1.0-FCS\jaxen-1.0-FCS.jar;C:\Polarion\data\maven-repo\saxpath\saxpath\1.0-FCS\saxpath-1.0-FCS.jar;C:\Polarion\data\maven-repo\msv\msv\20020414\msv-20020414.jar;C:\Polarion\data\maven-repo\relaxngDatatype\relaxngDatatype\20020414\relaxngDatatype-20020414.jar;C:\Polarion\data\maven-repo\isorelax\isorelax\20020414\isorelax-20020414.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging-api\1.0.4\commons-logging-api-1.0.4.jar;C:\Polarion\data\maven-repo\commons-digester\commons-digester\1.6\commons-digester-1.6.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils\1.6\commons-beanutils-1.6.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging\1.0\commons-logging-1.0.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils-core\1.7.0\commons-beanutils-core-1.7.0.jar;C:\Polarion\data\maven-repo\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Polarion\data\maven-repo\xerces\xercesImpl\2.2.1\xercesImpl-2.2.1.jar;C:\Polarion\data\maven-repo\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Polarion\data\maven-repo\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Polarion\data\maven-repo\commons-primitives\commons-primitives\1.0\commons-primitives-1.0.jar;</value>
+                        </property>
+                        <property id="user.name">
+                            <value>KROTILR-PC$</value>
+                        </property>
+                        <property id="java.vm.specification.version">
+                            <value>1.0</value>
+                        </property>
+                        <property id="sun.java.command">
+                            <value>C:\Windows\TEMP\surefirebooter6178621110310217976.jar C:\Windows\TEMP\surefire4478194165458252490tmp C:\Windows\TEMP\surefire2479215639565479170tmp</value>
+                        </property>
+                        <property id="java.home">
+                            <value>C:\Program Files\Java\jdk6\jre</value>
+                        </property>
+                        <property id="sun.arch.data.model">
+                            <value>64</value>
+                        </property>
+                        <property id="user.language">
+                            <value>cs</value>
+                        </property>
+                        <property id="java.specification.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="awt.toolkit">
+                            <value>sun.awt.windows.WToolkit</value>
+                        </property>
+                        <property id="java.vm.info">
+                            <value>mixed mode</value>
+                        </property>
+                        <property id="java.version">
+                            <value>1.6.0_38</value>
+                        </property>
+                        <property id="java.ext.dirs">
+                            <value>C:\Program Files\Java\jdk6\jre\lib\ext;C:\Windows\Sun\Java\lib\ext</value>
+                        </property>
+                        <property id="sun.boot.class.path">
+                            <value>C:\Program Files\Java\jdk6\jre\lib\resources.jar;C:\Program Files\Java\jdk6\jre\lib\rt.jar;C:\Program Files\Java\jdk6\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk6\jre\lib\jsse.jar;C:\Program Files\Java\jdk6\jre\lib\jce.jar;C:\Program Files\Java\jdk6\jre\lib\charsets.jar;C:\Program Files\Java\jdk6\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk6\jre\classes</value>
+                        </property>
+                        <property id="java.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="localRepository">
+                            <value>C:/Polarion/data/maven-repo</value>
+                        </property>
+                        <property id="file.separator">
+                            <value>\</value>
+                        </property>
+                        <property id="java.vendor.url.bug">
+                            <value>http://java.sun.com/cgi-bin/bugreport.cgi</value>
+                        </property>
+                        <property id="sun.io.unicode.encoding">
+                            <value>UnicodeLittle</value>
+                        </property>
+                        <property id="sun.cpu.endian">
+                            <value>little</value>
+                        </property>
+                        <property id="sun.desktop">
+                            <value>windows</value>
+                        </property>
+                        <property id="sun.cpu.isalist">
+                            <value>amd64</value>
+                        </property>
+                    </properties>
+                </property>
+            </properties>
+            <structure-element id="null:com.polarion.demo.BookTest:testBook" provider="surefire-test" type="test-case">
+                <properties>
+                    <property id="name">
+                        <value>testBook</value>
+                    </property>
+                    <property id="error">
+                        <value>false</value>
+                    </property>
+                    <property id="failure">
+                        <value>false</value>
+                    </property>
+                    <property id="success">
+                        <value>true</value>
+                    </property>
+                    <property id="time">
+                        <value>0.0</value>
+                    </property>
+                </properties>
+            </structure-element>
+        </structure-element>
+        <structure-element id="null:com.polarion.demo.LibraryTest" provider="surefire-test" type="test-suite">
+            <properties>
+                <property id="name">
+                    <value>com.polarion.demo.LibraryTest</value>
+                </property>
+                <property id="errors">
+                    <value>0</value>
+                </property>
+                <property id="failures">
+                    <value>0</value>
+                </property>
+                <property id="tests">
+                    <value>2</value>
+                </property>
+                <property id="time">
+                    <value>0.0</value>
+                </property>
+                <property id="source-prefix">
+                    <value/>
+                </property>
+                <property id="system-properties">
+                    <value/>
+                    <properties>
+                        <property id="java.runtime.name">
+                            <value>Java(TM) SE Runtime Environment</value>
+                        </property>
+                        <property id="sun.boot.library.path">
+                            <value>C:\Program Files\Java\jdk6\jre\bin</value>
+                        </property>
+                        <property id="java.vm.version">
+                            <value>20.13-b02</value>
+                        </property>
+                        <property id="java.vm.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="java.vendor.url">
+                            <value>http://java.sun.com/</value>
+                        </property>
+                        <property id="path.separator">
+                            <value>;</value>
+                        </property>
+                        <property id="java.vm.name">
+                            <value>Java HotSpot(TM) 64-Bit Server VM</value>
+                        </property>
+                        <property id="file.encoding.pkg">
+                            <value>sun.io</value>
+                        </property>
+                        <property id="user.country">
+                            <value>CZ</value>
+                        </property>
+                        <property id="sun.java.launcher">
+                            <value>SUN_STANDARD</value>
+                        </property>
+                        <property id="sun.os.patch.level">
+                            <value>Service Pack 1</value>
+                        </property>
+                        <property id="java.vm.specification.name">
+                            <value>Java Virtual Machine Specification</value>
+                        </property>
+                        <property id="user.dir">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null</value>
+                        </property>
+                        <property id="java.runtime.version">
+                            <value>1.6.0_38-b05</value>
+                        </property>
+                        <property id="java.awt.graphicsenv">
+                            <value>sun.awt.Win32GraphicsEnvironment</value>
+                        </property>
+                        <property id="basedir">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null</value>
+                        </property>
+                        <property id="java.endorsed.dirs">
+                            <value>C:\Program Files\Java\jdk6\jre\lib\endorsed</value>
+                        </property>
+                        <property id="os.arch">
+                            <value>amd64</value>
+                        </property>
+                        <property id="surefire.real.class.path">
+                            <value>C:\Windows\TEMP\surefirebooter6178621110310217976.jar</value>
+                        </property>
+                        <property id="java.io.tmpdir">
+                            <value>C:\Windows\TEMP\</value>
+                        </property>
+                        <property id="line.separator">
+                            <value> </value>
+                        </property>
+                        <property id="java.vm.specification.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="user.variant">
+                            <value/>
+                        </property>
+                        <property id="os.name">
+                            <value>Windows 7</value>
+                        </property>
+                        <property id="sun.jnu.encoding">
+                            <value>Cp1250</value>
+                        </property>
+                        <property id="java.library.path">
+                            <value>C:\Program Files\Java\jdk6\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Polarion\polarion\imagemagick;C:\Polarion\bundled\svn\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Dell\DW WLAN Card;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Data Protection\Access\Advanced\Wave\Gemalto\Access Client\v5\;C:\Program Files (x86)\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Java\jdk6\bin;C:\Program Files (x86)\PuTTY\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Google\Google Apps Sync\;C:\Program Files (x86)\Google\Google Apps Migration\;C:\Program Files\OpenVPN\bin;;.</value>
+                        </property>
+                        <property id="surefire.test.class.path">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\test-classes;C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\classes;C:\Polarion\data\maven-repo\junit\junit\3.8.1\junit-3.8.1.jar;C:\Polarion\data\maven-repo\log4j\log4j\1.2.8\log4j-1.2.8.jar;C:\Polarion\data\maven-repo\commons-configuration\commons-configuration\1.2\commons-configuration-1.2.jar;C:\Polarion\data\maven-repo\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Polarion\data\maven-repo\commons-lang\commons-lang\2.1\commons-lang-2.1.jar;C:\Polarion\data\maven-repo\dom4j\dom4j\1.4\dom4j-1.4.jar;C:\Polarion\data\maven-repo\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Polarion\data\maven-repo\jaxen\jaxen\1.0-FCS\jaxen-1.0-FCS.jar;C:\Polarion\data\maven-repo\saxpath\saxpath\1.0-FCS\saxpath-1.0-FCS.jar;C:\Polarion\data\maven-repo\msv\msv\20020414\msv-20020414.jar;C:\Polarion\data\maven-repo\relaxngDatatype\relaxngDatatype\20020414\relaxngDatatype-20020414.jar;C:\Polarion\data\maven-repo\isorelax\isorelax\20020414\isorelax-20020414.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging-api\1.0.4\commons-logging-api-1.0.4.jar;C:\Polarion\data\maven-repo\commons-digester\commons-digester\1.6\commons-digester-1.6.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils\1.6\commons-beanutils-1.6.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging\1.0\commons-logging-1.0.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils-core\1.7.0\commons-beanutils-core-1.7.0.jar;C:\Polarion\data\maven-repo\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Polarion\data\maven-repo\xerces\xercesImpl\2.2.1\xercesImpl-2.2.1.jar;C:\Polarion\data\maven-repo\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Polarion\data\maven-repo\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Polarion\data\maven-repo\commons-primitives\commons-primitives\1.0\commons-primitives-1.0.jar;</value>
+                        </property>
+                        <property id="java.specification.name">
+                            <value>Java Platform API Specification</value>
+                        </property>
+                        <property id="java.class.version">
+                            <value>50.0</value>
+                        </property>
+                        <property id="sun.management.compiler">
+                            <value>HotSpot 64-Bit Tiered Compilers</value>
+                        </property>
+                        <property id="os.version">
+                            <value>6.1</value>
+                        </property>
+                        <property id="user.home">
+                            <value>C:\</value>
+                        </property>
+                        <property id="user.timezone">
+                            <value/>
+                        </property>
+                        <property id="java.awt.printerjob">
+                            <value>sun.awt.windows.WPrinterJob</value>
+                        </property>
+                        <property id="file.encoding">
+                            <value>Cp1250</value>
+                        </property>
+                        <property id="java.specification.version">
+                            <value>1.6</value>
+                        </property>
+                        <property id="java.class.path">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\test-classes;C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\classes;C:\Polarion\data\maven-repo\junit\junit\3.8.1\junit-3.8.1.jar;C:\Polarion\data\maven-repo\log4j\log4j\1.2.8\log4j-1.2.8.jar;C:\Polarion\data\maven-repo\commons-configuration\commons-configuration\1.2\commons-configuration-1.2.jar;C:\Polarion\data\maven-repo\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Polarion\data\maven-repo\commons-lang\commons-lang\2.1\commons-lang-2.1.jar;C:\Polarion\data\maven-repo\dom4j\dom4j\1.4\dom4j-1.4.jar;C:\Polarion\data\maven-repo\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Polarion\data\maven-repo\jaxen\jaxen\1.0-FCS\jaxen-1.0-FCS.jar;C:\Polarion\data\maven-repo\saxpath\saxpath\1.0-FCS\saxpath-1.0-FCS.jar;C:\Polarion\data\maven-repo\msv\msv\20020414\msv-20020414.jar;C:\Polarion\data\maven-repo\relaxngDatatype\relaxngDatatype\20020414\relaxngDatatype-20020414.jar;C:\Polarion\data\maven-repo\isorelax\isorelax\20020414\isorelax-20020414.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging-api\1.0.4\commons-logging-api-1.0.4.jar;C:\Polarion\data\maven-repo\commons-digester\commons-digester\1.6\commons-digester-1.6.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils\1.6\commons-beanutils-1.6.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging\1.0\commons-logging-1.0.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils-core\1.7.0\commons-beanutils-core-1.7.0.jar;C:\Polarion\data\maven-repo\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Polarion\data\maven-repo\xerces\xercesImpl\2.2.1\xercesImpl-2.2.1.jar;C:\Polarion\data\maven-repo\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Polarion\data\maven-repo\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Polarion\data\maven-repo\commons-primitives\commons-primitives\1.0\commons-primitives-1.0.jar;</value>
+                        </property>
+                        <property id="user.name">
+                            <value>KROTILR-PC$</value>
+                        </property>
+                        <property id="java.vm.specification.version">
+                            <value>1.0</value>
+                        </property>
+                        <property id="sun.java.command">
+                            <value>C:\Windows\TEMP\surefirebooter6178621110310217976.jar C:\Windows\TEMP\surefire4478194165458252490tmp C:\Windows\TEMP\surefire2479215639565479170tmp</value>
+                        </property>
+                        <property id="java.home">
+                            <value>C:\Program Files\Java\jdk6\jre</value>
+                        </property>
+                        <property id="sun.arch.data.model">
+                            <value>64</value>
+                        </property>
+                        <property id="user.language">
+                            <value>cs</value>
+                        </property>
+                        <property id="java.specification.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="awt.toolkit">
+                            <value>sun.awt.windows.WToolkit</value>
+                        </property>
+                        <property id="java.vm.info">
+                            <value>mixed mode</value>
+                        </property>
+                        <property id="java.version">
+                            <value>1.6.0_38</value>
+                        </property>
+                        <property id="java.ext.dirs">
+                            <value>C:\Program Files\Java\jdk6\jre\lib\ext;C:\Windows\Sun\Java\lib\ext</value>
+                        </property>
+                        <property id="sun.boot.class.path">
+                            <value>C:\Program Files\Java\jdk6\jre\lib\resources.jar;C:\Program Files\Java\jdk6\jre\lib\rt.jar;C:\Program Files\Java\jdk6\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk6\jre\lib\jsse.jar;C:\Program Files\Java\jdk6\jre\lib\jce.jar;C:\Program Files\Java\jdk6\jre\lib\charsets.jar;C:\Program Files\Java\jdk6\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk6\jre\classes</value>
+                        </property>
+                        <property id="java.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="localRepository">
+                            <value>C:/Polarion/data/maven-repo</value>
+                        </property>
+                        <property id="file.separator">
+                            <value>\</value>
+                        </property>
+                        <property id="java.vendor.url.bug">
+                            <value>http://java.sun.com/cgi-bin/bugreport.cgi</value>
+                        </property>
+                        <property id="sun.io.unicode.encoding">
+                            <value>UnicodeLittle</value>
+                        </property>
+                        <property id="sun.cpu.endian">
+                            <value>little</value>
+                        </property>
+                        <property id="sun.desktop">
+                            <value>windows</value>
+                        </property>
+                        <property id="sun.cpu.isalist">
+                            <value>amd64</value>
+                        </property>
+                    </properties>
+                </property>
+            </properties>
+            <structure-element id="null:com.polarion.demo.LibraryTest:testLibrarySearch" provider="surefire-test" type="test-case">
+                <properties>
+                    <property id="name">
+                        <value>testLibrarySearch</value>
+                    </property>
+                    <property id="error">
+                        <value>false</value>
+                    </property>
+                    <property id="failure">
+                        <value>false</value>
+                    </property>
+                    <property id="success">
+                        <value>true</value>
+                    </property>
+                    <property id="time">
+                        <value>0.0</value>
+                    </property>
+                </properties>
+            </structure-element>
+            <structure-element id="null:com.polarion.demo.LibraryTest:testLibrarySize" provider="surefire-test" type="test-case">
+                <properties>
+                    <property id="name">
+                        <value>testLibrarySize</value>
+                    </property>
+                    <property id="error">
+                        <value>false</value>
+                    </property>
+                    <property id="failure">
+                        <value>false</value>
+                    </property>
+                    <property id="success">
+                        <value>true</value>
+                    </property>
+                    <property id="time">
+                        <value>0.0</value>
+                    </property>
+                </properties>
+            </structure-element>
+        </structure-element>
+        <structure-element id="null:com.polarion.demo.LoginTest" provider="surefire-test" type="test-suite">
+            <properties>
+                <property id="name">
+                    <value>com.polarion.demo.LoginTest</value>
+                </property>
+                <property id="errors">
+                    <value>1</value>
+                </property>
+                <property id="failures">
+                    <value>1</value>
+                </property>
+                <property id="tests">
+                    <value>2</value>
+                </property>
+                <property id="time">
+                    <value>0.01</value>
+                </property>
+                <property id="source-prefix">
+                    <value/>
+                </property>
+                <property id="system-properties">
+                    <value/>
+                    <properties>
+                        <property id="java.runtime.name">
+                            <value>Java(TM) SE Runtime Environment</value>
+                        </property>
+                        <property id="sun.boot.library.path">
+                            <value>C:\Program Files\Java\jdk6\jre\bin</value>
+                        </property>
+                        <property id="java.vm.version">
+                            <value>20.13-b02</value>
+                        </property>
+                        <property id="java.vm.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="java.vendor.url">
+                            <value>http://java.sun.com/</value>
+                        </property>
+                        <property id="path.separator">
+                            <value>;</value>
+                        </property>
+                        <property id="java.vm.name">
+                            <value>Java HotSpot(TM) 64-Bit Server VM</value>
+                        </property>
+                        <property id="file.encoding.pkg">
+                            <value>sun.io</value>
+                        </property>
+                        <property id="user.country">
+                            <value>CZ</value>
+                        </property>
+                        <property id="sun.java.launcher">
+                            <value>SUN_STANDARD</value>
+                        </property>
+                        <property id="sun.os.patch.level">
+                            <value>Service Pack 1</value>
+                        </property>
+                        <property id="java.vm.specification.name">
+                            <value>Java Virtual Machine Specification</value>
+                        </property>
+                        <property id="user.dir">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null</value>
+                        </property>
+                        <property id="java.runtime.version">
+                            <value>1.6.0_38-b05</value>
+                        </property>
+                        <property id="java.awt.graphicsenv">
+                            <value>sun.awt.Win32GraphicsEnvironment</value>
+                        </property>
+                        <property id="basedir">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null</value>
+                        </property>
+                        <property id="java.endorsed.dirs">
+                            <value>C:\Program Files\Java\jdk6\jre\lib\endorsed</value>
+                        </property>
+                        <property id="os.arch">
+                            <value>amd64</value>
+                        </property>
+                        <property id="surefire.real.class.path">
+                            <value>C:\Windows\TEMP\surefirebooter6178621110310217976.jar</value>
+                        </property>
+                        <property id="java.io.tmpdir">
+                            <value>C:\Windows\TEMP\</value>
+                        </property>
+                        <property id="line.separator">
+                            <value> </value>
+                        </property>
+                        <property id="java.vm.specification.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="user.variant">
+                            <value/>
+                        </property>
+                        <property id="os.name">
+                            <value>Windows 7</value>
+                        </property>
+                        <property id="sun.jnu.encoding">
+                            <value>Cp1250</value>
+                        </property>
+                        <property id="java.library.path">
+                            <value>C:\Program Files\Java\jdk6\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Polarion\polarion\imagemagick;C:\Polarion\bundled\svn\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Dell\DW WLAN Card;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Data Protection\Access\Advanced\Wave\Gemalto\Access Client\v5\;C:\Program Files (x86)\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Java\jdk6\bin;C:\Program Files (x86)\PuTTY\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Google\Google Apps Sync\;C:\Program Files (x86)\Google\Google Apps Migration\;C:\Program Files\OpenVPN\bin;;.</value>
+                        </property>
+                        <property id="surefire.test.class.path">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\test-classes;C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\classes;C:\Polarion\data\maven-repo\junit\junit\3.8.1\junit-3.8.1.jar;C:\Polarion\data\maven-repo\log4j\log4j\1.2.8\log4j-1.2.8.jar;C:\Polarion\data\maven-repo\commons-configuration\commons-configuration\1.2\commons-configuration-1.2.jar;C:\Polarion\data\maven-repo\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Polarion\data\maven-repo\commons-lang\commons-lang\2.1\commons-lang-2.1.jar;C:\Polarion\data\maven-repo\dom4j\dom4j\1.4\dom4j-1.4.jar;C:\Polarion\data\maven-repo\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Polarion\data\maven-repo\jaxen\jaxen\1.0-FCS\jaxen-1.0-FCS.jar;C:\Polarion\data\maven-repo\saxpath\saxpath\1.0-FCS\saxpath-1.0-FCS.jar;C:\Polarion\data\maven-repo\msv\msv\20020414\msv-20020414.jar;C:\Polarion\data\maven-repo\relaxngDatatype\relaxngDatatype\20020414\relaxngDatatype-20020414.jar;C:\Polarion\data\maven-repo\isorelax\isorelax\20020414\isorelax-20020414.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging-api\1.0.4\commons-logging-api-1.0.4.jar;C:\Polarion\data\maven-repo\commons-digester\commons-digester\1.6\commons-digester-1.6.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils\1.6\commons-beanutils-1.6.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging\1.0\commons-logging-1.0.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils-core\1.7.0\commons-beanutils-core-1.7.0.jar;C:\Polarion\data\maven-repo\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Polarion\data\maven-repo\xerces\xercesImpl\2.2.1\xercesImpl-2.2.1.jar;C:\Polarion\data\maven-repo\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Polarion\data\maven-repo\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Polarion\data\maven-repo\commons-primitives\commons-primitives\1.0\commons-primitives-1.0.jar;</value>
+                        </property>
+                        <property id="java.specification.name">
+                            <value>Java Platform API Specification</value>
+                        </property>
+                        <property id="java.class.version">
+                            <value>50.0</value>
+                        </property>
+                        <property id="sun.management.compiler">
+                            <value>HotSpot 64-Bit Tiered Compilers</value>
+                        </property>
+                        <property id="os.version">
+                            <value>6.1</value>
+                        </property>
+                        <property id="user.home">
+                            <value>C:\</value>
+                        </property>
+                        <property id="user.timezone">
+                            <value/>
+                        </property>
+                        <property id="java.awt.printerjob">
+                            <value>sun.awt.windows.WPrinterJob</value>
+                        </property>
+                        <property id="file.encoding">
+                            <value>Cp1250</value>
+                        </property>
+                        <property id="java.specification.version">
+                            <value>1.6</value>
+                        </property>
+                        <property id="java.class.path">
+                            <value>C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\test-classes;C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\elibrary\elibrary\elibrary\null\target\classes;C:\Polarion\data\maven-repo\junit\junit\3.8.1\junit-3.8.1.jar;C:\Polarion\data\maven-repo\log4j\log4j\1.2.8\log4j-1.2.8.jar;C:\Polarion\data\maven-repo\commons-configuration\commons-configuration\1.2\commons-configuration-1.2.jar;C:\Polarion\data\maven-repo\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Polarion\data\maven-repo\commons-lang\commons-lang\2.1\commons-lang-2.1.jar;C:\Polarion\data\maven-repo\dom4j\dom4j\1.4\dom4j-1.4.jar;C:\Polarion\data\maven-repo\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Polarion\data\maven-repo\jaxen\jaxen\1.0-FCS\jaxen-1.0-FCS.jar;C:\Polarion\data\maven-repo\saxpath\saxpath\1.0-FCS\saxpath-1.0-FCS.jar;C:\Polarion\data\maven-repo\msv\msv\20020414\msv-20020414.jar;C:\Polarion\data\maven-repo\relaxngDatatype\relaxngDatatype\20020414\relaxngDatatype-20020414.jar;C:\Polarion\data\maven-repo\isorelax\isorelax\20020414\isorelax-20020414.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging-api\1.0.4\commons-logging-api-1.0.4.jar;C:\Polarion\data\maven-repo\commons-digester\commons-digester\1.6\commons-digester-1.6.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils\1.6\commons-beanutils-1.6.jar;C:\Polarion\data\maven-repo\commons-logging\commons-logging\1.0\commons-logging-1.0.jar;C:\Polarion\data\maven-repo\commons-beanutils\commons-beanutils-core\1.7.0\commons-beanutils-core-1.7.0.jar;C:\Polarion\data\maven-repo\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Polarion\data\maven-repo\xerces\xercesImpl\2.2.1\xercesImpl-2.2.1.jar;C:\Polarion\data\maven-repo\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Polarion\data\maven-repo\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Polarion\data\maven-repo\commons-primitives\commons-primitives\1.0\commons-primitives-1.0.jar;</value>
+                        </property>
+                        <property id="user.name">
+                            <value>KROTILR-PC$</value>
+                        </property>
+                        <property id="java.vm.specification.version">
+                            <value>1.0</value>
+                        </property>
+                        <property id="sun.java.command">
+                            <value>C:\Windows\TEMP\surefirebooter6178621110310217976.jar C:\Windows\TEMP\surefire4478194165458252490tmp C:\Windows\TEMP\surefire2479215639565479170tmp</value>
+                        </property>
+                        <property id="java.home">
+                            <value>C:\Program Files\Java\jdk6\jre</value>
+                        </property>
+                        <property id="sun.arch.data.model">
+                            <value>64</value>
+                        </property>
+                        <property id="user.language">
+                            <value>cs</value>
+                        </property>
+                        <property id="java.specification.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="awt.toolkit">
+                            <value>sun.awt.windows.WToolkit</value>
+                        </property>
+                        <property id="java.vm.info">
+                            <value>mixed mode</value>
+                        </property>
+                        <property id="java.version">
+                            <value>1.6.0_38</value>
+                        </property>
+                        <property id="java.ext.dirs">
+                            <value>C:\Program Files\Java\jdk6\jre\lib\ext;C:\Windows\Sun\Java\lib\ext</value>
+                        </property>
+                        <property id="sun.boot.class.path">
+                            <value>C:\Program Files\Java\jdk6\jre\lib\resources.jar;C:\Program Files\Java\jdk6\jre\lib\rt.jar;C:\Program Files\Java\jdk6\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk6\jre\lib\jsse.jar;C:\Program Files\Java\jdk6\jre\lib\jce.jar;C:\Program Files\Java\jdk6\jre\lib\charsets.jar;C:\Program Files\Java\jdk6\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk6\jre\classes</value>
+                        </property>
+                        <property id="java.vendor">
+                            <value>Sun Microsystems Inc.</value>
+                        </property>
+                        <property id="localRepository">
+                            <value>C:/Polarion/data/maven-repo</value>
+                        </property>
+                        <property id="file.separator">
+                            <value>\</value>
+                        </property>
+                        <property id="java.vendor.url.bug">
+                            <value>http://java.sun.com/cgi-bin/bugreport.cgi</value>
+                        </property>
+                        <property id="sun.io.unicode.encoding">
+                            <value>UnicodeLittle</value>
+                        </property>
+                        <property id="sun.cpu.endian">
+                            <value>little</value>
+                        </property>
+                        <property id="sun.desktop">
+                            <value>windows</value>
+                        </property>
+                        <property id="sun.cpu.isalist">
+                            <value>amd64</value>
+                        </property>
+                    </properties>
+                </property>
+            </properties>
+            <structure-element id="null:com.polarion.demo.LoginTest:testLogout" provider="surefire-test" type="test-case">
+                <properties>
+                    <property id="name">
+                        <value>testLogout</value>
+                    </property>
+                    <property id="error">
+                        <value>true</value>
+                    </property>
+                    <property id="failure">
+                        <value>false</value>
+                    </property>
+                    <property id="success">
+                        <value>false</value>
+                    </property>
+                    <property id="time">
+                        <value>0.0</value>
+                    </property>
+                    <property id="stack-trace">
+                        <value><![CDATA[java.lang.RuntimeException: Cannot logout, no logged in user
+	at com.polarion.demo.LoginTest.testLogout(LoginTest.java:16)
+]]></value>
+                    </property>
+                </properties>
+            </structure-element>
+            <structure-element id="null:com.polarion.demo.LoginTest:testLogin" provider="surefire-test" type="test-case">
+                <properties>
+                    <property id="name">
+                        <value>testLogin</value>
+                    </property>
+                    <property id="error">
+                        <value>false</value>
+                    </property>
+                    <property id="failure">
+                        <value>true</value>
+                    </property>
+                    <property id="success">
+                        <value>false</value>
+                    </property>
+                    <property id="time">
+                        <value>0.0</value>
+                    </property>
+                    <property id="stack-trace">
+                        <value><![CDATA[junit.framework.AssertionFailedError: Cannot login as Karl Xavier
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at com.polarion.demo.LoginTest.testLogin(LoginTest.java:12)
+]]></value>
+                    </property>
+                </properties>
+            </structure-element>
+        </structure-element>
+    </structure-element>
+</factbase>

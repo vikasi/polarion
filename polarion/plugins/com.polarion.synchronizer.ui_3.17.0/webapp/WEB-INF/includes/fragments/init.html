@@ -1,0 +1,26 @@
+<script type="text/javascript">
+Ember.Handlebars.registerHelper('t', function(str, options) {
+  return Ember.String.loc('_' + str, options);
+});
+
+if(!window.console || typeof console === "undefined") {
+  var console = { log: function (logMsg) { } };
+}
+
+if(console.debug == undefined) {
+  console.debug = console.log;
+  console.debug("Debug redirected to log.");
+}
+
+if (!String.prototype.trim) {
+	String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
+}
+
+App = Ember.Application.create({
+	hasChanges: false
+});
+
+App.ApplicationView = Ember.View.extend({
+	templateName : 'main'
+});
+</script>

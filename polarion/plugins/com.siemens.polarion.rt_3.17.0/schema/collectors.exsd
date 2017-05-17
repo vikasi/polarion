@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.siemens.polarion.rt" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="com.siemens.polarion.rt" id="collectors" name="Resource Traceability Collectors"/>
+      </appInfo>
+      <documentation>
+         Resource Traceability collectors.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="collector"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="collector">
+      <annotation>
+         <documentation>
+            Resource Traceability collector.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="class" type="string">
+            <annotation>
+               <documentation>
+                  The implementation of &quot;com.siemens.polarion.rt.collector.api.RtCollector&quot;.
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn=":com.siemens.polarion.rt.collector.api.RtCollector"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="repositoryProvider" type="string">
+            <annotation>
+               <documentation>
+                  ID of the repository provider with which the collector works.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         3.17.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="copyright"/>
+      </appInfo>
+      <documentation>
+         Polarion AG.
+      </documentation>
+   </annotation>
+
+</schema>

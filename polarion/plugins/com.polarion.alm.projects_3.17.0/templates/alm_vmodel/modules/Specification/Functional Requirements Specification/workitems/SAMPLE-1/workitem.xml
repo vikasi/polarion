@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">admin</field>
+    <field id="created">2012-01-04 22:19:40.829 +0100</field>
+    <field id="description" text-type="text/html">&lt;span style="font-style: italic;"&gt;Some functional  requirement representing a system feature. Itemize the detailed functional requirements associated with this feature as a sub requirements.&lt;/span&gt;</field>
+    <field id="initialEstimate">1d</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="role">refines</item>
+                <item id="workItem">SAMPLE-11</item>
+            </struct>
+        </list>
+    </field>
+    <field id="previousStatus">draft</field>
+    <field id="priority">50.0</field>
+    <field id="remainingEstimate">1d</field>
+    <field id="reqtype" type="enum:reqtype">functional</field>
+    <field id="severity">should_have</field>
+    <field id="status">accepted</field>
+    <field id="type">requirement</field>
+</work-item>

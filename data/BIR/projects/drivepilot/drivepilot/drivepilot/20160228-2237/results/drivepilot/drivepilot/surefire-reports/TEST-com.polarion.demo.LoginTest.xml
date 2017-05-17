@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="2" failures="1" name="com.polarion.demo.LoginTest" time="0.007" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="c:\Program Files\Java\jdk8\jre\bin"/>
+    <property name="java.vm.version" value="25.66-b18"/>
+    <property name="user.country.format" value="CZ"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Polarion\data\workspace\polarion-data\jobs\20160228-2237\sources\drivepilot\drivepilot\drivepilot\null"/>
+    <property name="java.runtime.version" value="1.8.0_66-b18"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="C:\Polarion\data\workspace\polarion-data\jobs\20160228-2237\sources\drivepilot\drivepilot\drivepilot\null"/>
+    <property name="java.endorsed.dirs" value="c:\Program Files\Java\jdk8\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.real.class.path" value="C:\WINDOWS\TEMP\surefirebooter4821368826719029024.jar"/>
+    <property name="java.io.tmpdir" value="C:\WINDOWS\TEMP\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.jnu.encoding" value="Cp1250"/>
+    <property name="java.library.path" value="c:\Program Files\Java\jdk8\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Polarion\bundled\svn\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Dell\DW WLAN Card;C:\Polarion\polarion\imagemagick;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Dell\Dell Data Protection\Access\Advanced\Wave\Gemalto\Access Client\v5;C:\Program Files (x86)\NTRU Cryptosystems\NTRU TCG Software Stack\bin;C:\Program Files\NTRU Cryptosystems\NTRU TCG Software Stack\bin;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Java\jdk7\bin;C:\Program Files (x86)\PuTTY;C:\Program Files (x86)\Google\Google Apps Sync;C:\Program Files (x86)\Google\Google Apps Migration;C:\Program Files (x86)\Skype\Phone;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Google\Google Apps Sync\;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\OpenVPN\bin;C:\Program Files\TortoiseSVN\bin;;c:\Program Files\Java\jdk8\bin;."/>
+    <property name="surefire.test.class.path" value="C:\Polarion\data\workspace\polarion-data\jobs\20160228-2237\sources\drivepilot\drivepilot\drivepilot\null\target\test-classes;C:\Polarion\data\workspace\polarion-data\jobs\20160228-2237\sources\drivepilot\drivepilot\drivepilot\null\target\classes;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\junit\junit\3.8.1\junit-3.8.1.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\log4j\log4j\1.2.8\log4j-1.2.8.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-configuration\commons-configuration\1.2\commons-configuration-1.2.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-lang\commons-lang\2.1\commons-lang-2.1.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\dom4j\dom4j\1.4\dom4j-1.4.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\jaxen\jaxen\1.0-FCS\jaxen-1.0-FCS.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\saxpath\saxpath\1.0-FCS\saxpath-1.0-FCS.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\msv\msv\20020414\msv-20020414.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\relaxngDatatype\relaxngDatatype\20020414\relaxngDatatype-20020414.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\isorelax\isorelax\20020414\isorelax-20020414.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-logging\commons-logging-api\1.0.4\commons-logging-api-1.0.4.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-digester\commons-digester\1.6\commons-digester-1.6.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-beanutils\commons-beanutils\1.6\commons-beanutils-1.6.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-logging\commons-logging\1.0\commons-logging-1.0.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-beanutils\commons-beanutils-core\1.7.0\commons-beanutils-core-1.7.0.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\xerces\xercesImpl\2.2.1\xercesImpl-2.2.1.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-primitives\commons-primitives\1.0\commons-primitives-1.0.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\WINDOWS\system32\config\systemprofile"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1250"/>
+    <property name="user.name" value="KROTILR-PC$"/>
+    <property name="java.class.path" value="C:\Polarion\data\workspace\polarion-data\jobs\20160228-2237\sources\drivepilot\drivepilot\drivepilot\null\target\test-classes;C:\Polarion\data\workspace\polarion-data\jobs\20160228-2237\sources\drivepilot\drivepilot\drivepilot\null\target\classes;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\junit\junit\3.8.1\junit-3.8.1.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\log4j\log4j\1.2.8\log4j-1.2.8.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-configuration\commons-configuration\1.2\commons-configuration-1.2.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-lang\commons-lang\2.1\commons-lang-2.1.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\dom4j\dom4j\1.4\dom4j-1.4.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\jaxen\jaxen\1.0-FCS\jaxen-1.0-FCS.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\saxpath\saxpath\1.0-FCS\saxpath-1.0-FCS.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\msv\msv\20020414\msv-20020414.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\relaxngDatatype\relaxngDatatype\20020414\relaxngDatatype-20020414.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\isorelax\isorelax\20020414\isorelax-20020414.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-logging\commons-logging-api\1.0.4\commons-logging-api-1.0.4.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-digester\commons-digester\1.6\commons-digester-1.6.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-beanutils\commons-beanutils\1.6\commons-beanutils-1.6.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-logging\commons-logging\1.0\commons-logging-1.0.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-beanutils\commons-beanutils-core\1.7.0\commons-beanutils-core-1.7.0.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-codec\commons-codec\1.3\commons-codec-1.3.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\xerces\xercesImpl\2.2.1\xercesImpl-2.2.1.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar;C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo\commons-primitives\commons-primitives\1.0\commons-primitives-1.0.jar;"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="c:\Program Files\Java\jdk8\jre"/>
+    <property name="sun.java.command" value="C:\WINDOWS\TEMP\surefirebooter4821368826719029024.jar C:\WINDOWS\TEMP\surefire2676328679822995043tmp C:\WINDOWS\TEMP\surefire7215023976001226862tmp"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="user.language.format" value="cs"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_66"/>
+    <property name="java.ext.dirs" value="c:\Program Files\Java\jdk8\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="c:\Program Files\Java\jdk8\jre\lib\resources.jar;c:\Program Files\Java\jdk8\jre\lib\rt.jar;c:\Program Files\Java\jdk8\jre\lib\sunrsasign.jar;c:\Program Files\Java\jdk8\jre\lib\jsse.jar;c:\Program Files\Java\jdk8\jre\lib\jce.jar;c:\Program Files\Java\jdk8\jre\lib\charsets.jar;c:\Program Files\Java\jdk8\jre\lib\jfr.jar;c:\Program Files\Java\jdk8\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="localRepository" value="C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20160228-2237\_maven-repo"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.polarion.demo.LoginTest" name="testLogout" time="0.002">
+    <error message="Cannot logout, no logged in user" type="java.lang.RuntimeException">java.lang.RuntimeException: Cannot logout, no logged in user
+	at com.polarion.demo.LoginTest.testLogout(LoginTest.java:16)
+</error>
+  </testcase>
+  <testcase classname="com.polarion.demo.LoginTest" name="testLogin" time="0">
+    <failure message="Cannot login as Karl Xavier" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Cannot login as Karl Xavier
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at com.polarion.demo.LoginTest.testLogin(LoginTest.java:12)
+</failure>
+  </testcase>
+</testsuite>

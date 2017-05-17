@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<title>Polarion&reg; ALM™ Database Documentation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+    body {
+    text-align:center;
+    }
+    #container {
+    margin:0px auto 0px auto;
+    width:800px;
+    text-align:left;
+    font-family: arial;
+    }
+    html body {
+      color:Black;
+      font-family:Arial,Helvetica,Verdana,Geneva,sans-serif;
+      font-size:80%;
+      margin:0;
+      padding:0;
+      line-height:145%;
+    }
+    code {
+      font-size:130%;
+    }
+    a.small {
+      font-size:8pt;
+    }
+    div#hdr {
+      //background-image:url(http://www.polarion.com/img/banners/readme_header_logo.gif);
+      background-position:left center;
+      background-repeat:no-repeat;
+      color:white;
+      font-family:arial black,helvetica;
+      font-weight:bold;
+      height:70px;
+      line-height:30px;
+      vertical-align:middle;
+      text-align:left;
+      margin-left: -37px;
+    }
+    div#hdr h1 {
+      font-size:170%;
+      font-weight:bold;
+      margin:0;
+      padding:20px 0 0 106px;
+    }
+    div#hdr span.tl {
+      font-size:12px;
+      font-style:italic;
+      padding-left:42px;
+    }
+    div#hdr sup {
+      font-size:12px;
+      font-weight:normal;
+    }
+    div#nav {
+      background-color:inherit;
+      color:#191970;
+      font-size:90%;
+      margin-top: 19px; margin-bottom: 19px;      
+    }
+    div#nav ul {
+      display:block;
+      list-style-image:none;
+      list-style-position:outside;
+      list-style-type:none;
+      margin:0;
+      padding:0;
+    }
+    div#nav ul li {
+      display:inline;
+      padding-right:12px;
+    }
+    div#nav a, div#nav a:link, div#nav a:visited, div#nav a:hover {
+      background-color:#55a0b9;
+      color:white;
+      font-weight:bold;
+      padding:5px 10px 5px 10px;
+      text-decoration:none;
+    }
+    div#nav a:hover {
+      background-color:#FF8C00;
+      color:white;
+      font-weight: bold;
+    }
+    div#cont {
+      width: 800px;
+      background-color:White;
+      color:inherit;
+    }
+    div#cont h1 {
+      background-color:inherit;
+      border-bottom:1px solid #CCCCCC;
+      font-size:160%;
+      margin-top: 32px;
+      padding-bottom:4px;
+    }
+    div#cont h2, div#cont h3 {
+      background-color:inherit;
+      color:black;
+      font-size:135%;
+
+      font-weight:bold;
+      margin:18px 16px 2px;
+      padding:0;
+    }
+    div#cont h3 {
+      font-size:115%;
+      font-style:normal;
+    }
+    div#cont p {
+      margin:0 16px 8px;
+      padding:0;
+    }
+    div#cont p.top {
+      font-size:80%;
+      font-weight:bold;
+      text-align:right;
+    }
+    div#cont p.procHdr {
+      font-style:italic;
+      margin-bottom:2px;
+    }
+
+    div#cont ul, div#cont ol {
+      margin:0 1em;
+      padding-left:1em;
+    }
+    div#cont ul li {
+      list-style-image:none;
+      list-style-position:outside;
+      list-style-type:square;
+      margin:0 28px 8px;
+    }
+    div#cont ol li {
+      margin:0 28px 8px;
+    }
+    div#cont a:link, div#cont a:visited {
+      background-color:inherit;
+      border-bottom:1px dotted #135E83;
+      color:#55a0b9;
+      text-decoration:none;
+      font-weight: bold;
+    }
+    div#cont a:hover {
+     // background-color:#FFFFE0;
+      background-color: #307389;
+      border-bottom:1px dotted #307389;
+      color:#FFF;
+      font-weight: bold;
+    }
+    
+    div#ftr {
+      background-color:#55a0b9;
+      background-position:left center;
+      background-repeat:no-repeat;
+      color:white;
+      font-size:13px;
+      height:70px;
+      margin:0 0 6px;
+      padding:0 1em 0 8px;
+      text-align:right;
+    }
+    div#ftr p {
+      padding:0 18px 0 0;
+    }
+    div.note {
+      background-color:#EEEEEE;
+      border-color:#CCCCCC #999999 #999999 #CCCCCC;
+      border-style:solid;
+      border-width:1px 2px 2px 1px;
+      margin:18px 5%;
+    }
+    div#cont div.note h2 {
+      background-color:inherit;
+      color:Blue;
+      margin-top:6px;
+    }
+    table {
+      background-color:#FFFFFF;
+      border:1px solid #CCCCCC;
+      margin:18px 12px;
+    }
+    th, td {
+      border:1px solid #EEEEEE;
+      padding:4px 1em;
+      text-align:left;
+    }
+    th {
+      background-color:#CCCCCC;
+    }
+
+    th.Title {background-color: #55a0b9; color:#FFF; padding-bottom: 0; border-bottom: none;}
+    .shad {
+      background-color:#F9F9F9;
+    }
+	</style>
+</head>
+
+<body>
+<div style="width: 100%; background-color:#55a0b9; height: 70px">
+	<div id="container">
+	<div id="hdr">
+		<h1>Polarion<sup>&reg;</sup>ALM™ Embedded Database Documentation</h1>
+	</div>
+	<!--  
+	<div id="nav">
+		<ul>
+			<li><a href="#" title="">Nav Item 1</a></li>
+		  <li><a href="#" title="">Nav Item 2</a></li>
+		  <li><a href="#" title="">Nav Item 3</a></li>
+		  <li><a href="../../index.html" title="Polarion SDK index page">Polarion SDK Home</a></li>
+		</ul>
+	</div>
+	-->
+
+	<div id="cont">
+        
+        <p style="margin-top: 42px;">
+          Polarion's architecture includes a database that mirrors the current state of the Polarion repository, and one that replicates the repository history. For some types of 
+          reporting, querying the database can be significantly more efficient than using the Lucene query engine. 
+        </p>
+	     <p>
+	       This page provides access to the schema diagrams and other information related to the embedded database. The following resources are 
+	       available in the <code>sdk/doc/database</code> folder:
+	     </p>
+	     <table>
+	       <tr>
+	         <th class="Title" colspan="3">Database Resources</th>
+	       </tr>
+	       <tr>
+	         <th>Resource Description</th>
+	         <th>Resource File</th>
+	         <th>Action</th>
+	       </tr>
+	       <tr>
+	         <td>Database Tables Reference</td>
+	         <td><code>TablesReferenceIndex.html</code></td>
+	         <td><a href="TablesReferenceIndex.html">VIEW ONLINE</a></td>
+	       </tr>
+		   <tr>
+	         <td>Database Table Changes</td>
+	         <td><code>TableChanges.html</code></td>
+	         <td><a href="TableChanges.html">VIEW ONLINE</a></td>
+	       </tr>
+		   <tr>
+	         <td>Database Column Changes</td>
+	         <td><code>ColumnChanges.html</code></td>
+	         <td><a href="ColumnChanges.html">VIEW ONLINE</a></td>
+	       </tr>
+	       <tr>
+	         <td>Work Item Schema</td>
+	         <td><code>WorkItemDBSchema.pdf</code></td>
+	         <td><a href="WorkItemDBSchema.pdf">DOWNLOAD</a></td>
+	       </tr>
+	       <tr>
+	         <td>Full Database Schema</td>
+	         <td><code>FullDBSchema.pdf</code></td>
+	         <td><a href="FullDBSchema.pdf">DOWNLOAD</a></td>
+	       </tr>
+	       <tr>
+	         <td>SQL Query Examples</td>
+	         <td><code>SQLQueryExamples.pdf</code></td>
+	         <td><a href="SQLQueryExamples.pdf">DOWNLOAD</a></td>
+	       </tr>
+	       <tr>
+	         <td>External Connection Information</td>
+	         <td><code>ExternalDatabaseConnection.pdf</code></td>
+	         <td><a href="ExternalDatabaseConnection.pdf">DOWNLOAD</a></td>
+	       </tr>
+	     </table>
+	  
+
+	</div><!-- /#cont -->
+
+	
+</div>
+	<div style="margin-bottom: 0px; height: 44px;" id="ftr">
+  		<p style="padding-right: 13px; margin-top: 0px; padding-top: 15px; margin-bottom: 0px;">© 2016 Polarion AG</p>
+	</div>
+</div>
+
+
+
+
+</body></html>

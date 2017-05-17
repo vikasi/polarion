@@ -1,0 +1,35 @@
+###
+### 
+###
+###
+$response.setStatus(404)
+#template("startpage.vm")
+<div class="main layoutsubsection">
+
+#xwikimessageboxstart($msg.get("notice") $localization.getValue("wiki.message.noAccess"))
+<b><div style="text-align: center;#if($from_save_only)display:none;#end""> 
+
+#set( $url = $xwiki.getRequestURL("saveAsDefault") )
+
+
+#if( $context.getAction().equals("delattachment") )
+	#if( $url.indexOf('?') != -1 )
+		#set( $url = $url.substring(0, $url.indexOf('?')) )
+		#set( $url = $url.substring(0, $url.lastIndexOf('/')) )
+	#end
+#end
+
+#if(!$context.getContext().get("ajax") )
+	#if( !$doc.isNew() )
+		<a href="$xwiki.getActionURL($url,'view')"> back to view</a>
+	#end
+#end
+
+#xwikimessageboxend()
+</div></b>
+<form id="saved_content"  style="visibility: hidden" method="post" action="$xwiki.getActionURL($url,'edit')">
+	<textarea name="content">$request.getParameter("content")</textarea>
+</form>
+<div class="clearfloats"></div>
+</div>
+#template("endpage.vm")

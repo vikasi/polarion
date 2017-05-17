@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>
+      XP Details
+    </title>
+    <link title="Style" type="text/css" rel="stylesheet" href="../css/default.css"/>
+	 <script type="text/javascript" src="../js/toggle.js"></script>
+	 <script type="text/javascript" src="../js/resize.js"></script>
+	 <script type="text/javascript" src="../js/selection.js"></script>
+  </head>
+  <body>
+		<table class="detailTable" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+			<td width="100%" style="padding-bottom:10px;">
+<table class="xpNavigator" cellspacing="0" cellpadding="0" width="100%">	<tr>	<td width="100%">        <b>Path:</b> <a class="xpNav" href="../index.html">Overview</a>&nbsp;/&nbsp;<a class="xpNav" href="ReleasePlanExistence.html">Violation Item Detail</a>    </td></tr></table>
+			</td>
+		</tr>
+		<tr style="background: #D9E6FF">
+			<td width="100%">
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #C0DAEA;">
+	<tr>
+		<td width="100%" style="padding-left:10px;">
+			<b>RP 2.1 - Create release plan</b>
+		</td>
+		<td class="percent" style="padding: 3px;">
+<table height='26px' width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			<b>N/A</b>		</td>	</tr></table>
+		</td>
+	</tr>
+</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 15px;" width="100%">
+	<b>N/A Reason:</b> Current release isn't planned
+			</td>
+		</tr>
+		<tr>
+			<td width="100%" style="padding-top:15px;">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+<table class="valueListTitle" ondblclick="toggleMinMax('violation_table_div','../images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Violation List</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('violation_table_div','../images/')"><img title="Minimize" id="violation_table_div.img" src="../images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="violation_table_div.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+			<table id="violation_table" class="summarylist" width="100%">
+           	<tbody>
+					<tr>
+						<th width="*%" align="left" style="padding: 0px 5px 0px 5px;">
+							Item
+						</th>
+					</tr>
+				<tr class="first">
+					<td>
+						<img src="../images/NoViolationsList.gif" align="absmiddle" border="0">&nbsp;No items found
+					</td>
+				</tr>
+				</tbody>
+			</table>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%">
+<table class="portletFooter" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+  	<tr>
+    		<td class="br" align="center" width="100%" style="border-right: 0px;">
+       		&nbsp;
+      	</td>
+			<td nowrap="true" style="border-left: 0px;">
+			<a class="noneUnderline" href="..//Overview/XP/XPlist.html#RP 2.1">More</a>
+  		</td>
+		</tr>
+	</tbody>
+</table>
+					</td>
+				</tr>
+			</table>
+			</div>
+		</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+		<tr>
+			<td style="padding-top: 15px;" width="100%">
+<table class="valueListTitle" ondblclick="toggleMinMax('Settings','../images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Settings</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Settings','../images/')"><img title="Minimize" id="Settings.img" src="../images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+			</td>
+		</tr>
+		<tr>
+			<td width="100%">
+				<div id="Settings.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+				<table id="settings_table" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+<table class="summarylist" cellpadding="0" cellspacing="0" width="100%">
+		<tr class="report">
+			<td width="100%" align="left">
+				<b>Formula</b>
+			</td>
+		</tr>
+		<tr class="first">
+			<td style="padding-bottom: 10px; border-bottom: 0px;">
+				
+                
+                    score = N/A, if isCurrentReleaseExist = false OR isUserStoryExist = false,<br>
+                    score = 100%, if assignedUserStories > 0,<br>
+                    score = 0%, otherwise
+                
+            
+			</td>
+		</tr>
+</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+<table cellpadding="0" cellspacing="0" class="summarylist" width="100%">
+	<tbody>
+		<tr class="report">
+			<td width="100%" align="left">
+				<b>Formula Parameters</b>
+			</td>
+		</tr>
+	</tbody>
+</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+<table cellpadding="0" cellspacing="0" class="summarylist" width="100%">
+	<tbody>
+		<tr class="first">
+			<th style="padding:2px 5px 2px 5px;" align="left" width="20%">
+				Parameter
+			</th>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="*%">
+				Description
+			</th>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="20%">
+				Value
+			</th>
+		</tr>
+<tr class="first">
+	<td>
+		isCurrentReleaseExist
+	</td>
+	<td>
+		Flag, which determines existence of the current release
+	</td>
+	<td>
+		false
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		isUserStoryExist
+	</td>
+	<td>
+		Flag, which determines existence of unresolved user stories
+	</td>
+	<td>
+		false
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		assignedUserStories
+	</td>
+	<td>
+		Number of unresolved user stories, assigned to current release
+	</td>
+	<td>
+		0
+	</td>
+</tr>
+	</tbody>
+</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+<table class="summarylist" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr onmouseover="setHandCursor(this)" onclick="javascript:toggleSection('show_settings','settings_table','ReleasePlanExistence','../images/', 'false', 'Show Configuration Details', 'Hide Configuration Details');">
+			<td style="padding-top: 10px; padding-bottom:10px; border-top: 0px; background: #F5F8FF; font-weight: bold;">
+					<span name="showArrow" id="show_settings">
+						<img border="0" align="absmiddle" src="../images/down_arrow.jpg"/>
+						Show Configuration Details
+					</span>
+			</td>
+		</tr>
+	</tbody>
+</table>
+						</td>
+					</tr>
+					<tr id="ReleasePlanExistence_CofParams" style="display:none">
+						<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+			<table class="summarylist" width="100%">
+				<tbody>
+					<tr class="report">
+						<td width="100%" align="left">
+							<b>Rule Implementation</b>
+						</td>
+					</tr>
+					<tr class="first">
+						<td>
+						ReleasePlanExistence
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" class="summarylist" width="100%">
+				<tbody>
+					<tr class="report">
+						<td width="100%" align="left">
+							<b>Configuration Parameters</b>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+		<tr>
+			<td>
+			<table class="summarylist" width="100%">
+           	<tbody>
+					<tr>
+						<th style="padding:2px 5px 2px 5px;" align="left" width="20%">
+							Parameter
+						</th>
+						<th style="padding:2px 5px 2px 5px;" align="left" width="*%">
+							Description
+						</th>
+						<th style="padding:2px 5px 2px 5px;" align="left" width="20%">
+							Default Value
+						</th>
+					</tr>
+<tr class="first">
+	<td>
+		work item type
+	</td>
+	<td>
+		Work Item type that represents a User Story in Tracker
+	</td>
+	<td>
+		requirement
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		minimal user stories number
+	</td>
+	<td>
+		Minimal allowed User Stories number
+	</td>
+	<td>
+		1
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		release pattern id
+	</td>
+	<td>
+		Pattern for timepoint id to determine whether it is release or not
+	</td>
+	<td>
+		release.*
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		is resolved
+	</td>
+	<td>
+		Flag which determines whether work item resolved or not
+	</td>
+	<td>
+		false
+	</td>
+</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+						</td>
+					</tr>
+				</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 15px;" width="100%">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+<table class="valueListTitle" ondblclick="toggleMinMax('preconditions_table_div','../images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Preconditions</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('preconditions_table_div','../images/')"><img title="Minimize" id="preconditions_table_div.img" src="../images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="preconditions_table_div.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+			<table id="precondition_table" class="summarylist" width="100%">
+           	<tbody>
+					<tr>
+						<th width="100%" align="left" style="padding: 0px 5px 0px 5px;">
+							Item
+						</th>
+						<th align="left" style="padding: 0px 5px 0px 5px;">
+							Score
+						</th>
+					</tr>
+<tr onclick="javascript:document.location.href='CurrentReleasePlanning.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="precondition_CurrentReleasePlanning" class="second">
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 1.1 - Define release
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='UserStoriesExistence.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="precondition_UserStoriesExistence" class="first">
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 1.2 - Create user stories
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #8cb045;">			100%		</td>	</tr></table>
+	</td>
+</tr>
+				</tbody>
+			</table>
+					</td>
+				</tr>
+			</table>
+			</div>
+		</td>
+	</tr>
+</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 15px;" width="100%">
+<table style="background: #F0FFE6; border: 7px solid #CBF6AE" width="100%">
+	<tr>
+		<td style="padding-right: 20px; padding-left: 16px;">
+			<img src="../images/howToFix.jpg"/>
+		</td>
+		<td align="left" width="100%" style="line-height: 20px;">
+			<b>How To Fix Violation</b>
+			<br>
+
+                    
+                If rule score is N/A, then fulfill preconditions - current release is planned and unresolved user stories exist. To ensure this check that rules <a href="CurrentReleasePlanning.html">RP 1.1 - Define release</a> and <a href="UserStoriesExistence.html">RP 1.2 - Create user stories</a> are passed.<br>
+                In order to fix violation project manager should assign at least one unresolved user story to current release or iterations which belong to current release.<br>
+                Follow step-by-step instructions how to fix violation:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;1. Switch to the <b>Projects</b> perspective<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;2. Select <b>Work Items</b> in the <b>Topics</b> tree<br>
+                In order to assign user story to release or iterations which belong to current release make following:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;1. Select user story in unresolved state in the list of work items<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;2. Click on the <b>Edit</b> button<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;3. Select current release or iterations which belong to current release in the <b>Time Point</b> combo-box<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;4. Click on the <b>Save</b> button<br>
+	                    
+        
+		</td>
+</tr>
+</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 15px; padding-left: 10px;">
+<span style="line-height: 20px;">
+<b>XP Theory</b>
+<br>
+
+            
+                Before starting implementation of the new program or new version, team should define the list of new features and the time, which is required to implement them. This produces a release plan, which should be agreed by customers and development team on the release planning meeting. A set of created user stories is an input for release planning meeting. During the meeting customers select most important user stories from their point of view and assign them to release, taking into account estimation, risks and other factors.
+            
+        
+	<br><br>
+<b>Instructions</b>
+<br>
+	
+            
+                Release plan is considered as existed in Polarion, if at least one user story in unresolved state is assigned to the current release or iterations which belong to current release. Assignment user story to release is performed by defining release as a timepoint for user story.
+                Preconditions for this rule are existence of unresolved user stories and current release.
+		    
+        
+	<br><br>
+<b>How it works</b>
+<br>
+	
+            
+                This rule is automatically checked. During the check, unresolved user stories, assigned to current release or iterations which belong to current release are searched. If no one is found it means that release plan doesn't exist and a new violation is created and assigned to project manager.
+	        
+        
+	<br><br>
+</span>
+<b>Reference</b>
+<br>
+<span style="font-style: italic; color: #A6A6A6;">
+	<a style="color: #A6A6A6;" href="http://www.extremeprogramming.org/rules/userstories.html">http://www.extremeprogramming.org/rules/userstories.html</a>
+</span>
+			</td>
+		</tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<div id="saved">
+Saved
+</div>
+<script type="text/javascript">
+   alert('Unable to upload the attachment because the file is too large (max. $attLimit B).');
+   window.parent.hideProgressBar();   
+   window.parent.cancelEditSaveOnly();
+</script>
+

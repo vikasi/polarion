@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<link href="$RiaCssLink" type="text/css" rel="stylesheet"></link>	
+		<link href="/polarion/ria/css/pol_default.css" type="text/css" rel="stylesheet"></link>
+			<link title="Style" type="text/css" rel="stylesheet" href="/polarion/ria/css/processaudit.css"/>
+        <script type="text/javascript" src="/polarion/ria/javascript/pa/toggle.js"></script>
+        <script type="text/javascript" src="/polarion/ria/javascript/pa/selection.js"></script>
+        <script type="text/javascript" src="/polarion/ria/javascript/pa/resize.js"></script>
+		<style>
+			body,html {
+				padding:5px;
+				font-size:13px;
+				font-family:arial, helvetica;
+			}
+		</style>
+  	</head>
+	<body style='width:95%'>
+		#set($events = $build.buildEvents)
+		<div class="buildTitle">$!build.buildArtifact.groupEntity.name/$!build.buildArtifact.label $!build.buildStamp</div>		
+		<table>			
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.status.label"):</td>
+				<td class='featureValue'>
+					$buildStatusLabel
+					($!events.fatalCount $localization.getValue("form.builds.fatalErrors"),&nbsp;
+					 $!events.errorCount $localization.getValue("form.builds.normalErrors"),&nbsp;
+ 					 $!events.warnCount $localization.getValue("form.builds.warnings"))
+ 					</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.buildId.label"):</td>
+				<td class='featureValue'>$!build.buildStamp</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.project.label"):</td>
+				<td class='featureValue'>$!build.buildArtifact.groupEntity.name</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.buildArtifact.label"):</td>
+				<td class='featureValue'>$!build.buildArtifact.label</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.buildDescriptorName.label"):</td>
+				<td class='featureValue'>$!build.buildDescriptorName</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.duration.label"):</td>
+				<td class='featureValue'>$!buildDuration</td>
+			</tr>
+			<tr>
+				<td class='featureLabel'>$localization.getValue("field.Build.author.label"):</td>
+				<td class='featureValue'>#formatHTML($build.author)</td>
+			</tr>
+		</table>
+		
+		#if($!events.fatalCount+$!events.errorCount>0)
+			#panel("builderrors" $localization.getValue("form.builds.buildErrors") false true true false)
+			<table class="data">
+				<tr>
+					<th>$localization.getValue("form.builds.messageType"):</th>
+					<th style="width:100%">$localization.getValue("form.builds.message"):</th>
+				</tr>
+				#foreach($event in $!events.events)
+					<tr>
+						<td nowrap="true" valign='top'
+							#if($!event.severity.name.equals("ERROR"))
+								style="background-color:red"
+							#end
+							>$!event.severity.name</td>
+						<td ><pre>#escape($!event.message)</pre></td>
+					</tr>
+				#end
+			</table>			
+			#endPanel()
+		#end
+		
+		#panel("deployment" $localization.getValue("form.builds.buildResults") false true true false)
+			#if($!build.deployedArtifacts.isEmpty())
+				<div style='padding:5px'>$localization.getValue("form.builds.noBuildResults")</div>
+			#else
+				<table class="data">
+					<tr>
+						<th nowrap="true">$localization.getValue("form.builds.type"):</th>
+						<th style="width:100%" >$localization.getValue("form.builds.link"):</th>
+					</tr>
+					#foreach($deployment in $!build.deployedArtifacts)
+						<tr>
+							<td nowrap="true">$!deployment.label</td>
+							<td nowrap='true'>
+								<a  href="$baseDirUrl/$!deployment.location.locationPath">$!deployment.location.locationPath</a>
+							</td>
+						</tr>
+					#end
+				</table>			
+			#end
+		#endPanel()
+		
+        #foreach($reportCfg in $!reportConfigs)
+            #if($reportCfg.matches($build))
+	    		#panel("report_$reportCfg.getLinkRole()" "$reportCfg.getTitle()" false true true false)
+	    		    #set($workItems = false)
+	    		    #set($workItems = $!linkedWorkItems.get($reportCfg.getLinkRole()))
+	    		    #if($workItems && $workItems.size() > 0)
+						<table class="data">
+							<tr>
+								<th style="width:100%" nowrap="true">$localization.getValue("field.WorkItem.title.label")</th>
+								<th nowrap="true">$localization.getValue("field.WorkItem.resolution.label")</th>
+								<th nowrap="true">$localization.getValue("field.WorkItem.severity.label")</th>
+								<th nowrap="true">$localization.getValue("field.WorkItem.assignees.label")</th>
+							</tr>
+							#foreach($workItem in $workItems)
+								<tr>
+									<td nowrap="true">$renderer.renderOptionImage($workItem.getType())<a href="/polarion/?#/project/$projectId/workitem?id=$workItem.getId()" target="_top">$workItem.getId() - $workItem.getTitle()</a></td>
+									<td nowrap="true">$renderer.renderOptionImage($workItem.getResolution()) $renderer.renderOptionText($workItem.getResolution())</td>
+									<td nowrap="true">$renderer.renderOptionImage($workItem.getSeverity()) $renderer.renderOptionText($workItem.getSeverity())</td>
+									<td nowrap="true">$renderer.renderUsers($workItem.getAssignees())</td>
+								</tr>
+							#end
+						</table>			
+	    		    #else
+						<div style='padding:5px'>$localization.getValue("form.builds.noWorkItems")</div>
+	    		    #end
+				#endPanel()
+			#end
+		#end
+		
+		<br/>
+	    		    #set($message1 = "<a href=$logUrl>$localization.getValue('form.builds.log')</a>")
+	    		    #set($message2 = "<a href=$baseDirUrl>$localization.getValue('form.builds.baseDirectory')</a>")
+	    		    $localization.getValue("form.builds.furtherInformation", [$message1, $message2]).	
+	</body>
+</html>

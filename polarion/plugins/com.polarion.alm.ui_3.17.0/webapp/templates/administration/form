@@ -1,0 +1,21 @@
+1 Form Configuration
+
+#info("Polarion's *Process driven interface* enables administrators to customize the way end users see content in the portal. Users can select from configured *Interface Views* \(sometimes referred to as \"Views\"\), which present different levels of information. Each View can be configured to modify the Work Item form by hiding what is not immediately important in the context the View represents, and emphasizing what is. You can customize the form layout, form filters \(to hide some fields\), and read-only fields.")
+
+1.1 Form Filters
+
+#info("Administrators can configure *filtering* of the Work Item form for any View. Filtering can hide some fields for different workflow actions and statuses. Filtering is activated when the user invokes *Lite Form* on the Work Item form's toolbar. *IMPORTANT:* filtering does ~~not~~ restrict access to fields. It merely hides less frequently needed fields and editing capability. Visibility and editing can be restored by the user any time.")
+
+{newformfilter}
+\\
+{configuration:form-filter}
+
+
+1.1 Form Layouts
+
+#info("Each *View* can provide a custom ~~layout~~ for the Work Item form. Layout defines what fields are displayed when the end user selects the particular View, and how those fields are arranged on the form. The Form Layout Editor provides a basic XML editor which enables you to configure the layout without leaving your browser. Embedded Help text on the configuration page provides information about the various elements and how to structure them to achieve the desired layout as well as reference information on field IDs that you may need to specify in element attributes.")
+
+{newformlayout}
+\\
+{configuration:form-layout}
+\\

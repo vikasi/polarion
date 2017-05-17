@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20110216171947</created>
+<type>active</type>
+<content><![CDATA[#if($doc.name.equals("macros"))
+#set($render = "true")
+#end
+##
+#if($render)
+1 Macros
+#end
+##
+#if($render)
+1.1 SpacePanel
+{code}
+\#spacePanel("Specification>Specification.Home" "spec.png" "Here you can find all the resources related to the product specification including product vision, approved requirements specifications etc.")
+{code}
+#end
+##
+#macro (spacePanel $link $image $description)
+#if(!$xwiki.getDocument("$link").isNew())
+<table cellpadding="0" cellspacing="0" style="margin-left:0px;width:60%;"><tr>
+<td style="width:80px;height:100px;"><img src="$image"/></td>
+<td style="padding:10px;">
+*[$link]*\\ $description
+</td>
+</tr>
+</table>
+#end
+#end
+##
+#if($render)
+1.1 ClearFloats
+{code}
+\#clearFloats()
+{code}
+#end
+##
+#macro (clearFloats)
+<div style="clear:both"></div>
+#end
+##
+#if($render)
+1.1 Score Board Entry
+{code}
+\#scoreEntry("Draft" "status:draft" "req_status_draft.gif")
+{code}
+#end
+##
+#macro (scoreEntry  $label $query $image)
+<img src="/polarion/icons/default/enums/$image"> $label | {workitems:$query |display=count}
+#end
+##]]></content>
+</wiki-page>

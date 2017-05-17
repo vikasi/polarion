@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130116113830</created>
+<type>content</type>
+<content><![CDATA[{parameter:reqTypes|type=enum:workitem-type|multi=true|value=systemRequirement,softwareRequirement,mechanicalRequirement,electricalRequirement}
+#set($reqTypes=$pageParameters.getAsString("reqTypes"," "))
+{parameter:designReqTypes|type=enum:workitem-type|multi=true|value=softwareRequirement,mechanicalRequirement,electricalRequirement}
+#set($designReqTypes=$pageParameters.getAsString("designReqTypes"," "))
+{parameter:testCaseTypes|type=enum:workitem-type|multi=true|value=systemTestCase,softwareTestCase,mechanicalTestCase,electricalTestCase,unitTestCase}
+#set($testCaseTypes=$pageParameters.getAsString("testCaseTypes"," "))
+{parameter:designTestCaseTypes|type=enum:workitem-type|multi=true|value=softwareTestCase,mechanicalTestCase,electricalTestCase}
+#set($designTestCaseTypes=$pageParameters.getAsString("designTestCaseTypes"," "))
+
+
+
+#if($doc.name.equals("ProjectMacros"))
+1 Macros
+Open this page in edit mode to read the macro definitions.
+
+1.1 Project Parameters 
+
+{parameter-form}
+
+* All Requirement types: {parameter-editor:reqTypes}
+
+* Design Requirement types: {parameter-editor:designReqTypes}
+
+* All Test Case types: {parameter-editor:testCaseTypes}
+
+* Design Test Case Requirement types: {parameter-editor:designTestCaseTypes}
+
+{parameter-form-save}
+{parameter-form}
+
+#end
+#macro(importDocumentPanel)
+{regiontitle}Import{regiontitle}
+{style:type=div|class=regiondescription}
+Import Microsoft Word .docx document and configure what elements should be tagged as Work Items.
+{style}
+
+<a href="javascript:top.importDocument('$page.space.name','$page.space.projectId')">
+<img src="/polarion/wiki/bin/download/project/$page.project/page/ProjectMacros/import.png"/>
+</a>
+#end
+#macro (InternalScoreBoard $project $witype $addQuery)
+  #set($statuses=$trackerService.getTrackerProject($project).getStatusEnum().getAvailableOptions($witype.getId()))
+  #foreach ($status in $statuses)
+    #set($query="type:$witype.getId() AND status:$status.getId()")
+    <img src=$status.getProperty("iconURL")> $status.getName()|{workitems:$query $addQuery|display=count}
+  #end
+#end
+#macro (ScoreBoard $projectid $witypename $addQuery)
+  #set($project=$trackerService.getProjectsService().getProject($projectid))
+  #foreach($witype in $trackerService.getTrackerProject($project).getWorkItemTypeEnum().getAllOptions())
+    #if($witype.getId() == $witypename)
+      #InternalScoreBoard ($project $witype $addQuery)
+    #end
+  #end
+#end
+#macro(currentIterationVariable $var)
+#set($plans=$trackerService.getPlanningManager().searchPlans("project.id:$page.space.projectId AND NOT isTemplate:true AND template.id:iteration AND NOT HAS_VALUE:finishedOn","startDate",-1))
+#set($var=false)
+#if($plans.size()>0)
+#set($var=$plans.iterator().next())
+#end
+#end
+#macro(currentReleaseVariable $var)
+#set($plans=$trackerService.getPlanningManager().searchPlans("project.id:$page.space.projectId AND NOT isTemplate:true AND template.id:release AND NOT HAS_VALUE:finishedOn","startDate",-1))
+#set($var=false)
+#if($plans.size()>0)
+#set($var=$plans.iterator().next())
+#end
+#end
+#macro(getProcessTaskHeading $name)
+#set($processTaskHeadingItems=$trackerService.getTrackerProject($page.project).queryWorkItems("document.id:\"_default/Process Description\" AND type:heading AND title:\"${name}\"","id"))
+#if(!$processTaskHeadingItems.isEmpty())
+#set($processTaskHeading=$processTaskHeadingItems.iterator().next())
+#else
+#set($processTaskHeading=false)
+#end
+#end
+#macro (clearFloats)
+<div style="clear:both"></div>
+#end
+#macro (spacePanel $link $image $description)
+#if(!$xwiki.getDocument("$link").isNew())
+<table cellpadding="0" cellspacing="0" style="margin-left:0px;width:60%;"><tr>
+<td style="width:80px;height:100px;"><img src="$image"/></td>
+<td style="padding:10px;">
+*[$link]*\\ $description
+</td>
+</tr>
+</table>
+#end
+#end
+#macro(typeIcon $type)<img src="$trackerService.dataService.getEnumerationForKey("WorkItem", "type", $trackerService.getTrackerProject("$page.project").contextId).wrapOption("$type", null).getProperty("iconURL")"/>#end
+#macro(statusIcon $type $status)<img src="$trackerService.dataService.getEnumerationForKey("WorkItem", "status", $trackerService.getTrackerProject("$page.project").contextId).wrapOption("$status", $type).getProperty("iconURL")"/>#end]]></content>
+</wiki-page>

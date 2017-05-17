@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20121220161457</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+{section:width=100%}
+{column}
+1 Concept
+Use this space to define and document high-level concepts for your project. 
+
+A business case is made for the project. Technical, economic, and political feasibility is assessed; benefits and costs are estimated; and key risks are identified. Alternative concepts for meeting the project’s purpose and need are explored. 
+
+Two default Documents are provided in the Concept space that can be filled in to define the project scope and capture results of a feasibility study.
+
+The feasibility study provides a basis for understanding and agreement among project decision makers – project management, executive management, and any external agencies that must support the project, such as a regional planning commission.
+
+1.1.1  INPUT
+
+Add:
+* Resources and links to external resources that are shared among projects, and relevant for this project.
+
+1.1.1 OUTPUT
+* {document:Project Scope} - Describes the project goals and objectives the proposed system(s) must meet, as well as the hi level planning, organization and staffing …
+* {document:Feasibility Study} - Identifies alternative concepts and makes the business case for the project and the selected concept 
+{column}
+{column:width=2px}
+{column}
+{column:width=450px}
+#importDocumentPanel()
+
+{regiontitle}Tasks and Activities{regiontitle}
+#getProcessTaskHeading("Concept")
+{workitems:linkedWorkItems:${page.project}/$processTaskHeading.id|fields=id,title|sortby=outlineNumber}
+
+{column}
+{section}]]></content>
+</wiki-page>

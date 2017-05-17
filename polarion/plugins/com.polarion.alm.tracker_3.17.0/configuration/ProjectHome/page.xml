@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2016-04-11 13:52:39.270 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client11" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub style="white-space:pre;" id="script">&lt;h1&gt;Welcome to the &lt;i&gt;$page.fields.project.render.withIcon(false)&lt;/i&gt; Project&lt;/h1&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client4">This is the project Home page. It contains information and links that can be useful for stakeholders.</p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 70%;">
+  <p id="polarion_hardcoded_2">
+    <span style="font-weight: bold;"> <span style="font-style: italic;color: #999999;">TIPS FOR GETTING STARTED</span></span>
+  </p>
+  <p id="polarion_client13">
+    <span style="font-style: italic;color: #999999;">You can change this text and other content on this page, and add more content to make it into a useful resource for the <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+        <span class="polarion-rp-widget-parameters">
+          <sub id="script">
+            <sub id="script" style="white-space:pre;">$page.fields.project.render.withIcon(false)</sub>
+          </sub>
+        </span>
+      </span> project.<br/>
+      <br/>
+      For example, you can use one or more text regions to provide information for stakeholders and provide links to other important information on your portal... development guidelines, a team directory, available mailing lists, etc. You might create a table of all unresolved high-severity Issues using a Table Block Widget to retrieve, display, and link to individual Work Items. You might use chart Widgets to show up-to-date information and statistics on the state of the project.<br/>
+      <br/>
+      When you&#39;re ready, click &quot;Expand Tools&quot; above, and then click the Edit button to open the Page Designer. The catalog of visually configurable &quot;Widgets&quot; enables you to easily display a wide variety of information about the project and its progress.<br/>
+      <br/>
+      See <a href="/polarion/help/topic/com.polarion.xray.doc.user/ugchPages.html" target="_top" class="descriptionLink">Help</a> on how to work with Pages.<br/>
+      </span>
+  </p>
+  <p id="polarion_client3" style="text-align: left;">
+    <span style="font-style: italic;color: #999999;"><br/>
+      </span>
+  </p>
+</div>
+<div class="polarion-rp-column" style="width: 30%;">
+  <h2 id="polarion_client7">Project Overview</h2>
+  <p id="polarion_client8">
+    <span style="font-style: normal;font-size: 9pt;color: #999999;line-height: 1.5;">This section describes general information about this project. The project properties are defined in Administration (administrator permissions required for access).</span>
+  </p>
+  <p id="polarion_client16" style="margin-left: 0px;">
+    <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+      <span class="polarion-rp-widget-parameters">
+        <sub id="script">
+          <sub id="script" style="white-space:pre;">&lt;b&gt;Lead:&lt;/b&gt;  $page.fields.project.get().fields().lead().render()</sub>
+        </sub>
+      </span>
+    </span>
+  </p>
+  <p id="polarion_client5" style="margin-left: 0px;">
+    <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+      <span class="polarion-rp-widget-parameters">
+        <sub id="script">
+          <sub id="script" style="white-space:pre;">#set($fields=$page.fields.project.get().fields())
+#if ($fields.finish().get())
+	#set($finish =$fields.finish().render())
+#else
+  	#set($finish =&quot;--&quot;)
+#end
+&lt;b&gt;Start/Finish:&lt;/b&gt; $fields.start().render() / $finish</sub>
+        </sub>
+      </span>
+    </span>
+  </p>
+  <p id="polarion_client9" style="margin-left: 0px;">
+    <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+      <span class="polarion-rp-widget-parameters">
+        <sub id="script">
+          <sub id="script" style="white-space:pre;">&lt;b&gt;Active:&lt;/b&gt; $page.fields.project.get.fields().active().render</sub>
+        </sub>
+      </span>
+    </span>
+  </p>
+  <p id="polarion_client14" style="margin-left: 40px;"></p>
+  <h2 id="polarion_client2">Activities</h2>
+  <div id="polarion_client1" class="polarion-rp-widget-part" data-widget="com.polarion.activityStream">
+    <span class="polarion-rp-widget-parameters"></span>
+  </div>
+  <p id="polarion_client6"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>]]></field>
+    <field id="title">Home Project built-in</field>
+</rich-page>

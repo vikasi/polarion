@@ -1,0 +1,1325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>
+      Summary report - Summary view
+    </title>
+    <link title="Style" type="text/css" rel="stylesheet" href="css/default.css"/>
+	 <script type="text/javascript" src="js/toggle.js"></script>
+	 <script type="text/javascript" src="js/selection.js"></script>
+	 <script type="text/javascript" src="js/resize.js"></script>
+	 <script type="text/javascript" src="js/AC_OETags.js"></script>
+	 <script type="text/javascript" src="js/history.js"></script>
+<script type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 9;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+  </head>
+  <body>
+    <table cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+			<td width="100%" style="padding-bottom:10px;">
+<table class="xpNavigator" cellspacing="0" cellpadding="0" width="100%">	<tr>	<td width="100%">        <b>Path:</b> <a class="xpNav" href="index.html">Overview</a>    </td></tr></table>
+			</td>
+		</tr>
+
+
+<tr>
+	<td width="100%" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+		<td width="100%">
+<table class="valueListTitle" ondblclick="toggleMinMax('Scorecard','images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Scorecard</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Scorecard','images/')"><img title="Minimize" id="Scorecard.img" src="images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%">
+			<div id="Scorecard.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+				<table class="decorBorder" width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td style="padding: 8px 22px 25px 8px;" width="400px" height="400px">
+<script type="text/javascript">
+<!--
+//Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+//Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+//Check to see if a player with Flash Product Install is available and the version does not meet the requirements for playback
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// MMdoctitle is the stored document.title value used by the installation process to close the window that started the process
+	// This is necessary in order to close browser windows that are still utilizing the older version of the player after installation has completed
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+'&sDataPath=radar-Data.xml'+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "RadarChart_Beta",
+			"quality", "high",
+		"bgcolor", "#869ca7",
+		"name", "RadarChart_Beta",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "Charts/FC_2_3_Radar",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"id", "RadarChart_Beta",
+			"quality", "high",
+		"bgcolor", "#869ca7",
+			"name", "RadarChart_Beta",
+			"flashvars",'historyUrl=history.htm%3F&lconid=' + lc_id +'&sDataPath=radar-Data.xml' + '',
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Alternate HTML content should be placed here. '
+  	+ 'This content requires the Adobe Flash Player. '
+   	+ '<a href=http://www.adobe.com/go/getflash/>Get Flash</a>';
+    document.write(alternateContent);  // insert non-flash content
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="RadarChart_Beta" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="Charts/FC_2_3_Radar.swf" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="#869ca7" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<param name="FlashVars" value="sDataPath=radar-Data.xml" />
+			<embed src="Charts/FC_2_3_Radar.swf" quality="high" bgcolor="#869ca7"
+				width="100%" height="100%" name="RadarChart_Beta" align="middle"
+				play="true"
+				loop="false"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer"
+				FlashVars="sDataPath=radar-Data.xml">
+			</embed>
+	</object>
+</noscript>
+	</td>
+						<td style="padding: 8px 3px 25px 0px;" valign="top" width="*%">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td>
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="ruletitle" width="100%" align="left" style="padding-left: 8px; background-color:#D8E6FF;">
+						Total XP Compliance Score
+					</td>
+					<td class="percentTitle" style="padding: 3px;">
+						<table height='30px' width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #fafe83;">			<b>50%</b>		</td>	</tr></table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+<tr>
+	<td style="padding-left:30px;padding-top:8px;">
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="100%" style="padding-left: 8px;" align="left" class="ruletitle">
+					<b><a href="#RP">RP - Release Planning</a></b>
+				</td>
+				<td class="percent" style="padding: 3px;">
+					<table height='26px' width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #fafe83;">			<b>50%</b>		</td>	</tr></table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td style="padding-left:30px;padding-top:8px;">
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="100%" style="padding-left: 8px;" align="left" class="ruletitle">
+					<b><a href="#IP">IP - Iteration Planning</a></b>
+				</td>
+				<td class="percent" style="padding: 3px;">
+					<table height='26px' width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #fafe83;">			<b>50%</b>		</td>	</tr></table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td style="padding-left:30px;padding-top:8px;">
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="100%" style="padding-left: 8px;" align="left" class="ruletitle">
+					<b><a href="#SC">SC - Schedule Control</a></b>
+				</td>
+				<td class="percent" style="padding: 3px;">
+					<table height='26px' width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			<b>N/A</b>		</td>	</tr></table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td style="padding-left:30px;padding-top:8px;">
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="100%" style="padding-left: 8px;" align="left" class="ruletitle">
+					<b><a href="#QC">QC - Quality Control</a></b>
+				</td>
+				<td class="percent" style="padding: 3px;">
+					<table height='26px' width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #8cb045;">			<b>100%</b>		</td>	</tr></table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td style="padding-left:30px;padding-top:8px;">
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="100%" style="padding-left: 8px;" align="left" class="ruletitle">
+					<b><a href="#PO">PO - Process Organization</a></b>
+				</td>
+				<td class="percent" style="padding: 3px;">
+					<table height='26px' width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			<b>0%</b>		</td>	</tr></table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</table>
+	</td>
+	</tr>
+	</table>
+			</div>
+</td>
+	</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td valign="top" width="100%" style="padding-top: 15px;">
+<a name="RP"></a>
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Report_Release Planning','images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">RP - Release Planning</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Report_Release Planning','images/')"><img title="Minimize" id="Report_Release Planning.img" src="images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+				<div id="Report_Release Planning.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table id="items.tableRelease Planning" width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+	<table id="report.tableRelease Planning" class="summarylist" height="100%" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<th width="100%" colspan="2" style="padding: 0px 5px 0px 5px;" align="left">
+				Item
+			</th>
+			<th style="padding: 0px 5px 0px 5px;" align="left">
+				Score
+			</th>
+		</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Release Planning_level_1','report.tableRelease Planning','Release Planning_level1','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Release Planning_level_1" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 1</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #fafe83;">			50%		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CurrentReleasePlanning.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Release Planning_level1_CurrentReleasePlanning" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 1.1 - Define release
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/UserStoriesExistence.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Release Planning_level1_UserStoriesExistence" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 1.2 - Create user stories
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #8cb045;">			100%		</td>	</tr></table>
+	</td>
+</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Release Planning_level_2','report.tableRelease Planning','Release Planning_level2','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Release Planning_level_2" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 2</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/ReleasePlanExistence.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Release Planning_level2_ReleasePlanExistence" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 2.1 - Create release plan
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CorrectUserStoriesNumber.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Release Planning_level2_CorrectUserStoriesNumber" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 2.2 - Assign enough number of user stories to release
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/SplitReleasesToIterations.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Release Planning_level2_SplitReleasesToIterations" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 2.3 - Split release to iterations
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Release Planning_level_3','report.tableRelease Planning','Release Planning_level3','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Release Planning_level_3" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 3</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CorrectlyCreatedUserStories.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Release Planning_level3_CorrectlyCreatedUserStories" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 3.1 - Create user stories correctly
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/UserStoriesCorrectEsimation.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Release Planning_level3_UserStoriesCorrectEsimation" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 3.2 - Estimate user stories correctly
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/RightIterationDuration.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Release Planning_level3_RightIterationDuration" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 3.3 - Define appropriate and constant duration to iterations
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/SpikeSolution.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Release Planning_level3_SpikeSolution" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 3.4 - Create spike solutions
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+	</table>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%">
+				<tr>
+					<td width="100%">
+						<table class="portletFooter" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+  	<tr>
+    		<td class="br" align="center" width="100%" style="border-right: 0px;">
+       		&nbsp;
+      	</td>
+			<td nowrap="true" style="border-left: 0px;">
+			<a class="noneUnderline" href="./Overview/XP/XPlist.html#RP">More</a>
+  		</td>
+		</tr>
+	</tbody>
+</table>
+					</td>
+				</tr>
+					</td>
+				</tr>
+			</table
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td valign="top" width="100%" style="padding-top: 15px;">
+<a name="IP"></a>
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Report_Iteration Planning','images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">IP - Iteration Planning</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Report_Iteration Planning','images/')"><img title="Minimize" id="Report_Iteration Planning.img" src="images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+				<div id="Report_Iteration Planning.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table id="items.tableIteration Planning" width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+	<table id="report.tableIteration Planning" class="summarylist" height="100%" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<th width="100%" colspan="2" style="padding: 0px 5px 0px 5px;" align="left">
+				Item
+			</th>
+			<th style="padding: 0px 5px 0px 5px;" align="left">
+				Score
+			</th>
+		</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Iteration Planning_level_1','report.tableIteration Planning','Iteration Planning_level1','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Iteration Planning_level_1" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 1</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #fafe83;">			50%		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CurrentIterationPlanning.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Iteration Planning_level1_CurrentIterationPlanning" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 1.1 - Define iteration
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/TaskExistence.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Iteration Planning_level1_TaskExistence" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 1.2 - Create tasks
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #8cb045;">			100%		</td>	</tr></table>
+	</td>
+</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Iteration Planning_level_2','report.tableIteration Planning','Iteration Planning_level2','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Iteration Planning_level_2" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 2</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/IterationPlanningOrganization.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Iteration Planning_level2_IterationPlanningOrganization" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 2.1 - Create iteration plan
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/KeepProjectVelocity.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Iteration Planning_level2_KeepProjectVelocity" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 2.2 - Take into account project velocity for iteration plan
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/UserStoryToTaskDetalization.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Iteration Planning_level2_UserStoryToTaskDetalization" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 2.3 - Split user stories to tasks
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Iteration Planning_level_3','report.tableIteration Planning','Iteration Planning_level3','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Iteration Planning_level_3" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 3</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/TaskCorrectEsimation.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Iteration Planning_level3_TaskCorrectEsimation" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 3.1 - Estimate tasks correctly
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/PlanningFailedAcceptanceTests.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Iteration Planning_level3_PlanningFailedAcceptanceTests" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 3.2 - Plan failed acceptance tests to nearest iteration
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/PlanningFailedAutomaticTests.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Iteration Planning_level3_PlanningFailedAutomaticTests" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 3.3 - Plan failed automatic tests to nearest iteration
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+	</table>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%">
+				<tr>
+					<td width="100%">
+						<table class="portletFooter" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+  	<tr>
+    		<td class="br" align="center" width="100%" style="border-right: 0px;">
+       		&nbsp;
+      	</td>
+			<td nowrap="true" style="border-left: 0px;">
+			<a class="noneUnderline" href="./Overview/XP/XPlist.html#IP">More</a>
+  		</td>
+		</tr>
+	</tbody>
+</table>
+					</td>
+				</tr>
+					</td>
+				</tr>
+			</table
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td valign="top" width="100%" style="padding-top: 15px;">
+<a name="SC"></a>
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Report_Schedule Control','images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">SC - Schedule Control</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Report_Schedule Control','images/')"><img title="Minimize" id="Report_Schedule Control.img" src="images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+				<div id="Report_Schedule Control.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table id="items.tableSchedule Control" width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+	<table id="report.tableSchedule Control" class="summarylist" height="100%" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<th width="100%" colspan="2" style="padding: 0px 5px 0px 5px;" align="left">
+				Item
+			</th>
+			<th style="padding: 0px 5px 0px 5px;" align="left">
+				Score
+			</th>
+		</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Schedule Control_level_1','report.tableSchedule Control','Schedule Control_level1','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Schedule Control_level_1" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 1</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/ChangeIterationPlan.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Schedule Control_level1_ChangeIterationPlan" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		SC 1.1 - Avoid overdue items on iteration
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/TaskInAdvance.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Schedule Control_level1_TaskInAdvance" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		SC 1.2 - Don't schedule iterations in advance
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Schedule Control_level_2','report.tableSchedule Control','Schedule Control_level2','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Schedule Control_level_2" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 2</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/UnfinishedUserStories.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Schedule Control_level2_UnfinishedUserStories" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		SC 2.1 - Avoid unfinished user stories for previous releases
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/UnfinishedWorkitems.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Schedule Control_level2_UnfinishedWorkitems" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		SC 2.2 - Avoid unfinished items on previous iterations
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Schedule Control_level_3','report.tableSchedule Control','Schedule Control_level3','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Schedule Control_level_3" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 3</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/NotChangedTaskUserStoryEstimates.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Schedule Control_level3_NotChangedTaskUserStoryEstimates" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		SC 3.1 - Avoid user stories and tasks re-estimation
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+	</table>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%">
+				<tr>
+					<td width="100%">
+						<table class="portletFooter" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+  	<tr>
+    		<td class="br" align="center" width="100%" style="border-right: 0px;">
+       		&nbsp;
+      	</td>
+			<td nowrap="true" style="border-left: 0px;">
+			<a class="noneUnderline" href="./Overview/XP/XPlist.html#SC">More</a>
+  		</td>
+		</tr>
+	</tbody>
+</table>
+					</td>
+				</tr>
+					</td>
+				</tr>
+			</table
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td valign="top" width="100%" style="padding-top: 15px;">
+<a name="QC"></a>
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Report_Quality Control','images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">QC - Quality Control</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Report_Quality Control','images/')"><img title="Minimize" id="Report_Quality Control.img" src="images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+				<div id="Report_Quality Control.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table id="items.tableQuality Control" width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+	<table id="report.tableQuality Control" class="summarylist" height="100%" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<th width="100%" colspan="2" style="padding: 0px 5px 0px 5px;" align="left">
+				Item
+			</th>
+			<th style="padding: 0px 5px 0px 5px;" align="left">
+				Score
+			</th>
+		</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Quality Control_level_1','report.tableQuality Control','Quality Control_level1','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Quality Control_level_1" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 1</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #8cb045;">			100%		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/AcceptanceTestsExistence.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Quality Control_level1_AcceptanceTestsExistence" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		QC 1.2 - Create acceptance tests
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #8cb045;">			100%		</td>	</tr></table>
+	</td>
+</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Quality Control_level_2','report.tableQuality Control','Quality Control_level2','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Quality Control_level_2" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 2</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CreateAcceptanceTest.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Quality Control_level2_CreateAcceptanceTest" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		QC 2.1 - Create acceptance tests for user stories
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+	</table>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%">
+				<tr>
+					<td width="100%">
+						<table class="portletFooter" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+  	<tr>
+    		<td class="br" align="center" width="100%" style="border-right: 0px;">
+       		&nbsp;
+      	</td>
+			<td nowrap="true" style="border-left: 0px;">
+			<a class="noneUnderline" href="./Overview/XP/XPlist.html#QC">More</a>
+  		</td>
+		</tr>
+	</tbody>
+</table>
+					</td>
+				</tr>
+					</td>
+				</tr>
+			</table
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td valign="top" width="100%" style="padding-top: 15px;">
+<a name="PO"></a>
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Report_Process Organization','images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">PO - Process Organization</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Report_Process Organization','images/')"><img title="Minimize" id="Report_Process Organization.img" src="images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+				<div id="Report_Process Organization.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table id="items.tableProcess Organization" width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+	<table id="report.tableProcess Organization" class="summarylist" height="100%" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<th width="100%" colspan="2" style="padding: 0px 5px 0px 5px;" align="left">
+				Item
+			</th>
+			<th style="padding: 0px 5px 0px 5px;" align="left">
+				Score
+			</th>
+		</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Process Organization_level_1','report.tableProcess Organization','Process Organization_level1','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Process Organization_level_1" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 1</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/OftenBuilds.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Process Organization_level1_OftenBuilds" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 1.1 - Create builds regularly
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/StaffedProjectTeam.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Process Organization_level1_StaffedProjectTeam" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 1.2 - Create fully staffed team
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CollectiveCodeOwnership.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Process Organization_level1_CollectiveCodeOwnership" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 1.3 - Share project source code
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Process Organization_level_2','report.tableProcess Organization','Process Organization_level2','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Process Organization_level_2" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 2</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/OftenIntegration.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Process Organization_level2_OftenIntegration" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 2.2 - Integrate project source code continuously
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			N/A		</td>	</tr></table>
+	</td>
+</tr>
+<tr class="report" style="cursor: pointer" onclick="javascript:toggleList('Process Organization_level_3','report.tableProcess Organization','Process Organization_level3','images/');">
+	<td style="border-right: 0px;">
+		<img name="hideBranch" border="0" id="Process Organization_level_3" align="absmiddle" src="images/minus.jpg"></img>
+	</td>
+	<td width="100%" style="border-right: 0px; border-left:0px;">
+		<b>Level 3</b>
+	</td>
+	<td class="right">
+		<b><table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table></b>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CodingGuidelinesExistence.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Process Organization_level3_CodingGuidelinesExistence" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 3.1 - Define coding guidelines
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/ChooseSystemMetaphor.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Process Organization_level3_ChooseSystemMetaphor" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 3.2 - Define system metaphor
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+	</table>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%">
+				<tr>
+					<td width="100%">
+						<table class="portletFooter" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+  	<tr>
+    		<td class="br" align="center" width="100%" style="border-right: 0px;">
+       		&nbsp;
+      	</td>
+			<td nowrap="true" style="border-left: 0px;">
+			<a class="noneUnderline" href="./Overview/XP/XPlist.html#PO">More</a>
+  		</td>
+		</tr>
+	</tbody>
+</table>
+					</td>
+				</tr>
+					</td>
+				</tr>
+			</table
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td valign="top" width="100%" style="padding-top: 15px;">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Report_MC','images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">MC - Manual Check</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Report_MC','images/')"><img title="Minimize" id="Report_MC.img" src="images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+				<div id="Report_MC.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table id="items.tableMC" width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+	<table id="report.tableMC" class="summarylist" height="100%" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<th width="100%" colspan="2" style="padding: 0px 5px 0px 5px;" align="left">
+				Item
+			</th>
+		</tr>
+<tr onclick="javascript:document.location.href='xp-details/UseSimpleDesign.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="UseSimpleDesign" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		MC 1 - Use simple design
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/UseRefactor.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="UseRefactor" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		MC 2 - Accomplish code refactoring
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CRCCards.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="CRCCards" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		MC 3 - Use CRC cards for design sessions
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/NoAddedFunctionality.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="NoAddedFunctionality" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		MC 4 - Don't accomplish extra functionality
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/OptimizeLast.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="OptimizeLast" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		MC 5 - Avoid early code optimization
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/DailyStandupMeetings.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="DailyStandupMeetings" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		MC 6 - Organize standup meetings
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/PairProgrammimg.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="PairProgrammimg" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		MC 7 - Use pair programming
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/SequentialIntegration.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="SequentialIntegration" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		MC 8 - Perform sequential integration
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/NoOvertime.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="NoOvertime" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		MC 9 - Avoid overtime
+	</td>
+</tr>
+	</table>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%">
+				<tr>
+					<td width="100%">
+						<table class="portletFooter" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+  	<tr>
+    		<td class="br" align="center" width="100%" style="border-right: 0px;">
+       		&nbsp;
+      	</td>
+			<td nowrap="true" style="border-left: 0px;">
+			<a class="noneUnderline" href="./Overview/XP/XPlist.html">More</a>
+  		</td>
+		</tr>
+	</tbody>
+</table>
+					</td>
+				</tr>
+					</td>
+				</tr>
+			</table
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td style="padding-top: 15px;" width="100%" valign="top">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Top_Items','images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Top Items To Resolve</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Top_Items','images/')"><img title="Minimize" id="Top_Items.img" src="images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+			<div id="Top_Items.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+				<table width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="100%" valign="top">
+<table id="top.items.table" class="summarylist" height="100%" width="100%">
+	<tbody>
+		<tr>
+			<th colspan="2" width="70%" style="padding: 0px 5px 0px 5px;" align="left">
+				Item
+			</th>
+			<th width="20%" style="padding: 0px 5px 0px 5px;" align="left">
+				Discipline
+			</th>
+			<th width="10%" style="padding: 0px 5px 0px 5px;" align="left">
+				Level
+			</th>
+			<th style="padding: 0px 5px 0px 5px;" align="left">
+				Score
+			</th>
+		</tr>
+<tr onclick="javascript:document.location.href='xp-details/CurrentReleasePlanning.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="top.row_0" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="70%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP 1.1 - Define release
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		RP - Release Planning
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		1
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CurrentIterationPlanning.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="top.row_1" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="70%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 1.1 - Define iteration
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP - Iteration Planning
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		1
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/OftenBuilds.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="top.row_2" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="70%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 1.1 - Create builds regularly
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO - Process Organization
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		1
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CollectiveCodeOwnership.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="top.row_3" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="70%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 1.3 - Share project source code
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO - Process Organization
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		1
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/CodingGuidelinesExistence.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="top.row_4" class="second">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="70%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 3.1 - Define coding guidelines
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO - Process Organization
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		3
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+<tr onclick="javascript:document.location.href='xp-details/ChooseSystemMetaphor.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="top.row_5" class="first">
+	<td style="border-right: 0px;">
+		&nbsp;
+	</td>
+	<td width="70%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO 3.2 - Define system metaphor
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		PO - Process Organization
+	</td>
+	<td nowrap="true" style="border-right: 0px;border-left: 0px;">
+		3
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+      </tbody>
+</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+    </table>
+  </body>
+</html>

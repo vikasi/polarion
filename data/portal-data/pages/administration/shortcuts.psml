@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/shortcuts.psml" hidden="false">
+    <title>Report Descriptors</title>
+    <short-title>Report Descriptors</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_shortcuts_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_shortcuts_portlet" type="portlet" name="webui::FileConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/portal/shortcuts.xml</value>
+		  </preference>
+		  </fragment>
+    </fragment>
+</page>

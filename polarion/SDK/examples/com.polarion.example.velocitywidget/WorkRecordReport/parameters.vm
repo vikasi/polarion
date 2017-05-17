@@ -1,0 +1,3 @@
+$parameters.put("userStory", $factory.objectSelector("User Story").allowedPrototypes(["WorkItem"]).dependencySource(true).build())
+$parameters.put("linkRole", $factory.enumeration("Link Role", "workitem-link-role").dependencyTarget(true).build())
+$parameters.put("type", $factory.customEnum("Type").addEnumItem("table","Table").addEnumItem("list","List").singleValue("table").build())

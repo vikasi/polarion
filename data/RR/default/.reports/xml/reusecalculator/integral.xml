@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="integral" id="integral" tag="2013-05-23">
+    <structure-element id="root" provider="root" type="root">
+        <structure-element id="projects" provider="layout-java" type="projects">
+            <properties>
+                <property id="count">
+                    <value>2</value>
+                </property>
+            </properties>
+            <structure-element id="project" provider="layout-java" type="project">
+                <properties>
+                    <property id="id">
+                        <value>elibrary</value>
+                    </property>
+                </properties>
+                <structure-element id="components-referenced-by-others" provider="layout-java" type="components-referenced-by-others">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="referenced-by-others" provider="layout-java" type="referenced-by-others">
+                        <value>com.polarion.demo</value>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="other-components-references-this" provider="layout-java" type="other-components-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="other-references" provider="layout-java" type="other-references">
+                        <value>com.polarion.demo.reuse</value>
+                    </value-fact-element>
+                </structure-element>
+            </structure-element>
+            <structure-element id="project" provider="layout-java" type="project">
+                <properties>
+                    <property id="id">
+                        <value>drivepilot</value>
+                    </property>
+                </properties>
+                <structure-element id="components-referenced-by-others" provider="layout-java" type="components-referenced-by-others">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="referenced-by-others" provider="layout-java" type="referenced-by-others">
+                        <value>com.polarion.demo</value>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="other-components-references-this" provider="layout-java" type="other-components-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="other-references" provider="layout-java" type="other-references">
+                        <value>com.polarion.demo.reuse</value>
+                    </value-fact-element>
+                </structure-element>
+            </structure-element>
+        </structure-element>
+        <structure-element id="components" provider="layout-java" type="components">
+            <properties>
+                <property id="count">
+                    <value>4</value>
+                </property>
+            </properties>
+            <structure-element id="component" provider="layout-java" type="component">
+                <properties>
+                    <property id="name">
+                        <value>com.polarion.demo</value>
+                    </property>
+                    <property id="author">
+                        <value>admin</value>
+                    </property>
+                    <property id="project">
+                        <value>elibrary</value>
+                    </property>
+                </properties>
+                <structure-element id="other-components-references-this" provider="layout-java" type="other-components-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="other-references" provider="layout-java" type="other-references">
+                        <value>com.polarion.demo.reuse</value>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="projects-references-this" provider="layout-java" type="projects-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="other-project" provider="layout-java" type="other-project">
+                        <value>drivepilot</value>
+                    </value-fact-element>
+                </structure-element>
+            </structure-element>
+            <structure-element id="component" provider="layout-java" type="component">
+                <properties>
+                    <property id="name">
+                        <value>com.polarion.demo.reuse</value>
+                    </property>
+                    <property id="author">
+                        <value>admin</value>
+                    </property>
+                    <property id="project">
+                        <value>elibrary</value>
+                    </property>
+                </properties>
+                <structure-element id="other-components-references-this" provider="layout-java" type="other-components-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </structure-element>
+                <structure-element id="projects-references-this" provider="layout-java" type="projects-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </structure-element>
+            </structure-element>
+            <structure-element id="component" provider="layout-java" type="component">
+                <properties>
+                    <property id="name">
+                        <value>com.polarion.demo</value>
+                    </property>
+                    <property id="author">
+                        <value>admin</value>
+                    </property>
+                    <property id="project">
+                        <value>drivepilot</value>
+                    </property>
+                </properties>
+                <structure-element id="other-components-references-this" provider="layout-java" type="other-components-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="other-references" provider="layout-java" type="other-references">
+                        <value>com.polarion.demo.reuse</value>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="projects-references-this" provider="layout-java" type="projects-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="other-project" provider="layout-java" type="other-project">
+                        <value>elibrary</value>
+                    </value-fact-element>
+                </structure-element>
+            </structure-element>
+            <structure-element id="component" provider="layout-java" type="component">
+                <properties>
+                    <property id="name">
+                        <value>com.polarion.demo.reuse</value>
+                    </property>
+                    <property id="author">
+                        <value>admin</value>
+                    </property>
+                    <property id="project">
+                        <value>drivepilot</value>
+                    </property>
+                </properties>
+                <structure-element id="other-components-references-this" provider="layout-java" type="other-components-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </structure-element>
+                <structure-element id="projects-references-this" provider="layout-java" type="projects-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </structure-element>
+            </structure-element>
+        </structure-element>
+        <structure-element id="authors-statistic" provider="layout-java" type="authors-statistic">
+            <properties>
+                <property id="count">
+                    <value>1</value>
+                </property>
+            </properties>
+            <structure-element id="author" provider="layout-java" type="author">
+                <properties>
+                    <property id="author">
+                        <value>admin</value>
+                    </property>
+                </properties>
+                <structure-element id="written-components" provider="layout-java" type="written-components">
+                    <properties>
+                        <property id="count">
+                            <value>4</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="written-component" provider="layout-java" type="written-component">
+                        <value>com.polarion.demo</value>
+                    </value-fact-element>
+                    <value-fact-element id="written-component" provider="layout-java" type="written-component">
+                        <value>com.polarion.demo.reuse</value>
+                    </value-fact-element>
+                    <value-fact-element id="written-component" provider="layout-java" type="written-component">
+                        <value>com.polarion.demo</value>
+                    </value-fact-element>
+                    <value-fact-element id="written-component" provider="layout-java" type="written-component">
+                        <value>com.polarion.demo.reuse</value>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="components-referenced-by-others" provider="layout-java" type="components-referenced-by-others">
+                    <properties>
+                        <property id="count">
+                            <value>2</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="referenced-by-others" provider="layout-java" type="referenced-by-others">
+                        <value>com.polarion.demo</value>
+                    </value-fact-element>
+                    <value-fact-element id="referenced-by-others" provider="layout-java" type="referenced-by-others">
+                        <value>com.polarion.demo</value>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="projects-references-this" provider="layout-java" type="projects-references-this">
+                    <properties>
+                        <property id="count">
+                            <value>2</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="other-project" provider="layout-java" type="other-project">
+                        <value>elibrary</value>
+                    </value-fact-element>
+                    <value-fact-element id="other-project" provider="layout-java" type="other-project">
+                        <value>drivepilot</value>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="ext-components-referenced" provider="layout-java" type="ext-components-referenced">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="referenced" provider="layout-java" type="referenced">
+                        <value>com.polarion.demo.reuse</value>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="projects-referenced-by-this" provider="layout-java" type="projects-referenced-by-this">
+                    <properties>
+                        <property id="count">
+                            <value>2</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="referenced-project" provider="layout-java" type="referenced-project">
+                        <value>elibrary</value>
+                    </value-fact-element>
+                    <value-fact-element id="referenced-project" provider="layout-java" type="referenced-project">
+                        <value>drivepilot</value>
+                    </value-fact-element>
+                </structure-element>
+                <structure-element id="total-other-references" provider="layout-java" type="total-other-references">
+                    <properties>
+                        <property id="count">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                    <value-fact-element id="other-references" provider="layout-java" type="other-references">
+                        <value>com.polarion.demo</value>
+                    </value-fact-element>
+                </structure-element>
+            </structure-element>
+        </structure-element>
+    </structure-element>
+</factbase>

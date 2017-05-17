@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/projects/project/dashboard.psm" hidden="false">
+    <security-constraints>
+        <security-constraints-ref>public-edit</security-constraints-ref>
+    </security-constraints>
+    <title>Project Dashboard</title>
+    <short-title>Dashboard</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="polarion"/>
+    <fragment id="project.dashboard.page" type="layout" name="jetspeed-layouts::Table">
+        <fragment id="project.dashboard.wi.trend" type="portlet" name="webui::trendchart">
+            <title>Work Items Trend</title>
+            <property name="row" value="0"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="style='width:50%;'"/>
+            <preference name="reportPath" >
+				    <value>charts/workitems-trend.xml</value>
+			</preference>
+            <preference name="calculation" >
+				    <value>trackeranalysis</value>
+			</preference>
+            <preference name="items" >
+				    <value>workitems-trend-data:RESOLVED-UNRESOLVED/*</value>
+			</preference>
+            <preference name="tags" >
+				    <value>14</value>
+			</preference>
+			<!-- fusion line chart properties follow -->
+            <preference name="yAxisName" >
+				    <value>Work Items Count</value>
+			</preference>\
+        </fragment>        
+        <fragment id="project.dashboard.coveragetrend" type="portlet" name="webui::trendchart">
+            <title>Testing</title>
+            <property name="row" value="0"/>
+            <property name="column" value="1"/>
+            <property name="layoutData" value="style='width:50%;'"/>
+            <preference name="reportPath" >
+				    <value>charts/coverage-trend.xml</value>
+			</preference>
+            <preference name="calculation" >
+				    <value>sourceanalysis-aggregate</value>
+			</preference>
+            <preference name="items" >
+				    <value>source-analysis-trend:#test-coverage</value>
+			</preference>
+			<!-- fusion line chart properties follow -->
+            <preference name="yAxisName" >
+				    <value>Test Coverage</value>
+			</preference>
+        </fragment>        
+        <fragment id="project.dashboard.liveplan" type="portlet" name="webui::liveplan">
+            <title>Live Plan</title>
+            <property name="row" value="1"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="colspan='2' style='width:100%;'"/>
+        </fragment>
+        <fragment id="project.dashboard.score.card" type="portlet" name="webui::metric">
+            <title>Quality Score Card</title>
+            <property name="row" value="2"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="colspan='2' style='width:100%;'"/>
+            <preference name="reportPath" >
+				    <value>html/qualitycentre-portlet-inner.html</value>
+			</preference>
+			<preference name="calculation" >
+				    <value>projectscore</value>
+			</preference>			
+			<preference name="factbases" >
+				    <value>project-quality</value>
+			</preference>			
+        </fragment>
+        <fragment id="project.dashboard.fact.sandfigures" type="portlet" name="webui::factsfigures" >
+		    <title>Facts and Figures</title>
+			<property name="row" value="3"/>
+			<property name="column" value="0"/>
+			<property name="layoutData" value="colspan='2' style='width:100%;'"/>
+			<preference name="reportPath" >
+				<value>html/facts_figures_dashboard.html</value>
+			</preference>
+			<preference name="calculation" >
+				<value>all</value>
+			</preference>
+			<preference name="items">
+				<value>
+					<items>
+						<group name="Work Items Overview">
+							<item
+								factbase="workitems-data"
+								key="OPEN-BY-PRIORITY"/>
+							<item
+								factbase="workitems-data"
+								key="MEI"/>
+						        <item
+								factbase="workitems-data"
+								key="MSI"/>
+						        <item
+								factbase="workitems-data"
+								key="MAI"/>
+						</group>
+					    <group name="SCM">
+							<item	
+						                factbase="repo-analysis"
+						                key="NOCW"/>
+							<item	
+						                factbase="repo-analysis"
+						                key="MAD"/>
+						 </group>							
+					  </items>							
+    			</value>				    
+			</preference>
+        </fragment>
+    </fragment>
+</page>

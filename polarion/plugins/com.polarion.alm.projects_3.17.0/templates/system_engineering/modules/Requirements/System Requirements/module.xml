@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2013-01-09 22:56:35.750 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-76"></h1><p id="polarion_merged_0">
+  <span style="font-style: italic;"><span style="font-weight: bold;">NOTE TO AUTHOR: </span> Highlighted, italicized text throughout this template is provided solely as background information to assist you in creating this document.  Please delete all such text, as well as the instructions in each section, prior to submitting this document.  <span style="font-weight: bold;">ONLY YOUR PROJECT-SPECIFIC INFORMATION SHOULD APPEAR IN THE FINAL VERSION OF THIS DOCUMENT.</span></span>
+</p><div id="polarion_wiki macro name=toc"></div><div id="polarion_editor_html_block1" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">#documentPanel(true &quot;approved&quot;)</pre>
+</div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-77"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-78"></h3><p id="polarion_merged_8">
+  <span style="font-style: italic;">INFO: System Requirements Specification (SysRS) describe what the system’s sponsor expects the system to do, the system’s expected environment, the system’s usage profile, its performance parameters, and its expected quality and effectiveness. The SysRS is a structured collection of information that embodies the requirements of the system. The SysRS completely describes all inputs, outputs, and required relationships between inputs and outputs.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-466"></h3><p id="polarion_merged_2">
+  <span style="font-style: italic;">TO DO: Describe the scope of this document as it relates to the project.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-467"></h3><p id="polarion_merged_4">
+  <span style="font-style: italic;">TO DO: List any other documents or Web addresses to which this document refers. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-319"></h2><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-311"></h2><div id="polarion_wiki macro name=module-workitem;params=id=TMPLT-461"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-430"></h2><div id="polarion_wiki macro name=module-workitem;params=id=TMPLT-462"></div><p id="polarion_2"></p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">System Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status, targetVersion</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">systemRequirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

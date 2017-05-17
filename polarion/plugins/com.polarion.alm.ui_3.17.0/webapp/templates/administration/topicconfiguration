@@ -1,0 +1,40 @@
+<a style="cursor:pointer;" onclick="navigateFromFrame('#page:portal/topics')" ><< Return to Topics</a>
+
+1 Topics Configuration
+
+*View:* [hatName]
+
+{xmleditor:topics|view=[hatId]}
+
+1.1 Quick Help
+
+The *Views* feature enables end users to work either with ~~all~~ available Navigation topics, 
+Work Item fields, and other information, or with a ~~subset~~ relevant to their current work 
+context.  When a user invokes a View, only the most needed information for the context is shown, 
+and the rest is out of the way but easily accessible by switching to a different View.\\
+\\
+This is the configuration file for the ~~[hatName]~~ View that defines which 
+topics are visible in the Navigation panel when the user selects this View. 
+Each <tt>&lt;topic&gt;</tt> element represents a topic visible in the Navigation panel when the 
+~~[hatName]~~ View is selected in the Views list in the Settings panel.\\
+\\
+Topics will appear in Navigation in the same order as they appear in the configuration. Possible topics are:
+	* Documents &amp; Pages: <tt>&lt;topic id="wiki"/&gt;</tt>
+	* Work Items: <tt>&lt;topic id="workitems"/&gt;</tt>
+	* Plans: <tt>&lt;topic id="plans"/&gt;</tt>
+	* Test Runs: <tt>&lt;topic id="testruns"/&gt;</tt>
+	* Baselines: <tt>&lt;topic id="baselines"/&gt;</tt>
+	* Builds: <tt>&lt;topic id="builds"/&gt;</tt>
+	* Dashboard: <tt>&lt;topic id="dashboard"/&gt;</tt>
+	* Quality: <tt>&lt;topic id="quality"/&gt;</tt>
+	* Reports: <tt>&lt;topic id="reports"/&gt;	</tt>
+	* Monitor: <tt>&lt;topic id="monitor"/&gt;</tt>
+	* Repository Browser: <tt>&lt;topic id="repository_browser"/&gt;</tt>
+	* Global Shortcuts: <tt>&lt;topic id="global_shortcuts"/&gt;</tt>
+	* Project Shortcuts: <tt>&lt;topic id="project_shortcuts"/&gt;</tt>
+	* User Shortcuts: <tt>&lt;topic id="user_shortcuts"/&gt;</tt>
+
+By default, all the above topics are shown for the ~~Advanced~~ View. To hide a 
+topic when a user selects this View, either comment out, or remove the 
+respective <tt>&lt;topic&gt;</tt> element in the <tt>&lt;topics&gt;</tt> structure in the XML editor above. 
+Note that a topic present in the View configuration still may not be shown to the end user if the license s/he is using does not allow access to it.

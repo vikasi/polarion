@@ -1,0 +1,79 @@
+##
+## Tab bar  
+##
+#set($editorf = $request.getParameter("editor"))
+#if( !$editorf )
+#set ($editorf = "")
+#end
+
+#set($tab = $!request.getParameter("tab"))
+#if (!$tab)
+#set($tab = "")
+#end
+	      <table border="0" bgcolor="#F0F2F3" width="100%" style="height: 24px; margin-top: 0px">
+		<tr>
+		<td width="130px" bgcolor="#F0F2F3" style="padding-bottom: 0px;">
+##Tab
+			  <ul class="xwikitabbar">
+				<li id="xwikicomments"#if( ($show == "current") && ($editorf != "changes") && ($tab != "history") ) class="activeleft"#else class="noactiveleft"#end>
+				</li>
+				<li id="xwikicomments"#if(($show == "current") && ($editorf != "changes") && ($tab != "history")) class="active"#else class="noactive"#end>
+				<a href="#if($odoc)$odoc.getURL($odoc, "view", "show=current", true)#else$doc.getURL("view", "show=current", true)#end" onclick="return changeDiscard('$localization.getValue("wiki.message.discardChanges")');">$localization.getValue("definition.current")</a>
+				</li>
+
+				<li id="xwikicomments"#if(($show == "current") && ($editorf != "changes") && ($tab != "history")) class="activeright"#else class="noactiveright"#end>
+				</li>
+
+#if( $doc.isDocumentPage() )
+#if( !$doc.isTemplate() && !$doc.isGroupReadOnly())
+				<li id="xwikicomments"#if(($show == "history") || ($editorf == "changes") || ($tab == "history")) class="activeleft"#else class="noactiveleft"#end>
+				</li>
+				<li id="xwikihistory"#if(($show == "history") || ($editorf == "changes") || ($tab == "history")) class="active"#else class="noactive"#end>
+        			<a href="#if($odoc)$odoc.getURL($odoc, "history", "show=history", true)#else$doc.getURL("history", "show=history", true) #end" onclick="return changeDiscard('$localization.getValue("wiki.message.discardChanges")');">$localization.getValue("definition.history")</a>
+				</li>
+				<li id="xwikicomments"#if(($show == "history") || ($editorf == "changes") || ($tab == "history")) class="activeright"#else class="noactiveright"#end>
+				</li>
+#end
+#end
+			  </ul>
+
+	        </td>
+	        <td>	
+#if($doc.isDocumentPage())		
+	                <table width="99%"  bgcolor="#f0f2f3" border=0>
+			  <tr>
+				<td>
+				   <div class="textLabel" style="display:inline; float:right; height:20px; border: 0px solid green; overflow: hidden;">
+				   		#set($dateFormat = "yyyy-MM-dd")
+				   		#set($timeFormat = "HH:mm")
+				   		$localization.getValue("form.modules.label.createdOn", ["<b>$xwiki.getLocalUserName($tdoc.creator)</b>", "<b>$!xwiki.formatDate($tdoc.creationDate, $dateFormat) $!xwiki.formatDate($tdoc.creationDate, $timeFormat)</b>"])$localization.getValue("definition.commaSpace")$localization.getValue("form.modules.label.updatedOn", ["<b>$xwiki.getLocalUserName($tdoc.author)</b>", "<b>$!xwiki.formatDate($tdoc.date, $dateFormat) $!xwiki.formatDate($tdoc.date, $timeFormat)</b>"])
+                   </div>
+				</td>
+				<td width=5>
+				</td>
+
+                                #if ($doctype == "content")
+                                   #if (!$editor)
+                                      <td width=15><img src="$xwiki.getSkinFile("content.gif")"/></td>
+                                      <td width=80 nowrap class="textLabelType"><b>&nbsp;$localization.getValue("form.modules.label.contentPage")</b></td>
+                                   #end
+                                #elseif ($doctype == "active")
+                                   #if (!$editor)
+                                      <td width=15><img src="$xwiki.getSkinFile("active.gif")"/></td>
+                                      <td width=80 nowrap class="textLabelType"><b>&nbsp;$localization.getValue("form.modules.label.activePage")</b></td>
+                                   #end
+                                #else                                
+                                  #if ($doctype == "portal" || $doc.isTemplate() || $doctype == "service")
+                                   #if (!$editor)
+                                      <td width=15><img src="$xwiki.getSkinFile("report.gif")"/></td>
+                                      <td width=80 nowrap class="textLabelType"><b>&nbsp;$localization.getValue("form.modules.label.portalPage")</b></td>
+                                   #end
+                                  #end
+                                #end
+
+			  </tr>
+			</table>				
+#end
+		</td>
+		</tr>
+	      </table>

@@ -1,0 +1,59 @@
+#template("startpage.vm")
+
+<div class="main layoutsubsection">
+ <div style="border: 8px solid #FFE9AB; padding: 5px; background-color: #FFFBF1;">
+  <div>
+    <img src="$xwiki.getSkinFile('tube.PNG')" alt="no image"></img>
+    <b>$!msg.get("error") - $!msg.get("validError")</b>
+  </div>
+
+  #set($message = $xwiki.parseMessage())
+  #if($message)
+
+  <div style="border:0px solid red;  overflow-y: auto;; overflow-x: auto; padding-top: 8px; padding-bottom: 10px;">
+   <b style="color: red;">$!xwiki.getCustomMessage()</b>
+   <br/>
+  </div>
+
+  <div id="errorValid" class="collapsed" style="border:0px solid red;  overflow-y: auto;; overflow-x: auto;">
+    <table>
+     <tr>
+      <td class ="expand_close" style="vertical-align: middle;" onclick="togglePanelVisibilityExpand(document.getElementById('errorValid'), this);"></td>
+      <td>Error description.</td>
+     </tr>
+    </table>
+
+    <div class="xwikipanelcontents" style="border: 0px solid red;">
+    <table style="width: 99%; border: 1px solid #BED8E8; font-size: 11px;">
+    <tr>
+    <td style="padding: 5px;">
+    $message
+    </td>
+    </tr>
+    </table>
+    </div>
+
+  </div>
+
+#end
+  
+  <div style="text-align: center; border: 0px solid blue;#if($from_save_only)display:none;#end""> 
+  #set( $url = $xwiki.getRequestURL() )
+  <a href="javascript: document.getElementById('saved_content').submit()">back to edit</a>
+    <br/><br/>
+    #if( !$doc.isNew() )
+    <a href="$xwiki.getActionURL($url,'view')">back to view</a>
+    #end
+
+  </div>
+
+  <div class="clearfloats"></div>
+ </div>
+</div>
+
+   <form id="saved_content"  style="visibility: hidden" method="post" action="$xwiki.getActionURL($url,'edit')">
+   	<textarea name="content">$request.getParameter("content")</textarea>
+   	<input type="hidden" name="notNew" id="notNew" value="1" />
+   </form>
+
+#template("endpage.vm") 		

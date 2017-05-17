@@ -1,0 +1,63 @@
+processed file: C:\Polarion\data\postgres-data
+Successfully processed 1 files; Failed processing 0 files
+"Initializing PostgreSQL database with command:"
+"C:\Polarion\bundled\postgres\bin\initdb -D C:\Polarion\data\postgres-data -U postgres -E utf8"
+The files belonging to this database system will be owned by user "ntpriv".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "English_United States.1252".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory C:/Polarion/data/postgres-data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... windows
+creating configuration files ... ok
+creating template1 database in C:/Polarion/data/postgres-data/base/1 ... ok
+initializing pg_authid ... ok
+initializing dependencies ... ok
+creating system views ... ok
+loading system objects' descriptions ... ok
+creating collations ... not supported on this platform
+creating conversions ... ok
+creating dictionaries ... ok
+setting privileges on built-in objects ... ok
+creating information schema ... ok
+loading PL/pgSQL server-side language ... ok
+vacuuming database template1 ... ok
+copying template1 to template0 ... ok
+copying template1 to postgres ... ok
+syncing data to disk ... ok
+
+WARNING: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    "C:\Polarion\bundled\postgres\bin\postgres" -D "C:\Polarion\data\postgres-data"
+or
+    "C:\Polarion\bundled\postgres\bin\pg_ctl" -D "C:\Polarion\data\postgres-data" -l logfile start
+
+"Starting PostgreSQL with command:"
+"C:\Polarion\bundled\postgres\bin\pg_ctl" -D C:\Polarion\data\postgres-data -l "C:\Polarion\bundled\postgres\dbloginstall.log" -o "-p 5433" start "
+server starting
+LOG:  database system was shut down at 2017-05-15 15:36:03 IST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+"PostgreSQL was started on port 5433."
+"Dblink extension was created on polarion database."
+"Dblink extension was created on polarion_history database."
+"Replaced authentication method."
+"Replaced authentication method."
+"The PostgreSQL database was configured for Polarion." 
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+waiting for server to shut down....LOG:  shutting down
+.LOG:  database system is shut down
+ done
+server stopped
+0

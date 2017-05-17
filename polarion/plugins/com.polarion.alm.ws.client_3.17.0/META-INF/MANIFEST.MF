@@ -1,0 +1,47 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.alm.ws.client
+Export-Package: com.polarion.alm.ws.client; uses:="org.eclipse.core.ru
+ ntime,  com.polarion.alm.ws.client.builder,  com.polarion.alm.ws.clie
+ nt.session,  com.polarion.alm.ws.client.projects,  com.polarion.alm.w
+ s.client.tracker,  com.polarion.alm.ws.client.security",com.polarion.
+ alm.ws.client.builder; uses:="org.apache.axis.client,  com.polarion.a
+ lm.ws.client.types.builder,  org.apache.axis,  org.apache.axis.descri
+ ption,  com.polarion.alm.ws.client.types.projects,  javax.xml.rpc,  j
+ avax.xml.namespace",com.polarion.alm.ws.client.gen;x-friends:="com.si
+ emens.polarion.rt.communication.ws",com.polarion.alm.ws.client.intern
+ al,com.polarion.alm.ws.client.internal.encoding;x-friends:="com.sieme
+ ns.polarion.rt.communication.ws",com.polarion.alm.ws.client.planning,
+ com.polarion.alm.ws.client.projects; uses:="org.apache.axis.client,  
+ org.apache.axis,  org.apache.axis.description,  com.polarion.alm.ws.c
+ lient.types.projects,  javax.xml.namespace,  javax.xml.rpc",com.polar
+ ion.alm.ws.client.security; uses:="org.apache.axis.client,  org.apach
+ e.axis,  org.apache.axis.description,  javax.xml.namespace,  javax.xm
+ l.rpc",com.polarion.alm.ws.client.session; uses:="org.apache.axis.cli
+ ent,  org.apache.axis,  org.apache.axis.description,  javax.xml.names
+ pace,  javax.xml.rpc",com.polarion.alm.ws.client.testmanagement,com.p
+ olarion.alm.ws.client.tracker; uses:="org.apache.axis,  com.polarion.
+ alm.ws.client.types,  com.polarion.alm.ws.client.types.tracker,  java
+ x.xml.namespace,  javax.xml.rpc,  org.apache.axis.client,  org.apache
+ .axis.description,  com.polarion.alm.ws.client.types.projects",com.po
+ larion.alm.ws.client.types;uses:="org.apache.axis.description,org.apa
+ che.axis.encoding,javax.xml.namespace",com.polarion.alm.ws.client.typ
+ es.builder; uses:="org.apache.axis.description,  com.polarion.alm.ws.
+ client.types.projects,  org.apache.axis.encoding,  com.polarion.alm.w
+ s.client.types.tracker,  javax.xml.namespace",com.polarion.alm.ws.cli
+ ent.types.planning,com.polarion.alm.ws.client.types.projects; uses:="
+ org.apache.axis.description,  com.polarion.alm.ws.client.types,  org.
+ apache.axis.encoding,  javax.xml.namespace",com.polarion.alm.ws.clien
+ t.types.security,com.polarion.alm.ws.client.types.testmanagement,com.
+ polarion.alm.ws.client.types.tracker; uses:="org.apache.axis.descript
+ ion,  com.polarion.alm.ws.client.types.projects,  com.polarion.alm.ws
+ .client.types,  org.apache.axis.encoding,  javax.xml.namespace"
+Bundle-Name: Client Plug-in
+Bundle-Version: 3.17.0
+Bundle-ClassPath: wsclient.jar
+Require-Bundle: org.eclipse.core.runtime,org.apache.axis;bundle-versio
+ n="1.0.0";visibility:=reexport,com.polarion.core.util
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Eclipse-LazyStart: true
+
+

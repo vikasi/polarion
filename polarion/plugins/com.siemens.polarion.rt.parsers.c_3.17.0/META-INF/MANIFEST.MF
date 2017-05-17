@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.siemens.polarion.rt.parsers.c;singleton:=true
+Export-Package: com.siemens.polarion.rt.parsers.c;x-friends:="com.siem
+ ens.polarion.rt.tests"
+Bundle-Name: Polarion RT C Parser Plugin
+Bundle-Version: 3.17.0
+Bundle-ClassPath: rtC.jar,lib/antlr4-4.5.3.jar,lib/antlr4-runtime-4.5.
+ 3.jar
+Require-Bundle: com.siemens.polarion.rt.api;bundle-version="3.17.0",co
+ m.polarion.core.util;bundle-version="3.17.0"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion AG
+
+

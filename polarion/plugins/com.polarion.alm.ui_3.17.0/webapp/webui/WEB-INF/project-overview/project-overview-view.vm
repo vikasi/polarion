@@ -1,0 +1,89 @@
+<table width="100%" height="100%" cellpadding="0" cellspacing="0">
+	#if($project)
+		<tr>
+			<td align="center">
+				<table cellspacing="3" cellpadding="0">
+					<tr>
+						<td class="featureLabel pr" nowrap="nowrap" valign="top">Description:</td>
+						<td class="featureValue" colspan="3">
+							#escape("$!project.description.content")
+						</td>
+					</tr>
+					<tr>
+						<td class="featureLabel pr" nowrap="nowrap">Lead: </td>
+						#set($leader = "No leader specified")
+						#set($leader = $project.lead)
+						<td class="featureValue" width="35%" nowrap="nowrap">#formatHTML($leader)</td>
+
+						<td class="featureLabel pr" nowrap="nowrap">Project Start/Finish:</td>
+						#set($start = "$!project.start")
+						#set($finish = "$!project.finish")
+						<td class="featureValue" width="35%" nowrap="nowrap">#if($start && $start.length() > 0)#formatHTML($start) #else--#end/#if($finish && $finish.length() > 0) #formatHTML($finish)#else--#end</td>
+						
+##						<td class="featureLabel pr" nowrap="nowrap">Next Time Point:</td>
+##						<td class="featureValue" width="35%" nowrap="nowrap">#formatHTML($!timepoint.getLabel())</td>
+					</tr>
+					<tr>
+						<td class="featureLabel pr" nowrap="nowrap">Active:</td>
+						<td class="featureValue" width="35%" nowrap="nowrap">
+							<input type="checkbox" disabled="true" #if($project.active && $project.active.toString().equals("true")) checked="true" #end/>
+						</td>
+
+						<td class="featureLabel pr" nowrap="nowrap">Team Members:</td>
+						<td class="featureValue" width="35%" nowrap="nowrap">#formatHTML($NOU)</td>
+						
+##						<td class="featureLabel pr">Due Date:</td>
+##						<td class="featureValue" width="35%" nowrap="nowrap">
+##							#formatHTML($timepoint.time)
+##						</td>
+					</tr>
+##					<tr>				    
+##						<td class="featureLabel pr" nowrap="nowrap">Unscheduled Work Items:</td>
+##						<td class="featureValue" title="$query" nowrap="nowrap"><a href="$unschedulesWorkItemsLink" target="working_area">$unschedulesWorkItemsCount</a></td>
+##					</tr>
+					<tr>
+					    <td class="featureLabel pr" nowrap="nowrap">Repository URL:</td>
+						<td class="featureValue" width="35%" nowrap="nowrap">
+						  <a href='/polarion/#/project/$!project.id/repository' target="_top">$svnUrl</a>
+						</td>
+##						<td class="featureLabel pr" nowrap="nowrap">Test Success Ratio:</td>
+##						<td class="featureValue" width="35%" nowrap="nowrap">#formatHTML($testsData.getValue("TEST-SUCCESS"))</td>
+					</tr>
+##					<tr>					
+##						<td class="featureLabel pr" nowrap="nowrap">Test Coverage:</td>
+##						<td class="featureValue" width="35%" nowrap="nowrap">#formatHTML($testsData.getValue("TEST-COVERAGE"))</td>
+##					</tr>
+##					<tr>
+##						<td class="featureLabel pr" nowrap="nowrap">Total Commits:</td>
+##						<td class="featureValue" width="35%" nowrap="nowrap">#formatHTML($NOC)</td>						
+##						<td class="featureLabel pr" nowrap="nowrap">Build Frequency:</td>
+##						<td class="featureValue" width="35%" nowrap="nowrap">
+##							#formatHTML($projectData.getValue("BPW")) 
+##							#if($projectData.getValue("BPW"))
+##								builds per week (average)
+##							#end
+##						</td>
+##					</tr>
+##					<tr>
+##						<td class="featureLabel pr" nowrap="nowrap">Last Revision Date:</td>
+##						<td class="featureValue" width="35%" nowrap="nowrap">#formatHTML($LAT))</td>
+##						
+##						<td class="featureLabel pr" nowrap="nowrap">Build Success Ratio:</td>
+##						<td class="featureValue" width="35%" nowrap="nowrap">#formatHTML($projectData.getValue("BSR"))</td>
+##				    </tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+		</tr>
+	#else
+		<tr>
+			<td class="pt pr pb pl">
+				<b style="color:red">No project selected</b>
+			</td>
+		</tr>
+	#end
+</table>
+

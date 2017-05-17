@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.apache.log4j
+Require-Bundle: org.eclipse.core.runtime.compatibility,org.eclipse.cor
+ e.runtime
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+Export-Package: org.apache.commons.logging,org.apache.commons.logging.
+ impl,org.apache.log4j,org.apache.log4j.chainsaw,org.apache.log4j.conf
+ ig,org.apache.log4j.helpers,org.apache.log4j.jdbc,org.apache.log4j.jm
+ x,org.apache.log4j.lf5,org.apache.log4j.lf5.util,org.apache.log4j.lf5
+ .viewer,org.apache.log4j.lf5.viewer.categoryexplorer,org.apache.log4j
+ .lf5.viewer.configure,org.apache.log4j.net,org.apache.log4j.nt,org.ap
+ ache.log4j.or,org.apache.log4j.or.sax,org.apache.log4j.plugin,org.apa
+ che.log4j.spi,org.apache.log4j.varia,org.apache.log4j.xml,org.slf4j
+Bundle-Name: %pluginName
+Bundle-Version: 1.2.17.2015-05-04
+Bundle-ClassPath: log4j-plugin.jar,lib/log4j-1.2.17.jar,lib/commons-lo
+ gging.jar,lib/slf4j-log4j12-1.7.12.jar,lib/slf4j-api-1.7.12.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Bundle-Activator: org.eclipse.core.internal.compatibility.PluginActiva
+ tor
+Plugin-Class: org.apache.log4j.plugin.Log4jPlugin
+
+

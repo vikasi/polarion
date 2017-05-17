@@ -1,0 +1,147 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../hivemind.css">
+<title>HiveMind Registry -  Configuration Point com.polarion.platform.persistence.model.keys</title>
+</head>
+<body>
+<div class="title"> Module <a href="../module/com.polarion.platform.persistence.model.html">com.polarion.platform.persistence.model</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+<hr>
+<table class="top-level-object" cellspacing="0">
+<tr>
+<th class="object-id"><img src="../public.png" width="20" height="20" alt="[public]"> Configuration Point com.polarion.platform.persistence.model.keys</th><th>Occurs:</th><td> unbounded </td>
+</tr>
+<tr>
+<th colspan="3" class="section">Schema</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;key&gt; </th>
+</tr>
+<tr>
+<th class="sub-id">Attribute name (required) </th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute prototype (required) </th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute readOnly</th><th> Translator: </th><td>boolean</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute required</th><th> Translator: </th><td>boolean</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute type (required) </th><th> Translator: </th><td>type</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">com.polarion.platform.persistence.internal.config.prototypes.KeyData</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">name</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">name</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">readOnly</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">readOnly</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">required</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">required</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">type</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">type</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">prototype</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">prototype</span>"
+       /&gt; </div>
+</td>
+</tr>
+<tr>
+<th class="object-id" colspan="3"> Element &lt;keys&gt; </th>
+</tr>
+<tr>
+<th class="sub-id">Attribute prototype (required) </th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Nested Elements</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;key&gt; </th>
+</tr>
+<tr>
+<th class="sub-id">Attribute name (required) </th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute read-only</th><th> Translator: </th><td>boolean</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute required</th><th> Translator: </th><td>boolean</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute type (required) </th><th> Translator: </th><td>type</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">com.polarion.platform.persistence.internal.config.prototypes.KeyData</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">depth</span>="<span class="attribute-value">2</span>"
+       <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">name</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">name</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">readOnly</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">readOnly</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">required</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">required</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">type</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">type</span>"
+       /&gt; <br>
+     &lt;set-parent <span class="attribute">property</span>="<span class="attribute-value">prototype</span>"
+       /&gt; </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;push-attribute <span class="attribute">attribute</span>="<span class="attribute-value">prototype</span>"
+       /&gt; </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<div class="title"> Module <a href="../module/com.polarion.platform.persistence.model.html">com.polarion.platform.persistence.model</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+</body>
+</html>

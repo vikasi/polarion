@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/workflow.psml" hidden="false">
+    <title>workflow</title>
+    <short-title>workflow</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_workflow_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_workflow_portlet" type="portlet" name="webui::TypeFileConfigurationPortlet">
+          <preference name="confFolder" readOnly="false">
+		    <value>.polarion/tracker/workflow</value>
+		  </preference>
+		  <preference name="confMatch" readOnly="false">
+		    <value>.*workflow\.xml</value>
+		  </preference>
+		  <preference name="notMatchMessage" readOnly="false">
+		    <value>The filename must be either workflow.xml or [WI_TYPE]-workflow.xml.</value>
+		  </preference>
+		  <preference name="configurationsTitle" readOnly="false">
+		    <value>administration.workItems.workflowDefinitions</value>
+		  </preference>
+		  <preference name="uploadConfigurationTitle" readOnly="false">
+		    <value>administration.workItems.workflowDefinition</value>
+		  </preference>
+		  <preference name="uploadDescription" readOnly="false">
+		    <value>administration.workItems.workflowFilenameMustBeEitherOr</value>
+		  </preference>
+		  <preference name="multi" readOnly="false">
+		    <value>true</value>
+		  </preference>	 
+		  <preference name="workflow" readOnly="false">
+		    <value>true</value>
+		  </preference>	 		 
+		</fragment>
+    </fragment>
+</page>

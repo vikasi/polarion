@@ -1,0 +1,24 @@
+<div id="xwikiattachmentscontent" class="xwikidatacontent2" style="width: 100%;margin: 0px;">
+#set($action = $doc.getURL("save"))
+<div class='frmcollapsed'>
+<input type="hidden" name="filename" value="" size="20">
+   <table cellpadding="0" cellspacing="0" border="0" width="100%">
+     <tr>
+      <td class='paneltitle'>Upload an Attachment</td>
+     </tr>
+   </table>
+<input type="hidden" name="xredirect" value="" />
+<table cellpadding="2" cellspacing="0" border="0" width="100%">
+<tr>
+<td class="th1">$msg.get("titlefield")</td>
+<td class="th2">$msg.get("filename")</td>
+<td class="th6">$msg.get("action")</td>
+</tr>
+<tr>
+<td class="t1"><input type="text" name="title" value="" size="15" /></td>
+<td class="t2"><input type="file" name="filepath" value="" size="20" id="browseattachfile" onkeypress="return false;" onChange="checkAttach();"></td>
+<td class="t6"><input type="button" id="attachment" name="attachment" onclick="updateAttachName(document.forms.attach); document.forms.attach.action = '$action' ; document.forms.attach.submit();" value=""></td>
+</tr>
+</table>
+</div>
+</div>

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.synchronizer.proxy.hpalm
+Export-Package: com.polarion.synchronizer.proxy.hpalm;x-friends:="com.
+ polarion.synchronizer.tests,com.polarion.synchronizer.proxy.hpalm.tes
+ ts",com.polarion.synchronizer.proxy.hpalm.connector;x-friends:="com.p
+ olarion.synchronizer.proxy.hpalm.tests",com.polarion.synchronizer.pro
+ xy.hpalm.model;x-friends:="com.polarion.synchronizer.proxy.hpalm.test
+ s",com.polarion.synchronizer.proxy.hpalm.translators;x-friends:="com.
+ polarion.synchronizer.proxy.hpalm.tests"
+Bundle-Name: HP ALM Proxy
+Bundle-Version: 3.17.0
+Bundle-ClassPath: hpAlm.jar,lib/jtds-1.2.5.jar,lib/sqljdbc.jar,lib/sql
+ jdbc4.jar,lib/ojdbc6.jar,lib/orai18n.jar
+Require-Bundle: com.polarion.synchronizer;bundle-version="0.4.0",com.p
+ olarion.platform.guice;bundle-version="3.6.0",com.sun.jersey;bundle-v
+ ersion="1.0.0",com.polarion.core.util;bundle-version="3.6.0",com.pola
+ rion.synchronizer.proxy.polarion;bundle-version="0.9.0",com.polarion.
+ alm.tracker;bundle-version="3.10.1"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Import-Package: com.polarion.platform.i18n
+Guice-Modules: com.polarion.synchronizer.proxy.hpalm.guice.GuiceModule
+
+

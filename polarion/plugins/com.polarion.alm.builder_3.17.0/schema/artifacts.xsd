@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://polarion.com/schema/Builder/Artifacts" xmlns:tns="http://polarion.com/schema/Builder/Artifacts" elementFormDefault="qualified">
+
+    <element name="artifacts">
+        <annotation>
+        	<documentation>
+        		Describes content of .polarion/builder/artifacts.xml
+        	</documentation>
+        </annotation>
+        <complexType>
+        	<sequence>
+        		<element name="artifact" maxOccurs="unbounded"
+        			minOccurs="0" type="tns:ArtifactType">
+        		</element>
+        	</sequence>
+        	<attribute name="auto-recognition" type="boolean" use="optional"></attribute>
+        </complexType>
+    </element>
+
+    <complexType name="ArtifactType">
+    	<sequence>
+    		<element name="type" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="tag" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="location" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="resources" maxOccurs="1" minOccurs="0">
+                <complexType>
+                	<sequence>
+                		<element name="resource" type="tns:ResourceType" maxOccurs="unbounded" minOccurs="0"></element>
+                	</sequence>
+                </complexType>
+    		</element>
+    		<element name="aggregation-resources"
+    			maxOccurs="1" minOccurs="0">
+                <complexType>
+                	<sequence>
+                		<element name="resource" type="tns:ResourceType" maxOccurs="unbounded" minOccurs="0"></element>
+                	</sequence>
+                </complexType>
+    		</element>
+    		<any></any>
+    	</sequence>
+    </complexType>
+
+
+    <complexType name="ResourceType">
+    	<attribute name="source" type="string" use="required"></attribute>
+    	<attribute name="target" type="string" use="required"></attribute>
+    	<attribute name="recurse" type="boolean" use="optional"></attribute>
+    </complexType>
+</schema>

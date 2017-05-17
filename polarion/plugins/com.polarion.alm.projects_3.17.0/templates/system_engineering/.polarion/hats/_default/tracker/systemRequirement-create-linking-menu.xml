@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu>
+  <item childInModule="true"/>
+  <item copyFields="categories" label="Implementing Work Package" role="implements" titlePrefix="Implement: " type="workPackage"/>
+  <item copyFields="categories" label="Implementation Issue" role="implements" type="issue"/>
+  <item copyFields="categories" label="Verifying Test Case" role="verifies" titlePrefix="Test: " type="systemTestCase"/>
+  <separator/>
+  <item label="Related" role="relates_to"/>
+</menu>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20120104223344</created>
+<type>content</type>
+<content><![CDATA[1 Functional Requirements Risk Analysis Coverage
+
+
+#set($requirements = $trackerService.queryWorkItems("project.id:$page.project AND type:requirement AND reqtype.KEY:functional","outlineNumber"))
+
+#macro(failureModes $req)#set($modes = $trackerService.queryWorkItems("project.id:$page.project AND type:risk AND linkedWorkItems:$req","id"))#foreach($m in $modes) {workitem:$m.localId.objectName|display=long} #end#end
+{table}
+ Requirement | Failure Mode
+#foreach($r in $requirements)
+$r.outlineNumber {workitem:$r.localId.objectName|display=long}|#failureModes($r.localId.objectName) &nbsp;
+#end
+{table}]]></content>
+</wiki-page>

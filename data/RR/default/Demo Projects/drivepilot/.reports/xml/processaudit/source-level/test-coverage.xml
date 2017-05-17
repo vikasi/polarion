@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="drivepilot" id="test-coverage" tag="20091012_1045">
+    <structure-element id="root" provider="root" type="root">
+        <violation-fact-element category="" description="" id="TestCoverage:src/main/java:com.polarion.demo.reuse" provider="CoberturaSensorProvider" rule="TestCoverage" severity="" tag="12-10-09" type="TestCoverageViolationtype">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="package-name">
+                    <value>com.polarion.demo.reuse</value>
+                </property>
+                <property id="test-coverage">
+                    <value>0.0</value>
+                </property>
+                <property id="source-prefix">
+                    <value>src/main/java</value>
+                </property>
+                <property id="is multi-repository">
+                    <value>false</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <value-fact-element id="TestCoverage" provider="CoberturaSensorProvider" type="execution">
+            <value/>
+            <properties>
+                <property id="has-source-directories">
+                    <value>true</value>
+                </property>
+                <property id="packagesCount">
+                    <value>2</value>
+                </property>
+                <property id="violationsCount">
+                    <value>1</value>
+                </property>
+            </properties>
+        </value-fact-element>
+    </structure-element>
+</factbase>

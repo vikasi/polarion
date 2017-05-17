@@ -1,0 +1,65 @@
+
+<table class="toolbar" width="100%"  cellpadding="0" cellspacing="0">
+			<tr>
+    			<td height="100%" valign="middle" style="padding-top:0px;padding-left:5px;">
+    			#if($announcementsPolicy.canAdd())
+                    #set($addUrl = $renderResponse.createActionURL())
+		    		$addUrl.setWindowState($STATE_MAX) 	    		
+		    		$addUrl.setParameter("showAddForm","showAddForm") 	    		
+    				<input type="button" value="Add New" onclick="window.open('$addUrl','working_area')" class="actionButtonSmall"/>
+    			#else
+    				<input type="button" value="Add New" disabled onclick="window.open('$addUrl','working_area')" class="actionButtonSmall"/>
+    			#end
+    			</td>
+				<td height="100%" valign="middle" width="100%" style="padding-top:0px;padding-left:5px;">
+		    		#set($backUrl = $renderResponse.createRenderURL())
+		    		$backUrl.setWindowState($STATE_NORMAL) 	    		
+					<input type="button" value="Back" onclick="window.open('$backUrl','working_area')" class="actionButtonSmall"/>
+				</td>
+				<td height="100%">
+					#contextHelp("portlet_XXX_Announcements")
+				</td>
+			</tr>
+	</table>
+
+#if($items)
+	
+				<table id="newsTable" class="listAnn" cellpadding="0" cellspacing="0"  height="100%">
+					#foreach($item in $items)
+						<tr>
+							<td nowrap="nowrap" style="background-color:#f7f7f7">
+								<span style="color:#797979">
+								#if($item.getDate())
+									#formatHTML($item.getDate())
+								#end
+								</span>
+								<br>
+								<span style="color:#c7c7c7">
+##								#if($item.getAuthor())
+	##								#formatHTML($item.getAuthor())
+##								#else
+								    $!item.getAuthorId()
+##								#end
+								</span>
+							</td>
+							<td width="100%">
+                                #if($item.getTitle().trim().length() > 0)
+									<span style="color:#2d557c"><b>#formatHTML($item.getTitle())</b></span><br/>
+                                #end
+                                #if($item.getDescription())
+                                    #if($maxLength < 0)
+										#formatHTML($item.getDescription())
+                                    #else
+										#if($item.getDescription().length() < $maxLength)
+											#formatHTML($item.getDescription())
+										#else
+											#formatHTML($item.getDescription().substring(0, $maxLength))...
+										#end
+									#end
+								#end
+						</tr>
+					#end
+				</table>
+			
+#end  
+	

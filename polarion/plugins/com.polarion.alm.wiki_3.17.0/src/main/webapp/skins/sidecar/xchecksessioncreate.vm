@@ -1,0 +1,13 @@
+<script type="text/javascript">
+ if (window.name == "working_area")
+ {
+  closeLoginWiki();
+  loadWindow('$request.getParameter("createType")', '$request.getParameter("createDocName" )', '$request.getParameter("createDocSpace" )', '$request.getParameter("createDocProject" )', '$request.getParameter("createDocParent" )', '$request.getParameter("createOverviewSpace" )');
+ }
+ else
+ {
+  window.parent.closeLoginWiki();
+  window.parent.loadWindow('$request.getParameter("createType")', '$request.getParameter("createDocName" )', '$request.getParameter("createDocSpace" )', '$request.getParameter("createDocProject" )', '$request.getParameter("createDocParent" )', '$request.getParameter("createOverviewSpace" )');
+
+ }
+</script>

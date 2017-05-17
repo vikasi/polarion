@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20121228221426</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+{section:width=100%}
+{column}
+1 Design
+A system design specification is created based on the system requirements including a high-level design that defines the overall framework for the system. Subsystems of the system are identified and decomposed further into components. 
+
+Detailed specifications are created for the electrical, mechanical and software components to be developed, and final product selections are made for off-the-shelf components. 
+
+1.1.1 OBJECTIVE
+Produce a high-level design that meets the system requirements and defines key interfaces, and that facilitates development, integration, and future maintenance and upgrades. 
+
+Develop detailed design specifications that support electro-mechanical and software development and procurement of off-the-shelf equipment 
+
+1.1.1  INPUT
+* {document:Requirements/System Requirements}
+
+Add:
+* Existing system design documentation.
+* Industry standards specifications.
+
+1.1.1 OUTPUT
+
+Software Design:
+* {document:Software Design Specification} - Hi-level Software design specification
+* {document:Software Verification Test Plan} - description of the testing approach and tasks planned to verify the software requirements.
+* {document:Software Test Specification} - collection of the manual Software Test Cases that verifies the SW Specification Items
+
+Electro-Mechanical Design:
+* {document:Electro-Mechanical Design Specification} - Hi-level Electro-Mechanical Design specification
+* {document:Electro-Mechanical Verification Test Plan} - description of the testing approach and tasks planned to verify the electrical and mechanical requirements.
+* {document:Electro-Mechanical Test Specification} - collection of the manual Electrical and Mechanical Test Cases that verifies the HW Specification Items
+
+Add:
+* Detailed component design specifications.
+* Detailed component test specifications
+
+1.1.1 REVIEW
+
+* Design Requirements by Status - Basic statistics about Design Requirements 
+** {portallink:/wiki/Reports/Items%20By%20Status?wiType=softwareRequirement | addcontext=yes}Software Requirements{portallink}
+** {portallink:/wiki/Reports/Items%20By%20Status?wiType=mechanicalRequirement | addcontext=yes} Mechanical Requirements{portallink}
+** {portallink:/wiki/Reports/Items%20By%20Status?wiType=electricalRequirement | addcontext=yes} Electrical Requirements{portallink}
+* {portallink:/wiki/Reports/Items%20By%20Category?wiTypes=softwareRequirement,mechanicalRequirement,electricalRequirement | addcontext=yes} Design Requirements by Category Report {portallink} - Check number of Design Requirements by Category
+
+
+* {portallink:/wiki/Reports/Requirements%20Approval%20Statistics?reqtype=softwareRequirement,mechanicalRequirement,electricalRequirement&version= | addcontext=yes} Design Requirements Approval Statistics Report {portallink} - Check if the design requirements are approved.
+* [System Requirements Design Coverage>System Requirements Design Coverage] - Check if System Requirements are covered by Design Requirements. 
+* {portallink:/wiki/Requirements/System Requirements?link_role=parent,refines&tree_depth=5&tab=tree|addcontext=yes}System Requirements - Design Requirements  Traceability Tree{portallink} - browse the Requirements refined by design items in Work Items Traceability Tree Table. Or open a {portallink:/wiki/Reports/Requirements%20Traceability%20Report?wiTypes=softwareRequirement,mechanicalRequirement,electricalRequirement | addcontext=yes} Requirements Traceability Report{portallink}
+* {portallink:/wiki/Reports/Requirements%20Test%20Coverage?reqtypes=softwareRequirement,mechanicalRequirement,electricalRequirement&status=approved&version= | addcontext=yes} Design Requirements Test Coverage  Report{portallink} - Check if Design Requirements are covered by test cases. 
+
+{if-page-exists:Design Verification Statistics}
+1.1.1 VERIFY
+* [Recent Design Verification Statistics>Design Verification Statistics] - Check recent results of 'Software Design Verification' and 'Electro-Mechanical Design Verification' Test Runs
+* {portallink:/wiki/Reports/Test%20Runs%20Statistics?groupId=&passedTestResult=passed&testRunTemplates=Software%20Design%20Verification%20Test,Electro-Mechanical%20Design%20Verification%20Test&fromDate=2013-01-01&toDate=&verifiesLinkRoles=verifies | addcontext=yes} Design Verification Test Statistics Report{portallink} - Check results and statistics of  'Software Design Verification' and 'Electro-Mechanical Design Verification' Test Runs for some particular build and/or time range.
+* {portallink:/wiki/Reports/Frequent%20Test%20Case%20Failures?category=&testRunTemplate=Software%20Design%20Verification%20Test,Electro-Mechanical%20Design%20Verification%20Test&fromDate=2013-01-01&minFailures=3&toDate=&failedTestResult=failed
+ | addcontext=yes} Frequent System Verification Test Case Failures Report{portallink} - Check what Software, Electrical and Mechanical Test Cases fail often.
+
+{if-page-exists}
+
+{column}
+{column:width=2px}
+{column}
+{column:width=400px}
+#importDocumentPanel()
+
+{regiontitle}Tasks and Activities{regiontitle}
+#getProcessTaskHeading("Design")
+{workitems:linkedWorkItems:${page.project}/$processTaskHeading.id|fields=id,title|sortby=outlineNumber}
+
+{regiontitle}Workflow{regiontitle}
+<img src="/polarion/module-attachment/${page.project}/_default/Process%20Description/diagram_20130124-1710.31728.png" />
+
+{column}
+{section}]]></content>
+</wiki-page>

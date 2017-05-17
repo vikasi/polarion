@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portletApps>
+#foreach($app in $result)
+  <portletApp>
+    <id>$app.id</id>
+    <name>$app.name</name>
+  </portletApp>
+#end
+</portletApps>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doc-mapping>
+
+    <page name="Home" type="home" location="wiki">
+    	<selector product="com.polarion.requirements">
+            <scope target="repository">
+                Reports/Requirements/RepoOverview.xml
+            </scope>
+            <scope target="project">
+                Reports/Requirements/ProjectOverview.xml
+            </scope>
+            <scope target="space">
+                Reports/Requirements/SpaceOverview.xml
+            </scope>
+    	</selector>
+    	<selector product="com.polarion.qa">
+            <scope target="repository">
+                Reports/QA/RepoOverview.xml
+            </scope>
+            <scope target="project">
+                Reports/QA/ProjectOverview.xml
+            </scope>
+            <scope target="space">
+                Reports/QA/SpaceOverview.xml
+            </scope>
+    	</selector>
+    	<selector product="com.polarion.alm">
+            <scope target="repository">
+                Reports/ALM/RepoOverview.xml
+            </scope>
+            <scope target="project">
+                Reports/ALM/ProjectOverview.xml
+            </scope>
+            <scope target="space">
+                Reports/ALM/SpaceOverview.xml
+            </scope>
+    	</selector>    	
+    </page>
+    
+    <page name="Dashboard" type="dashboard" location="wiki">
+    	<selector product="com.polarion.requirements">
+    		<scope target="repository">
+                Reports/Requirements/RepoDashboard.xml
+            </scope>
+            <scope target="project">
+                Reports/Requirements/ProjectDashboard.xml
+            </scope>
+    	</selector>
+    	<selector product="com.polarion.alm">
+    		<scope target="repository">
+                Reports/ALM/RepoDashboard.xml
+            </scope>
+            <scope target="project">
+                Reports/ALM/ProjectDashboard.xml
+            </scope>
+    	</selector>    	
+    </page>
+    
+    <page name="My Polarion" type="mypolarion" location="user-management">
+    	<selector product="com.polarion.requirements">
+    		<scope target="space">
+                 Reports/MyPolarion.xml
+            </scope>
+    	</selector>
+    	<selector product="com.polarion.qa">
+    		<scope target="space">
+                 Reports/MyPolarion.xml
+            </scope>
+    	</selector>
+    	<selector product="com.polarion.alm">
+    		<scope target="space">
+                 Reports/MyPolarion.xml
+            </scope>
+    	</selector>    	
+    </page>
+    
+    <page name="Test Run" type="testrun" location="testruns">
+    	<selector product="com.polarion.requirements">
+    		<scope target="project">
+                 Reports/TestRun.xml
+            </scope>
+    	</selector>
+    	<selector product="com.polarion.qa">
+    		<scope target="project">
+                 Reports/TestRun.xml
+            </scope>
+    	</selector>
+    	<selector product="com.polarion.alm">
+    		<scope target="project">
+                 Reports/TestRun.xml
+            </scope>
+    	</selector>    	
+    </page>
+    
+</doc-mapping>

@@ -1,0 +1,154 @@
+1 Testing Configuration
+
+{testing-configuration}
+
+1.1 Quick Help
+
+1.1.1.1 Migrate Test Steps Button
+#info("This toolbar button is present only if the system property <tt>com.polarion.hideMigrationTestStepsButton</tt> is set to ~~false~~. \(System properties file location: Windows - <tt>polarion/configuration/polarion.properties</tt>, Linux - <tt>%POLARION_HOME%/etc/polarion.properties</tt>\)")
+
+In earlier implementations of the Test Steps feature, manual test steps were created and stored in the Description field of Work Items. In later implementations (beginning with version 2012-SR3) test 
+steps are created and stored in a dedicated custom field of type "Test Steps". The ~~Migrate Test Steps~~ button enables an administrator to move existing test steps data from the  
+Description field to the new Test Steps field of Work Items. Migration is available only in the project scope and is performed on Work Items of the type specified by the administrator 
+in the ~~Migrate Test Steps~~ dialog. (This would normally be the Test Case type.)\\
+
+
+Before running the migration utility in a project having existing Test Steps data in Description fields, you must create a corresponding Test Steps configuration in the Testing &gt; Test Steps topic of Administration. Names of the Test Step Columns in the configuration 
+must be the same as the column labels in existing Test Steps tables (in the Description field of Work Items). You must also configure a custom field of type ~~Test Steps~~ for the Test Case type Work Item. For complete 
+information please download the [Polarion Test Steps Migration Guide >http://www.polarion.com/downloads/Polarion-Test-Steps-Migration-Guide.pdf], available from the Polarion Software web site.
+
+
+1.1.1.1 {localization:administration.testing.automatedTesting}
+
+This section defines parameters used for importing results of automated tests (thereby enabling tracking of those results).
+
+1.1.1.1.1.1 {localization:administration.testing.testCaseType}
+
+Defines which of the configured Work Item types corresponds to a test case.
+
+#info("Work Item Types are configured in Administration &gt; Work Items &gt; Enumerations, *{hyperlink:/administration/workitems/enumerations}*.")
+
+1.1.1.1.1.1 {localization:administration.testing.testRunTemplate}
+
+Defines which Test Run to use as a template for creating new Test Runs when importing results of automated tests. (May be overridden in a job or build configuration.)
+Enter the ID of an existing Test Run from the current project. 
+
+1.1.1.1.1.1 {localization:administration.testing.testCaseTemplate}
+
+Defines which Work Item to use as a template for creating new Test Case Work Items while importing results of automated tests. (May be overridden in job or build configuration.)  
+Enter the ID of a Work Item from current project or projectID/workItemID for Work Items from other project.
+
+1.1.1.1.1.1 {localization:administration.testing.customFieldForTestCaseID}
+
+Defines which string-type Custom Field (of Test Case type Work Items) to use for storing the ID string of an automated test, the results of which are being imported.
+It is needed for subsequent imports of the tests in order to recognize Test Case type Work Items created by previous import(s).
+The value for Java JUnit tests is the name of a specific test class and method.
+
+#info("Work Item Custom Fields are configured in Administration &gt; Work Items &gt; Custom Fields, *{hyperlink:/administration/workitems/customfields}*.")
+
+1.1.1.1.1.1 {localization:administration.testing.createSummaryDefect}
+
+Defines the conditions under which a single "Summary" defect item is created and linked to a Test Run instead of multiple Defects (one for each failed Test Case).
+It is useful for situations when automated tests fail because of some environmental problem not directly related to the concrete Test Cases, which causes many test failures.
+
+1.1.1.1.1.1 {localization:administration.testing.mapTestResultsToEnumeration}
+
+This section allows mapping of automated test results to configured Test Record Result and Test Run Status values in Polarion.
+
+#info("Test Result values are configured in Administration &gt; {localization:navigation.topic.testing} &gt; {localization:navigation.topic.enumeration.testResults}, *{hyperlink:/administration/testing/test_result_enumeration}*.
+<br><br>This configuration also specifies for which Test Result(s) a linked Defect item should be created.")
+
+Before configuring this mapping, you need to configure the two enumerations: Test Run Statuses and Test Results, in the corresponding administration topics under ~~Testing~~. \\ 
+
+Note that when there are multiple types of test results, the Test Run status will be mapped as follows:
+* If there are any errors, the ~~Error~~ status is will be set.
+* If there are any failures (and no errors), the ~~Failed~~ status will be set.
+* Otherwise, the ~~Passed~~ status will be set.
+
+1.1.1.1 {localization:administration.testing.manualTesting}
+This section provides options and setting applicable to manual testing and manual type Test Runs.  
+
+1.1.1.1.1.1 {localization:administration.testing.testCasePlanningQuery}
+Here you can specify Lucene query syntax for a query that retrieves some subset of all Work Items when a user launches manual selection of Test Cases for a Test Run. For example, such 
+a query might retrieve all Test Case type items excluding all other types, or some subset of Test Case items such as Test Cases of manual type and not in Draft status. The purpose of the 
+query is to limit the amount of items in the Work Items table to some reasonable starting point for a user who is beginning manual selection of Test Cases for a manual Test Run. The user 
+is not restricted to the results of this query. S/he can formulate and run any query in the Work Items Table view any time during Test Case selection. However, if users select Test Cases 
+that are outside the scope of the results of this default query, they are notified that they have selected such items and prompted to confirm their selection.
+\\
+You can use the ~~Select Test Cases~~ item on the Actions menu of a Test Run to select test cases for it if the ~~Select Test Cases~~ field is set to ~~Manual~~, ~~Query on Create~~ or ~~Document on Create~~. 
+In a Test Run Template, you can use the action only if the ~~Select Test Cases~~ field is set to ~~Manual~~.
+
+1.1.1.1.1.1 {localization:administration.testing.allowRetest}
+When checked, manual type Test Cases that fail when executed during a Test Run may be retested by executing the same Test Run again.
+
+1.1.1.1 {localization:administration.testing.defectConfiguration}
+
+1.1.1.1.1.1 {localization:administration.testing.createDefectInProject}
+
+Defines the project in which Defects (resulting from failed tests) should be created.
+
+1.1.1.1.1.1 {localization:administration.testing.defectType}
+
+Defines which of the configured Work Item types is used to represent Defects resulting from test failures.
+
+#info("Work Item Types are configured in Administration &gt; Work Items &gt; Enumerations, *{hyperlink:/administration/workitems/enumerations}*.")
+
+1.1.1.1.1.1 {localization:administration.testing.defectTemplate}
+
+Defines which Work Item is used as a template for creating a new Defect type Work Item as a result of test failure while importing results of automated tests, or when a manual Test Case is executed.
+It is also used as the template for the "Summary Defect" (see {localization:administration.testing.createSummaryDefect}). 
+Enter the ID of a Work Item from current project or projectID/workItemID for Work Items from a different project
+
+1.1.1.1.1.1 {localization:administration.testing.linkRole}
+
+Defines which Link Role is used for linking Defect Work Items (created when test results contain failed tests) to Test Case Work Items. 
+
+#info("Work Item Link Roles are configured in Administration &gt; Work Items &gt; Enumerations, *{hyperlink:/administration/workitems/enumerations}*.")
+
+1.1.1.1.1.1 {localization:administration.testing.defectReuseType}
+
+Defines when the defect created when a test case fails is reused.
+* *{localization:administration.testing.defectReuseType.never.label}* - {localization:administration.testing.defectReuseType.never.tooltip}
+* *{localization:administration.testing.defectReuseType.failedInGroup.label}* - {localization:administration.testing.defectReuseType.failedInGroup.tooltip}
+* *{localization:administration.testing.defectReuseType.failedInPrevious.label}* - {localization:administration.testing.defectReuseType.failedInPrevious.tooltip}
+* *{localization:administration.testing.defectReuseType.always.label}* - {localization:administration.testing.defectReuseType.always.tooltip}
+
+1.1.1.1.1.1 {localization:administration.testing.performAutoassignment}
+
+Defines if auto-assignment should be executed to automatically fill the Assignee field in new Defect items created automatically for a failed Test Case.
+
+ #info("Auto-assignment is configured in Administration &gt; Work Items &gt; Auto-assignment, *{hyperlink:/administration/workitems/autoassignment}*.") 
+
+1.1.1.1.1.1 {localization:administration.testing.allowRetest}
+
+Defines whether re-running of manually-executed Test Cases is allowed.
+
+
+1.1.1.1 {localization:administration.testing.copyTestCaseFieldsToDefect}
+
+Defines which fields are copied from the Test Case Work Item to automatically created Defect Work Item(s).
+
+1.1.1.1 {localization:administration.testing.copyTestRunFieldsToDefect}
+
+Defines which fields are copied from Test Run to an automatically created Defect Work Item.
+When the source field is single-enum field and the target is multi-enum field, then the value is added, otherwise the value in the target field is overwritten.
+
+1.1.1.1.1.1 {localization:administration.testing.copyToExisting}
+
+{localization:administration.testing.copyToExistingTooltip}
+
+1.1.1.1 {localization:administration.testing.testruns.delete.section}
+There is a job <tt> polarion.jobs.testruns.delete</tt> that can be run to clean up old Test Runs. The job runs in the global scope, but it uses configurations from project scopes.
+
+Deletion of the old Test Runs by this job is configurable per project and is disabled by default. To enable it for a specific project, check the option ~~{localization:administration.testing.testruns.delete.checkbox.label}~~ in this section of the configuration page. Note that enabling this option in the ~~global~~ configuration enables it in all projects that do not define their own configuration for automated cleanup of old Test Runs. Test Runs in such projects will be deleted according to the settings in the global configuration, which may or may not be what is wanted. It is advisable make sure that projects subject to regulatory compliance are configured so that no Test Runs important for regulatory reporting are deleted.   
+
+You can optionally define a Lucene query in the field ~~{localization:administration.testing.testruns.delete.query.label}~~, that returns the set of Test Runs to be deleted by the job. This filtering query is automatically extended by Polarion so that the job never deletes Test Run templates and Test Runs that have the ~~Keep In History~~ flag set.
+
+When Test Runs are deleted by the job, no email notifications are generated, and nothing is shown in the Activity stream. \\
+
+*Example query:*\\
+type:automated AND finishedOn:\[19700101 TO \$today-30d\$\]
+\\ \\
+
+1.1.1.1 Generated Test Run IDs
+This option enables automatic IDs for new Test Runs. See the Help topic Administrator's Guide: ~~Generating Test Run IDs~~ for more information.

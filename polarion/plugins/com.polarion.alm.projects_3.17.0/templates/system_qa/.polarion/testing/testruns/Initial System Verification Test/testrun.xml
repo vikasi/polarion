@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="author">admin</field>
+    <field id="created">2016-02-16 10:17:18.583 +0100</field>
+    <field id="description" text-type="text/html" type="text/html">&lt;html&gt;&lt;head&gt;&lt;META http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;&lt;meta content="HTML Tidy for Java (vers. 26 Sep 2004), see www.w3.org" name="generator"&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;​&lt;span style="font-style: italic;" last_known_index="1"&gt;Click "Properties" and provide a short description of the software being tested and the test design itself.&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</field>
+    <field id="document">Requirements#System Test Specification</field>
+    <field id="goal" text-type="text/html" type="text/html">&lt;html&gt;&lt;head&gt;&lt;META http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;&lt;meta content="HTML Tidy for Java (vers. 26 Sep 2004), see www.w3.org" name="generator"&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;​&lt;span style="font-style: italic;"&gt;Describe the hi-level goals of this test and pass/fail criteria.&lt;br&gt;​​&lt;br&gt;By default the System Verification Test is configured to execute all the active test cases from &lt;span data-option-id="default" data-space-name="Requirements" data-item-name="System Test Specification" data-type="document" class="polarion-rte-link"&gt;&lt;span title="Drive Pilot (ALM) / Requirements / System Test Specification" class="polarion-no-style-cleanup"&gt;&lt;a href="/polarion/#/project/drivepilot_alm/wiki/Requirements/System%20Test%20Specification" target="_top" style="font-size:1em;"&gt;&lt;span title="Generic" class="polarion-no-style-cleanup"&gt;&lt;span style="white-space:nowrap;"&gt;&lt;img class="polarion-no-style-cleanup" style="vertical-align:text-bottom;border:0px;margin-right:2px;" src="/polarion/icons/default/enums/document_generic.png"&gt;&lt;/span&gt;&lt;/span&gt;System Test Specification&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;​​ document. You can modify the test planning by adjusting "Select Test Cases" property of a test run template.&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</field>
+    <field id="query">status:active</field>
+    <field id="selectTestCasesBy">staticLiveDoc</field>
+    <field id="status">open</field>
+    <field id="template">System Verification Test</field>
+    <field id="type">manual</field>
+    <field id="useReportFromTemplate">true</field>
+</test-run>

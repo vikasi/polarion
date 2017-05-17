@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/autocreate.psml" hidden="false">
+    <title>Autocreate</title>
+    <short-title>Autocreate</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_autocreate_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_autocreate_portlet" type="portlet" name="webui::FileConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/user-management/autocreate-config.xml</value>
+		  </preference>
+		  </fragment>
+    </fragment>
+</page>

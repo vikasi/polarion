@@ -1,0 +1,471 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!--
+Copyright 2004 The Apache Software Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<beans>
+  <bean id="localizationValve"
+        class="org.apache.jetspeed.localization.impl.LocalizationValveImpl"
+        init-method="initialize"
+  >
+    <constructor-arg>
+      <value><!--@defaultLanguage--><!--defaultLanguage@--></value>
+    </constructor-arg>
+  </bean> 
+  
+  <bean id="capabilityValve"
+        class="org.apache.jetspeed.capabilities.impl.CapabilityValveImpl"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <ref bean="org.apache.jetspeed.capabilities.Capabilities" />
+   </constructor-arg>
+  </bean> 
+  
+  <bean id="portalURLValve"
+        class="org.apache.jetspeed.container.url.impl.PortalURLValveImpl"
+        init-method="initialize"
+  /> 
+  
+  <bean id="securityValve"
+        class="com.polarion.portal.jetspeed.profiller.PolarionSecurityValveImpl"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <ref bean="org.apache.jetspeed.profiler.Profiler" />
+   </constructor-arg>
+   <constructor-arg>
+       <ref bean="org.apache.jetspeed.security.UserManager" />
+   </constructor-arg>
+   <constructor-arg>
+       <ref bean="PortalStatistics" />
+   </constructor-arg>   
+  </bean> 
+  
+  <bean id="passwordCredentialValve"
+        class="org.apache.jetspeed.security.impl.PasswordCredentialValveImpl"
+        init-method="initialize"
+  />
+  
+  <bean id="loginValidationValve"
+        class="org.apache.jetspeed.security.impl.LoginValidationValveImpl"
+        init-method="initialize">
+	  <!-- remove (from the session) the following list of session attributes upon login -->
+       <constructor-arg index="0">
+            <list>
+                <value>org.apache.jetspeed.powertool.actions</value>
+            </list>		   
+	   </constructor-arg>	  
+  </bean>
+  <bean id="profilerValve"
+        class="com.polarion.portal.jetspeed.profiller.ProfilerValveImpl"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <ref bean="org.apache.jetspeed.profiler.Profiler" />
+   </constructor-arg>
+   <constructor-arg>
+       <ref bean="org.apache.jetspeed.portalsite.PortalSite" />
+   </constructor-arg>
+   <constructor-arg>
+       <ref bean="org.apache.jetspeed.page.PageManager" />
+   </constructor-arg>
+  </bean> 
+  
+  <bean id="containerValve"
+        class="org.apache.jetspeed.container.ContainerValve"
+        init-method="initialize"
+  /> 
+  
+  <bean id="actionValve"
+        class="org.apache.jetspeed.pipeline.valve.impl.ActionValveImpl"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <ref bean="org.apache.pluto.PortletContainer" />
+   </constructor-arg>
+   <constructor-arg>   
+       <ref bean="PortletWindowAccessor" />    
+   </constructor-arg>   
+  </bean> 
+  
+  <bean id="portletValve"
+        class="org.apache.jetspeed.aggregator.PortletValve"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <ref bean="org.apache.jetspeed.aggregator.PortletAggregator"/>
+   </constructor-arg>
+  </bean> 
+
+  <bean id="fileServerValve"
+        class="org.apache.jetspeed.aggregator.FileServerValve"
+        init-method="initialize"
+  >
+     <!-- portlet -->
+     <constructor-arg index="0"><value>demo::ContentViewer</value></constructor-arg>    
+     <!-- entity -->
+     <constructor-arg index="1"><value>public.content.21</value></constructor-arg>    
+  </bean> 
+  
+  <bean id="aggregatorValve"
+        class="org.apache.jetspeed.aggregator.AggregatorValve"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <ref bean="org.apache.jetspeed.aggregator.PageAggregator"/>
+   </constructor-arg>
+  </bean> 
+  
+  <bean id="cleanUpValve"
+        class="org.apache.jetspeed.pipeline.valve.impl.CleanupValveImpl"
+        init-method="initialize"
+  >
+  </bean> 
+
+  <bean id="AJAXValve"
+        class="org.apache.jetspeed.ajax.AJAXValve"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <ref bean="AJAXService"/>
+   </constructor-arg>
+  </bean> 
+
+  <bean id="PlanCalendarsValve"
+        class="com.polarion.portal.jetspeed.valve.ProxyValve"
+        init-method="initialize" >
+             <!-- plugin name -->
+             <constructor-arg index="0"><value>com.polarion.alm.ui</value></constructor-arg>    
+             <!-- delegate class name -->
+             <constructor-arg index="1"><value>com.polarion.alm.tracker.web.internal.server.liveplan.PlanCalendarsValve</value></constructor-arg>    
+  </bean>        
+  
+  <bean id="HyperlinksValve"
+        class="com.polarion.portal.jetspeed.valve.ProxyValve"
+        init-method="initialize" >
+             <!-- plugin name -->
+             <constructor-arg index="0"><value>com.polarion.alm.ui</value></constructor-arg>    
+             <!-- delegate class name -->
+             <constructor-arg index="1"><value>com.polarion.alm.tracker.web.internal.server.HyperlinksValve</value></constructor-arg>    
+  </bean>
+  <bean id="LivedocAttValve"
+        class="com.polarion.portal.jetspeed.valve.ProxyValve"
+        init-method="initialize" >
+             <!-- plugin name -->
+             <constructor-arg index="0"><value>com.polarion.alm.ui</value></constructor-arg>    
+             <!-- delegate class name -->
+             <constructor-arg index="1"><value>com.polarion.alm.tracker.web.internal.server.LivedocAttValve</value></constructor-arg>    
+  </bean>        
+  <bean id="ReportValve"
+        class="com.polarion.portal.jetspeed.valve.ProxyValve"
+        init-method="initialize" >
+             <!-- plugin name -->
+             <constructor-arg index="0"><value>com.polarion.portal.metrics</value></constructor-arg>    
+             <!-- delegate class name -->
+             <constructor-arg index="1"><value>com.polarion.portal.metrics.report.ReportValve</value></constructor-arg>    
+  </bean>        
+
+  <bean id="BuildReportValve"
+        class="com.polarion.portal.jetspeed.valve.ProxyValve"
+        init-method="initialize" >
+             <!-- plugin name -->
+             <constructor-arg index="0"><value>com.polarion.alm.ui</value></constructor-arg>    
+             <!-- delegate class name -->
+             <constructor-arg index="1"><value>com.polarion.alm.builder.web.server.BuildReportValve</value></constructor-arg>    
+  </bean>        
+  <bean id="JobReportValve"
+        class="com.polarion.portal.jetspeed.valve.ProxyValve"
+        init-method="initialize" >
+             <!-- plugin name -->
+             <constructor-arg index="0"><value>com.polarion.alm.ui</value></constructor-arg>    
+             <!-- delegate class name -->
+             <constructor-arg index="1"><value>com.polarion.alm.builder.web.server.JobReportValve</value></constructor-arg>    
+  </bean>        
+
+  <bean id="DecorationValve"
+        class="org.apache.jetspeed.decoration.DecorationValve"
+        init-method="initialize">
+        <constructor-arg>
+            <ref bean="DecorationFactory" />
+        </constructor-arg>
+		<constructor-arg>			
+			 <ref bean="PortletWindowAccessor" />
+		</constructor-arg>
+  </bean>
+
+  <bean id="loginViewValve"
+        class="org.apache.jetspeed.login.impl.LoginJSPViewValve"
+        init-method="initialize"
+  >
+    <constructor-arg>
+      <value>/WEB-INF/templates/login</value>
+    </constructor-arg>
+  </bean> 
+  
+  <bean id="jetspeed-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>JetspeedPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>
+      <ref bean="capabilityValve"/>
+      <ref bean="portalURLValve"/>
+      <ref bean="securityValve"/>
+      <ref bean="localizationValve"/>
+      <ref bean="passwordCredentialValve"/>
+      <ref bean="loginValidationValve"/>
+      <ref bean="profilerValve"/>
+      <ref bean="DecorationValve" />
+      <ref bean="containerValve"/>      
+      <ref bean="actionValve"/>
+      <ref bean="aggregatorValve"/>
+      <ref bean="cleanUpValve"/>
+    </list>
+    </constructor-arg>
+  </bean> 
+  
+  <bean id="login-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>LoginPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>
+      <ref bean="capabilityValve"/>
+      <ref bean="localizationValve"/>
+      <ref bean="loginViewValve"/>
+    </list>
+    </constructor-arg>
+  </bean> 
+
+  <bean id="action-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>ActionPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>
+        <ref bean="localizationValve"/>
+        <ref bean="capabilityValve"/>
+        <ref bean="portalURLValve"/>
+        <ref bean="containerValve"/>
+        <ref bean="actionValve"/>
+    </list>
+    </constructor-arg>
+  </bean> 
+  
+  <bean id="portlet-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>PortletPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>
+        <ref bean="portalURLValve"/>                
+        <ref bean="capabilityValve"/>
+        <ref bean="securityValve"/>                
+        <ref bean="localizationValve"/>
+        <ref bean="profilerValve"/>                        
+        <ref bean="containerValve"/>
+        <ref bean="portletValve"/>    
+    </list>
+    </constructor-arg>
+  </bean> 
+  
+  <bean id="ajax-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>AjaxPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>
+        <ref bean="portalURLValve"/>                
+        <ref bean="securityValve"/>                
+        <ref bean="localizationValve"/>
+        <ref bean="profilerValve"/>                        
+        <ref bean="containerValve"/>
+        <!-- TODO: replace layout valve with Ajax valve -->
+        <ref bean="layoutValve"/>
+    </list>
+    </constructor-arg>
+  </bean> 
+
+  <bean id="fileserver-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>FileServerPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>
+        <ref bean="portalURLValve"/>                
+        <ref bean="securityValve"/>                
+        <ref bean="localizationValve"/>
+        <ref bean="profilerValve"/>                        
+        <ref bean="containerValve"/>
+        <ref bean="fileServerValve"/>            
+        <ref bean="portletValve"/>    
+    </list>
+    </constructor-arg>
+  </bean> 
+  
+  <bean id="plan-calendars-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>PlanCalendarsPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>           
+        <ref bean="securityValve"/>                
+        <ref bean="PlanCalendarsValve"/>
+    </list>
+    </constructor-arg>
+  </bean> 
+  
+  <bean id="hyperlinks-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>HyperlinksPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>           
+        <ref bean="securityValve"/>                
+        <ref bean="HyperlinksValve"/>
+    </list>
+    </constructor-arg>
+  </bean> 
+  
+  
+   <bean id="livedoc-att-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>LivedocAttPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>           
+        <ref bean="securityValve"/>                
+        <ref bean="LivedocAttValve"/>
+    </list>
+    </constructor-arg>
+  </bean>
+  
+   <bean id="report-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>ReportPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>           
+        <ref bean="securityValve"/>                
+        <ref bean="ReportValve"/>
+    </list>
+    </constructor-arg>
+  </bean> 
+
+   <bean id="build-report-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>BuildReportPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>           
+        <ref bean="securityValve"/>                
+        <ref bean="BuildReportValve"/>
+    </list>
+    </constructor-arg>
+  </bean> 
+
+   <bean id="job-report-pipeline"
+        class="org.apache.jetspeed.pipeline.JetspeedPipeline"
+        init-method="initialize"
+  >
+   <constructor-arg>
+       <value>JobReportPipeline</value>
+   </constructor-arg>
+   <constructor-arg>
+    <list>           
+        <ref bean="securityValve"/>                
+        <ref bean="JobReportValve"/>
+    </list>
+    </constructor-arg>
+  </bean> 
+  
+  <bean id='pipeline-map'
+        class='java.util.HashMap'>
+    <constructor-arg>
+        <map>
+            <entry key='/portlet'>
+                <value>portlet-pipeline</value>
+            </entry>            
+            <entry key='/portal'>
+                <value>jetspeed-pipeline</value>
+            </entry>
+            <entry key='/ajaxapi'>
+                <value>ajax-pipeline</value>
+            </entry>
+            <entry key='/login'>
+                <value>jetspeed-pipeline</value>
+            </entry>            
+            <entry key='/fileserver'>
+                <value>fileserver-pipeline</value>
+            </entry>                        
+            <entry key='/jsrpc'>
+                <value>jsrpc-pipeline</value>
+            </entry>
+            <entry key='/plan_calendars'>
+                <value>plan-calendars-pipeline</value>
+            </entry>
+            <entry key='/hyperlinks'>
+                <value>hyperlinks-pipeline</value>
+            </entry>
+            <entry key='/livedocattachments'>
+                <value>livedoc-att-pipeline</value>
+            </entry>
+            <entry key='/report'>
+                <value>report-pipeline</value>
+            </entry>
+			<entry key='/build-report'>
+                <value>build-report-pipeline</value>
+            </entry>
+			<entry key='/job-report'>
+                <value>job-report-pipeline</value>
+            </entry>
+        </map>        
+    </constructor-arg>        
+  </bean>
+  
+</beans>

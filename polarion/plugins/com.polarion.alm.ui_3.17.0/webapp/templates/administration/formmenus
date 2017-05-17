@@ -1,0 +1,23 @@
+1 Form Menus
+
+#info("The ~~Actions~~ menu of the Work Item detail form contains submenus for creating new Work Items linked to or from the current Work Item. These menus can be configured with commands for creating new Work Items \"linking\" (from) and \"linked\" (to) the current Work Item. You can have different configurations for different Views. Users working in a View with configured form menus, and creating Work Items with these menus, can create only the configured types of links with the configured link roles, thereby preventing inappropriate Work Item links and helping to safeguard the integrity of the linking data in the system.")
+
+1.1 \"Linked Work Item\" Menus
+
+{new-linked-menu}
+\\
+{configuration:create-linked-menu}
+\\
+1.1.1 Quick Help
+The above table lists the current configurations (if any) for the ~~Create Linked Work Item~~ menu (Navigation: Work Items: Table or Road Map: Actions). This menu enables users to create a new Work Item linked ~~to~~ the current Work Item. \\ 
+Here can create new menu configurations, or edit or delete existing configurations. 
+\\
+1.1 \"Linking Work Item\" Menus
+
+{new-linking-menu}
+\\
+{configuration:create-linking-menu}
+\\
+1.1.1 Quick Help
+The above table lists the current configurations (if any) for the ~~Create Linking Work Item~~ menu (Navigation: Work Items: Table or Road Map: Actions). This menu enables users to create a new Work Item linked ~~from~~ the current Work Item. \\ 
+Here can create new menu configurations, or edit or delete existing configurations. 

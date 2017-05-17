@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!--
+    Copyright 2004 The Apache Software Foundation
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<beans>
+
+    <!-- Portlet Factory -->
+    <bean id="portletFactory" class="org.apache.jetspeed.factory.JetspeedPortletFactory"></bean>
+
+    <!-- Portlet Registry DAO-->
+    <bean id="portletRegistryImpl" class="org.apache.jetspeed.components.portletregistry.PersistenceBrokerPortletRegistry" init-method="init">
+
+        <constructor-arg index="0">
+            <value>JETSPEED-INF/ojb/registry_repository.xml</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <ref bean="portletFactory" />
+        </constructor-arg>
+    </bean>
+
+    <bean id="org.apache.jetspeed.components.portletregistry.PortletRegistry" name="portletRegistry" parent="baseTransactionProxy">
+        <property name="proxyInterfaces">
+            <value>org.apache.jetspeed.components.portletregistry.PortletRegistry</value>
+        </property>
+
+        <property name="target">
+            <ref bean="portletRegistryImpl" />
+        </property>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="register*">PROPAGATION_REQUIRED,-org.apache.jetspeed.components.portletregistry.RegistryException</prop>
+                <prop key="remove*">PROPAGATION_REQUIRED,-org.apache.jetspeed.components.portletregistry.RegistryException</prop>
+                <prop key="update*">PROPAGATION_REQUIRED,-org.apache.jetspeed.components.portletregistry.RegistryException</prop>
+                <prop key="save*">PROPAGATION_REQUIRED,-org.apache.jetspeed.components.portletregistry.RegistryException</prop>
+                <prop key="*">PROPAGATION_SUPPORTS</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Portlet Entity Access DAO-->
+    <!--
+        <bean id="systemCache" class="org.apache.jetspeed.cache.general.SimpleHashMapCache" />
+        
+        <bean id="systemCachingInterceptor" class="org.apache.jetspeed.components.interceptors.CachingInterceptor" >
+        <constructor-arg>
+        <ref bean="systemCache"/>
+        </constructor-arg>
+        </bean>
+        
+        <bean id="systemRemoveFromCacheInterceptor" class="org.apache.jetspeed.components.interceptors.RemoveFromCacheInterceptor" >
+        <constructor-arg>
+        <ref bean="systemCache"/>
+        </constructor-arg>
+        </bean>   	
+        
+        <bean id="portletEntityCachingAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="advice">
+        <ref bean="systemCachingInterceptor"/>
+        </property>
+        <property name="patterns">
+        <list>
+        <value>.*getPortletEntity.*</value>
+        </list>
+        </property>
+        </bean>
+        
+        <bean id="portletEntityRemoveFromCacheAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="advice">
+        <ref bean="systemRemoveFromCacheInterceptor"/>
+        </property>
+        <property name="patterns">
+        <list>
+        <value>.*removePortletEntity.*</value>
+        </list>
+        </property>
+        </bean>
+        
+    -->
+    <!--
+        - PortletEntity business object: OJB implementation, as an inner bean wrapped
+        - by an outer transactional proxy. The two bean definitions could have been separate,
+        - but this is cleaner as there is no need to ever access the unwrapped object.
+    -->
+
+    <bean id="portletEntityAccessImpl" class="org.apache.jetspeed.components.portletentity.PersistenceBrokerPortletEntityAccess"
+        name="portletEntityAccessImpl">
+        <constructor-arg>
+            <ref bean="portletRegistry" />
+        </constructor-arg>
+    </bean>
+
+    <bean id="org.apache.jetspeed.components.portletentity.PortletEntityAccessComponent" parent="baseTransactionProxy" name="portletEntityAccess">
+        <property name="proxyInterfaces">
+            <value>org.apache.jetspeed.components.portletentity.PortletEntityAccessComponent</value>
+        </property>
+        <property name="target">
+            <ref bean="portletEntityAccessImpl" />
+        </property>
+        <!--
+            <property name="preInterceptors">
+            <list>
+            <ref bean="portletEntityCachingAdvisor"/>
+            <ref bean="portletEntityRemoveFromCacheAdvisor"/>
+            </list>
+            </property>
+        -->
+        <property name="transactionAttributes">
+            <props>
+                <prop key="remove*">PROPAGATION_REQUIRED</prop>
+                <prop key="store*">PROPAGATION_REQUIRED,-org.apache.jetspeed.components.portletentity.PortletEntityNotStoredException</prop>
+                <prop key="*">PROPAGATION_SUPPORTS</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

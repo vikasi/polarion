@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20140127084637</created>
+<type>content</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+#currentIterationVariable($iter)
+#if(!$request.getParameter("noredirect") && $iter)
+Loading Iteration: $iter.id
+<script>
+  window.top.location.assign("/polarion/#/project/$page.project/plan?id=$iter.id");
+</script>
+#else
+#if($iter)
+Current Iteration: $iter.id
+#else
+#warning("NO CURRENT ITERATION")
+#end
+#end
+
+]]></content>
+</wiki-page>

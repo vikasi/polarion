@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option iconURL="/polarion/icons/default/enums/req_status_draft.gif" id="draft" name="Draft" sortOrder="1"/>
+    <option iconURL="/polarion/icons/default/enums/req_status_awaiting_review.gif" id="inReview" name="In Review" sortOrder="2"/>
+    <option iconURL="/polarion/icons/default/enums/req_status_approved.gif" id="approved" name="Approved" sortOrder="3"/>
+    <option iconURL="/polarion/icons/default/enums/req_status_rejected.gif" id="rejected" name="Rejected" sortOrder="4"/>
+</enumeration>

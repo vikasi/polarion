@@ -1,0 +1,54 @@
+<div id="historymenu" class="menubar">
+##<h3 id="xwikimenutitle" class="hidden">$msg.get("menu")</h3>
+<div class="leftmenu">
+ 
+<table border=0;>
+<tr>
+<td>
+<div class="enab" onclick = "compareRevisions('rev','html','$localization.getValue('wiki.message.selectTwoRevisions')')">
+  #xwikitopmenuentrystartimageButton("#" $localization.getValue("definition.compare"))
+</div>
+
+</td>
+<td style="width:100%; text-align:right;">
+  	 
+</td>
+<td>
+	<div class="enab">			
+  <table cellspacing="0" cellpadding="0" class="com_polarion_reina_web_js_widgets_JSPopupButton_Button active">
+		<tbody>
+			<tr>
+				<td style="padding-left:6px;text-align:right;width:16px;vertical-align:middle;padding-right:6px;">
+				 		<a href="#if($odoc)$odoc.getURL($odoc, "view", "show=current", true)#else$doc.getURL("view", "show=current", true)#end" onclick="return changeDiscard('$localization.getValue("wiki.message.discardChanges")');">
+					 		<img id="DOM_932" src="/polarion/ria/images/control/history.png" class="GtwaxwzKSB">
+					 </a>	 				  				
+				</td>
+			</tr>
+		</tbody>
+	</table> 
+	</div>
+</td>
+<td style="padding: 0 6px;">
+	<img id="refresh_splitter" src="$xwiki.getSkinFile('separatorbig.gif')"/ >
+</td>
+<td style="padding-right: 4px;">
+	<div class="enab">			
+	  <table cellspacing="0" cellpadding="0" class="com_polarion_reina_web_js_widgets_JSPopupButton_Button">
+			<tbody>
+				<tr>
+					<td style="padding: 0 6px;width:16px;">
+					 		<a href="#if($odoc)$odoc.getURL($odoc, "view", "show=current", true)#else$doc.getURL("view", "show=current", true)#end" onclick="return changeDiscard('$localization.getValue("wiki.message.discardChanges")');">
+						 		<img id="refresh_image" src="/polarion/ria/images/actions/refreshBtn.png" onclick="refreshWikiWindow();" style="cursor:pointer;" title="$localization.getValue('definition.refresh')"/>
+						 </a>	 				  				
+					</td>
+				</tr>
+			</tbody>
+		</table> 
+	</div>
+	
+  
+</td>
+</tr>
+</table>
+</div>
+</div>

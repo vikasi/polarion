@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option description="Functional or behavioral requirement to be fulfilled." iconURL="/polarion/icons/default/enums/type_requirement.gif" id="systemRequirement" name="System Requirement" sortOrder="3"/>
+    <option iconURL="/polarion/icons/default/enums/type_test.gif" id="systemTestCase" name="System Test Case" sortOrder="5"/>
+    <option iconURL="/polarion/icons/default/enums/type_blue_spec.png" id="softwareRequirement" name="Software Requirement" sortOrder="6"/>
+    <option iconURL="/polarion/icons/default/enums/type_blue_testcase.png" id="softwareTestCase" name="Software Test Case" sortOrder="8"/>
+    <option iconURL="/polarion/icons/default/enums/type_green_spec.png" id="mechanicalRequirement" name="Mechanical Requirement" sortOrder="9"/>
+    <option iconURL="/polarion/icons/default/enums/type_green_testcase.png" id="mechanicalTestCase" name="Mechanical Test Case" sortOrder="11"/>
+    <option iconURL="/polarion/icons/default/enums/type_purple_spec.png" id="electricalRequirement" name="Electrical Requirement" sortOrder="12"/>
+    <option iconURL="/polarion/icons/default/enums/type_purple_testcase.png" id="electricalTestCase" name="Electrical Test Case" sortOrder="13"/>
+    <option iconURL="/polarion/icons/default/enums/type_risk.gif" id="risk" name="Risk" sortOrder="15"/>
+    <option description="A request for change of appearance of functionality." iconURL="/polarion/icons/default/enums/type_changerequest.gif" id="changerequest" name="Change Request" sortOrder="16"/>
+    <option iconURL="/polarion/icons/default/enums/type_work_package.png" id="workPackage" name="Work Package" sortOrder="17"/>
+    <option default="true" description="A task that needs to be done." iconURL="/polarion/icons/default/enums/type_task.gif" id="task" name="Task" sortOrder="18"/>
+    <option description="A defect that needs to be fixed." iconURL="/polarion/icons/default/enums/type_bug.gif" id="issue" name="Issue" sortOrder="19"/>
+    <option iconURL="/polarion/icons/default/enums/type_unit_testcase.png" id="unitTestCase" name="Unit Test Case" sortOrder="20"/>
+</enumeration>

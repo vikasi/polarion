@@ -1,0 +1,65 @@
+###
+### Login page
+###
+###
+#template("startpage.vm")
+<div class="main layoutsubsection">
+<form id="loginForm" action="$doc.getURL("loginsubmit")" method="post">
+<input type="hidden" name="xredirect" value="$!request.getParameter("xredirect")" />
+
+##xwikimessageboxstart(
+<center>
+<table class="login" cellpadding="0" cellspacing="0" width="50%">
+<tbody>
+<tr>
+<td class="logintitle" colspan="3" align="center">
+$msg.get("login")
+</td>
+</tr>
+<tr>
+<td height="20">
+</td>
+</tr>
+<tr><td width="100%">
+
+## "")
+#set($message = $msg.get($xwiki.parseMessage()))
+#if($message)
+<!-- previous login errors -->
+<div id="xwikimessage">
+Login Error: $message
+</div>
+#end
+
+
+ <br>
+<center>
+<table summary="$msg.get("loginform")">
+<tr><td class="loginlabel"><label class="login" for="j_username">$msg.get("username"):&nbsp;</label></td>
+<td><input type="text" id="j_username" name="j_username" value=""/></td></tr>
+<tr><td class="loginlabel"><label class="login" for="j_password">$msg.get("password"):&nbsp;</label></td>
+<td><input type="password" id="j_password" name="j_password" value=""/></td></tr>
+</tr>
+<tr>
+<td height="20" colspan="2">
+</td>
+</tr>
+<tr><td colspan="2" align="center" height="26" style="width: 100px;">
+<input type="submit" height="22" class="j_actionButton" value="$msg.get("login")" />
+</td></tr> 
+</table>
+</center>
+</td></tr>
+#if(0)
+<tr><td style="text-align: left;padding:2px;"><input id="remembermeno" type="radio" name="j_rememberme" value="false" checked="checked"/><label for="remembermeno">$msg.get("dontrememberme")</label></td></tr>
+<tr><td style="text-align: left;padding:2px;"><input id="remembermeyes" type="radio" name="j_rememberme" value="true"/><label for="remembermeyes">$msg.get("rememberme")</label></td></tr>
+#else
+<tr><td style="text-align: left;padding:2px;"><input id="rememberme" type="checkbox" name="j_rememberme" value="true"/><label for="rememberme">$msg.get("remembermeonthiscomp")</label></td></tr>
+#end
+
+</tbody></table>
+</center>
+##xwikimessageboxend()
+</form>
+</div>
+#template("endpage.vm")

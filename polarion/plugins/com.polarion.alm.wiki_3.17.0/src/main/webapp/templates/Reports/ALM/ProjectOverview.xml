@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wiki-page>
+<lastUpdatedBy>admin</lastUpdatedBy>
+<author>admin</author>
+<type>portal</type>
+<created>2007-08-20 23:51</created>
+<lastUpdated>2008-07-31 17:34</lastUpdated>
+<content><![CDATA[
+{if-page-exists:WebHome}
+#info("*IMPORTANT* \\ The wiki architecture has changed in this release. It is recommended that you copy the content and wiki mark-up of your existing [WebHome] page to this page, replacing the ~~Getting Started Tip~~ content. You can then delete the existing [WebHome] page.")
+{if-page-exists}
+{section:width=100%}
+{column:width=65%}
+
+1 Welcome to the ~~{project-property:name}~~ project
+
+{project-property:description} \\
+
+{hint}
+*GETTING STARTED TIP* \\
+You can change this content, and any other content on this page, to make it into a useful Home Page for the {project-property:name} project. \\
+
+For example, you might want to have links to important pages like: development guidelines, team directory, available mailing lists, etc. See the Links topic in the wiki editor's Wiki Syntax Help. \\
+
+You can use the Work Item Macro to retrieve, display, and link to important Work Items. For example, you could display a list of all unresolved high-severity defects. See Wiki Syntax Help in the wiki editor for info and examples. \\
+
+When you're ready, click on the ~~Edit~~ button in the toolbar above, and edit the page using the wiki editor.{hint}
+
+{column}
+
+
+{column:width=32%}
+{regiontitle}Project Overview{regiontitle}
+{style:type=div|class=regiondescription}
+This section describes general information about this project. 
+You can edit the project properties in Administration.
+{style}
+{table:border=no|header=no|bold=1|width=100%}
+Lead: | {project-property:lead}
+Start/Finish: | {project-property:start} / {project-property:finish}
+Active: | {project-property:active}
+Team Members: | {project-property:users}
+Repository URL: | {project-property:location}
+{table}
+
+{regiontitle}Latest Build{regiontitle}
+{style:type=div|class=regiondescription}
+Download the latest build here or browse all the other build results in the Builds topic.
+{style}
+{latestbuild}
+
+{column}
+{section}
+]]></content>
+</wiki-page>

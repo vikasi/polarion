@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension-point id="appLaunchers" name="Application Launchers" schema="schema/appLaunchers.exsd"/>
+
+   <extension
+         id="app"
+         name="app"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.polarion.core.boot.impl.AppLaunchersManager">
+         </run>
+      </application>
+   </extension>
+
+</plugin>

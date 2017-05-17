@@ -1,0 +1,61 @@
+1 OSLC Semantics
+
+1.1 Configuration
+{xmleditor:oslc-semantics}
+
+1.1 Quick Help
+
+1.1.1 Namespaces
+
+Namespaces are defined using the <tt>namespace</tt> tags found within a <tt>namspaces</tt> tag. 
+They are configured using the following attributes:
+
+1.1.1.1.1.1 Attribute: ~~prefix~~ {style:type=span|border=none|color=red}(Required){style}
+
+The prefix for the namespace.
+
+1.1.1.1.1.1 Attribute: ~~url~~ {style:type=span|border=none|color=red}(Required){style}
+
+The URL for the namespace.
+
+1.1.1 OSLC Domains
+
+Inside the <tt>domains</tt> tag, configure the OSLC domains that Polarion exposes to OSLC consumers. The following construct is used:
+
+<tt>
+    &lt;domain prefix="cm"&gt;\\
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;resourceType uri="cm:ChangeRequest"/&gt;\\
+    &lt;/domain&gt;
+</tt>
+
+An OSLC domain can have multiple resource types.
+
+1.1.1.1.1.1 Attribute: ~~prefix~~ in <tt>domain</tt> tag {style:type=span|border=none|color=red}(Required){style}
+
+The prefix for the OSLC domain.
+
+1.1.1.1.1.1 Attribute: ~~uri~~ in <tt>resourceType</tt> tag {style:type=span|border=none|color=red}(Required){style}
+
+The URI for the OSLC domain.
+
+1.1.1 Linking
+
+Inside the <tt>linking</tt> tag, configure which resource types can be linked using which link role. The following construct is used:
+
+<tt>
+    &lt;link name="cm:implementsRequirement" reverse="rm:implementedBy"&gt;\\
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;from type="cm:ChangeRequest"/&gt;&lt;to type="rm:Requirement"/&gt;\\
+    &lt;/link&gt;
+</tt>
+
+The <tt>to</tt> and <tt>from</tt> tags specify the resource types using their required <tt>type</tt> attribute.
+
+The <tt>link</tt> tag provides the following attributes:
+
+1.1.1.1.1.1 Attribute: ~~name~~ {style:type=span|border=none|color=red}(Required){style}
+
+The name of the link role as specified in a <tt>link-role-mapping</tt> tag's <tt>oslcLinkProperty</tt> attribute in the OSLC mapping configuration (either on a <a href="/polarion/#/administration/oslc/mapping" style="text-decoration:underline">global</a> or project level).
+
+1.1.1.1.1.1 Attribute: ~~reverse~~  {style:type=span|border=none|color=darkblue}(Optional){style}
+
+The reverse name of the link role as specified in a <tt>link-role-mapping</tt> tag's <tt>oslcLinkProperty</tt> attribute in the OSLC mapping configuration (either on a <a href="/polarion/#/administration/oslc/mapping" style="text-decoration:underline">global</a> or project level). The reverse name is used when linking the "reverse" direction. In the construct above, this would apply if a <tt>rm:Requirement</tt> is linked to a <tt>cm:ChangeRequest</tt>. If not specified, the <tt>name</tt> will be used by default.

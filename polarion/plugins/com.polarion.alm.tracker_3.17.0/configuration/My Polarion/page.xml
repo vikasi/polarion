@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2016-04-04 11:26:03.521 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <h1 id="polarion_client23">My Polarion</h1>
+  <p id="polarion_client25">
+    <span style="font-size: 10pt;line-height: 1.5;">Welcome <span style="font-weight: bold;"><span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+          <span class="polarion-rp-widget-parameters">
+            <sub id="script">
+              <sub id="script" style="white-space:pre;">$transaction.users().getBy().id($transaction.context().currentUserId()).render()</sub>
+            </sub>
+          </span>
+        </span></span><span style="font-weight: normal;">!</span><span style="font-weight: bold;"> </span>This is your personal Polarion home page. It&#39;s a LiveReport type page that you can customize using visual &quot;widgets&quot; to show the information of greatest interest to you.</span>
+  </p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 70.57491%;">
+  <h2 id="polarion_client1">My Tasks and Defects</h2>
+  <p id="polarion_client3">
+    <span style="font-size: 9pt;font-family: Arial, Helvetica, sans-serif;color: #999999;line-height: 1.5;">By default the table below shows items from all your projects that are assigned to you and not yet resolved. To include more item types, or restrict the list to items of particular interest right now, edit this page, select the table widget, and modify the query in the widget&#39;s parameters (visible in the <span style="font-style: italic;">Parameters</span> sidebar when the widget is selected in Edit mode).</span><span style="font-family: Arial, Helvetica, sans-serif;color: #666666;"><br/>
+      </span>
+  </p>
+  <div id="polarion_client5" class="polarion-rp-widget-part" data-widget="com.polarion.table">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="dataSet">
+        <sub id="scope">/</sub>
+        <sub id="prototype">WorkItem</sub>
+        <sub id="queryType">lucene</sub>
+        <sub style="white-space:pre;" id="luceneQuery">type:(defect task) AND assignee.id:$[user.id] AND NOT HAS_VALUE:resolution</sub>
+        <sub id="children">
+          <sub id="columns">
+            <sub>
+              <sub id="id">id</sub>
+            </sub>
+            <sub>
+              <sub id="id">title</sub>
+            </sub>
+            <sub>
+              <sub id="id">severity</sub>
+            </sub>
+          </sub>
+          <sub id="sortBy">
+            <sub>
+              <sub id="id">severity</sub>
+              <sub id="descending">false</sub>
+            </sub>
+          </sub>
+        </sub>
+      </sub>
+      <sub id="advanced">
+        <sub id="top">10</sub>
+      </sub>
+    </span>
+  </div>
+  <h2 id="polarion_client6">Documents Awaiting My Signature</h2>
+  <div id="polarion_client15" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;table class=&quot;polarion-rpw-table-content&quot;&gt;
+&lt;tr class=&quot;polarion-rpw-table-header-row&quot;&gt;&lt;th&gt;Document&lt;/th&gt;&lt;th&gt;Project / Space &lt;/th&gt;&lt;th&gt;Sign&lt;/th&gt;&lt;/tr&gt;
+#foreach($d in $transaction.documents.search().query(&quot;signatures:invited=$me&quot;).sort(&quot;id&quot;))
+&lt;tr class=&quot;polarion-rpw-table-content-row&quot;&gt;
+   &lt;td&gt; $d.render.withSpace(false).withLinks &lt;/td&gt;
+   &lt;td&gt; $d.fields.project.render.withIcon(false) / $d.fields.moduleFolder.render.withIcon(false)&lt;/td&gt;
+   &lt;td&gt; &lt;a href=&quot;$d.getReference.createLink($transaction.context).sidebarSignatures(null, true)&quot;&gt;&lt;img src=&quot;/polarion/icons/default/actions/invite_for_approval.png&quot;&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+#end
+&lt;/table&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <h2 id="polarion_client9">Work Items Awaiting My Approval</h2>
+  <p id="polarion_client11">
+    <span style="font-size: 9pt;color: #999999;line-height: 1.5;">This table shows Work Items that are waiting for your approval.</span>
+  </p>
+  <div id="polarion_client13" class="polarion-rp-widget-part" data-widget="com.polarion.table">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="dataSet">
+        <sub id="scope">/</sub>
+        <sub id="prototype">WorkItem</sub>
+        <sub id="queryType">lucene</sub>
+        <sub id="luceneQuery" style="white-space:pre;">approvals:fullxxxwaitingxxx$[user.id]</sub>
+        <sub id="children">
+          <sub id="columns">
+            <sub>
+              <sub id="id">id</sub>
+            </sub>
+            <sub>
+              <sub id="id">title</sub>
+            </sub>
+            <sub>
+              <sub id="id">priority</sub>
+            </sub>
+            <sub>
+              <sub id="id">project</sub>
+            </sub>
+          </sub>
+          <sub id="sortBy">
+            <sub>
+              <sub id="id">plannedStart</sub>
+              <sub id="descending">false</sub>
+            </sub>
+            <sub>
+              <sub id="id">priority</sub>
+              <sub id="descending">false</sub>
+            </sub>
+            <sub>
+              <sub id="id">severity</sub>
+              <sub id="descending">false</sub>
+            </sub>
+          </sub>
+        </sub>
+      </sub>
+      <sub id="advanced">
+        <sub id="top">20</sub>
+      </sub>
+    </span>
+  </div>
+  <h2 id="polarion_client14">Potential Change Impact</h2>
+  <p id="polarion_client16">
+    <span style="font-size: 9pt;font-family: Arial, Helvetica, sans-serif;color: #999999;line-height: 1.5;">This table shows Work Items assigned to you, which contain outgoing links marked as &quot;suspect&quot;. If a linked item changes, you should be sure to review your assigned item for possible impact.</span>
+  </p>
+  <div id="polarion_client18" class="polarion-rp-widget-part" data-widget="com.polarion.table">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="dataSet">
+        <sub id="scope">/</sub>
+        <sub id="prototype">WorkItem</sub>
+        <sub id="queryType">lucene</sub>
+        <sub style="white-space:pre;" id="luceneQuery">assignee.id:$[user.id] AND suspect:true</sub>
+        <sub id="children">
+          <sub id="columns">
+            <sub>
+              <sub id="id">id</sub>
+            </sub>
+            <sub>
+              <sub id="id">title</sub>
+            </sub>
+            <sub>
+              <sub id="id">priority</sub>
+            </sub>
+            <sub>
+              <sub id="id">project</sub>
+            </sub>
+          </sub>
+          <sub id="sortBy">
+            <sub>
+              <sub id="id">plannedStart</sub>
+              <sub id="descending">true</sub>
+            </sub>
+            <sub>
+              <sub id="id">priority</sub>
+              <sub id="descending">true</sub>
+            </sub>
+            <sub>
+              <sub id="id">severity</sub>
+              <sub id="descending">true</sub>
+            </sub>
+          </sub>
+        </sub>
+      </sub>
+      <sub id="advanced">
+        <sub id="top">20</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_hardcoded_2"></p>
+</div>
+<div class="polarion-rp-column" style="width: 29.425085%;">
+  <h2 id="polarion_client20">Links</h2>
+  <p id="polarion_client22">
+    <span style="font-size: 9pt;font-family: Arial, Helvetica, sans-serif;color: #999999;line-height: 1.5;">You can add your own links here ...</span>
+  </p>
+  <ul id="polarion_client7">
+    <li><span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+        <span class="polarion-rp-widget-parameters">
+          <sub id="script">
+            <sub id="script" style="white-space:pre;">&lt;a href=&quot;$transaction.users().getBy().id($transaction.context().currentUserId()).getReference().createLink($transaction.context())&quot;&gt;My account&lt;/a&gt;</sub>
+          </sub>
+        </span>
+      </span></li>
+    <li><span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+        <span class="polarion-rp-widget-parameters">
+          <sub id="script">
+            <sub id="script" style="white-space:pre;">&lt;a href=&quot;$transaction.context().createHtmlLink(&quot;/polarion/help/index.jsp&quot;)&quot;&gt;Help&lt;/a&gt;</sub>
+          </sub>
+        </span>
+      </span> </li>
+    <li><span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+        <span class="polarion-rp-widget-parameters">
+          <sub id="script">
+            <sub id="script" style="white-space:pre;">#set($elibrary=$transaction.projects().getBy().id(&quot;elibrary&quot;))
+	&lt;a href=&quot;$elibrary.getReference().createLink($transaction.context())&quot;&gt;$elibrary.label()&lt;/a&gt; 
+     - a Polarion project showcase&lt;/li&gt;
+            </sub>
+          </sub>
+        </span>
+      </span></li>
+  </ul>
+  <h2 id="polarion_client12">Activities</h2>
+  <div id="polarion_client2" class="polarion-rp-widget-part" data-widget="com.polarion.activityStream">
+    <span class="polarion-rp-widget-parameters"></span>
+  </div>
+  <p id="polarion_client4"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>]]></field>
+    <field id="title">My Polarion</field>
+</rich-page>

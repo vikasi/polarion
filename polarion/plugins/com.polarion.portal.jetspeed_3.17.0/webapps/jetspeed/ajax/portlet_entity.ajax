@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portletEntity>
+  <id>$result.id</id>
+
+  #foreach($pref in $result.preferenceSet.iterator())
+   #if($pref.readOnly)
+	#set($readOnly = "true") 
+   #else 
+	#set($readOnly = "false")
+   #end  
+   <preference readOnly="${readOnly}">
+     <name>$pref.name</name>
+   #foreach($value in $pref.values)
+	 <value>$value</value>
+   #end
+   </preference>
+  #end
+</portletEntity>

@@ -1,0 +1,149 @@
+#set($hasedit = $xwiki.hasPermission("modify") && !$doc.isInBaseline())
+#set($hasdelete = $xwiki.hasPermission("delete"))
+#set($tab = $!request.getParameter("tab"))
+#if (!$tab)
+#set($tab = "")
+#end
+
+##remove view page
+#if($isdeleteview)
+#set($hasedit = false)
+#set($hasdelete = false)
+#end
+
+###
+### List document attachments
+###
+### TODO: web service?
+###
+## #if(!$showattachments)
+## #set($showattachments = $xwiki.getWebPreference("showattachments"))
+## #end
+## #if($showattachments!="no")
+
+#set ( $rev1 = $request.getParameter("rev") )
+#if (!$rev1)
+#set ($rev1 = 0)
+#end
+#if($request.xredirect)
+#set( $redirect = $request.xredirect)
+#else
+#set( $redirect = $xwiki.getRequestURL())
+#end                                         
+#set($showactions = 0)
+#set($attachments = $doc.attachmentList)
+#set($counter = 0)
+    <div id="attachmentscontent" class="xwikipanelcontent">
+
+     #if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor) )
+       <form id="attachform" name="attachFormMain"  action="$doc.getURL("save")" enctype="multipart/form-data" method="post" style="margin: 0px; padding: 0px;">
+       <input id="page_type" type="hidden" name="page_type" value="$!doc.getType()" size="40"/>
+     #end
+        <input type="hidden" name="xredirect" value="$esc.escapeForHtmlTag($xwiki.getFormEncoded($redirect))" />
+        <input id="xwikiuploadname" type="hidden" name="filename" value="" size="40"/>
+        <input id="filepathMult" type="hidden" name="filepathMult" value="" size="40"/>
+        <input id="fileNamesDelete" type="hidden" name="fileNamesDelete" value="" size="40"/>
+     <div id="attTableM">
+      <table id="attTable" width=100% class="xwikitable">
+        <col class="attachmenttype"/>
+        <col class="attachmentname"/>
+        <col class="attachmentauthor"/>
+        <col class="attachmentversion"/>
+        <col class="attachmentdate"/>
+        <col class="attachmentsize"/>
+        #if($hasedit)
+          <col class="attachmentdelete"/>
+        #end
+    
+	        <tr>
+	          <th style="width: 150px;">$localization.getValue('wiki.field.attachment.label.title')</th>
+	          <th>$localization.getValue('wiki.field.attachment.label.fileName')</th>
+		  	  <th style="width: 100px;">$localization.getValue('wiki.field.attachment.label.length')</th>          
+	          <th style="width: 150px;">$localization.getValue('wiki.field.attachment.label.author')</th>
+	          <th style="width: 150px;">$localization.getValue('wiki.field.attachment.label.lastModified')</th>          
+	          #if($hasedit)
+	            <th  style="width: 50px;">$localization.getValue('wiki.field.attachment.label.actions')</th>
+	          #end
+	        </tr>
+           
+     
+			 #foreach ($attach in $attachments)
+			    #set ($atturl = $doc.getAttachmentURL("${attach.filename}", "download"))
+			        <tr class="row#if($counter % 2 == 0) even #else odd #end">
+			          <td class="attachTD">
+			##mimetypeimg($attach.getMimeType().toLowerCase() $attach.getFilename().toLowerCase()) &nbsp;
+				  $attach.titleBreaked
+				  </td>
+			          <td class="attachTD"><a target="_blank" href="$doc.corectAttachURL("$atturl" , "$rev1" )" title="$localization.getValue("wiki.field.attachment.fileName.tooltip")">$attach.filenameBreaked</a></td>
+			<script  type="text/javascript">
+			          addAttachToList("$attach.filename");   
+				  addAttachToListSaved("$attach.filename");     
+			</script>
+			          <td class="attachTD">$attach.filesize B</td>
+			          <td class="attachTD">$xwiki.getLocalUserName($attach.author)</td>
+			          <td class="attachTD">$!xwiki.formatDate($attach.date, "yyyy-MM-dd HH:mm")</td>
+			
+			  #if($hasedit)
+			    #if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor) )
+			      <td>
+				#if ($hasdelete && ($tab != "history"))
+					<a name="buttonD" href="$doc.getAttachmentURL("${attach.filename}", "delattachment", "xredirect=${redirect}")" title="$localization.getValue('wiki.button.delete.tooltip')" onclick="return AttachCheck( this, '$localization.getValue("wiki.message.deleteThisAttachment")', '/polarion/ria/images/control/tableMinus.png', '/polarion/ria/images/control/tablePlus.png', '$attach.filename' );">
+						<img src="/polarion/ria/images/control/tableMinus.png"/>
+					</a> 
+				#else
+					<img title="$localization.getValue('wiki.button.delete.tooltip')" src="$xwiki.getSkinFile("minus_grey.gif")"/>
+				#end
+			      </td>
+			    #else
+			      <td>
+				#if($hasdelete)
+					<a name="buttonD" href="$doc.getAttachmentURL("${attach.filename}", "delattachment", "xredirect=${redirect}")" title="$localization.getValue('wiki.button.delete.tooltip')" onclick="return AttachCheck( this, '$localization.getValue("wiki.message.deleteThisAttachment")', '/polarion/ria/images/control/tableMinus.png', '/polarion/ria/images/control/tablePlus.png', '$attach.filename' );">
+						<img src="/polarion/ria/images/control/tableMinus.png"/>
+					</a> 
+				#else
+					<img title="$localization.getValue('wiki.button.delete.tooltip')" src="$xwiki.getSkinFile("minus_grey.gif")"/>
+				#end
+				</td>
+			    #end
+			  #end
+			     </tr>
+			  #set($counter = $counter + 1)
+			#end        
+     
+ 
+      </table>
+</div>
+
+#if($attachments.size()<=0)
+  <script type="text/javascript">
+    document.getElementById("attTableM").style.display = "none";
+  </script>
+  <div id="attNo" style="padding: 8px;">$localization.getValue("definition.noItems")</div>
+#end
+#if ($tab != "history")
+  #if($hasedit)
+  <div>                            
+    #if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor) )
+      <span id="attEdit"   onclick="attachEdit();toggleAttachForm(document.forms['attachFormMain'], '/polarion/ria/images/control/tablePlus.png', '/polarion/ria/images/control/tableMinus.png','$localization.getValue("validation.fillRequiredFields")', '$localization.getValue("wiki.field.attachment.label.updateExistingAttachment")')" style="text-decoration: none;font-family:Arial;cursor:pointer;">&nbsp;&nbsp;<img src=$xwiki.getSkinFile("edit8.gif") alt=""/><span class='smallspace'>&nbsp;&nbsp;</span>$localization.getValue("definition.edit")</span>
+      <span id="attSave"   onclick="if (updateAttachNameMult(document.forms['attachFormMain'], '$localization.getValue("wiki.label.doYouWantToReplaceFileNameWith")', '$localization.getValue("wiki.label.saveChangedFields")', '$localization.getValue("validation.fillRequiredFields")')){  document.getElementById('progress_operation').innerHTML='$localization.getValue("wiki.form.progress.label.saving")';  executeCommand(document.getElementById('checkLoginV').action, checkCallBack);} " style="cursor:pointer; display: none;text-decoration: none;font-family:Arial;">&nbsp;&nbsp;<img src=$xwiki.getSkinFile("save8.gif") alt=""/><span class='smallspace'>&nbsp;&nbsp;</span>$localization.getValue("definition.save")</span>
+      <span id="attCancel" onclick="attachCancel('/polarion/ria/images/control/tableMinus.png'); hideAttachForm(document.forms['attachFormMain']);" style="cursor:pointer; display: none; text-decoration: none;font-family:Arial;">&nbsp;&nbsp;<img src=$xwiki.getSkinFile("cancel8.gif") alt=""/><span class='smallspace'>&nbsp;&nbsp;</span>$localization.getValue("definition.cancel")</span>
+    #else
+      <script type="text/javascript">
+         attachEdit();
+      </script>
+      <span id="attEdit" style="display: visible;"></span>
+      <span id="attSave"></span>
+      <span id="attCancel"></span>
+      <script type="text/javascript">
+         toggleAttachForm(document.forms['attachFormMain'], '/polarion/ria/images/control/tablePlus.png', '/polarion/ria/images/control/tableMinus.png','$localization.getValue("validation.fillRequiredFields")', '$localization.getValue("wiki.field.attachment.label.updateExistingAttachment")');
+      </script>
+    #end
+  </div>
+  #end
+#end
+#if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor) )
+  </form>
+#else
+  &nbsp;
+#end
+</div>

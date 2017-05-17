@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="assignee">cUser</field>
+    <field id="author">rProject</field>
+    <field id="created">2015-03-25 20:10:49.878 +0100</field>
+    <field id="description" text-type="text/html"><![CDATA[<span style="font-size: 10pt;line-height: 1.5;"> 
+  <table id="polarion_wiki macro name=table;params=header=no|border=no|width=50%" class="polarion-Document-table" style="width: 50%;margin-left: 0px;margin-right: auto;border: none;empty-cells: show;border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="text-align: left;vertical-align: top;width: 178px;padding: 2px;"><img src="workitemimg:1-trendline_variant.png"/></td>
+        <td style="text-align: left;vertical-align: top;width: 595px;padding: 2px;"> Product - WeatherStation Trendline<br/>
+          
+          <ul>
+            <li>Radio interface (868MHz)</li>
+            <li>Standard protocol</li>
+            <li>Temperature, humidity, air pressure</li>
+            <li>Battery power supply</li>
+            <li>In-door setting-up</li>
+          </ul>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  </span>]]></field>
+    <field id="featureSelection" type="struct:FeatureSelection">
+        <struct>
+            <item id="selections">
+                <list>
+                    <struct>
+                        <item id="feature">WS-8</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-16</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-18</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-35</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-17</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-11</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-28</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-6</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-14</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-7</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-30</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-21</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-20</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-32</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                </list>
+            </item>
+        </struct>
+    </field>
+    <field id="previousStatus">draft</field>
+    <field id="priority">50.0</field>
+    <field id="severity">should_have</field>
+    <field id="status">inReview</field>
+    <field id="title">SmartWeatherSensor Trendline</field>
+    <field id="type">variant</field>
+</work-item>

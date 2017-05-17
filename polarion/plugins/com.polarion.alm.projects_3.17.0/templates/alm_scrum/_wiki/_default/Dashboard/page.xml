@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20140228142935</created>
+<type>portal</type>
+<content><![CDATA[1 Dashboard for ~~{project-property:name}~~
+{include-macros:_default.ProjectMacros}
+{style:type=div|class=regiondescription}
+The Dashboard topic provides charts, reports and metrics that show the status of the {project-property:name}  project based on the most recent project data. You can get an up-to-the-minute view of the project state by clicking the ~~Update~~ links found in most sections of this page, which force a refresh of the data. Keep in mind that server performance could become slower for all users while an update is in progress.
+{style}
+
+{table:border=no|header=no|width=100%|padding=2px 7px 2px 7px}
+*Build Frequency:* | {dashboard-property:build-frequency} build(s) in last 7 days | *Build Success Ratio:*  | {dashboard-property:build-success-ratio}
+*Test Success Ratio:* | {fact:base=processaudit/project-level/source-check-aggregate|value=overall-test-results}|  *Test Coverage:* | {fact:base=processaudit/project-level/source-check-aggregate|value=overall-test-coverage}
+*Traceability Work Items to Commits:* | {fact:base=workitems-data|value=TRACEABILITY-REQUIREMENTS-COMMITS}| *Traceability Commits to Work Items:* | {fact:base=workitems-data|value=TRACEABILITY-COMMITS-REQUIREMENTS} 
+{table}
+
+{section:width=100%}
+{column:width=44%}
+#currentReleaseVariable($rel)
+1.1 $rel.name Burnup Chart
+{style:type=div|class=regiondescription}
+This chart shows the trend over time of completed work from $rel.name plan.
+{style}
+<center>
+#set($forDashboard = true)
+{plan-burnup:$page.project/$rel.id|yAxisName=Story Points|height=300|width=600|scale=week|baseDate=5}
+</center>
+{column}
+{column:width=45%}
+1.1 Test Coverage
+{style:type=div|class=regiondescription}
+If your software project is Java Maven-2 friendly Polarion can easily measure JUnit test coverage. This chart shows a Test Coverage ratio: lines covered / all lines of code).
+{style}
+{line-chart:report-path=charts/coverage-trend.xml|items=processaudit/project-level/source-check-aggregate-trend:#test-coverage.ratio|tags=14|yAxisName=Coverage %|width=100%|height=300}
+
+{update-report-footer:report-path=charts/coverage-trend.xml|calculation=processaudit}
+{column}
+{section}
+
+1.1 Live Plan
+{style:type=div|class=regiondescription}
+ This is a GANTT style chart of the project plan based on the actual state of project Work Items. Information is current as of the last Live Plan update.
+{style}
+{live-plan:width=100%}
+
+{update-report-footer:report-path=xml/live-plan.xml}
+
+1.1 Quality Score Card
+{style:type=div|class=regiondescription}
+This section rolls up some key information from the reports in the Quality topic, and provides links to details in that topic.
+{style}
+{report:report-path=html/qualitycentre-portlet-inner.html|width=100%|height=100%}
+
+{update-report-footer:report-path=html/qualitycentre-portlet-inner.html|calculation=projectscore}
+
+1.1 Facts and Figures
+{style:type=div|class=regiondescription}
+This table rolls up some useful metrics from various sources which can reveal even more about what's happening with this project.{style}
+
+{section:width=100%}
+{column:width=45%}
+*Work Items Overview*
+{table:border=no|width=100%}
+ Item | Value
+ Open By Severity | {fact:base=workitems-data|value=OPEN-BY-SEVERITY}
+ Most Solved by Individual | {fact:base=workitems-data|value=MSI}
+{table}
+{column}
+{column:width=45%}
+*SCM*
+{table:border=no|width=100%}
+ Item | Value
+ Number of Changes for Past Week | {fact:base=repo-analysis|value=NOCW}
+ Most Active Developer | {fact:base=repo-analysis|value=MAD}
+{table}
+{column}
+{section}
+
+{update-report-footer:report-path=xml/workitems-data.xml|calculation=all}]]></content>
+</wiki-page>

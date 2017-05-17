@@ -1,0 +1,491 @@
+body {
+	font-size:13px;
+	font-family:arial,helvetica;	
+	overflow:auto;
+}
+
+BUTTON,A,TD,TH,TABLE,DIV,INPUT,SELECT,SPAN{
+}
+
+table.list {
+	margin:0px;
+  	width:100%;
+	border-collapse:collapse;
+}
+
+
+.list td.head {
+	font-weight: bold;
+	background: #75A8E2;
+	color: black;
+	border-top: 0px;
+	border-bottom: 3px solid #CCD8E5;
+	border-right: 1px solid #CCD8E5;
+}
+
+.list td.head a, .list td.head a:active, .list td.head a:link, .list td.head a:visited, .list td.head a:hover {
+	font-weight: bold;
+}
+
+.list th {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #D2D7DA;
+    color: #757575;
+    font-weight: normal;
+    height: 28px;
+    text-align: left;
+    padding: 0 4px;
+    border-right:0px;
+    border-left:0px;
+}
+
+.list tr {
+
+}
+
+.list tr.first {
+border: 0;
+border-bottom: 1px solid #F0F0F0; 
+}
+
+.list td.first {
+
+}
+	
+
+.list tr.second {
+	border: 0;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.list td {
+	 padding: 9px 14px 9px 4px;  
+  	border-bottom: 1px solid #F0F0F0;
+	background: #fff;
+    text-align: left;
+    vertical-align:top;
+    border-left:0px;
+    border-right:0px;
+}
+
+.list td.goal {
+	font-weight:bold;
+	background:#f5f5f5;
+}
+
+.list td.kpa {
+	background: #CBDDFF;
+}
+
+.list td.blank {
+	background-color: white;
+	border: 0;
+}
+
+.list td.violation {
+	background: #FFFFFF;	
+	font-weight: normal
+}
+
+.list td.rule {
+	background: #E9F3FA;
+	font-weight: normal
+}
+
+.list tr.active td {
+	background: #FFCC00;
+	vertical-align: middle;
+	height: 25px;
+	padding: 0;
+}
+
+.list tr.selected td {
+	background: #FFE88A;
+	vertical-align: middle;
+	height: 25px;
+	padding: 0px;
+	margin: 0px;
+	border-bottom:1px solid #FFE88A;;
+}
+
+
+
+.list td.internal {
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+}
+
+.list tr.first {
+	vertical-align: middle;
+	height: 25px;
+}
+
+.list tr.second {
+	vertical-align: middle;
+	height: 25px;
+	background: #ffffff;
+}
+
+.list tr.first td {
+	background: #FFFFFF;
+	padding: 0;
+	vertical-align: middle;
+	height: 25px;
+}
+
+.list tr.second td {
+	background: #ffffff;
+	padding: 0;
+	vertical-align: middle;
+	height: 25px;
+}
+
+
+table.percentGraph {
+	empty-cells: show;
+}
+
+
+table.percentGraph td.No {
+    background: #00f000;
+	height: 11px;
+}
+
+table.percentGraph td.Yes {
+    background: #e00000;
+	height: 11px;
+}
+
+table.percentGraph td.notviolated {
+    background: #00f000;
+	height: 11px;
+	border: 0px;
+}
+
+table.percentGraph td.violated {
+    background: #e00000;
+	height: 11px;
+	border: 0px;
+}
+
+div.separator {
+	height: 10px;
+}
+
+.links {    
+	
+}
+
+.title {
+	color: black;
+	font-weight: bold;    
+}
+
+.message {
+	
+}
+
+.message12 {
+	font-size: 12px;
+	color: black;
+}
+
+.valueListTitle {
+	background:#E1F0FF;
+	height:18px;
+	width:100%;
+	height: 25px;
+	padding-left:4px;
+	text-shadow:#ffffff 1px 1px 0.01em;
+	margin-bottom:5px;
+	border-radius:3px;
+	cursor:pointer;
+}
+
+.valueListTitle td {
+	width:100%;
+	color:#0E4A90;
+	font-weight:bold;
+	text-shadow:#ffffff 1px 1px 0.01em;
+	padding:8px;
+	font-size:16px !important;
+	height:18px;
+}
+
+.valueListTitle:hover
+{background:#fff6a9;}
+
+.pl{ 
+    padding-left: 10px;
+}
+
+.pr0 {
+	padding-right: 5px;
+}
+
+td a, td a:active, td a:link, td a:visited {
+	color: #3c3d3f;
+	text-decoration:underline;
+}
+
+td a:hover {
+	color: black;
+	text-decoration:underline;
+}
+
+table.summarylist {
+	margin:0px;
+  	width:100%;
+	border-collapse:collapse;	
+}
+
+.summarylist th {	
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #D2D7DA;
+    color: #757575;
+    font-weight: normal;
+    height: 28px;
+    text-align: left;
+    padding: 0 4px;
+}
+
+.distribution_bar_table td {
+	border: 0px solid #C0DAEA;
+	height: 12px; 	
+}
+
+
+.summarylist td {
+	 padding: 9px 14px 9px 4px;  
+  	border-bottom: 1px solid #F0F0F0;
+	background: #fff;
+}
+.summarylist table td {
+	padding:1px;
+}
+
+.distribution_bar_table td {
+	border: 0px solid #C0DAEA; 	
+	height: 12px; 	
+}
+
+
+.summarylist td.right {
+	border-left: 0px; 
+}
+
+.summarylist td.left {
+	border-right: 0px; 
+}
+
+a.noneUnderline, table.summarylist a {
+	text-decoration: none;
+}
+
+a.noneUnderline:hover, table.summarylist a:hover {
+	text-decoration: underline;
+}
+
+.summarylist tr.first td {
+	background: #FFFFFF;
+}
+
+.summarylist tr.second td {
+	background: #f5f5f5;
+}
+
+.summarylist tr.report td {
+	background: #CBDDFF;
+}
+.summarylist tr.selected td {
+	background: #FFE88A;
+	##cursor: pointer;
+}
+
+.summarylist tr.selected td.linkText, span.linkText {
+##	text-decoration: underline;
+}
+
+.summarylist tr.selectedWithoutLink td {
+	background: #FFE88A;
+}
+
+.summarylist tr td.active {
+	background: #FFFA00;
+}
+
+.metric_value_bar {
+	vertical-align: middle;
+	font-size: 8px;
+	padding: 0px;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #A6A6A6;
+	margin-right:0px; 
+	overflow:hidden;
+	text-decoration:none;
+}
+
+table.head {
+    font-size: 13px;    	
+    font-weight: bold;    	                      
+}
+
+td.ruletitle {
+	background-color:#D8E6FF;    	
+    font-weight: bold;
+    padding-left: 4px;
+    height: 14pt;
+}
+
+td.ruletitle a {
+    text-decoration:none;
+}
+
+
+td.ruletitle a:hover {
+    text-decoration:underline;
+}
+
+td.content {
+    padding-left:60px;
+}
+
+td.percent {    
+    text-align: right;    
+    background-color:#D8E6FF;
+    font-size: 13px;
+}
+
+td.percentTitle {
+    text-align: right;    
+    background-color:#D8E6FF;
+    font-size: 13px;
+}
+
+table.percentGraph {
+	border: 1px solid #A6A6A6;
+	height: 12px;
+	empty-cells: show;
+	padding: 0px;
+}
+
+table.percentGraph td.covered {
+    background: #B7E7C0;
+	height: 10px;
+	padding: 0px;
+	border: 0px;	
+}
+
+table.percentGraph td.uncovered {
+    background: #FF9F9F;
+	height: 10px;
+	padding: 0px;
+	border: 0px;
+}
+
+table.percentGraph td.NA {
+    background: #eaeaea;
+	height: 10px;
+}
+
+.decorBorder {
+	border: 1px solid #C0DAEA;
+}
+
+table.detailTable {
+	color: black;
+}
+
+table.xpNavigator {
+	background: #EDF2F7;
+    border-collapse:collapse;	
+	border: 1px solid #C6CDD6;	
+}
+
+.xpNavigator td {
+    padding: 8px 8px 8px 8px;    
+    color: #9eACBa;   
+    
+}
+
+.xpNavigator td a.xpNav {
+    color: #9EACBA;
+    text-decoration: none;
+}
+
+
+/** portlet styles **/
+table.portletFooter {
+	border-collapse:collapse;
+}
+
+.portletFooter td {
+	padding: 0px 5px 0px 5px;
+    height: 18px;
+    color: #1D5696;
+}
+
+.portletFooter a {
+    color: #1D5696 !important;
+    font-style:italic;
+}
+
+.br{ 
+	width:45% !important;
+}
+td.ruletitlesub {
+	font-size: 8pt;
+	background-color:#eaf2ff;    	
+    font-weight: bold;
+    padding-left: 4px;
+    height: 12pt;
+}
+
+td.ruletitlesub a {
+    text-decoration:none;
+}
+
+
+td.ruletitlesub a:hover {
+    text-decoration:underline;
+}
+.distribution_bar_maindiv {
+	padding: 0px !important;
+	width: 100%; 
+	height: 22px; 
+	overflow: hidden;
+}
+.distribution_bar_middlediv{
+	padding: 0; 
+	width: 100%; 
+	height: 22px;
+	padding: 0px !important;
+}
+.distribution_bar_table{
+	table-layout: fixed;
+	padding: 0; 
+	font-size: 12px; 
+	height: 22px;
+	border: 1px solid black; 
+	padding: 0px !important;
+	border-radius:2px;
+}
+.distribution_bar_td{
+	padding: 0px !important;
+	height: 22px;
+	font-size: 12px !important; 
+	text-align: center;
+	overflow: hidden;
+	vertical-align: middle;	
+}
+
+a.distribution_bar_a, a.distribution_bar_a:active, a.distribution_bar_a:link, a.distribution_bar_a:visited, a.distribution_bar_a:hover{
+	font-size: 12px; 
+	padding: 0px;
+	text-decoration: none; 
+	display: block
+}

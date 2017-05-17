@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+    <field id="risk" type="enum:risk" name="Risk" description="Risk of the Work Item. Usually determined from overall spread and impact and estimate inaccuracy." />
+    <field id="cost" type="currency" name="Cost" description="Cost for implementation of the WorkItem" />
+</fields>

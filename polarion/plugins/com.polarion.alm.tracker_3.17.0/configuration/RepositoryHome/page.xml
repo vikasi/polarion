@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2016-04-13 09:15:10.049 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <h1 id="polarion_hardcoded_0">Welcome to Polarion</h1>
+  <p id="polarion_1">This is the Home page for your Polarion portal. It contains information and links that can be useful for users of the portal.</p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 70%;">
+  <p id="polarion_hardcoded_2">
+    <span style="font-style: italic;color: #999999;"> </span><span style="font-weight: bold;font-style: italic;color: #999999;">TIPS FOR GETTING STARTED</span>
+  </p>
+  <p id="polarion_client24">
+    <span style="font-style: italic;color: #999999;">This is the top-level Home page for your Polarion portal. You can customize it, replacing the default content with your own to create a useful resource for users of this portal. This is a good place to provide information for new users, as well as general information for all portal users. Among the many possible things you might do:</span>
+  </p>
+  <ul id="polarion_client2">
+    <li><span style="font-style: italic;color: #999999;">Present overviews and key contacts of your organization and teams</span></li>
+    <li><span style="font-style: italic;color: #999999;">Provide documentation of your technical resources and standards</span></li>
+    <li><span style="font-style: italic;color: #999999;">Publish guidelines</span></li>
+    <li><span style="font-style: italic;color: #999999;">Provide links to portal resources, including team or business unit spaces and/or Home pages</span></li>
+  </ul>
+  <p id="polarion_client4">
+    <span style="font-style: italic;color: #999999;">The list of possibilities is endless. Do some thinking about what kind of general content should be provided for portal users, and begin creating the Pages you need. When you&#39;re ready to work on this Page, click Expand Tools above, then click the Edit button. You can replace this text and provide your own in the same region. You can create other regions and add text, images and Widgets to them. The catalog of visually configurable &quot;Widgets&quot; enables you to easily display a wide variety of information about the projects and activity happening on the portal. See <a href="/polarion/help/topic/com.polarion.xray.doc.user/ugchPages.html" target="_top" class="descriptionLink">Help</a> on how to work with Pages.<br/>
+      </span>
+  </p>
+  <p id="polarion_client28">
+    <span style="color: #999999;"><span style="font-weight: bold;font-style: italic;">Once again, welcome… and thanks for using Polarion!</span> </span><br/>
+  </p>
+  <p id="polarion_client1">
+    <span style="color: #999999;"><span style="font-weight: bold;font-style: italic;font-size: 10pt;font-family: Arial, Helvetica, sans-serif;background-color: #FFFFFF;line-height: 1.5;">Polarion Extensions Portal</span><span style="font-weight: normal;font-style: italic;font-size: 10pt;font-family: Arial, Helvetica, sans-serif;background-color: #FFFFFF;line-height: 1.5;"> </span><br style="font-weight: normal;font-style: italic;color: #808080;"/>
+      <span style="font-weight: normal;font-style: italic;font-size: 10pt;font-family: Arial, Helvetica, sans-serif;background-color: #FFFFFF;line-height: 1.5;">Easily extend the out-of-box functionality of Polarion solutions. Custom-configured project templates, connectivity with popular tools and apps, information import/export… you&#39;ll find all of these and more on the</span></span><span style="font-weight: normal;font-style: italic;font-size: 10pt;font-family: Arial, Helvetica, sans-serif;color: #808080;background-color: #FFFFFF;line-height: 1.5;"> </span><span style="font-weight: bold;font-style: italic;text-decoration: none;font-size: 10pt;font-family: Arial, Helvetica, sans-serif;color: #336699;background-color: #FFFFFF;line-height: 1.5;"><a href="http://extensions.polarion.com/" target="_blank" class="wikilink">Polarion Extensions Portal</a></span><span style="font-weight: normal;font-style: italic;font-size: 10pt;font-family: Arial, Helvetica, sans-serif;color: #808080;background-color: #FFFFFF;line-height: 1.5;">. </span><br style="font-weight: normal;font-style: italic;color: #808080;"/>
+  </p>
+</div>
+<div class="polarion-rp-column" style="width: 30%;">
+  <h2 id="polarion_client18">Tutorials</h2>
+  <div id="polarion_client20" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;style&gt;
+	a.video-play {
+		background: url(&#39;/polarion/icons/default/topicIcons/Color_012-play.png&#39;) no-repeat left top;
+		display: block;
+		height:20px;
+		padding-left: 28px;
+		padding-top: 4px;
+    	font-size:14px
+	}
+&lt;/style&gt;
+&lt;a class=&quot;video-play&quot; target=&quot;_top&quot; href=&quot;https://www.polarion.com/tutorials/polarion-portal-introduction&quot;&gt;
+Polarion Portal Introduction
+&lt;/a&gt;
+&lt;br/&gt;
+&lt;a class=&quot;video-play&quot; target=&quot;_top&quot; href=&quot;https://www.polarion.com/tutorials/polarion-livedoc-documents&quot;&gt;
+Polarion Live Documents
+&lt;/a&gt;
+&lt;br/&gt;
+&lt;a class=&quot;video-play&quot; target=&quot;_top&quot; href=&quot;https://www.polarion.com/tutorials&quot;&gt;
+All Videos
+&lt;/a&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <h2 id="polarion_client21">Project Group Overview</h2>
+  <p id="polarion_client10">
+    <span style="color: #999999;">This overview provides some basic information about all projects in the repository, or about a selected Project Group (green folder).</span>
+  </p>
+  <p id="polarion_client9" style="margin-left: 0px;text-align: left;">
+    <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+      <span class="polarion-rp-widget-parameters">
+        <sub id="script">
+          <sub id="script" style="white-space:pre;">&lt;b&gt;Projects:&lt;/b&gt; $!projectService.getProjectGroupForPath($widgetContext.getDisplayedScope.path).getDeepContainedProjects.size project(s)</sub>
+        </sub>
+      </span>
+    </span>
+  </p>
+  <p id="polarion_client11" style="margin-left: 0px;text-align: left;">
+    <span class="polarion-rp-inline-widget" data-widget="com.polarion.scriptInline">
+      <span class="polarion-rp-widget-parameters">
+        <sub id="script">
+          <sub id="script" style="white-space:pre;">&lt;b&gt;Users: &lt;/b&gt; $transaction.users().search().size() users </sub>
+        </sub>
+      </span>
+    </span>
+  </p>
+  <p id="polarion_client13" style="margin-left: 40px;text-align: left;"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<span id="polarion-rp-parameters">
+  <sub id="currentScope" data-type="Scope" data-label="currentScope"></sub>
+</span>]]></field>
+    <field id="title">Home Repository Built-in</field>
+</rich-page>

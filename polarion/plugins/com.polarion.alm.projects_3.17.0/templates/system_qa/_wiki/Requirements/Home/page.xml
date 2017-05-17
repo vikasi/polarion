@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20121221143804</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+{section:width=100%}
+{column}
+1 Requirements
+The stakeholder needs identified in the Project Scope document (see link below) are reviewed, analyzed, and transformed into verifiable requirements that define what the system will do but not how the system will do it. Working closely with stakeholders, the requirements are elicited, analyzed, validated, documented, and baselined.
+
+The Requirements space provides several default Documents for specifications, and several default pages that report various metrics related to the requirements process.
+
+1.1.1 OBJECTIVE
+Develop a validated set of system requirements that meet the stakeholders’ needs 
+
+1.1.1  INPUT
+
+{document:Concept/Project Scope} - Project goals and objectives the proposed system(s) must meet 
+
+Add:
+* Applicable statutes, regulations, and policies 
+* Constraints (required legacy system interfaces, hardware/software platform, etc.) 
+
+1.1.1 OUTPUT
+
+* {document:System Requirements} 
+* {document:System Validation and Verification Plan} 
+* {document:System Test Specification}
+
+1.1.1 REVIEW
+* {portallink:/wiki/Reports/Items%20By%20Status | addcontext=yes}System Requirements by Status{portallink} - Basic statistics about System Requirements- 
+* {portallink:/wiki/Reports/Items%20By%20Category?wiTypes=systemRequirement | addcontext=yes} System Requirements by Category Report {portallink} - Check number of System Requirements by Category
+* {portallink:/wiki/Reports/Requirements%20Approval%20Statistics?reqtype=systemRequirement&version= | addcontext=yes} System Requirements Approval Statistics Report {portallink} - Check if the System Requirements are approved by all the stakeholders.
+* {portallink:/wiki/Reports/Requirements%20Test%20Coverage?reqtypes=systemRequirement&version= | addcontext=yes} System Requirements Test Coverage  Report{portallink} - Check if System Requirements are covered by test cases. 
+
+{if-page-exists:System Verification Test Statistics}
+1.1.1 VERIFY and ACCEPT
+* [Recent System Verification Test Results>System Verification Test Statistics] - Check recent results of System Verification Test Runs.
+* {portallink:/wiki/Reports/Test%20Runs%20Statistics?groupId=&passedTestResult=passed&testRunTemplates=System%20Verification%20Test&fromDate=2013-01-01&toDate=&verifiesLinkRoles=verifies | addcontext=yes} System Verification Test Statistics Report{portallink} - Check results and statistics of  System Verification Test Runs for some particular build and/or time range.
+* {portallink:/wiki/Reports/Frequent%20Test%20Case%20Failures?category=&testRunTemplate=System%20Verification%20Test&fromDate=2013-01-01&minFailures=3&toDate=&failedTestResult=failed | addcontext=yes} Frequent System Verification Test Case Failures Report{portallink} - Check what  System Verification Test Cases fail often.
+
+{if-page-exists}
+
+{column}
+{column:width=2px}
+{column}
+{column:width=450px}
+#importDocumentPanel()
+
+{regiontitle}Tasks and Activities{regiontitle}
+#getProcessTaskHeading("Requirements")
+{workitems:linkedWorkItems:${page.project}/$processTaskHeading.id|fields=id,title|sortby=outlineNumber}
+
+{regiontitle}Workflow{regiontitle}
+<img src="/polarion/module-attachment/${page.project}/_default/Process%20Description/diagram_20130124-1655.39751.png"/>
+
+{column}
+{section}]]></content>
+</wiki-page>

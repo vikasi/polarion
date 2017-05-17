@@ -1,0 +1,509 @@
+<portlet-app version="1.0"
+	id="com.polarion.xray.web.tracker" 
+  xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+
+  <portlet>
+     <description xml:lang="EN"></description>
+    <portlet-name>IFramePortlet</portlet-name>
+    <display-name xml:lang="EN">IFrame Portlet</display-name>
+   <portlet-class>com.polarion.portal.server.portlet.IFramePortlet</portlet-class>
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>view</portlet-mode>
+      <portlet-mode>edit</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>IFrame Portlet</title>
+      <short-title>IFrame Portlet</short-title>
+      <keywords>IFrame Portlet</keywords>
+    </portlet-info>
+    <init-param>
+      <name>view-jsp</name>
+      <value>/WEB-INF/iframe-portlet/IFramePortlet.jsp</value>
+     </init-param>    
+    <init-param>
+      <name>edit-jsp</name>
+      <value>/WEB-INF/iframe-portlet/IFramePortlet-Edit.jsp</value>
+     </init-param>    
+     </portlet>
+
+   <portlet> 
+   <description xml:lang="EN"></description>
+    <portlet-name>metric</portlet-name>
+    <display-name xml:lang="EN">metric</display-name>
+    <portlet-class>com.polarion.portal.server.portlet.JSServerPortlet</portlet-class>
+    <expiration-cache>360000</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>view</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>metric</title>
+      <short-title>Metric</short-title>
+      <keywords>Metric</keywords>
+    </portlet-info>
+    <init-param>
+      <name>jsClientClassName</name>
+      <value>com.polarion.alm.reports.web.js.portlet.ReportPortlet</value>
+    </init-param>
+  </portlet>
+
+   <portlet> 
+   <description xml:lang="EN"></description>
+    <portlet-name>trendchart</portlet-name>
+    <display-name xml:lang="EN">trendchart</display-name>
+    <portlet-class>com.polarion.portal.server.portlet.JSServerPortlet</portlet-class>
+    <expiration-cache>360000</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>view</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>trendchart</title>
+      <short-title>trendchart</short-title>
+      <keywords>trendchart</keywords>
+    </portlet-info>
+    <init-param>
+      <name>jsClientClassName</name>
+      <value>com.polarion.alm.reports.web.js.portlet.TrendPortlet</value>
+    </init-param>
+  </portlet>
+
+   <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=project-overview</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/project-overview/project-overview-view.vm</value>
+    </init-param>
+    <portlet-name>ProjectOverview</portlet-name>
+    <display-name>Project Overview</display-name>
+    <description>Project Overview</description>
+    <portlet-class>com.polarion.alm.tracker.web.internal.server.portlets.ProjectOverviewPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Project Overview</title>
+      <short-title>Project Overview</short-title>
+      <keywords>Project Overview</keywords>
+    </portlet-info>
+  </portlet>
+  
+    <portlet>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/project-overview/project-dashboard-view.vm</value>
+    </init-param>
+    <portlet-name>ProjectDashboard</portlet-name>
+    <display-name>ProjectDashboard</display-name>
+    <description>ProjectDashboard</description>
+    <portlet-class>com.polarion.alm.tracker.web.internal.server.portlets.ProjectDashboardPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Project Dashboard</title>
+      <short-title>Project Dashboard</short-title>
+      <keywords>Project Dashboard</keywords>
+    </portlet-info>
+  </portlet>
+
+   <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=project-group-overview</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/project-group-overview/project-group-overview-view.vm</value>
+    </init-param>
+    <portlet-name>ProjectGroupOverview</portlet-name>
+    <display-name>Project Group Overview</display-name>
+    <description>Project Group Overview</description>
+    <portlet-class>com.polarion.alm.tracker.web.internal.server.portlets.ProjectGroupOverviewPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Project Group Overview</title>
+      <short-title>Project Group Overview</short-title>
+      <keywords>Project Group Overview</keywords>
+    </portlet-info>
+  </portlet>
+
+     <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=file-conf</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/administration/file-conf/file-conf-view.vm</value>
+    </init-param>
+    <portlet-name>FileConfigurationPortlet</portlet-name>
+    <display-name>FileConfigurationPortlet</display-name>
+    <description>FileConfigurationPortlet</description>
+    <portlet-class>com.polarion.alm.administration.web.internal.server.portlets.FileConfigurationPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>FileConfigurationPortlet</title>
+      <short-title>FileConfigurationPortlet</short-title>
+      <keywords>FileConfigurationPortlet</keywords>
+    </portlet-info>
+  </portlet>
+
+
+     <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=file-conf</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/administration/file-conf/file-conf-view.vm</value>
+    </init-param>
+    <portlet-name>BuildArtifactsConfigurationPortlet</portlet-name>
+    <display-name>BuildArtifactsConfigurationPortlet</display-name>
+    <description>BuildArtifactsConfigurationPortlet</description>
+    <portlet-class>com.polarion.alm.administration.web.internal.server.portlets.BuildArtifactsConfigurationPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>BuildArtifactsConfigurationPortlet</title>
+      <short-title>BuildArtifactsConfigurationPortlet</short-title>
+      <keywords>BuildArtifactsConfigurationPortlet</keywords>
+    </portlet-info>
+  </portlet>
+
+  <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=typed-file-conf</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/administration/file-conf/wi-typed-file-conf-view.vm</value>
+    </init-param>
+    <portlet-name>CalculatedFieldsConfigurationPortlet</portlet-name>
+    <display-name>CalculatedFieldsConfigurationPortlet</display-name>
+    <description>CalculatedFieldsConfigurationPortlet</description>
+    <portlet-class>com.polarion.alm.administration.web.internal.server.portlets.CalculatedFieldsConfigurationPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>CalculatedFieldsConfigurationPortlet</title>
+      <short-title>CalculatedFieldsConfigurationPortlet</short-title>
+      <keywords>CalculatedFieldsConfigurationPortlet</keywords>
+    </portlet-info>
+  </portlet>
+
+     <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=file-conf</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/administration/file-conf/scheduler-conf-view.vm</value>
+    </init-param>
+    <portlet-name>SchedulerConfigurationPortlet</portlet-name>
+    <display-name>SchedulerConfigurationPortlet</display-name>
+    <description>SchedulerConfigurationPortlet</description>
+    <portlet-class>com.polarion.alm.administration.web.internal.server.portlets.SchedulerConfigurationPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>SchedulerConfigurationPortlet</title>
+      <short-title>SchedulerConfigurationPortlet</short-title>
+      <keywords>SchedulerConfigurationPortlet</keywords>
+    </portlet-info>
+  </portlet>
+
+
+     <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=ldap-conf</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/administration/file-conf/ldap-conf-view.vm</value>
+    </init-param>
+    <portlet-name>LDAPConfigurationPortlet</portlet-name>
+    <display-name>LDAPConfigurationPortlet</display-name>
+    <description>LDAPConfigurationPortlet</description>
+    <portlet-class>com.polarion.alm.administration.web.internal.server.portlets.LDAPConfigurationPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>LDAPConfigurationPortlet</title>
+      <short-title>LDAPConfigurationPortlet</short-title>
+      <keywords>LDAPConfigurationPortlet</keywords>
+    </portlet-info>
+  </portlet>
+
+     <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=typed-file-conf</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/administration/file-conf/wi-typed-file-conf-view.vm</value>
+    </init-param>
+    <portlet-name>TypeFileConfigurationPortlet</portlet-name>
+    <display-name>TypeFileConfigurationPortlet</display-name>
+    <description>TypeFileConfigurationPortlet</description>
+    <portlet-class>com.polarion.alm.administration.web.internal.server.portlets.TypeFileConfigurationPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>TypeFileConfigurationPortlet</title>
+      <short-title>TypeFileConfigurationPortlet</short-title>
+      <keywords>TypeFileConfigurationPortlet</keywords>
+    </portlet-info>
+  </portlet>
+
+   <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=build-overview</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/build-overview/build-overview-view.vm</value>
+    </init-param>
+    <portlet-name>BuildOverview</portlet-name>
+    <display-name>BuildOverview</display-name>
+    <description>BuildOverview</description>
+    <portlet-class>com.polarion.alm.builder.web.internal.server.portlets.BuildOverviewPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Builds</title>
+      <short-title>Builds</short-title>
+      <keywords>Builds</keywords>
+    </portlet-info>
+  </portlet>
+
+   <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=factsfigures-overview</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/facts-figures/facts-figures-view.vm</value>
+    </init-param>
+    <init-param>
+      <name>jsClientClassName</name>
+      <value>com.polarion.alm.reports.web.js.portlet.FactsFiguresPortlet</value>
+    </init-param>
+    <portlet-name>factsfigures</portlet-name>
+    <display-name>FactFigures</display-name>
+    <description>FactFigures</description>
+    <portlet-class>com.polarion.portal.server.portlet.JSServerPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>FactFigures</title>
+      <short-title>FactFigures</short-title>
+      <keywords>FactFigures</keywords>
+    </portlet-info>
+  </portlet>
+
+
+   <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=announcements</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/announcements/announcements.vm</value>
+    </init-param>
+    <init-param>
+      <name>AddPage</name>
+      <value>/WEB-INF/announcements/announcements-add.vm</value>
+    </init-param>
+    <init-param>
+      <name>MaxPage</name>
+      <value>/WEB-INF/announcements/announcements-details.vm</value>
+    </init-param>
+    <portlet-name>announcements</portlet-name>
+    <display-name>Announcements</display-name>
+    <description>Announcements</description>
+    <portlet-class>com.polarion.alm.portal.web.announcements.internal.server.portlets.AnnouncementsPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Announcements</title>
+      <short-title>Announcements</short-title>
+      <keywords>Announcements</keywords>
+    </portlet-info>
+  </portlet>
+
+  <portlet>
+    <init-param>
+      <name>HelpPage</name>
+      <value>/polarion/help/inplace?portlet=IndexConfigurationPortlet</value>
+    </init-param>
+    <init-param>
+      <name>ViewPage</name>
+      <value>/WEB-INF/administration/index-admin-view.vm</value>
+    </init-param>
+    <portlet-name>IndexConfigurationPortlet</portlet-name>
+    <display-name>IndexConfigurationPortlet</display-name>
+    <description>IndexConfigurationPortlet</description>
+    <portlet-class>com.polarion.alm.administration.web.internal.server.portlets.IndexConfigurationPortlet</portlet-class>
+    <expiration-cache>15</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>IndexConfigurationPortlet</title>
+      <short-title>IndexConfigurationPortlet</short-title>
+      <keywords>IndexConfigurationPortlet</keywords>
+    </portlet-info>
+  </portlet>
+
+  <portlet> 
+   <description xml:lang="EN"></description>
+    <portlet-name>liveplan</portlet-name>
+    <display-name xml:lang="EN">liveplan</display-name>
+    <portlet-class>com.polarion.portal.server.portlet.JSServerPortlet</portlet-class>
+    <expiration-cache>360000</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>view</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>liveplan</title>
+      <short-title>Live Plan</short-title>
+      <keywords>Live Plan</keywords>
+    </portlet-info>
+    <init-param>
+      <name>jsClientClassName</name>
+      <value>com.polarion.alm.tracker.web.js.internal.liveplan.LivePlanPortlet</value>
+    </init-param>
+  </portlet>
+
+  <portlet> 
+   <description xml:lang="EN"></description>
+    <portlet-name>wi-overview</portlet-name>
+    <display-name xml:lang="EN">Work Items Overview</display-name>
+    <description>Work Items Overview</description>
+    <portlet-class>com.polarion.portal.server.portlet.JSServerPortlet</portlet-class>
+    <expiration-cache>360000</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>view</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Work Items</title>
+      <short-title>Work Items</short-title>
+      <keywords>Work Items</keywords>
+    </portlet-info>
+    <init-param>
+      <name>jsClientClassName</name>
+      <value>com.polarion.alm.tracker.web.js.internal.TrackerOverviewPortlet</value>
+    </init-param>
+  </portlet>
+
+  <portlet> 
+   <description xml:lang="EN"></description>
+    <portlet-name>repo-overview</portlet-name>
+    <display-name xml:lang="EN">Repository Overview</display-name>
+    <description>Repository Overview</description>
+    <portlet-class>com.polarion.portal.server.portlet.JSServerPortlet</portlet-class>
+    <expiration-cache>360000</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>view</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Repository</title>
+      <short-title>Repository</short-title>
+      <keywords>Repository</keywords>
+    </portlet-info>
+    <init-param>
+      <name>jsClientClassName</name>
+      <value>com.polarion.alm.tracker.web.js.internal.RepositoryOverviewPortlet</value>
+    </init-param>
+  </portlet>
+
+  
+</portlet-app>

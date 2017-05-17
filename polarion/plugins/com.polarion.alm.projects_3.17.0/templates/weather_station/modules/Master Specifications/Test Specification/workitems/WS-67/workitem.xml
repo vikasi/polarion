@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">mTest</field>
+    <field id="categories">
+        <list>
+            <item>sensors</item>
+        </list>
+    </field>
+    <field id="created">2015-03-25 10:32:18.363 +0100</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="role">verifies</item>
+                <item id="workItem">WS-52</item>
+            </struct>
+        </list>
+    </field>
+    <field id="previousStatus">draft</field>
+    <field id="priority">50.0</field>
+    <field id="pvRestriction" type="text/x-pvscl">WS-8</field>
+    <field id="severity">basic</field>
+    <field id="status">active</field>
+    <field id="testSteps" type="struct:TestSteps">
+        <struct>
+            <item id="keys">
+                <list>
+                    <item>step</item>
+                    <item>description</item>
+                    <item>expectedResult</item>
+                </list>
+            </item>
+            <item id="steps">
+                <list>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Place system in pressure chamber set to higher  pressure limit.&lt;/span&gt;</item>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Wait until pressure reading equals set value.&lt;/span&gt;</item>
+                                <item text-type="text/html"/>
+                            </list>
+                        </item>
+                    </struct>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Get readout of pressure from system.&lt;/span&gt;</item>
+                                <item text-type="text/html"/>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Measured pressure is within 1% of set pressure.&lt;/span&gt;</item>
+                            </list>
+                        </item>
+                    </struct>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Place system in pressure chamber set to higher  pressure limit.&lt;/span&gt;</item>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Wait until pressure reading equals set value.&lt;/span&gt;</item>
+                                <item text-type="text/html"/>
+                            </list>
+                        </item>
+                    </struct>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Get readout of pressure from system.&lt;/span&gt;</item>
+                                <item text-type="text/html"/>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Measured pressure is within 1% of set pressure.&lt;/span&gt;</item>
+                            </list>
+                        </item>
+                    </struct>
+                </list>
+            </item>
+        </struct>
+    </field>
+    <field id="testType" type="enum:testtype">manual</field>
+    <field id="title">Test Pressure Measurement Accuracy On Both Ends of Pressure Range</field>
+    <field id="type">testcase</field>
+</work-item>

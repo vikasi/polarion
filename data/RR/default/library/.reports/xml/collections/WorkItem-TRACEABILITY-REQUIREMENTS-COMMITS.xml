@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<collection id="TRACEABILITY-REQUIREMENTS-COMMITS" prototype="WorkItem">
+    <data>
+        <value type="items-traceability">
+                <itemsQuery>HAS_VALUE:resolution</itemsQuery>
+                <links>
+                    <link backLink="true" id=".*"/>
+                    <link backLink="false" id=".*"/>
+                </links> 
+                <coverageQuery>has-linked-revisions</coverageQuery>
+            </value>
+    </data>
+</collection>

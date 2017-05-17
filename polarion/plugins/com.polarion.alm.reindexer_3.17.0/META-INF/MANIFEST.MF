@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.alm.reindexer
+Export-Package: com.polarion.alm.reindexer,com.polarion.alm.reindexer.
+ internal;x-friends:="com.polarion.cluster.tests"
+Bundle-Name: ALM Reindexer Plug-in
+Bundle-Version: 3.17.0
+Bundle-ClassPath: uberindexer.jar
+Require-Bundle: com.polarion.platform.jobs,com.polarion.alm.tracker,co
+ m.polarion.cluster;bundle-version="3.7.3"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion Software
+
+

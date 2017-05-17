@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-action="markActive" initial-status="active" prototype="WorkItem">
+    <transitions>
+        <transition action="markObsolete" from="active" to="obsolete"/>
+        <transition action="markActive" from="obsolete" to="active"/>
+    </transitions>
+    <actions>
+        <action id="markActive" name="Mark Active">
+            <cleared>
+                <field name="resolution"/>
+            </cleared>
+        </action>
+        <action id="markObsolete" name="Mark Obsolete">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+    </actions>
+</workflow>

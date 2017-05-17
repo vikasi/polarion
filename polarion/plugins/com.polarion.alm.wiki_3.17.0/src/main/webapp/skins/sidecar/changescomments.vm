@@ -1,0 +1,81 @@
+<table width=100%>
+<tr>
+<td colspan="6">
+
+
+         <table bgcolor="#C0DAEA" style="width: 100%; height: 20px; border: 2px solid #74A7E1;">
+         <tr>
+         <td class="normalTD">&nbsp;<b>Comments:</b></td>
+         </tr>
+         </table>
+</td>
+</tr>
+
+<tr>
+<td colspan=3 style="border-right: 1px solid #C0DAEA;" width=500>
+
+
+         <div style="width: 100%; height: 100%; border: 0px solid red; overflow-y: auto; overflow-x: auto;" onscroll="scrollCL();" id="viewcommL">
+         #if($xwiki.getWebPreferenceAsInt("commentsorder",1)==1)
+         #set($comments = $origdoc.getComments())
+         #else
+         #set($comments = $origdoc.getComments(false))
+         #end
+         <table style="width: 100%; border: 0px solid #C0DAEA;">
+
+         #set ($n = 1)
+         #foreach($comment in $comments)
+         <tr>
+         <td style="width: 16px;!important;font-family: Arial;font-size:11px;background: #E9F3FA;padding-left: 2px;padding-right: 2px;border-bottom: 1px solid #C0DAEA;border-right: 1px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=16 height=1></td>
+         <td style="width: 16px;!important;font-family: Arial;font-size:11px;background: #E9F3FA;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom: 1px solid #C0DAEA;border-right: 1px solid #C0DAEA; color: #0000BB;">$n</td>
+         <td style="border-bottom: 1px solid #C0DAEA; width: 100%;">
+         <div class="commentheader">Comment added by <span class="commentauthor">$!xwiki.getLocalUserName($origdoc.display('author','view',$comment))</span>#set($date = $origdoc.display("date","view",$comment))
+         #if($date != "") &ndash; <span class="commentdate">$date</span>#end
+         </div>
+         $origdoc.getRenderedContent($origdoc.display("comment","view",$comment))
+         </td>
+         </tr>
+         #set ($n = $n + 1)
+         #end
+         </table>
+         </div>
+</td>
+<td colspan=3>
+
+
+         <div style="width: 100%; height: 100%; border: 0px solid red; overflow-y: auto; overflow-x: auto;" onscroll="scrollCR();" id="viewcommR">
+         #if($xwiki.getWebPreferenceAsInt("commentsorder",1)==1)
+         #set($comments = $newdoc.getComments())
+         #else
+         #set($comments = $newdoc.getComments(false))
+         #end
+         <table style="width: 100%; border: 0px solid #C0DAEA;">
+         #set ($n = 1)
+         #foreach($comment in $comments)
+         <tr>
+         <td style="width: 16px;!important;font-family: Arial;font-size:11px;background: #E9F3FA;padding-left: 2px;padding-right: 2px;border-bottom: 1px solid #C0DAEA;border-right: 1px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=16 height=1></td>
+         <td style="width: 16px;!important;font-family: Arial;font-size:11px;background: #E9F3FA;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom: 1px solid #C0DAEA;border-right: 1px solid #C0DAEA; color: #0000BB;">$n</td>
+         <td style="border-bottom: 1px solid #C0DAEA; width: 100%; font-size: 11px; font-family: Verdana;">
+         <div class="commentheader">Comment added by <span class="commentauthor">$!xwiki.getLocalUserName($newdoc.display('author','view',$comment))</span>#set($date = $newdoc.display("date","view",$comment))
+         #if($date != "") &ndash; <span class="commentdate">$date</span>#end
+         </div>
+         $newdoc.getRenderedContent($newdoc.display("comment","view",$comment))
+         </td>
+         </tr>
+         #set ($n = $n + 1)
+         #end
+         </table>
+         </div>
+</td>
+</tr>
+
+<tr>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=5 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=5 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=190 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=5 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=5 height=1></td>
+<td style="border-top: 0px solid #C0DAEA;"><IMG src="$xwiki.getSkinFile("spacer.gif")" width=190 height=1></td>
+</tr>
+
+</table>

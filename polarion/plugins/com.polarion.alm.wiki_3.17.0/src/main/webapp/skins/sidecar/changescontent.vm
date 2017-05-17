@@ -1,0 +1,317 @@
+<script type="text/javascript">
+
+function changeCompareView(url)
+{
+  document.getElementById('type_html').className =  "disab";
+  document.getElementById('type_wiki').className =  "disab";
+  document.getElementById('type_attach').className = "disab";
+  document.getElementById('history_back');
+  var x = document.getElementById('type_witems');
+  if(x != null){
+  	document.getElementById('type_witems').className = "disab";
+  }	
+  document.location.href= url;
+}
+
+</script>
+
+##
+## Changes header
+##
+<table width=100% border=0>
+  <tr>
+    <td class="header-th1">&nbsp;</td>
+    <td class="header-th1">
+      <table>
+        <tr>
+          <td class="normalTD">
+            <b>$localization.getValue("wiki.history.label.revision")$localization.getValue("definition.colon")</b> $rev1
+          </td>
+          <td width=10>&nbsp;</td>
+          <td class="normalTD">
+            <b>$localization.getValue("wiki.history.label.updated")$localization.getValue("definition.colon")</b> #if ( $origdoc.isDocInfo() )$xwiki.formatDate($origdoc.date, "yyyy-MM-dd HH:mm")#else<b style="font-weight: normal; font-style: italic;">$localization.getValue("wiki.history.label.unknown")</b>#end
+          </td>
+          <td width=10>&nbsp;</td>
+          <td class="normalTD">
+           <b>$localization.getValue("wiki.history.label.author")$localization.getValue("definition.colon")</b> #if($xwiki.getLocalUserName($origdoc.author)=="Unknown")<b style="font-weight: normal; font-style: italic;">$xwiki.getLocalUserName($origdoc.author)</b>#else$xwiki.getLocalUserName($origdoc.author)#end
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="header-th1">&nbsp;</td>
+    <td class="header-th1">
+     <table>
+       <tr>
+         <td class="normalTD">
+           <b>$localization.getValue("wiki.history.label.revision")$localization.getValue("definition.colon")</b> $rev2
+          </td>
+          <td width=10>&nbsp;</td>
+          <td class="normalTD">
+           <b>$localization.getValue("wiki.history.label.updated")$localization.getValue("definition.colon")</b> #if ( $newdoc.isDocInfo() )$xwiki.formatDate($newdoc.date, "yyyy-MM-dd HH:mm")#else<b style="font-weight: normal; font-style: italic;">$localization.getValue("wiki.history.label.unknown")</b>#end
+          </td>
+          <td width=10>&nbsp;</td>
+          <td class="normalTD">
+           <b>$localization.getValue("wiki.history.label.author")$localization.getValue("definition.colon")</b> #if($xwiki.getLocalUserName($newdoc.author)=="Unknown")<b style="font-weight: normal; font-style: italic;">$xwiki.getLocalUserName($newdoc.author)</b>#else$xwiki.getLocalUserName($newdoc.author)#end
+          </td>
+       </tr>
+     </table>
+    </td>
+  </tr>
+</table>
+
+#if($type != 'workitems')
+<div id="compare_content_view" style="display: $content">
+  <table width=100%>
+   <tr>
+     <td style="height: 30px;background: #f5f5f5; vertical-align: middle; border-bottom: 1px solid #D5D6DA; border-top: 1px solid #fff;">
+
+      #set ($num_add=0)
+      #set ($num_chg=0)
+      #set ($num_rem=0)
+
+      #foreach($line in $compare)
+
+      #set ( $lineL = $line.get(0))
+      #set ( $lineR = $line.get(1))
+
+      #set ($a = $lineL.getChangeType() )
+      #set ($b = $lineR.getChangeType() )
+
+      #if($a ==1 )
+      #set ($num_add = $num_add + 1)
+      #elseif ( $a ==3 )
+      #set ($num_chg = $num_chg + 1)
+      #elseif ( $a ==2 )
+      #set ($num_rem = $num_rem + 1)
+      #end
+
+      #if($b ==1 )
+      #set ($num_add = $num_add + 1)
+      ##elseif ( $b ==3 )
+      ##set ($num_chg = $num_chg + 1)
+      #elseif ( $b ==2 )
+      #set ($num_rem = $num_rem + 1)
+      #end
+
+      #end
+
+      <table border=0 align="left">
+      <tr>
+      <td style="padding-left: 18px;width:10px;"><img style="margin:0;padding:0;border:0;" src="$xwiki.getSkinFile("images/added_ico.gif")" border="0" width="16px"/></td>
+      
+      <td style="padding: 0 10px 0 5px;" class="normalTD"><b>$localization.getValue("wiki.history.label.added")$localization.getValue("definition.colon")</b> $num_add</td>
+      <td style="width:10px;"><img style="margin:0;padding:0;border:0;" src="$xwiki.getSkinFile("images/changed_ico.gif")" border="0" width="16px"/></td>
+      <td style="padding: 0 10px 0 5px;" class="normalTD"><b>$localization.getValue("wiki.history.label.changed")$localization.getValue("definition.colon")</b> $num_chg</td>
+    
+      <td style="width:10px;"><img style="margin:0;padding:0;border:0;" src="$xwiki.getSkinFile("images/removed_ico.gif")" border="0" width="16px"/></td>
+      
+      <td style="padding: 0 10px 0 5px;" class="normalTD"><b>$localization.getValue("wiki.history.label.deleted")$localization.getValue("definition.colon")</b> $num_rem</td>
+
+      #if ( !$origdoc.getType().equalsIgnoreCase($newdoc.getType()) )
+      
+      <td style="width:10px;"><img style="margin:0;padding:0;border:0;" src="/polarion/ria/images/topicIconsSmall/wiki1.png" border="0" width="16px"/></td>
+      
+      <td style="padding: 0 10px 0 5px;" class="normalTD"><b>Page&nbsp;type:</b> #pagetype($origdoc.getType()) <img alt="" src="/polarion/ria/images/changedTo.png" style="vertical-align:middle;margin-left:3px;margin-right:3px;"> #pagetype($newdoc.getType())</td>
+      #end
+      </tr>
+      </table>
+
+      </td>
+      <td style="height: 30px;background: #f5f5f5; vertical-align: middle; border-bottom: 1px solid #D5D6DA; border-top: 1px solid #fff;">
+
+      <table border=0 align="right">
+      <tr>
+      
+      <td width="60px" onclick="prevChangeLine()" style="vertical-align:middle; cursor: pointer;">#xwikitopmenuentrystartimageButton("#" $localization.getValue("wiki.history.button.previous"))</td>
+      <td width="60px" onclick="nextChangeLine()" style="vertical-align:middle; cursor: pointer;">#xwikitopmenuentrystartimageButton("#" $localization.getValue("wiki.history.button.next"))</td>
+      </tr>
+      </table>
+    </td>
+   </tr>
+ </table>
+ ##
+ ## Comapre revisions
+ ##
+ <table width=99%>
+  <tr>
+   <td>
+     <div id="viewcontentL" style="position: absolute; width: 300px; height: 400px; overflow-y: auto; overflow-x: auto;" onscroll="scrollL();">
+             <table #if ( $origdoc.getAuthor() == "" && $origContent.trim() == "")align="center"#end>
+      	       #if ( $origdoc.getAuthor() == "" && $origContent.trim() == "")
+                  <tr><td><b style="color: red;">$msg.get("pagemissinrev")</b></td></tr>
+               #else
+					
+					#set ($i = 0)
+                    #foreach($line in $compare)
+                      #set ( $lineL = $line.get(0))
+                      #set ( $lineR = $line.get(1))
+                      #set ($isLineChangedL = ( $lineL.getChangeType() == 3 || $lineL.getChangeType() == 1 || $lineL.getChangeType() == 2)  )
+                      #set ($isLineChangedR = ( $lineR.getChangeType() == 1 || $lineR.getChangeType() == 2)  )
+					  
+                      <tr  valign="middle">
+                      <td class="row-number"><img style="margin:0;padding:0;border:0;" src="$xwiki.getSkinFile($lineL.getImage())" border="0" width="16px"/></td>
+                      <td class="row-number">#if($isLineChangedL && ($lineL.getChangeType() != 0) && !$isLineChangedR )<a id="ch_lnL_$i" name="ch_lnL_$i" />#end $lineL.getNumber()</td>
+                      <td nowrap="true" align="left" style="width:100%; height:15px;!important;font-family:Arial;font-size:11px;background:$lineL.getBackground();padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom: 1px solid white;border-right: 0px solid #C0DAEA;;">#if($type !="html")$xwiki.prepareTextForCompare("$lineL.getLine()")#else$xwiki.prepareTextForCompareHtml("$lineL.getLine()")#end</td>
+                      </tr>
+                      
+                      #if ($isLineChangedL || $isLineChangedR)
+                     	#set ($i = $i + 1)
+                      #end
+                     
+                    #end
+               #end
+             </table>
+     </div>
+     </td>
+     <td>
+     ##			
+     ##Split panel
+     ##
+     <div id="panelResize" style="position: absolute; display: block; top: 0; left:301px; width: 0px; height:100%; z-index:9;">
+       
+     </div>
+     </td>
+     <td>
+     <div id="viewcontentR" style="position: absolute; width: 300px; height: 400px; overflow-y: auto; overflow-x: auto;" onscroll="scrollR();">
+            
+  	     <table  #if ( $newdoc.getAuthor() == "" && $newContent.trim() == "")align="center"#end>		
+  	       #if ( $newdoc.getAuthor() == "" && $newContent.trim() == "")
+  	          <tr><td><b style="color: red;">$msg.get("pagemissinrev")</b></td></tr>
+  	       #else
+				   #set ($i = 0)
+                   #foreach($line in $compare)
+
+                     #set ( $lineL = $line.get(0))
+                     #set ( $lineR = $line.get(1))
+                     #set ($isLineChangedR = ( $lineR.getChangeType() == 3 || $lineR.getChangeType() == 1 || $lineR.getChangeType() == 2)  )
+                     #set ($isLineChangedL = ( $lineL.getChangeType() == 1 || $lineL.getChangeType() == 2)  )
+
+                     <td class="row-number"><img style="margin:0;padding:0;border:0;" src="$xwiki.getSkinFile($lineR.getImage())" border="0" width="16px"/></td>
+                     <td class="row-number">#if($isLineChangedR && ($lineR.getChangeType() != 0) && !$isLineChangedL )<a id="ch_lnR_$i" name="ch_lnR_$i" />#end $lineR.getNumber()</td>
+                     <td nowrap="true" align="left" style="width:100%;height:15px;!important;font-family:Arial;font-size:11px;background:$lineR.getBackground();padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom: 1px solid white;border-right: 1px solid white;">#if($type !="html")$xwiki.prepareTextForCompare("$lineR.getLine()")#else$xwiki.prepareTextForCompareHtml("$lineR.getLine()")#end</td>
+                     </tr>
+                     #if ($isLineChangedR || $isLineChangedL )
+                     	#set ($i = $i + 1)
+                     #end
+                   #end
+                   <script type="text/javascript">
+                   		setLastChLnNum($i - 1);
+                   </script>
+               #end
+             </table>
+     </div>
+   </td>
+  </tr>
+ </table>
+            <script>
+                //set initial width of the main panel
+                var widthCmp = Math.round((getClientWidth() - 2)  / 2);
+                $('panelResize').style.left = widthCmp + "px";  
+                
+                new Draggable('panelResize',{constraint:'horizontal',
+                onStart:function(){},
+                onEnd:function(){  
+                //this hide scrollbar appearense and wrong getBrowserWidth() when panel moved to right
+                $('viewcontentR').style.width = "0px";
+				calcCompareWidth();
+                }}); 
+            </script>	
+</div>
+#else
+	$xwiki.getModulesWorkitemsHistory($origdoc,$newdoc)
+#end
+
+##
+## Compare attachments
+##
+<div id="compare_attachments_view" style="display: $attachments">
+ <table width=100% class="xwikidatatable">
+   <tr>
+    <td style="height: 34px; padding-left: 18px; background: #f5f5f5; vertical-align: middle; border-bottom: 1px solid #D5D6DA; border-top: 1px solid #fff;">
+      <b class="normalTD">$localization.getValue("wiki.history.label.attachments")$localization.getValue("definition.colon")</b>
+    </td>
+   </tr>
+
+   <tr>
+    <td style="padding:0px;">
+     ##
+     ## Attachmets left panel
+     ##
+     <div id="viewattachL"  style="position: absolute; width: 300px; height: 500px; overflow-y: auto; overflow-x: auto; left: 0;" onscroll="scrollAL();">
+         #set($attachments = $origdoc.attachmentList)
+         <table style="width: 100%;">
+           <tr>
+             <td class="th1" width=10></td>
+             <td class="th1" nowrap width=80>$localization.getValue("wiki.history.field.title")</td>
+             <td class="th1" nowrap>$localization.getValue("wiki.history.field.fileName")</td>
+             <td class="th1" nowrap width=100>$localization.getValue("wiki.history.field.size")</td>          
+             <td class="th1" nowrap width=150>$localization.getValue("wiki.history.field.author")</td>
+             <td class="th1" nowrap width=100>$localization.getValue("wiki.history.field.lastModified")</td>          
+           </tr>
+
+         #set ($n = 1)
+         #foreach ($attach in $attachments)
+           <tr>
+             <td class="row-number">$n</td>
+             <td nowrap class="attachTD">$attach.getTitle().toLowerCase()</td>
+             <td nowrap class="attachTD">#packName($attach.filename)</td>
+             <td nowrap class="attachTD">$attach.filesize B</td>
+             <td nowrap class="attachTD">$xwiki.getLocalUserName($attach.author)</td>
+             <td nowrap class="attachTD">$!xwiki.formatDate($attach.date, "yyyy-MM-dd HH:mm")</td>
+           </tr>
+           #set ($n = $n + 1)
+         #end
+         </table>
+     </div>
+     ##			
+     ##Split panel
+     ##
+     <div id="panelResizeAtt" style="position: absolute; display: block; top: 0px; left:301px; width: 1px; height:100%; z-index:9;">
+      
+     </div>
+     ##
+     ## Attachmets right panel
+     ##
+     <div id="viewattachR" style="position: absolute; width: 300px; height: 500px; overflow-y: auto; overflow-x: auto;" onscroll="scrollAR();" >
+         #set($attachments = $newdoc.attachmentList)
+         <table style="width: 100%; border: 0px solid #C0DAEA;">
+           <tr>
+                <td class="th1" nowrap width=10></td>
+                <td class="th1" nowrap width=80>$localization.getValue("wiki.history.field.title")</td>
+                <td class="th1" nowrap>$localization.getValue("wiki.history.field.fileName")</td>
+                <td class="th1" nowrap width=100>$localization.getValue("wiki.history.field.size")</td>          
+                <td class="th1" nowrap width=150>$localization.getValue("wiki.history.field.author")</td>
+                <td class="th1" nowrap width=100>$localization.getValue("wiki.history.field.lastModified")</td>          
+           </tr>
+           #set ($n = 1)
+           #foreach ($attach in $attachments)
+           <tr>
+              <td class="row-number">$n</td>
+              <td nowrap class="attachTD">$attach.getTitle().toLowerCase()</td>
+              <td nowrap class="attachTD">#packName($attach.filename)</td>
+              <td nowrap class="attachTD">$attach.filesize B</td>
+              <td nowrap class="attachTD">$xwiki.getLocalUserName($attach.author)</td>
+              <td nowrap class="attachTD">$!xwiki.formatDate($attach.date, "yyyy-MM-dd HH:mm")</td>
+            </tr>
+            #set ($n = $n + 1)
+            #end
+          </table>
+     </div>
+    </td>
+   </tr>
+</table>
+            <script>
+                //set initial width of the main panel
+                var widthCmp1 = Math.round((getClientWidth() - 3)  / 2);
+                $('panelResizeAtt').style.left = widthCmp1 + "px";  
+                
+                new Draggable('panelResizeAtt',{constraint:'horizontal',
+                onStart:function(){},
+                onEnd:function(){  
+                //this hide scrollbar appearense and wrong getBrowserWidth() when panel moved to right
+                $('viewattachR').style.width = "0px";
+		calcCompareWidth();
+//alert($('viewattachR').style.left);
+                }}); 
+            </script>	
+</div>

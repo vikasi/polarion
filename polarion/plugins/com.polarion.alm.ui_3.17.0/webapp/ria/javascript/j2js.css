@@ -1,0 +1,24 @@
+html{
+	height:100%;
+	overflow:hidden;
+}
+DIV{
+    scrollbar-arrow-color: black;
+    scrollbar-3dlight-color: #D3E7F5;
+    scrollbar-darkshadow-color: #D3E7F5;
+    scrollbar-base-color:#C0DAEA;
+    scrollbar-track-color:#D3E7F5;
+    scrollbar-face-color:#C0DAEA;
+    scrollbar-highlight-color:#3D6686;
+    scrollbar-shadow-color: #3D6686;
+}
+P{
+	margin:0px;
+}
+A:link { text-decoration:none; color:black;}
+A:visited { text-decoration:none; color:black;}
+A:hover { text-decoration:underline; color:black;}
+
+A.descriptionLink:link { text-decoration:underline; color:blue;}
+A.descriptionLink:visited { text-decoration:underline; color:blue;}
+A.descriptionLink:hover { text-decoration:underline; color:blue;}

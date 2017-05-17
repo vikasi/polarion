@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="com.polarion.example.workflow" version="1.0.0">
+
+	<contribution configuration-id="com.polarion.alm.tracker.workflow.functions">
+		<function name="ComputeTotalLifeTime"
+			clazz="com.polarion.example.workflow.functions.ComputeTotalLifeTime">
+			<parameter name="Fields" id="fields" />
+		</function>
+	</contribution>
+	
+	<contribution
+		configuration-id="com.polarion.alm.tracker.workflow.conditions">
+		<condition name="CommentExist"
+			clazz="com.polarion.example.workflow.conditions.CommentExist">
+		</condition>
+	</contribution>
+	
+	
+</module>

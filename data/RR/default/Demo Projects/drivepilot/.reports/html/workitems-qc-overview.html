@@ -1,0 +1,1104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="AC_OETags.js" language="javascript"></script>
+    <title>
+      Work Items
+    </title>
+    <link title="Style" type="text/css" rel="stylesheet" href="/polarion/ria/css/processaudit.css"/>
+	 <script type="text/javascript" src="/polarion/ria/javascript/pa/toggle.js"></script>
+	 <script type="text/javascript" src="/polarion/ria/javascript/pa/selection.js"></script>
+	 <script type="text/javascript" src="/polarion/ria/javascript/pa/resize.js"></script>
+  </head>
+  <body>
+    <table cellspacing="0" cellpadding="0" width="100%">
+<tr>
+	<td valign="top" >
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Metrics','/polarion/ria/images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Metrics</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Metrics','/polarion/ria/images/')"><img title="Minimize" id="Metrics.img" src="/polarion/ria/images/control/minimize_portlet.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+			<div id="Metrics.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+				<table width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="100%" valign="top">
+<table id="Metrics.panel.table" class="summarylist" height="100%" width="100%">
+	<tbody>
+		<tr>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="50%">
+Item
+			</th>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="50%"> 
+Value
+			</th>
+		</tr>
+<tr class="report" id="Metrics">
+   <td class="left" id="Metrics.Planning">
+           <a href="javascript:toggleList('Planning_report','Metrics.panel.table','Metrics.Planning','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Planning_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Planning">Planning</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Planning.PLANNING-COVERAGE" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Estimated vs. Not Estimated Work Items
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Estimated" class="distribution_bar_td" style="width:6%;background:#00FF00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot AND HAS_VALUE:initialEstimate AND HAS_VALUE:timeSpent) OR (project.id:drivepilot AND HAS_VALUE:initialEstimate AND HAS_VALUE:remainingEstimate)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot AND HAS_VALUE:initialEstimate AND HAS_VALUE:timeSpent) OR (project.id:drivepilot AND HAS_VALUE:initialEstimate AND HAS_VALUE:remainingEstimate)&personal=all&resolution=all' target='_top'> 21</a></a></td><td title="Not Estimated" class="distribution_bar_td" style="width:93%;background:#FF0000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot AND NOT HAS_VALUE:initialEstimate) OR (project.id:drivepilot AND NOT HAS_VALUE:remainingEstimate AND NOT HAS_VALUE:timeSpent)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot AND NOT HAS_VALUE:initialEstimate) OR (project.id:drivepilot AND NOT HAS_VALUE:remainingEstimate AND NOT HAS_VALUE:timeSpent)&personal=all&resolution=all' target='_top'> 309</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Planning.WORKITEMS-PLANNING-ACCURACY" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;In Time vs. Underestimated Work Items
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Underestimated" class="distribution_bar_td" style="width:100%;background:#FF0000;">21</td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Planning.PROJECT-PLAN-ACCURACY" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Project Plan Accuracy
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Accurate" class="distribution_bar_td" style="width:83%;background:#00FF00;">0,83</td><td title="Inaccurate" class="distribution_bar_td" style="width:16%;background:#FF0000;">0,17</td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Planning.ESTIMATE-ACCURACY" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Estimate Accuracy
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Accurate" class="distribution_bar_td" style="width:79%;background:#00FF00;">0,79</td><td title="Inaccurate" class="distribution_bar_td" style="width:20%;background:#FF0000;">0,21</td></tr></table></div></div>
+	</td>
+</tr>
+<tr class="report" id="Metrics">
+   <td class="left" id="Metrics.Quality Audit">
+           <a href="javascript:toggleList('Quality Audit_report','Metrics.panel.table','Metrics.Quality Audit','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Quality Audit_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Quality Audit">Quality Audit</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.OPEN-BY-SEVERITY" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Unresolved by Severity
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Basic" class="distribution_bar_td" style="width:2%;background:#36C900;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 11</a></a></td><td title="Basic" class="distribution_bar_td" style="width:2%;background:#36C900;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 11</a></a></td><td title="Basic" class="distribution_bar_td" style="width:2%;background:#44BB00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 11</a></a></td><td title="Basic" class="distribution_bar_td" style="width:2%;background:#44BB00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 11</a></a></td><td title="Normal" class="distribution_bar_td" style="width:6%;background:#44BB00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 35</a></a></td><td title="Normal" class="distribution_bar_td" style="width:6%;background:#51AE00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 35</a></a></td><td title="Basic" class="distribution_bar_td" style="width:2%;background:#51AE00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 11</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:12%;background:#A25D00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 65</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:12%;background:#AF5000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 65</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:12%;background:#F80000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 65</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:12%;background:#D72800;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 65</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:12%;background:#D72800;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 65</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:3%;background:#D72800;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 16</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:3%;background:#E51A00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 16</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:3%;background:#F20D00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 16</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:3%;background:#F20D00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 16</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:3%;background:#FF0000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 16</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.RESOLVED-BY-SEVERITY" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Resolved by Severity
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Normal" class="distribution_bar_td" style="width:28%;background:#44BB00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:normal AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:normal AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 15</a></a></td><td title="Normal" class="distribution_bar_td" style="width:28%;background:#51AE00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:normal AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:normal AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 15</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:5%;background:#A25D00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 3</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:5%;background:#AF5000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 3</a></a></td><td title="Critical" class="distribution_bar_td" style="width:1%;background:#BC4300;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:critical AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:critical AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Critical" class="distribution_bar_td" style="width:1%;background:#BC4300;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:critical AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:critical AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:5%;background:#F80000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 3</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:5%;background:#D72800;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 3</a></a></td><td title="Should Have" class="distribution_bar_td" style="width:5%;background:#D72800;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 3</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:1%;background:#D72800;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:1%;background:#E51A00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:1%;background:#F20D00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:1%;background:#F20D00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td><td title="Must Have" class="distribution_bar_td" style="width:1%;background:#FF0000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.RESOLVED-RATIO" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Resolved vs. Unresolved
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Resolved" class="distribution_bar_td" style="width:6%;background:#00FF00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 20</a></a></td><td title="Unresolved" class="distribution_bar_td" style="width:93%;background:#FF0000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution&personal=all&resolution=all' target='_top'> 310</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.ASSIGNMENT-RATIO" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Assigned vs. Unassigned
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Unassigned" class="distribution_bar_td" style="width:100%;background:#FF0000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:assignee.id&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:assignee.id&personal=all&resolution=all' target='_top'> 310</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.TRACEABILITY-COMMITS-REQUIREMENTS" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Traceability Commits to Work Items
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Untraceable Commits" class="distribution_bar_td" style="width:100%;background:#FF0000;">1</td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.TRACEABILITY-REQUIREMENTS-COMMITS" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Traceability Work Items to Commits
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Untraceable Work Items" class="distribution_bar_td" style="width:975%;background:#FF0000;">195</td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.PLANNING-RATIO" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Scheduled vs. Unscheduled
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Scheduled" class="distribution_bar_td" style="width:0%;background:#00FF00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id&personal=all&resolution=all' target='_top'> 3</a></a></td><td title="Unscheduled" class="distribution_bar_td" style="width:99%;background:#FF0000;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:timePoint.id&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:timePoint.id&personal=all&resolution=all' target='_top'> 307</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.SUSPECT-RATIO" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Not Suspect vs. Suspect Work Items
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Not suspect" class="distribution_bar_td" style="width:100%;background:#00FF00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND NOT suspect:true&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND NOT suspect:true&personal=all&resolution=all' target='_top'> 310</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+      </tbody>
+</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td valign="top" style="padding-top: 15px;">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+		<table class="valueListTitle" ondblclick="toggleMinMax('Statistics','/polarion/ria/images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Statistics</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Statistics','/polarion/ria/images/')"><img title="Minimize" id="Statistics.img" src="/polarion/ria/images/control/minimize_portlet.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 100%;">
+			<div id="Statistics.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+				<table width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="100%" valign="top">
+<table id="Statistics.panel.table" class="summarylist" height="100%" width="100%">
+	<tbody>
+		<tr>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="50%">
+Item
+			</th>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="50%"> 
+Value
+			</th>
+		</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Statistics">
+           <a href="javascript:toggleList('Statistics_report','Statistics.panel.table','Statistics.Statistics','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Statistics_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Statistics">Statistics</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Statistics.OPEN-BY-PRIORITY" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Unresolved by Priority
+	</td>
+	<td class="right" align="right">
+	<div class="distribution_bar_maindiv">
+		 <div class="distribution_bar_middlediv">
+		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
+		    <tr>
+<td title="Lowest" class="distribution_bar_td" style="width:3%;background:#00FF00;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (priority:lowest AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (priority:lowest AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 5</a></a></td><td title="Medium" class="distribution_bar_td" style="width:96%;background:#798600;"><a target='_top' href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (priority:medium AND NOT HAS_VALUE:resolution)&personal=all&resolution=all'><a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (priority:medium AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 122</a></a></td></tr></table></div></div>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Statistics.MEI" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Most Work Items Entered by an Individual
+	</td>
+	<td class="right" align="right">
+330 (System Administrator)
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Statistics.MSI" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Most Work Items Solved by an Individual
+	</td>
+	<td class="right" align="right">
+8 (Philip GUI)
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Statistics.MAI" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;Most Work Items Assigned to an Individual
+	</td>
+	<td class="right" align="right">
+8 (Philip GUI)
+	</td>
+</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Totals">
+           <a href="javascript:toggleList('Totals_report','Statistics.panel.table','Statistics.Totals','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Totals_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Totals">Totals</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr class="report" id="Statistics.Totals">
+   <td class="left" id="Statistics.Totals.All">
+&nbsp;&nbsp;&nbsp;           <a href="javascript:toggleList('All_report','Statistics.panel.table','Statistics.Totals.All','/polarion/ria/images/');"><img name="hideBranch" border="0" id="All_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="All">All</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.unitTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:unitTestCase)&personal=all&resolution=all" target="_top">Unit Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:unitTestCase)&personal=all&resolution=all' target='_top'> 4</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.issue" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:issue)&personal=all&resolution=all" target="_top">Issue</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:issue)&personal=all&resolution=all' target='_top'> 5</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.task" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:task)&personal=all&resolution=all" target="_top">Task</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:task)&personal=all&resolution=all' target='_top'> 46</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.workPackage" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:workPackage)&personal=all&resolution=all" target="_top">Work Package</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:workPackage)&personal=all&resolution=all' target='_top'> 10</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.changerequest" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:changerequest)&personal=all&resolution=all" target="_top">Change Request</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:changerequest)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.risk" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:risk)&personal=all&resolution=all" target="_top">Risk</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:risk)&personal=all&resolution=all' target='_top'> 2</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.electricalTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalTestCase)&personal=all&resolution=all" target="_top">Electrical Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalTestCase)&personal=all&resolution=all' target='_top'> 2</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.electricalRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalRequirement)&personal=all&resolution=all" target="_top">Electrical Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalRequirement)&personal=all&resolution=all' target='_top'> 5</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.mechanicalTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalTestCase)&personal=all&resolution=all" target="_top">Mechanical Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalTestCase)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.mechanicalRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalRequirement)&personal=all&resolution=all" target="_top">Mechanical Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalRequirement)&personal=all&resolution=all' target='_top'> 4</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.softwareTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareTestCase)&personal=all&resolution=all" target="_top">Software Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareTestCase)&personal=all&resolution=all' target='_top'> 1</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.softwareRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareRequirement)&personal=all&resolution=all" target="_top">Software Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareRequirement)&personal=all&resolution=all' target='_top'> 7</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.systemTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemTestCase)&personal=all&resolution=all" target="_top">System Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemTestCase)&personal=all&resolution=all' target='_top'> 4</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.testing" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:testing)&personal=all&resolution=all" target="_top">Testing</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:testing)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.documentation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:documentation)&personal=all&resolution=all" target="_top">Documentation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:documentation)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.systemRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemRequirement)&personal=all&resolution=all" target="_top">System Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemRequirement)&personal=all&resolution=all' target='_top'> 48</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.implementation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:implementation)&personal=all&resolution=all" target="_top">Implementation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:implementation)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.analysis" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:analysis)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:analysis)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics.Totals">
+   <td class="left" id="Statistics.Totals.Unresolved">
+&nbsp;&nbsp;&nbsp;           <a href="javascript:toggleList('Unresolved_report','Statistics.panel.table','Statistics.Totals.Unresolved','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Unresolved_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Unresolved">Unresolved</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.unitTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Unit Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 4</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.issue" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Issue</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 4</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.task" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Task</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 31</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.workPackage" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Work Package</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 6</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.changerequest" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Change Request</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.risk" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Risk</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 2</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.electricalTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Electrical Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 2</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.electricalRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Electrical Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 5</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.mechanicalTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Mechanical Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.mechanicalRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Mechanical Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 4</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.softwareTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Software Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 1</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.softwareRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Software Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 7</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.systemTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">System Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 4</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.testing" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Testing</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.documentation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Documentation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.systemRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">System Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 48</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.implementation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Implementation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.analysis" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics.Totals">
+   <td class="left" id="Statistics.Totals.Assigned (Unresolved)">
+&nbsp;&nbsp;&nbsp;           <a href="javascript:toggleList('Assigned (Unresolved)_report','Statistics.panel.table','Statistics.Totals.Assigned (Unresolved)','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Assigned (Unresolved)_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Assigned (Unresolved)">Assigned (Unresolved)</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.unitTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Unit Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.issue" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Issue</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.task" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Task</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.workPackage" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Work Package</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.changerequest" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Change Request</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.risk" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Risk</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.electricalTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Electrical Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.electricalRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Electrical Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.mechanicalTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Mechanical Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.mechanicalRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Mechanical Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.softwareTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Software Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.softwareRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Software Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.systemTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">System Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.testing" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Testing</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.documentation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Documentation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.systemRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">System Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.implementation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Implementation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.analysis" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics.Totals">
+   <td class="left" id="Statistics.Totals.Scheduled (Unresolved)">
+&nbsp;&nbsp;&nbsp;           <a href="javascript:toggleList('Scheduled (Unresolved)_report','Statistics.panel.table','Statistics.Totals.Scheduled (Unresolved)','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Scheduled (Unresolved)_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Scheduled (Unresolved)">Scheduled (Unresolved)</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.unitTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Unit Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.issue" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Issue</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 1</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.task" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Task</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.workPackage" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Work Package</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 2</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.changerequest" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Change Request</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.risk" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Risk</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.electricalTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Electrical Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.electricalRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Electrical Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.mechanicalTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Mechanical Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.mechanicalRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Mechanical Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.softwareTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Software Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.softwareRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Software Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.systemTestCase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">System Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.testing" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Testing</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.documentation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Documentation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.systemRequirement" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">System Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.implementation" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Implementation</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.analysis" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=(project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Unresolved by Category">
+           <a href="javascript:toggleList('Unresolved by Category_report','Statistics.panel.table','Statistics.Unresolved by Category','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Unresolved by Category_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Unresolved by Category">Unresolved by Category</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Category.UNRESOLVED-BY-CATEGORY._uncategorized" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND NOT HAS_VALUE:categories.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Uncategorized</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND NOT HAS_VALUE:categories.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 292</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Category.UNRESOLVED-BY-CATEGORY.Board" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (categories.id:Board)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Board</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (categories.id:Board)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 7</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Category.UNRESOLVED-BY-CATEGORY.Core" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (categories.id:Core)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Core</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (categories.id:Core)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 3</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Category.UNRESOLVED-BY-CATEGORY.Interface" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (categories.id:Interface)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Interface</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (categories.id:Interface)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 8</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Unresolved by Assignee">
+           <a href="javascript:toggleList('Unresolved by Assignee_report','Statistics.panel.table','Statistics.Unresolved by Assignee','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Unresolved by Assignee_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Unresolved by Assignee">Unresolved by Assignee</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE._unassigned" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND NOT HAS_VALUE:assignee.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Unassigned</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND NOT HAS_VALUE:assignee.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 310</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.aSeller" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:aSeller)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Alex Seller</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:aSeller)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.cUser" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:cUser)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Carl User</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:cUser)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.jRequirement" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:jRequirement)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">John Requirement</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:jRequirement)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.mTest" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:mTest)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Mark Test</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:mTest)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.pGUI" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:pGUI)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Philip GUI</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:pGUI)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.rProject" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:rProject)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Robert Project</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:rProject)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.sDeveloper" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:sDeveloper)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Steve Developer</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:sDeveloper)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Assignee.UNRESOLVED-BY-ASSIGNEE.admin" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:admin)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">System Administrator</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (assignee.id:admin)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr class="report" id="Statistics">
+   <td class="left" id="Statistics.Unresolved by Time Point">
+           <a href="javascript:toggleList('Unresolved by Time Point_report','Statistics.panel.table','Statistics.Unresolved by Time Point','/polarion/ria/images/');"><img name="hideBranch" border="0" id="Unresolved by Time Point_report" align="absmiddle" src="/polarion/ria/images/control/toggle_minus.gif"></img></a>
+           &nbsp;<b><a name="Unresolved by Time Point">Unresolved by Time Point</a></b>
+   </td>
+   <td class="right">
+   </td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT._unscheduled" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND NOT HAS_VALUE:timePoint.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Unscheduled</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND NOT HAS_VALUE:timePoint.id) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 307</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT.iter1" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:iter1)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Iteration 1</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:iter1)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT.version1" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:version1)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Version 1.0</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:version1)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT.iter2" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:iter2)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Iteration 2</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:iter2)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT.iter3" class="first">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:iter3)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Iteration 3</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:iter3)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 3</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Unresolved by Time Point.UNRESOLVED-BY-TIMEPOINT.version2" class="second">
+	<td class="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:version2)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all" target="_top">Version 2.0</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/drivepilot/workitems/?query=((project.id:drivepilot) AND (timePoint.id:version2)) AND ((NOT HAS_VALUE:resolution))&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+      </tbody>
+</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+</table>
+	</td>
+</tr>
+    </table>
+  </body>
+</html>

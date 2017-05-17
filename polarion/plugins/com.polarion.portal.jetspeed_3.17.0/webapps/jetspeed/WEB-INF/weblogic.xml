@@ -1,0 +1,21 @@
+<!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web
+Application 8.1//EN"
+"http://www.bea.com/servers/wls810/dtd/weblogic810-web-jar.dtd">
+
+<weblogic-web-app>
+
+  <reference-descriptor>
+    <resource-description>
+      <res-ref-name>jdbc/jetspeed</res-ref-name>
+      <jndi-name>JetspeedDB</jndi-name>
+    </resource-description>
+  </reference-descriptor>
+
+
+<!--
+  <container-descriptor>
+    <servlet-reload-check-secs>-1</servlet-reload-check-secs>
+  </container-descriptor>
+-->
+
+</weblogic-web-app>

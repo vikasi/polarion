@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu>
+  <item childInModule="true"/>
+  <item copyFields="categories" label="Implementation Task" role="implements" titlePrefix="Implement: " type="task"/>
+  <item copyFields="categories" label="Test Task" role="implements" titlePrefix="Test: " type="task"/>
+  <item copyFields="categories" label="Implementation Issue" role="implements" type="issue"/>
+  <separator/>
+  <item label="Related" role="relates_to"/>
+</menu>

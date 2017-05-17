@@ -1,0 +1,16 @@
+#set ($MESSAGES = $portletConfig.getResourceBundle($renderRequest.Locale))
+
+<h2 class="portlet-section-header">$MESSAGES.getString('add.subfolder')</h2>
+
+<form action="$renderResponse.createActionURL()" method="post">
+<input type='hidden' name='portlet.action' value='processAddFolderAction'/>
+<table>
+    #formField('Name' "$!folderBean.Key" "40" 'key' $MESSAGES $ERRORS)
+    #formField('Title' "$!folderBean.Title" "40" 'title' $MESSAGES $ERRORS)
+    #formField('ShortTitle' "$!folderBean.ShortTitle" "40" 'shortTitle' $MESSAGES $ERRORS)
+    #formField('DefaultPage' "$!folderBean.DefaultPage" "40" 'defaultPage' $MESSAGES $ERRORS)
+</table>
+<br/>
+<input type="submit" name="Save" value="$MESSAGES.getString('save')" />
+</form>
+#ErrorMessages($ERRORS)

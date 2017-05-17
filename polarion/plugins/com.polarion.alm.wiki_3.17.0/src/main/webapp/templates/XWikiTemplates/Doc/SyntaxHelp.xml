@@ -1,0 +1,2290 @@
+<wiki-page>
+<lastUpdatedBy>admin</lastUpdatedBy>
+<author>admin</author>
+<created>2008-09-15 11:26</created>
+<lastUpdated>2008-09-18 11:16</lastUpdated>
+<type>content</type>
+<content><![CDATA[1 Wiki Syntax Help
+
+<div class="tocDivision">
+	<ul>
+		<li class="tocEntry"><a href="#HHeadings"> Headings</a></li>
+   		<li class="tocEntry"><a href="#HEmphasizing"> Emphasizing</a></li>
+   		<li class="tocEntry"><a href="#HParagraphs26amp3Blinebreaks"> Paragraphs &amp; line breaks</a></li>
+   		<li class="tocEntry"><a href="#HLinks"> Links</a></li>
+   		<li class="tocEntry"><a href="#HLists"> Lists</a></li>
+   		<li class="tocEntry"><a href="#HTables"> Tables</a></li>
+   		<li class="tocEntry"><a href="#HImages"> Images</a></li>
+   		<li class="tocEntry"><a href="#HEscapingtext"> Escaping text</a></li>
+   		<li class="tocEntry"><a href="#HBoxes"> Boxes</a></li>
+   		<li class="tocEntry"><a href="#HWorkItems"> Work Items</a></li>
+   		<li class="tocEntry"><a href="#HDocuments"> Documents</a></li>
+   		<li class="tocEntry"><a href="#HSignatures"> Signatures</a></li>
+		<li class="tocEntry"><a href="#HProjects"> Projects</a></li>
+		<li class="tocEntry"><a href="#HSpaces"> Spaces</a></li>
+		<li class="tocEntry"><a href="#HPages"> Pages</a></li>
+   		<li class="tocEntry"><a href="#HUsers"> Users</a></li>
+   		<li class="tocEntry"><a href="#HParameters"> Parameters</a></li>
+   		<li class="tocEntry"><a href="#HDashboard"> Dashboard</a></li>
+   		<li class="tocEntry"><a href="#HTestManagement"> Test Management</a></li>
+   		<li class="tocEntry"><a href="#HPlans"> Plans</a></li>
+   		<li class="tocEntry"><a href="#HSocialMedia"> Social Media</a></li>
+   		<li class="tocEntry"><a href="#HOther"> Other</a></li>
+   		<li class="tocEntry"><a href="#HPolarionSDK"> Polarion SDK</a></li>
+	</ul> 
+</div>
+
+1.1 Headings
+[top|${doc.name}]
+
+To create a header type 1 (or 1.1, 1.1.1, ..., 1.1.1.1.1.1) at the start of the line.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}1 Heading 1{code}
+</td><td>
+{style:type=div|class=heading-1}Heading 1{style}
+</td></tr>
+<tr><td>
+{code:none}1.1 Heading 2{code}
+</td><td>
+{style:type=div|class=heading-1-1}Heading 2{style}
+</td></tr>
+<tr><td>
+{code:none}1.1.1 Heading 3{code}
+</td><td>
+{style:type=div|class=heading-1-1-1}Heading 3{style}
+</td></tr>
+<tr><td>
+{code:none}1.1.1.1 Heading 4{code}
+</td><td>
+{style:type=div|class=heading-1-1-1-1}Heading 4{style}
+</td></tr>
+<tr><td>
+{code:none}1.1.1.1.1 Heading 5{code}
+</td><td>
+{style:type=div|class=heading-1-1-1-1-1}Heading 5{style}
+</td></tr>
+<tr><td>
+{code:none}1.1.1.1.1.1 Heading 6{code}
+</td><td>
+{style:type=div|class=heading-1-1-1-1-1-1}Heading 6{style}
+</td></tr>
+<tr><td>
+{code:none}
+&#123;toc&#125;
+&#123;toc:1|5&#125;
+&#123;toc:2|4|true&#125;
+{code}
+</td><td>
+Generates a table of contents for the page.
+
+*Parameters*:\\
+* *init* (optional) - an initial level where the TOC generation starts. Default is 2.
+* *max* (optional) - maximum levels in the generated TOC. Default is 6.
+* *numbered* (optional) - <tt>true|__false__</tt> - if true, generates numbering for headings (e.g. 1.2.3)
+
+__Example__:
+<div class="tocDivision">
+	<ul>
+		<li class="tocEntry"><a href="#HHeadings"> Headings</a></li>
+   		<li class="tocEntry"><a href="#HEmphasizing"> Emphasizing</a></li>
+   		<li class="tocEntry"><a href="#HParagraphs26amp3Blinebreaks"> Paragraphs &amp; line breaks</a></li>
+   		<li class="tocEntry"><a href="#HLinks"> Links</a></li>
+   		<li class="tocEntry"><a href="#HLists"> Lists</a></li>
+   		<li class="tocEntry"><a href="#HTables"> Tables</a></li>
+   		<li class="tocEntry"><a href="#HImages"> Images</a></li>
+   		<li class="tocEntry"><a href="#HEscapingtext"> Escaping text</a></li>
+   		<li class="tocEntry"><a href="#HBoxes"> Boxes</a></li>
+   		<li class="tocEntry"><a href="#HWorkItems"> Work Items</a></li>
+   		<li class="tocEntry"><a href="#HDocuments"> Documents</a></li>
+   		<li class="tocEntry"><a href="#HSignatures"> Signatures</a></li>
+		<li class="tocEntry"><a href="#HProjects"> Projects</a></li>
+		<li class="tocEntry"><a href="#HSpaces"> Spaces</a></li>
+		<li class="tocEntry"><a href="#HPages"> Pages</a></li>
+   		<li class="tocEntry"><a href="#HUsers"> Users</a></li>
+   		<li class="tocEntry"><a href="#HParameters"> Parameters</a></li>
+   		<li class="tocEntry"><a href="#HDashboard"> Dashboard</a></li>
+   		<li class="tocEntry"><a href="#HTestManagement"> Test Management</a></li>
+   		<li class="tocEntry"><a href="#HPlans"> Plans</a></li>
+   		<li class="tocEntry"><a href="#HSocialMedia"> Social Media</a></li>
+   		<li class="tocEntry"><a href="#HOther"> Other</a></li>
+   		<li class="tocEntry"><a href="#HPolarionSDK"> Polarion SDK</a></li>
+	</ul> 
+</div>
+</td></tr>
+<tr><td>
+{code}{pre}
+{regiontitle} some formated text {regiontitle}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{regiontitle}{/pre}</tt> macro renders text with formatting similar to Heading 1.
+
+__Example__:
+
+{regiontitle} some formated text {regiontitle}
+
+</td></tr>
+</table>
+
+
+1.1 Emphasizing
+[top|${doc.name}]\\
+
+If you want to change the formating of typed text, you can use the following syntax.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}a *bold* word{code}
+</td><td>
+a *bold* word
+</td></tr>
+<tr><td>
+{code:none}an \__underlined\__ word{code}
+</td><td>
+an __underlined__ word
+</td></tr>
+<tr><td>
+{code:none}\~~text in italics\~~{code}
+</td><td>
+~~text in italics~~
+</td></tr>
+<tr><td>
+{code:none}--strike-out text--{code}
+</td><td>
+--strike-out text--
+</td></tr>
+<tr><td>
+{code:none}<tt>text in monospace font</tt>{code}
+</td><td>
+<tt>text in monospace font</tt>
+</td></tr>
+<tr><td>
+{code:none}Text in a <sup>superscript</sup> format{code}
+</td><td>
+Text in a <sup>superscript</sup> format
+</td></tr>
+<tr><td>
+{code:none}Text in a <sub>subscript</sub> format{code}
+</td><td>
+Text in a <sub>subscript</sub> format
+</td></tr>
+<tr><td>
+{code:none}{pre}
+{quote:http://www.polarion.com}
+Here is some text with a quote
+{quote}
+{/pre}{code}
+</td><td>
+{quote:http://www.polarion.com}
+Here is some text with a quote
+{quote}
+</td></tr>
+</table>
+
+1.1 Paragraphs &amp; line breaks
+[top|${doc.name}]\\
+
+You can use the following syntax to split text into visually separated paragraphs. Paragraphs are mostly recognized properly, but if you don't see the desired spacing in Preview, you can apply some of this formatting.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}
+This line begins a new paragraph.
+This text continues the same paragraph.
+
+This is a new paragraph.
+
+This is another new paragraph.
+
+This paragraph is displayed\\ on two lines.
+{code}
+</td><td>
+This line begins a new paragraph.
+This text continues the same paragraph.
+
+This is a new paragraph.
+
+This is another new paragraph.
+
+This paragraph is displayed\\ on two lines.
+</td></tr>
+<tr><td>
+{code:none}\\{code}
+</td><td>
+Creates a line break.
+</td></tr>
+<tr><td>
+{code:none}----{code}
+</td><td>
+Creates a horizontal line.
+
+__Example__:
+----
+</td></tr>
+</table>
+
+1.1 Links
+[top|${doc.name}]\\
+
+Links are a very important part of the Wiki. You can easily create new pages and link them, and creating links in pages is quite easy.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}
+[playground/_default.Home]
+[playground/newpage]
+[playground/]
+{code}
+</td><td>
+Creates a link to the specified page. If you do not specify project and/or space, the current project/space will be used by default.
+
+If a page with the name you specify in a link doesn't exist, the link shows a "?" icon. A new page with that name is created when you click the link.
+
+*Possible link syntax*:
+<tt>{pre}
+<br/>
+[Project/Space.Page]<br/>
+[Project/Space]<br/>
+[Project/]<br/>
+[/Space.Page]<br/>
+[Space.Page]<br/>
+[Page]
+{/pre}</tt>
+
+__Example__:\\
+[playground/_default.Home]\\
+[playground/newpage]\\
+[playground/]
+
+</td></tr>
+<tr><td>
+{code:none}
+[link alias>playground/_default.Home]
+[new page link alias>playground/newpage]
+[Home page link alias>playground/]
+{code}
+</td><td>
+If you want a link to display specific text rather than the actual page name or hyperlink URL, you can use a link alias as shown here.
+
+__Example__:\\
+[link alias>playground/_default.Home]\\
+[new page link alias>playground/newpage]\\
+[Home page link alias>playground/]
+</td></tr>
+<tr><td>
+{code:none}
+http\://www.polarion.com
+[http\://www.polarion.com]
+[Polarion >http\://www.polarion.com] - this is a link alias
+{code}
+</td><td>
+Creating external links is the same as creating internal links. You can use a link alias in these as well.
+
+You don't need to use \[\] around external links, but then you cannot use a link alias. The following protocols are automatically converted: http://, https://, ftp://&nbsp;
+
+When you do not want to convert an external link to a hyperlink, you should escape the ':' character (i.e. http\\\: instead of just http:), or you can type '\&\#58;'.
+
+__Example__:\\
+http://www.polarion.com\\
+[http://www.polarion.com]\\
+[Polarion |http://www.polarion.com]
+</td></tr>
+<tr><td>
+{code:none}
+\{attachment:alias>file_name.extension\}
+{code}
+</td><td>
+You can create links to attachments. As with normal links, you can enter an alias that will be displayed instead of the file name.
+
+__Example__:\\
+{attachment:alias>file_name.extension}
+</td></tr>
+<tr><td>
+{code:none}
+\{portallink:/project/playground/workitems?resolution=unresolved\}
+   Unresolved in Playground
+\{portallink\}
+\{portallink:/workitems?resolution=unresolved | addcontext=yes\}
+   Unresolved Work Items
+\{portallink\}
+\{portallink:/monitor\}Monitor\{portallink\}
+{code}
+</td><td>
+You can create links to other Polarion portal pages as well as wiki pages.
+
+*Parameters*:
+
+ * *first parameter* - polarion portal page path, the part of the URL after "/polarion/#" 
+ * *addcontext* (optional) - <tt>yes|__no__</tt> - if yes and the macro is used on a project wiki page, then the page path is relative to the current project page path, it is appended to /polarion/#/project/~~currentprojectid~~
+ 
+
+__Example__:\\
+{portallink:/project/playground/workitems?resolution=unresolved}Unresolved in Playground {portallink}\\
+{portallink:/workitems?resolution=unresolved | addcontext=yes}Unresolved Work Items{portallink}\\
+{portallink:/monitor}Monitor{portallink}\\
+
+</td></tr>
+</table>
+
+1.1 Lists
+[top|${doc.name}]\\
+
+The wiki supports the two most common types lists used in documents - bulleted and numbered.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}
+* Item 1
+** Item 2
+*** Item 3
+* Item 4
+{code}
+</td><td>
+A bulleted list. If you want deeper indentation simply use additional (\*) characters.
+
+__Example__:
+
+* Item 1
+** Item 2
+*** Item 3
+* Item 4
+</td></tr>
+<tr><td>
+{code:none}{pre}
+1. Item 1
+11. Item 2
+111. Item 3
+1. Item 4
+{/pre}{code}
+</td><td>
+A numbered list. If you want deeper indentation simply use (11., 111., 1111., etc.)
+
+__Example__:
+
+1. Item 1
+11. Item 2
+111. Item 3
+1. Item 4
+</td></tr>
+<tr><td>
+{code:none}
+{pre}
+1. Item 1
+1*. Item 2
+1*. Item 3
+1. Item 4
+
+* Item 1
+*1. Item 2
+*1. Item 3
+* Item 4
+{/pre}{code}
+</td><td>
+
+If you want to combine the two list types, you can do so.
+
+__Example__:
+1. Item 1
+1*. Item 2
+1*. Item 3
+1. Item 4
+
+* Item 1
+*1. Item 2
+*1. Item 3
+* Item 4
+</td></tr>
+</table>
+
+1.1 Tables
+[top|${doc.name}]\\
+
+Tables organize content into rows and columns.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}
+\{table\}
+Title 1 | Title 2
+Word 1 | Word 2
+\{table\}
+
+\{table:bold=1\}
+Category | Sales (K?)
+Category 1 | 100
+Category 2 | 50
+Category 3 | 50
+Total | =sum(B2:B4)
+\{table\}
+{code}
+</td><td>
+The syntax for tables enables you to easily create content in table format. You can even make some simple calculations on the content. A row must be defined on a single line (which may wrap). By default first row is formatted as the table header.
+
+*Parameters*:
+
+ * *id* (optional) - ID of the table
+ * *header* (optional) - <tt>__yes__|no</tt> - if set to "no", first row in the table will not be formatted as header
+ * *border* (optional) - <tt>__yes__|no</tt> - set to "no" to hide border lines
+ * *table-align* (optional) - <tt>left|__center__|right</tt> - horizontal alignment of table
+ * *bold* (optional) - specified columns will be bold. Usage: <tt>bold=1,2,4</tt>
+ * *valign* (optional) - <tt>top|__middle__|bottom</tt> - vertical alignment of content in cells
+ * *align* (optional) - <tt>__left__|center|right</tt> - horizontal alignment of content in cells
+ * *width* (optional) - width of the table (in pixels)
+ * *padding* (optional) - padding of cells (in pixels)
+
+*Simple mathematics functions*: sum(), avg(), max(), min()
+
+__Example__:
+
+{table}
+Title 1 | Title 2
+Word 1 | Word 2
+{table}
+
+{table:bold=1}
+Category | Sales (K?)
+Category 1 | 100
+Category 2 | 50
+Category 3 | 50
+Total | =sum(B2:B4)
+{table}
+</td></tr>
+<tr><td>
+{code:none}
+\{section\}
+\{column:width=50% | padding=15px\}
+This is simple text content
+\{column\}
+\{section\}
+{code}
+</td><td>
+The Column macro allows you to define columns within a page. 
+Note that the Column macro can only be used within the Section macro.
+
+* *width* (optional) - the width of the column (in pixels)
+* *padding* (optional) - the padding of the column (in pixels). Default is 10 px.
+
+
+__Example__:
+
+{section}
+{column:width=50% | padding=15px}
+This is simple text content
+{column}
+{section}
+
+</td></tr>
+<tr><td>
+{code:none}
+\{section\}
+
+\{column:width=30%\}
+This is the first column
+\{column\}
+
+\{column:width=70%\}
+This is the second column
+\{column\}
+
+\{section\}
+{code}
+</td><td>
+If you want to define columns in your page, you can add the ~~\{section\}~~ macro to the page and 
+then place as many columns as you want into this ~~\{section\}~~, using the ~~\{column\}~~ macro
+
+* *width* (optional) - the width of the column (in pixels)
+
+__Example__:
+
+{section}
+{column:width=30%}
+This is the first column
+{column}
+{column:width=70%}
+This is the second column
+{column}
+{section}
+
+</td></tr>
+</table>
+
+1.1 Images
+[top|${doc.name}]\\
+
+The \{image\} macro is used to display image attachments in the wiki page. If a fully qualified URL is specified the image can be displayed from a remote source, otherwise an attached image file is displayed.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}
+\{image:noavatar.png\} 
+{code}
+</td><td>
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/noavatar.png" alt="noavatar.png"/>
+</td></tr>
+<tr><td>
+{code:none}
+\{image:noavatar.png|30\}
+{code}
+</td><td>
+If you want to set height of image and keep the aspect ratio:
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/noavatar.png" height="30" alt="noavatar.png"/>
+</td></tr>
+<tr><td>
+{code:none}
+\{image:noavatar.png| |20\}
+{code}
+</td><td>
+If you want to set width of image and keep the aspect ratio:
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/noavatar.png" width="30" alt="noavatar.png"/>
+</td></tr>
+<tr><td>
+{code:none}
+\{image:noavatar.png|30|20\}
+{code}
+</td><td>
+To resize the image without keeping its aspect ratio simply fill both parameters - height and width.
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/noavatar.png" height="30" width="20" alt="noavatar.png"/>
+</td></tr>
+<tr><td>
+{code:none}
+\{image:http\://www.polarion.com/img/logos/polarion_logo_60x68.gif\} 
+{code}
+</td><td>
+{image:http://www.polarion.com/img/logos/polarion_logo_60x68.gif} 
+</td></tr>
+
+<tr><td>
+{code:none}
+\{image:http\://www.polarion.com/img/logos/polarion_logo_60x68.gif|
+	description=*Figure X:* Polarion Logo\} 
+{code}
+</td><td>
+You can ensure that the image and description will be rendered on the same page in PDF export. 
+Here is the rendered code:<br/>
+
+{image:http://www.polarion.com/img/logos/polarion_logo_60x68.gif|description=*Figure X:* Polarion Logo} 
+</td></tr>
+</table>
+
+1.1 Escaping text
+[top|${doc.name}]\\
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}
+{pre}
+This is not a \[link\]
+\\#set (\$var = "something")
+{/pre}
+{code}
+</td><td>
+Several characters are reserved for system usage in the wiki. If you want these to appear as characters in wiki page text, they must be escaped as shown in the example.
+
+__Example__:
+
+This is not a \[link\]\\
+\#set (\$var = "something")
+</td></tr>
+<tr><td>
+{code:none}
+\{pre\}
+No *bold rendering* in wiki syntax.
+\{/pre\}
+{code}
+</td><td>
+The <tt>\{pre\}\{/pre\}</tt> macro prevents wiki syntax and Radeox macro rendering but preserves HTML rendering and preserves execution of Velocity scripts.
+
+__Example__:
+
+{pre}
+No *bold rendering* in wiki syntax.
+{/pre}
+</td></tr>
+<tr><td>
+{code:none}
+\{code\}
+No <strong>bold rendering</strong> in HTML.
+No *bold rendering in* wiki syntax.
+\{code\}
+
+\{code\}
+public class MyClass {
+  public void helloWorld() {}
+}
+\{code\}
+
+\{code:xml\} <hello> <world>Cool!</world> </hello> \{code\}
+{code}
+</td><td>
+The <tt>\{code\}\{code\}</tt> macro prevents wiki syntax rendering, HTML rendering and Velocity rendering. Makes a pre-formatted block of code with syntax highlighting. The default language is Java but you can specify <tt>none</tt>, <tt>xml</tt>, or <tt>sql</tt>.
+
+__Example__:
+
+{code}
+No <strong>bold rendering</strong> in HTML.
+No *bold rendering in* wiki syntax.
+{code}
+
+{code}
+public class MyClass {
+  public void helloWorld() {}
+}
+{code}
+
+{code:xml} <hello> <world>Cool!</world> </hello> {code}
+</td></tr>
+
+<!-- escaping query chars -->
+<tr><td>
+{code:none}
+\{workitems:updated:[&#92;&#36;today-20d&#92;&#36; TO &#92;&#36;today&#92;&#36;]|top=10\}
+{code}
+</td><td>
+If special characters like dollar('$') or hash('#') signs are used in macro queries it is necessary to escape them, since these chars are part of Velocity syntax. They can be escaped by backslash chars ('&#92;').<br />
+
+Example macros without escaping are: <br />
+<tt>
+\{workitems:updated:&#91;&#36;today-20d&#36;
+     TO &#36;today&#36;&#93;\}
+</tt>
+
+</td></tr>
+<tr><td>
+{code}
+C:\\\Polarion\\\polarion
+{code}
+</td><td>
+The backslash character must be escaped twice to render correctly in the page. For each instance you need to write: <tt>"\\\\\\\\\"</tt> <br/><br/>So syntax for the path in the example at left would be: <tt>C:\\\\\\\\\Polarion\\\\\\\\\polarion</tt>
+</td></tr>
+</table>
+
+1.1 Boxes
+[top|${doc.name}]\\
+
+Boxes are a quick and easy way to highlight important content.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}
+\#message("Message text")
+{code}
+</td><td>
+Displays a message in a styled box format.
+
+#message("Message text")
+</td></tr>
+<tr><td>
+{code:none}
+\#info("This is an information panel.")
+{code}
+</td><td>
+Displays an informational message in a styled box format, using an information icon.
+
+#info("This is an information panel.")
+</td></tr>
+<tr><td>
+{code:none}
+\#warning("This is a warning panel.")
+
+{code}
+</td><td>
+Displays a warning message in a styled box format, using a warning icon.
+
+
+#warning("This is a warning panel.")
+</td></tr>
+<tr><td>
+
+{code:none}
+\#error("This is an error panel.")
+
+
+{code}
+</td><td>
+Displays an error message in a styled box format, with an error icon.
+
+#error("This is an error panel.")
+</td></tr>
+<tr><td>
+{code}{pre}
+{hint}This is a hint.{hint}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{hint}{/pre}</tt> macro renders text inside a formatted shaded box and with special text format. TIP: This is a good macro to use for temporary or place-holder content.
+
+__Example__:
+
+{hint}This is a hint.{hint}
+
+</td></tr>
+<tr><td>
+{code:none}
+{pre}
+{style:type=div|border=1px solid green|
+width=100px|height=100px|color=red}
+This is some content...
+{style}
+{/pre}
+{code}
+</td><td>
+Styles a block of content. (Internally it generates an HTML &lt;div&gt; or &lt;span&gt; tag, and it supports many properties of these 2 elements.)
+
+Supported properties (note that all are properties of both DIVs and SPANs):
+
+    * *id* - ID of a span or div tag
+    * *class* - example classes: <tt>warningmessage</tt>, <tt>errormessage</tt>, <tt>infomessage</tt>, <tt>plainmessage</tt>, <tt>floatinginfobox</tt>, etc. (matching with warning, error, info, etc. macros)
+    * *name* - name of this panel
+    * *text-align* - <tt>__left__|center|right|justify</tt> - aligns paragraph text
+    * *font-size* - font size of text in the panel
+    * *font-family* - font family of text in the panel
+    * *color* - the color of the text in the panel
+    * *background-color* - the background color of the panel
+    * *width* - width of the panel (in pixels)
+    * *height* - height of the panel (in pixels)
+    * *float* - <tt>left|right</tt> - float the panel
+    * *border* - parameters (width style color) of the panel border
+    * *icon* and *document* - the icon this panel uses and the document to which the icon is attached
+
+<tt>{pre}{style...|icon=msgwarning.jpg|document=Main.Mypage}{/pre}</tt>
+
+If the <tt>document</tt> parameter is specified, then it finds <tt>msgwaring.jpg</tt> in attachments of <tt>Main.Mypage</tt> or current page, or in the icons directory. If that isn't found, then it displays the default image for a missing icon.
+
+__Example__:
+
+{style:type=div|border=1px solid green|width=100px|height=100px|color=red}
+This is some content...
+{style}
+</td></tr>
+</table>
+
+1.1 Work Items
+[top|${doc.name}]\\
+
+The wiki offers a set of useful macros that allow you to display and link work items in your wiki pages.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}{pre}
+{workitem: EL-48}
+
+{workitem: elibrary/EL-4| display=long}
+
+{workitem: playground/SAMPLE-1| label=work item alias}
+
+{workitem: EL-7| fields=title,
+ status as text-image, severity as image}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{workitem}{/pre}</tt> macro can be used to place a link to, and details about a single work item on a wiki page.
+
+*Parameters*:
+
+The only required parameter is *id*.
+
+* *id* (default) - allows alternative syntax: <tt>{pre}{workitem: id=TGUIDE-3}{/pre}</tt>
+* *display* - <tt>__short__|long</tt> - short renders only work item ID, long renders ID + title
+* *expand* - <tt>yes|__no__</tt> - you can define whether or not the block with fields is shown. Effective only when the <tt>fields</tt> parameter is set.
+* *label* - renders a link with a specified label (alias)
+* *fields* - delimiter is ',' (the comma character)
+** <tt>fieldID as fieldType</tt> - defines how the enumeration values will be formatted
+** ~~fieldType~~: <tt>image, image-text, text-image, text</tt>
+** if the work item does not have this kind of field, then the value will be an empty string
+
+If you do not set the <tt>fields</tt> parameter, the content retrieved by the macro will be rendered as an in-line element, otherwise will be rendered as block element.
+
+
+__Example__: (image)
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/wi.png" />
+</td></tr>
+<tr><td>
+{code:none}{pre}
+{workitems: status:inprogress | top=2}
+
+{workitems: query=assignee.id:sDeveloper | sortby=severity 
+	   | top=2}
+
+{workitems: status:open | project=playground | top=2}
+
+{workitems: type:defect AND HAS_VALUE:resolution | 
+ top=2 | fields=id, title, status, timePoint}
+ 
+{workitems: query=@all |
+ top=2 | project=playground | 
+ sortby=~id | display=list | expand=yes}
+
+{workitems: queryName=Awaiting Review | top=2}
+
+{workitems: group=/Demo Projects | query=@all 
+       | sortby=~id | top=3}
+       
+{workitems: sqlQuery=
+	SELECT WI.C_PK 
+		FROM WORKITEM WI, PROJECT P
+	WHERE WI.FK_PROJECT = P.C_PK 
+		AND P.C_ID = 'playground'}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{workitems}{/pre}</tt> macro can be used to display a list of linked work items on a wiki page.
+
+*Parameters*:
+
+Either *query*, *queryName* or *sqlQuery* is required parameter.
+
+* *query* (default) - displays work items filtered by a query string. If you want to render all work items in the current scope, set query to "~~@all~~". See <a href="/polarion/help/topic/com.polarion.xray.doc.user/refchWorkItemsRef.html" target="_blank">*Work Item querying reference*</a>.
+* *queryName* - displays work items filtered by a specified saved query
+** <tt>queryName = name</tt> - the name of a saved query from the current or global (repository) context
+** <tt>queryName = project/name</tt> - the name of a saved query from specific project
+* *sqlQuery* - displays work items based on a SQL query on the database. *IMPORTANT:* This parameter queries and returns results from the ~~entire repository~~, ignoring the ~~project~~ and the ~~group~~ parameters, if those are specified. When you construct a query based on a table other than the ~~workitem~~ table, you should also ensure that returned work items are joined with the ~~workitem~~ table. See <a href="/polarion/sdk/doc/database/index.html" target="_blank">*Database reference*</a> for schema and query examples.
+* *display* - <tt>__table__|list|count</tt> - defines the appearance of the result
+* *expand* - <tt>__yes__|no</tt> - defines whether or not the block with fields is shown. Effective only when the <tt>fields</tt> parameter is set.
+* *top* - maximum number of returned work items. Default is 50. <tt>top=0</tt> shows all the matched items.
+* *fields* - delimiter is ',' (the comma character)
+** <tt>fieldID as fieldType</tt> - defines how the enumeration values will be formatted
+** ~~fieldType~~: <tt>image, image-text, text-image, text</tt>
+** if you do not specify any <tt>fields</tt>, a default field set will be used: <tt>id, title, type, status, severity, description</tt>
+* *sortby* - specify the fields you want to use for sorting the retrieved work items
+** ascending - e.g. <tt>severity</tt>
+** descending - e.g. <tt>~severity</tt>
+** sorting by more keys: <tt>updated ~id severity</tt>
+* *project* - specifies the name of the project to be queried (if other than the current project)
+* *group* - enables filtering of the results by project group
+** <tt>group=/\<project group\></tt> - searches through projects and child project groups within the specified project group only
+** <tt>group=/</tt> - searches through all projects and project groups in the current repository
+* *width* and *height* - width and height of the table (in pixels)
+
+__Example__: (images)
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/wis1.png" />
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/wis2.png" />
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/wis3.png" />
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/wis4.png" />
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/wis5.png" />
+
+</td></tr>
+<tr><td>
+{code:none}{pre}
+{recently-modified-workitems:project=@current}
+
+{recently-modified-workitems:playground|link=yes}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{recently-modified-workitems}{/pre}</tt> macro can show recently modified Work Items from project.
+
+*Parameters*:
+
+The only required parameter is *project*.
+
+* *project* (default) - specifies the name of the project to be queried (if other than the current project).
+* *groupby* - <tt>module</tt> - enables or disables grouping by module or document where the Work Item comes from.
+* *top* - maximum number of returned Work Items. Default is 10000. <tt>top=0</tt> shows all the matched items.
+* *link* - <tt>__yes__|no</tt> - specifies whether or not a link to the specified Work Item will be rendered.
+</td></tr>
+</table>
+
+1.1 Documents
+[top|${doc.name}]\\
+
+The wiki offers a set of useful macros that enable you to display and link Documents or show document work items.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}{pre}
+{document:Business Requirements}
+
+{document:Business Requirements|page=home}
+
+{document:Business Requirements|page=table}
+
+{document:MySpaceName/Business Requirements}
+
+{document:MySpaceName/Business Requirements|query=WI-16}
+
+{/pre}{code}
+</td><td>
+The <tt>{pre}{document}{/pre}</tt> macro renders a link to a specific Document.
+
+*Parameters*:
+
+The only required parameter is *name*.
+
+* *name* (default) - allows alternative syntax: <tt>{pre}{document: name=Business Requirements}{/pre}</tt>
+* *page* - <tt>__home__|table</tt> - select the view for the link
+* *project* (optional) - the ID of a project where the document is stored. Required on global (repository) wiki pages. On project wiki pages you can use this parameter to link Documents from other project(s).
+* *link* (optional) - <tt>__yes__|no</tt> - specifies whether or not a link to the specified Document will be rendered
+* *query* (optional) - the Lucene query string for filtering visible Work Items in target Document
+
+</td></tr>
+<tr><td>
+{code:none}{pre}
+{document-workitems:Business Requirements|project=library|display=document|
+root=WI-57}
+
+{document-workitems:Business Requirements|project=library|display=document|
+fields=title, status as text-image, severity as image}
+
+{document-workitems:name=Business Requirements|project=library|
+display=table|root=WI-57|expand=yes}
+
+{document-workitems:name=MySpaceName/Business Requirements|
+project=library|display=table|root=WI=57|expand=yes}
+
+{/pre}{code}
+</td><td>
+The <tt>{pre}{document-workitems}{/pre}</tt> macro can be used to display work items stored in a specific Document on a wiki page.
+
+*Parameters*:
+
+The only required parameter is *name*.
+
+* *name* (default) - allows alternative syntax: <tt>{pre}{document-workitems: name=Business Requirements}{/pre}</tt>
+* *display* - <tt>__document__|table</tt> - document renders workitems as multi-edit style
+* *expand* - <tt>yes|__no__</tt> - you can define whether or not the block with fields is shown. Effective only when the <tt>fields</tt> parameter is set.
+* *top* - maximum number of returned work items. Default is 10000. <tt>top=0</tt> shows all the matched items.
+* *fields* - delimiter is ',' (the comma character)
+** <tt>fieldID as fieldType</tt> - defines how the enumeration values will be formatted
+** ~~fieldType~~: <tt>image, image-text, text-image, text</tt>
+** If a work item does not have this kind of field, then the value will be an empty string
+* *project* - search for document in the context of a specific project
+* *root* - by default the document-workitems macro renders the whole Document structure. If you want to display just a Document subtree starting with some work item as the root element, set the <tt>root</tt> parameter to the selected work item ID. (NOTE: currently the root element can only be a top-level work item - one having no parent in the Document.)
+* *revision* - if you want to display work items from some historical Document revision, set this parameter to the desired revision number.
+* *query* -  filter Document work items using a query string written in Polarion's query language (based on Apache Lucene). Comment: If a Document work item is filtered out, but has children that are NOT filtered out, then such a work item is displayed but the item's row is somewhat transparent. 
+* *queryName* - name of a saved query to be used to filter Document work items
+** <tt>queryName = name</tt> - name of a saved query from the current or global (repository) context
+** <tt>queryName = project/name</tt> - name of a saved query from a specific project
+* *width* and *height* - width and height of the table (in pixels)
+* *descriptionFields* - fields which will be considered as description. delimiter is ','(the comma character)
+
+If you do not set the <tt>fields</tt> parameter, the content retrieved by the macro will be rendered as an in-line element, otherwise it will be rendered as a block element.
+
+</td></tr>
+<tr><td>
+{code:none}{pre}
+{document-property:Business Requirements|author}
+
+{document-property:Business Requirements|created}
+
+{document-property:MySpaceName/Business Requirements|updated}
+
+{document-property:MySpaceName/Business Requirements|updatedBy}
+{/pre}{code}
+</td><td>
+
+
+
+
+*Parameters*:
+
+* *name* (default) - allows alternative syntax: <tt>{pre}{document: name=Business Requirements}{/pre}</tt>
+* *field* - <tt>author|created|updated|updatedBy|title|documentCustomFieldID</tt> - Specify the field you want to show.
+
+</td></tr>
+</table>
+
+1.1 Signatures
+[top|${doc.name}]\\
+
+Wiki provides a macro that renders a Document Panel with Document Properties and Document Signatures in Wiki Content block inside of a Document.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}{pre}
+&#35;documentPanel(true "approved")
+{/pre}{code}
+</td><td>
+The <tt>{pre}&#35;documentPanel{/pre}</tt> macro, when used in a Wiki Content block in a Document, renders an overview of Document Properties as well as overview of Document Signatures for the current version of the Document.
+
+*Parameters*:
+
+Both parameters are required.
+
+* *showPending* - <tt>true|false</tt> - display also Signatures that are not done yet
+* *approvedState* - ID of the status that represents the final approved state in the Document workflow. Must be enclosed in quotes.
+
+</td></tr>
+</table>
+
+1.1 Projects
+[top|${doc.name}]\\
+
+The wiki allows to display useful information about a specific project or project group.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code}{pre}
+*Users*: {project-property:users}
+*Location*: {project-property:location}
+*Name*: {project-property:name}
+*Description*: {project-property:description}
+*Lead*: {project-property:lead}
+*Active*: {project-property:active}
+*Start*: {project-property:start}
+*Finish*: {project-property:finish}
+*playground users*: {project-property:playground|users}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{project-property}{/pre}</tt> macro renders some project property in your page - count of project members, repository URL, or any other project field.
+
+*Parameters:*
+* *project* (optional) - name of a project where work items are located. If none is specified, the current project name is used by default.
+* *property* - name of the property you want to display
+
+__Example__: (image)
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/projectprop.png" />
+
+</td></tr>
+<tr><td>
+{code}{pre}
+*Projects*: {projectgroup-property:projects} project(s),
+ {projectgroup-property:projectsDeep} inclusive subprojects
+
+*Users*: {projectgroup-property:users} system user(s)
+
+*Repository URL*: {projectgroup-property:location}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{projectgroup-property}{/pre}</tt> macro returns information about a project group.
+
+It is recommended to use only one parameter at time.
+
+ * *users* - displays number of project users from all projects in the group
+ * *location* - returns the URL of the group's repository folder
+ * *projects* - returns number of projects contained in the group where the wiki space is stored
+ * *projectsDeep* - returns number of all projects and subprojects
+
+__Example__: (image)
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/group.png" />
+</td></tr>
+<tr><td>
+{code:none}{pre}
+{project: elibrary|display=long}
+
+{project: elibrary|label=project alias}
+
+{project: elibrary|fields=id,start,lead}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{project}{/pre}</tt> macro renders project-based information.
+
+
+*Parameters*:
+
+*id* is a required parameter.
+
+* *id* (default) - allows alternative syntax: <tt>{pre}{workitem: id=TGUIDE-3}{/pre}</tt>. If you want to render this macro in current context, type "~~@current~~"
+* *display* - <tt>__short__|long</tt> - short renders project's ID, long renders project's name
+* *expand* - <tt>yes|__no__</tt> - defines whether or not the block with fields is shown. Effective only when the <tt>fields</tt> parameter is set.
+* *label* - renders the link with a specified label (alias)
+* *fields* - delimiter is ',' (the comma character)
+** <tt>fields = fieldID as fieldType</tt>
+** ~~fieldType~~: <tt>image, image-text, text-image, text</tt>
+** If a work item does not have this kind of field, then the value will be an empty string.
+** Default values: <tt>id, lead, active, start, finish</tt>
+
+If you do not set the <tt>fields</tt> parameter, the macro will be rendered as in-line element, otherwise will be rendered as block element.
+
+__Example__: (image)
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/project.png" />
+</td></tr>
+</table>
+
+
+1.1 Spaces
+[top|${doc.name}]\\
+
+A wiki page can display information about the current space using these macros:
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code}{pre}
+
+{space-property}
+
+{space-property:name}
+
+{space-property:title}
+
+{/pre}{code}
+</td><td>
+
+*Parameters:*
+* *name* (default) - displays the space name (ID).
+* *title* - displays the space title. (Title can contain non-ASCII characters.)
+
+</td></tr>
+</table>
+
+1.1 Pages
+[top|${doc.name}]\\
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code}{pre}
+
+{pages:project=playground}
+
+{pages:project=playground|top=10}
+
+{pages:project=playground|top=10|sortby=name}
+
+{pages:project=playground|top=10|sortby=~name|display=table}
+
+{pages:project=playground|query=created:[\\$today\\$ TO 30000000]}
+
+{pages:project=playground|query=created:[20091110 TO \\$today-2d\\$]|
+       top=10|sortby=name|display=table}
+
+{pages:group=Sandbox|top=10|sortby=name}
+
+{pages:group=Sandbox|query=created:[20091110 TO 30000000]|
+       top=10|sortby=name|display=table}
+
+{/pre}{code}
+</td><td>
+The <tt>{pre}{pages}{/pre}</tt> macro renders a list of pages and documents in a project or project group.
+
+*Parameters:*
+* *project* - ID of a project where pages are located. If none is specified, the current project ID is used by default.
+** ~~@current~~ - constant for the current project
+* *space* - name of a wiki space where pages are located. If none is specified, all spaces are used by default.
+** ~~@current~~ - constant for the current space
+* *group* - name of a project group where pages are located. If none is specified, the current project group name is used by default.
+** ~~@current~~ - constant for the current project group
+** ~~@all~~ - constant for all project groups
+** ~~group=/~~ - list all pages from the repository context
+* *query* - displays pages filtered by a specified query string in Polarion's query language (based on Apache Lucene). 
+** ~~field IDs~~ for query: <tt>page, title, project, space, updated, created, updatedby, createdby</tt>
+* *fields* - delimiter is ',' (the comma character)
+** ~~field IDs~~ for table: <tt>name, __title__, project, space, __updated__, created, __updatedby__, createdby</tt>
+** ~~field IDs~~ for list: <tt>__pagelink__, __updated__, created, updatedby, createdby</tt>
+* *top* - the maximum number of pages to be returned by the macro
+* *sortby* - <tt>name|__title__|created|updated|~name|~title|~created|~updated</tt> - select the field you want to use for sorting the retrieved pages
+* *display* - <tt>table|__list__</tt> - define whether the result will be formatted as a table or a list
+
+
+__Example__: \{pages:group=/|top=10|sortby=name\}
+
+{pages:group=/|top=10|sortby=name}
+
+</td></tr>
+<tr><td>
+{code:none}{pre}
+{create-page-button:template=ReportTemplate|
+                    label=*Create Full Report*|
+                    prefix=Report_}
+{/pre}{code}
+</td><td>
+The <tt>\{create-page-button\}</tt> macro renders a button which allows users to create new wiki pages based on a template Wiki page.
+
+*Parameters*:
+ * *prefix* (optional) - prefix that will be used for name of new pages
+ * *templateProject* (optional) - project that contains the templates, defaults to current project
+ * *templateSpace* (optional) - space that contains the templates, defaults to current space
+ * *templatePrefix* (optional) - selectable templates have to start with the prefix, defaults to "Template"
+ * *targetProject* (optional) - the project where the new page will be created, defaults to current project
+ * *targetSpace* (optional) - the space the new page will be created in, defaults to current space
+ * *template* (optional) - preselected template, defaults to the first template (in alphabetical order)
+ * *label* (optional) - label to use for the button, defaults to *Create Page*
+
+</td></tr>
+</table>
+
+1.1 Users
+[top|${doc.name}]\\
+
+To embed user information in your wiki pages, use one of the following macros.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}{pre}
+{user: admin}
+
+{user: admin|display=long}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{user}{/pre}</tt> macro extracts information about a single user.
+
+
+*Parameters*:
+
+*id* is a required parameter.
+
+* *id* (default) - user ID. To display information about the current user, use constant "~~@current~~"
+* *display* - <tt>__short__|long</tt> - short renders user's ID, long renders user's name
+* *expand* - <tt>yes|__no__</tt> - defines whether or not the block with fields is shown. Effective only when the <tt>fields</tt> parameter is set.
+* *fields* - available ~~field IDs~~: <tt>id, name, description, email, roles</tt>
+* *label* - renders a link with the specified label (alias)
+* *project* - show only roles assigned in a specific project
+* *group* - show only roles assigned in all projects in given project group. Use "~~group=/~~" to show all the roles
+
+If neither project nor group is set, then the macro will render roles in the current context.
+
+__Example__:
+
+{user: admin}
+
+{user: admin|display=long}
+</td></tr>
+<tr><td>
+{code:none}{pre}
+{users:@all|project=playground|fields=id, name}
+
+{users:@all|top=3|group=/|fields=id, name}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{users}{/pre}</tt> macro can be used to extract a set of users.
+
+
+*Parameters*:
+
+*Query* is required parameter.
+
+* *query* (default) - allows alternative syntax: <tt>{pre}{users: query=}{/pre}</tt> If you want to list all users, type "~~@all~~"
+* *display* - <tt>__table__|list|count</tt> - specifies how the results will be formatted
+* *expand* - <tt>__yes__|no</tt> - specifies whether or not the block with fields is shown. Effective only when the ~~fields~~ parameter is set.
+* *top* - maximum number of returned users. default is 50
+* *fields* - delimiter is ',' (the comma character)
+** if you do not set ~~fields~~, this default field set will be used: <tt>id, name, description, email, roles</tt>
+* *sortby* - specify the fields you want to use for sorting
+** ascending - e.g. <tt>name</tt>
+** descending - e.g. <tt>~name</tt>
+* *project* - queries a specific project 
+* *group=/* - queries in the global (repository) scope
+* *roles* - comma-separated list of roles. Shows only users that have at least one of the specified roles assigned 
+* *width* and *height* - width and height of the table (in pixels)
+
+If the search scope is not specified by the *project* or *group* parameter, the macro searches in the current scope.
+
+__Example__: (image)
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/users.png"/>
+</td></tr>
+</table>
+
+1.1 Parameters
+[top|${doc.name}]\\
+
+Page parameters can be used to easily parameterize content of wiki pages. Concrete values of page parameters can be part of a link to the page. In addition, parameter forms containing parameter editors can be specified enabling page users to change values of parameters and retrieve different variants of the information easily and without modifying the actual wiki page. To embed parameters and parameter editors in your wiki pages, use following macros:
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}{pre}
+&#123;parameter:param1|type=string|value=paramValue&#125;
+
+&#123;parameter:param2|type=enum:risk|value=moderate,high|multi=true&#125;
+
+&#123;parameter:param3|type=timePoint|value=version1.0|query=version*&#125;
+
+&#123;parameter:param4|type=enum|value=alm372|allowed-values=Polarion 2013 SR3>alm373,Polarion 2013 SR2>alm372&#125;
+
+&#123;parameter:param5|type=enum:@plan[template.id:release]|value=|allow-no-value=true&#125;
+
+{/pre}{code}
+
+{code:none}{pre}
+&#123;parameter:param|type=user|value=sDeveloper|role=project_user&#125;
+
+&#123;workitems: assignee.id:&#036;pageParameters.getAsString("param")&#125;
+
+&#123;workitems: assignee.id:
+ (&#036;pageParameters.getAllowedValuesAsString("param"," OR "))&#125;
+
+*Allowed values:* &#036;pageParameters.renderAllowedValues("param")
+
+*Direct access to value:* &#036;pageParameters.param.getName()
+
+{/pre}{code}
+
+</td><td>
+The <tt>&#123;parameter&#125;</tt> macro defines the properties of a single wiki page parameter.
+
+*id* and *type* are required.
+
+* *id* (default) - parameter ID.
+* *type* - <tt>__string__|boolean|date|timePoint|user|enum|enum:enumType|project</tt> - defines type of the parameter. For <tt>enum</tt> type it is necessary to specify either an enumeration type like <tt>enum:severity</tt> or add parameter <tt>allowed-values</tt> with labels and values separated by <tt>&#34;&#62;&#34;</tt>. If separator needs to be used in label or value then it can be escaped like <tt>&#92;&#62;</tt>.
+* *value* - defines the default value for the parameter. The special constant <tt>@current</tt> is available for current date, project, time point, or user. You may also use aliases <tt>@today</tt> for current date, and <tt>@me</tt> for current user.
+* *allowed-values* - defines manually assigned allowed values. Delimiter is ',' (the comma character). Valid for all types except <tt>date</tt> and <tt>boolean</tt>. 
+* *multi* - <tt>__false__|true</tt> - if ~~true~~, the parameter can contain more than one value. Valid for all types except <tt>date</tt> and <tt>boolean</tt>.
+* *allow-no-value* - <tt>__false__|true</tt> - if ~~true~~, then parameter editor values will contain the value ~~Not Selected~~ which is in effect an empty value. Valid for all types except <tt>date</tt> and <tt>boolean</tt>.
+* *query* - defines allowed values via a query. Valid only for <tt>timePoint</tt> and <tt>project</tt> types.
+* *sortby* - defines sorting for allowed values specified via query. Valid only for <tt>timePoint</tt> and <tt>project</tt> types.
+* *role* - defines allowed values via user role. Only for <tt>user</tt> types.
+* *project* - specifies a specific project from which parameter values are taken.
+* *group* - specifies a specific project group from which parameter values are taken.
+
+If neither project nor group is set, then the macro will use the current context.
+
+Velocity object &#36;pageParameters API:
+
+* String getAsString(String id);
+
+* String getAsString(String id, String separator);
+
+* String getDateForQuery(String id);
+
+* String render(String id, String separator);
+
+* String render(String id);
+
+* String renderAllowedValues(String id);
+
+* String renderAllowedValues(String id, String separator);
+
+* String getAllowedValuesAsString(String id);
+
+* String getAllowedValuesAsString(String id, String separator);
+
+</td></tr>
+<tr><td>
+{code:none}{pre}
+{parameter-form}
+
+Param1: {parameter-editor:param1}
+
+Param2: {parameter-editor:param2}
+
+Param3: {parameter-editor:param3|width=170}
+
+Param4: {parameter-editor:param4}
+
+{parameter-form-submit}
+{parameter-form-save}
+
+{parameter-form}
+{/pre}{code}
+</td><td>
+
+The <tt>&#123;parameter-editor&#125;</tt> macro provides a graphical editor enabling a page user to change value(s) of a parameter macro defined in the page source.
+
+*id* is required.
+
+* *id* (default) - parameter ID.
+* *width* - width of editor defined in pixels by default or in percentages.
+
+Parameter editors and their associated buttons need to be surrounded by the <tt>&#123;parameter-form&#125;</tt> macro.
+
+* *method* (optional) - <tt>__get__|post</tt> - defines method used for form submission. It causes the macro to use the specified value (~~get~~ or ~~post~~) in the ~~method~~ attribute of the &lt;form&gt; element in the page's HTML. 
+
+The <tt>&#123;parameter-form-submit&#125;</tt> macro enables the page user to submit changed values in the parameter form.
+
+The <tt>&#123;parameter-form-save&#125;</tt> macro enables the page user to save new default values for parameters, updating the parameter definitions in page source. User must have permissions to edit the page.
+
+It is recommended to use no more than one <tt>&#123;parameter-form-submit&#125;</tt>, one <tt>&#123;parameter-form-save&#125;</tt> and one <tt>&#123;parameter-form&#125;</tt> pair on one page.
+
+__Example__: (image)
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/editors_example.png"/>
+
+</td></tr>
+</table>
+
+
+1.1 Dashboard
+[top|${doc.name}]\\
+
+Polarion includes the Highcharts library that enables you to render interactive charts in Dashboards and Wiki pages. These charts can be also exported to PDF. See *[Wiki Highcharts Help > Doc.HighchartsHelp]* for documentation. #if ($xwiki.isALM())See also the Highchart Report macro topic in this file (Wiki Syntax Help).
+
+In addition to, or in place of the above-mentioned charts, Dashboards can use the following macros to display project status information and statistics in meaningful ways that help people understand the true status of development.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code}{pre}
+{dashboard-property:build-success-ratio}
+
+{dashboard-property:build-frequency}
+{/pre}{code}
+</td><td>
+The *Dashboard Property* macro provides useful data about builds. The values 
+are calculated on project where the macro is used. The macro
+can be used only in the project scope.
+
+*Usage*:
+
+<tt>{pre}{dashboard-property}{/pre}</tt>
+
+*Parameters*:
+
+Only one parameter is allowed at a time.
+
+ * *build-success-ratio* - returns a ratio of successful builds as a line graph
+ * *build-frequency* - returns the number of builds
+ 
+</td></tr>
+
+<tr><td>
+{code}{pre}
+{fact:base=repo-analysis|value=NOF}
+
+{fact:base=workitems-data|value=TRACEABILITY-REQUIREMENTS-COMMITS}
+
+{fact:base=workitems-data|value=TRACEABILITY-COMMITS-REQUIREMENTS}
+
+{fact:base=processaudit/project-level/source-check-aggregate|
+value=overall-test-results}
+
+{fact:base=processaudit/project-level/source-check-aggregate|
+value=overall-test-coverage}
+{/pre}{code}
+</td><td>
+The *Fact* macro is used to display values from Fact Base.
+
+Usage: 
+
+<tt>{pre}{fact:base|value|display}{/pre}</tt>
+
+*Parameters*:
+ * *base* - the name of the factbase where values are stored
+ * *value* - value from the specified factbase
+ * *display* (optional) - <tt>__content__|label</tt> you can define whether label or value from factbase will be rendered 
+
+Reference information about fact bases and values 
+can be found in Administration Reference: 
+<a href="/polarion/help/topic/com.polarion.xray.doc.user/refchAdminRef.html#ref_admin_calcs_facts" title="Calculations and Facts" target="_blank">Calculations and Facts</a>.
+
+</td></tr>
+
+<tr><td>
+{code}{pre}
+{line-chart:report-path=charts/workitems-trend.xml|
+items=workitems-trend-data:RESOLVED-UNRESOLVED/*|
+tags=14|width=100%|height=100%}
+
+{line-chart:report-path=charts/coverage-trend.xml|
+items=processaudit/project-level/source-check-aggregate-trend:
+#test-coverage.ratio
+|tags=14|yAxisName=Coverage %|width=100%|height=100%}
+{/pre}{code}
+</td><td>
+The *Line Chart* macro is used for displaying data as line chart graph. 
+It can be applied to show various trend charts as a Work Items Trend, Test Coverage, Testing, etc.
+
+*Usage*:
+
+<tt>{pre}{line-chart:report-path|items|tags|width|height}{/pre}</tt>
+
+*Parameters*:
+ * *report-path* - URL to data cache that it stores information for graph rendering
+ * *items* - compound key that contains name of factbase and its value, the key is composed with following syntax: <i>fastbaseId:value</i>
+ * *tags* (optional) - number of values on x-axis, or <i>all</i> to show all factbase items, default value is 7
+ * *yAxisName* (optional) - y-axis description
+ * *width* - width of the graph (in pixels)
+ * *height* - height of the graph (in pixels)
+ 
+The first example mentioned in this section shows a trend chart based on the <i>workitems-trend-data</i> report.<br/>
+
+The first parameter is <i>report-path</i>. It points to <i>charts/workitems-trend.xml</i> that
+it is the key of the data cache containing the data for graph rendering.<br/>
+
+Second parameter contains a compound key of a factbase: <i>workitems-trend-data</i> and its value: <i>RESOLVED-UNRESOLVED/\*</i>.<br/>
+The slash with asterisk at the end of value means that all values beginning with <i>RESOLVED-UNRESOLVED</i> will be selected from the factbase
+(e.g. <i>RESOLVED-UNRESOLVED.RESOLVED</i>, and <i>RESOLVED-UNRESOLVED.UNRESOLVED</i> will also be selected).<br/>
+
+When referencing s specific element in a factbase, e.g.<i>RESOLVED</i> or <i>UNRESOLVED</i> as in the above example, the entire key must be prefixed with the pound symbol (#). 
+For example: <tt>items=workitems-trend-data:#RESOLVED-UNRESOLVED.UNRESOLVED</tt><br/>
+
+You can use default reports or define your own reports with some other useful data. Configuration of custom
+reports is described in the Administrator's Guide component of Help:
+<a href="/polarion/help/topic/com.polarion.xray.doc.user/agchConfigReports.html#ag_config_reports" title="Working with Report Configurations" target="_blank">Configuring Reports</a>.
+
+</td></tr>
+
+<tr><td>
+{code}{pre}
+{piechart:report-path=charts/repo-statistics-Pie3D.xml|
+width=100%|height=100%}
+{/pre}{code}
+</td><td>
+The *Pie Chart* macro displays data as pie chart. It shows repository statistics such as the number of files in projects.
+
+*Usage*:
+
+<tt>{pre}{piechart:report-path|width|height}{/pre}</tt>
+
+*Parameters*:
+ * *report-path* - URL to the source data to be displayed
+ * *width* - width of the chart (in pixels)
+ * *height* - height of the chart (in pixels)
+ 
+The example mentioned in this section shows repository statistics based on a generated xml file.
+The xml file can be generated by a custom report to show other useful values. How to configure
+your own reports is described in the Administrator's Guide component of Help: 
+<a href="/polarion/help/topic/com.polarion.xray.doc.user/agchConfigReports.html#ag_config_reports" title="Working with Report Configurations" target="_blank">Configuring Reports</a>.
+
+</td></tr>
+
+<tr><td>
+{code}{pre}
+{live-plan:width=100%|height=100%}
+{/pre}{code}
+</td><td>
+The *Live Plan* macro is used to display a Live Plan chart.
+
+Usage: 
+
+<tt>{pre}{live-plan:width|height}{/pre}</tt>
+
+*Parameters*:
+ * *width* - width of the chart (in pixels)
+ * *height* - height of the chart (in pixels)
+
+</td></tr>
+
+<tr><td>
+{code}{pre}
+{report:report-path=html/qualitycentre-portlet-inner.html|
+width=100%|height=100%}
+
+{report:report-path=html/reusecalculator/top-projects-inner.html|
+width=100%|height=100%}
+
+{report:report-path=html/reusecalculator/top-packages-inner.html|
+width=100%|height=100%}
+{/pre}{code}
+</td><td>
+The *Report* macro is used to render generated HTML reports 
+from system calculations. It can be used to render reports from
+Process Score, Quality Score Card, Top5 Projects or Top5 Packages.
+
+Usage:
+
+<tt>{pre}{report:report-path|width|height}{/pre}</tt>
+
+*Parameters*:
+ * *report-path* - URL to the source data to be displayed. It must be a HTML page generated by a system calculation.
+ * *width* - width of the graph (in pixels)
+ * *height* - height of the graph (in pixels)
+ 
+If you want to configure your own reports, please see the Administrator's Guide component of Help:
+<a href="/polarion/help/topic/com.polarion.xray.doc.user/agchConfigReports.html#ag_config_reports" title="Working with Report Configurations" target="_blank">Configuring Reports</a>.
+
+</td></tr>
+
+<tr><td>
+{code}{pre}
+{highchart-report:report-path=charts/scrum-facts.js|width=800|height=400}
+{/pre}{code}
+</td><td>
+The *Highchart Report* macro is used to render generated Highchart reports. *[Here > Doc.HighchartsReportExample]* you can find example of report file's content.
+
+The physical path to script given in the example is:
+<tt>\[INSTALLATION ROOT FOLDER\]/data/RR/default/\[PROJECT ID\]/.reports/charts/scrum-facts.js</tt>
+
+Note that the string <tt>-facts.js</tt> is obligatory in the script name. So a valid name is something like <tt>scrum-facts.js</tt> or <tt>dailyreport-facts.js</tt>
+
+Usage:
+
+<tt>{pre}{highchart-report:report-path|width|height}{/pre}</tt>
+
+*Parameters*:
+ * *report-path* - URL of the source data to be displayed. It must point to a javascript that defines a Highcharts chart.
+ * *width* - width of the graph (in pixels)
+ * *height* - height of the graph (in pixels)
+</td></tr>
+
+<tr><td>
+{code}{pre}
+{update-report-footer:report-path=charts/workitems-trend.xml|
+calculation=trackeranalysis}
+
+{update-report-footer:report-path=charts/workitems-trend.xml|
+calculation=trackeranalysis-projectgroup}
+
+{update-report-footer:report-path=html/reusecalculator/top-projects-inner.html|
+calculation=reusecalculator}
+
+{update-report-footer:report-path=html/reusecalculator/top-packages-inner.html|
+calculation=reusecalculator}
+{/pre}{code}
+</td><td>
+The *Update Report Footer* macro is used as a footer line of macros described above. 
+It provides the possibility to explicitly update the source data of graphs and charts, 
+and monitor the update process.
+
+Usage:
+
+<tt>{pre}{update-report-footer:report-path|calculation}{/pre}</tt>
+
+*Parameters*:
+ * *report-path* - URL to the source data to be updated
+ * *calculation* - type of calculation to be updated
+ 
+Reference information about calculations and values 
+can be found in the Administration Reference component of Help: 
+<a href="/polarion/help/topic/com.polarion.xray.doc.user/refchAdminRef.html#ref_admin_calcs_facts" title="Calculations and Facts" target="_blank">Calculations and Facts</a>.
+
+</td></tr>
+</table>
+#end
+
+1.1 Test Management
+[top|${doc.name}]\\
+
+Test management support.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{create-testrun-button}
+
+{create-testrun-button:label=Create Manual Test Run|
+  project=playground|query=type:manual}
+{/pre}{code}
+</td><td>
+The <tt>\{create-testrun-button\}</tt> macro renders a button which opens dialog to create new Test Run from template.
+
+*Parameters*:
+ * *label* (optional) - text displayed as button label.
+ * *project* (optional, required in global context) - new Test Run will be created in this project.
+ * *query* (optional) - query used to filter the Test Run Templates displayed in the create dialog.
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+&lt;script>
+function createTestRun() {
+     top.createTestRun('$testRun.getProjectId()', '$testRun.getId()', null);
+}
+&lt;/script>
+&lt;button onclick="javascript:createTestRun();">Create Test Run&lt;/button>
+{/pre}{code}
+</td><td>
+The <tt>createTestRun</tt> Javascript function will open a dialog enabling user to create a new Test Run from a Test Run Template.
+
+*Parameters*:
+ * *project* - ID of the project in which the new Test Run will be created.
+ * *Test Run Template* - ID of the Test Run Template on which new Test Run will be based. Use <tt>null</tt> to allow user to select from the list of existing templates.
+ * *ID* - pre-fill the Test Run ID in the dialog.
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{recent-testruns}
+
+{recent-testruns:playground}
+
+{recent-testruns:playground|status=failed}
+
+{recent-testruns:playground|status=failed|executed=7|
+  query=type:performance|top=20}
+{/pre}{code}
+</td><td>
+The <tt>\{recent-testruns\}</tt> macro renders few recently executed Test Runs</tt>.
+
+*Parameters*:
+ * *project* (default) - ID of the Project. If the parameter is not specified current project will be used. 
+ * *status* (optional) - Test Runs only with specified status will be shown. If the parameter is not specified Test Runs with any status will be shown.   
+ * *executed* (optional) - Test Runs that were executed in specified number of last days will be shown. If the parameter is not specified there will be no limitation on execution date.
+ * *query* (optional) - the Lucene query string for filtering Test Runs.
+ * *top* (optional) - The maximum number of entries in the table. Default value is 50.
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{testrun-label}
+
+{testrun-label:elibrary/Sample Full Test 1}
+{/pre}{code}
+</td><td>
+The <tt>\{testrun-label\}</tt> macro renders label of the Test Run as ~~Test Run ID (Template ID)~~.
+
+*Parameters*:
+ * *testrun* (default) - ID of the Test Run. Can be specified as projectID/testRunID. If projectID is not specified, Test Run will be selected from current project. Default is <tt>@current</tt> when used on ~~Test Run~~ page.
+
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{testrun-overview}
+
+{testrun-overview:@current|show=onlyTop}
+
+{testrun-overview:playground/MyTestRun|show=both}
+
+{testrun-overview:playground/MyTestRun|show=graph}
+{/pre}{code}
+</td><td>
+The <tt>\{testrun-overview\}</tt> macro renders an overview with numbers of test records for each test result, numbers of executed and waiting test cases, and a pie chart graph with statistics.
+
+*Parameters*:
+ * *testrun* (default) - ID of the Test Run. Can be specified as projectID/testRunID. If projectID is not specified, Test Run will be selected from current project. Default is <tt>@current</tt> when used on ~~Test Run~~ page.
+ * *show* (optional) - determines which elements (graph, top row with results, bottom row) will be shown. Possible values are <tt>onlyTop</tt>, <tt>onlyBottom</tt>, <tt>both</tt>, <tt>graph</tt> and <tt>all</tt>. Default value is <tt>all</tt>.
+	
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{testrecords:result=failed}
+
+{testrecords:MyTestRun|result=passed|fields=testCase,executed|top=10}
+
+{testrecords:playground/MyTestRun|result=failed|fields=testCase,defect,
+  duration,executed,executedBy|top=10|show-comments=false}
+{/pre}{code}
+</td><td>
+The <tt>\{testrecords\}</tt> macro renders Test Records for specified Test Run</tt>.
+
+*Parameters*:
+ * *testrun* (default) - ID of the Test Run. Not required when the macro is used in the Test Run page, otherwise required. 
+ * *result* - Test Records with specified result will be shown.
+ * *fields* (optional) - List of Test Record fields. Possible values are: <tt>testCase, defect, duration, executed, executedBy</tt>. Default value is '<tt>testCase, defect</tt>'.
+ * *top* (optional) - The maximum number of entries in the table. Default value is <tt>50</tt>. If set to <tt>0</tt> (zero), all found items are shown.
+ * *show-comments* (optional) - <tt>true|false</tt> - if ~~true~~ additional test record details will be shown: test record verdict, comments and attachments, plus the ~~results of test steps~~ (if any). If ~~false~~ then only the selected (or default) fields will be shown. Default value is '<tt>true</tt>'.
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{testrun-status-button}
+{/pre}{code}
+</td><td>
+The <tt>\{testrun-status-button\}</tt> macro renders a button that shows current status of the 
+Test Run and allows the user to set a different status.
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{execute-testrun-button}
+
+{execute-testrun-button:testrun=MyTestRun|query=severity:smoke|
+  document=Testing/TestSpecification}
+{/pre}{code}
+</td><td>
+The <tt>\{execute-testrun-button\}</tt> macro renders a button which opens the Work Items table or Document tree with Test Cases to be executed.
+
+*Parameters*:
+ * *testrun* (optional) - ID of the Test Run that defines the Project and Test Run for Test Cases. Not required when the macro is used in a Test Run's page, otherwise required.
+ * *document* (optional) - Name of a Document in which the Test Cases to be executed are defined. Defaults to the Document specified in the Select Test Cases property of the Test Run.
+ * *query* (optional) - A query to filter the Test Cases to be executed. The project ID is automatically appended to the query by the macro, so you do not need to specify it.\\ \\If this parameter is not specified, it defaults to a query for all not-executed Test Cases of the Test Run.
+ * *sortby* (optional) - IDs of the fields to use to sort the Test Cases. Supports the same fields as the &#123;workitems&#125; macro. Do not use this parameter if *document* is specified.
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{testrun-property:type}
+
+{testrun-property:playground/MyTestRun|type as image-text}
+
+{testrun-property:testrun=MyTestRun|property=type as image-text}
+{/pre}{code}
+</td><td>
+The <tt>\{testrun-property\}</tt> macro renders a property of Test Run.
+
+*Parameters*:
+ * *testrun* (optional) - ID of the Test Run. Not required when the macro is used in Test Run page, otherwise required. 
+ * *property* - property of the Test Run. Supports following syntax: 
+ ** <tt>fieldID as fieldType</tt> - defines how the enumeration values will be formatted
+ ** ~~fieldType~~: <tt>image, image-text, text-image, text</tt>
+	
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{export-tests}
+
+{export-tests:query=severity:smoke|document=Testing/TestSpecification|
+  template=Tests.xlsx}
+{/pre}{code}
+</td><td>
+The <tt>\{export-tests\}</tt> macro exports Test Cases to an Excel file for manual execution outside Polarion. The exported file can later be imported using macro <tt>\{import-test-results\}</tt>.
+
+*Parameters*:
+ * *testrun* (optional) - ID of the Test Run that defines the Project and Test Run for Test Cases. Not required when the macro is used in a Test Run's page, otherwise required.
+ * *document* (optional) - Name of a Document in which the Test Cases to be executed are defined. Defaults to the Document specified in the Select Test Cases property of the Test Run.
+ * *query* (optional) - A query to filter the Test Cases to be executed. The project ID (or IDs in case of cross project test run) is automatically appended to the query by the macro, so you do not need to specify it.\\ \\If this parameter is not specified, it defaults to a query for all not-executed Test Cases of the Test Run.
+ * *sortby* (optional) - IDs of the fields to use to sort the Test Cases. Supports the same fields as the &#123;workitems&#125; macro. Do not use this parameter if *document* is specified.
+ * *template* (optional) - Name of the Excel export template that should be used by the exporter.
+ * *file-name* (optional) - Name of the exported Excel file.
+ * *label* (optional) - Label of the export link that is rendered on the Test Run page.
+  
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{import-test-results}
+{/pre}{code}
+</td><td>
+The <tt>\{import-test-results\}</tt> macro imports test results from an Excel file exported using macro <tt>\{export-tests\}</tt>.
+
+*Parameters*:
+ * *testrun* (optional) - ID of the Test Run. Not required when the macro is used in the Test Run page, otherwise required.
+ * *label* (optional) - Label of the import link that is rendered on the Wiki page.
+ * *template-defect* (optional) - ID of a defect template, e.g. <tt>elibrary/WI-1</tt> or <tt>WI-1</tt>. If Project is not specified, the defect must exist in the same Project as the Test Run.
+  
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{import-automated-test-results}
+{/pre}{code}
+</td><td>
+The <tt>\{import-automated-test-results\}</tt> macro imports results of automated tests from a file</tt>.
+
+*Parameters*:
+ * *testrun* (optional) - ID of the Test Run which should track and display the imported test results. Can be skipped when the macro is used in a Test Run page, otherwise it is required.
+ * *template-defect* (optional) - ID of a Defect type Work Item which should be used as the template for new Defects created by the importer as a result of failed tests. Examples <tt>elibrary/WI-1</tt> (project ID/Work Item ID) or <tt>WI-1</tt> (just Work Item ID). If project ID is not specified, the Defect item must exist in the same project as the the Test Run.
+ * *template-testcase* (optional) - ID of a Test Case type Work Item which should be used as the template for Test Cases to executed in the Test Run. Examples: <tt>elibrary/WI-1</tt> (project ID/Work Item ID) or <tt>WI-1</tt> (just Work Item ID). If project ID is not specified, the Test Case item must exist in the same Project as the Test Run.
+
+ * *max-created-defects* (optional) - The maximum number of test failures before a single summary Defect item covering all failures is created, rather than an individual Defect item for each failed test.
+ * *max-created-defects-percent* (optional) - The maximum percentage of tests that can fail before a single summary Defect item is created rather than an individual Defect item for every failed test. For example, 10 means that 10 percent of all Test Cases in the Test Run can fail before Defect creation switches to a summary Defect rather than individual Defects.
+  
+</td></tr>
+#######################################################################################
+</table>
+
+1.1 Plans
+[top|${doc.name}]\\
+
+Plan support.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{plan-status-button}
+{/pre}{code}
+</td><td>
+The <tt>\{plan-status-button\}</tt> macro renders a button that shows current status of the 
+Plan and enables the user to set a different status. It works in Plan pages only, and should 
+not be used in Wiki report pages.
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{plan-burnup}
+
+{plan-burnup:elibrary/Sample Plan 1}
+
+{plan-burnup:label=Burn up|yAxisName=story points|height=600|width=800}
+
+{plan-burnup:scale=week|baseDate=5}
+{/pre}{code}
+</td><td>
+The <tt>\{plan-burnup\}</tt> macro renders a burn up chart for the plan.
+
+*Parameters*:
+ * *plan* (default) - ID of the Plan. Can be specified as projectID/planID. If projectID is not specified, Plan will be selected from current project. Default is <tt>@current</tt> when used on ~~Plan~~ page.
+ * *height* (optional) - height of the chart in pixels. Default value is <tt>300</tt>
+ * *width* (optional) - width of the chart in pixels. Default value is <tt>400</tt>
+ * *scale* (optional) - <tt>__day__|week|month</tt> - determine what dates will be used on axis X: every day, one day per week, one day per month.
+ * *baseDate* (optional) - day of a week or a month (accordingly *scale* parameter). Valid values for <tt>week</tt> are <tt>1..7</tt> (Sunday..Saturday). Valid values for <tt>month</tt> are <tt>1..31</tt>. Default value is <tt>1</tt>.
+ * *label* (optional) - title of the chart
+ * *yAxisName* (optional) - label for Y axis
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{plan-burndown}
+
+{plan-burndown:elibrary/Sample Plan 1}
+
+{plan-burndown:label=Burn up|yAxisName=story points|height=600|width=800}
+
+{plan-burndown:scale=week|baseDate=5}
+{/pre}{code}
+</td><td>
+The <tt>\{plan-burndown\}</tt> macro renders a burn down chart for the plan.
+
+*Parameters*:
+ * *plan* (default) - ID of the Plan. Can be specified as projectID/planID. If projectID is not specified, Plan will be selected from current project. Default is <tt>@current</tt> when used on ~~Plan~~ page.
+ * *height* (optional) - height of the chart in pixels. Default value is <tt>300</tt>
+ * *width* (optional) - width of the chart in pixels. Default value is <tt>400</tt>
+ * *scale* (optional) - <tt>__day__|week|month</tt> - determine what dates will be used on axis X: every day, one day per week, one day per month.
+ * *baseDate* (optional) - day of a week or a month (accordingly *scale* parameter). Valid values for <tt>week</tt> are <tt>1..7</tt> (Sunday..Saturday). Valid values for <tt>month</tt> are <tt>1..31</tt>. Default value is <tt>1</tt>.
+ * *label* (optional) - title of the chart
+ * *yAxisName* (optional) - label for Y axis
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{workitems-board:columns=draft, open as To-do;inprogress as In Progress; done as Done}
+
+{workitems-board:Plan1|
+	columns=draft, open as To-do;inprogress as In Progress; done as Done}
+
+{workitems-board:eLibrary/Plan1|roles=implements|
+	columns=draft, open as To-do;inprogress as In Progress; done as Done|
+	compact-statuses=done}
+
+{/pre}{code}
+</td><td>
+The <tt>\{workitems-board\}</tt> macro renders a workitems board for the plan.
+
+*Parameters*:
+ * *plan* (default) - ID of the Plan. Can be specified as projectID/planID. If projectID is not specified, Plan will be selected from current project. Default is <tt>@current</tt> when used on ~~Plan~~ page.
+ * *columns* (required) - defines what are the columns, and what are the item statuses in each column. Can be defined in format: status1, status2, status3 as ColumnName1; status4, status5 as ColumnName2
+ * *roles* (optional) - subtask backlink roles (to show e.g. only implementing tasks), default value is roles with 'parent' attribute
+ * *compact-statuses* (optional) - work items with these statuses will be shown in compact form, default value is empty list
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{plan-open-in-table}
+
+{plan-open-in-table:elibrary/Sample Plan 1}
+{/pre}{code}
+</td><td>
+The <tt>\{plan-open-in-table\}</tt> macro renders a button which opens a table of Work Items contained in the Plan. 
+It works in Plan pages only, and should not be used in Wiki report pages.
+
+*Parameters*:
+ * *plan* (default) - ID of the Plan. Can be specified as projectID/planID. If projectID is not specified, Plan will be selected from current project. Default is <tt>@current</tt> when used on ~~Plan~~ page.
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{plan-label}
+
+{plan-label:elibrary/Sample Plan 1}
+
+{plan-label:child-template=Sprint}
+{/pre}{code}
+</td><td>
+The <tt>\{plan-label\}</tt> macro renders label of the Plan as ~~Plan Name (End Date)~~ and parent Plans above and child Plans below.
+
+*Parameters*:
+ * *plan* (default) - ID of the Plan. Can be specified as projectID/planID. If projectID is not specified, Plan will be selected from current project. Default is <tt>@current</tt> when used on ~~Plan~~ page.
+ * *child-template* (optional) - ID of the Template for creating child Plans. Can be specified as projectID/planID. If projectID is not specified, Template will be selected from the same project as the Plan selected by *plan* parameter.
+ * *create-button* (optional) - <tt>__yes__|no</tt> defines whether or not to show the action icon for creating child Plans.
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{plan-progress}
+
+{plan-progress:elibrary/Sample Plan 1}
+
+{plan-progress:show-label=false}
+
+{plan-progress:show-ideal-progress=false}
+
+{plan-progress:width=50%}
+
+{plan-progress:width=200px}
+
+{/pre}{code}
+</td><td>
+The <tt>\{plan-progress\}</tt> macro renders progress bar of the Plan as ~~Plan Name (End Date)~~.
+
+*Parameters*:
+ * *plan* (default) - ID of the Plan. Can be specified as projectID/planID. If projectID is not specified, Plan will be selected from current project. Default is <tt>@current</tt> when used on ~~Plan~~ page.
+ * *show-ideal-progress* (optional) - <tt>__true__|false</tt> - if ~~false~~, then any information about ideal progress won't be shown.
+ * *show-label* (optional) - <tt>__true__|false</tt> - if ~~false~~, then left label will be hidden.
+ * *width* (optional) - optional css width string used for the width of the bar without the label. Default value is <tt>400px</tt>
+</td></tr>
+#######################################################################################
+<tr><td>
+{code:none}{pre}
+{plans}
+
+{plans:elibrary/sprint1}
+
+{plans:project=elibrary|create-button=false}
+
+{plans:group=/Demo Projects}
+
+{plans:query=id:sp*|child-template=elibrary/Iteration}
+{/pre}{code}
+</td><td>
+The <tt>\{plans\}</tt> macro renders plans satisfying some query.
+
+*Parameters*:
+
+Either one of *plan*, *query*, *sqlQuery*, *project* or *group* is required parameter except when used on ~~Plan~~ page where the current plan is used if none of these parameters is specified.
+More than one of these parameters can not used at same time except *query* which can be used together with *project* or *group*.
+ 
+
+ * *plan* (default) - ID of the parent Plan. By default, its child plans will be displayed. Can be specified as projectID/planID. If projectID is not specified, Plan will be selected from current project. Default is <tt>@current</tt> when used on ~~Plan~~ page.
+ * *query* (optional) - displays plans filtered by a query string. Use ~~@all~~ to get all Plans from current scope or scope specified by *project* or *group* parameter.
+ * *sqlQuery* (optional) - displays plans based on SQL database query search. See <a href="/polarion/sdk/doc/database/index.html" target="_blank">*Database reference*</a> for schema and query examples.
+ * *project* (optional) - specifies the name of the project to be queried (if other than the current project)
+ * *group* (optional) - enables filtering of the results by project group
+   ** <tt>group=/\<project group\></tt> - searches through projects and child project groups within the specified project group only
+   ** <tt>group=/</tt> - searches through all projects and project groups in the current repository
+ * *child-template* (optional) - Template used for creating child plans.
+ * *create-button* (optional) - <tt>__true__|false</tt> - if ~~true~~ then button for creating child plans will be displayed. 
+</td></tr>
+#######################################################################################
+</table>
+
+1.1 Social Media
+[top|${doc.name}]\\
+
+Social media support.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code:none}{pre}
+{activity-stream}
+
+{activity-stream:eTestman|top=30}
+
+{activity-stream:Eric Testman|top=30}
+
+{activity-stream:Eric Testman|top=30|activities=workitems:updated, jobs}
+
+{activity-stream:query=NOT HAS_VALUE:testrun.groupId}
+
+{activity-stream:query=HAS_VALUE:workitem.type}
+
+{/pre}{code}
+</td><td>
+The <tt>\{activity-stream\}</tt> macro renders a list of activities.
+
+*Parameters*:
+ * *activities* (optional) - Defines a list of Activity Source names. If specified, the Activity service renders only the Activity Sources listed in this parameter. Keep in mind that every Activity Source provides one or more Activity types. <br><br>Activity source IDs (types) : 
+ ** workitems(created, updated, deleted)
+ ** builds(started, finished, finished_with_failures, failed, canceled)
+ ** jobs(started, finished, failed, canceled, aborted)
+ ** testruns(created, updated, status-changed, deleted)
+ ** commits
+ ** administration<br><br>~~Examples:~~<br><tt>activities=jobs:finished, builds:started, builds:failed</tt><br><tt>activities=workitems:updated, testruns:updated, commits</tt><br><br>
+ * *query* (optional) - Defines a query used to retrieve the activities to display. Activity Source-specific fields are indexed with prefixes.<br><br> ~~Examples:~~ workitem.type,  workitem.id, workitem.revision, job.rootJob, job.name, job.worker, job.info, revision.name, build.tag, build.stamp, build.artifact.groupId, build.artifact.id, build.project.id, testrun.revision, testrun.groupId, testrun.type, testrun.status<br><br> Both user name and user ID are indexed for each activity. This enables use of a special shorthand for this parameter, shown in the above examples, which enables you to limit the activity stream to the activity of a specific user. For example, <tt>\{activity-stream:eTestman\}</tt> gives the same result as <tt>\{activity-stream:query=eTestman\}</tt>.<br><br>To filter activities according to whether or not the indexed field is empty, use HAS_VALUE or NOT HAS_VALUE. In the 2 examples (above, left), the first will show activities for all items with empty ~~groupId field~~, and the second will show activities  having some value in the ~~type~~ field for Work Items.<br><br>
+ * *top* (optional) - Specifies the maximum number of Activities to be displayed in the list. Default is 10.
+ * *project* (optional) - Specifies the ID of a project from which to load Activities. If not specified, the current project is used.
+ * *group* (optional) - Specifies the ID of a project group from which to load activities.
+</td></tr>
+</table>
+
+1.1 Other
+[top|${doc.name}]\\
+
+Other macros you can benefit from.
+
+<table class="wiki-table" style="width:95%;">
+<thead><tr><th style="width:60%;">Wiki Code</th><th style="width:40%;">Result, Comment</th></tr></thead>
+<tr><td>
+{code}{pre}
+*Nearest timepoint*: {timepoint}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{timepoint}{/pre}</tt> macro renders nearest Time Point defined in the current project.
+
+__Example__: (image)
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/timepoint.png"/>
+
+</td></tr>
+<tr><td>
+{code}{pre}
+{latestbuild}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{latestbuild}{/pre}</tt> macro renders build properties - artifacts, author, timestamp.
+
+__Example__: (image)
+
+<img src="/polarion/wiki/skins/sidecar/syntaxhelp/build.png" />
+</td></tr>
+<tr><td>
+{code}{pre}
+{createprojectbutton}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{createprojectbutton}{/pre}</tt> macro renders a button which allows users to create a new project. 
+(A message appears when users click the button if they do not have the necessary permissions to create projects.)
+
+__Example__:
+
+{createprojectbutton}
+
+</td></tr>
+<tr><td>
+{code}{pre}
+*Number of files*: {fact:base=repo-analysis|value=NOF}
+{/pre}{code}
+</td><td>
+The <tt>{pre}{fact}{/pre}</tt> macro renders some useful statistics
+
+~~{pre}{fact:base=repo-analysis|value=NOF}{/pre}~~
+* renders a count of files
+
+__Example__:
+
+*Number of files*: {fact:base=repo-analysis|value=NOF}\\
+
+</td></tr>
+
+<tr><td>
+{code}
+&#123;include-page:playground/_default.Home&#125;
+
+&#123;include-page:/_default.Global Page&#125;
+{code}
+</td><td>
+The <tt>\{include-page\}</tt> macro inserts content from another page into the current page.
+
+~~&#123;include-page:ProjectName(optional)/SpaceName(optional).PageName&#125;~~
+
+*Notes:*
+ * The Velocity macros defined in the included page cannot be used in the current page. For that scenario, use the <tt>\{include-macros\}</tt> macro instead.
+ * You can use velocity variables when passing argument to this macro, however you cannot use the characters <tt>{</tt> and <tt>}</tt> inside the macro. For example:
+ ** <tt>&#123;include-page:\$page&#125</tt> is valid
+ ** <tt>&#123;include-page:"\$&#123;space&#125;.\$&#123;name&#125;"&#125;</tt> is a syntax error<br/>In this case when you need to use curly brackets <tt>&#123; and &#125;</tt> in the argument of the <tt>\{include-page\}</tt> macro, you can assign the necessary value to a single variable and then use it without the curly brackets.<br/> Example:<br/><tt>\#set(\$page = "\$&#123;space&#125;.\$&#123;name&#125;")<br />&#123;include-page:\$page&#125;</tt>
+ * Note that this macro replaces the old deprecated macros <tt>\{includeForm\}</tt> and <tt>\{includeTopic\}</tt>, which had a problem with executing the contained Velocity code twice (although it is rendered in the current page only once) due to pre-processing of the macros defined in the included page.
+</td></tr>
+
+<tr><td>
+{code}
+&#123;include-macros:playground/_default.Macros&#125;
+
+&#123;include-macros:/_default.Global Page&#125;
+{code}
+</td><td>
+The <tt>\{include-macros\}</tt> macro imports all Velocity macros defined in an included page so that they can be used in the current page.
+
+~~&#123;include-macros:ProjectName(optional)/SpaceName(optional).PageName&#125;~~
+
+*Notes:*
+ * The ~~content~~ of the page that defines the macros is ~~not~~ included in the current page. (Compare with <tt>\{include-page\}</tt>).
+ * You cannot use Velocity variables when passing an argument to this macro.
+</td></tr>
+
+<tr><td>
+{code:none}
+&#123;page-break:VALUE&#125;
+{code}
+</td><td>
+The <tt>\{page-break\}</tt> macro is applicable only in PDF export. It takes one required 
+parameter and the VALUE can be:
+<ul>
+<li><strong>page</strong> - text below this macro will start on new page</li>
+<li><strong>even-page</strong> - text below this macro will start on new even page</li>
+<li><strong>odd-page</strong> - text below this macro will start on new odd page</li>
+</ul>
+</td></tr>
+<tr><td>
+{code:none}
+&#123;keep-together&#125;
+Forces multi-line text to be shown on a single page
+&#123;keep-together&#125;
+{code}
+</td><td>
+The <tt>\{keep-together\}</tt> macro is applicable only in PDF export. It takes no 
+parameter. The reason is to render the content of this macro in a single page. For instance, 
+entries from an enumeration should be rendered in one page, or a block consisting of an image 
+with its description. The use of this macro implies that the content will not be rendered in 
+two or more pages.
+</td></tr>
+<tr><td>
+{code:none}
+&#123;show:pdf&#125;
+See <a href="../../doc/sdk.pdf">Polarion SDK Main page</a>
+&#123;show&#125;
+&#123;show:wiki&#125;
+See [Polarion SDK Main page > Documentation.Main]
+&#123;show&#125;
+{code}
+</td><td>
+The <tt>\{show:VALUE\}</tt> macro takes one required parameter and it is intended to show 
+some information according the VALUE:
+<ul>
+<li><strong>wiki</strong> - text inside the macro is shown only on wiki pages (no PDF)</li>
+<li><strong>pdf</strong> - text inside the macro is used only for PDF export</li>
+<li><strong>none</strong> - text inside the macro is omitted in the rendering process</li>
+</ul>
+</td></tr>
+<tr><td>
+{code:none}
+&#123;showPrefix:Prefix_|variable=myPage&#125;
+This is page \$myPage.
+&#123;showPrefix&#125;
+&#123;showPrefix:prefix=Template&#125;
+&#123;hint&#125;Not available.&#123;hint&#125;
+&#123;showPrefix&#125;
+{code}
+</td><td>
+The <tt>\{showPrefix\}</tt> macro renders its content only if name of the current page starts with given prefix.
+
+*Usage:*
+
+<tt>{pre}&#123;showPrefix:prefix|variable&#125;{/pre}</tt>
+
+*Parameters*:
+ * *prefix* - page name prefix
+ * *variable* (optional) - Velocity variable which will hold name of the page without prefix
+
+__Example__: (if put into page named "Prefix_123")
+
+This is page 123.
+
+</td></tr>
+<tr><td>
+{code:none}
+&#123;showNotPrefix:Template&#125;
+This is not a template page.
+&#123;showNotPrefix&#125;
+{code}
+</td><td>
+The <tt>\{showNotPrefix\}</tt> macro renders its content only if name of the current page does not start with given prefix.
+
+*Usage:*
+
+<tt>{pre}&#123;showNotPrefix:prefix&#125;{/pre}</tt>
+
+*Parameters*:
+ * *prefix* - page name prefix
+
+__Example__: (if put into page named "Prefix_123")
+
+This is not a template page.
+
+</td></tr>
+</table>
+
+1.1 Polarion SDK
+[top|${doc.name}]
+
+The Polarion SDK (Software Development Kit) contains documentation of available APIs and the embedded database schema, plus libraries, source code, and code examples for developers who want to develop custom extensions to Polarion's standard features and functionality. You can access the <a href="/polarion/sdk/index.html" target="_blank">Polarion SDK</a> content via your web browser.
+
+Polarion Wiki pages can be extended by means of the following <a href="http://velocity.apache.org/engine/1.4/user-guide.html" target="_blank">Apache Velocity</a> variables and using respective Polarion API classes and interfaces that are documented in <a href="/polarion/sdk/doc/javadoc/index.html" target="_blank">Javadoc</a>.
+
+{table}
+Variable | API Class | Note
+\$calendarTool | <a href="/polarion/sdk/doc/javadoc/com/polarion/wiki/util/CalendarTool.html" target="_blank">com.polarion.wiki.util.CalendarTool</a> | -
+\$document | <a href="/polarion/sdk/doc/javadoc/com/polarion/alm/tracker/model/IModule.html" target="_blank">com.polarion.alm.tracker.model.IModule </a> | Only available on Wiki Content Blocks. (Not available for Wiki Pages.)
+\$me | NA | Available in Velocity context only. References the ID of the current user when used in a wiki page.
+\$page | <a href="/polarion/sdk/doc/javadoc/com/polarion/alm/wiki/model/IWikiPage.html" target="_blank">com.polarion.alm.wiki.model.IWikiPage</a> | -
+\$plan | <a href="/polarion/sdk/doc/javadoc/com/polarion/alm/tracker/model/IPlan.html" target="blank">com.polarion.alm.tracker.model.IPlan</a> | Available on old Classic Wiki pages that were used as Plan pages. 
+\$platformService | <a href="/polarion/sdk/doc/javadoc/com/polarion/platform/IPlatformService.html" target="_blank">com.polarion.platform.IPlatformService</a> | -
+\$projectService | <a href="/polarion/sdk/doc/javadoc/com/polarion/alm/projects/IProjectService.html" target="_blank">com.polarion.alm.projects.IProjectService</a> | -
+\$securityService | <a href="/polarion/sdk/doc/javadoc/com/polarion/platform/security/ISecurityService.html" target="_blank">com.polarion.platform.security.ISecurityService</a> | -
+\$testManagementService | <a href="/polarion/sdk/doc/javadoc/com/polarion/alm/tracker/ITestManagementService.html" target="_blank">com.polarion.alm.tracker.ITestManagementService</a> | -
+\$testRun | <a href="/polarion/sdk/doc/javadoc/com/polarion/alm/tracker/model/ITestRun.html" target="blank">com.polarion.alm.tracker.model.ITestRun</> | Available on old Classic Wiki pages that were used as Test Run pages.
+\$trackerService | <a href="/polarion/sdk/doc/javadoc/com/polarion/alm/tracker/ITrackerService.html" target="_blank">com.polarion.alm.tracker.ITrackerService</a> | -
+\$transactionService | <a href="/polarion/sdk/doc/javadoc/com/polarion/platform/ITransactionService.html"target="_blank">com.polarion.platform.ITransactionService</a> | -
+\$wikiService | <a href="/polarion/sdk/doc/javadoc/com/polarion/alm/wiki/IWikiService.html" target="_blank">com.polarion.alm.wiki.IWikiService</a> | -
+{table}\\
+]]></content>
+</wiki-page>

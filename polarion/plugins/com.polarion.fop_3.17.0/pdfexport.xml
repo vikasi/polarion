@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<pdfexport>
+
+  <!-- Configuration for PDF exports - considered only if located alongside the polarion.properties -->
+
+  <fonts>
+
+    <!--
+
+        Configuration of fonts used during PDF export.
+
+        <font file="FILE">
+            <font-triplet name="FONT_FAMILY_NAME" style="STYLE" weight="WEIGHT"/>
+            ...<font-triplet>...
+        </font>
+
+        Font file can be either full path to the file or name of the file to be located in the system specific folder with fonts.
+        True Type font files (.ttf) and their collections (.ttc) are supported. For collections the font name must be specified by appending
+        "#FONT_NAME" to the file name.
+
+        Font family names are the same as in HTML/CSS, the ones most likely to occur in exported documents are:
+            Arial, ArialMT, Verdana, Times New Roman, Courier, Courier New
+        - some variations of given names are automatically considered, e.g. Times New Roman will match also times new roman and timesnewroman
+        
+        Possible styles: normal | italic | oblique | backslant
+        
+        Possible weights: normal | bold | 100 | 200 | 300 | 400
+                          | 500 | 600 | 700 | 800 | 900
+        (normal = 400, bold = 700)
+        
+        Examples:
+
+        Arial font installed in the system:
+        
+        <font file="arial.ttf">
+            <font-triplet name="Arial" style="normal" weight="normal"/>
+            <font-triplet name="ArialMT" style="normal" weight="normal"/>
+        </font>
+        
+        Replacement for Arial font with greater coverage included inside font collection:
+        
+        <font file="msgothic.ttc#MS PGothic">
+            <font-triplet name="Arial" style="normal" weight="normal"/>
+            <font-triplet name="ArialMT" style="normal" weight="normal"/>
+        </font>
+
+        The same as above, but with font not installed in the system:
+
+        <font file="C:\My Fonts\msgothic.ttc#MS PGothic">
+            <font-triplet name="Arial" style="normal" weight="normal"/>
+            <font-triplet name="ArialMT" style="normal" weight="normal"/>
+        </font>
+        
+     -->
+
+  </fonts>
+
+</pdfexport>

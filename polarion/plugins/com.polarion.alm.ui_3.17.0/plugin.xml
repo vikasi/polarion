@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="com.polarion.portal.tomcat.webapps">
+      <webapp
+            name="webui"
+            contextRoot="webapp/webui"
+            priority="-10">
+      </webapp>
+      <webapp
+            name="polarion/bir"
+            contextRoot="webapp/bir">
+      </webapp>
+      <webapp
+            name="polarion/sdk"
+            contextRoot="webapp/sdk">
+      </webapp>
+      <webapp
+            name="polarion/redirect"
+            contextRoot="webapp/redirect">
+      </webapp>
+      <webapp
+            name="polarion/wi-attachment-auth"
+            contextRoot="webapp/wi-attachment-auth">
+      </webapp>
+      <webapp
+            name="polarion/export"
+            contextRoot="webapp/export">
+      </webapp>
+       <webapp
+            name="polarion/icons"
+            contextRoot="webapp/icons">
+      </webapp>
+      <webapp name="polarion/module-attachment" contextRoot="webapp/attachments"></webapp>
+      <webapp name="polarion/wi-attachment" contextRoot="webapp/attachments"></webapp>
+      <webapp name="polarion/page-attachment" contextRoot="webapp/attachments"></webapp>
+      <webapp name="polarion/testrun-attachment" contextRoot="webapp/attachments"></webapp>
+      <webapp name="polarion/print" contextRoot="webapp/print"></webapp>
+      <webapp name="polarion/internal-login" contextRoot="webapp/internal-login"></webapp>
+       <webapp
+            name="polarion/modulehome"
+            contextRoot="webapp/module-home">
+      </webapp>
+      <webapp
+            name="polarion/richpagehome"
+            contextRoot="webapp/richpage-home">
+      </webapp>
+      <webapp
+            name="polarion/workreport"
+            contextRoot="webapp/workreport">
+      </webapp>
+      <webapp
+            name="polarion/tour"
+            contextRoot="webapp/tour">
+      </webapp>
+      <webapp
+            name="polarion/announcements"
+            contextRoot="webapp/announcements">
+      </webapp>
+      <webapp
+            name="polarion/register"
+            contextRoot="webapp/register">
+      </webapp>
+      <webapp
+            name="polarion/ria"
+            contextRoot="webapp/ria">
+      </webapp>
+      <webapp
+            name="polarion/webcontent"
+            contextRoot="webapp/webcontent">
+      </webapp> 
+      <webapp
+            name="polarion/fileupload"
+            contextRoot="webapp/fileupload">
+      </webapp>
+      <webapp
+            name="polarion/gwt"
+            contextRoot="war">
+      </webapp>
+      <webapp
+            name="polarion/template-download"
+            contextRoot="webapp/project-template">
+      </webapp>
+      
+      <webapp
+            name="polarion/perf-testing"
+            contextRoot="webapp/perf-testing"
+            />
+            
+     <webapp
+            name="polarion/codemirror-modes"
+            contextRoot="webapp/codemirror-modes"
+            />
+     <webapp
+            name="polarion/widget-resource"
+            contextRoot="webapp/widget-resource"
+            />
+   </extension>
+</plugin>

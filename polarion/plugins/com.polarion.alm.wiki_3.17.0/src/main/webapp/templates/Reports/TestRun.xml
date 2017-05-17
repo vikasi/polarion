@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wiki-page>
+<lastUpdatedBy>admin</lastUpdatedBy>
+<author>admin</author>
+<type>active</type>
+<created>2012-01-01 00:00</created>
+<lastUpdated>2012-01-01 00:00</lastUpdated>
+<content><![CDATA[1 {testrun-label}
+
+{section:width=100%}
+{column:width=70%}
+
+{testrun-property:description}
+
+{testrun-overview}
+
+1.1 Test Environment
+
+{table:bold=2|border=no|header=no|width=80%}
+Build Id:|{testrun-property:groupId}
+Environment Description:|{testrun-property:environmentDescription}
+{table}
+
+1.1 Problems Found
+
+#if($testRun.summaryDefect)
+1.1.1 Summary Defect
+There were too many failures so only summary defect is created: {workitem:$testRun.summaryDefect.id}
+#end
+
+1.1.1 Failed
+{testrecords:result=failed}
+
+1.1.1 Blocked
+{testrecords:result=blocked}
+
+{column}
+{column}
+{testrun-status-button}
+\\
+
+{style:type=div|class=testrun_bluepanel}
+{execute-testrun-button}
+* {export-tests}
+* {import-test-results}
+{style}
+
+{regiontitle}Activity{regiontitle}
+{activity-stream:testrun.id:"$testRun.id"}
+
+{column}
+{section}
+]]></content>
+</wiki-page>

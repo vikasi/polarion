@@ -1,0 +1,20 @@
+
+#set ($MESSAGES = $portletConfig.getResourceBundle($renderRequest.Locale))
+
+<h2 class="portlet-section-header">$MESSAGES.getString('add.page')</h2>
+
+<form action="$renderResponse.createActionURL()" method="post">
+<input type='hidden' name='portlet.action' value='processAddPageAction'/>
+<table>
+    #formField('Name' "$!pageBean.Key" "40" 'key' $MESSAGES $ERRORS)
+	#formField('Title' "$!pageBean.Title" "40" 'title' $MESSAGES $ERRORS)
+    #formField('ShortTitle' "$!pageBean.ShortTitle" "40" 'shortTitle' $MESSAGES $ERRORS)
+    #formField('Version' "$!pageBean.Version" "40" 'version' $MESSAGES $ERRORS)
+ 	<input type='hidden' name='bridges.view.view' value='add-page'/> 
+	
+</table>
+<br/>
+<input type="submit" name="Save" value="$MESSAGES.getString('save')" />
+</form>
+
+#ErrorMessages($ERRORS)

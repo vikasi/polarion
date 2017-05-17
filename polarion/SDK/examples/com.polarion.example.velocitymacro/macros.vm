@@ -1,0 +1,3 @@
+#macro(infoBox $text)
+	<div style="background:lightblue; padding:10px; margin: 10px 0px 10px 0px; border:1px solid darkblue;"><span style="font-weight:bold;">Info: </span>$text</div>
+#end

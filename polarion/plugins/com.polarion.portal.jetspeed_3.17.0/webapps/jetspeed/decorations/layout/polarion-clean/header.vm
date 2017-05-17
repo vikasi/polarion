@@ -1,0 +1,32 @@
+#* Add the current layouts configuration values to the context *#
+#defineLayoutObjects()
+
+#* Access page context *#
+#set($site = $request.getAttribute("org.apache.jetspeed.portalsite.PortalSiteRequestContext"))
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="#ContentType()" />
+    <meta http-equiv="Content-style-type" content="text/css" />
+	#includeJavaScriptForHead()
+	#IncludeStylesheets()
+    <title>#PageTitle()</title>
+
+    <meta name="version" content="/* $Id: decorator-top.vm 239262 2005-08-22 22:23:39Z shinsuke $" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="#PageDescription()" />
+	<link href="/polarion/ria/css/pol_default.css" type="text/css" rel="stylesheet"></link>	
+	<script language="JavaScript" src="/polarion/ria/javascript/xray.js"></script>
+	<script language="JavaScript" src="/polarion/ria/charts/FusionCharts.js"></script>
+	<link title="Style" type="text/css" rel="stylesheet" href="/polarion/ria/css/processaudit.css"/>
+    <script type="text/javascript" src="/polarion/ria/javascript/pa/toggle.js"></script>
+    <script type="text/javascript" src="/polarion/ria/javascript/pa/selection.js"></script>
+    <script type="text/javascript" src="/polarion/ria/javascript/pa/resize.js"></script>
+    <script src="/polarion/ria/javascript/flash_detect.js" language="JavaScript" type="text/javascript"></script>
+    <style>
+     	TEXTAREA {resize:none !important;}
+    </style>
+  </head>
+  <body marginwidth="0" marginheight="0" class="#PageBaseCSSClass()">
+  

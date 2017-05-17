@@ -1,0 +1,449 @@
+table.list {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	color: black;
+	border-collapse:collapse;    
+    padding:0px;
+    margin:0px;
+}
+
+.list td.head {
+	font-weight: bold;
+	background: #75A8E2;
+	color: black;
+	border-top: 0px;
+	border-bottom: 3px solid #CCD8E5;
+	border-right: 1px solid #CCD8E5;
+	padding: 2px 5px 2px 5px;
+}
+
+.list td.head a, .list td.head a:active, .list td.head a:link, .list td.head a:visited, .list td.head a:hover {
+	font-weight: bold;
+	color: black;
+}
+
+.list tr {
+}
+
+.list tr.first {
+}
+
+.list tr.second {
+}
+
+.list td {
+	background: #E9F3FA;
+	border: 1px solid #C0DAEA;
+}
+
+.list td.blank {
+	background-color: white;
+	border: 0;
+}
+
+.list td.violation {
+	background: #FFFFFF;	
+	font-weight: normal
+}
+
+.list td.rule {
+	background: #E9F3FA;
+	font-weight: normal
+}
+
+.list tr.active td {
+	background: #FFCC00;
+}
+
+.list tr.selected td {
+	background: #FFE88A;
+}
+
+
+.list td.internal {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+}
+
+.list tr.first {
+}
+
+.list tr.second {
+}
+
+.list tr.first td {
+	background: #E9F3FA;
+}
+
+.list tr.second td {
+	background: #FFFFFF;
+}
+
+
+table.percentGraph {
+	empty-cells: show;
+}
+
+
+table.percentGraph td.No {
+    background: #00f000;
+	height: 11px;
+}
+
+table.percentGraph td.Yes {
+    background: #e00000;
+	height: 11px;
+}
+
+table.percentGraph td.notviolated {
+    background: #00f000;
+	height: 11px;
+	border: 0px;
+}
+
+table.percentGraph td.violated {
+    background: #e00000;
+	height: 11px;
+	border: 0px;
+}
+
+div.separator {
+	height: 10px;
+}
+
+.links {    
+    font-family:  Verdana, Arial, Helvetica, sans-serif;
+}
+
+.title {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	color: black;
+	font-weight: bold;    
+}
+
+.message {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+}
+
+.message12 {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	color: black;
+}
+
+.valueListTitle {
+	background-image: url("/polarion/ria/images/backgrounds/local_title.gif");
+	background-color:#5A94E6;	
+    border-collapse:collapse;		
+	border:1px solid #5A94E6;
+}
+
+.valueListTitle td {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	color: white;
+	font-weight: bold;
+	height: 18px;
+}
+
+.pl{ 
+    padding-left: 10px;
+}
+
+.pr0 {
+	padding-right: 5px;
+}
+
+
+
+
+
+table.summarylist {
+	color: black;
+	border-collapse:collapse;	
+	border: 1px solid #C0DAEA;
+	height: auto;
+}
+
+.summarylist th {	
+	font-weight: normal;
+	background: #E7F0FA;
+	border: 1px solid #BFD9E9;
+	border-bottom: 3px solid #74A6E1;
+	vertical-align:middle;
+	height:22px;
+}
+
+.summarylist td {
+	background: #e9f3fa;	
+	##border: 1px solid #C0DAEA; 	
+	vertical-align:middle;
+	height:23px;
+	padding-left:2px;
+	padding-bottom:2px;
+}
+
+.summarylist td a, .summarylist td a:active, .summarylist td a:link, .summarylist td a:visited, .summarylist td a:hover {
+	color: black !important;
+}
+
+.distribution_bar_table td a, .distribution_bar_table td a:active, .distribution_bar_table td a:link, .distribution_bar_table td a:visited, .distribution_bar_table td a:hover {
+	color: black !important;
+}
+
+.summarylist table {
+	
+	height:14px;
+	
+}
+
+
+.summarylist td.right {
+	border-left: 0px; 
+}
+
+.summarylist td.left {
+	border-right: 0px; 
+}
+
+a.noneUnderline, table.summarylist a {
+	text-decoration: none;
+	padding:0px !important;
+}
+
+a.noneUnderline:hover, table.summarylist a:hover {
+	text-decoration: underline;
+	padding:0px !important;
+}
+
+.summarylist tr.first td {
+	background: #FFFFFF;
+	border: 1px solid #C0DAEA;
+}
+
+.summarylist tr.second td {
+	background: #E9F3FA;
+	border: 1px solid #C0DAEA;
+}
+
+.summarylist tr.report td {
+	background: #CBDDFF;
+	border: 1px solid #C0DAEA;
+}
+.summarylist tr.selected td {
+	background: #FFE88A;
+	##cursor: pointer;
+	border: 1px solid #C0DAEA;
+}
+
+.summarylist td.descending td{
+	border:0px;
+	vertical-align:top;
+}
+
+.summarylist tr.selected td.linkText, span.linkText {
+##	text-decoration: underline;
+}
+
+.summarylist tr.selectedWithoutLink td {
+	background: #FFE88A;
+}
+
+.summarylist tr td.active {
+	background: #FFFA00;
+}
+
+.metric_value_bar {
+	vertical-align: middle;
+	font-size: 8px;
+	padding: 0px;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #A6A6A6;
+	margin-right:0px; 
+	overflow:hidden;
+	text-decoration:none;
+}
+
+table.head {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;    	
+    font-weight: bold;    	                      
+}
+
+td.ruletitle {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color:#D8E6FF;    	
+    font-weight: bold;
+    padding-left: 4px;
+    height: 14pt;
+}
+
+td.ruletitle a {
+    text-decoration:none;
+}
+
+
+td.ruletitle a:hover {
+    text-decoration:underline;
+}
+
+td.content {
+    padding-left:60px;
+}
+
+td.percent {    
+    text-align: right;    
+    background-color:#D8E6FF;
+    font-size: 8pt;
+    font-family:  Verdana, Arial, Helvetica, sans-serif;   
+}
+
+td.percentTitle {
+    text-align: right;    
+    background-color:#D8E6FF;
+    font-size: 10pt;
+    font-family:  Verdana, Arial, Helvetica, sans-serif;   
+}
+
+table.percentGraph {
+	border: 1px solid #A6A6A6;
+	height: 12px;
+	empty-cells: show;
+	padding: 0px;
+}
+
+table.percentGraph td.covered {
+    background: #B7E7C0;
+	height: 10px;
+	padding: 0px;
+	border: 0px;	
+}
+
+table.percentGraph td.uncovered {
+    background: #FF9F9F;
+	height: 10px;
+	padding: 0px;
+	border: 0px;
+}
+
+table.percentGraph td.NA {
+    background: #eaeaea;
+	height: 10px;
+}
+
+.decorBorder {
+	border: 1px solid #C0DAEA;
+}
+
+table.detailTable {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	color: black;
+	font-size: 8pt;	
+}
+
+table.xpNavigator {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	background: #EDF2F7;
+    border-collapse:collapse;	
+	border: 1px solid #C6CDD6;	
+}
+
+.xpNavigator td {
+    padding: 8px 8px 8px 8px;    
+    color: #9eACBa;   
+    font-size: 11px;
+}
+
+.xpNavigator td a.xpNav {
+    color: #9EACBA;
+    text-decoration: none;
+}
+
+
+/** portlet styles **/
+table.portletFooter {
+	background-image : url("/polarion/ria/images/backgrounds/bg_footer.jpg");
+	border: 1px solid silver;
+	border-collapse:collapse;
+}
+
+.portletFooter td {
+	padding: 0px 5px 0px 5px;
+	background-image : url("/polarion/ria/images/backgrounds/bg_footer.jpg");
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	border: 1px solid silver;
+    height: 18px;
+}
+
+.br{ 
+	background-image: url("/polarion/ria/images/backgrounds/f_sep.gif") !important;
+	background-position: right;  
+  	background-repeat: repeat-y;
+  	padding-right: 1px;
+}
+td.ruletitlesub {
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color:#eaf2ff;    	
+    font-weight: bold;
+    padding-left: 4px;
+    height: 12pt;
+}
+
+td.ruletitlesub a {
+    text-decoration:none;
+}
+
+
+td.ruletitlesub a:hover {
+    text-decoration:underline;
+}
+.distribution_bar_maindiv {
+	padding: 0px !important;
+	width: 100%; 
+	height: 16px; 
+	overflow: hidden;
+	border:1px solid black;
+}
+
+.distribution_bar_table td {
+	border: 0px;
+}
+
+.distribution_bar_table td {
+	border: 0px ; 	
+}
+
+.distribution_bar_middlediv{
+	width: 100%; 
+	height: 100%;
+	padding: 0px !important;
+}
+.distribution_bar_table{
+	table-layout: fixed;
+	padding: 0px; 
+	font-size: 11px; 
+	height: 100%;
+	padding: 0px !important;
+}
+.distribution_bar_td{
+	padding: 0px !important;
+	height: 100%;
+	font-size: 11px !important; 
+	text-align: center !important;
+	font-family: Verdana;
+	vertical-align:middle !important;
+	line-height:normal !important;
+}
+
+.distribution_bar_td a, .distribution_bar_td a:active, .distribution_bar_td a:link, .distribution_bar_td a:visited, .distribution_bar_td a:hover{
+	font-size: 11px !important; 
+	padding: 0px;
+	text-decoration: none !important; 
+	font-family: Verdana;
+	display: block
+}

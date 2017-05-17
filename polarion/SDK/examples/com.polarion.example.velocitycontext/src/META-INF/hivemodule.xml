@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="com.polarion.example.velocitycontext" version="1.0.0">	
+	<service-point id="repositoryUtil"
+		interface="com.polarion.example.velocitycontext.RepositoryUtil"
+		visibility="private">
+		<invoke-factory>
+			<construct class="com.polarion.example.velocitycontext.RepositoryUtilImpl">
+				<service>com.polarion.platform.repository.repositoryService</service>
+			</construct>
+		</invoke-factory>
+	</service-point>
+	
+	<contribution configuration-id="com.polarion.alm.richpages.velocityContext">
+		<item key="workItemUtil" value="instance:com.polarion.example.velocitycontext.WorkItemUtil" />
+		<item key="repositoryUtil" value="service:repositoryUtil" />
+	</contribution>
+</module>

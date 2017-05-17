@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="com.siemens.polarion.rt.parsers">
+      <parser
+            class="com.siemens.polarion.rt.parsers.c.RtCParser"
+            descriptor="com.siemens.polarion.rt.parsers.c.RtCParserDescriptor"
+            name="com.siemens.polarion.rt.parsers.c">
+      </parser>
+   </extension>
+</plugin>

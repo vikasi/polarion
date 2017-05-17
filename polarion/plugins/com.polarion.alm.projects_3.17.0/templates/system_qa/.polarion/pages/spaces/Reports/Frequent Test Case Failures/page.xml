@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2015-02-18 13:06:03.646 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client7" class="polarion-rp-widget-part" data-widget="com.polarion.pageParametersForm">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="title"></sub>
+      <sub id="content">
+        <sub>Test_Run_Template_ID</sub>
+        <sub>fromDate</sub>
+        <sub>toDate</sub>
+        <sub>category</sub>
+        <sub>minFailures</sub>
+      </sub>
+      <sub id="width">500</sub>
+    </span>
+  </div>
+  <h1 id="polarion_client5">Frequent Test Case Failures</h1>
+  <p id="polarion_hardcoded_1">
+    <span style="font-size: 10pt;line-height: 1.5;">Displays test cases (and related defects) that have failed often in selected Test Runs (filtered by Test Run Template and Execution Time). Test cases can also be filtered by Category.</span>
+  </p>
+  <h3 id="polarion_client3">Frequently Failed Test Cases</h3>
+  <div id="polarion_client8" class="polarion-rp-widget-part" data-widget="traceability">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="workItems">
+        <sub id="prototype">WorkItem</sub>
+        <sub id="queryType">sqlVelocity</sub>
+        <sub id="sqlColumnsQuery" style="white-space:pre;"></sub>
+        <sub id="sqlTablesQuery" style="white-space:pre;">#if($pageParameters.category.values.empty)
+   ,STRUCT_TESTRUN_RECORDS TRR
+#else
+   ,STRUCT_TESTRUN_RECORDS TRR, CATEGORY CAT, REL_WORKITEM_CATEGORY_CATEGORIES LINKCAT
+#end</sub>
+        <sub id="sqlRestQuery" style="white-space:pre;">and WORKITEM.C_URI = TRR.FK_URI_TESTCASE
+and TRR.C_RESULT = &#39;$pageParameters.failedTestResult.values.get(0).id()&#39;
+and TRR.FK_URI_P_TESTRUN in (
+  select C_URI from TESTRUN where
+        C_FINISHEDON &gt;= &#39;$pageParameters.fromDate 00:00:00&#39;
+    and C_FINISHEDON &lt;= &#39;$pageParameters.toDate 00:00:00&#39;
+#if($pageParameters.Test_Run_Template_ID.value != &quot;&quot;)
+    and FK_URI_TEMPLATE in (
+      select C_URI from TESTRUN where C_ISTEMPLATE is true and C_ID = &#39;$pageParameters.Test_Run_Template_ID.value&#39;
+    )
+#end
+)
+#if(!$pageParameters.category.values.empty)
+  and LINKCAT.FK_URI_WORKITEM = TRR.FK_URI_TESTCASE 
+  and LINKCAT.FK_URI_CATEGORY = CAT.C_URI 
+  and CAT.C_ID in $pageParameters.category
+#end
+group by WORKITEM.C_URI having count(TRR.C_RESULT) &gt;= $pageParameters.minFailures</sub>
+      </sub>
+      <sub id="linkRole">
+        <sub id="values">
+          <sub>verifies</sub>
+        </sub>
+      </sub>
+      <sub id="linkedItemType"></sub>
+      <sub id="showLinkingItems">true</sub>
+    </span>
+  </div>
+  <h3 id="polarion_client15">Defects</h3>
+  <div id="polarion_client12" class="polarion-rp-widget-part" data-widget="com.polarion.table">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="dataSet">
+        <sub id="prototype">WorkItem</sub>
+        <sub id="queryType">sqlVelocity</sub>
+        <sub id="sqlColumnsQuery" style="white-space:pre;"></sub>
+        <sub id="sqlTablesQuery" style="white-space:pre;">#if($pageParameters.category.values.empty)
+   ,STRUCT_TESTRUN_RECORDS TRR
+#else
+   ,STRUCT_TESTRUN_RECORDS TRR, CATEGORY CAT, REL_WORKITEM_CATEGORY_CATEGORIES LINKCAT
+#end</sub>
+        <sub id="sqlRestQuery" style="white-space:pre;">and WORKITEM.C_URI = TRR.FK_URI_DEFECT
+and TRR.C_RESULT = &#39;$pageParameters.failedTestResult.values.get(0).id()&#39;
+and TRR.FK_URI_P_TESTRUN in (
+  select C_URI from TESTRUN where
+        C_FINISHEDON &gt;= &#39;$pageParameters.fromDate 00:00:00&#39;
+    and C_FINISHEDON &lt;= &#39;$pageParameters.toDate 00:00:00&#39;
+#if($pageParameters.Test_Run_Template_ID.value != &quot;&quot;)
+    and FK_URI_TEMPLATE in (
+      select C_URI from TESTRUN where C_ISTEMPLATE is true and C_ID = &#39;$pageParameters.Test_Run_Template_ID.value&#39;
+    )
+#end
+)
+#if(!$pageParameters.category.values.empty)
+  and LINKCAT.FK_URI_WORKITEM = TRR.FK_URI_TESTCASE 
+  and LINKCAT.FK_URI_CATEGORY = CAT.C_URI 
+  and CAT.C_ID IN $pageParameters.category
+#end
+group by WORKITEM.C_URI having count(TRR.C_RESULT) &gt;= $pageParameters.minFailures</sub>
+        <sub id="children">
+          <sub id="columns">
+            <sub>
+              <sub id="id">id</sub>
+            </sub>
+            <sub>
+              <sub id="id">title</sub>
+            </sub>
+            <sub>
+              <sub id="id">status</sub>
+            </sub>
+            <sub>
+              <sub id="id">severity</sub>
+            </sub>
+          </sub>
+          <sub id="sortBy"></sub>
+        </sub>
+      </sub>
+      <sub id="advanced">
+        <sub id="top">50</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client1"></p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<span id="polarion-rp-parameters">
+  <sub data-type="Enumeration" data-label="Failed Test Result" id="failedTestResult">
+    <sub id="values">
+      <sub>failed</sub>
+    </sub>
+    <sub id="enumId">testing/test-result</sub>
+    <sub id="allowNoValue">true</sub>
+    <sub id="allowMultipleValues">false</sub>
+    <sub id="loadForAllTypes">true</sub>
+  </sub>
+  <sub data-type="Date" data-label="Finished From" id="fromDate">
+    <sub id="absolute">2013-01-01</sub>
+  </sub>
+  <sub data-type="Date" data-label="Finished To" id="toDate">
+    <sub id="relative">1</sub>
+  </sub>
+  <sub data-type="Integer" data-label="Min. Failures" id="minFailures">3</sub>
+  <sub data-type="Enumeration" data-label="Test Case Category" id="category">
+    <sub id="enumId">@category</sub>
+    <sub id="allowNoValue">true</sub>
+    <sub id="allowMultipleValues">true</sub>
+    <sub id="loadForAllTypes">true</sub>
+  </sub>
+  <sub data-type="String" data-label="Test Run Template ID" id="Test_Run_Template_ID"></sub>
+</span>]]></field>
+    <field id="title">Frequent Test Case Failures</field>
+</rich-page>

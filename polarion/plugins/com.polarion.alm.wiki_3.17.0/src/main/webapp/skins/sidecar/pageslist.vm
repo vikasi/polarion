@@ -1,0 +1,20 @@
+#set ($space = $request.getParameter("space"))
+#if ($space)
+               <select id='pages2' name='page' style='width:150px;'>
+                ##
+                ## Load pages list
+                ##
+                ##<option>$msg.get("notemplate")</option>
+                #set ($space =$xwiki.format($space))
+                #set ($pages = $xwiki.getPagesFromIndex($space))
+
+                ##set ($sql = "where doc.web='$space' order by doc.date desc")
+                ##set ($pages = $xwiki.searchDocuments($sql , 30 , 0))
+                #foreach($page in $pages)
+                  ##set ($sclng = $space.length()+1)
+                  ##set ($pglng = $page.length())
+                  ##set ($pagename = $page.substring($sclng,$pglng))
+                  <option>$page.getName()</option>
+                #end
+               </select>
+#end

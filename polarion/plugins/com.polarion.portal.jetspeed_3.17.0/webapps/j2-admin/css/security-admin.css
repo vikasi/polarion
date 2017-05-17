@@ -1,0 +1,18 @@
+.securityList {
+    border: thin solid black;
+}
+.securityHeader {
+	text-align: center;
+	font-style: italic;
+	color: Snow;
+	background: Teal;	
+}
+.evenRow {
+	height: 25px;
+	text-align: center;
+	background: MediumTurquoise;
+}
+.oddRow {
+	text-align: center;
+	background: PowderBlue;
+}

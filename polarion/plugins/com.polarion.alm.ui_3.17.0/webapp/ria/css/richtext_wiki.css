@@ -1,0 +1,66 @@
+@import url("/polarion/wiki/skins/sidecar/style.css");
+p{
+	line-height:1.7em;
+	margin-top:8px;
+	margin-bottom:8px;
+}
+
+body,html {
+	margin: 0px;
+	padding: 4px; 
+	font-family: Arial, Helvetica;
+	font-size: 13px; 
+	cursor: text;
+	background:white;
+}
+
+H1, H2, H3, H4, H5, H6{
+  color: #0E4A90;
+  line-height: normal;
+  font-family: Arial,helvetica,sans-serif;
+  text-shadow: 1px 1px 0.01em white;
+  font-weight: bold;
+}
+
+H1{
+	font-size: 30px;
+	border-bottom: 4px solid #E1F0FF;
+	margin: 0 0 10px 0;
+	line-height: 50px;
+}
+
+H2{
+   font-size: 23px;
+   border-radius: 5px 5px 5px 5px;
+   padding-left: 14px;
+   background-color:#E1F0FF;
+   margin: 20px 0 10px 0;
+}
+
+H3 { 
+	font-size: 23px;
+	margin: 20px 0 10px 0;
+}
+
+H4{	
+	font-size: 15px;
+	margin: 20px 0 10px 0;
+	line-height: normal;
+	padding: 0;
+}
+
+H5{
+	font-size: 13px;
+	color: black;
+	margin: 20px 0 10px 0;
+	line-height: normal;
+	padding: 0;
+}
+
+H6{
+	font-size: 13px;
+	color: black;
+	margin: 20px 0 10px 0;
+	line-height: normal;
+	padding: 0;
+}

@@ -1,0 +1,15 @@
+1 Auto-create
+
+{autocreate}
+
+1.1 Quick Help
+
+1.1.1.1.1.1 Enable Auto-create
+If not checked, automatic creation of user accounts is disabled. New users will not have the possibility to create an account on-line, and an administrator will need to create accounts for new users manually. 
+
+1.1.1.1.1.1 Global Roles
+When Auto-create is enabled, specify the global role(s) that should be added to the user accounts of automatically-created users. At a minimum, there should be a role that provides the permission to log in.
+Note that the Polarion property <tt>rolesForNewUserAccount</tt> (in file <tt>polarion.properties</tt>) is NOT used by Auto-create.
+
+#info("The global role ~~user~~ allows login to the Polarion application. All active users should have at least this role.")
+\\

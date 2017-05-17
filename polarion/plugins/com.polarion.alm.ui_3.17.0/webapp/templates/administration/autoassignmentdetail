@@ -1,0 +1,75 @@
+<a style="cursor:pointer;" onclick="navigateFromFrame('#page:workitems/autoassignment')" ><< Return to Auto-assignment</a>
+
+1 Auto-assignment Configuration
+
+{autoassignment-detail:[ruleIndex]|[addBelow]}
+
+1.1 Quick Help
+
+1.1 Rule
+
+An Auto-assignment rule specifies the condition(s) under which a Work Item is automatically assigned, and the users to whom it is assigned if the condition(s) is/are satisfied. An Auto-assignment rule must specify one or more conditions and one or more assignees.
+
+1.1.1 Condition
+
+A Condition specifies the criteria that must be matched by a Work Item data field value in order for the condition to be satisfied, and a Work Item auto-assigned. \\ 
+
+A Condition may specify one or more Work Item fields. Each field should be specified on a separate row in the ~~Conditions~~ table. Click the + icon in the ~~Actions~~ column to add rows. \\ 
+
+
+#info("All field conditions must be satisfied for entire Condition to be satisfied. An empty condition is always satisfied.")
+
+1.1.1.1 Field ID
+
+Field ID is case sensitive. A field condition can have multiple values defined. A field condition is satisfied when the field matching the ID specified in the ~~Fields~~ column  has any of the specified values, or none of the specified values, depending on your selection in the drop-down list. \\
+
+A list of standard field IDs is provided below.
+
+1.1.1.1.1 Field condition
+
+Select a value to specify that the field must match any or none in ~~Value(s)~~.
+
+1.1.1.1.1 Value(s)
+
+Enter a text string specifying the value which, if the field contains it, satisfies this field condition. Values are not case sensitive. For example, if ~~Field ID~~ is "status", you might specify the value "open".
+
+1.1.1.1 Assignees
+
+Specify one or more users to whom a Work Item will be automatically assigned when everything specified in Conditions is satisfied. 
+
+1.1.1.1.1 User
+
+Select the name of a user from the list. If you want assignment to multiple users, then for each additional assignee click the "*+*" icon in the ~~Actions~~ column and select a user name. 
+
+#info("&lt;assignee&gt;&lt;project-lead/&gt;&lt;/assignee&gt; to assign to current project leader ")
+
+1.1.1 Standard Fields Reference
+* title
+* type
+* description
+* resolution
+* categories
+* timePoint
+* approvals
+* author
+* comments
+* attachments
+* linkedWorkItems
+* workRecords
+* hyperlinks
+* planningConstraints
+* status
+* severity
+* priority
+* previousStatus
+* dueDate
+* initialEstimate
+* timeSpent
+* remainingEstimate
+* plannedStart
+* plannedEnd
+* linkedRevisions
+
+\\
+
+#info("A list of available custom fields is defined in Administration > Work Items > Custom Fields, *{hyperlink:/administration/workitems/customfields}*.")

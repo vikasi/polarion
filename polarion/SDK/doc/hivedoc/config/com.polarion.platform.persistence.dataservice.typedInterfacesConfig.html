@@ -1,0 +1,259 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../hivemind.css">
+<title>HiveMind Registry -  Configuration Point com.polarion.platform.persistence.dataservice.typedInterfacesConfig</title>
+</head>
+<body>
+<div class="title"> Module <a href="../module/com.polarion.platform.persistence.dataservice.html">com.polarion.platform.persistence.dataservice</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+<hr>
+<table class="top-level-object" cellspacing="0">
+<tr>
+<th class="object-id"><img src="../public.png" width="20" height="20" alt="[public]"> Configuration Point com.polarion.platform.persistence.dataservice.typedInterfacesConfig</th><th>Occurs:</th><td> unbounded </td>
+</tr>
+<tr>
+<td class="description" colspan="3">The type configuration.</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Schema</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;factory&gt; </th>
+</tr>
+<tr>
+<th class="sub-id">Attribute adapter</th><th> Translator: </th><td>service</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute factory</th><th> Translator: </th><td>service</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute prototype</th><th> Translator: </th><td>prototype</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute type</th><th> Translator: </th><td>type</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Nested Elements</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;adapter&gt; </th>
+</tr>
+<tr>
+<th class="sub-id">Attribute factory</th><th> Translator: </th><td>service</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;push-attribute <span class="attribute">attribute</span>="<span class="attribute-value">factory</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">setAdapter</span>"
+       /&gt; </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">com.polarion.platform.persistence.hivemind.TypedInterfaceConfig</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">type</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">type</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">prototype</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">prototype</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">factory</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">factory</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">adapter</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">adapter</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; </div>
+</td>
+</tr>
+<tr>
+<th class="object-id" colspan="3"> Element &lt;enum&gt; </th>
+</tr>
+<tr>
+<td class="description" colspan="3">The enumeration config. There are three ways how an enumeration can be configured
+				
+				1) By providing 'factory' - a service which implements IEnumerationFactory,
+				   which ends up in completely custom enumeration implementation.
+				2) By providing 'optionClass' (optional) and 'configFilePath' - this will create
+				   enumeration based on configuration in the repository. The configFilePath is relative
+				   to the context root. In this case also the controlKey attribute can be provided,
+				   specifying the PObject key, which controlls the set of available options.
+				3) By providing 'optionClass' (optional) and bunch of 'option's - this will create 
+				   constant enumeration.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute cfgFilePath</th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute controlKey</th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute factory</th><th> Translator: </th><td>service</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute id</th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute optionClass</th><th> Translator: </th><td>class</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Nested Elements</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;option&gt; </th>
+</tr>
+<tr>
+<th class="sub-id">Attribute default</th><th> Translator: </th><td>boolean</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute id (required) </th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute name</th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute sortOrder</th><th> Translator: </th><td>int</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Nested Elements</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;property&gt; </th>
+</tr>
+<tr>
+<th class="sub-id">Attribute key (required) </th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute value (required) </th><th> Translator: </th><td>string</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">com.polarion.platform.persistence.spi.OptionProperty</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">key</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">key</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">value</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">value</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addProperty</span>"
+       /&gt; </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">com.polarion.platform.persistence.spi.ConstantEnumOption</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">id</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">id</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">name</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">name</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">sortOrder</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">number</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">default</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">default</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addOption</span>"
+       /&gt; </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">com.polarion.platform.persistence.internal.EnumConfig</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">id</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">id</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">factory</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">factory</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">optionClass</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">optionClass</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">cfgFilePath</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">cfgFilePath</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">controlKey</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">controlKey</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+            
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+</table>
+<hr>
+<div class="title"> Module <a href="../module/com.polarion.platform.persistence.dataservice.html">com.polarion.platform.persistence.dataservice</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.scripting;singleton:=true
+Export-Package: com.polarion.scripting.jobs,com.polarion.scripting.uti
+ l,com.polarion.scripting.workflow
+Bundle-Name: Scripting Plug-in
+Bundle-Version: 3.17.0
+Bundle-ClassPath: scripting.jar,js-engine.jar,js.jar
+Eclipse-AutoStart: true
+Require-Bundle: com.polarion.alm.builder,	 	 com.polarion.alm.projects
+ ,	 	 com.polarion.alm.tracker,	 	 com.polarion.alm.wiki,	 	 	 com.pol
+ arion.core.util,	 com.polarion.platform,	 com.polarion.platform.jobs,
+ 	 com.polarion.platform.persistence,	 	 com.polarion.platform.reposit
+ ory,	 	 	  	  	 com.polarion.qcentre,	 com.polarion.subterra.base,	 	
+  org.eclipse.core.runtime;bundle-version="3.1.2",org.codehaus.groovy;
+ bundle-version="1.5.7"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+
+

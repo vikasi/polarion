@@ -1,0 +1,160 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+#template("xwikivars.vm")
+#template("layoutvars.vm")
+#template("htmlheader.vm")
+#template("header.vm")
+#template("descrpwi.vm")
+
+<script>
+	  hideTrackerSwitch();
+</script>
+
+
+##if ($xwiki.hasPermission("modify") || ($doc.isNew() && $xwiki.hasPermission("create")) || ($editor=="changes"))
+
+#if ($xwiki.hasPermission("read"))
+
+
+#set($doctype = $doc.getType())
+#if ($doc.getDoc().getSpace() == "Panels")
+  #set($doctype = "service")
+#end
+
+#set($inBaseline = $doc.isInBaseline())
+
+#template("progressbar.vm")
+
+<script type="text/javascript">
+mainProgressBarShow('$localization.getValue("definition.processing")');
+</script>
+
+#set ($hide_comments = "1")
+#set ($editor = "history")
+
+<script type="text/javascript" src="$xwiki.getSkinFile("selection.js")"></script>
+
+#set($showactions = 0)
+
+<div class="layoutsection" id="contentcontainercompare" style="visibility: hidden;">
+
+
+	#set($force = $!request.get("force"))
+	#if (($tdoc.getLocked()==true)&&(!$force))
+		#xwikimessageboxstart($localization.getValue("wiki.label.notice") "$localization.getValue('wiki.label.thisObjectIsCurrentlyLockedBy') $xwiki.getLocalUserName($doc.getLockingUser())")
+		<a href="$doc.getURL("edit", "$!{request.getQueryString().replace('&', '&amp;').replace('&amp;amp;', '&amp;')}&amp;force=1")">$localization.getValue("wiki.label.clickHereToForceEditing")</a>
+		#xwikimessageboxend()
+	#else
+
+
+                <div id="panelView" style="position:absolute; width: 700px; height:99%; border: 0px solid black; z-index: 1;top: 0; ">  
+      	            <div id="panelMain" class="editor" style="display: block; position: absolute; left: 0px; width:720px; background: #fff; height:100%;overflow-x: hidden; overflow-y: hidden;  z-index: 1;">
+                            #template("menuhistory.vm")
+                            
+                	<div id="viewcontent" style="position: relative; width: 100%; height: 10px; border: 0px solid magenta; overflow-y: auto; overflow-x: auto; z-index: $contentZIndex;" onmouseover="hiddeMenuAll()">
+
+
+                           <div id="historycontent" class="xwikiintracontent">
+                               <h4 class="xwikiintratitle">$msg.get("history")</h4>
+                               <form name="revisionform" action="$doc.getURL("compare", "editor=changes&amp;$docvariant")" method="post">
+                                 <div>
+                                 <div>
+                           ##      <h4>$msg.get("dochistory")</h4>
+
+                           <table width=100% class="xwikidatatable">
+
+
+                                   <tr>
+                                     <td class="th1" width="5%"></td>
+                                     <td class="th1" width="20%">$localization.getValue("wiki.history.field.revision")</td>
+                                     <td class="th1" width="25%">$localization.getValue("wiki.history.field.updatedBy")</td>
+                                     <td class="th1" width="20%">$localization.getValue("wiki.history.field.updated")</td>
+                           #if(!$inBaseline && ($hasedit || $hasadmin))
+                                     <td class="th1" width="30%">$localization.getValue("wiki.history.field.actions")</td>
+                           #end
+                                               
+                                     
+                                   </tr>
+                                  
+
+                           #if(!$revisionscount)
+                           #set($revisionscount = 0)
+                           #end
+                           #if ($tdoc.realLanguage!="")
+                           #set($lang = "&amp;language=${tdoc.realLanguage}")
+                           #else
+                           #set($lang = "")
+                           #end
+
+                           #set ($historyList = $xwiki.getDocumentHistoryList($tdoc.web, $tdoc.name))
+
+                           #set($n=0)
+                           #set($highlighted = false)
+                           #foreach ($newdoc in $historyList)
+                           #set($nextversion = $newdoc.version)
+                           #set($highlight = $doc.isInCurrentBaseline($nextversion))
+                           #set($rowstyle = "")
+                           #if(!$highlighted && $highlight)
+                             #set($rowstyle = "highlight")
+                             #set($highlighted = true)
+                           #else
+                             #if($velocityCount % 2 == 1)
+                               #set($rowstyle = "even")
+                             #else
+                               #set($rowstyle = "odd")
+                             #end
+                           #end
+                                   <tr class="row $rowstyle">
+                                     <td width="5%"> 
+                                     <input type="checkbox" name="revision"  value="$nextversion" id="revision$nextversion" onclick="checkRevision('revision$nextversion')"/>
+                                     <input type="hidden" id="namePageRev$nextversion" name="namePageRev$nextversion" value="$newdoc.getName()">
+                                     <input type="hidden" id="spacePageRev$nextversion" name="spacePageRev$nextversion" value="$newdoc.getSpace()">
+                                     </td>
+                                     <td width="20%" class="attachTD"><a class="attachTDLink"  href="$tdoc.getURL( $newdoc, "viewrev","rev=$nextversion&tab=history&origDocName=$tdoc.getName()&origDocSpace=$tdoc.getSpace()", true).replace("&show=history","")">$nextversion</a></td>
+                           #if($newdoc=="")
+                                     <td width="25%">&ndash;</td>
+                                     <td width="20%">&ndash;</td>
+                           #else
+                                     <td width="25%" class="attachTD">$xwiki.getLocalUserName($newdoc.author)</td>
+                                     <td width="20%" class="attachTD">$xwiki.formatDate($newdoc.date, "yyyy-MM-dd HH:mm")</td>
+                           #end
+                           #if(!$inBaseline && ($hasedit || $hasadmin))
+                                   #if($n > 0)
+                                     <td width="28%" colspan="2" class="attachTD"><a class="attachTDLink" href="$tdoc.getURLRev( $newdoc, "rollback","rev=$nextversion$lang")" onclick="if (confirm('$localization.getValue("wiki.message.doYouWantToRollBackToRevision") ${nextversion}?')){this.href += '&amp;confirm=1'; return true;} return false;">$localization.getValue("form.modules.button.rollback")</a></td>
+                                   #else
+                                     <td width="28%" colspan="2" class="attachTD">&nbsp;</td>
+                                   #end
+                           #end
+                                   
+                                   </tr>
+                           #set($n=1)
+                           #end
+                           </table>
+                               
+                                 </div>
+                               </div>
+                             </form>
+                             </div>
+
+
+			</div>
+
+  	            </div>
+
+               </div>     
+               <div id="panelTab" style="position:absolute; left: 4px; width:99%; height: 26px; top:-36px; border: 0px solid black;  z-index: 4">		
+                 
+               </div>		
+
+	#end
+    
+</div>    
+
+   #template("footer.vm")
+   #template("htmlfooter.vm")
+
+#else
+   #template("accessdenied.vm")
+#end

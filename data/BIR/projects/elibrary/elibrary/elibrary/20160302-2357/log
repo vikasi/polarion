@@ -1,0 +1,841 @@
+2016-03-02 23:57:18,953 [ajp-nio-8889-exec-4 | u:sDeveloper] INFO  root  - Job "All Tests build of elibrary:elibrary" runs in cluster node ea-latest/ea-latest_1
+2016-03-02 23:57:18,954 [ajp-nio-8889-exec-4 | u:sDeveloper] INFO  root  - Job "All Tests build of elibrary:elibrary" has id 398cc069-0a7b1e4b-40f38093-1d578fe5
+2016-03-02 23:57:18,954 [ajp-nio-8889-exec-4 | u:sDeveloper] INFO  root  - State of job "All Tests build of elibrary:elibrary" changed to UNSCHEDULED
+2016-03-02 23:57:18,956 [ajp-nio-8889-exec-4 | u:sDeveloper] INFO  root  - Working directory of root job "All Tests build of elibrary:elibrary" is /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357
+2016-03-02 23:57:18,957 [ajp-nio-8889-exec-4 | u:sDeveloper] INFO  root  - Job "All Tests build of elibrary:elibrary" runs as user "sDeveloper"
+2016-03-02 23:57:18,957 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - State of job "All Tests build of elibrary:elibrary" changed to ACTIVATING
+2016-03-02 23:57:18,976 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - BIR location is /projects/elibrary/elibrary/elibrary/20160302-2357
+2016-03-02 23:57:18,977 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - Standalone build or calculation
+2016-03-02 23:57:18,980 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - Job "(INTERNAL) All Tests build of elibrary:elibrary" runs in cluster node ea-latest/ea-latest_1
+2016-03-02 23:57:18,981 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - Job "(INTERNAL) All Tests build of elibrary:elibrary" has id 398cc081-0a7b1e4b-40f38093-2ece1ce6
+2016-03-02 23:57:18,981 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - Job "(INTERNAL) All Tests build of elibrary:elibrary" runs as user "sDeveloper"
+2016-03-02 23:57:18,982 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - Artifacts to be built:
+
+elibrary:elibrary:null
+
+2016-03-02 23:57:18,983 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - State of job "(INTERNAL) All Tests build of elibrary:elibrary" changed to ACTIVATING
+2016-03-02 23:57:19,016 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - Job "Deploy elibrary:elibrary to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources" runs in cluster node ea-latest/ea-latest_1
+2016-03-02 23:57:19,017 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - Job "Deploy elibrary:elibrary to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources" has id 398cc0a4-0a7b1e4b-40f38093-d981b498
+2016-03-02 23:57:19,018 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - Job "Deploy elibrary:elibrary to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources" runs as user "sDeveloper"
+2016-03-02 23:57:19,019 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - State of job "Deploy elibrary:elibrary to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources" changed to ACTIVATING
+2016-03-02 23:57:19,032 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - State of job "Deploy elibrary:elibrary to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources" changed to WAITING
+2016-03-02 23:57:19,037 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - State of job "(INTERNAL) All Tests build of elibrary:elibrary" changed to WAITING
+2016-03-02 23:57:19,039 [ajp-nio-8889-exec-4 | u:sDeveloper | u:sDeveloper] INFO  root  - State of job "All Tests build of elibrary:elibrary" changed to WAITING
+2016-03-02 23:57:19,084 [Worker-7 | u:sDeveloper] INFO  root  - State of job "Deploy elibrary:elibrary to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources" changed to RUNNING
+2016-03-02 23:57:19,098 [Worker-7 | u:sDeveloper] INFO  root  - State of job "(INTERNAL) All Tests build of elibrary:elibrary" changed to RUNNING
+2016-03-02 23:57:19,099 [Worker-7 | u:sDeveloper] INFO  root  - State of job "All Tests build of elibrary:elibrary" changed to RUNNING
+2016-03-02 23:57:19,229 [Worker-7 | u:sDeveloper | job: build.deploy] INFO  root  - Deploying artifact elibrary:elibrary:null and its children to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources
+2016-03-02 23:57:19,232 [Worker-7 | u:sDeveloper | job: build.deploy] INFO  root  - Deploying artifact elibrary:elibrary:null to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null
+2016-03-02 23:57:19,233 [Worker-7 | u:sDeveloper | job: build.deploy] INFO  root  - Downloading resources for elibrary:elibrary:null
+2016-03-02 23:57:19,234 [Worker-7 | u:sDeveloper | job: build.deploy] INFO  root  - Downloading resource /Demo Data Development/elibrary/trunk to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null
+2016-03-02 23:57:21,250 [Worker-7 | u:sDeveloper | job: build.deploy] INFO  root  - Downloading shared configuration from /.polarion/maven to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/.config
+2016-03-02 23:57:22,104 [Worker-7 | u:sDeveloper | job: build.deploy] INFO  root  - Creating or finding POM file for elibrary:elibrary:null in /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null
+2016-03-02 23:57:22,105 [Worker-7 | u:sDeveloper | job: build.deploy] INFO  root  - POM file created or found in /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/pom.xml
+2016-03-02 23:57:22,106 [Worker-7 | u:sDeveloper | job: build.deploy] INFO  root  - Altering /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/pom.xml for build
+2016-03-02 23:57:22,109 [Worker-7 | u:sDeveloper] INFO  root  - State of job "Deploy elibrary:elibrary to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources" changed to FINISHED
+2016-03-02 23:57:22,110 [Worker-7 | u:sDeveloper] INFO  root  - Status of job "Deploy elibrary:elibrary to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources" is OK
+2016-03-02 23:57:22,134 [Worker-7 | u:sDeveloper | job: build.build] INFO  root  - Build properties:
+
+polarion.build.default.deploy.repository.id=polarion-shared
+polarion.build.default.deploy.repository.url=file:///opt/polarion/data/shared-maven-repo
+polarion.build.id=20160302-2357
+polarion.build.maven.executor=maven2
+polarion.build.maven.location.maven2=/opt/polarion/polarion/../maven/distribution
+polarion.build.xUnit.import.enabled=true
+polarion.build.xUnit.import.idPrefix=build_all
+polarion.files.repository=/opt/polarion/data/BIR
+polarion.reports.repository=/opt/polarion/data/RR
+
+2016-03-02 23:57:22,135 [Worker-7 | u:sDeveloper | job: build.build] INFO  root  - Using external Maven named 'maven2'
+2016-03-02 23:57:22,136 [Worker-7 | u:sDeveloper | job: build.build] INFO  root  - Maven execution settings:
+
+recursive is true
+offline is false
+usePluginRegistry is true
+updateSnapshots is false
+reactorActive is false
+globalChecksumPolicy is null
+pluginUpdateOverride is null
+activeProfiles is []
+inactiveProfiles is []
+reactorFailureBehaviour is null
+
+2016-03-02 23:57:22,138 [Worker-7 | u:sDeveloper | job: build.build] INFO  root  - Used settings file: /tmp/settings_clone1122698575071574135.xml
+2016-03-02 23:57:22,139 [Worker-7 | u:sDeveloper | job: build.build] INFO  root  - Executing /usr/java/jdk1.8.0_66/jre/bin/java
+  -- args [-Xbootclasspath/a:/usr/java/jdk1.8.0_66/lib/tools.jar, -Dmaven.home=/opt/polarion/polarion/../maven/distribution, -Dorg.apache.maven.user-plugin-registry=/opt/polarion/polarion/../maven/plugin-registry.xml, -Dclassworlds.conf=/opt/polarion/polarion/../maven/distribution/bin/m2.conf, -classpath, /opt/polarion/polarion/../maven/distribution/boot/classworlds-1.1.jar, org.codehaus.classworlds.Launcher, --settings, /tmp/settings_clone1122698575071574135.xml, --batch-mode, --file, /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/pom.xml, --errors, -Dpolarion.reports.repository=/opt/polarion/data/RR, -Dpolarion.build.maven.executor=maven2, -Dpolarion.files.repository=/opt/polarion/data/BIR, -Dpolarion.build.default.deploy.repository.url=file:///opt/polarion/data/shared-maven-repo, -Dpolarion.build.default.deploy.repository.id=polarion-shared, -Dpolarion.build.xUnit.import.idPrefix=build_all, -Dpolarion.build.id=20160302-2357, -Dpolarion.build.maven.location.maven2=/opt/polarion/polarion/../maven/distribution, -Dpolarion.build.xUnit.import.enabled=true, deploy]
+  -- env null
+  -- dir /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null
+2016-03-02 23:57:22,761 [Thread-9244] INFO  root  - + Error stacktraces are turned on.
+2016-03-02 23:57:22,820 [Thread-9244] INFO  root  - Scanning for projects...
+2016-03-02 23:57:22,821 [Thread-9244] INFO  root  - ------------------------------------------------------------------------
+2016-03-02 23:57:22,822 [Thread-9244] INFO  root  - Building E-Library App
+2016-03-02 23:57:22,822 [Thread-9244] INFO  root  - task-segment: [deploy]
+2016-03-02 23:57:22,845 [Thread-9244] INFO  root  - ------------------------------------------------------------------------
+2016-03-02 23:57:22,846 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-resources-plugin/2.3/maven-resources-plugin-2.3.pom
+2016-03-02 23:57:22,848 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-resources-plugin:pom:2.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:22,876 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-resources-plugin/2.3/maven-resources-plugin-2.3.pom
+4K downloaded
+2016-03-02 23:57:22,877 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-plugins/12/maven-plugins-12.pom
+2016-03-02 23:57:22,879 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-plugins:pom:12' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:22,890 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-plugins/12/maven-plugins-12.pom
+11K downloaded
+2016-03-02 23:57:22,891 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-parent/9/maven-parent-9.pom
+2016-03-02 23:57:22,892 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-parent:pom:9' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:22,904 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-parent/9/maven-parent-9.pom
+32K downloaded
+2016-03-02 23:57:22,905 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/apache/4/apache-4.pom
+2016-03-02 23:57:22,906 [Thread-9244] INFO  root  - Unable to find resource 'org.apache:apache:pom:4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:22,982 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/apache/4/apache-4.pom
+4K downloaded
+2016-03-02 23:57:22,982 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-resources-plugin/2.3/maven-resources-plugin-2.3.jar
+2016-03-02 23:57:22,983 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-resources-plugin:maven-plugin:2.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,029 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-resources-plugin/2.3/maven-resources-plugin-2.3.jar
+20K downloaded
+2016-03-02 23:57:23,031 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-compiler-plugin/2.0.2/maven-compiler-plugin-2.0.2.pom
+2016-03-02 23:57:23,031 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-compiler-plugin:pom:2.0.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,035 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-compiler-plugin/2.0.2/maven-compiler-plugin-2.0.2.pom
+2K downloaded
+2016-03-02 23:57:23,036 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-plugins/8/maven-plugins-8.pom
+2016-03-02 23:57:23,037 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-plugins:pom:8' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,039 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-plugins/8/maven-plugins-8.pom
+5K downloaded
+2016-03-02 23:57:23,039 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-parent/5/maven-parent-5.pom
+2016-03-02 23:57:23,044 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-parent:pom:5' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,049 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-parent/5/maven-parent-5.pom
+14K downloaded
+2016-03-02 23:57:23,050 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/apache/3/apache-3.pom
+2016-03-02 23:57:23,051 [Thread-9244] INFO  root  - Unable to find resource 'org.apache:apache:pom:3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,064 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/apache/3/apache-3.pom
+3K downloaded
+2016-03-02 23:57:23,065 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-compiler-plugin/2.0.2/maven-compiler-plugin-2.0.2.jar
+2016-03-02 23:57:23,065 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-compiler-plugin:maven-plugin:2.0.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,093 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-compiler-plugin/2.0.2/maven-compiler-plugin-2.0.2.jar
+17K downloaded
+2016-03-02 23:57:23,107 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-surefire-plugin/2.4.3/maven-surefire-plugin-2.4.3.pom
+2016-03-02 23:57:23,108 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-surefire-plugin:pom:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,119 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-surefire-plugin/2.4.3/maven-surefire-plugin-2.4.3.pom
+6K downloaded
+2016-03-02 23:57:23,120 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/surefire/surefire/2.4.3/surefire-2.4.3.pom
+2016-03-02 23:57:23,122 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.surefire:surefire:pom:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,127 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/surefire/surefire/2.4.3/surefire-2.4.3.pom
+7K downloaded
+2016-03-02 23:57:23,128 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-parent/7/maven-parent-7.pom
+2016-03-02 23:57:23,129 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-parent:pom:7' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,153 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-parent/7/maven-parent-7.pom
+20K downloaded
+2016-03-02 23:57:23,153 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-surefire-plugin/2.4.3/maven-surefire-plugin-2.4.3.jar
+2016-03-02 23:57:23,154 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,210 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-surefire-plugin/2.4.3/maven-surefire-plugin-2.4.3.jar
+22K downloaded
+2016-03-02 23:57:23,211 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-jar-plugin/2.2/maven-jar-plugin-2.2.pom
+2016-03-02 23:57:23,211 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-jar-plugin:pom:2.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,220 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-jar-plugin/2.2/maven-jar-plugin-2.2.pom
+8K downloaded
+2016-03-02 23:57:23,221 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-plugins/10/maven-plugins-10.pom
+2016-03-02 23:57:23,222 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-plugins:pom:10' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,247 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-plugins/10/maven-plugins-10.pom
+7K downloaded
+2016-03-02 23:57:23,248 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-jar-plugin/2.2/maven-jar-plugin-2.2.jar
+2016-03-02 23:57:23,250 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-jar-plugin:maven-plugin:2.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,282 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-jar-plugin/2.2/maven-jar-plugin-2.2.jar
+26K downloaded
+2016-03-02 23:57:23,283 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-install-plugin/2.2/maven-install-plugin-2.2.pom
+2016-03-02 23:57:23,284 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-install-plugin:pom:2.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,299 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-install-plugin/2.2/maven-install-plugin-2.2.pom
+2K downloaded
+2016-03-02 23:57:23,300 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-install-plugin/2.2/maven-install-plugin-2.2.jar
+2016-03-02 23:57:23,302 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-install-plugin:maven-plugin:2.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,332 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-install-plugin/2.2/maven-install-plugin-2.2.jar
+15K downloaded
+2016-03-02 23:57:23,334 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-deploy-plugin/2.4/maven-deploy-plugin-2.4.pom
+2016-03-02 23:57:23,335 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-deploy-plugin:pom:2.4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,342 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-deploy-plugin/2.4/maven-deploy-plugin-2.4.pom
+6K downloaded
+2016-03-02 23:57:23,343 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-plugins/11/maven-plugins-11.pom
+2016-03-02 23:57:23,343 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-plugins:pom:11' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,346 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-plugins/11/maven-plugins-11.pom
+10K downloaded
+2016-03-02 23:57:23,347 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-parent/8/maven-parent-8.pom
+2016-03-02 23:57:23,348 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-parent:pom:8' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,371 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-parent/8/maven-parent-8.pom
+23K downloaded
+2016-03-02 23:57:23,372 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/plugins/maven-deploy-plugin/2.4/maven-deploy-plugin-2.4.jar
+2016-03-02 23:57:23,373 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.plugins:maven-deploy-plugin:maven-plugin:2.4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,406 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/plugins/maven-deploy-plugin/2.4/maven-deploy-plugin-2.4.jar
+33K downloaded
+2016-03-02 23:57:23,407 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.pom
+2016-03-02 23:57:23,408 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-plugin-api:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,412 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,413 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven/2.0.6/maven-2.0.6.pom
+2016-03-02 23:57:23,415 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,431 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven/2.0.6/maven-2.0.6.pom
+8K downloaded
+2016-03-02 23:57:23,432 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.pom
+2016-03-02 23:57:23,433 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-project:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,454 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.pom
+2K downloaded
+2016-03-02 23:57:23,455 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.pom
+2016-03-02 23:57:23,456 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-settings:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,474 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,475 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.pom
+2016-03-02 23:57:23,477 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-model:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,495 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.pom
+2K downloaded
+2016-03-02 23:57:23,496 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.4.1/plexus-utils-1.4.1.pom
+2016-03-02 23:57:23,497 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:pom:1.4.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,499 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.4.1/plexus-utils-1.4.1.pom
+1K downloaded
+2016-03-02 23:57:23,501 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus/1.0.11/plexus-1.0.11.pom
+2016-03-02 23:57:23,502 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus:pom:1.0.11' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,513 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus/1.0.11/plexus-1.0.11.pom
+8K downloaded
+2016-03-02 23:57:23,514 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.pom
+2016-03-02 23:57:23,515 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-container-default:pom:1.0-alpha-9-stable-1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,517 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.pom
+3K downloaded
+2016-03-02 23:57:23,518 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-containers/1.0.3/plexus-containers-1.0.3.pom
+2016-03-02 23:57:23,519 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-containers:pom:1.0.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,520 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-containers/1.0.3/plexus-containers-1.0.3.pom
+492b downloaded
+2016-03-02 23:57:23,521 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus/1.0.4/plexus-1.0.4.pom
+2016-03-02 23:57:23,522 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus:pom:1.0.4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,527 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus/1.0.4/plexus-1.0.4.pom
+5K downloaded
+2016-03-02 23:57:23,528 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/junit/junit/3.8.1/junit-3.8.1.pom
+2016-03-02 23:57:23,529 [Thread-9244] INFO  root  - Unable to find resource 'junit:junit:pom:3.8.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,532 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/junit/junit/3.8.1/junit-3.8.1.pom
+998b downloaded
+2016-03-02 23:57:23,533 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.pom
+2016-03-02 23:57:23,534 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:pom:1.0.4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,540 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.pom
+6K downloaded
+2016-03-02 23:57:23,541 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.pom
+2016-03-02 23:57:23,542 [Thread-9244] INFO  root  - Unable to find resource 'classworlds:classworlds:pom:1.1-alpha-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,545 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.pom
+3K downloaded
+2016-03-02 23:57:23,546 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.pom
+2016-03-02 23:57:23,547 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-profile:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,571 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,571 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.pom
+2016-03-02 23:57:23,572 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-artifact-manager:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,586 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.pom
+2K downloaded
+2016-03-02 23:57:23,587 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.pom
+2016-03-02 23:57:23,590 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-repository-metadata:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,604 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,605 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.pom
+2016-03-02 23:57:23,606 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-artifact:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,618 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,619 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.pom
+2016-03-02 23:57:23,620 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-provider-api:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,622 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.pom
+680b downloaded
+2016-03-02 23:57:23,623 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon/1.0-beta-2/wagon-1.0-beta-2.pom
+2016-03-02 23:57:23,623 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,625 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/wagon/wagon/1.0-beta-2/wagon-1.0-beta-2.pom
+5K downloaded
+2016-03-02 23:57:23,626 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-parent/4/maven-parent-4.pom
+2016-03-02 23:57:23,626 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-parent:pom:4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,634 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-parent/4/maven-parent-4.pom
+9K downloaded
+2016-03-02 23:57:23,635 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.pom
+2016-03-02 23:57:23,636 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-plugin-registry:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,649 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,650 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom
+2016-03-02 23:57:23,651 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:pom:1.5.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,652 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom
+5K downloaded
+2016-03-02 23:57:23,653 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom
+2016-03-02 23:57:23,655 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus:pom:1.0.12' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,661 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom
+9K downloaded
+2016-03-02 23:57:23,663 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom
+2016-03-02 23:57:23,664 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.shared:maven-filtering:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,667 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom
+3K downloaded
+2016-03-02 23:57:23,667 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom
+2016-03-02 23:57:23,668 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.shared:maven-shared-components:pom:10' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,685 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom
+8K downloaded
+2016-03-02 23:57:23,686 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.pom
+2016-03-02 23:57:23,688 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-core:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,706 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.pom
+6K downloaded
+2016-03-02 23:57:23,707 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-file/1.0-beta-2/wagon-file-1.0-beta-2.pom
+2016-03-02 23:57:23,708 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-file:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,709 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/wagon/wagon-file/1.0-beta-2/wagon-file-1.0-beta-2.pom
+637b downloaded
+2016-03-02 23:57:23,710 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-providers/1.0-beta-2/wagon-providers-1.0-beta-2.pom
+2016-03-02 23:57:23,711 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-providers:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,721 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/wagon/wagon-providers/1.0-beta-2/wagon-providers-1.0-beta-2.pom
+1K downloaded
+2016-03-02 23:57:23,722 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.pom
+2016-03-02 23:57:23,723 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-plugin-parameter-documenter:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,734 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,735 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-http-lightweight/1.0-beta-2/wagon-http-lightweight-1.0-beta-2.pom
+2016-03-02 23:57:23,736 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-http-lightweight:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,746 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/wagon/wagon-http-lightweight/1.0-beta-2/wagon-http-lightweight-1.0-beta-2.pom
+1K downloaded
+2016-03-02 23:57:23,747 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-http-shared/1.0-beta-2/wagon-http-shared-1.0-beta-2.pom
+2016-03-02 23:57:23,748 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-http-shared:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,758 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/wagon/wagon-http-shared/1.0-beta-2/wagon-http-shared-1.0-beta-2.pom
+845b downloaded
+2016-03-02 23:57:23,759 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/jtidy/jtidy/4aug2000r7-dev/jtidy-4aug2000r7-dev.pom
+2016-03-02 23:57:23,759 [Thread-9244] INFO  root  - Unable to find resource 'jtidy:jtidy:pom:4aug2000r7-dev' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,765 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/jtidy/jtidy/4aug2000r7-dev/jtidy-4aug2000r7-dev.pom
+1K downloaded
+2016-03-02 23:57:23,766 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.pom
+2016-03-02 23:57:23,767 [Thread-9244] INFO  root  - Unable to find resource 'xml-apis:xml-apis:pom:1.0.b2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,770 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.pom
+2K downloaded
+2016-03-02 23:57:23,771 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.pom
+2016-03-02 23:57:23,772 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.reporting:maven-reporting-api:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,774 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,775 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/reporting/maven-reporting/2.0.6/maven-reporting-2.0.6.pom
+2016-03-02 23:57:23,775 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.reporting:maven-reporting:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,784 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/reporting/maven-reporting/2.0.6/maven-reporting-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,785 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.pom
+2016-03-02 23:57:23,786 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.doxia:doxia-sink-api:pom:1.0-alpha-7' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,787 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.pom
+424b downloaded
+2016-03-02 23:57:23,788 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/doxia/doxia/1.0-alpha-7/doxia-1.0-alpha-7.pom
+2016-03-02 23:57:23,789 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.doxia:doxia:pom:1.0-alpha-7' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,793 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/doxia/doxia/1.0-alpha-7/doxia-1.0-alpha-7.pom
+3K downloaded
+2016-03-02 23:57:23,794 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.pom
+2016-03-02 23:57:23,794 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-error-diagnostics:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,868 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,868 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-cli/commons-cli/1.0/commons-cli-1.0.pom
+2016-03-02 23:57:23,888 [Thread-9244] INFO  root  - Unable to find resource 'commons-cli:commons-cli:pom:1.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,891 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-cli/commons-cli/1.0/commons-cli-1.0.pom
+2K downloaded
+2016-03-02 23:57:23,892 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-ssh-external/1.0-beta-2/wagon-ssh-external-1.0-beta-2.pom
+2016-03-02 23:57:23,892 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-ssh-external:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,899 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/wagon/wagon-ssh-external/1.0-beta-2/wagon-ssh-external-1.0-beta-2.pom
+1K downloaded
+2016-03-02 23:57:23,900 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-2/wagon-ssh-common-1.0-beta-2.pom
+2016-03-02 23:57:23,901 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-ssh-common:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,908 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-2/wagon-ssh-common-1.0-beta-2.pom
+851b downloaded
+2016-03-02 23:57:23,909 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.pom
+2016-03-02 23:57:23,910 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-interactivity-api:pom:1.0-alpha-4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,913 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.pom
+6K downloaded
+2016-03-02 23:57:23,914 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-container-default/1.0-alpha-7/plexus-container-default-1.0-alpha-7.pom
+2016-03-02 23:57:23,915 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-container-default:pom:1.0-alpha-7' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,915 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-7/plexus-container-default-1.0-alpha-7.pom
+1K downloaded
+2016-03-02 23:57:23,916 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/plexus/plexus-containers/1.0.2/plexus-containers-1.0.2.pom
+2016-03-02 23:57:23,917 [Thread-9244] INFO  root  - Unable to find resource 'plexus:plexus-containers:pom:1.0.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,917 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/plexus/plexus-containers/1.0.2/plexus-containers-1.0.2.pom
+471b downloaded
+2016-03-02 23:57:23,918 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/plexus/plexus-root/1.0.3/plexus-root-1.0.3.pom
+2016-03-02 23:57:23,919 [Thread-9244] INFO  root  - Unable to find resource 'plexus:plexus-root:pom:1.0.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,922 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/plexus/plexus-root/1.0.3/plexus-root-1.0.3.pom
+5K downloaded
+2016-03-02 23:57:23,922 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/plexus/plexus-utils/1.0.2/plexus-utils-1.0.2.pom
+2016-03-02 23:57:23,923 [Thread-9244] INFO  root  - Unable to find resource 'plexus:plexus-utils:pom:1.0.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,927 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/plexus/plexus-utils/1.0.2/plexus-utils-1.0.2.pom
+740b downloaded
+2016-03-02 23:57:23,928 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.pom
+2016-03-02 23:57:23,929 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-plugin-descriptor:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,937 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,938 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.pom
+2016-03-02 23:57:23,941 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-monitor:pom:2.0.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,949 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.pom
+1K downloaded
+2016-03-02 23:57:23,949 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2.pom
+2016-03-02 23:57:23,950 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-ssh:pom:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,980 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2.pom
+1K downloaded
+2016-03-02 23:57:23,981 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/com/jcraft/jsch/0.1.27/jsch-0.1.27.pom
+2016-03-02 23:57:23,981 [Thread-9244] INFO  root  - Unable to find resource 'com.jcraft:jsch:pom:0.1.27' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,984 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/com/jcraft/jsch/0.1.27/jsch-0.1.27.pom
+965b downloaded
+2016-03-02 23:57:23,985 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/classworlds/classworlds/1.1/classworlds-1.1.pom
+2016-03-02 23:57:23,986 [Thread-9244] INFO  root  - Unable to find resource 'classworlds:classworlds:pom:1.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,989 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/classworlds/classworlds/1.1/classworlds-1.1.pom
+3K downloaded
+2016-03-02 23:57:23,990 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom
+2016-03-02 23:57:23,990 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-interpolation:pom:1.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:23,997 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom
+2K downloaded
+2016-03-02 23:57:23,997 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.jar
+2016-03-02 23:57:23,998 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:jar:1.5.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,001 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.jar
+244K downloaded
+2016-03-02 23:57:24,002 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
+2016-03-02 23:57:24,003 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.shared:maven-filtering:jar:1.0-beta-2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,003 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
+32K downloaded
+2016-03-02 23:57:24,004 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.jar
+2016-03-02 23:57:24,005 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-interpolation:jar:1.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,221 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.jar
+49K downloaded
+2016-03-02 23:57:24,240 [Thread-9244] INFO  root  - [resources:resources]
+[WARNING] Using platform encoding (ANSI_X3.4-1968 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-02 23:57:24,253 [Thread-9244] INFO  root  - skip non existing resourceDirectory /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/src/main/resources
+2016-03-02 23:57:24,254 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/log4j/log4j/1.2.8/log4j-1.2.8.pom
+2016-03-02 23:57:24,255 [Thread-9244] INFO  root  - Unable to find resource 'log4j:log4j:pom:1.2.8' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,258 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/log4j/log4j/1.2.8/log4j-1.2.8.pom
+145b downloaded
+2016-03-02 23:57:24,258 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-configuration/commons-configuration/1.2/commons-configuration-1.2.pom
+2016-03-02 23:57:24,259 [Thread-9244] INFO  root  - Unable to find resource 'commons-configuration:commons-configuration:pom:1.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,492 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-configuration/commons-configuration/1.2/commons-configuration-1.2.pom
+10K downloaded
+2016-03-02 23:57:24,493 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-collections/commons-collections/3.1/commons-collections-3.1.pom
+2016-03-02 23:57:24,522 [Thread-9244] INFO  root  - Unable to find resource 'commons-collections:commons-collections:pom:3.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,522 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-collections/commons-collections/3.1/commons-collections-3.1.pom
+5K downloaded
+2016-03-02 23:57:24,546 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-lang/commons-lang/2.1/commons-lang-2.1.pom
+2016-03-02 23:57:24,546 [Thread-9244] INFO  root  - Unable to find resource 'commons-lang:commons-lang:pom:2.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,547 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-lang/commons-lang/2.1/commons-lang-2.1.pom
+9K downloaded
+2016-03-02 23:57:24,548 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/dom4j/dom4j/1.4/dom4j-1.4.pom
+2016-03-02 23:57:24,548 [Thread-9244] INFO  root  - Unable to find resource 'dom4j:dom4j:pom:1.4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,549 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/dom4j/dom4j/1.4/dom4j-1.4.pom
+2K downloaded
+2016-03-02 23:57:24,550 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/jaxen/jaxen/1.0-FCS/jaxen-1.0-FCS.pom
+2016-03-02 23:57:24,551 [Thread-9244] INFO  root  - Unable to find resource 'jaxen:jaxen:pom:1.0-FCS' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,551 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/jaxen/jaxen/1.0-FCS/jaxen-1.0-FCS.pom
+146b downloaded
+2016-03-02 23:57:24,552 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/saxpath/saxpath/1.0-FCS/saxpath-1.0-FCS.pom
+2016-03-02 23:57:24,553 [Thread-9244] INFO  root  - Unable to find resource 'saxpath:saxpath:pom:1.0-FCS' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,554 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/saxpath/saxpath/1.0-FCS/saxpath-1.0-FCS.pom
+150b downloaded
+2016-03-02 23:57:24,554 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/msv/msv/20020414/msv-20020414.pom
+2016-03-02 23:57:24,555 [Thread-9244] INFO  root  - Unable to find resource 'msv:msv:pom:20020414' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,556 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/msv/msv/20020414/msv-20020414.pom
+143b downloaded
+2016-03-02 23:57:24,557 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/relaxngDatatype/relaxngDatatype/20020414/relaxngDatatype-20020414.pom
+2016-03-02 23:57:24,558 [Thread-9244] INFO  root  - Unable to find resource 'relaxngDatatype:relaxngDatatype:pom:20020414' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,558 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/relaxngDatatype/relaxngDatatype/20020414/relaxngDatatype-20020414.pom
+167b downloaded
+2016-03-02 23:57:24,559 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/isorelax/isorelax/20020414/isorelax-20020414.pom
+2016-03-02 23:57:24,560 [Thread-9244] INFO  root  - Unable to find resource 'isorelax:isorelax:pom:20020414' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,560 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/isorelax/isorelax/20020414/isorelax-20020414.pom
+153b downloaded
+2016-03-02 23:57:24,561 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-logging/commons-logging-api/1.0.4/commons-logging-api-1.0.4.pom
+2016-03-02 23:57:24,562 [Thread-9244] INFO  root  - Unable to find resource 'commons-logging:commons-logging-api:pom:1.0.4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,562 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-logging/commons-logging-api/1.0.4/commons-logging-api-1.0.4.pom
+168b downloaded
+2016-03-02 23:57:24,563 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-digester/commons-digester/1.6/commons-digester-1.6.pom
+2016-03-02 23:57:24,564 [Thread-9244] INFO  root  - Unable to find resource 'commons-digester:commons-digester:pom:1.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,564 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-digester/commons-digester/1.6/commons-digester-1.6.pom
+974b downloaded
+2016-03-02 23:57:24,565 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-beanutils/commons-beanutils/1.6/commons-beanutils-1.6.pom
+2016-03-02 23:57:24,566 [Thread-9244] INFO  root  - Unable to find resource 'commons-beanutils:commons-beanutils:pom:1.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,567 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-beanutils/commons-beanutils/1.6/commons-beanutils-1.6.pom
+2K downloaded
+2016-03-02 23:57:24,567 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-logging/commons-logging/1.0/commons-logging-1.0.pom
+2016-03-02 23:57:24,568 [Thread-9244] INFO  root  - Unable to find resource 'commons-logging:commons-logging:pom:1.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,569 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-logging/commons-logging/1.0/commons-logging-1.0.pom
+163b downloaded
+2016-03-02 23:57:24,570 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-collections/commons-collections/2.0/commons-collections-2.0.pom
+2016-03-02 23:57:24,570 [Thread-9244] INFO  root  - Unable to find resource 'commons-collections:commons-collections:pom:2.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,571 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-collections/commons-collections/2.0/commons-collections-2.0.pom
+171b downloaded
+2016-03-02 23:57:24,574 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-collections/commons-collections/2.1/commons-collections-2.1.pom
+2016-03-02 23:57:24,575 [Thread-9244] INFO  root  - Unable to find resource 'commons-collections:commons-collections:pom:2.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,576 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-collections/commons-collections/2.1/commons-collections-2.1.pom
+3K downloaded
+2016-03-02 23:57:24,577 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-beanutils/commons-beanutils-core/1.7.0/commons-beanutils-core-1.7.0.pom
+2016-03-02 23:57:24,578 [Thread-9244] INFO  root  - Unable to find resource 'commons-beanutils:commons-beanutils-core:pom:1.7.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,578 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-beanutils/commons-beanutils-core/1.7.0/commons-beanutils-core-1.7.0.pom
+719b downloaded
+2016-03-02 23:57:24,579 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-codec/commons-codec/1.3/commons-codec-1.3.pom
+2016-03-02 23:57:24,580 [Thread-9244] INFO  root  - Unable to find resource 'commons-codec:commons-codec:pom:1.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,581 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-codec/commons-codec/1.3/commons-codec-1.3.pom
+5K downloaded
+2016-03-02 23:57:24,582 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/xerces/xerces/2.2.1/xerces-2.2.1.pom
+2016-03-02 23:57:24,583 [Thread-9244] INFO  root  - Unable to find resource 'xerces:xerces:pom:2.2.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,583 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/xerces/xerces/2.2.1/xerces-2.2.1.pom
+322b downloaded
+2016-03-02 23:57:24,584 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/xerces/xercesImpl/2.2.1/xercesImpl-2.2.1.pom
+2016-03-02 23:57:24,585 [Thread-9244] INFO  root  - Unable to find resource 'xerces:xercesImpl:pom:2.2.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,586 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/xerces/xercesImpl/2.2.1/xercesImpl-2.2.1.pom
+150b downloaded
+2016-03-02 23:57:24,587 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/xalan/xalan/2.7.0/xalan-2.7.0.pom
+2016-03-02 23:57:24,588 [Thread-9244] INFO  root  - Unable to find resource 'xalan:xalan:pom:2.7.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,588 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/xalan/xalan/2.7.0/xalan-2.7.0.pom
+491b downloaded
+2016-03-02 23:57:24,589 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.pom
+2016-03-02 23:57:24,590 [Thread-9244] INFO  root  - Unable to find resource 'xml-apis:xml-apis:pom:2.0.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,591 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.pom
+346b downloaded
+2016-03-02 23:57:24,592 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/servletapi/servletapi/2.3/servletapi-2.3.pom
+2016-03-02 23:57:24,593 [Thread-9244] INFO  root  - Unable to find resource 'servletapi:servletapi:pom:2.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,593 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/servletapi/servletapi/2.3/servletapi-2.3.pom
+739b downloaded
+2016-03-02 23:57:24,594 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/javax/servlet/servlet-api/2.3/servlet-api-2.3.pom
+2016-03-02 23:57:24,595 [Thread-9244] INFO  root  - Unable to find resource 'javax.servlet:servlet-api:pom:2.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,601 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3.pom
+156b downloaded
+2016-03-02 23:57:24,616 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-primitives/commons-primitives/1.0/commons-primitives-1.0.pom
+2016-03-02 23:57:24,677 [Thread-9244] INFO  root  - Unable to find resource 'commons-primitives:commons-primitives:pom:1.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,678 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-primitives/commons-primitives/1.0/commons-primitives-1.0.pom
+168b downloaded
+2016-03-02 23:57:24,707 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/log4j/log4j/1.2.8/log4j-1.2.8.jar
+2016-03-02 23:57:24,707 [Thread-9244] INFO  root  - Unable to find resource 'log4j:log4j:jar:1.2.8' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,726 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/log4j/log4j/1.2.8/log4j-1.2.8.jar
+344K downloaded
+2016-03-02 23:57:24,727 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-configuration/commons-configuration/1.2/commons-configuration-1.2.jar
+2016-03-02 23:57:24,741 [Thread-9244] INFO  root  - Unable to find resource 'commons-configuration:commons-configuration:jar:1.2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,742 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-configuration/commons-configuration/1.2/commons-configuration-1.2.jar
+159K downloaded
+2016-03-02 23:57:24,768 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-collections/commons-collections/3.1/commons-collections-3.1.jar
+2016-03-02 23:57:24,768 [Thread-9244] INFO  root  - Unable to find resource 'commons-collections:commons-collections:jar:3.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,769 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-collections/commons-collections/3.1/commons-collections-3.1.jar
+546K downloaded
+2016-03-02 23:57:24,770 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+2016-03-02 23:57:24,790 [Thread-9244] INFO  root  - Unable to find resource 'commons-lang:commons-lang:jar:2.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,791 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+202K downloaded
+2016-03-02 23:57:24,793 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/dom4j/dom4j/1.4/dom4j-1.4.jar
+2016-03-02 23:57:24,800 [Thread-9244] INFO  root  - Unable to find resource 'dom4j:dom4j:jar:1.4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,800 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/dom4j/dom4j/1.4/dom4j-1.4.jar
+475K downloaded
+2016-03-02 23:57:24,801 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar
+2016-03-02 23:57:24,825 [Thread-9244] INFO  root  - Unable to find resource 'xml-apis:xml-apis:jar:1.0.b2' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,826 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar
+106K downloaded
+2016-03-02 23:57:24,939 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/jaxen/jaxen/1.0-FCS/jaxen-1.0-FCS.jar
+2016-03-02 23:57:24,940 [Thread-9244] INFO  root  - Unable to find resource 'jaxen:jaxen:jar:1.0-FCS' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,941 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/jaxen/jaxen/1.0-FCS/jaxen-1.0-FCS.jar
+187K downloaded
+2016-03-02 23:57:24,941 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/saxpath/saxpath/1.0-FCS/saxpath-1.0-FCS.jar
+2016-03-02 23:57:24,942 [Thread-9244] INFO  root  - Unable to find resource 'saxpath:saxpath:jar:1.0-FCS' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:24,999 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/saxpath/saxpath/1.0-FCS/saxpath-1.0-FCS.jar
+23K downloaded
+2016-03-02 23:57:25,000 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/msv/msv/20020414/msv-20020414.jar
+2016-03-02 23:57:25,001 [Thread-9244] INFO  root  - Unable to find resource 'msv:msv:jar:20020414' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,002 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/msv/msv/20020414/msv-20020414.jar
+1133K downloaded
+2016-03-02 23:57:25,002 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/relaxngDatatype/relaxngDatatype/20020414/relaxngDatatype-20020414.jar
+2016-03-02 23:57:25,003 [Thread-9244] INFO  root  - Unable to find resource 'relaxngDatatype:relaxngDatatype:jar:20020414' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,004 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/relaxngDatatype/relaxngDatatype/20020414/relaxngDatatype-20020414.jar
+18K downloaded
+2016-03-02 23:57:25,026 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/isorelax/isorelax/20020414/isorelax-20020414.jar
+2016-03-02 23:57:25,027 [Thread-9244] INFO  root  - Unable to find resource 'isorelax:isorelax:jar:20020414' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,028 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/isorelax/isorelax/20020414/isorelax-20020414.jar
+131K downloaded
+2016-03-02 23:57:25,029 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-logging/commons-logging-api/1.0.4/commons-logging-api-1.0.4.jar
+2016-03-02 23:57:25,029 [Thread-9244] INFO  root  - Unable to find resource 'commons-logging:commons-logging-api:jar:1.0.4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,030 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-logging/commons-logging-api/1.0.4/commons-logging-api-1.0.4.jar
+25K downloaded
+2016-03-02 23:57:25,031 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-digester/commons-digester/1.6/commons-digester-1.6.jar
+2016-03-02 23:57:25,031 [Thread-9244] INFO  root  - Unable to find resource 'commons-digester:commons-digester:jar:1.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,043 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-digester/commons-digester/1.6/commons-digester-1.6.jar
+164K downloaded
+2016-03-02 23:57:25,065 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-beanutils/commons-beanutils/1.6/commons-beanutils-1.6.jar
+2016-03-02 23:57:25,066 [Thread-9244] INFO  root  - Unable to find resource 'commons-beanutils:commons-beanutils:jar:1.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,066 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-beanutils/commons-beanutils/1.6/commons-beanutils-1.6.jar
+115K downloaded
+2016-03-02 23:57:25,067 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-logging/commons-logging/1.0/commons-logging-1.0.jar
+2016-03-02 23:57:25,068 [Thread-9244] INFO  root  - Unable to find resource 'commons-logging:commons-logging:jar:1.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,068 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-logging/commons-logging/1.0/commons-logging-1.0.jar
+21K downloaded
+2016-03-02 23:57:25,069 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-beanutils/commons-beanutils-core/1.7.0/commons-beanutils-core-1.7.0.jar
+2016-03-02 23:57:25,070 [Thread-9244] INFO  root  - Unable to find resource 'commons-beanutils:commons-beanutils-core:jar:1.7.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,070 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-beanutils/commons-beanutils-core/1.7.0/commons-beanutils-core-1.7.0.jar
+164K downloaded
+2016-03-02 23:57:25,071 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-codec/commons-codec/1.3/commons-codec-1.3.jar
+2016-03-02 23:57:25,071 [Thread-9244] INFO  root  - Unable to find resource 'commons-codec:commons-codec:jar:1.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,072 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-codec/commons-codec/1.3/commons-codec-1.3.jar
+45K downloaded
+2016-03-02 23:57:25,073 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/xerces/xercesImpl/2.2.1/xercesImpl-2.2.1.jar
+2016-03-02 23:57:25,073 [Thread-9244] INFO  root  - Unable to find resource 'xerces:xercesImpl:jar:2.2.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,074 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/xerces/xercesImpl/2.2.1/xercesImpl-2.2.1.jar
+815K downloaded
+2016-03-02 23:57:25,075 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/xalan/xalan/2.7.0/xalan-2.7.0.jar
+2016-03-02 23:57:25,075 [Thread-9244] INFO  root  - Unable to find resource 'xalan:xalan:jar:2.7.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,243 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar
+2666K downloaded
+2016-03-02 23:57:25,244 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar
+2016-03-02 23:57:25,244 [Thread-9244] INFO  root  - Unable to find resource 'javax.servlet:servlet-api:jar:2.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,245 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar
+76K downloaded
+2016-03-02 23:57:25,246 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/commons-primitives/commons-primitives/1.0/commons-primitives-1.0.jar
+2016-03-02 23:57:25,247 [Thread-9244] INFO  root  - Unable to find resource 'commons-primitives:commons-primitives:jar:1.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,248 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/commons-primitives/commons-primitives/1.0/commons-primitives-1.0.jar
+254K downloaded
+2016-03-02 23:57:25,249 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-plugin-api/2.0/maven-plugin-api-2.0.pom
+2016-03-02 23:57:25,250 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-plugin-api:pom:2.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,250 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-plugin-api/2.0/maven-plugin-api-2.0.pom
+601b downloaded
+2016-03-02 23:57:25,251 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven/2.0/maven-2.0.pom
+2016-03-02 23:57:25,252 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven:pom:2.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,253 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven/2.0/maven-2.0.pom
+8K downloaded
+2016-03-02 23:57:25,254 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-compiler-api/1.5.3/plexus-compiler-api-1.5.3.pom
+2016-03-02 23:57:25,254 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-compiler-api:pom:1.5.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,255 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-compiler-api/1.5.3/plexus-compiler-api-1.5.3.pom
+624b downloaded
+2016-03-02 23:57:25,256 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-compiler/1.5.3/plexus-compiler-1.5.3.pom
+2016-03-02 23:57:25,257 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-compiler:pom:1.5.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,258 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-compiler/1.5.3/plexus-compiler-1.5.3.pom
+1K downloaded
+2016-03-02 23:57:25,258 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-components/1.1.6/plexus-components-1.1.6.pom
+2016-03-02 23:57:25,259 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-components:pom:1.1.6' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,260 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-components/1.1.6/plexus-components-1.1.6.pom
+1K downloaded
+2016-03-02 23:57:25,261 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus/1.0.8/plexus-1.0.8.pom
+2016-03-02 23:57:25,261 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus:pom:1.0.8' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,262 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus/1.0.8/plexus-1.0.8.pom
+7K downloaded
+2016-03-02 23:57:25,263 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-container-default/1.0-alpha-8/plexus-container-default-1.0-alpha-8.pom
+2016-03-02 23:57:25,264 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-container-default:pom:1.0-alpha-8' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,265 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-8/plexus-container-default-1.0-alpha-8.pom
+7K downloaded
+2016-03-02 23:57:25,266 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-compiler-manager/1.5.3/plexus-compiler-manager-1.5.3.pom
+2016-03-02 23:57:25,266 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-compiler-manager:pom:1.5.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,268 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-compiler-manager/1.5.3/plexus-compiler-manager-1.5.3.pom
+634b downloaded
+2016-03-02 23:57:25,269 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-compiler-javac/1.5.3/plexus-compiler-javac-1.5.3.pom
+2016-03-02 23:57:25,270 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-compiler-javac:pom:1.5.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,272 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-compiler-javac/1.5.3/plexus-compiler-javac-1.5.3.pom
+797b downloaded
+2016-03-02 23:57:25,273 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-compilers/1.5.3/plexus-compilers-1.5.3.pom
+2016-03-02 23:57:25,274 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-compilers:pom:1.5.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,278 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-compilers/1.5.3/plexus-compilers-1.5.3.pom
+7K downloaded
+2016-03-02 23:57:25,279 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.0.5/plexus-utils-1.0.5.pom
+2016-03-02 23:57:25,280 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:pom:1.0.5' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,285 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.0.5/plexus-utils-1.0.5.pom
+918b downloaded
+2016-03-02 23:57:25,286 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-artifact/2.0/maven-artifact-2.0.pom
+2016-03-02 23:57:25,286 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-artifact:pom:2.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,293 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-artifact/2.0/maven-artifact-2.0.pom
+723b downloaded
+2016-03-02 23:57:25,294 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.jar
+2016-03-02 23:57:25,295 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:jar:1.0.4' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,297 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.jar
+159K downloaded
+2016-03-02 23:57:25,297 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-compiler-api/1.5.3/plexus-compiler-api-1.5.3.jar
+2016-03-02 23:57:25,298 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-compiler-api:jar:1.5.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,299 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-compiler-api/1.5.3/plexus-compiler-api-1.5.3.jar
+19K downloaded
+2016-03-02 23:57:25,300 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-compiler-manager/1.5.3/plexus-compiler-manager-1.5.3.jar
+2016-03-02 23:57:25,301 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-compiler-manager:jar:1.5.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,302 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-compiler-manager/1.5.3/plexus-compiler-manager-1.5.3.jar
+5K downloaded
+2016-03-02 23:57:25,303 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-compiler-javac/1.5.3/plexus-compiler-javac-1.5.3.jar
+2016-03-02 23:57:25,304 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-compiler-javac:jar:1.5.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:25,524 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-compiler-javac/1.5.3/plexus-compiler-javac-1.5.3.jar
+13K downloaded
+2016-03-02 23:57:25,532 [Thread-9244] INFO  root  - [compiler:compile]
+2016-03-02 23:57:26,863 [Thread-9244] INFO  root  - Compiling 5 source files to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/classes
+2016-03-02 23:57:26,864 [Thread-9244] INFO  root  - [resources:testResources]
+[WARNING] Using platform encoding (ANSI_X3.4-1968 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-02 23:57:26,868 [Thread-9244] INFO  root  - skip non existing resourceDirectory /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/src/test/resources
+2016-03-02 23:57:26,868 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/junit/junit/3.8.1/junit-3.8.1.jar
+2016-03-02 23:57:26,869 [Thread-9244] INFO  root  - Unable to find resource 'junit:junit:jar:3.8.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:26,874 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/junit/junit/3.8.1/junit-3.8.1.jar
+118K downloaded
+2016-03-02 23:57:26,875 [Thread-9244] INFO  root  - [compiler:testCompile]
+2016-03-02 23:57:27,868 [Thread-9244] INFO  root  - Compiling 3 source files to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/test-classes
+2016-03-02 23:57:27,868 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/surefire/surefire-booter/2.4.3/surefire-booter-2.4.3.pom
+2016-03-02 23:57:27,869 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.surefire:surefire-booter:pom:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,880 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/surefire/surefire-booter/2.4.3/surefire-booter-2.4.3.pom
+1K downloaded
+2016-03-02 23:57:27,881 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/surefire/surefire-api/2.4.3/surefire-api-2.4.3.pom
+2016-03-02 23:57:27,882 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.surefire:surefire-api:pom:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,890 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/surefire/surefire-api/2.4.3/surefire-api-2.4.3.pom
+2K downloaded
+2016-03-02 23:57:27,891 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.pom
+2016-03-02 23:57:27,892 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:pom:1.5.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,905 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.pom
+2K downloaded
+2016-03-02 23:57:27,906 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.pom
+2016-03-02 23:57:27,906 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven:maven-toolchain:pom:1.0' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,916 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.pom
+3K downloaded
+2016-03-02 23:57:27,917 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/surefire/surefire-booter/2.4.3/surefire-booter-2.4.3.jar
+2016-03-02 23:57:27,918 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.surefire:surefire-booter:jar:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,922 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/surefire/surefire-booter/2.4.3/surefire-booter-2.4.3.jar
+261K downloaded
+2016-03-02 23:57:27,923 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/surefire/surefire-api/2.4.3/surefire-api-2.4.3.jar
+2016-03-02 23:57:27,924 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.surefire:surefire-api:jar:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,929 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/surefire/surefire-api/2.4.3/surefire-api-2.4.3.jar
+503K downloaded
+2016-03-02 23:57:27,931 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
+2016-03-02 23:57:27,932 [Thread-9244] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:jar:1.5.1' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,964 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
+205K downloaded
+2016-03-02 23:57:27,972 [Thread-9244] INFO  root  - [surefire:test]
+2016-03-02 23:57:27,973 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/surefire/surefire-junit/2.4.3/surefire-junit-2.4.3.pom
+2016-03-02 23:57:27,974 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.surefire:surefire-junit:pom:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,977 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/surefire/surefire-junit/2.4.3/surefire-junit-2.4.3.pom
+1K downloaded
+2016-03-02 23:57:27,978 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/surefire/surefire-providers/2.4.3/surefire-providers-2.4.3.pom
+2016-03-02 23:57:27,979 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.surefire:surefire-providers:pom:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,985 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/surefire/surefire-providers/2.4.3/surefire-providers-2.4.3.pom
+1K downloaded
+2016-03-02 23:57:27,986 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/data/shared-maven-repo/org/apache/maven/surefire/surefire-junit/2.4.3/surefire-junit-2.4.3.jar
+2016-03-02 23:57:27,987 [Thread-9244] INFO  root  - Unable to find resource 'org.apache.maven.surefire:surefire-junit:jar:2.4.3' in repository polarion-shared (file:///opt/polarion/data/shared-maven-repo)
+2016-03-02 23:57:27,997 [Thread-9244] INFO  root  - Downloading: file:///opt/polarion/maven/repository/org/apache/maven/surefire/surefire-junit/2.4.3/surefire-junit-2.4.3.jar
+14K downloaded
+2016-03-02 23:57:28,363 [Thread-9244] INFO  root  - Surefire report directory: /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.polarion.demo.LibraryTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec
+Running com.polarion.demo.BookTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.polarion.demo.LoginTest
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.009 sec <<< FAILURE!
+
+Results :
+
+Failed tests: 
+  testLogin(com.polarion.demo.LoginTest)
+
+Tests in error: 
+  testLogout(com.polarion.demo.LoginTest)
+
+Tests run: 5, Failures: 1, Errors: 1, Skipped: 0
+
+2016-03-02 23:57:28,364 [Thread-9244] INFO  root  - ------------------------------------------------------------------------
+2016-03-02 23:57:28,367 [Thread-9244] ERROR root  - BUILD FAILURE
+
+There are test failures.
+
+Please refer to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports for the individual test results.
+2016-03-02 23:57:28,370 [Thread-9244] INFO  root  - ------------------------------------------------------------------------
+2016-03-02 23:57:28,373 [Thread-9244] INFO  root  - Trace
+org.apache.maven.BuildFailureException: There are test failures.
+
+Please refer to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports for the individual test results.
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:580)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:500)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:479)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:331)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:292)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:142)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:345)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:132)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:290)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+Caused by: org.apache.maven.plugin.MojoFailureException: There are test failures.
+
+Please refer to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports for the individual test results.
+	at org.apache.maven.plugin.surefire.SurefirePlugin.execute(SurefirePlugin.java:575)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:454)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:559)
+	... 16 more
+2016-03-02 23:57:28,376 [Thread-9244] INFO  root  - ------------------------------------------------------------------------
+2016-03-02 23:57:28,377 [Thread-9244] INFO  root  - Total time: 5 seconds
+2016-03-02 23:57:28,629 [Thread-9244] INFO  root  - Finished at: Wed Mar 02 23:57:28 CET 2016
+2016-03-02 23:57:28,630 [Thread-9244] INFO  root  - Final Memory: 27M/351M
+2016-03-02 23:57:28,661 [Worker-7 | u:sDeveloper | job: build.build] INFO  root  - ------------------------------------------------------------------------
+2016-03-02 23:57:28,661 [Worker-7 | u:sDeveloper | job: build.build] INFO  root  - Maven returned exit code 1
+2016-03-02 23:57:28,665 [Worker-7 | u:sDeveloper | job: build.build] INFO  root  - Deploying /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports to BIR location /projects/elibrary/elibrary/elibrary/20160302-2357/results/elibrary/elibrary/surefire-reports
+2016-03-02 23:57:28,692 [Worker-7 | u:sDeveloper | job: build.build] INFO  root  - Build deployment artifact "Default Maven 2 build results for E-Library App" was deployed to BIR location /projects/elibrary/elibrary/elibrary/20160302-2357/results/elibrary/elibrary
+2016-03-02 23:57:28,694 [Worker-7 | u:sDeveloper] INFO  root  - State of job "(INTERNAL) All Tests build of elibrary:elibrary" changed to FINISHED
+2016-03-02 23:57:28,716 [Worker-7 | u:sDeveloper] INFO  root  - Status of job "(INTERNAL) All Tests build of elibrary:elibrary" is FAILED:
+BUILD FAILURE
+
+There are test failures.
+
+Please refer to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports for the individual test results.
+com.polarion.alm.builder.GenericBuilderException: BUILD FAILURE
+
+There are test failures.
+
+Please refer to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports for the individual test results.
+	at com.polarion.alm.builder.internal.ExternalMavenExecutor.execute(ExternalMavenExecutor.java:279)
+	at com.polarion.alm.builder.internal.MavenRunner.runMaven(MavenRunner.java:233)
+	at $IMavenRunner_1533831ed9c.runMaven($IMavenRunner_1533831ed9c.java)
+	at com.polarion.alm.builder.internal.BuildJobUnitFactory$BuildJobUnit.runInternal(BuildJobUnitFactory.java:743)
+	at com.polarion.platform.jobs.spi.AbstractJobUnit.run(AbstractJobUnit.java:194)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob$2$1.runWEx(WrappedEclipseRootJob.java:208)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob$2$1.runWEx(WrappedEclipseRootJob.java:1)
+	at com.polarion.core.util.RunnableWEx.runWRet(RunnableWEx.java:56)
+	at com.polarion.platform.persistence.internal.JobContextService.doInContext(JobContextService.java:24)
+	at com.polarion.platform.persistence.internal.JobContextService.doInContext(JobContextService.java:1)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob$2.run(WrappedEclipseRootJob.java:201)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAsPrivileged(Subject.java:483)
+	at com.polarion.platform.internal.security.SubjectNDC.doAsPrivileged(SubjectNDC.java:80)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob.runJob(WrappedEclipseRootJob.java:191)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob.runJobs(WrappedEclipseRootJob.java:167)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob.run(WrappedEclipseRootJob.java:100)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:76)
+2016-03-02 23:57:28,719 [Worker-7 | u:sDeveloper] INFO  root  - State of job "All Tests build of elibrary:elibrary" changed to FINISHED
+2016-03-02 23:57:28,720 [Worker-7 | u:sDeveloper] INFO  root  - Status of job "All Tests build of elibrary:elibrary" is FAILED:
+BUILD FAILURE
+
+There are test failures.
+
+Please refer to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports for the individual test results.
+com.polarion.alm.builder.GenericBuilderException: BUILD FAILURE
+
+There are test failures.
+
+Please refer to /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports for the individual test results.
+	at com.polarion.alm.builder.internal.ExternalMavenExecutor.execute(ExternalMavenExecutor.java:279)
+	at com.polarion.alm.builder.internal.MavenRunner.runMaven(MavenRunner.java:233)
+	at $IMavenRunner_1533831ed9c.runMaven($IMavenRunner_1533831ed9c.java)
+	at com.polarion.alm.builder.internal.BuildJobUnitFactory$BuildJobUnit.runInternal(BuildJobUnitFactory.java:743)
+	at com.polarion.platform.jobs.spi.AbstractJobUnit.run(AbstractJobUnit.java:194)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob$2$1.runWEx(WrappedEclipseRootJob.java:208)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob$2$1.runWEx(WrappedEclipseRootJob.java:1)
+	at com.polarion.core.util.RunnableWEx.runWRet(RunnableWEx.java:56)
+	at com.polarion.platform.persistence.internal.JobContextService.doInContext(JobContextService.java:24)
+	at com.polarion.platform.persistence.internal.JobContextService.doInContext(JobContextService.java:1)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob$2.run(WrappedEclipseRootJob.java:201)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAsPrivileged(Subject.java:483)
+	at com.polarion.platform.internal.security.SubjectNDC.doAsPrivileged(SubjectNDC.java:80)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob.runJob(WrappedEclipseRootJob.java:191)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob.runJobs(WrappedEclipseRootJob.java:167)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob.run(WrappedEclipseRootJob.java:100)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:76)
+2016-03-02 23:57:28,723 [Worker-7 | u:sDeveloper] INFO  root  - xUnit build extender is enabled
+2016-03-02 23:57:28,756 [Worker-7 | u:sDeveloper] INFO  root  - Processor: xunit
+2016-03-02 23:57:28,756 [Worker-7 | u:sDeveloper] INFO  root  - Paths: [/opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports]
+2016-03-02 23:57:28,756 [Worker-7 | u:sDeveloper] INFO  root  - Project: elibrary
+2016-03-02 23:57:28,757 [Worker-7 | u:sDeveloper] INFO  root  - idPrefix: build_all
+2016-03-02 23:57:28,757 [Worker-7 | u:sDeveloper] INFO  root  - maxCreatedDefects: null
+2016-03-02 23:57:28,758 [Worker-7 | u:sDeveloper] INFO  root  - maxCreatedDefectsPercent: null
+2016-03-02 23:57:28,758 [Worker-7 | u:sDeveloper] INFO  root  - userAccountVaultKey: null
+2016-03-02 23:57:28,759 [Worker-7 | u:sDeveloper] INFO  root  - templateTestRunId: null
+2016-03-02 23:57:28,759 [Worker-7 | u:sDeveloper] INFO  root  - templateTestCaseId: null
+2016-03-02 23:57:28,759 [Worker-7 | u:sDeveloper] INFO  root  - templateDefectId: null
+2016-03-02 23:57:28,760 [Worker-7 | u:sDeveloper] INFO  root  - idRegex: null
+2016-03-02 23:57:28,760 [Worker-7 | u:sDeveloper] INFO  root  - groupIdRegex: null
+2016-03-02 23:57:28,760 [Worker-7 | u:sDeveloper] INFO  root  - typeRegex: null
+2016-03-02 23:57:28,761 [Worker-7 | u:sDeveloper] INFO  root  - field1: null
+2016-03-02 23:57:28,761 [Worker-7 | u:sDeveloper] INFO  root  - field1Regex: null
+2016-03-02 23:57:28,762 [Worker-7 | u:sDeveloper] INFO  root  - field2: null
+2016-03-02 23:57:28,762 [Worker-7 | u:sDeveloper] INFO  root  - field2Regex: null
+2016-03-02 23:57:28,762 [Worker-7 | u:sDeveloper] INFO  root  - field3: null
+2016-03-02 23:57:28,763 [Worker-7 | u:sDeveloper] INFO  root  - field3Regex: null
+2016-03-02 23:57:28,763 [Worker-7 | u:sDeveloper] INFO  root  - properties: null
+2016-03-02 23:57:28,764 [Worker-7 | u:sDeveloper] INFO  root  - 3 file(s) found.
+2016-03-02 23:57:28,764 [Worker-7 | u:sDeveloper] INFO  root  - Processing xUnit files: /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports/TEST-com.polarion.demo.LibraryTest.xml, /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports/TEST-com.polarion.demo.BookTest.xml, /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports/TEST-com.polarion.demo.LoginTest.xml
+2016-03-02 23:57:29,529 [Worker-7 | u:sDeveloper] INFO  root  - Target test run status: failed
+2016-03-02 23:57:29,530 [Worker-7 | u:sDeveloper] INFO  root  - Invoking workflow action: markFailed
+2016-03-02 23:57:34,193 [Worker-7 | u:sDeveloper] INFO  root  - File(s) /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports/TEST-com.polarion.demo.LibraryTest.xml, /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports/TEST-com.polarion.demo.BookTest.xml, /opt/polarion/data/workspace/polarion-data/jobs/20160302-2357/sources/elibrary/elibrary/elibrary/null/target/surefire-reports/TEST-com.polarion.demo.LoginTest.xml were processed and imported to Test Run build_all-20160302-235728 containing 5 Test Cases.
+2016-03-02 23:57:34,194 [Worker-7 | u:sDeveloper] INFO  root  - 
+2016-03-02 23:57:34,214 [Worker-7 | u:sDeveloper] ERROR root  - Tester reports 1 failure(s) and 1 error(s) for 5 test(s) (0 test(s) skipped)

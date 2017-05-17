@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/scheduler.psml" hidden="false">
+    <title>Scheduler</title>
+    <short-title>scheduler</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_scheduler_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_scheduler_portlet" type="portlet" name="webui::SchedulerConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/jobs/schedule.xml</value>
+		  </preference>
+		  </fragment>
+    </fragment>
+</page>

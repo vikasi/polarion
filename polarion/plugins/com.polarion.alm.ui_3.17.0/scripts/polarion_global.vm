@@ -1,0 +1,48 @@
+## Displays box with plain message.
+#macro(message $text)
+<div class="polarion-plainmessage">$text</div>
+#end
+
+## Displays box with information message.
+#macro(info $text)
+<div class="polarion-infomessage"><span class="polarion-messagetype">$localization.getString("definition.info")$localization.getString("definition.colon") </span>$text</div>
+#end
+
+## Displays box with error message.
+#macro(error $text)
+<div class="polarion-errormessage"><span class="polarion-messagetype">$localization.getString("definition.error")$localization.getString("definition.colon") </span>$text</div>
+#end
+
+## Displays box with warning message.
+#macro(warning $text)
+<div class="polarion-warningmessage"><span class="polarion-messagetype">$localization.getString("definition.warning")$localization.getString("definition.colon") </span>$text</div>
+#end
+
+#macro(loadJs $url)
+    <script type="text/javascript">
+        var xhrObj = new XMLHttpRequest();
+        xhrObj.open('GET', '$url', false);
+        xhrObj.send(null);
+        eval(xhrObj.responseText);
+    </script>
+#end
+
+#macro(loadWidgetJs $js)
+#loadJs($widgetContext.resourceUrl("$js"))
+#end
+
+#macro(loadCss $url)
+    #set($cssId = $widgetContext.generateUniqueElementId())
+    <style id="$cssId">
+    </style>
+    <script type="text/javascript">
+        var xhrObj = new XMLHttpRequest();
+        xhrObj.open('GET', '$url;', false);
+        xhrObj.send(null);
+        document.getElementById("$cssId").innerHTML=xhrObj.responseText;
+    </script>
+#end
+
+#macro(loadWidgetCss $css)
+#loadCss($widgetContext.resourceUrl("$css"))
+#end

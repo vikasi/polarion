@@ -1,0 +1,14 @@
+
+
+<script type="text/javascript">
+
+function handleExternalError(type, message, details){
+ try{
+  parent.handleExternalError(type, message, details);
+ } catch (ex){}
+}
+
+handleExternalError(1, "$msg.get('corruptedpagemessage')", "");
+
+</script>
+

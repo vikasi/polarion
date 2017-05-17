@@ -1,0 +1,40 @@
+</div></div>
+#if($context.getMode()==0)## Visible only in a page
+<div id="footerglobal" class="layoutsection">
+<!--  <hr/> -->
+  <div id="xwikidocinfo">
+  <table celpadding="2" cellspacing="0" border="0" style="width:99%;">	 
+    <tr>
+        <td style="text-align:left; width: 33%;">
+                Polarion Software 2004-2007         
+        </td>
+        <td style="text-align:center; width: 33%;">Powered by Polarion
+	</td>
+        <td style="text-align:right; width: 33%;">
+ 	 <a href="http://">Feedback/Suggestions | Support</a>
+        </td>
+    </tr>
+  </table>
+### IMA{
+###  #if ($tdoc)$msg.get("creator"): $xwiki.getLocalUserName($tdoc.creator) $msg.get("createdon") $!xwiki.formatDate($tdoc.creationDate, "yyyy-MM-dd") $msg.get("at") $!xwiki.formatDate($tdoc.creationDate, "HH:mm") <br />#end
+###  #if ($tdoc)$msg.get("lastauthor"): $xwiki.getLocalUserName($tdoc.author) $msg.get("date"): $!xwiki.formatDate($tdoc.date, "yyyy-MM-dd") $msg.get("at") $!xwiki.formatDate($tdoc.date, "HH:mm")#end
+### IMA}
+ </div>
+##  <div id="xwikilicence">
+
+### IMA {
+###  <div id="xwikivalidator">
+###   <a href="http://validator.w3.org/check/referer"><img src="$xwiki.getSkinFile("xhtml-valid.png")" alt="Valid XHTML 1.0!" border="0" /></a>
+### 							<a href="http://jigsaw.w3.org/css-validator/validator?uri=$xwiki.requestURL">
+### <img src="$xwiki.getSkinFile("css-valid.png")" alt="Valid CSS2!" border="0" />
+### </a>
+### </div>
+### <div id="xwikicopy">
+### $!copyright
+### </div>
+### IMA }
+
+</div>
+##</div>
+#end
+### TODO: Format the footer for pdf output

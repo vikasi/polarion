@@ -1,0 +1,62 @@
+<script type="text/javascript">
+
+function onloadFr(){
+	try {
+		destination = frames["checkFrame"].document.getElementById("org.apache.jetspeed.login.destination");
+		hasJUserName = frames["checkFrame"].document.body.innerHTML.indexOf("j_username") != -1;
+		if(destination || hasJUserName){
+          // openLoginWiki();
+        } else {
+          // checkCallBack(frames["checkFrame"].document.body.innerHTML);
+          // closeLoginWiki();
+        }
+	} catch(e){
+		//
+	}
+}
+
+  
+</script>
+
+
+<form name="subWindow"   id ="subWindow"   method="post"  action="$doc.getURL("view","xpage=requesttopdfdialog&makroPicker=true&rev=$doc.getVersion()")" enctype="multipart/form-data" style="margin-bottom: 0px;"></form>
+<form name="checkLogin"  id ="checkLogin"  method="post"  action="$doc.getURL("view","xpage=xchecksessionedit&makroPicker=true")" enctype="multipart/form-data" style="margin-bottom: 0px;"></form>
+<form name="checkLoginV" id ="checkLoginV" method="post"  action="$doc.getURL("view","xpage=xchecksessionview&makroPicker=true")" enctype="multipart/form-data" style="margin-bottom: 0px;"></form>
+<form name="checkLoginP" id ="checkLoginP" method="post"  action="$doc.getURL("view","xpage=xchecksessionpreview&makroPicker=true")" enctype="multipart/form-data" style="margin-bottom: 0px;"></form>
+<form name="checkLoginSW" id ="checkLoginSW" method="post"  action="$doc.getURL("view","xpage=xchecksessionswitchedit&makroPicker=true")" enctype="multipart/form-data" style="margin-bottom: 0px;"></form>
+
+<form name="checkLoginC" id ="checkLoginC" method="post" target="checkFrame" action="$doc.getURL("view","xpage=xchecksessioncreate&makroPicker=true")" enctype="multipart/form-data" style="margin-bottom: 0px;">
+	<input type="hidden" name="createType"       id="createType" />
+	<input type="hidden" name="createDocName"    id="createDocName" />
+	<input type="hidden" name="createDocSpace"   id="createDocSpace" />
+	<input type="hidden" name="createDocProject" id="createDocProject" />
+	<input type="hidden" name="createDocParent"  id="createDocParent" />
+	<input type="hidden" name="createOverviewSpace"  id="createOverviewSpace" />
+</form>
+
+<form name="checkLoginS" id ="checkLoginS" method="post"  action="$doc.getURL("view","xpage=xchecksessionsearch&makroPicker=true")" enctype="multipart/form-data" style="margin-bottom: 0px;">
+	<input type="hidden" name="searchForm" id="searchForm" />
+</form>
+
+<div id='divcheckFrame' name='divcheckFrame' style="visibility: hidden; float: true; width: 400px; height:250px; border: 0px solid blue; position: absolute; left: 0; top: 0; z-index: 100001;">
+   <table cellpadding='0' cellspacing='0' style='width:400px;height:250px; border:1px solid black; margin:0; background-color:white'>
+        ##caption
+	    <tr>
+	      <td>
+	         <table valign='top' cellpadding='0' cellspacing='0' width='100%' style='border-top:1px solid #E9F6FF;border-left:1px solid #E9F6FF; border-bottom:1px solid #3E5F80;'>
+	            <tr>
+	               <td id='windowTitleLogin' class='popupwindowheaderNew'> Login </td>
+	               <td class='popupwindowheaderNewx'> <img src="$xwiki.getSkinFile("pop_minimize.gif")" border='0'></td>
+	               <td class='popupwindowheaderNewx1'><img src="$xwiki.getSkinFile("popup_close.gif")" border='0'></td>
+	            </tr>
+	         </table>
+	       </td>
+	    </tr>
+	    <tr><td style="background: #778CA5;"><iframe src="" onload="onloadFr();" style="display: inline; width: 400px; height:235px;" id='checkFrame' scrolling='none' frameborder='0' name='checkFrame'></iframe></td></tr>
+	    <tr><td style="width:15px;height:15px; background: #778CA5;">&nbsp;</td></tr>
+   </table>
+</div>
+
+<script type="text/javascript">
+new Draggable('divcheckFrame',{});
+</script>

@@ -1,0 +1,59 @@
+<fo:block color="rgb(128,128,128)" font-size="7px" space-before="24px" space-before.conditionality="retain" space-after="0px">
+
+<fo:table width="100%" table-layout="fixed">
+
+#if($logo_width)
+#set($fst_col = ($logo_width * 100) / 600)
+#else
+#set($fst_col = 0)
+#end
+
+#set($snd_col = (100 - $fst_col) / 3)
+#set($thrd_col = 100 - $snd_col - $fst_col)
+
+<fo:table-column column-width="$fst_col%"/>
+<fo:table-column column-width="$snd_col%"/>
+<fo:table-column column-width="$thrd_col%"/>
+
+<fo:table-body>
+  <fo:table-row>
+    <fo:table-cell text-align="left">
+      <fo:block>
+      	#if($logo) 
+      		<fo:external-graphic border="0px" border-bottom-width="0px" border-left-width="0px" border-right-width="0px" border-top-width="0px" content-height="$logo_height" content-width="$logo_width" margin-right="2px" role="html:img" src="url('$logo')" vertical-align="middle"/>
+      	#end
+      </fo:block>
+    </fo:table-cell>
+    <fo:table-cell text-align="left" font-size="7px" >
+      <fo:block>
+      	#if($company-name)
+      		$company-name
+      	#end
+      </fo:block>
+      <fo:block>
+      	#if($company-www-url)
+      		#if($company-www-label)
+	      		<fo:basic-link external-destination="url('$company-www-url')" font-size="7px" role="html:a" text-decoration="none">
+	      			$company-www-label
+	      		</fo:basic-link>
+	      	#else
+	      		<fo:basic-link external-destination="url('$company-www-url')" font-size="7px" role="html:a" text-decoration="none">
+	      			$company-www-url
+	      		</fo:basic-link>
+	      	#end
+      	#else
+	      	#if($company-www-label)
+	      		$company-www-label
+	      	#end
+      	#end
+      </fo:block>
+    </fo:table-cell>
+    <fo:table-cell text-align="right" font-size="7px">
+      <fo:block>$document_title (rev. $document_revision)</fo:block>
+    </fo:table-cell>
+  </fo:table-row>
+</fo:table-body>
+
+</fo:table>
+
+</fo:block>

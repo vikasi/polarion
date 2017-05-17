@@ -1,0 +1,29 @@
+FAILED
+BUILD FAILURE
+
+There are test failures.
+
+Please refer to C:\Polarion\data\workspace\polarion-data\jobs\20160228-2237\sources\drivepilot\drivepilot\drivepilot\null\target\surefire-reports for the individual test results.
+com.polarion.alm.builder.GenericBuilderException: BUILD FAILURE
+
+There are test failures.
+
+Please refer to C:\Polarion\data\workspace\polarion-data\jobs\20160228-2237\sources\drivepilot\drivepilot\drivepilot\null\target\surefire-reports for the individual test results.
+	at com.polarion.alm.builder.internal.ExternalMavenExecutor.execute(ExternalMavenExecutor.java:279)
+	at com.polarion.alm.builder.internal.MavenRunner.runMaven(MavenRunner.java:233)
+	at $IMavenRunner_15329ada205.runMaven($IMavenRunner_15329ada205.java)
+	at com.polarion.alm.builder.internal.BuildJobUnitFactory$BuildJobUnit.runInternal(BuildJobUnitFactory.java:743)
+	at com.polarion.platform.jobs.spi.AbstractJobUnit.run(AbstractJobUnit.java:194)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob$2$1.runWEx(WrappedEclipseRootJob.java:208)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob$2$1.runWEx(WrappedEclipseRootJob.java:1)
+	at com.polarion.core.util.RunnableWEx.runWRet(RunnableWEx.java:56)
+	at com.polarion.platform.persistence.internal.JobContextService.doInContext(JobContextService.java:24)
+	at com.polarion.platform.persistence.internal.JobContextService.doInContext(JobContextService.java:1)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob$2.run(WrappedEclipseRootJob.java:201)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAsPrivileged(Subject.java:483)
+	at com.polarion.platform.internal.security.SubjectNDC.doAsPrivileged(SubjectNDC.java:80)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob.runJob(WrappedEclipseRootJob.java:191)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob.runJobs(WrappedEclipseRootJob.java:167)
+	at com.polarion.platform.jobs.internal.eclipse.WrappedEclipseRootJob.run(WrappedEclipseRootJob.java:100)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:76)

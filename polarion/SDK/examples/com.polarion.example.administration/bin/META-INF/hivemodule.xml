@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="com.polarion.example.administration" version="1.0.0">
+	<contribution configuration-id="com.polarion.xray.webui.administrationPageExtenders">
+		<extender name="Page" parentNodeName="Example" parentNodeIconUrl="/polarion/icons/default/topicIcons/Tools_157-wrench.png" iconUrl="/polarion/icons/default/topicIconsSmall/Tools_158-wrench-2.png" pageUrl="/polarion/administrationExample/administration.jsp?scope=$scope$" projectScope="true" projectGroupScope="true" repositoryScope="true"/>
+	</contribution>
+</module>

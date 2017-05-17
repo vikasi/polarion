@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130116112355</created>
+<type>content</type>
+<content><![CDATA[1 Design Verification Test Statistics
+
+{section}
+{column}
+1.1 Execution Statistics
+#set($q = '"') 
+##set($timeQuery = 'AND finishedOn:[$today-7d$ TO $today$]')
+#set($timeQuery = '')
+#set($baseQuery = "project.id:$page.getProject() AND (template.id:${q}Electro-Mechanical Design Verification Test${q} OR template.id:${q}Software Design Verification Test${q}) AND NOT isTemplate:true $timeQuery")
+#set($passed = $trackerService.dataService.getInstancesCount("TestRun", "$baseQuery AND status:passed"))
+#set($failed = $trackerService.dataService.getInstancesCount("TestRun", "$baseQuery AND status:failed"))
+#set($other = $trackerService.dataService.getInstancesCount("TestRun", "$baseQuery AND NOT status:(failed passed)"))
+#highchartStart("" "Pie2D" 180 180  )
+#set($highchartColors = ["95d55c","d43d3d","cfcfcf"])
+#addHighchartPieDataSet("" "'Passed',$passed:'Failed', $failed:'In Progress', $other")
+#addHighchartAdditionalOptions("options.plotOptions = {pie:{dataLabels: {enabled:false},borderWidth:0,animation:false}};")
+#addHighchartAdditionalOptions("options.tooltip= {formatter: function(){ return  ''+ this.point.name + ': <b>'+ this.y + '</b>' }};")
+#highchartEnd()
+{column}
+{column}
+1.1 Design Verification Tests
+{style:class=regiondescription}
+You need to plan and execute verification tests using "{testrun-label:Software Design Verification Test}"   and  "{testrun-label:Electro-Mechanical Design Verification Test}"  Test Run Templates.
+{style}
+
+{recent-testruns:query=(template.id:"Electro-Mechanical Design Verification Test" OR template.id:"Software Design Verification Test")|top=10}
+{column}
+{section}
+
+1.1 Open Issues triggered by Design Test Cases 
+
+Show open issues triggered by xUnit Test Cases 
+#set($bQuery = "project.id:$page.project AND type:issue AND NOT HAS_VALUE:resolution")
+#set($sqlQ="SELECT ISSUE.C_PK FROM LUCENE_QUERY('WorkItem', '$bQuery', 'id') ISSUE WHERE EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_P_WORKITEM = ISSUE.C_PK AND LINK.FK_WORKITEM = TEST.C_PK AND LINK.C_ROLE = 'triggered_by' AND (TEST.C_TYPE='softwareTestCase' OR TEST.C_TYPE='electricalTestCase' OR TEST.C_TYPE='mechanicalTestCase') ) ") 
+
+{workitems:sqlQuery=$sqlQ|fields=id,title,status,targetVersion}
+
+1.1 Design Requirements with Issues
+
+Show design requirements with associated test cases that have linked open issues.
+
+#set($sqlReqWithFailures="SELECT DISTINCT WI.C_URI  FROM WORKITEM WI, WORKITEM TEST, WORKITEM ISSUE,  STRUCT_WORKITEM_LINKEDWORKITEMS LINKTEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINKISSUE, PROJECT P  WHERE P.C_ID='$page.project' AND (WI.C_TYPE = 'electricalRequirement' OR WI.C_TYPE = 'mechanicalRequirement' OR WI.C_TYPE = 'softwareRequirement' ) AND WI.FK_URI_PROJECT=P.C_URI AND LINKTEST.C_ROLE = 'verifies' AND LINKTEST.FK_URI_WORKITEM = WI.C_URI AND LINKTEST.FK_URI_P_WORKITEM = TEST.C_URI  AND LINKISSUE.FK_URI_WORKITEM = TEST.C_URI AND LINKISSUE.FK_URI_P_WORKITEM = ISSUE.C_URI AND ISSUE.C_TYPE = 'issue' AND ISSUE.C_RESOLUTION IS NULL ") 
+
+{workitems:sqlQuery=$sqlReqWithFailures|fields=id,title,status,targetVersion}]]></content>
+</wiki-page>

@@ -1,0 +1,2031 @@
+#*
+Copyright 2004 The Apache Software Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*#
+
+#* ------------------------------------------------------------------
+#
+# Macros that are used for displaying input forms.
+#
+*# ------------------------------------------------------------------
+
+#macro (text $text)
+  <font face="$ui.sansSerifFonts">
+    $text
+  </font>
+#end
+
+#macro (formLabel $label)
+  <td bgcolor="$!{skin.TitleBackgroundColor}">
+    <b>
+      <font face="$ui.sansSerifFonts">
+        $label
+      </font>
+    </b>
+  </td>
+#end
+
+#macro (formTextField $name $value)
+  <td bgcolor="$!{skin.TitleBackgroundColor}">
+    <font face="$ui.sansSerifFonts">
+      <input type="text" size="30" name="$name" value="$value">
+    </font>
+  </td>
+#end
+
+#macro (textField $name $value $size)
+  <font face="$ui.sansSerifFonts">
+    <input type="text" size="$size" name="$name" value="$value">
+  </font>
+#end
+
+#macro (listBox $list)
+  <font face="$ui.sansSerifFonts">
+    $list
+  </font>
+#end
+
+#macro (formPasswordCell $label $name $value)
+  #formLabel("$label")
+  <td bgcolor="$!{skin.TitleBackgroundColor}">
+    <font face="$ui.sansSerifFonts">
+      <input type="password" size="30" name="$name" value="$value">
+    </font>
+  </td>
+#end
+
+#macro (formReadOnlyCell $label $name $value)
+  #formLabel("$label")
+  <td bgcolor="$!{skin.TitleBackgroundColor}">
+    <font face="$ui.sansSerifFonts">
+      <input type="hidden" size="30" name="$name" value="$value">
+      $value
+    </font>
+  </td>
+#end
+
+#macro (formCell $label $name $value)
+  #formLabel("$label")
+  #formTextField("$name" "$value")
+#end
+
+#macro (fileUploadField $name)
+  <td bgcolor="$!{skin.TitleBackgroundColor}">
+    <font face="$ui.sansSerifFonts">
+      <input type="file" size="30" name="$name">
+    </font>
+  </td>
+#end
+
+#macro (fileUpload $label $name)
+  #formLabel($label)
+  #fileUploadField($name)
+#end
+
+#macro (formCheckBox $name $checked)
+  <td bgcolor="$!{skin.TitleBackgroundColor}">
+    <input type="checkbox" name="box_$name" #if($checked)checked=1#end/>
+  </td>
+#end
+
+#macro (formCheckBox2 $label $name $checked)
+  #formLabel("$label")
+  <td bgcolor="$!{skin.TitleBackgroundColor}">
+    <input type="checkbox" name="$name" #if($checked)checked=1#end/>
+  </td>
+#end
+
+#macro (formListBox $label $list)
+  <td bgcolor="$!{skin.TitleBackgroundColor}">
+    <b>
+      <font face="$ui.sansSerifFonts">
+        $label
+      </font>
+    </b>
+  </td>
+  <td bgcolor="$!{skin.TitleBackgroundColor}">
+    $list
+  </td>
+#end
+
+#* ------------------------------------------------------------------
+#
+# Macros that are used for displaying information in tables.
+#
+*# ------------------------------------------------------------------
+
+#macro (headerCell $body)
+  <td>
+    <b>     
+        $body
+    </b>
+  </td>
+#end
+
+#macro (entryCell $body)
+  <td>    
+      $body &nbsp;    
+  </td>
+#end
+
+#macro(psmlLink $baseLink)#set ($theLink = $baseLink)#set ($mtype = $!data.Parameters.getString("mtype"))#if($!mtype)#set ($theLink = $theLink.addQueryData("mtype", $mtype))#end$theLink#end
+
+
+#* ------------------------------------------------------------------
+#
+# Macros that are used for portal page construction.
+#
+*# ------------------------------------------------------------------
+
+## place all scripts that should go into the html head in this macro.
+## append another version of this macro with your site's content (the second one wins), or edit this one.
+## this is referenced in the templates/vm/layouts/html files.
+#macro ( headScripts ) #end
+
+#macro (previewLink $portletName)
+  $jslink.setTemplate("preview").addQueryData("p",$portletName).addQueryData("c","ClearPortletControl")
+#end
+
+## macro that generates an alphabetic navigation for the registry browsers
+#macro (registry_alpha_nav $duri $entries $useTitle $prefix $suffix)
+	#set($lastChar = "0")
+	#set($tempStart = 0)
+	#foreach($entry  in $entries)
+	
+	  #set($title = $entry.name)
+	  #if($useTitle == 1)
+	  	#if($entry.title)
+	  	  #set($title = $entry.title)
+	  	#end
+	  #end
+	
+	  #if($title && $title.length() > 0)
+      	#set($temp1 = $lastChar.charAt(0).toString())
+      	#set($temp2 = $title.charAt(0).toString())
+    	      
+    	#set($temp1 = $temp1.toLowerCase())
+		#set($temp2 = $temp2.toLowerCase())
+    	      
+    	#if($temp1 != $temp2)
+    	  $prefix <a href="$duri.addPathInfo("start",$tempStart)">$temp2.toUpperCase()</a>&nbsp; $suffix
+    	#end
+    	
+    	#set($lastChar = $temp2.toString())
+    	
+    	#set($tempStart = $tempStart + 1)
+     #end
+	#end
+#end
+
+#macro (formHeader $image $title)
+<table>
+	<tr>
+		<td><img src="$image"></td>
+		<td valign="center"><big>$title</big></td>
+	</tr>
+</table>
+#end
+#macro (contextHelpBar $context)
+	<a style="text-decoration:none;" href="/polarion/help/index.jsp?tab=links&contextId=com.polarion.xray.web.$!context" target="_blank" title="Help"><img src="${clink}images/polarion/control/help_new.gif" border="0" width="13" height="13" align="absmiddle" alt="Help" title="Help"/></a> 
+
+#end
+#macro (contextHelp $context)
+	<a style="text-decoration:none;" href="/polarion/help/index.jsp?tab=links&contextId=com.polarion.xray.web.$!context" target="_blank" title="Help"><img src="/polarion/ria/images/control/help_qp.gif" border="0" width="16" height="16" align="absmiddle" alt="Help" title="Help"/></a> 
+
+#end
+#macro (contextHelpPreview $context)
+	<a style="text-decoration:none;" href="/polarion/help/index.jsp?tab=links&contextId=com.polarion.xray.web.$!context" target="_blank" title="Help"><img src="${clink}images/polarion/control/preview/help.gif" border="0" width="13" height="13" align="absmiddle" alt="Help" title="Help"/></a> 
+#end
+
+#macro (contextHelpURL $help_url $context)
+	#set($help_url = $jsforward.forward("context_help").addQueryData("helpcontext", $context))
+#end
+
+#macro (image $object)
+	#if($object)
+		#set($image_url = false)
+		#set($image_url = $object.getImageURL())
+		#if($image_url)
+			#set($image_url = $object.getIconURL())
+		#end
+		#if($image_url)
+			<img align="absmiddle" src="$image_url" border="0"/>
+		#end
+	#end
+#end
+
+
+#macro (formatHTMLForTag $object)#if($object)#if($formatter)$!formatter.formatHTMLForTag($object)#else$object#end#end#end
+#macro (formatHTML $object)#if($object)#if($formatter)$!formatter.formatHTML($object)#else$object#end#end#end
+#macro (formatHTMLToColumn $object)#if($object)#if($formatter)$!formatter.formatHTMLToColumn($object)#else$object#end#end#end
+#macro (formatPlainTextToHTML $object)#if($object)#if($formatter)$!formatter.formatPlainTextToHTML($object)#else$object#end#end#end
+
+#macro (escape $string)#if($string)#if($formatter)$!formatter.escape("$string")#else$string#end#end#end
+#macro (escapeForEdit $string)#if($string)#if($formatter)$!formatter.escapeForEdit("$string")#else$string#end#end#end
+#macro (escapeForURL $string)#if($string)#if($formatter)$!formatter.escapeForURL("$string")#else$string#end#end#end
+#macro (escapeForJavascriptString $string)$formatter.escapeForJavascriptString("$!string")#end
+#macro (escapeForJavascriptMethod $string)$formatter.escapeForJavascriptMethod("$!string")#end
+
+#macro(isLazyLoad $lazyLoad)
+	#if($data.getRequest().getQueryString().indexOf("lazyload=1")>0)
+		#set($lazyLoad = true)
+	#else
+		#set($lazyLoad = false)
+	#end
+#end
+#macro(normalLoadingPortlet $portlet)
+	#isLazyLoad($lazyLoad)
+	#if (!$lazyLoad)
+		$portlet.getContent($data)
+	#end
+#end
+#macro(lazyLoadingPortlet $portlet)
+	#isLazyLoad($lazyLoad)
+	#set($height = $portlet.getPortletConfig().getInitParameter("defaultHeight"))
+	#if ($lazyLoad)
+		
+	
+		<div id="lazy_load_content_$portlet.getID()">
+			$portlet.getContent($data)
+		</div>
+		<script type="text/javascript">
+			copyLazyLoadedContent("$portlet.getID()");
+		</script>
+	#else
+		<div id="lazy_load_target_$portlet.getID()">
+			<table style="height:${height}px" align="center">
+				<tr><td align="center" valign="bottom" class="fixfont">Loading ...</td></tr>
+				<tr><td valign="top"><img src="${clink.External}images/polarion/progress.gif"/></td></tr>
+			</table>
+		</div>
+		
+	#end
+#end
+
+#macro(lazyLoadingSupportStart)
+	#isLazyLoad($lazyLoad)
+	#if ($lazyLoad)
+        <script type="text/javascript">
+        	function copyLazyLoadedContent(portlet_id){
+        		if (parent!=null){
+            		var source = document.getElementById("lazy_load_content_"+portlet_id);
+            		var target = parent.document.getElementById("lazy_load_target_"+portlet_id);
+            		if (target!=null && source!=null){
+        	    		target.innerHTML = source.innerHTML;
+            		}
+        		}
+        	}
+        </script>
+     #end   
+#end
+#macro(lazyLoadingSupportEnd)
+	#isLazyLoad($lazyLoad)
+	#if (!$lazyLoad)
+    	#set($req = $data.getRequest())
+    	#set($reqURL = $data.getRequest().getRequestURL())
+    	#set($queryString = false)
+    	#set($queryString = $URLUtils.removeMatchingParamsFromQueryString("$req.getQueryString()","(eventsubmit_.*)|(action)"))
+    	#set($reqURL = "$reqURL?$!queryString")
+    	
+    	#set($reqURL = "$reqURL&lazyload=1")
+    	<iframe id="lazy_load_frame" name="lazy_load_frame" src="$reqURL" style="display:none">
+    	</iframe>
+    #end	
+#end
+#macro(addSupportedParameters $link $parameters)
+	#foreach($param in $parameters)
+##    	Param > $param
+    	#set($paramValue = false)
+		#if($data.getParameters().containsKey($param))
+    		#set($paramValue = $data.getParameters().get($param))
+    		
+    ##    	; Value > $paramValue ($!paramValue.length())
+        	#if($paramValue)
+    ##    		; ADDED</br>
+        		#set($link = $link.addQueryData($param, $paramValue))
+    ##    	#else
+    ##    		</br>
+			#end
+		#end
+    #end
+#end
+#macro(mainTableStart)
+	<table id="main_table" cellpadding="0" cellspacing="0" style="height:100%;width:100%;">
+		<tr style="height:100%;width:100%;">
+			<td style="height:100%;width:100%;" valign="top">
+#end
+#macro(mainTableEnd)
+			</td>
+		</tr>
+	</table>
+#end
+#macro(progressTable $id $hidden)
+	<table #if($id) id="$id" #end style="#if($hidden) display:none; #end height:100%;width:100%;">
+		<tr style="height:100%;width:100%;">
+			<td style="height:100%;width:100%;">
+				<table align="center">
+					<tr><td id="progress_text" align="center" style="font-family: Arial, Helvetica, sans-serif;font-size: 8pt;">Executing...</td></tr>
+					<tr><td><img src="${clink.External}images/polarion/progress.gif"/></td></tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+#end
+
+#macro (panel $id $title $helpContext $resizable $expanded $bodyAtts)
+	<table class="com_polarion_java2js_js_client_widgets_JSPreviewPanel_Container" cellpadding="0" cellspacing="0" width="100%">
+    	<tr>
+			<td>
+				<div>
+					<table class="com_polarion_java2js_js_client_widgets_JSPreviewPanel_Title" width="100%" cellpadding="0" cellspacing="0" onmouseup="toggleMinMax('${id}');">
+						<tr>
+                    		<td class="com_polarion_java2js_js_client_widgets_JSPreviewPanel_TitleTd" width="100%">$title</td>
+                			<td class="com_polarion_java2js_js_client_widgets_JSPreviewPanel_TitleTd" nowrap="nowrap">
+                				#if($resizable)
+                        			<img id="${id}.img" src="/polarion/ria/images/control/minimize_portlet.gif" alt="Minimize" border="0" width="14" height="14" style="width:14px;height:14px;" align="absmiddle">
+                				#end
+                				#if($helpContext)
+                					#contextHelp($helpContext)
+                				#end
+                			</td>
+						</tr>
+					</table>
+    				<div id="${id}.pane"  class="txt #if(!$bodyAtts)pa#end" style="height:100%;width:auto;padding: 0 10px 0 10px;" $!bodyAtts>
+        				#if(!$expanded)
+            				<script language="JavaScript" type="text/javascript">
+                            	toggleMinMax('$id');
+                            </script>
+        				#end
+#end
+
+#macro (panel2 $id $title $helpContext $resizable $expanded $style)
+	<table class="valueList" cellpadding="0" cellspacing="0" width="100%">
+    	<tr>
+			<td>
+				<div>
+					<table class="valueListTitle" width="100%" cellpadding="0" cellspacing="0" onmouseup="toggleMinMax('${id}')">
+						<tr>
+                    		<td class="pl" width="100%">$title</td>
+                			<td class="pl pr0" nowrap="nowrap">
+                				#if($resizable)
+                    				<img id="${id}.img" src="/polarion/ria/images/control/minimize_portlet.gif" alt="Minimize" border="0" align="absmiddle">
+                				#end
+                				#if($helpContext)
+                					#contextHelp($helpContext)
+                				#end
+                			</td>
+						</tr>
+					</table>
+    				<div id="${id}.pane" width="100%" class="txt #if(!$style)pa#end" style="height:100%;width:100%;$!style">
+        				#if(!$expanded)
+            				<script language="JavaScript" type="text/javascript">
+                            	toggleMinMax('$id');
+                            </script>
+        				#end
+#end
+
+##
+##
+##
+#macro (endPanel)
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+#end
+
+#macro (detail)
+	<table class="detail" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td valign="top">
+#end
+
+#macro (preview_detail)
+	<table class="detailPrev" style="position:fixed" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td valign="top">
+#end
+
+#macro (actionBar)
+	<table class="actionbar" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td>
+#end
+
+#macro (previewBar)
+	<table style="background:none" class="previewbar" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td>
+#end
+
+#macro (actionBarEnd)
+			</td>
+		</tr>
+	</table>
+#end
+
+#macro (detailBody) 
+	<table class"detailBody" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+#end
+
+#macro (detailBodyEnd)
+			</td>
+		</tr>
+	</table>
+#end
+
+#macro (detailEnd)
+			</td>
+		</tr>
+	</table>
+#end
+
+#macro (itemTitle $item $linkPattern $target)
+	#set($link = $linkPattern.addQueryData("webObjectId", $item.getId()))
+	<a class="itemTitle" href="$link" target="$target">
+		#image($item) $item.HTMLLabel - #escape($!item.title)
+	</a>
+	
+#end
+
+#macro (itemTitleNotification $item)
+	#set($url = $link.getPreviewLink($item))
+	<a class="itemTitle" href="$url" target="_blank">
+		#image($item) $item.HTMLLabel - #escape($!item.title)
+	</a>
+	
+#end
+
+
+## macro to show attribute text field
+#macro (attributeTextField $attribute $value)
+	$parameters.getParameterPresentation($data, $attribute, $value, "formName=detailForm")
+#end
+
+
+#macro(action $url $target $icon $label)
+	<table class="action" cellspacing="0">
+		<tr>
+				<td class="actionLeft"></td>
+			#if($icon && !$icon.equals(""))
+    			<td class="actionIcon"><a href="$url" $target><img width="16" height="16" src="$icon" border="0"></a></td>
+			#end
+			#if($label && !$label.equals(""))
+				<td class="actionLabel" nowrap="nowrap"><a href="$url" $target>$label</a></td>
+			#end
+				<td class="actionRight">.</td>
+		</tr>
+	</table>
+#end
+
+#macro(action2 $url $target $icon $label $tooltip)
+	<table  class="action" cellspacing="0">
+		<tr>
+				<td class="actionLeft"></td>
+			#if($icon && !$icon.equals(""))
+    			<td class="actionIcon"><a href="$url" title="$tooltip" #if($target)target="$target"#end><img width="16" height="16" src="$icon" border="0" alt="$tooltip"/></a></td>
+			#end
+			#if($label && !$label.equals(""))
+				<td class="actionLabel" nowrap="nowrap"><a href="$url" title="$tooltip" #if($target)target="$target"#end>$label</a></td>
+			#end
+				<td class="actionRight">.</td>
+		</tr>
+	</table>
+#end
+#macro(action3 $event $icon $label $tooltip)
+	<table $event class="action" cellspacing="0" style="cursor:pointer" title="$tooltip">
+		<tr>
+				<td class="actionLeft"></td>
+			#if($icon && !$icon.equals(""))
+    			<td class="actionIcon"><img src="$icon" width="16" height="16" border="0" alt="$tooltip"/></td>
+			#end
+			#if($label && !$label.equals(""))
+				<td class="actionLabel" nowrap="nowrap">$label</td>
+			#end
+				<td class="actionRight">.</td>
+		</tr>
+	</table>
+#end
+
+#macro(action_disabled $icon $label $tooltip)
+	<table class="action_disabled2" cellspacing="0">
+		<tr>
+				<td class="actionLeft"></td>
+			#if($icon && !$icon.equals(""))
+    			<td class="actionIcon"><img src="$icon" width="16" height="16" border="0" alt="$tooltip"/></td>
+			#end
+			#if($label && !$label.equals(""))
+				<td class="actionLabel" nowrap="nowrap"><a style="color:#888888;text-decoration:none" title="$tooltip">$label</a></td>
+			#end
+				<td class="actionRight">.</td>
+		</tr>
+	</table>
+	
+#end
+
+#macro(action_disabled_ $icon $label $tooltip $width)
+	<table class="action_disabled2" cellspacing="0">
+		<tr>
+				<td class="actionLeft"></td>
+			#if($icon && !$icon.equals(""))
+    			<td class="actionIcon"><img src="$icon" width="16" height="16" border="0" alt="$tooltip"/></td>
+			#end
+			#if($label && !$label.equals(""))
+				<td class="actionLabel" nowrap="nowrap"><a style="color:#888888;text-decoration:none" title="$tooltip">$label</a></td>
+			#end
+				<td class="actionRight">.</td>
+		</tr>
+	</table>
+	
+#end
+
+
+#macro(buttonAction $url $target $icon $label $tooltip $enabled $style)
+	<table cellspacing="0" class="action" #if($style)style="$style"#else style="width:70;"#end>
+		<tr>
+				<td class="actionLeft"></td>
+			#if($icon && !$icon.equals(""))
+    			<td class="actionIcon"><a href="$url" #if($target)target="$!target"#end><img src="$icon" border="0"></a></td>
+			#end
+			#if($label && !$label.equals(""))
+				<td class="actionLabel" width="100%" nowrap="nowrap" #if($icon && !$icon.equals(""))align="left"#end><a href="$url"  #if($target)target="$target"#end>$label</a></td>
+			#end
+				<td class="actionRight">.</td>
+		</tr>
+	</table>
+#end
+#macro(inputAction $type $value $name $id $event)
+	<input type="${type}" value="${value}" name="${name}" id="${id}" ${event}  style="width:70px;" cellspacing="0" class="actionButton" >
+#end
+#macro(cancelAction $type $value $name $id $event $style)
+	<input type="${type}" value="${value}" name="${name}"  ${style} id="${id}" ${event}  style="width:70px;"   cellspacing="0" class="actionButton" >
+#end
+#macro(realButtonAction $value $name $id $event $style)
+	<button name="${name}" id="${id}" ${event}  ${style}  style="width:70px;" cellspacing="0" class="actionButton" >
+		$value
+	</button>
+#end
+#macro(realButtonActionImg $value $name $id $event $style $img)
+	<button name="${name}" id="${id}" ${event} ${style}  cellspacing="0" class="actionButton" >
+		<img src="$img" border="0" align="absmiddle"/>&nbsp;$value
+	</button>
+#end
+
+#macro (fieldLabel $key $label $accessKey)
+	#if($webObject.get($key).required) <b><span style="color:Red;">*</span></b>#end	
+	#if($accessKey)
+		<LABEL FOR=$key ACCESSKEY=$accessKey>$label</LABEL>
+	#else
+		$label
+	#end
+																				
+#end
+
+#macro (featureIcon $feature)
+	#if($feature)
+		#set($icon = "")
+		#set($icon = $feature.getImageURL())
+		#if(!$icon || $icon.equals(""))
+			#set($icon = $feature.getIconURL())
+		#end
+		#if($icon && !$icon.equals(""))
+			<img align="absmiddle" src="$icon" border="0"/>
+		#end 		
+	#end
+#end
+
+#macro (featureIcon_external $feature $link)
+	#if($feature)
+		#set($icon = false)
+		#set($icon = $feature.getImageURL())
+		#if(!$icon || $icon.equals(""))
+			#set($icon = $feature.getIconURL())
+		#end
+		#if ($icon && !$icon.equals(""))
+			#set($icon = "$link.serverRootURL/polarion/$icon")
+			<img align="absmiddle" src="$icon" border="0"/>
+		#end 		
+	#end
+#end
+
+#macro (itemIcon_external $object $link)
+	#if($object)
+		#set($icon = false)
+		#set($image_url = $object.getImageURL())
+		#if(!$image_url || $image_url.equals(""))
+			#set($image_url = $object.getIconURL())
+		#end
+		#if ($image_url)
+            		#set($image_url = "$link.serverRootURL/polarion/$image_url")
+          	#end
+		#if($image_url)
+			<img align="absmiddle" src="$image_url" border="0"/>
+		#end
+	#end
+#end
+
+#macro (formatHTMLCellContent $object)
+	#set($result = false)
+	#if($object)
+		#if($formatter)
+			#set($result = $!formatter.formatHTML($object))
+		#else
+			#set($result = $object)
+		#end
+	#end
+	#if(!$result || $result.length() == 0)
+		#set($result = "&nbsp;")
+	#end
+	$result
+#end
+
+
+
+#macro (simple_footer $version $buildID $object $licInfo)
+    </br>
+    <table width="100%" class="footer" style="border-width: 0; border-top: 1px solid black;">
+    	<tr>
+    		<td align="center" valign="bottom" width="100%" style="padding-left: 5; padding-right: 5;">
+    			This $object was generated by <a href="http://www.polarion.com">Polarion</a>
+			    #if($licInfo)
+			    	(<span class="errorMessage">$licInfo</span>)
+			    #else
+				     - The Development Productivity Platform 
+				#end 
+    			 (Version: #escape($!version), Build: #escape($!buildID))
+    		</td>
+    	</tr>
+    </table>	
+#end
+
+
+#macro (build_report $report_data $clink $isNotification)
+	#if($isNotification)
+		#set($href_tmp1 = '" target="_blank')
+		#set($href_tmp2 = '" target="_blank')
+	#else
+		#set($href_tmp1 = '?layout=clear" target="working_area')
+		#set($href_tmp2 = '&layout=clear" target="working_area')
+	#end
+	<!-- data begin -->
+	<table width="100%" cellpadding="0" cellspacing="0">
+		<tr><td style="padding-bottom: 10;">
+				
+			<!--Header begin -->
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td>
+						<table width="100%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td style="padding-bottom: 10;">
+									<a class="itemTitle" href="${clink}portal/page/overview.psml/project/$report_data.getProjectId()$href_tmp1">
+										Project $!formatter.escape("$!formatter.format($report_data.getProjectUri())")</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+                    				<table class="preview_table_node">
+                                   		<tr>
+                    						<td class="featureLabel" nowrap="nowrap" >Status:</td>
+                    						<td class="featureValue" align="left" nowrap="nowrap" >
+                        						#if($report_data.getStatus().equals("FINISHED"))
+                            						<font color="#00DD00"><b>$report_data.getStatus()</b></font>
+                        						#else
+                            						<font color="#DD0000"><b>$report_data.getStatus()</b></font>
+                        						#end
+                        						($report_data.getFatalCount() fatal error(s), $report_data.getErrorCount() normal error(s), $report_data.getWarnCount() warning(s))
+                							</td>
+                                   		</tr>
+                                   		<tr>
+                    						<td class="featureLabel" nowrap="nowrap" > Build ID:</td>
+                    						<td class="featureValue" align="left" nowrap="nowrap" >$report_data.getBuildId()</td>
+                                   		</tr>
+                                   		<tr>
+                    						<td class="featureLabel" nowrap="nowrap" >Duration:</td>
+                    						<td class="featureValue" align="left" nowrap="nowrap" >$report_data.getBuildDurationString()</td>
+                                   		</tr>
+                                   		<tr>
+                    						<td class="featureLabel" nowrap="nowrap" >Author:</td>
+                    						<td class="featureValue" align="left" nowrap="nowrap" >
+												#if($report_data.getUserUri())
+												    $!formatter.escape("$!formatter.format($report_data.getUserUri())")
+												#elseif($report_data.isStartedByScheduler())
+													<span style="font-style: italic">scheduler</span>
+												#end
+											</td>
+                                   		</tr>
+                    				</table>											
+								</td>
+							</tr>
+						</table>	
+					</td>
+					#if($isNotification)
+                		<td valign="top" align="rigth" width="64">
+                			<a href="$clink">
+                				<img border="0" width="64" height="74" src="${clink}images/polarion/notification_logo.png"/>
+                			</a>
+                		</td>
+					#end
+				</tr>
+			</table>	
+			<!--Header end -->
+			
+		</td></tr>
+		
+		<!--Errors begin -->
+		#if($report_data.getErrors().size() > 0)
+			<tr><td style="padding-bottom: 10;">
+           	#panel("Build errors" "Build Errors" false false true "style='padding:0;'")
+                <table class="list" width="100%" cellpadding="0" cellspacing="0" rules="all">
+			        <tr><th>Type</th><th>Message</th></tr>
+		            #foreach($error in $report_data.getErrors())
+               		<tr>
+						<td class="error" nowrap="nowrap" align="center" valign="top">
+						  #if($error.isFatal()) fatal #else error #end
+						</td>
+						<td class="featureValue" align="left" nowrap="nowrap"><pre>$error.getMessage()</pre></td>
+               		</tr>
+               		#end
+				</table>											
+       		#endPanel()
+			</td></tr>
+		#end
+		<!--Errors end -->
+
+	    #set($baseUrl = "")
+	    #if($link)
+	      #set($baseUrl = $link.serverRootURL)
+	    #end
+		
+		<!--Results begin -->
+    	#if($report_data.getDeployments().size() > 0)
+			<tr><td style="padding-bottom: 10;" >
+             	#panel("Build results" "Build Results" false false true "style='padding:0;'")
+                    <table class="list" width="100%" cellpadding="0" cellspacing="0" rules="all">
+				        <tr><th>Type</th><th>Link</th></tr>
+    		            #foreach($depl in $report_data.getDeployments())
+                       		<tr>
+        						<td class="featureLabel" nowrap="nowrap" style="text-align: left;" valign="top">
+        						    #if($depl.getLabel())
+        							  	$depl.getLabel()
+        						    #end
+        						</td>
+        						<td class="featureValue" nowrap="nowrap" align="left">
+        						    <a href="$baseUrl$report_data.getBaseRelativeUrl()$depl.getPath()$href_tmp2">$depl.getPath()</a>
+        						</td>
+                       		</tr>
+                   		#end
+    				</table>
+           		#endPanel()
+			</td></tr>
+		#end	
+		<!--Results end -->
+		
+	</table>	
+	<!-- data end -->
+	
+	<table width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+		    <td class="featureValue">
+		        <br/>
+    		    For further information see 
+    		    <a href="$baseUrl${report_data.getBaseRelativeUrl()}build.log$href_tmp2" style="text-decoration: underline">build log</a> 
+    		    and 
+    		    <a href="$baseUrl$report_data.getBaseRelativeUrl()$href_tmp2" style="text-decoration: underline">base directory</a>.
+		    </td>
+		</tr>
+	</table>
+#end
+
+#macro( add_section_submit_cancel $id )
+	<div class="body pl pr pb pt" >
+		<input id="submitAddButton" class="actionbutton" type='submit' Value='Submit'>
+		<input class="actionbutton" type='reset' ondblclick="showDiv(document.getElementById('${id}_link'),'${id}_section')"  Value='Cancel'>
+	</div>
+#end
+
+
+#macro( add_footer_msg $id $add $message)
+	<div id="${id}_add_section_placeholder" style="display:inline">
+	</div>	
+	<table width=100% nowrap cellpadding="0" cellspacing="0" >
+		<tr>																				
+			<td width=100% nowrap align="left" >
+				<table class="footer" width="100%" cellpadding="0" cellspacing="0" >
+					<tr>
+						<td class="br" align="right" nowrap="nowrap">
+							#if($add)
+								#if($id.equals("workitem_comments"))
+									<a id="${id}_add_link" style="cursor:pointer" onClick="showDiv(this,'${id}_add_section');setFocusById('comment-text')">Add</a>
+								#else
+									<a id="${id}_add_link" style="cursor:pointer" onClick="showDiv(this,'${id}_add_section')">Add</a>
+								#end
+							#else
+								<span class="disabled_txt"><a title="You cannot do this operation - security restriction.">Add</a></span>
+							#end
+						</td>
+						<td width="100%" nowrap>$message</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>								
+#end
+
+#macro( add_footer $id $add)
+  #add_footer_msg($id $add "")
+#end
+
+#macro( footer $message)
+	<table width=100% nowrap cellpadding="0" cellspacing="0" >
+		<tr>																				
+			<td width=100% nowrap align="left" >
+				<table class="footer" width="100%" cellpadding="0" cellspacing="0" >
+					<tr>
+						<td nowrap="nowrap">$!message</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>								
+#end
+
+#macro( kill_row $name $id $security)
+	#if($security)
+		<a  style="cursor:pointer" onClick='killrow(this,"$name","$id")'><img width="10" height="10" src='${clink}images/polarion/control/minus.gif' border='0'></a>
+	#else
+		<img src='${clink}images/polarion/control/dminus.gif' width="10" height="10" border='0' title="Cannot remove"/>
+	#end
+#end
+
+#macro( add_row $javascript  $security)
+	#if($security)
+		<a style="cursor:pointer" onClick="$javascript"><img width="10" height="10" src='${clink}images/polarion/control/plus.gif' border='0'></a>
+	#else
+		<img src='${clink}images/polarion/control/dplus.gif' width="10" height="10" border='0'>
+	#end
+#end
+
+#macro( add_minus_row $javascript  $security)
+	#if($security)
+		<a style="cursor:pointer" onClick="$javascript"><img width="10" height="10" src='${clink}images/polarion/control/minus.gif' border='0'></a>
+	#else
+		<img src='${clink}images/polarion/control/dminus.gif' width="10" height="10" border='0'>
+	#end
+#end
+
+#macro (label $key $label $accessKey)
+	<div id="${key}_label_preview" class="preview_field">
+		$label
+	</div>
+	<div id="${key}_label_edit" class="edit_field">
+        	#if($webObject.getValue($key).isRequired() && $label!= "Project:") <b><span style="color:Red;">*</span></b>#end	
+        	#if($accessKey)
+        		<LABEL FOR=$key ACCESSKEY=$accessKey>$label</LABEL>
+        	#else
+        		$label
+        	#end
+        																				
+	</div>
+	<script type="text/javascript">
+		add_toggle_inline('${key}_label');
+	</script>
+	
+#end
+
+#macro (labelForBulk $key $label $accessKey)
+    	#if($accessKey)
+    		<LABEL FOR=$key ACCESSKEY=$accessKey>$label</LABEL>
+    	#else
+    		$label
+    	#end
+    	<span id="span_required_$key" style="color:Red;display:none;"><b>*</b></span>
+#end
+
+#macro (field $key $param $parameters)
+	<div id="${key}_preview" class="preview_field" >
+		#set($val = $webObject.get("${key}"))
+		#if($val.class.name.endsWith("WebReferenceValue"))
+			$val.getHTMLLabel()
+		#else
+			#escape($val)	
+		#end
+	</div>
+	<div id="${key}_edit" class="edit_field">
+		$fieldProvider.getFieldComponent($data, $webObject.getValue("${key}"),"$parameters","$param")							
+	</div>	
+	<script type="text/javascript">
+		add_toggle_inline('${key}');
+	</script>
+#end
+
+#macro (bulkFieldEdits $fieldx $params $editStyle $cantChangeMsg $onUserInput)
+	#if ($fieldx)
+        <input name="field_id_$fieldx.getFieldId()" value="$fieldx.getFieldId()" type="hidden"/>
+        <table cellspacing="0" cellpadding="0">
+        	<tr>
+        		<td valign="top">
+        			<input id="chk_field_$fieldx.getFieldId()" name="chk_field_$fieldx.getFieldId()" type="checkbox"
+        				#if ($!onUserInput)
+        					onClick="$onUserInput"
+        				#end
+        			/>
+        		</td>	
+        		<td>
+        			#bulkFieldEditsTable($fieldx $params $editStyle $cantChangeMsg)
+        		</td>	
+        	</tr>		
+        </table>
+	#end
+#end
+
+#macro (bulkFieldEditsTable $fieldx $params $editStyle $cantChangeMsg)
+    <table id="edits_$fieldx.getFieldId()" cellpadding="0" cellspacing="0" width="100%">
+    	#foreach($edit in $fieldx.getEdits())
+    		#set($params_tmp = "bulk_edit_id=$edit.getEditId();$params")
+    		<tr id="$edit.getEditId()" style="display:none;"><td>
+    			#if ($editStyle)
+    				$fieldProvider.getFieldComponent($data, $edit.getWfv() ,$params_tmp, $editStyle)
+    			#else
+    				$fieldProvider.getFieldComponent($data, $edit.getWfv() ,$params_tmp)
+    			#end
+    		</td></tr>
+    	#end
+    	#if($!cantChangeMsg)
+    		<tr style="display:none;"><td title="$!cantChangeMsg"><span class="fixfont">Field cannot be changed.</span></td></tr>
+    	#else
+    		#if ($fieldx.getEdits().size()>1)
+    			<tr style="display:none;">
+    				<td title="Field cannot be changed because selected Work Items are from different projects or of different types.">
+	    				<span id="type_change" class="fixfont">Field cannot be changed.</span>
+	    			</td>
+	    		</tr>
+    		#end		
+    	#end	
+    </table>	
+#end
+
+#macro (WIBodyRowSeparator)
+	<tr><td><br/></td></tr>
+#end	
+
+#############################################################################################################################
+
+#macro (work_item_header_title $webObject $isNotification)
+	#if(!$webObject.isLocal())
+        <table width="100%" cellspacing="0" cellpadding="0">
+        	#if($isMSIE || $isNotification)
+            	#set($lineHeight = "28px")
+            #else
+            	#set($lineHeight = "24px")
+            #end
+        	#if(!$linkedIssues.isEmpty())
+            	<tr>
+            		<td width="100%" style="line-height:${lineHeight};">
+            			##<table cellspacing="0" cellpadding="0">
+            			##	<tr>
+            					#foreach($lissue in $linkedIssues)
+            					##	<td class="linkedItem" nowrap="nowrap">
+            					#if($isMSIE || $isNotification)
+            						#set($fix_padd = "2px")
+            					#else
+            						#set($fix_padd = "3px")
+            					#end
+            					<span class="linkedItem" style="white-space:nowrap;padding:4px;padding-top:${fix_padd};padding-left:0px">
+										<font style="font-size:1px">&nbsp;</font>
+										#set($linkedWI = false)
+										#set($linkedWI = $WebObjectAccesor.getWebObject($lissue.getWorkItem()))
+										#if($linkedWI)
+											#if($isNotification)
+												#set($url = $link.getPreviewLink($linkedWI))
+											#else
+												#if($tablePreview)
+													#set($url = $jsforward.forward("tp_preview").addQueryData("selection", $linkedWI.getId()))
+    											#else
+													#set($url = $jsforward.forward("tp_preview_max").addQueryData("selection", $linkedWI.getId()))
+    											#end
+											#end	
+											#wi_link_icons($lissue)
+											<a href="$url" target="_self" title="#formatHTMLForTag($linkedWI.type)">#image($linkedWI)</a>
+											<a href="$url" target="_self" title="#formatHTMLForTag($lissue.getRole().name): #formatHTMLForTag($linkedWI.title)">$linkedWI.getHTMLLabel()</a>
+										#else
+											<label title="$lissue.getRole().name: $linkedWI.getId()">#formatHTMLCellContent($lissue.getWorkItem()) [N/A]</label>
+										#end
+									
+									</span>&nbsp;#if($isMSIE || $isNotification)<span style="height:20px;width:1px"></span>#end
+									##</td>
+									##<td width="3"></td>
+            					#end
+            				##</tr>
+            			##</table>
+					</td>
+				</tr>
+			#end
+			<tr>
+				<td nowrap="nowrap">
+					<table>
+						<tr>
+							#if(!$linkedIssues.isEmpty())
+								<td width="1" nowrap="nowrap"></td>
+								<td nowrap="nowrap" valign="top"><img src="${clink}images/polarion/arrow_up.gif" border="0"></td>
+							#end
+                    		<td>	
+								#if($isNotification)
+									#itemTitleNotification($webObject)
+								#else	
+									#if($tablePreview)
+										#set($linkPattern = $jsforward.forward("tp_preview_max"))
+									#else
+										#set($linkPattern = $jsforward.forward("table_preview"))
+									#end
+									#itemTitle($webObject $linkPattern "working_area")
+								#end	
+                    		</td>
+						</tr>
+					</table>
+				</td>
+        	</tr>
+        	#if(!$backLinkedIssues.isEmpty())
+            	<tr>
+					<td nowrap="nowrap">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								#if(!$linkedIssues.isEmpty())
+									<td width="37" nowrap="nowrap"></td>
+								#else
+									<td width="5" nowrap="nowrap"></td>
+								#end
+								<td valign="top" width="25" align="right" nowrap="nowrap" style="padding-right:10px;padding-right:2px">
+									<img src="${clink}images/polarion/arrow_up.gif" border="0"></td>
+								</td>
+								<td width="100%" style="white-space:normal;line-height:${lineHeight}">
+								#foreach($lissue in $backLinkedIssues)
+									##<td class="linkedItem" nowrap="nowrap">
+									#if($isMSIE || $isNotification)
+            							#set($fix_padd = "2px")
+            						#else
+            							#set($fix_padd = "3px")
+            						#end
+									<span class="linkedItem" style="white-space:nowrap;padding:4px;padding-top:${fix_padd};padding-left:0px">
+										<font style="font-size:1px">&nbsp;</font>
+										#set($linkedWI = false)
+										#set($linkedWI = $WebObjectAccesor.getWebObject($lissue.getWorkItem()))
+										#if($linkedWI)
+											#if($isNotification)
+												#set($url = $link.getPreviewLink($linkedWI))
+											#else
+												#if($tablePreview)
+													#set($url = $jsforward.forward("tp_preview").addQueryData("selection", $linkedWI.getId()))
+    											#else
+													#set($url = $jsforward.forward("tp_preview_max").addQueryData("selection", $linkedWI.getId()))
+    											#end
+											#end	
+											
+											#wi_link_icons($lissue)
+											<a href="$url" target="_self" title="#formatHTMLForTag($linkedWI.type)">#image($linkedWI)</a>
+											<a href="$url" target="_self" title="#formatHTMLForTag($lissue.getRole().oppositeName): #formatHTMLForTag($linkedWI.title)">$linkedWI.getHTMLLabel()</a>
+										#else
+											<label title="$lissue.getRole().oppositeName: $linkedWI.getId()">#formatHTMLCellContent($lissue.getWorkItem()) [N/A]</label>
+										#end
+									</span>&nbsp;#if($isMSIE || $isNotification)<span style="height:20px;width:1px"></span>#end
+								#end
+							</tr>
+						</table>
+					</td>	
+            	</tr>
+        	#end
+        </table>
+	#end
+#end
+
+#############################################################################################################################
+
+#macro (notification_workItem_preview_body_header $webObject $isNotification)
+    <table width="100%" cellspacing="0" cellpadding="0">
+    	<tr>
+    		<td>
+        		#work_item_header_title($webObject true)
+        	</td>
+        </tr>
+		<tr>
+			<td width="100%">
+        		<table cellspacing="1" cellpadding="1" width="100%">
+        			<tr>
+        				<td valign="top">
+        					<table class="preview_table_node">
+								<tr>
+        							<td class="featureLabel" nowrap="nowrap" >
+        								Type:
+        							</td>
+        							<td width="100%"  class="featureValue" nowrap="nowrap" >#featureIcon($webObject.type)#formatHTMLCellContent($webObject.type)</td>
+                           		</tr>
+                           		<tr>
+        							<td style="padding-left:75px" class="featureLabel" nowrap="nowrap" >
+        								Severity:
+        							</td>
+        							<td class="featureValue" nowrap="nowrap" >#featureIcon($webObject.severity)#formatHTMLCellContent($webObject.severity)</td>
+                           		</tr>
+                           		<tr>
+        							<td class="featureLabel" nowrap="nowrap" >
+        								Author:
+        							</td>
+        							<td class="featureValue" nowrap="nowrap" >#formatHTMLCellContent($webObject.author)</td>
+                           		</tr>
+								<tr>
+      								<td class="featureLabel" nowrap="nowrap" >
+										Project:
+									</td>
+									<td class="featureValue" nowrap="nowrap" >#formatHTMLCellContent($webObject.project)</td>
+								</tr>					
+								<tr>
+        							<td class="featureLabel"  valign="top">
+        								Categories:
+        							</td>
+        							<td class="featureValue" nowrap="nowrap" >
+        								#set ($comps = $webObject.categories.getValue())
+        								#foreach($comp in $comps)
+        									#formatHTMLCellContent($comp)</br>
+        								#end
+        							</td>
+                           		</tr>
+                           	</table>
+                           	<table class="preview_table_node">
+								<tr>
+        							<td style="padding-left:40px" class="featureLabel" nowrap="nowrap" >
+										Initial Estimate:
+        							</td>
+        							<td width="100%" class="featureValue" nowrap="nowrap" >#formatHTMLCellContent($webObject.initialEstimate)</td>
+                           		</tr>
+                           		<tr>
+        							<td class="featureLabel" nowrap="nowrap" >
+        								Time Spent:
+        							</td>
+        							<td class="featureValue" nowrap="nowrap" >#formatHTMLCellContent($webObject.timeSpent)</td>
+                           		</tr> 
+                           		<tr>
+        							<td class="featureLabel" nowrap="nowrap" >
+										Remaining Estimate:
+        							</td>
+        							<td class="featureValue" nowrap="nowrap" >#formatHTMLCellContent($webObject.remainingEstimate)</td>
+                           		</tr>
+                           		
+                           	</table>
+                       </td>
+                       <td width="100%" valign="top">
+                       		<table class="preview_table_node">
+                           		<tr>
+        							<td class="featureLabel" nowrap="nowrap" >
+        								Assignee:
+        							</td>
+        							<td width="100%"  class="featureValue" nowrap="nowrap" >#formatHTMLCellContent($webObject.assignee)</td>
+                           		</tr>
+                           		<tr>
+        							<td class="featureLabel" nowrap="nowrap" >
+        								Status:
+        							</td>
+        							<td class="featureValue" nowrap="nowrap" >#featureIcon($webObject.status)#formatHTMLCellContent($webObject.status)</td>
+                           		</tr>
+                           		<tr>
+        							<td style="padding-left:58px" class="featureLabel" nowrap="nowrap" >
+        								Resolution:
+        							</td>
+        							<td class="featureValue" nowrap="nowrap" >#featureIcon($webObject.resolution)#formatHTMLCellContent($webObject.resolution)</td>
+                           		</tr>
+                           	</table>
+                           	<table class="preview_table_node">
+                           		<tr>
+        							<td class="featureLabel" nowrap="nowrap" >
+        								Priority:
+        							</td>
+        							<td width="100%"  class="featureValue" nowrap="nowrap" >#featureIcon($webObject.priority)#formatHTMLCellContent($webObject.priority)</td>
+                           		</tr>
+                           		
+                           	##Due Date
+                           		<tr>
+                           			<td class="featureLabel" nowrap="nowrap" >
+										Due Date:
+									</td>
+									<td class="featureValue" nowrap="nowrap" >#formatHTMLCellContent($webObject.dueDate)</td>		
+								</tr>
+                           		<tr>
+        							<td class="featureLabel" nowrap="nowrap" >
+        								Time Point:
+        							</td>
+        							<td class="featureValue" nowrap="nowrap" >#formatHTMLCellContent($webObject.timePoint)</td>
+                           		</tr>
+                           		
+                           		<tr>
+
+                					<td class="featureLabel" nowrap="nowrap"   style="padding-left:10px">
+                						Planning Constraint:
+                					</td>
+                					<td class="preview_featureValue" nowrap="nowrap" >
+                						#formatHTMLCellContent($planningConstraint)
+                					</td>
+              
+                				</tr>
+                				
+                			</table>
+                		</td>
+                	</tr>
+                </table>
+            </td>
+         </tr>
+     </table>        		
+        
+#end
+
+#############################################################################################################################
+
+#macro (notification_top $current $clink)
+    <table width="100%" cellspacing="0" cellpadding="0">
+    	<tr>
+    		<td>
+				#notification_workItem_preview_body_header($current true)	
+    		</td>	
+    		<td valign="top" align="left" width="64">
+    			<a href="$clink">
+    				<img border="0" width="64" height="74" src="${clink}images/polarion/notification_logo.png"/>
+    			</a>
+    		</td>
+    	</tr>	
+    </table>	
+#end
+
+#############################################################################################################################
+
+#macro (linked_wi_table_header_part)
+	<th>Title</th><th>Revision</th><th>Status</th><th>Assignee</th>
+#end
+
+#############################################################################################################################
+
+#macro (linked_wi_table_row_fill)
+    <td class="featureValue">&nbsp;</td>
+    <td class="featureValue">&nbsp;</td>
+    <td class="featureValue">&nbsp;</td>
+#end
+
+#############################################################################################################################
+
+#macro (linked_wi_table_row_part_1 $lissue $linkedWI $isNotification)
+	#if($linkedWI)
+		#if($isNotification)
+			#set($wi_url = $link.getPreviewLink($linkedWI))
+		#else
+    		#if($tablePreview)
+    			#set($wi_url = $jsforward.forward("tp_preview").addQueryData("selection", "$linkedWI.getId()"))
+    		#else
+    			#set($wi_url = $jsforward.forward("tp_preview_max").addQueryData("selection", "$linkedWI.getId()"))
+    		#end
+		#end
+		<td class="featureValue" width="100%">
+			#if($linkedWI.getImageURL())
+				<a href="$wi_url"><img src="$linkedWI.getImageURL()" align="absmiddle" border="0" title="#formatHTMLForTag($linkedWI.type)"/></a>
+			#end
+			<a href="$wi_url">$linkedWI.getHTMLLabel() - #escape($linkedWI.title)</a>
+		</td>
+	#else
+		<td class="featureValue" width="100%">
+			#formatHTMLCellContent($lissue.getWorkItem()) [N/A]
+		</td>
+	#end    									
+#end
+#############################################################################################################################
+#macro (linked_wi_table_row_part_2 $lissue $linkedWI $isNotification)
+	<td class="featureValue" nowrap="nowrap">
+		#formatHTMLCellContent($lissue.getRevision())
+	</td>
+#end
+#############################################################################################################################
+#macro (linked_wi_table_row_part_3 $lissue $linkedWI $isNotification)
+	#if($linkedWI)
+		<td class="featureValue" style="text-align: center;">
+			#if($linkedWI.status.getImageURL())
+				<img src="$linkedWI.status.getImageURL()"border="0" title="#formatHTMLForTag($linkedWI.status)"/>
+			#else
+				#formatHTMLCellContent($linkedWI.status)
+			#end
+		</td>
+		<td class="featureValue" nowrap="nowrap">
+			#formatHTMLCellContent($linkedWI.assignee)
+		</td>
+	#else	
+		<td class="featureValue">&nbsp;</td>
+		<td class="featureValue">&nbsp;</td>
+	#end    									
+#end
+#############################################################################################################################
+#macro (linked_wi_table_row_part $lissue $linkedWI $isNotification)
+	#linked_wi_table_row_part_1($lissue $linkedWI $isNotification)
+	#linked_wi_table_row_part_2($lissue $linkedWI $isNotification)
+	#linked_wi_table_row_part_3($lissue $linkedWI $isNotification)
+#end
+#############################################################################################################################
+#macro(init_rowclass)
+    #set($rowclass = "first")
+#end
+#############################################################################################################################
+#macro(next_rowclass)
+	#if($rowclass.equals("first"))
+		#set($rowclass = "second")
+	#else
+		#set($rowclass = "first")
+	#end																		
+#end
+#############################################################################################################################
+#macro(linked_wi_table $isNotification)
+    #init_rowclass()
+	<table id="linked_work_items_table" width="100%" cellpadding="0" cellspacing="0" class="list" rules="all">
+		<tr><th>Suspect</th><th style="width:300px">Role</th>#linked_wi_table_header_part()</tr>							
+		#foreach($lissue in $linkedIssues)
+			<tr class="$rowclass">
+        		<td class="featureValue" nowrap="nowrap">
+					#wi_link_suspect_icon($lissue)
+        		</td>
+				<td  nowrap="nowrap">
+					$!lissue.getRole().name											
+				</td>
+				#set($linkedWI = false)
+				#set($linkedWI = $WebObjectAccesor.getWebObject($lissue.getWorkItem()))
+				#linked_wi_table_row_part($lissue $linkedWI $isNotification)
+			</tr>
+			#next_rowclass()
+		#end
+		#foreach($lissue in $backLinkedIssues)
+			<tr class="$rowclass">
+        		<td class="featureValue" nowrap="nowrap">
+					#wi_link_suspect_icon($lissue)
+        		</td>
+				<td  nowrap="nowrap">
+					$!lissue.getRole().oppositeName
+           		</td>
+				#set($linkedWI = false)
+				#set($linkedWI = $WebObjectAccesor.getWebObject($lissue.getWorkItem()))
+				#linked_wi_table_row_part($lissue $linkedWI $isNotification)
+			</tr>
+			#next_rowclass()
+		#end															
+	</table>			
+#end											
+#############################################################################################################################
+
+#macro (notification_workItem_detail $webObject)
+	#set($notNotification = false)
+	#set($isNotification = true)
+	<table width="100%" cellspacing="0" cellpadding="0">
+		<tr><td><br/></td></tr>
+		#set($desc = "#formatPlainTextToHTML($webObject.getValue('description'))")
+		#if($desc && $desc.length() != 0)
+			<tr>
+				<td colspan=3>
+					#panel("description" "Description" false $notNotification true false)
+						$desc
+					#endPanel()
+				</td>
+			</tr>
+			<tr><td><br/></td></tr>
+		#end				
+		#if($webObject.isExtendable())
+		    #set($col= $webObject.getCustomFeatures())
+		    #if($col && !$col.isEmpty())						    
+				<tr><td><br/></td></tr>
+				<tr>
+					<td colspan="3">
+						#panel("custom_fields" "Custom Fields" false $notNotification true false)
+							<table width="100%" cellspacing="1" cellpadding="1">
+		                    	#foreach($customAttribute in $col)
+		                    		<tr>
+		                    			<td class="featureLabel" nowrap="nowrap">
+											#fieldLabel("customAttribute.key" "$customAttribute.getKeyLabel():" false)
+		                    			</td>
+		                    			<td class="featureValue" width="100%">
+											#escape($!customAttribute.getLabel())
+		                    			</td>
+		                    		</tr>
+								#end
+							</table>
+						#endPanel()
+					</td>
+				</tr>		                    	
+			#end
+		#end
+		#if($related_revisions && !$related_revisions.isEmpty())
+		<tr><td><br/></td></tr>
+			<tr>
+				<td colspan="3">
+					#panel("linked_repository_revisions" "Linked Repository Revisions" false $notNotification true "style='padding:0;'")
+						#set($rowclass = "first")
+						<table id="inked_repository_revisions_table" width="100%" cellpadding="0" cellspacing="0" class="list" rules="all" >
+							<tr><th width="150">Revision</th><th style="width:100%">Message</th></tr>
+							#foreach($related_revision in $related_revisions)
+								#if($related_revision.getRevision())																	
+									<tr class="$rowclass">
+		                        		<td class="featureValue" #if($related_revision.isDerived()) style="font-style:italic;" #end>
+		                                	#set($revurl = "$link.getServerRootURL()/polarion/portal/page/svn_browser.psml/project/null?svnbrowserpage=revisionDetails.jsp&perspective=repository&svnrevision=$!related_revision.getRevision()")															
+		                                	<a href="$revurl" target="_blank">$!related_revision.getRevision()</a>
+		                        		</td>
+		                        		<td class="featureValue" #if($related_revision.isDerived()) style="font-style:italic;" #end> 
+											#escape($!related_revision.getMessage())
+		                        		</td>
+		                        	</tr>
+									#if($rowclass.equals("first"))
+										#set($rowclass = "second")
+									#else
+										#set($rowclass = "first")
+									#end	
+								#end
+							#end
+						</table>
+					#endPanel()	
+				</td>
+			</tr>	
+		#end				
+		#if(!$linkedIssues.isEmpty() || !$backLinkedIssues.isEmpty())
+		<tr><td><br/></td></tr>
+		<tr>
+			<td align="right" colspan="3">
+				#panel("linked_work_items" "Linked Work Items" false $notNotification true "style='padding:0;'")
+					#linked_wi_table(true)
+				#endPanel()
+			</td>
+		</tr>
+		#end		
+		#set($hyperlinks = $webObject.getValue("hyperlinks").getValue())
+		#if(!$hyperlinks.isEmpty())
+			<tr><td><br/></td></tr>
+			<tr>
+				<td align="right" colspan="3">
+					#panel("hyperlinks" "Hyperlinks" false $notNotification true "style='padding:0;'")
+						#set($rowclass = "first")
+						<table id="hyperlinks-table" width="100%" cellpadding="0" cellspacing="0" class="list" rules="all">
+							<tr><th width="150">Role</th><th>Hyperlink</th></tr>
+							#foreach($hyperlink in $hyperlinks)
+								<tr class="$rowclass">
+                            		<td class="featureValue" align="right">
+										$!hyperlink.getRole().getName()
+                            		</td>
+                            		<td class="featureValue">
+										<a href="$!hyperlink.uri" target="_blank">$!hyperlink.uri<a/>
+                            		</td>
+                            	</tr>
+								#if($rowclass.equals("first"))
+									#set($rowclass = "second")
+								#else
+									#set($rowclass = "first")
+								#end								
+							#end
+						</table>
+					#endPanel()
+				</td>
+			</tr>									
+		#end
+		#set($attachments = $webObject.getValue("attachments").getValue())
+		#if($attachments && !$attachments.isEmpty())
+			<tr><td><br/></td></tr>
+			<tr>
+				<td align="right" colspan="3">
+					#set($rowclass = "first")					
+					#panel("attachments" "Attachments" false $notNotification true "style='padding:0;'")
+						<table id="attachments-table" class="list" width="100%" cellpadding="0" cellspacing="0" rules="all">
+                            
+                            									<tr>
+                                    								<th nowrap>Title</th>
+                                    								<th nowrap width="100%">File Name</th>
+                                    								<th nowrap>Length</th>
+                                    								<th nowrap>Author</th>
+                                    								<th nowrap>Last Modified</th>
+                                    						 	</tr>
+                                    						 	#foreach($attachment in $attachments)
+                                    							 	<tr class="$rowclass">
+                                    							 		<td nowrap>$!attachment.title</td>
+                                    							 		<td nowrap><a target="_blank" href="#if($attachment.url && ($attachment.url.toString().length() > 0))${clink}portal/page/svn_browser.psml?svnbrowserpage=fileDownload.jsp&svnurl=#escapeForURL($attachment.url)&layout=clear&perspective=repository&saveDialog=false#end">$!attachment.fileName</a></td>
+                                    							 		<td nowrap>$!attachment.length B</td>
+                                    							 		<td nowrap>$!attachment.author</td>
+                                    							 		<td nowrap>$!attachment.updated</td>
+                                    						 		</tr>
+																	#if($rowclass.equals("first"))
+                                    									#set($rowclass = "second")
+                                    								#else
+                                    									#set($rowclass = "first")
+                                    								#end
+                                    						 	#end
+                                    						</table>															
+					#endPanel()
+				</td>
+			</tr>
+		#end
+	</table>
+#end
+#macro (pageWithHeaderMatrix_start $height)
+	#if($isMSIE)
+		<style>
+    		.header_section {
+    			height:$height;
+    			width:100%;
+    		}
+    		div.new_scroll_body {
+    			height:100%;##expression(this.offsetParent.clientHeight-1);
+    			width:expression(this.offsetParent.clientWidth);
+				##width:100%;
+    			overflow:auto;
+    		}
+    		td.new_scroll_body {
+    			height:100%;
+    			width:100%;
+    		}
+    		.main_table{
+    			height:100%;
+    			width:100%;
+    		}
+		</style>
+		<table class="main_table" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="header_section">
+	#else
+		<style>
+    		.header_section {
+    			position:fixed;
+    			top:0;
+    			left:0;
+    			height:$height;
+    			width:auto;
+    			bottom:auto;
+    			right:0;
+    		}
+    		.new_scroll_body {
+    			position:fixed;
+    			top:$height;
+    			left:0;
+    			height:auto;
+    			width:auto;
+    			bottom:0;
+    			right:0;
+    			overflow:auto;
+    		}
+		</style>
+	    <div class="header_section">	
+	#end			
+#end
+
+#############################################################################################################################
+#macro (pageWithHeader_start $height)
+	#if($isMSIE)
+		<style>
+    		
+    		@media screen{
+				.header_section {
+    				height:$height;
+    				width:100%;
+    			}
+    			div.new_scroll_body {
+    				height:100%;##expression(this.offsetParent.clientHeight-1);
+    				width:expression(document.body.offsetWidth);
+					##width:100%;
+    				overflow:auto;
+    			}
+			}
+			@media print{
+				.header_section {
+    				display:none;
+    			}
+    			div.new_scroll_body {
+    				height:100%;##expression(this.offsetParent.clientHeight-1);
+    				width:expression(document.body.offsetWidth);
+					##width:100%;
+    			}
+			}
+    		
+    		td.new_scroll_body {
+    			height:100%;
+    			width:100%;
+    		}
+    		.main_table{
+    			height:100%;
+    			width:100%;
+    		}
+		</style>
+		<table class="main_table" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="header_section">
+	#else
+		<style>
+    		
+    		@media screen{
+				.header_section {
+	    			position:fixed;
+	    			top:0;
+	    			left:0;
+	    			height:$height;
+	    			width:auto;
+	    			bottom:auto;
+	    			right:0;
+    			}
+    			.new_scroll_body {
+	    			position:fixed;
+	    			top:$height;
+	    			left:0;
+	    			height:auto;
+	    			width:auto;
+	    			bottom:0;
+	    			right:0;
+	    			overflow:auto;
+    			}
+			}
+			@media print{
+				.header_section {
+    				display:none;
+    			}
+    			.new_scroll_body {
+	    			
+	    			
+	    			
+    			}
+			}
+    		
+		</style>
+	    <div class="header_section">	
+	#end			
+#end
+
+#macro (pageWithHeader_start_qbuilder $height)
+	#if($isMSIE)
+		<style>
+    		.header_section {
+    			height:$height;
+    			width:100%;
+    		}
+    		div.new_scroll_body {
+    			height:expression(document.body.offsetHeight - $height);
+    			##height:100%;
+    			width:expression(document.body.offsetWidth);
+    			overflow:auto;
+				##width:100%;
+    			
+    		}
+    		td.new_scroll_body {
+    			height:100%;
+    			width:100%;
+    		}
+    		.main_table{
+    			height:100%;
+    			width:100%;
+    		}
+		</style>
+		<table class="main_table" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="header_section">
+	#else
+		<style>
+    		.header_section {
+    			position:fixed;
+    			top:0;
+    			left:0;
+    			height:$height;
+    			width:auto;
+    			bottom:auto;
+    			right:0;
+    		}
+    		.new_scroll_body {
+    			position:fixed;
+    			top:$height;
+    			left:0;
+    			height:auto;
+    			width:auto;
+    			bottom:0;
+    			right:0;
+    			overflow:auto;
+    		}
+		</style>
+	    <div class="header_section">	
+	#end			
+#end
+
+#macro (pageWithHeader_middle)
+	#if($isMSIE)
+				</td>
+			</tr>
+			<tr>
+				<td height="100%" width="100%" valign="top">
+				    <div class="new_scroll_body">
+	#else
+    </div>
+    <div class="new_scroll_body">
+	#end			
+#end
+
+
+#macro (pageWithHeader_end)
+	#if($isMSIE)
+				    </div>
+				</td>
+			</tr>
+		</table>
+	#else
+    </div>
+	#end			
+#end
+#############################################################################################################################
+#macro (splitStringAround $string_to_split $around_string $string_1 $string_2) 
+	#set($string_1 = $string_to_split.substring(0, $string_to_split.indexOf($around_string)))
+	#set($string_2 = $string_to_split.substring($string_to_split.indexOf($around_string), $string_to_split.length()))
+	#set($string_2 = $string_2.substring($around_string.length(), $string_2.length()))
+#end
+#############################################################################################################################
+#macro (updateNavigation)	
+	#isLazyLoad($lazyLoad)
+	#if (!$lazyLoad)
+    	#set($projectTreeSelection_0 = "")
+    	#set($projectTreeSelection_1 = "")
+    	#set($projectTreeSelection_2 = "")
+    	
+    	#set($projectTreeSelection_0 = $app_ctx.getSvnUrl())
+    	#set($projectTreeSelection_1 = $app_ctx.getCurrentProjectId())
+   		#set($projectTreeSelection_2 = $app_ctx.getDSPath())
+    	
+    	#set($topicsSelection = false)
+    	#set($topicsSelection = $data.getProfile().getName())
+    	#if($topicsSelection && ($topicsSelection.startsWith("tracker") || $topicsSelection=="schedule.psml" || $topicsSelection=="roadmap.psml" || $topicsSelection=="new_work_item.psml" || $topicsSelection=="popular_workitems.psml") || $topicsSelection=="workitem_preview.psml")
+    		#set($topicsSelection2 = "tracker.psml")
+    		#set($selectedTypes = 0)
+    		#if ($WITypes && $WITypes.size()>0)
+        		#foreach($WIType in $WITypes)	
+            		#if ($itemsQuery.indexOf("type:$WIType.getId()")!=-1)
+            			#set($topicsSelection2 = "tracker.psml_$WIType.getId()")	
+        	    		#set($selectedTypes = $selectedTypes + 1)
+        	    	#end	
+        		#end
+        	#end	
+    		#if($selectedTypes>1)
+	    		#set($topicsSelection2 = "tracker.psml")
+    		#end
+    	#elseif($topicsSelection && $topicsSelection.startsWith("baseline"))	
+   			#set($topicsSelection = "baselines.psml")
+   			#set($topicsSelection2 = "baselines.psml")
+    	#elseif($topicsSelection && $topicsSelection=="bfr.psml")	
+   			#set($topicsSelection = "builds.psml")
+   			#set($topicsSelection2 = "builds.psml")
+    	#elseif($topicsSelection && $topicsSelection.startsWith("maven_reports"))	
+   			#set($topicsSelection2 = "maven_reports:$!data.getParameters().getString('dataId'):$!data.getParameters().getString('report')")
+    	#else
+   			#set($topicsSelection2 = $topicsSelection)
+    	#end
+    	
+    	#set($perspectiveSelection = false)
+    	#set($perspectiveSelection = $!app_ctx.getCurrentPerspective().getId())
+    
+    	#set($quickActionsVisible = $perspectiveSelection.equals("projects"))
+    	
+    	#set($projectTreeURL = $jsforward.forward("project_list_frame").addQueryData("topic", $topicsSelection))
+    	#set($shortcutsURL = $jsforward.forward("shortcuts_frame-$perspectiveSelection").addQueryData("topic", $topicsSelection))
+    	#set($topicsURL = $jsforward.forward("topics_frame-$perspectiveSelection").addQueryData("topic", $topicsSelection2))
+    	
+    	#get_qString($qString)
+    	#set ($qString = $URLUtils.removeParamFromQueryString($qString, "layout"))
+    	#set ($qString = $URLUtils.removeParamFromQueryString($qString, "topic"))
+    	#set ($qString = $URLUtils.removeParamFromQueryString($qString, "perspective"))
+    	#set ($qString = $URLUtils.removeParamFromQueryString($qString, "tablepreview"))
+    	
+    	#if($qString == "&")
+    		#set($qString = "")
+    	#end
+    	#set($projectTreeURL = "$projectTreeURL$!qString")
+    	#set($shortcutsURL = "$shortcutsURL$!qString")
+    	#set($topicsURL = "$topicsURL$!qString")
+    	
+    	#if($app_ctx.getCurrentProject())
+    		#set($forwardSuffix = "-project")
+    	#else
+    		#set($forwardSuffix = "-projectGroup")
+    	#end
+    	#set($perspProjectsURL = $jsforward.forward("projects$forwardSuffix").addQueryData("perspective", "projects").addQueryData("layout", "clear"))
+    	#set($perspRepositoryURL = $jsforward.forward("repository$forwardSuffix").addQueryData("perspective", "repository").addQueryData("layout", "clear"))
+    	#set($perspAdministrationURL = $jsforward.forward("administration$forwardSuffix").addQueryData("perspective", "administration").addQueryData("layout", "clear"))
+		#set($perspRepositoryURL = "$perspRepositoryURL")
+		#set($perspAdministrationURL = "$perspAdministrationURL")
+		#removeDSPath($perspRepositoryURL)
+		#removeDSPath($perspAdministrationURL)
+    	
+    	#set($currentProject = false)
+    	#set($currentProject = $app_ctx.getCurrentProject())
+    	#set($currentSelection = false)
+    	#set($currentSelection = $app_ctx.getSelected())
+    	#set($currentDocument = $app_ctx.getDSPath())
+		
+    	#set($WATitle = $formatter.escape($data.getProfile().getDocument().getPortlets().getMetaInfo().getTitle().toString()))
+    	#set($browserTitle = $WATitle)
+
+		#if($currentDocument)
+			#set($documentTitle =  $formatter.escape($!currentDocument).replaceAll("/"," > "))
+    		#set($WATitle =  "$!documentTitle > $!{WATitle}")
+    		#set($browserTitle = "$!{browserTitle} - $currentDocument")
+			#set($currentSelection = false)
+		#end
+
+		#if($currentProject)		
+    		#set($WATitle = "$formatter.escape($currentProject.getLabel()) > $!{WATitle}")
+    		#set($browserTitle = "$!{browserTitle} - $currentProject.getLabel()")
+    	#end
+    	
+##    	#if($currentSelection)
+##    		#set($selectionTitle = $formatter.format($currentSelection))
+##    		#if($selectionTitle && !$selectionTitle.trim().equeals(""))
+##    			#set($WATitle = "${WATitle} > $!selectionTitle")
+##    			#set($browserTitle = "$!selectionTitle - ${browserTitle}")
+##    		#end	
+##		#end
+				
+    	#set($navigatorTitle = false)
+    	#if($perspectiveSelection == "projects")
+	    	#set($navigatorTitle = "Projects")
+    	#elseif($perspectiveSelection == "repository")
+	    	#set($navigatorTitle = "Repository")
+    	#elseif($perspectiveSelection == "administration")
+	    	#set($navigatorTitle = "Administration")
+		#end
+		#set($selectedTopic = $topicsSelection)
+		#removePSML($selectedTopic)
+
+    	<script type="text/javascript">
+    		function getProjectUrl(project_id){
+        		#forward($treeNodeUrl $selectedTopic "project")
+        		#set($treeNodeUrl = $treeNodeUrl.addPathInfo("project", "null").addQueryData("layout", "clear").toString())
+				#removeDSPath($treeNodeUrl)
+        		#splitStringAround($treeNodeUrl "/project/null" $treeNodeUrl_1 $treeNodeUrl_2)
+        		
+        		return "#escapeForJavascriptString($treeNodeUrl_1)/project/"+project_id+"#escapeForJavascriptString($treeNodeUrl_2)";
+    		}
+    		
+    		function getProjectGroupUrl(project_group_id){
+        		#forward($treeNodeUrl $selectedTopic "projectGroup")
+        		#set($treeNodeUrl = $treeNodeUrl.addPathInfo("project", "null").addQueryData("svnurl", "null").addQueryData("layout", "clear").toString())
+				#removeDSPath($treeNodeUrl)
+        		#splitStringAround($treeNodeUrl "svnurl=null" $treeNodeUrl_1 $treeNodeUrl_2)
+        		var part = "";
+				#if(!$app_ctx.getCurrentPerspective().getId().equals("administration"))
+	        		if (project_group_id!=null && project_group_id!=""){
+	        			part = "svnurl="+urlencode(project_group_id);
+	        		}
+	        	#end	
+        		return "#escapeForJavascriptString($treeNodeUrl_1)"+part+"#escapeForJavascriptString($treeNodeUrl_2)";
+    		}
+    		
+    		if (top!=null && top.updateNavigation!=null && top.new_navigation_scripts_present!=null &&
+    			parent!=null && parent.name == "detail_frame"){
+    			var udpateTreeFunction = function(project_group, project, dspath){
+    				if (dspath!=null && dspath!=""){
+    					## TODO
+    				} else if (project!=null && project!=""){
+                		return getProjectUrl(project);
+    				} else if (project_group!=null){
+                		return getProjectGroupUrl(project_group);
+    				}
+    				return;
+    			};
+    			
+    			top.updateNavigation(["#escapeForJavascriptString($!projectTreeSelection_0)",
+    				"#escapeForJavascriptString($!projectTreeSelection_1)",
+    				"#escapeForJavascriptString($!projectTreeSelection_2)"],
+    				 ["$!topicsSelection2"], "$perspectiveSelection", 
+    				"#escapeForJavascriptString($!projectTreeURL)",
+    				"#escapeForJavascriptString($!shortcutsURL)",
+    				"#escapeForJavascriptString($!topicsURL)", udpateTreeFunction);	## defined in navigation_scripts.vm
+    		
+    				
+    			top.updatePerspectives("$perspectiveSelection", $app_ctx.canSeeAdministration(),  "#escapeForJavascriptString($perspProjectsURL)",  
+    				 "#escapeForJavascriptString($perspRepositoryURL)", "#escapeForJavascriptString($perspAdministrationURL)")
+    			top.setWATitle("#escapeForJavascriptString($WATitle)");
+    			top.setBrowserTitle("#escapeForJavascriptString($browserTitle)");
+    			top.setNavigatorTitle("#escapeForJavascriptString($navigatorTitle)");
+    			
+    		} else if (parent!=null && parent.updateNavigationJ2JS!=null){
+    		
+    			parent.updateNavigationJ2JS("#escapeForJavascriptString($!projectTreeSelection_0)",
+    				"#escapeForJavascriptString($!projectTreeSelection_1)",
+    				"#escapeForJavascriptString($!projectTreeSelection_2)",
+    				 "$!topicsSelection2", "$perspectiveSelection");
+    		}
+    	</script>
+    #end
+#end
+#############################################################################################################################
+#macro (wi_link_suspect_icon $wi_link)
+	#if($wi_link)
+		#set($image_url = false)
+		#set($image_url = $!formatter.getImageURL($wi_link))
+		#if($image_url)
+			<img class="icon_16_16" src="$image_url"/>
+		#end
+	#end
+#end
+#############################################################################################################################
+#macro (wi_link_icons $wi_link)
+	#if($wi_link)
+		#set($image_url = false)
+		#set($image_url = $!formatter.getImageURL($wi_link))
+		#if($image_url)
+			<img class="icon_16_16" src="$image_url"/>
+		#end
+		#set($revision = false)
+		#set($revision = $wi_link.getRevision())
+		#if($revision && $revision!="")
+			<img align="absmiddle" style="width:16px;height:16px" src="images/polarion/fixed_revision.gif" title="Revision: #formatHTMLForTag($revision)" alt="Revision: #formatHTMLForTag($revision)"/>
+		#end
+	#end
+#end
+#############################################################################################################################
+#macro(get_qString $qString)
+	#set ($qString = $URLUtils.removeParamFromQueryString($data.getRequest().getQueryString(), "layout"))
+	#if($qString)
+		#set($qString = "&$qString")
+	#end
+#end	
+#############################################################################################################################
+#macro(selectInTableJS)
+    #set($req = $data.getRequest())
+    #set($reqURL = $req.getRequestURL())
+	#set ($qString = $data.getRequest().getQueryString())
+    #set ($qString = $URLUtils.removeParamFromQueryString($qString, "followselection"))
+    #set ($qString = $URLUtils.removeParamFromQueryString($qString, "selection"))
+    #set($selInTableURL = "$reqURL?$!{qString}&followselection=1")
+    <script type="text/javascript">
+        function selectInTable(selection){
+        	window.location="${selInTableURL}&selection="+selection;
+        }
+    </script>
+#end    
+#############################################################################################################################
+#macro(linked_wi_revision_editor $value $input_name $selected_project $wi_input_name $parent_tag)
+	#if($value && $value!="")
+		#set($valueSet = true)
+	#else
+		#set($valueSet = false)
+	#end
+	<select style="width:#if($valueSet) 65px; #else 130px; #end" onchange="wiRevEditorSelectChanged(this)">
+		<option value="">Head / Not selected</option>
+		<option value="current_revision">Current</option>
+		<option value="$!value" #if($valueSet)selected="selected"#end>Specific:</option>
+	## there must be no space between </select><input 	
+	</select><input type="text" name="#formatHTMLForTag($input_name)" onchange="wiRevEditorInputChanged(this)"
+		style="width:65px; display:#if($valueSet) inline; #else none; #end" value="$value"
+	## there must be no space between /><img 	
+	/><img class="icon_16_16" style="cursor:pointer;margin-bottom:5px; margin-left:2px;" alt="Select Revision" title="Select Revision" src="images/polarion/control/select_revision.gif" valign="middle""
+		onclick="selectPinnedRevision(this, '#formatHTMLForTag($selected_project)', '$wi_input_name', '$parent_tag');"/>
+	#set($pickupCommit = $jslink.getPage("pined_revision_picker.psml").addQueryData("layout", "clear"))
+	<script type="text/javascript">
+		function selectPinnedRevision(img, selected_project, wi_input_name, parent_tag){
+			var input = img.previousSibling;
+			var select = input.previousSibling;
+			select.selectedIndex = 2;
+			wiRevEditorSelectChanged(select);
+	    	if (askOverwriteValueWithPicker(input)) {
+	            var url = "${pickupCommit}";
+	            if (selected_project!=""){
+		            	url += "&selected_project="+selected_project;
+	            }
+	            if (wi_input_name!=""){
+		    		var tr = findParentNode(img, parent_tag);
+		    		var wi_input = findChildInput(tr, wi_input_name);
+		            if (wi_input!=null && wi_input.value!=null && wi_input.value!=""){
+		            	url += "&selected_wi="+wi_input.value;
+		            }
+		        }    
+	            var vWinUsers = window.open(url, 'SelectRepositoryRevision', 'status=no,resizable=yes,scrollbars=no,top=100,left=200,width=700,height=700');
+	            vWinUsers.opener = self;
+	            vWinUsers.opener.revisionPickerField = input;
+	        	vWinUsers.focus();
+	        }
+			
+		}
+		function wiRevEditorSelectChanged(select){
+			var input = select.nextSibling;
+			input.value = select.value;
+			
+			if (select.selectedIndex==2){
+				input.style.display="inline";
+				select.style.width="65px";
+			} else {
+				input.style.display="none";
+				select.style.width="130px";
+			}
+		}
+		function wiRevEditorInputChanged(input){
+			var select = input.previousSibling;
+			select.options[2].value = input.value;
+		}
+	</script>
+#end

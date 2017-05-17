@@ -1,0 +1,39 @@
+#set ($MESSAGES = $portletConfig.getResourceBundle($renderRequest.Locale))
+
+#if ($!folderBean.isNew())
+
+#else
+<h2 class="portlet-section-header">$MESSAGES.getString('folder.details')</h2>
+
+<form action="$renderResponse.createActionURL()" method="post">
+<input type='hidden' name='portlet.action' value='processSaveFolderAction'/>
+<table>
+	#readField('Name' "$!folderBean.Path" "40" 'path' $MESSAGES $ERRORS)
+    #formField('Title' "$!folderBean.Title" "40" 'title' $MESSAGES $ERRORS)
+    #formField('ShortTitle' "$!folderBean.ShortTitle" "40" 'shortTitle' $MESSAGES $ERRORS)
+    #formField('DefaultPage' "$!folderBean.DefaultPage" "40" 'defaultPage' $MESSAGES $ERRORS)
+</table>
+<br/>
+<input type="submit" name="Save" value="$MESSAGES.getString('save')" />
+#if ($!folderBean.Path != "/")
+<input type="submit" name="Delete" value="$MESSAGES.getString('remove')" />
+#end
+<!-- <a href="#" onClick='return checkSubmit("Remove","${pa.name}")'>$MESSAGES.getString('remove')</a> -->
+#set ($sub = $forward.getView('add-folder'))
+$sub.setParameter('parent', $!folderBean.Key)
+$sub.setParameter('new', 'add-folder')
+#set ($page = $forward.getView('add-page'))
+$page.setParameter('parent', $!folderBean.Key)
+$page.setParameter('new', 'add-page')
+#set ($link = $forward.getView('add-link'))
+$link.setParameter('parent', $!folderBean.Key)
+$link.setParameter('new', 'add-link')
+<a href="$sub">[$MESSAGES.getString('add.subfolder')]</a>
+<a href="$page">[$MESSAGES.getString('add.page')]</a>
+<a href="$link">[$MESSAGES.getString('add.link')]</a>
+</table>
+</form>
+
+#ErrorMessages($ERRORS)
+#end
+

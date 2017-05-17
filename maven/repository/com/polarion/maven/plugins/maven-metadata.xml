@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <plugins>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.plugins:deploy:maven-plugin:3.17.0</name>
+      <prefix>deploy</prefix>
+      <artifactId>deploy</artifactId>
+    </plugin>
+    <plugin>
+      <name>Unnamed - com.polarion.maven.plugins:repoanalysis:maven-plugin:3.17.0</name>
+      <prefix>repoanalysis</prefix>
+      <artifactId>repoanalysis</artifactId>
+    </plugin>
+    <plugin>
+      <name>Scrum Calculations</name>
+      <prefix>scrum</prefix>
+      <artifactId>scrum</artifactId>
+    </plugin>
+  </plugins>
+</metadata>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fields>
+    <field description="Reference to the build in which the bug was observed." id="occurredInVersion" name="Occurred in Version" required="true" type="string"/>
+    <field description="Select target version" id="targetVersion" name="Target Version" type="enum:@plan[template.id:release]"/>
+</fields>

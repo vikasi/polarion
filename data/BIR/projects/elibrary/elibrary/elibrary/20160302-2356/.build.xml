@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<build>
+    <field id="author">sDeveloper</field>
+    <field id="buildArtifact">elibrary:elibrary:</field>
+    <field id="buildDescriptorName">_default</field>
+    <field id="buildEvents">
+        <struct>
+            <item id="errorCount">0</item>
+            <item id="fatalCount">0</item>
+            <item id="warnCount">0</item>
+        </struct>
+    </field>
+    <field id="buildStamp">20160302-2356</field>
+    <field id="buildTag">20160302-2356</field>
+    <field id="buildTestResults">
+        <struct>
+            <item id="errorCount">0</item>
+            <item id="failureCount">0</item>
+            <item id="skippedCount">0</item>
+            <item id="testCount">3</item>
+        </struct>
+    </field>
+    <field id="creationTime">2016-03-02 23:56:32.105 +0100</field>
+    <field id="deployedArtifacts">
+        <list>
+            <struct>
+                <item id="label">Default Maven 2 build results for E-Library App</item>
+                <item id="location">results/elibrary/elibrary</item>
+            </struct>
+        </list>
+    </field>
+    <field id="finishTime">2016-03-02 23:57:03.068 +0100</field>
+    <field id="jobId">398c0969-0a7b1e4b-40f38093-8b8aabe2</field>
+    <field id="logFiles">
+        <list>
+            <item>log</item>
+        </list>
+    </field>
+    <field id="startTime">2016-03-02 23:56:33.323 +0100</field>
+</build>

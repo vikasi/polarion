@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC  "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <description>Spring Portlet Components</description>
+    
+<!-- Model -->    
+    <bean id="folderBean" singleton='false' class="org.apache.jetspeed.portlets.site.FolderProxyBean">
+        <description>Folder bean</description>
+		<property name="lookupKey">
+			<value>site.folder.key</value>
+		</property>
+    </bean>    
+    <bean id="pageBean" singleton='false' class="org.apache.jetspeed.portlets.site.PageProxyBean">
+        <description>Page bean</description>
+		<property name="lookupKey">
+			<value>site.page.key</value>
+		</property>
+    </bean>    
+    <bean id="linkBean" singleton='false' class="org.apache.jetspeed.portlets.site.LinkProxyBean">
+        <description>Link bean</description>
+		<property name="lookupKey">
+			<value>site.link.key</value>
+		</property>
+    </bean>    
+    
+<!-- Views -->
+    <bean id="portlet-views" class="java.util.HashMap">
+       <description>Logical View name to actual view</description>
+  	   <constructor-arg>
+  	   	<map>
+  	   	  <entry key="folder-view">
+  	   	  	<value>/WEB-INF/view/site/folder-details.vm</value>
+  	   	  </entry>
+  	   	  <entry key="page-view">
+  	   	  	<value>/WEB-INF/view/site/page-details.vm</value>
+  	   	  </entry>          
+  	   	  <entry key="link-view">
+  	   	  	<value>/WEB-INF/view/site/link-details.vm</value>
+  	   	  </entry>          				 
+  	   	  <entry key="add-page">
+  	   	  	<value>/WEB-INF/view/site/add-page.vm</value>
+  	   	  </entry>
+  	   	  <entry key="add-folder">
+  	   	  	<value>/WEB-INF/view/site/add-subfolder.vm</value>
+  	   	  </entry>
+  	   	  <entry key="add-link">
+  	   	  	<value>/WEB-INF/view/site/add-link.vm</value>
+  	   	  </entry>
+  	   	  <entry key="doc-order">
+  	   	  	<value>/WEB-INF/view/site/doc-order.vm</value>
+  	   	  </entry>
+  	   	  <entry key="menus">
+  	   	  	<value>/WEB-INF/view/site/menus.vm</value>
+  	   	  </entry>
+  	   	  <entry key="security">
+  	   	  	<value>/WEB-INF/view/site/security.vm</value>
+  	   	  </entry>
+          
+  	   	  <entry key="site-help">
+  	   	  	<value>/WEB-INF/view/site/site-help.vm</value>
+  	   	  </entry>
+  	   	  <entry key="site-edit">
+  	   	  	<value>/WEB-INF/view/site/site-edit.vm</value>
+  	   	  </entry>  	   	  
+  	   	</map>
+  	   </constructor-arg>    	
+    </bean>
+
+
+<!-- MVC Map: Views to Beans -->    
+    <bean id="portlet-view-bean-map" singleton="true" class="java.util.HashMap">
+       <description>Maps views to model beans</description>
+  	   <constructor-arg>
+  	   	<map>
+  	   	  <entry key="folder-view">
+  	   	  	<value>folderBean</value>
+  	   	  </entry>
+  	   	  <entry key="page-view">
+  	   	  	<value>pageBean</value>
+  	   	  </entry>          
+  	   	  <entry key="link-view">
+  	   	  	<value>linkBean</value>
+  	   	  </entry>				 
+  	   	  <entry key="add-page">
+  	   	  	<value>pageBean</value>
+  	   	  </entry>          
+  	   	  <entry key="add-folder">
+  	   	  	<value>folderBean</value>
+  	   	  </entry>          
+  	   	  <entry key="add-link">
+  	   	  	<value>linkBean</value>
+  	   	  </entry>
+				 
+  	   	</map>
+  	   </constructor-arg>    	
+    </bean>
+
+<!-- MVC Map: Views to Validator -->    
+    <bean id="portlet-view-validator-map" singleton="true" class="java.util.HashMap">
+       <description>Maps views to validators</description>
+  	   <constructor-arg>
+  	   	<map>
+  	   	  <entry key="folder-view">
+  	   	  	<value>folderBean</value>
+  	   	  </entry>
+  	   	  <entry key="page-view">
+  	   	  	<value>pageBean</value>
+  	   	  </entry>          
+  	   	  <entry key="add-page">
+  	   	  	<value>pageBean</value>
+  	   	  </entry>          
+  	   	  <entry key="add-folder">
+  	   	  	<value>folderBean</value>
+  	   	  </entry>          
+  	   	  <entry key="link-view">
+  	   	  	<value>linkBean</value>
+  	   	  </entry>
+  	   	  <entry key="add-link">
+  	   	  	<value>linkBean</value>
+  	   	  </entry>				 
+				 
+  	   	</map>
+  	   </constructor-arg>    	
+    </bean>
+
+    
+<!-- MVC Map: Action Forward Map - 2 standard actions: success, failure
+			  Naming Convention: (viewname):action i.e. myview:success, myview:failure			  
+			  entry key == view name : action (success or failure)
+			  value == view name, mode:[view,edit,help], state:[minimized,maximized,norma], any combination of 3
+-->    
+    <bean id="portlet-action-forward-map" singleton="true" class="java.util.HashMap">
+       <description>Maps logical forward names to views</description>
+  	   <constructor-arg>
+  	   	<map>
+  	   	  <entry key="folder-view:success">
+  	   	  	<value>folder-view,mode:view</value>
+  	   	  </entry>            
+  	   	  <entry key="page-view:success">
+  	   	  	<value>page-view,mode:view</value>
+  	   	  </entry>                      
+  	   	  <entry key="link-view:success">
+  	   	  	<value>link-view,mode:view</value>
+  	   	  </entry>                      				 
+  	   	</map>  	   	
+  	   </constructor-arg>    	
+    </bean>    
+</beans>

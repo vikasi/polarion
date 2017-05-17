@@ -1,0 +1,108 @@
+<a style="cursor:pointer;" onclick="navigateFromFrame('#page:repositories')" ><< Return to Repositories Configuration</a>
+
+1 Repository Configuration
+
+{repository:[id]|[addBelow]}
+
+1 Quick Help
+This page enables you to configure an external repository so that Polarion Work Items can be linked to revisions in that repository.
+
+1. In the ~~Provider~~ field, select the type of the external repository you want to configure. When you select, the properties for the repository type appear in the page. 
+1. Fill in the properties for the external repository and click *Save*.
+
+If you want to configure another repository, click the link ~~Return to Repositories Configuration~~. Alternatively, you can browse the configured repository by clicking the link 
+~~Navigate to Repository Browser~~. \\
+
+1.1 IMPORTANT NOTE
+If you have some code base in the Default repository, after you configure an external repository, you should explicitly add the Default repository to the configuration. See Quick Help 
+on the Repositories Configuration page.
+
+1 Providers Reference 
+
+1.1.1 Default provider
+
+This is the "built-in" Subversion repository installed with Polarion.
+* Supports poll automation (because it is done using internal Polarion processes)
+* Revisions of Work Items and other Polarion artifacts will be automatically linked regardless of whether or not the default provider is configured here.
+
+1.1.1 Subversion provider
+
+* *ID*: Identifier for this repository in Polarion (required)
+* *Name*: Name to display in Polarion for the repository
+* *Root URL*: URL of the SVN repository root (required)
+* *User Name*: Valid user name of the SVN repository user which will be used for polling 
+* *User Password*: Password of the user specified in ~~User Name~~
+* *View URL*: points to overall information about the revision
+* *View Location URL*: points to historical content of changed file
+* *View Location Diff URL*: points to change diff of changed file
+* *View Traceable Resource Location URL*: points to the position of the linked resource.
+
+See ~~Parameters reference~~ below for list of parameters which are replaced in the ~~View URL~~, ~~View Location URL~~ and ~~View Location Diff URL~~.
+
+1.1.1 Git provider
+
+* *ID*: Identifier for this repository in Polarion (required)
+* *Name*: Name to display in Polarion for the repository
+* *Local Repository*: File system path to the Git repository which should include the <tt>.git</tt> folder ~~unless~~ it is a bare repository without working directory where it is the repository folder itself. (required)
+* *Master*: Link the Git master repository. See ~~Notes~~ below.
+* *View URL*: points to overall information about the commit
+* *View Location URL*: points to historical content of changed file
+* *View Location Diff URL*: points to change diff of changed file
+* *View Traceable Resource Location URL*: points to the position of the linked resource.
+
+See ~~Parameters reference~~ below for list of parameters which are replaced in the ~~View URL~~, ~~View Location URL~~ and ~~View Location Diff URL~~.
+
+~~NOTES~~
+
+The Git repository must already exist on the local file system before it can be used by Polarion. There are two possible scenarios:
+1. If Git repository is on the same machine as Polarion server and it is not a clone of any other repository, then ~~Local Repository~~ should point to its local folder (including the <tt>.git</tt> folder unless it is a bare repository), and ~~Master~~ MUST be checked.
+1. If Git repository is somewhere else, then that repository must be manually cloned to the same machine as Polarion server, ~~Local Repository~~ should point to its local folder (including the <tt>.git</tt> folder unless it is a bare repository), and ~~Master~~ MUST NOT be checked.
+1*. These online resources may be useful: [http://gitref.org/creating/] and [https://help.github.com/articles/fetching-a-remote/]
+
+When ~~Master~~ is not checked, Polarion will try to invoke a Git command ~~pull~~ on the repository. 
+
+Polarion does support pulling from Git repositories which require authentication. If you succeed in doing <tt>git pull</tt> from the command line without any manual input, then Polarion should succeed too, but with some limitations:
+
+* Git repositories accessible by SSH with public key authentication should work without a problem.
+* Repositories accessible by HTTP(S) which require authentication are not supported. For that, an external script needs to be employed which will do the ~~pull~~ itself.
+* Usage of <tt>credential.helper</tt> is not supported.
+
+1.1.1 Parameters reference
+
+The following parameter may be used in ~~View URL~~, ~~View Location URL~~ and ~~View Location Diff URL~~:
+* <tt>\$revision\$</tt> - revision number of the change (for Subversion), or commit hash (for Git)
+
+The following parameters may be used in ~~View Location URL~~ and ~~View Location Diff URL~~:
+* <tt>\$location\$</tt> - location path. For example: <tt>/some/path/like/this</tt> 
+* <tt>\$locationEscaped\$</tt> - \$location\$ in application/x-www-form-urlencoded format in UTF-8 encoding
+* <tt>\$action\$</tt> - one of <tt>add</tt>, <tt>modify</tt>, <tt>rename</tt>, or <tt>delete</tt>
+* <tt>\$headRevision\$</tt> - current revision of the changed location (Subversion). Not expanded at all with Git.
+* <tt>\$position\$</tt> - The position of the linked resource. (With a source code resource, it would navigate to the file and line number of the linked element. )
+* <tt>\$branch\$</tt> - The repository branch of a linked resource. (This is primarily used for GIT repositories because the <tt>\$location\$</tt> variable with an SVN repository already contains the necessary branch information.)
+
+1.1.1 Examples
+
+1.1.1.1 Project using SVNWebClient as repository browser
+
+ID: <tt>widgetsExtension</tt> \\
+Name: <tt>Extra Widgets for Polarion ALM</tt> \\
+Root URL: <tt>http://example.com/repo</tt> \\
+View URL: <tt>http://example.com/svnwebclient/revisionDetails.jsp?rev=\$revision\$</tt> \\
+View Location URL: <tt>http://example.com/svnwebclient/fileContent.jsp?url=\$locationEscaped\$&pegrev=\$headRevision\$&crev=\$revision\$</tt> \\
+View Location Diff URL: <tt>http://example.com/svnwebclient/changedResource.jsp?url=\$locationEscaped\$&rev=\$revision\$&action=\$action\$</tt> \\
+View Traceable Resource Location URL: <tt>http://example.com/svnwebclient/fileContent.jsp?url=\$locationEscaped\$&rev=\$revision\$&line=\$position\$</tt> \\
+
+1.1.1.1 Project with code in GitHub
+
+IMPORTANT: The repository must first be cloned to local file system, in this case to <tt>/opt/git/com.polarion.alm.extensions.widgets</tt>.
+
+Configuration:
+
+ID: <tt>widgetsExtension</tt> \\
+Name: <tt>Extra Widgets for Polarion ALM</tt> \\
+Local Repository: <tt>/opt/git/com.polarion.alm.extensions.widgets/.git</tt> \\
+Master: ~~unchecked~~ \\
+View URL: <tt>https://github.com/Polarion/com.polarion.alm.extensions.widgets/commit/\$revision\$</tt> \\
+View Location URL: <tt>https://github.com/Polarion/com.polarion.alm.extensions.widgets/blob/\$revision\$/\$location\$</tt> \\
+View Location Diff URL: <tt>https://github.com/Polarion/com.polarion.alm.extensions.widgets/commit/\$revision\$</tt> \\
+View Traceable Resource Location URL: <tt>https://github.com/Polarion/com.polarion.alm.extensions.widgets/blob/\$branch\$/\$location\$#L\$position\$</tt> \\

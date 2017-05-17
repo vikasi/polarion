@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">admin</field>
+    <field id="created">2015-03-02 15:45:38.794 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client36" class="polarion-rp-widget-part" data-widget="com.polarion.pageParametersForm">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="title"></sub><sub id="content"><sub>reqtype</sub><sub>version</sub></sub><sub id="width">700</sub></span>
+</div><div id="polarion_client61" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="script"><sub id="script" style="white-space:pre;">&lt;div style=&quot;color:grey; text-align:right&quot;&gt;
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name &lt;br/&gt; $date.long
+&lt;div&gt;</sub></sub></span>
+</div><h1 id="polarion_client34">Requirements Approval Statistics</h1><p id="polarion_hardcoded_1">Displays statistics about the approval process for selected Requirements. Requirements have the &quot;Reviewed&quot; status, meaning they are awaiting stakeholder approval. Once approved by all stakeholders designated as an Approving User, a requirement&#39;s status can be changed to &quot;Approved&quot; in the workflow.</p><p id="polarion_client66"></p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 32.5%;">
+  <div id="polarion_client70" class="polarion-rp-widget-part" data-widget="com.polarion.multiSetPieChart">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters" style="display: none;"><sub id="title">User Approvals</sub><sub id="sectors"><sub id="elements"><sub><sub id="prototype">WorkItem</sub><sub id="queryType">luceneVelocity</sub><sub id="luceneQuery" style="white-space:pre;">type:($pageParameters.reqtype) AND status:implemented AND approvalState:approved
+#if(!$pageParameters.version.values.empty)
+AND targetVersion.KEY:$pageParameters.version
+#end</sub><sub id="children"><sub id="sectorName">Approved by All Approvers</sub><sub id="sectorColor">#95d55c</sub></sub></sub><sub><sub id="prototype">WorkItem</sub><sub id="queryType">luceneVelocity</sub><sub id="luceneQuery" style="white-space:pre;">type:($pageParameters.reqtype) AND status:implemented AND approvalState:disapproved
+#if(!$pageParameters.version.values.empty)
+AND targetVersion.KEY:$pageParameters.version
+#end</sub><sub id="children"><sub id="sectorName">Disapproved by Someone</sub><sub id="sectorColor">#d43d3d</sub></sub></sub><sub><sub id="prototype">WorkItem</sub><sub id="queryType">luceneVelocity</sub><sub id="luceneQuery" style="white-space:pre;">type:($pageParameters.reqtype) AND status:implemented AND approvalState:waiting
+#if(!$pageParameters.version.values.empty)
+AND targetVersion.KEY:$pageParameters.version
+#end</sub><sub id="children"><sub id="sectorName">Waiting for User Approvals</sub><sub id="sectorColor">#b566d4</sub></sub></sub><sub><sub id="prototype">WorkItem</sub><sub id="queryType">luceneVelocity</sub><sub id="luceneQuery" style="white-space:pre;">type:($pageParameters.reqtype) AND status:implemented AND NOT HAS_VALUE:approvalState
+#if(!$pageParameters.version.values.empty)
+AND targetVersion.KEY:$pageParameters.version
+#end</sub><sub id="children"><sub id="sectorName">Approvals Not Requested</sub><sub id="sectorColor">#cfcfcf</sub></sub></sub></sub></sub><sub id="showDataLabels">true</sub><sub id="showZeroValues">false</sub></span>
+</div><p id="polarion_client67"></p>
+</div>
+<div class="polarion-rp-column" style="width: 67.5%;">
+  <div id="polarion_client75" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><sub id="script"><sub id="script" style="white-space:pre;">#macro(showAp $status $q)#set($uQuery = &quot;SELECT DISTINCT A.FK_URI_USER FROM STRUCT_WORKITEM_APPROVALS A, LUCENE_QUERY(&#39;WorkItem&#39;, &#39;$q&#39;, &#39;id&#39;)  WI WHERE A.FK_P_WORKITEM = WI.C_PK AND A.C_STATUS=&#39;$status&#39; &quot;)#set($sep =&quot;&lt;a target=&#39;_blank&#39; href=&#39;$transaction.context.createPortalLink().repository().workItems().query($q).sidebarApprovals(false).toEncodedAbsoluteUrl()&#39;&gt;&lt;img src=&#39;/polarion/icons/default/actions/invite_for_approval.png&#39;/&gt;&lt;/a&gt;&quot;) &lt;span style=&quot;color:gray&quot;&gt; #foreach($u in $trackerService.dataService.sqlSearch($uQuery))$sep#if($u.isUnresolvable())$u.id#else$u.name#end #set($sep =&quot;,&quot;)#end &lt;/span&gt; #end
+#macro(aBull $color)&lt;span style=&quot;color:#$color;font-size:18px;font-weight:bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;raquo;&lt;/span&gt;#end
+#macro(count $query)&lt;span class=&quot;polarion-rp-inline-widget&quot; data-widget=&quot;com.polarion.countOfObjects&quot;&gt;&lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;&lt;sub id=&quot;dataSet&quot;&gt;&lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;&lt;sub id=&quot;queryType&quot;&gt;luceneVelocity&lt;/sub&gt;&lt;sub id=&quot;luceneQuery&quot;&gt;$query&lt;/sub&gt;&lt;/sub&gt;&lt;sub id=&quot;before&quot;&gt;&lt;/sub&gt;&lt;sub id=&quot;after&quot;&gt;&lt;/sub&gt;&lt;/span&gt;&lt;/span&gt;#end
+
+#set($bQuery = &quot;project.id:$page.reference.projectId AND type:($pageParameters.reqtype.toLucene())&quot;)
+
+#if(!$pageParameters.version.values.empty)
+	#set($bQuery = &quot;$bQuery AND targetVersion.KEY:$pageParameters.version.toLucene()&quot;)
+#end
+
+#set($qVerified=&quot;$bQuery AND status:verified&quot;) 
+#set($qRejected=&quot;$bQuery AND status:rejected&quot;) 
+#set($qImplemented=&quot;$bQuery AND status:implemented&quot;) 
+#set($qUApproved=&quot;$qImplemented AND approvalState:approved&quot;) 
+#set($qUDisapproved=&quot;$qImplemented AND approvalState:disapproved&quot;) 
+#set($qUWaiting=&quot;$qImplemented AND approvalState:waiting&quot;) 
+#set($qUOther=&quot;$qImplemented AND NOT HAS_VALUE:approvalState&quot;)
+
+
+&lt;span class=&quot;polarion-rte-link&quot; data-type=&quot;polarion&quot; data-custom-label=&quot;dglhfdlkghfdklghdflkgf&quot; data-url=&quot;/workitems/?query=type:((electricalRequirement mechanicalRequirement softwareRequirement systemRequirement)) AND status:reviewed AND approvalState:waiting&amp;amp;sidebar=approvals&quot;&gt;&lt;/span&gt;
+
+&lt;table class=&quot;polarion-Document-table&quot; style=&quot;margin: auto;empty-cells: show;border-collapse: collapse;width: 100%;border: 1px solid #CCCCCC;&quot; id=&quot;polarion_wiki macro name=table;params=uid=client2&quot;&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		Implemented
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+			#count($qImplemented)
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		&amp;nbsp;
+      	&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#aBull(&quot;b566d4&quot;) Waiting for User Approvals
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#count($qUWaiting)
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#showAp(&quot;waiting&quot; $qUWaiting) &amp;nbsp;
+      	&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#aBull(&quot;cfcfcf&quot;) Approvals Not Requested
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#count($qUOther)
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		&amp;nbsp;
+      	&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#aBull(&quot;d43d3d&quot;) Disapproved by Someone  (to be reviewed)
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#count($qUDisapproved)
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#showAp(&quot;disapproved&quot; $qUDisapproved) &amp;nbsp;
+      	&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#aBull(&quot;95d55c&quot;) Approved by All Approvers (ready to be approved in workflow)
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#count($qUApproved)
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#showAp(&quot;approved&quot; $qUApproved ) &amp;nbsp;
+      	&lt;/td&gt;
+      &lt;/tr&gt; 
+      &lt;tr&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+            Verified
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+			#count($qVerified)
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		#showAp(&quot;verified&quot; &quot;$qVerified&quot;) &amp;nbsp;
+      	&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		Rejected
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+			#count($qRejected)
+      	&lt;/td&gt;
+      	&lt;td style=&#39;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;&#39;&gt;
+      		&amp;nbsp;
+      	&lt;/td&gt;
+      &lt;/tr&gt;                 
+    &lt;/tbody&gt;
+&lt;/table&gt;</sub></sub></span>
+</div><p id="polarion_client3"></p>
+</div>
+<div class="polarion-rp-row-separator"></div><span id="polarion-rp-parameters"><sub id="reqtype" data-label="Requirement Item Types" data-type="Enumeration"><sub id="values"><sub>requirement</sub></sub><sub id="enumId">workitem-type</sub><sub id="prototype">WorkItem</sub><sub id="allowNoValue">false</sub><sub id="allowMultipleValues">true</sub></sub><sub id="version" data-label="Version" data-type="Enumeration"><sub id="enumId">release</sub><sub id="prototype">WorkItem</sub><sub id="allowNoValue">true</sub><sub id="allowMultipleValues">false</sub></sub></span>]]></field>
+    <field id="title">Requirements Approval Statistics</field>
+</rich-page>

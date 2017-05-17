@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fields>
+    <field description="Req. Type" id="reqtype" name="Req. Type" required="true" type="enum:reqtype"/>
+    <field id="pvRestriction" name="Restriction" type="custom:pvSCL"/>
+</fields>

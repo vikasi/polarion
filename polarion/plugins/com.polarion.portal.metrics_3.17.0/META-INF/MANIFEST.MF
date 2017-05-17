@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Provide-Package: com.polarion.portal.metrics,com.polarion.portal.metri
+ cs.report
+Bundle-SymbolicName: com.polarion.portal.metrics; singleton=true
+Bundle-Name: Metrics Plug-in
+Bundle-Version: 3.17.0
+Bundle-ClassPath: portal_metrics.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: org.eclipse.core.runtime,com.polarion.portal.tomcat,co
+ m.polarion.portal.jetspeed,com.polarion.alm.builder
+Bundle-Vendor: POLARION
+
+

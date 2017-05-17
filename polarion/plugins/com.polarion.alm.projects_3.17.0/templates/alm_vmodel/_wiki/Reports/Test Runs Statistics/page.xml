@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130419172912</created>
+<type>content</type>
+<content><![CDATA[{pre}
+<script>
+function toggleDiv(element){
+ if(document.getElementById(element).style.display == 'none')
+       document.getElementById(element).style.display = 'table-footer-group';
+ else
+       document.getElementById(element).style.display = 'none';
+}
+</script>
+{/pre}
+
+#set($inTx = false)
+#if($transactionService.canBeginTx())
+  #set($inTx = true)
+  $transactionService.beginTx()
+#end
+
+###### PREPARE BASIC DATA ##############################################################################
+#set($dataService = $trackerService.getDataService())
+#set($project = $trackerService.getTrackerProject($page.project))
+#set($templates = "")
+#set($comma = "")
+#foreach($t in $testManagementService.searchTestRunTemplates("project.id:$page.project","id",-1))
+#set($templates = "$t.id$comma$templates")
+#set($comma = ",")
+#end
+
+###### PARAMETERS #################################################################################
+{parameter:testRunTemplates|type=string|multi=true|allowed-values=$templates|value=Full Manual System Test}
+{parameter:groupId|type=string|value=}
+{parameter:fromDate|type=date|value=2012-01-01}
+{parameter:toDate|type=date|value=}
+{parameter:verifiesLinkRoles|type=enum:wi-link-role|multi=true|value=verifies}
+{parameter:passedTestResult|type=string|value=passed}
+{parameter:failedTestResult|type=string|value=failed}
+{parameter:blockedTestResult|type=string|value=blocked}
+
+###### FORM #################################################################################
+<div style="background-color:\#E1F0FF;padding:5px;">
+{parameter-form}
+<table cellpadding="3" >
+<tr><td align=right style="white-space: nowrap">Test Run Template:</td><td>{parameter-editor:testRunTemplates|width=100%}</td></tr>
+<tr><td align=right>Group-Id:</td><td >{parameter-editor:groupId|width=100%}</td></tr>
+<tr><td align=right>Finished from - to:</td><td>{parameter-editor:fromDate|width=150} - {parameter-editor:toDate|width=150}</td></tr>
+</tr>
+<tfoot id="advancedOptionDiv" style="display:none;">
+<tr><td align=right>Verifies Link Roles:</td><td>{parameter-editor:verifiesLinkRoles|width=100%} </td></tr>
+<tr><td align=right>Passed Test Result:</td><td>{parameter-editor:passedTestResult|width=100%} </td></tr>
+<tr><td align=right>Failed Test Result:</td><td>{parameter-editor:failedTestResult|width=100%} </td></tr>
+<tr><td align=right>Blocked Test Result:</td><td>{parameter-editor:blockedTestResult|width=100%} </td></tr>
+</tfoot>
+</table>
+{parameter-form-submit}
+{parameter-form-save} {show:wiki}<a href="javascript:toggleDiv('advancedOptionDiv');">Show Advanced Options...</a>
+
+{show}
+{parameter-form}
+</div>
+
+###### SETUP VARIABLES  ###################################################################
+#set($groupId = $pageParameters.groupId)
+#set($fromDate = $pageParameters.fromDate)
+#set($toDate = $pageParameters.toDate)
+##
+#set($testRunWhereQuery = "TR.FK_URI_PROJECT = (select C_URI from PROJECT where C_ID = '$page.project')")
+#set($quote='"')
+##
+#set($testRunTemplateQuery = "")
+#set($op ="C_ID in (")
+#foreach($t in $pageParameters.testRunTemplates)
+  #set($testRunTemplateQuery = "${testRunTemplateQuery}${op}'$t'")
+  #set($op =", ")
+#end
+#if($testRunTemplateQuery.trim().length()>0)
+  #set($testRunTemplateQuery = "${testRunTemplateQuery})")
+  #set($testRunWhereQuery = "${testRunWhereQuery} and TR.FK_URI_TEMPLATE in (select C_URI from TESTRUN where C_ISTEMPLATE is true and $testRunTemplateQuery)")
+#end
+##
+#if($groupId && $groupId.trim().length()>0)
+  #set($testRunWhereQuery = "${testRunWhereQuery} and TR.C_GROUPID='$groupId'")
+#end
+##
+#set($sqlDateFormat ='yyyy-MM-dd')
+#if($pageParameters.fromDate)
+  #set($testRunWhereQuery = "${testRunWhereQuery} and TR.C_FINISHEDON >= '$calendarTool.formatDate($pageParameters.fromDate,$sqlDateFormat) 00:00:00'")
+#end
+#if($pageParameters.toDate)
+  #set($testRunWhereQuery = "${testRunWhereQuery} and TR.C_FINISHEDON <= '$calendarTool.formatDate($pageParameters.toDate,$sqlDateFormat) 00:00:00'")
+#end
+##
+#set($verifiesLinkRoleSQLCheck = "")
+#set($op ="LINK.C_ROLE in (")
+#foreach($l in $pageParameters.verifiesLinkRoles)
+  #set($verifiesLinkRoleSQLCheck = "$verifiesLinkRoleSQLCheck${op}'$l.id'")
+  #set($op =", ")
+#end
+#if($verifiesLinkRoleSQLCheck.trim().length()>0)
+  #set($verifiesLinkRoleSQLCheck = "and ${verifiesLinkRoleSQLCheck})")
+#end
+#### REPORT ##########################
+{style:type=div|color=grey|text-align=right}
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name\\
+$calendarTool.getCalendarInstance().time
+{style}
+
+1 Test Run Statistics 
+Displays statistics about selected Test Runs, filtered by Test Run Template, Execution Time and Group ID (i.e. build number).
+
+Note: "Passed" Test Cases have passed in all the selected Test Runs. "Failed" or "Blocked" Test Cases have failed or been blocked at least once in any of the selected Test Runs.
+
+#set($isPDF=false)
+#set($pdfLabel = "$context.context.pdf_generate")
+#if($pdfLabel.equals("1"))
+#set($isPDF=true)
+#end
+
+#macro(showBigNumber $number $label $color)
+<span #if(!$isPDF)style="color:$color;font-weight:bold;font-size:14px;padding:3px;line-height:200%;"#end>
+<span #if(!$isPDF)style="font-size:36px"#end><b>$number</b></span> $label
+</span>
+#end
+
+<div #if(!$isPDF)style="background-color:\#E1F0FF;padding:10px;padding-top:1px;"#end>
+1.1 Test Runs Summary
+
+#### TEST RUNS #############
+<table #if(!$isPDF)style="float:left;background-color:\#E1F0FF;margin:5px"#end><tr><td>
+#set($testRunQuery = "select distinct TR.C_URI from TESTRUN TR where $testRunWhereQuery")
+#if(!$isPDF)
+#set($colorArray = [])
+#foreach($enum in $testManagementService.getTestRunStatusEnum($project.id).getAllOptions())
+   #set($void = $colorArray.add($enum.properties.color))
+#end
+#chartStart("" "Pie2D" 120 120  " bgcolor='E1F0FF' decimalPrecision='0' showValues='0' pieBorderThickness='0' animation='0' showShadow='0'")
+#set($colors = $colorArray)
+#foreach($enum in $testManagementService.getTestRunStatusEnum($project.id).getAllOptions())
+#addSet("$enum.name" $dataService.sqlSearch("$testRunQuery AND TR.C_STATUS='$enum.id'").size())
+#end
+#chartEnd()
+#end
+</td><td>
+\\
+#showBigNumber($dataService.sqlSearch("$testRunQuery").size() "Test Runs Executed" "Black")
+
+#foreach($enum in $testManagementService.getTestRunStatusEnum($project.id).getAllOptions())
+#showBigNumber($dataService.sqlSearch("$testRunQuery AND TR.C_STATUS='$enum.id'").size() "$enum.name" "$enum.properties.color")
+#end
+</td></tr></table>
+
+######## DEFECTS ###################################
+#set($defectsQuery = "select distinct C_URI from WORKITEM D where C_URI in (select TRR.FK_URI_DEFECT from STRUCT_TESTRUN_RECORDS TRR where TRR.FK_URI_P_TESTRUN in (select C_URI from TESTRUN TR where $testRunWhereQuery))")
+
+#set($allDefects = $dataService.sqlSearch($defectsQuery).size())
+#set($unresolvedDefects = $dataService.sqlSearch("$defectsQuery AND D.C_RESOLUTION IS NULL").size())
+#set($resolvedDefects =$dataService.sqlSearch("$defectsQuery  AND D.C_RESOLUTION IS NOT NULL").size())
+<table #if(!$isPDF)style="float:left;background-color:\#E1F0FF;margin:5px"#end><tr><td>
+#if(!$isPDF)
+#chartStart("" "Pie2D" 120 120  " bgcolor='E1F0FF' decimalPrecision='0' showValues='0' pieBorderThickness='0' animation='0' showShadow='0'")
+#set($colors = ["3B9E00","C30000"])
+#addSet("Resolved" $resolvedDefects)
+#addSet("Unresolved" $unresolvedDefects)
+#chartEnd()
+#end
+</td><td>
+\\
+#showBigNumber($allDefects "Defects Reported" "Black")
+
+#showBigNumber($resolvedDefects "Resolved" '\#3B9E00')
+#showBigNumber($unresolvedDefects "Unresolved" '\#C30000')
+</td></tr></table>
+
+
+####### CASES ###################################
+#set($testCaseQuery = "select distinct TRR.FK_URI_TESTCASE from STRUCT_TESTRUN_RECORDS TRR where TRR.FK_URI_P_TESTRUN in (select C_URI from TESTRUN TR where $testRunWhereQuery)")
+##
+#set($executedTestCasesQuery = "$testCaseQuery and TRR.C_RESULT IS NOT NULL")
+#set($failedTestCasesQuery = "$testCaseQuery and TRR.C_RESULT='$pageParameters.failedTestResult'")
+#set($blockedTestCasesQuery = "$testCaseQuery and TRR.C_RESULT='$pageParameters.blockedTestResult' ")
+##set($blockedTestCasesQuery = "$testCaseQuery and TRR.C_RESULT='$pageParameters.blockedTestResult' EXCEPT $failedTestCasesQuery")
+#set($notPassedTestCasesQuery = "$testCaseQuery and TRR.C_RESULT is not null and not TRR.C_RESULT='$pageParameters.passedTestResult' ")
+##
+#set($executedTestCases = $dataService.sqlSearch($executedTestCasesQuery).size())
+#set($notPassedTestCases = $dataService.sqlSearch($notPassedTestCasesQuery).size())
+#set($failedTestCases = $dataService.sqlSearch($failedTestCasesQuery).size())
+#set($blockedTestCases = $dataService.sqlSearch($blockedTestCasesQuery).size())
+#set($passedTestCases = ($executedTestCases - $notPassedTestCases))
+##
+#set($rEnum = $testManagementService.getTestRecordResultEnum($project.id))
+#set($passedColor = $rEnum.wrapOption($pageParameters.passedTestResult).properties.color)
+#set($blockedColor = $rEnum.wrapOption($pageParameters.blockedTestResult).properties.color)
+#set($failedColor = $rEnum.wrapOption($pageParameters.failedTestResult).properties.color)
+#set($colorArray = [])
+#set($s = $colorArray.add($passedColor))
+#set($s = $colorArray.add($failedColor))
+#set($s = $colorArray.add($blockedColor))
+##
+<table #if(!$isPDF)style="float:left;background-color:\#E1F0FF;margin:5px;"#end><tr><td>
+#if(!$isPDF)
+#chartStart("" "Pie2D" 120 120  " bgcolor='E1F0FF' decimalPrecision='0' showValues='0' pieBorderThickness='0' animation='0' showShadow='0'")
+#set($colors = $colorArray)
+#addSet("Passed" $passedTestCases)
+#addSet("Failed" $failedTestCases)
+#addSet("Blocked" $blockedTestCases)
+#chartEnd()
+#end
+</td><td>
+\\
+#showBigNumber($executedTestCases "Executed Test Cases" "Black")
+
+#showBigNumber($passedTestCases "Passed" "$passedColor")
+#showBigNumber($failedTestCases "Failed" "$failedColor")
+#showBigNumber($blockedTestCases "Blocked" "$blockedColor")
+</td></tr></table>
+##clearFloats
+<div style="clear:both"></div>
+</div>
+
+###############################################################################
+## TestRun table
+1.1 Test Runs
+
+#set($testRunIdQuery="")
+#set($op = "")
+#foreach($tr in $dataService.sqlSearch($testRunQuery))
+#set($testRunIdQuery = "${testRunIdQuery}${op}id:${quote}$tr.id${quote}")
+#set($op = " OR ")
+#end
+#if($testRunIdQuery.trim().length()==0)
+No test runs
+#else
+{recent-testruns:query=$testRunIdQuery}
+#end
+
+####################################################################################
+## Test cases executed linked table
+1.1 Failed Test Cases
+Test Cases that were executed and have failed at least once.
+
+{workitems:sqlQuery=$failedTestCasesQuery|fields=id,title}
+
+1.1 Blocked Test Cases
+Test Cases that were executed and have been blocked at least once.
+
+{workitems:sqlQuery=$blockedTestCasesQuery|fields=id,title}
+
+####################################################################################
+## Defects table
+1.1 Defects reported
+Defects reported and linked with test cases that have failed in the selected test runs.
+{workitems:sqlQuery=$defectsQuery}
+
+
+####################################################################################
+## Requirements table
+1.1 Test Items with Failed or Blocked Test Cases
+Work Items that are linked to failed or blocked test cases by verification link role.
+
+#set($testItemsQuery = "select distinct LINK.FK_URI_WORKITEM from STRUCT_WORKITEM_LINKEDWORKITEMS LINK inner join STRUCT_TESTRUN_RECORDS TRR on LINK.FK_URI_P_WORKITEM = TRR.FK_URI_TESTCASE where TRR.FK_URI_P_TESTRUN in (select C_URI from TESTRUN TR where $testRunWhereQuery) and TRR.C_RESULT is not null $verifiesLinkRoleSQLCheck")
+
+{workitems:sqlQuery=$testItemsQuery and not TRR.C_RESULT='$pageParameters.passedTestResult'}
+
+####################################################################################
+## Test cases executed linked table
+1.1 All Executed Test Cases
+All the Test Cases that were executed at least once.
+
+{workitems:sqlQuery=$executedTestCasesQuery|fields=id,title|expand=no}
+
+
+####################################################################################
+## Requirements linked table
+1.1 All Tested Items
+Work Items that are linked to executed test cases by verification link role.
+
+{workitems:sqlQuery=$testItemsQuery|expand=no}
+
+####################################################################################
+#set($debug =false)
+#macro(showSQL $label $sql)#if($debug)<div  style="padding:10px;border:1px solid black">*$label*\\<code>$sql</code></div>#end#end
+#showSQL("Test Runs" $testRunQuery)
+#showSQL("Defects" $defectsQuery)
+#showSQL("Tested Items" $testItemsQuery)
+#showSQL("Test cases" $testCaseQuery)
+
+#if($inTx)
+  $transactionService.commitTx()
+#end]]></content>
+</wiki-page>

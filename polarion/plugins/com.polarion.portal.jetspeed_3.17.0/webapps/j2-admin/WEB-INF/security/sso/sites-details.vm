@@ -1,0 +1,126 @@
+#*
+Copyright 2004 The Apache Software Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*#
+
+#**
+
+@author <a href="mailto:taylor@apache.org">David Sean Taylor</a>
+@version $Id: sites-details.vm 348264 2005-11-22 22:06:45Z taylor $
+
+*#
+
+## set ($pipeline = $renderResponse.createRenderURL())
+## set ($pipeline = "$pipeline?pipeline=portlet-pipeline&entity=$chooser.Id")
+
+<script>
+function openWindow(pipeline)
+{	
+    var vWinUsers = window.open(pipeline, 'UserPicker', 'status=no,resizable=yes,width=200,height=250,scrollbars=yes');
+    vWinUsers.opener = self;
+	vWinUsers.focus();
+}
+</script>
+
+#set ($MESSAGES = $portletConfig.getResourceBundle($renderRequest.Locale))
+
+#if ($statusMsg)
+#parse ('/WEB-INF/view/status-include.vm')
+#end
+
+#if ($currentSite)
+<table cellpadding=0 cellspacing=1 border=0 width='100%' >
+  <tr>
+    <td width='12' class="portlet-section-header"></td>      
+    #foreach ($column in $title)
+	  #set ($columnLink = $renderResponse.createRenderURL())
+	  $columnLink.setParameter("js_dbcolumn",$column)
+      <td align='center' class="portlet-section-header" width="40%" nowrap>
+        $column
+      </td>
+    #end
+    <td width='24' class="portlet-section-header">&nbsp;</td>    
+    <td class=""></td>        
+  </tr>
+  #foreach ( $principal in $table )
+  <tr>
+    #if ($velocityCount % 2 == 0)
+       #set($rowstyle = "portlet-section-body")
+    #else
+       #set($rowstyle = "portlet-section-alternate")
+    #end    
+     #if ($currentP == $principal)
+       <td class="$rowstyle" nowrap width='12'>
+         <img src="/j2-admin/images/selected.gif" width="7" height="12" border="0" vspace="2"/>
+       </td>
+	 #else
+       <td class="$rowstyle" nowrap width='12'>
+         &nbsp;
+       </td>      
+	 #end   	 
+      <td class="$rowstyle" nowrap width="25%">
+        #set ($action = $renderResponse.createActionURL())
+        $action.setParameter('ssoPrincipal', $principal.PortalPrincipalName)
+        <div align="center">$principal.PortalPrincipalName</div>
+      </td>
+      <td class="$rowstyle" nowrap width="25%">
+        <div align="center">$principal.RemotePrincipalName</div>
+      </td>      
+       <td class="$rowstyle" nowrap width='24' align='center'>
+         <a href="javascript:YesNoPopup('$MESSAGES.getString('confirmToDeleteRemote')','$MESSAGES.getString('confirmDelete')','securityform','ssoDelete','$principal.PortalPrincipalName','YesNoReturnMethod()');">
+           <img src="/j2-admin/images/waste_bin.gif" width="20" height="15" border="0"/>            
+         </a>
+       </td>      
+    <td class="">&nbsp;</td>               
+   </tr>
+  #end
+</table>
+<br/>
+<form name='securityform' action="$renderResponse.createActionURL()" method="post">
+<input type='hidden' name='principal.type' value='user'/>
+<input name='ssoDelete' type='hidden' value=''/>
+<table>
+  <tr colspan="2" align="right">
+    <td nowrap class="portlet-section-alternate" align="right">$MESSAGES.getString('portalPrincipal')&nbsp;</td>
+    <td class="portlet-section-body" align="left">
+      <input type="text" name="portal.principal" size="30" value="$!currentP" class="portlet-form-field-label">
+	 <a href="javascript:openWindow('$userChooser');">
+        <img title="Select a User"
+             name="assigneeImage" 
+             src="/j2-admin/images/user-chooser.gif" hspace=0 height=16 width=16 border=0 align=absmiddle></a>      
+	 <a href="javascript:openWindow('$groupChooser');">
+        <img title="Select a Group"
+             name="assigneeImage" 
+             src="/j2-admin/images/group-chooser.gif" hspace=0 height=16 width=16 border=0 align=absmiddle></a>                   
+    </td>      
+    </td>
+  </tr>
+  <tr colspan="2" align="right">
+    <td nowrap class="portlet-section-alternate" align="right">$MESSAGES.getString('remotePrincipal')&nbsp;</td>
+    <td class="portlet-section-body" align="left">
+      <input type="text" name="remote.principal" size="30" value="$!currentR" class="portlet-form-field-label">
+  </tr>
+  <tr colspan="2" align="right">
+    <td nowrap class="portlet-section-alternate" align="right">$MESSAGES.getString('remoteCredential')&nbsp;</td>
+    <td class="portlet-section-body" align="left">
+      <input type="password" name="remote.credential" size="30" value="$!remoteCredential" class="portlet-form-field-label">      
+    </td>
+  </tr>  
+</table>
+<br/>
+<input name='sso.add' type="submit" value="$MESSAGES.getString('add')" class="portlet-form-button"/>
+<input name='sso.refresh' class="portlet-form-button" type="submit" value="$MESSAGES.getString('refresh')" />
+</form>	      
+#end
+

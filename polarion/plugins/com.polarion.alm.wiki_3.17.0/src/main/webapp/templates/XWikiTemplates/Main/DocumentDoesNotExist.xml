@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><xwikidoc>
+<web>Main</web>
+<name>Error</name>
+<language/>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent/>
+<creator>XWiki.admin</creator>
+<author>XWiki.admin</author>
+<customClass/>
+<contentAuthor/>
+<creationDate>1173105793000</creationDate>
+<date>1173105793000</date>
+<contentUpdateDate>1173105793000</contentUpdateDate>
+<version>1.1</version>
+<title/>
+<template/>
+<defaultTemplate/>
+<validationScript/>
+<content>
+#template("xwiki.vm")
+#template("httpheader.vm")
+#template("header.vm")
+#template("viewheader.vm")
+&lt;div id="xwikicontent"&gt;
+    #if($xwiki.exists("XWiki.DocumentDoesNotExist"))
+    $xwiki.includeForm("XWiki.DocumentDoesNotExist",false)
+    #else
+    &lt;center&gt;&lt;h2&gt;
+        $msg.get("thispagedoesnotexist")
+    &lt;/h2&gt;
+    &lt;/center&gt;
+    &lt;br/&gt;&lt;br/&gt;
+    #set($url = $doc.getURL("edit", $editparams))
+    &lt;center&gt;
+        $xwiki.parseMessage("youcanclicktoedit")
+    &lt;/center&gt;
+    &lt;br/&gt;&lt;br/&gt;
+    #end
+&lt;/div&gt;
+#template("basefooter.vm")
+#template("footer.vm")
+</content>
+</xwikidoc>

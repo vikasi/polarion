@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.synchronizer.ui;singleton:=true
+Bundle-Name: Syhcnronizer UI
+Bundle-Version: 3.17.0
+Bundle-ClassPath: synchronizer-ui.jar
+Require-Bundle: com.sun.jersey;bundle-version="1.0.0",com.polarion.syn
+ chronizer;bundle-version="0.4.0",com.polarion.portal.tomcat;bundle-ve
+ rsion="5.5.24",com.polarion.platform.guice;bundle-version="3.6.0",com
+ .polarion.platform.repository;bundle-version="3.6.0",com.polarion.alm
+ .projects;bundle-version="3.6.0",com.polarion.platform.persistence;bu
+ ndle-version="3.6.0",com.polarion.platform.jobs;bundle-version="3.6.0
+ ",com.polarion.portal.jetspeed;bundle-version="3.6.0",com.polarion.sy
+ nchronizer.proxy.polarion;bundle-version="3.7.2"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Import-Package: com.polarion.synchronizer.proxy.reqif,com.polarion.syn
+ chronizer.proxy.configuration,com.polarion.synchronizer.proxy.reqif.i
+ nternal,com.polarion.synchronizer.proxy.reqif.model
+
+

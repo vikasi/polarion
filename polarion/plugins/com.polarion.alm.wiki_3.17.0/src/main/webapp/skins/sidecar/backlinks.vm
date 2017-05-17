@@ -1,0 +1,33 @@
+  #set($blinks = $doc.getBacklinks())
+  
+  <div id="backlinkscontent" class="xwikipanelcontent" style="padding-top: 10px;">  
+  #if($blinks.size()>0)
+        #set($project=$xwiki.getCurrentProject())
+	
+	#foreach($docname in $blinks)
+		#set($rdoc = $xwiki.getDocument($docname).getTranslatedDocument())
+		#if($first == true)
+			#set($first = false)
+		#else
+			<span class="pitemseparator"> | </span>
+		#end
+                #if($project == $rdoc.getDoc().getProject())
+                  #set($projectpath = "")
+                  #set($sep = "")
+                #else
+                  #set($projectpath = $rdoc.getDoc().getProject())
+                  #set($sep = "/")
+                #end
+                #set ($spaceAlias = $rdoc.getDoc().escapeChars($rdoc.getDoc().getSpaceTitleOrName()))
+                #if($spaceAlias == "")
+                  #set($sep1 = "")
+                #else
+                  #set($sep1 = ".")
+                #end
+        #set($pageAlias = $rdoc.getDoc().escapeChars($rdoc.getDoc().getPageTitleOrName()))
+		<span class="panelitem"><a href="$rdoc.getURL("view")" title="$projectpath$sep$spaceAlias$sep1$pageAlias" >$projectpath$sep$spaceAlias$sep1$pageAlias</a></span>
+	#end
+   #else
+     <span id="attNo" style="padding: 4px;">$localization.getValue("wiki.label.noitems")</span><br>
+   #end
+   </div>

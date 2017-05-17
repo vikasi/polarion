@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option default="true" description="A Design input requirement Teir 1" iconURL="/polarion/icons/default/enums/type_requirement.gif" id="requirement" name="Requirement" sortOrder="2"/>
+    <option description="A Verification test protocol" iconURL="/polarion/icons/default/enums/type_test.gif" id="testcase" name="Test Case" sortOrder="6"/>
+    <option description="Components of the product" iconURL="/polarion/icons/default/enums/type_feature2.gif" id="feature" name="Feature" sortOrder="6"/>
+    <option description="A product" iconURL="/polarion/icons/default/enums/type_variant.png" id="variant" name="Variant" sortOrder="7"/>
+</enumeration>

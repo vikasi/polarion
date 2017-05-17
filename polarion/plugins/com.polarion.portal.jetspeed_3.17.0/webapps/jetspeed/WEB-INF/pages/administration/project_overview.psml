@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/reports/project_overview.psml" hidden="false">
+    <title>Report Descriptors</title>
+    <short-title>Report Descriptors</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_reports/project_overview_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_reports/project_overview_portlet" type="portlet" name="webui::FileConfigurationPortlet">
+          <preference name="defaultConfFile" readOnly="false">
+		    <value>.polarion/portal/default_project_pages/overview.psml</value>
+		  </preference>
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/portal/pages/overview.psml</value>
+		  </preference>
+		  </fragment>
+    </fragment>
+</page>

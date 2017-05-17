@@ -1,0 +1,23 @@
+<div style="position:absolute;right:5px;bottom:5px;">
+#if($tour.prev)<a href="/polarion/tour/$tour.prev"><img id="previcon" title="Previous Tour Page" src="/polarion/ria/images/tour/prev.png" border="0" onmouseover="mouseOverIcon('previcon','/polarion/ria/images/tour/prevMouseOver.png')" onmouseout="mouseOutIcon('previcon')"/></a>#end
+&nbsp;
+#if($tour.next)<a href="/polarion/tour/$tour.next"><img id="nexticon" title="Next Tour Page" src="/polarion/ria/images/tour/next.png" border="0" onmouseover="mouseOverIcon('nexticon','/polarion/ria/images/tour/nextMouseOver.png')" onmouseout="mouseOutIcon('nexticon')"/></a>#end  
+</div>
+</div>
+</div>
+
+#if($googleNumber)
+	
+	<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("$googleNumber");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+#end
+</body>
+</html>

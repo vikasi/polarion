@@ -1,0 +1,13 @@
+###
+### Document headers
+###
+### Contains the global and space zones
+###
+##set ($comparator = "0")
+## IMA Show header/footer {
+#if($showHeaderFooter == "1")
+	#template("global.vm")
+
+#end
+#template("space.vm")
+## IMA }

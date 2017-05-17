@@ -1,0 +1,2312 @@
+/**
+General layout of the page
+for @media screen displays
+
+**/
+
+html {
+	height:100%;
+}
+body#body{
+  /*position: relative;*/
+  overflow : hidden;
+  margin: 0 auto;
+  height:100%;
+  text-align: center;
+  /*font-size: 85%;*/
+}
+
+p.paragraph
+{
+   white-space: normal;
+   line-height: 1.6em;
+   margin: 8px 0px 8px 0px;
+   padding: 0;
+}
+
+p.paragraph2
+{
+   white-space: normal;
+}
+
+p.paragraph3
+{
+   /*must be normal to carry next line*/	
+   white-space: normal;
+   line-height: 1.7em;
+   margin: 0px 0px 0px 0px;
+}
+
+#rightpanlesborder{
+  border: 1px solid #84AAC6;
+  background: #fff;
+}
+
+#viewpanels {
+  overflow:hidden;
+  width:200px;
+}
+
+html>body #viewpanels {
+  width:100%;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+#xwikimaincontainer{
+
+  border: 0;
+  text-align: left;
+}
+
+#printcontainer{
+  margin-top: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  border: 0px solid #3E5F80;
+  text-align: left;
+  font-size: 12px;
+  background: white;	
+}
+
+#xwikimaincontainer.modules{
+  margin-top: -1px !important;
+}
+html>body #xwikimaincontainer.modules{
+  margin-top: -5px !important;
+}
+
+#xwikimaincontainer.wiki{
+  margin-top: 5px;
+}
+
+.textLabelBold{
+     font-size: 12px;
+     color: #004580;
+     font-weight: bold;
+}
+
+
+.textLabel{
+     font-size: 12px;
+     color: #004580;
+     font-weight: normal;
+}
+
+.textLabelType{
+     font-size: 12px;
+     color: #004580;
+     font-weight: normal;
+     vertical-align: top;
+}
+
+
+.inputText{
+     border: 1px solid #739ABD;
+     color: black;
+     font-size: 12px;
+     height: 20px;
+     font-weight: bold;
+}
+
+.inputTextSearch{
+	border: 1px solid #7F9DB9;
+	color: #004580;
+	font-size: 12px;
+	height: 15px;
+	font-weight: normal;
+	padding: 0px;
+}
+
+
+#contentcontainer.layoutsection
+{
+     
+}
+
+.title{
+     
+     color: #777777;
+}
+
+.layoutsection{
+  clear: both;
+}
+
+.xwikimainbodycontainerouter {
+	background: #E0F1FC;
+	padding-left: 4px;
+	padding-right: 4px;	
+	padding-top:0px;
+	margin-top:0px;
+/*	margin-top: -10px;*/
+}
+
+.xwikimainbodycontainer {
+	border: 1px solid #246991;
+	background: #fff;
+}
+
+.menusepartor {
+	
+    border-top:1px solid #DBDEE8;
+	height: 3px;
+	width: 150px;
+	line-height: 1pt;
+}
+
+.editactions_cancel {
+	background-image: url('xwikieditcancel.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 59px;
+	height: 20px;
+	cursor: pointer;
+	border: 0px;
+}
+
+.editactions_preview {
+	background-image: url('xwikieditpreview.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 59px;
+	height: 20px;
+	cursor: pointer;
+	border: 0px;
+}
+
+.editactions_saveandcontinue {
+	background-image: url('xwikieditsaveview.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 95px;
+	height: 20px;
+	cursor: pointer;
+	border: 0px;
+}
+
+.editactions_save {
+	background-image: url('xwikieditsave.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 59px;
+	height: 20px;
+	cursor: pointer;
+	border: 0px;
+}
+
+.editactions_backtoedit {
+	background-image: url('backtoedit.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 20px;
+	cursor: pointer;
+	border: 0px;
+}
+
+
+/*
+---------------------------------------
+Login
+---------------------------------------
+*/
+
+input.j_actionButton{
+	background-color: transparent;
+	background-image: url("btn_blue.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	font-family: Arial, Helvetica, sans-serif;
+	border:0px !important;
+	font-size: 12px;
+	height: 20px !important;
+	height: 20px;
+	width: 70px;
+	padding: 0px;
+	overflow: visible;
+	cursor: pointer;
+}
+
+
+table.login {
+	border: 1px solid #00425e;
+	background-image: url("background.jpg");
+	background-position: bottom center;
+	border-collapse: collapse;
+	height: 200px;
+}
+
+.login td.logintitle {
+	background-color: #c0daea;
+	border: 1px solid #00425e;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #00425e;
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+
+.login td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+input#j_username {
+	border: 1px solid #000000;
+	font-size: 12px;
+	background-color: #ffffff;
+	width: 140px;
+}
+input#j_password{
+	border: 1px solid #000000;
+	font-size: 12px;
+	background-color: #ffffff;
+	width: 140px;		
+}
+
+label.login {
+		background-color: transparent;
+		font-weight: bold;
+		vertical-align: middle;
+		
+}
+
+/*
+---------------------------------------
+Global header
+---------------------------------------
+*/
+#headerglobal{
+  display: block;
+  position: relative;
+  clear: both;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 75px;
+  overflow: hidden;
+}
+
+#headerglobalbg {
+  background-image:url('bg_c.gif');
+  background-repeat: no-repeat;		
+  height: 77px;
+  overflow: hidden;
+}
+
+#companylogo {
+  position: relative;
+  float: left;
+  clear: left;
+  left: 0px;
+  margin: 0px;
+}
+
+#globaldoctitle {
+  visibility: hidden;
+}
+
+#globaldoctitle h1{
+  margin: 0px;
+  padding: 0px;
+}
+
+#globallinks {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 400px;
+}
+
+a.globallink,a.globallink:active,a.globallink:link,a.globallink:visited {
+		font-size: 12px;
+		color: #00425E;
+		text-decoration: none;
+		/*border-bottom: 1px dotted #00425E;*/
+		padding-left: 2px;
+		padding-right: 2px;
+		background-color: transparent;
+}
+
+span.globallink
+{
+		font-size: 12px;
+		color: #00425E;
+		text-decoration: none;
+		padding-left: 2px;
+		padding-right: 2px;
+		cursor: pointer;
+		background-color: transparent;
+
+}
+a.globallink:hover {
+		font-size: 12px;
+		color: #ffffff;
+		text-decoration: none;
+/*		border-bottom: 1px dotted #00425E;*/
+		background-color: #00425E;
+		padding-left: 2px;
+		padding-right: 2px;
+}
+
+#globalmenu {
+  font-size: 12px;
+  text-align: right;
+  margin: 5px 10px 0px 0px;
+  padding: 0px;
+  background: transparent;
+}
+
+#globalsearch {
+  text-align: right;
+  margin-right: 10px;
+  margin-top: -1px;
+  padding: 0px;
+}
+
+.globalsearchinputt {
+	border: 1px solid #000000;
+	font-size: 12px;
+	background-color: #ffffff;
+	height: 12px !important;
+	width: 150px !important;
+}
+
+.globalsearchinputb {
+	width: 45px !important;
+	height: 16px !important;
+	background-image:url('but_search.gif');
+	background-position: left top;
+	background-repeat: no-repeat;
+	border: 0px;
+	margin-top:1px;
+}
+
+
+/*
+---------------------------------------
+Space header, footer
+---------------------------------------
+*/
+#headerspace {
+  height: 25px;
+  width: 100%;
+  background-image:url('header-path.png');
+  background-repeat: repeat-x;
+/*  margin-top: -20px !important;*/
+  margin-top: 0px;
+  border-right:1px solid #5368A6;
+  z-index: 5;
+  position:relative;
+}
+
+#footerglobal {
+	
+	border-top: 2px solid #5368A6;
+	background-image:url('bg_f.gif');	
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 42px;
+}
+
+#headerspace, #footerglobal{
+  margin: 0px 0px;
+}
+html > body #headerspace, html > body #footerglobal{
+  margin: 10px 0px;
+}
+
+#headerspace hr, #footerglobal hr{
+  margin: 0px;
+  padding: 0px;
+  clear: both;
+  height: 1px;
+  border: none;
+}
+#breadcrumbs{
+	padding: 3px 10px;
+	font-size: 13px;
+	font-weight: bold;
+        text-decoration: none;
+	color: #ffffff;
+	border-left: 1px solid #3E5F80;
+	margin: -1px;
+	margin-top: 0px;
+/*	border-right: 1px solid #3E5F80;*/
+	margin-right: -1px;
+	width: 60%;
+
+}
+
+#breadcrumbs a.breadcrumblink,#breadcrumbs a.breadcrumblink:hover,#breadcrumbs a.breadcrumblink:visited,#breadcrumbs a.breadcrumblink:link,#breadcrumbs a.breadcrumblink:active {
+	color: #ffffff;
+}
+
+#xwikilicence {
+  float: right;
+  clear: right;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+#xwikivalidator {
+	text-align: right;
+	height: 15px;
+	margin-top: 3px;	
+	margin-bottom: 2px;
+    margin-left: 5px;
+}
+
+#xwikicopy {
+	text-align: right;
+	height: 15px;
+	margin-top: -1px !important;	
+	margin-top: -4px;	
+	margin-bottom: 2px;
+    margin-left: 5px;
+}
+
+
+#xwikidocinfo {
+  font-size: 12px;
+  float: left;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+/*
+---------------------------------------
+Content
+---------------------------------------
+*/
+.content{
+  margin: 10px 178px 0px;
+}
+
+
+.contenthideleft{
+  margin: 10px 178px 0px 0px;
+  border: 1px 	;
+/*  overflow: auto;*/
+}
+
+.contenthideright{
+  margin: 10px 0px 0px 178px;
+  overflow: auto;
+  margin-left:0px;
+/*  height:600px;
+  width: 100%;*/
+/*  border: 1px solid #f00;*/
+}
+.contenthidelefthideright{
+  margin: 10px 0px 0px;
+}
+#xwikieditor.layoutsection{
+  border: 1px solid red;
+  margin: 0px;
+}
+#scrollcolumn{
+  width: 100%;
+  margin: 0px;
+  height:740px;
+  border: 3px solid red;
+  overflow: scroll;
+}
+
+#editcolumn{
+  width: 100%;
+  margin: 0px;
+  float: left;
+/*  overflow: auto;*/
+}
+
+.menubar{
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-bottom: 1px solid #DEDEDE;
+    color: #595959;
+    height: 46px;
+    padding-left: 8px;
+    vertical-align: middle;
+    width: auto;
+}
+
+.menubar .leftmenu td {
+}
+.menubardisab{
+	background: none repeat scroll 0 0 #F5F5F5;
+    border-bottom: 1px solid #DEDEDE;
+    color: #595959;
+    height: 46px;
+    padding-left: 8px;
+    vertical-align: middle;
+    width: auto;	
+}
+
+
+#menucreate{
+  background:#C0E2F5;
+  position: relative;
+  left: 0px;
+}
+
+#xwikidoccontent {
+	padding: 0 8px 8px
+}
+
+#xwikidoccontent textarea {
+	clear: left;
+    border: 1px solid #D2D7DA;
+    padding: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+}
+
+#attTableM {
+	width: 99%\9;
+}
+/* Wiki Section */
+.wiki-section {
+    background-color: #E1F0FF;
+    border-radius: 5px 5px 5px 5px;
+    color: #E1F0FF;
+    margin: 20px 9px 0;
+    padding: 8px;
+    
+    width:99%\9;
+}
+.wiki-section-title {
+	white-space: nowrap;
+    width: 100%;
+    vertical-align: middle;
+}
+.wiki-section-title span {
+	 color: #0E4A90;
+    font-size: 16px !important;
+    font-weight: bold;
+    padding-left: 10px;
+    text-shadow: 1px 1px 0.01em white;
+    
+	
+}
+	
+html > body #xwikidoccontent textarea{
+  width: 100%;
+}
+
+.layoutsubsection{
+  /* border: 1px solid #DDD; */
+   white-space: normal;
+   vertical-align: top;
+
+/*  margin: 10px 10px 10px 10px;*/
+/*  padding: 0px 4px;	*/
+margin: 5px;
+}
+
+.layoutsubsection.main{
+margin: 0px;
+padding: 10px;
+padding-top: 0px;
+/*width: 90%;*/
+}
+
+.layoutsubsection.about{
+margin: 5px;
+  border: none;
+  text-align: right;
+  font-style: italic;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 85%;
+/*  width: 90%;*/
+}
+.rightmenu{
+  float: right;
+}
+
+/*
+---------------------------------------
+Zone for Comments, attachments, History... 
+---------------------------------------
+*/
+#xwikidata{
+  padding: 0px;
+  border: none;
+}
+#xwikidatacontents{
+  padding: 0px 4px;
+  border: 1px solid;
+}
+.xwikiintratitle{
+  display: none;
+}
+.xwikiintracontent{
+  margin: 0px;
+}
+
+.status {
+	float: right;
+    color: #999999;
+    font-size: 11px;
+    padding: 3px 6px;
+    text-align: right;
+}
+/*
+---------------------------------------------
+"Message Boxes"
+---------------------------------------------
+*/
+fieldset.xwikimessage{
+  display: block;
+  float: none;
+  width: 98.5%;
+  margin: auto;
+}
+span.xwikimessage{
+  display: block;
+  float: none;
+}
+
+.xwikimessage {
+    background-color: #EDF6FF;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 15px;
+    padding: 10px 12px;
+}
+
+.xwikimessage table {
+    background-color: #EDF6FF;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 15px;
+    padding: 10px 12px;
+}
+
+html > body fieldset.xwikimessage{
+  padding-top: 8px;
+}
+
+fieldset.xwikimessage legend {
+  font-weight: bold;
+  font-size: 110%;
+  padding: 2px 8px;
+  margin: 0px;
+}
+span.xwikimessage legend {
+  font-weight: bold;
+  font-size: 110%;
+  padding: 2px 8px;
+  margin: 0px;
+}
+fieldset.xwikimessage .xwikimessage{
+  text-align: left;
+  font-size: 170%;
+}
+span.xwikimessage .xwikimessage{
+  text-align: left;
+  font-size: 13px;
+}
+fieldset.xwikimessage .buttons {
+  text-align: center;
+}
+fieldset.xwikimessage .buttons a {
+  text-decoration: none;
+  margin: 8px;
+}
+
+.button{
+  font-weight: bold;
+  text-align: center;
+
+}
+.topbuttons{
+  margin-bottom: 5px;
+}
+.bottombuttons{
+  margin-top: 5px;
+}
+/*
+----------------------------------------------
+Comments
+----------------------------------------------
+*/
+.xwikicomment {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 1px;
+  margin-left: auto;
+  margin-right: auto;
+/*  position: relative; */
+}
+.commentavatar{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 54px;
+}
+.commentavatar img{
+  width: 3.5em;
+/*  display: block;*/
+  margin: auto;
+}
+.commentheader{
+  margin-bottom: 1em;
+  font-weight: bold;
+  margin-left: 2px;
+}
+.commentcontent{
+  margin-left: 4px;
+}
+
+.btn_min{
+  background-image: url('minimize.png'); 
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.btn_help{
+  background-image: url('help.png'); 
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.btn_max{
+  background-image: url('maximize.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.help_max{
+  background-image: url('maximize1.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.help_min{
+  background-image: url('minimize1.png'); 
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.view_max{
+  background-image: url('maximize1.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.view_min{
+  background-image: url('minimize1.png'); 
+  background-position: 	center center;
+  background-repeat: no-repeat;
+}
+
+.xwikibuttonlink a{
+  background-color: #BED8E8;
+  padding: 2px 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+table.xwikidatatable td.th1{
+    background: url("/polarion/ria/images/backgrounds/table_header.gif") repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #D5D6DA;
+    color: #595959;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0.01em white;
+    height: 24px;
+}
+
+table.xwikidatatable th.th_{
+  border: 0px;
+  height: 1px;
+}
+
+table.xwikidatatable td.th2{
+  border: 0px;
+  background-color: #73A5E0;
+  height: 3px;
+}
+
+table.xwikidatatable{
+  /*border: 1px solid #ddd;*/
+  margin:0px;
+}
+table.xwikidatatable td{
+  padding: 2px 8px;
+  border-bottom: 1px solid #F0F0F0;
+  
+}
+
+table.xwikidatatable .row:hover td {
+	background: #f5f5f5;
+}
+
+/* XTABLE */
+.xwikitable {
+	
+}
+
+.xwikitable th {
+	font-weight: normal;
+    border-bottom: 1px solid #D2D7DA;
+    color: #757575;
+    height: 28px;
+    text-align: left;
+    background: #fff;
+}
+
+.xwikitable td {
+    border-bottom: 1px solid #F0F0F0;
+    cursor: default;
+    height: 32px;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: middle;
+    padding: 0 3px;
+}
+
+.browseinput {
+	border: 1px solid #C9C9C9;
+}
+.xwikipanelcontent {
+    margin: 0 20px;
+}
+.header-th1 {
+    background: url("/polarion/ria/images/backgrounds/table_header.gif") repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #D5D6DA;
+    color: #595959;
+    font-size: 12px !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 0.01em white;
+    vertical-align: middle;
+    padding: 8px 4px;
+}
+
+.xwikiintracontent legend{
+  border: 1px solid #ff0000;
+/*  padding: 1px;*/
+/*margin-left: -10px;*/
+}
+.xwikiintracontent fieldset{
+  border: 1px solid #ddd;
+}
+.xwikiintracontent legend{
+  font-size: 100%;
+  font-weight: bold;
+  cursor: pointer;
+/*  margin-left: -10px;*/
+  /*margin-bottom: 8px;*/
+}
+html > body .xwikiintracontent legend{
+  
+/*  margin-bottom: -20px;
+  */
+}
+.xwikiintracontent fieldset.collapsed{
+  border: none;
+}
+.xwikiintracontent fieldset.collapsed legend{
+  margin-left: 2px;
+}
+.xwikiintracontent fieldset.collapsed div{
+  display: none;
+}
+.xwikiintracontent fieldset.expanded .expands{
+  display: none;
+}
+
+html > body .edittable {
+   width: 100%; 
+}
+
+.splitter {
+ background: #C0E2F5 url(/polarion/ria/images/backgrounds/splitter_back.gif) no-repeat scroll center top;
+ cursor:row-resize;
+ vertical-align: bottom;
+ font-size:0px;
+ height: 5px;
+ width:100%;
+}
+
+div {j2js.css (line 4)
+}
+
+Inherited
+}
+
+
+/*
+---------------------------------------
+Menu
+---------------------------------------
+*/
+
+
+#menuView a{
+  text-decoration: none;
+}
+.topmenuentry{
+  display: inline;
+  padding-right: 1em;
+}
+
+.topmenuentry2{
+  display: inline;
+  padding-right: 4px;
+}
+
+.submenu { 
+  	display: block;
+  	position: absolute;
+    background-color: white;
+    border: 1px solid #DEDEDE;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 2px #E0DEDE;
+    font-size: 12px;
+    width: 240px;
+    z-index: 3000;
+    padding:6px;
+    
+    /* pozicovani */
+    margin: 7px 0 0 18px;
+}
+
+.submenu .submenuitem{
+  display: block;
+  white-space: nowrap;
+}
+
+.submenu .submenuitemover{
+    background-color: #f5f5f5;
+}
+
+.submenu .submenuitem a,
+.submenu .submenuitem span {
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	color: #595959!important;
+	text-decoration: none;
+	height: 30px;
+  	padding-right: 5px;
+  	line-height: 30px;
+}
+
+.submenu .submenuitem img {
+	margin-top: 6px;
+	margin-left: 2px;
+}
+
+.submenu .submenuitem.disabled:hover {
+	background-color: transparent!important;
+}
+
+.submenu .submenuitem.disabled span {
+	color: #b4b4b4!important;
+}
+.submenu .submenuitem.disabled img {
+	filter:alpha(opacity=30);
+	-moz-opacity: 0.3;
+	opacity: 0.3;
+}
+
+
+.submenu.hidden{
+
+  display: none;
+}
+
+
+.rich-toolbar {
+	background: #fff;
+	overflow: hidden;
+	height: 40px;
+	padding-left: 8px;
+	display:block;
+}
+
+.rich-toolbar a {
+    display: block;
+    float: left;
+    height: 20px;
+    padding: 5px 6px;
+    margin: 0 2px 8px 0;
+    margin-right: 2px;
+    border: 1px solid #DEDEDE;
+    border-radius: 2px 2px 2px 2px;
+
+}
+
+.rich-toolbar a:hover {
+	box-shadow: 0 0 2px #e0dede;
+	-moz-box-shadow: 0 0 2px #e0dede;
+	-webkit-box-shadow: 0 0 2px #e0dede;
+	border: 1px solid #cecece;
+}
+/*
+---------------------------------------
+Editors
+---------------------------------------
+*/
+#xwikieditorstitles, #xwikiviewerstitles{
+  display: none;
+} 
+
+/*
+---------------------------------------
+Tabs
+---------------------------------------
+*/
+ul.xwikitabbar{
+  display:block !important;
+  height: 24px !important;
+  border: 0px dotted #ff0000 !important;
+  margin-top: -2px !important; 
+  margin-left: -1px !important; 
+  margin-bottom: 0px !important;
+  padding-left: 0px !important;
+  position: relative !important;
+}
+
+html > body .xwikitabbar li{
+        text-decoration: none !important;
+}
+
+         
+.xwikitabbar li.active{
+	background: transparent;
+	background-image: url('but_botbackh_center.gif');
+	background-repeat: repeat-x;
+	background-position: center top;
+	height: 24px;
+	cursor: pointer;
+
+	font-size: 10px;
+	color: #31659C; /*#004580;*/
+	font-weight: bold;
+	text-decoration: none !important;
+	list-style-type: none !important;
+	float: left;
+	padding-top:3px !important;
+	padding-bottom: 0px !important;
+}
+
+.xwikitabbar li.activeleft{
+	background: transparent;
+	background-image: url('but_botbackh_left.gif');
+	background-repeat: no-repeat;
+	background-position: right top;
+	width: 7px;
+	height: 24px;
+	cursor: pointer;
+	padding-left: 0px !important;
+	list-style-type: none !important;
+	float: left;
+	padding-top:3px !important;
+	padding-bottom: 0px !important;
+
+}
+
+.xwikitabbar li.activeright{
+	background: transparent;
+	background-image: url('but_botbackh_right.gif');
+	background-repeat: no-repeat;
+	background-position: left top;
+	width: 7px;
+	height: 24px;
+	cursor: pointer;
+	padding-right: 0px !important;
+	list-style-type: none !important;
+	float: left;
+	padding-top:3px !important;
+	padding-bottom: 0px !important;
+
+}
+
+.xwikitabbar li.active a,.xwikitabbar li.active a:link,.xwikitabbar li.active a:visited,.xwikitabbar li.active a:hover {
+	background: transparent;
+	width: 51px;
+	height: 24px;
+	cursor: pointer;
+	
+	font-size: 10px;
+	color: #004580;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.xwikitabbar li.noactive{
+	background: transparent;
+	background-image: url('but_botback_center.gif');
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 24px;
+	cursor: pointer;
+	list-style-type: none;
+	float: left;
+	padding-top: 3px;
+	padding-bottom: 0px;	
+	color: #000000;
+
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.xwikitabbar li.noactiveleft{
+	background: transparent;
+	background-image: url('but_botback_left.gif');
+	background-repeat: no-repeat;
+	background-position: right top;
+	width: 7px;
+	height: 24px;
+	cursor: pointer;
+	padding-left: 0px;
+	list-style-type: none;
+	float: left;
+	padding-top:3px;
+	padding-bottom: 0px;
+}
+
+.xwikitabbar li.noactiveright{
+	background: transparent;
+	background-image: url('but_botback_right.gif');
+	background-repeat: no-repeat;
+	background-position: left top;
+	width: 7px;
+	height: 24px;
+	cursor: pointer;
+	padding-right: 1px;
+	list-style-type: none;
+	float: left;
+	padding-top:3px;
+	padding-bottom: 0px;
+}
+
+.xwikitabbar li.noactive a,.xwikitabbar li.noactive a:hover,.xwikitabbar li.noactive a:link,.xwikitabbar li.noactive a:visited {
+	background: transparent;
+	width: 51px;
+	height: 24px;
+	cursor: pointer;
+	
+	font-size: 10px;
+	color: #004580;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+	font-weight: normal;
+	line-height:1.9;
+}
+
+
+/*
+--
+*/
+#xwikicontentedit{
+  border: 1px solid;
+}
+
+/*
+---------------------------------------
+Panels
+---------------------------------------
+*/
+.panels{
+  display: inline;
+  width: 168px;
+  margin: 10px 5px;
+  padding: 0px;
+}
+html > body .panels{
+  margin-top: 0px;
+}
+.panels.left {
+  float: left;
+  clear: left;
+  margin-left: 0px;
+}
+.panels.right {
+  float: right;
+  clear: right;
+  margin-right: 0px;
+}
+.panel, .fakepanel{
+  display: block;
+  margin: 0px 5px 0px;
+  padding: 0px;
+  border: 1px solid;
+}
+.fakepanel{
+  height: 320px;
+  border: 1px dashed #E5E5E5;
+}
+
+#editPanels.panels{
+  width: 70%;
+  float: left;
+  margin-right: 0px;
+}
+#editPanels .panel{
+  width: 100%;
+}
+
+#editPanels2.panels2{
+  width: 200px;
+  float: right;
+  margin-right: 3px;
+}
+
+.portlet{ 
+  position:relative; 
+  display: block; 
+  width: 100%; 
+  border: 0px solid red; 
+  padding: 0px;
+}
+
+.portlettitle{
+  position:relative; 
+  display: block; 
+  height: 16px;
+  width:100%; 
+  border: 0px solid cyan;
+  overflow: hidden;
+}
+
+.portletcontents{
+  position:absolute; 
+  display: block; 
+  width: 100%; 
+  height:100%; 
+  border: 1px solid blue;
+  overflow: auto;
+}
+
+.searchpanel{
+  display: block; 
+  position: absolute;
+  height: 74px;
+  width: 100%;
+  top: 0px;
+  /*  border: 1px solid yellow; */
+}
+
+.spacepanel{
+  display: block; 
+  position: absolute;
+  height: 99%;
+  width: 100%;
+ /* border: 1px solid gren; */
+}
+
+.collapsed .xwikipanelcontents{
+  display: none;
+}
+
+span.panelitem{
+  display: block;
+  font-size: 12px;
+  
+  color: black;
+  padding-left: 4px;
+}
+
+/* this fix the problem that visited link on panel 
+   item is smaller in recently modified
+   maybe recently modified should be replaced with panelitem */
+.recentlymodifiedpanel a:visited{  
+  font-size: 12px;  
+}
+
+span.pitemseparator{
+  display: none;
+}
+
+#panelResize,
+#panelResizeAtt {
+	background: none repeat scroll 0 0 #F5F5F5;
+	border-left: 1px solid #CECECE;
+	border-right: 1px solid #CECECE;
+	padding-left: 1px;
+	cursor:col-resize;
+	width: 1px;
+}
+#panelResizeAtt {
+	
+}
+/*
+----------------------------------
+Rico Acordeon
+----------------------------------
+*/
+#xwikisyntaxhelp {
+  border-top-width:1px; 
+  border-top-style:solid;
+  border: none;
+}
+
+#editPanels.accordionTabContentBox{
+  border: none;
+  overflow: auto;
+  width: 280px;
+}
+
+#editPanels.accordionTabContentBox table{
+  width: 100%;
+  border: none;
+}
+
+.accordionTabContentBox table th{
+  border-bottom: 1px solid #DDD;
+  text-align: center;
+}
+
+#xwikihelptitlesContent h1, #xwikihelptitlesContent h2, #xwikihelptitlesContent h3, #xwikihelptitlesContent h4, #xwikihelptitlesContent h5, #xwikihelptitlesContent h6{
+  margin: 0px;
+  text-align: right;
+}
+
+.accordionTabTitleBar{
+  border: 1px solid #FFF;
+  cursor: default;
+}
+
+
+/*
+-----------------------------
+Misc
+-----------------------------
+*/
+#xwikihelplistsContent ul, #xwikihelplistsContent ol{
+  margin: 0px;
+}
+
+#contentcolumn{
+  width: 100%;
+}
+
+#contentcolumn .large.panel{
+  width: 100%;
+}
+.accordionTabTitleBar tt{
+  font-style: normal;
+  font-size: 150%;
+  font-weight: 100;
+  padding: 0px 4px;
+}
+.accordionTabContentBox div{
+  padding: 8px;
+}
+td.label{
+  text-align: right;
+  padding-right: 4px;
+}
+#xwikiclassproperties, #xwikiobjects{
+  border: 1px solid #DDD !important;
+}
+.center{
+  text-align: center;
+}
+
+.padded{
+  padding: 8px;
+}
+
+#xwikihelpsyntax{
+  border-top: 1px solid #DDD;
+  padding: 2px 6px;
+  margin: -2px 1px 0px;
+}
+
+.editactions{
+  border: none !important;
+  margin-top: 10px;
+  padding: 0px;
+}
+#historycontent td{
+  padding: 8px;
+  line-height:normal;
+}
+#xwikiuserprofile th{
+  background-color: transparent;
+  text-align: right;
+}
+#xwikiuserprofile td, #xwikiuserprofile th{
+  padding: 4px;
+}
+
+#xwikiobjects td{
+  vertical-align: top;
+}
+
+
+html > body .xwikidatatable{
+  width: 100%;
+}
+
+
+.xwikiuserblog .rssfeed {
+  width: 200px;
+  float: right;
+  border: 2px solid;
+}
+
+
+
+
+/* ################ DEM ################ */
+
+#overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	filter:alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	}
+	
+	.clearfix:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+	}
+
+
+#windowContainer{
+	position: relative;
+	display: block;
+	width: 320px;
+	height: 210px;
+	background: #fff;
+}
+
+
+
+td.popupwindowheaderNew {
+	background-image:url(images/popup_window_title.gif);
+	background-repeat: repeat-x;
+	background-color: #6CB1D9;
+	vertical-align: middle;
+	width: 574px;
+	
+	font-size: 11px;
+	color: #fff;
+	font-weight: bold;
+	padding-left: 4px;
+	text-align: left;
+	height: 20px;
+}
+
+td.popupwindowheaderNewx {
+	background-image:url(images/popup_window_title.gif);
+	background-repeat: repeat-x;
+	background-color: #6CB1D9;
+	width: 14px;
+	
+	font-size: 11px;
+	font-weight: bold;
+	height: 20px;
+	
+}
+
+td.popupwindowheaderNewx1 {
+	background-image:url(images/popup_window_title.gif);
+	background-repeat: repeat-x;
+	background-color: #6CB1D9;
+	width: 14px;
+	
+	font-size: 11px;
+	font-weight: bold;
+	height: 20px;
+	
+}
+
+
+.popupwindow1 {
+	background: #5D82A6;
+	
+	font-size: 22px;
+	color: #FFFFFF;
+        vertical-align: middle;
+	height: 38px;	
+	line-height: 12pt;
+}
+
+.popupwindow2 {
+	background-repeat: repeat-x;
+        background-color:#778CA5; 
+	
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFFFFF;
+	height: 11px;
+	width: 11px;	
+}
+
+.popupwindow3 {
+        background-color:#5D86A6; 
+        vertical-align: middle;
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	height: 55px;	
+}
+
+.popupwindow4 {
+        background-color:#5D86A6; 
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	height: 45px;
+        cursor: pointer;	
+}
+
+.popupwindow5 {
+        background-color:#5D86A6; 
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 14px;
+	color: #FFFFFF;
+	height: 45px;
+	
+}
+
+.popupwindow6 {
+        background-color:#5D86A6; 
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	height: 251px;
+	
+}
+
+.popupwindow7 {
+        background-color:#5D82A6; 
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: bold;
+	color: red;	
+}
+
+.popupwindow8 {
+        background-color:#EDF5FE; 
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	
+}
+
+.popupwindow9 {
+        background-color:#EDF5FE; 
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	color: #5D82A6;
+	
+}
+
+.popupwindow10 {
+        background-color:#DDE6F1; 
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: bold;
+	color: #5D82A6;
+	
+}
+
+.popupwindow11 {
+	background-color:#FFFFFF; 
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: bold;
+	color: #5D82A6;
+}
+
+.popupwindow12 {
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: bold;
+	color: #5D82A6;	
+}
+
+.popupwindow13 {
+    background-color:#FFFFFF; 
+    vertical-align: middle;
+    text-align: left;
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: normal;
+	color: red;		
+	padding:2px;
+	border-color: #5D82A6;
+    border-width: 1px;
+    border-style: solid;
+}
+
+a.popupwindowA:visited
+{
+	cursor: pointer;
+	text-decoration: none;
+	list-style-type: none;
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+a.popupwindowA:link	
+{
+	color: #FFFFFF;
+}
+
+a.popupwindowA {
+	cursor: pointer;
+	text-decoration: none;
+	list-style-type: none;
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFFFFF;	
+}
+
+span.popupwindowA {
+	cursor: pointer;
+	text-decoration: none;
+	list-style-type: none;
+        vertical-align: middle;
+	font-family: Verdana;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFFFFF;	
+}
+
+
+
+
+td.popupwindowheader {
+	background-image:url(panel.png);
+	background-repeat: repeat-x;
+	width: 300px;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #fff;
+	font-weight: bold;
+	padding-left: 4px;
+	text-align: left;
+}
+
+td.popupwindowheaderx {
+	background-image:url(panel.png);
+	background-repeat: repeat-x;
+	width: 10px;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #fff;
+	font-weight: bold;
+	height: 20px;
+}
+
+.imgA{
+	border: 0;
+	cursor: pointer;
+}
+
+a.linkButton{
+ 	width: 45px !important;
+	height: 16px !important;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 10px;
+	font-family:Verdana;
+	text-decoration: none;
+	color: #004580;
+	background-color: #DFF0F8;
+	border-bottom: 1px solid #7F9DB9;
+	border-left: 1px solid #7F9DB9;
+	border-right: 1px solid #7F9DB9;
+	border-top: 1px solid #7F9DB9;
+	padding: 0px;
+}
+
+.com_polarion_portal_js_internal_Header_SearchButton {
+	background:transparent url(btn_back.gif) repeat-x scroll left top;
+	border:1px solid #C5C5C5;
+	border-radius: 2px 2px 2px 2px;
+	color:#595959;
+	cursor:pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:10px;
+	height: 20px;
+	margin-left:2px;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-right:2px;
+	white-space:nowrap;
+	line-height:normal;
+}
+
+.com_polarion_portal_js_internal_Header_ReindexButton {
+	background:transparent url(btn_back.gif) repeat-x scroll left top;
+	border:1px solid #7F9DB9;
+	color:#004580;
+	cursor:pointer;
+	font-family:Verdana;
+	font-size:10px;
+	height:16px;
+	margin-left:2px;
+	margin-right:4px;
+	white-space:nowrap;
+}
+
+.toggle .com_polarion_reina_web_js_widgets_JSPopupButton_Button{
+	background: url("/polarion/ria/images/backgrounds/btnToggleBg.png") repeat-x scroll left top transparent;
+	border: 1px solid #B4B4B4 !important;
+}
+
+.com_polarion_reina_web_js_widgets_JSPopupButton_Button {
+	color:#595959;
+	cursor:pointer;
+	height:28px;
+	border: 1px solid #DEDEDE;
+ 	border-collapse: separate;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.bt-noborder {
+	border-color: transparent;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	
+}
+
+.com_polarion_reina_web_js_widgets_JSPopupButton_Button:hover {
+	box-shadow: 0 0 2px #e0dede;
+	-moz-box-shadow: 0 0 2px #e0dede;
+	-webkit-box-shadow: 0 0 2px #e0dede;
+	border: 1px solid #cecece;
+}
+
+.disab .com_polarion_reina_web_js_widgets_JSPopupButton_Button:hover {
+	box-shadow: 0 0 0;
+	-moz-box-shadow: 0 0 0;
+	-webkit-box-shadow: 0 0 0;
+	border: 1px solid #DEDEDE;
+}
+.disab .bt-noborder:hover {
+	border-color: transparent;
+}
+
+.com_polarion_reina_web_js_widgets_JSPopupButton_Button.active {
+    background: url("/polarion/ria/images/backgrounds/btnToggleBg.png") repeat-x scroll left top transparent;
+    border: 1px solid #B4B4B4;
+
+}
+
+.com_polarion_reina_web_js_widgets_JSPopupButton_Button td {
+	font-family: arial;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.com_polarion_reina_web_js_widgets_JSPopupButton_Button img {
+	vertical-align: middle;	
+}
+
+.bt-icon {
+	width:16px;
+	padding-left: 6px;
+	padding-right: 3px;
+}
+.bt-icon-label {    
+    padding-right: 6px;
+    text-shadow: 1px 1px 0.01em white;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.bt-icon-label {
+    padding-right: 6px;
+    text-align: left;
+    text-shadow: 1px 1px 0.01em white;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.bt-label {
+    padding-right: 6px;
+    padding-left: 6px;
+    text-shadow: 1px 1px 0.01em white;
+    white-space: nowrap;
+    width: 100%;
+    vertical-align: middle;
+    font-size:12px;
+}
+
+.bt-arrow {
+	width:16px;
+	padding-left: 3px;
+	padding-right: 6px;
+	text-align: left; 
+	vertical-align: middle;
+}
+
+.bt-arrow-label {
+    padding-right: 3px;
+    padding-left: 6px;
+    text-shadow: 1px 1px 0.01em white;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.loadingAjax {
+    font-weight: bold;
+    background-image: url(progress.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 42px;
+    height: 42px;
+}
+
+.commentheader
+{
+  font-size: 11px;
+  font-family: Verdana; 
+  color: #000000;
+
+}
+
+.commentdelete
+{
+  font-size: 11px;
+  font-family: Verdana; 
+  color: #000000;
+
+}
+
+a.commentremove
+{
+  font-size: 11px;
+  font-family: Verdana; 
+  color: #000000;
+
+}
+
+.commentcontent
+{
+  font-size: 11px;
+  font-family: Verdana; 
+  color: #000000;
+
+}
+
+.attachTD
+{
+  color: #000000;
+  border-bottom: 1px solid #C0DAEA;
+font-size: 13px;
+}
+
+.normalTD
+{
+   font-size: 13px;
+  color: #000000;
+
+}
+
+a.attachTDLink
+{
+  color: #5D82A6;
+font-size: 13px;
+}
+
+.disab
+{
+ height: 20px;
+}
+
+.disab .bt-label,
+.disab .bt-icon-label {
+	 color: #C9D1D7!important;
+}
+
+.disab img {
+	filter:alpha(opacity=30);
+	 -moz-opacity:0.3;
+	 -khtml-opacity: 0.3;
+	 opacity: 0.3;
+}
+.enab
+{
+ cursor: pointer;
+ z-index: 5;
+}
+
+.disabButton
+{ height: 20px;
+}
+
+.enabButton
+{
+ cursor: pointer;
+ z-index: 5;
+}
+
+.wikiSyntaxButton{
+  color:#595959;
+	cursor:pointer;
+	height:28px;
+	border: 1px solid #DEDEDE;
+ 	-moz-border-radius: 2px;
+ 	border-collapse: separate;
+	border-radius: 2px;
+  font-family: arial;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.wikiSyntaxButtonToggle{
+  color:#595959;
+  background: url("/polarion/ria/images/backgrounds/btnToggleBg.png") repeat-x scroll left top transparent;
+	cursor:pointer;
+	height:28px;
+	border: 1px solid #B4B4B4;
+ 	-moz-border-radius: 2px;
+ 	-webkit-border-radius: 2px;
+ 	border-collapse: separate;
+	border-radius: 2px;
+  font-family: arial;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.wikiSyntaxButton:hover {
+	box-shadow: 0 0 2px #e0dede;
+	-moz-box-shadow: 0 0 2px #e0dede;
+	-webkit-box-shadow: 0 0 2px #e0dede;
+	border: 1px solid #cecece;
+}
+
+.disab .wikiSyntaxButtonToggle:hover,
+.disab .wikiSyntaxButton:hover {
+	box-shadow: 0 0 0;
+	-moz-box-shadow: 0 0 0;
+	-webkit-box-shadow: 0 0 0;
+	border: 1px solid #DEDEDE;
+}
+
+
+.disable{
+ cursor: normal;
+}
+
+.enable{
+ cursor: pointer;
+}
+
+
+b.attachUpd
+{
+  color: #000000;
+  font-weight: normal;
+}
+
+
+
+.com_item {
+
+	background:transparent url(preview_table_node.gif) repeat-x scroll left top;
+	color:#004580;
+	cursor:pointer;
+	font-family:Verdana;
+	font-size:10px;
+	height:16px;
+	margin-left:2px;
+	margin-right:4px;
+	white-space:nowrap;
+}
+
+.expand_close {
+	background-image: url('expand.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	height:9px;
+	width: 9px;
+	border: 0px;
+}
+.expand_open {
+	background-image: url('expand_min.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	height:9px;
+	width: 9px;
+	border: 0px;
+}
+
+.refresh_splitter {
+	float:left;
+	width:2px;
+	display:block;
+}
+
+#refresh_image {
+        cursor: pointer;	
+}
+
+.spaceindex_info
+{
+        background: #74A7E1;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:12px;
+	height:16px;
+	font-weight: bold;
+        vertical-align: top;	
+}
+.tableindex_info
+{
+border-bottom: 2px solid #74A7E1;
+width: 100px; 
+background: #E7F0FA;
+margin-bottom: 0px;
+
+}
+
+html>body .tableindex_info{
+width: 100%; 
+}
+
+#SpaceIndex_tab {
+	padding-right:0px;
+}
+
+html>body #SpaceIndex_tab{
+	padding-right:0px ;
+}
+.spaceindex_title
+{
+	color: #000000;
+	font-family:Verdana;
+	font-size:11px;
+	height:16px;
+        vertical-align: middle;	
+}
+
+.wifooter
+{
+  color: #000000;
+  font-family:Verdana;
+  font-size:11px;
+  font-weight: normal;
+  text-decoration: none;
+  vertical-align: top;
+
+}
+
+.wifooterR
+{
+  color: #000000;
+  font-family:Verdana;
+  font-size:11px;
+  font-weight: normal;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.wifooterBg {
+  height: 18px;
+  background-image:url('wifooter_bg.gif');
+  background-repeat: repeat-x;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.sql-keyword
+{
+ color: blue;
+ font-weight: bold;
+}
+
+.sql-comment
+{
+ color: #666666;
+ font-style: italic;
+}
+
+.sql-object
+{
+ color: red;
+ font-weight: bold;
+}
+
+.sql-quote
+{
+ color: green;
+}
+
+
+#coverFrame
+{
+   font-family:Verdana;
+   font-size:11px;
+   height:100%;
+   left:0;
+   position:absolute;
+   top:0;
+   width:100%;
+   FILTER: alpha(opacity=50);
+   z-index:800;
+  border: 0;
+}
+
+#createnewpagewindow{
+	position: absolute;
+	z-index: 8065;
+	text-align: center;
+	margin: 0 auto;
+	border: 0px solid #069;
+	padding:1px;
+	width: 502px;
+	height: 412px;
+	background-color: #fff;
+}
+
+#createnewpagewindowFF{
+	position: absolute;
+	z-index: 8065;
+	text-align: center;
+	margin: 0 auto;
+	border: 0px solid #069;
+	padding:1px;
+	width: 502px;
+	height: 402px;
+	background-color: #fff;
+}
+
+.com_polarion_reina_web_js_widgets_WindowCover_Css
+{
+    height:1000%;
+    left:0px;
+    opacity:0;
+    position:relative;
+    width:100%;
+    z-index:5025;
+}
+
+div.com_polarion_reina_web_js_widgets_JSPopupWindow_Css
+{
+   font-family: Verdana;
+   font-size: 11px;
+   height: 392px;
+   width: 502px;
+}
+
+.mandatory
+{
+  color: red;
+  text-align: center;	
+  vertical-align: middle;
+  background-color: #FFFFFF; 
+}
+
+.smallspace
+{
+  font-size: 5px;
+}
+
+/* Wiki compare */
+.row-number {
+	width: 7px;
+	color: #505050; 
+	height: 15px;!important;
+	font-family: Arial;
+	font-size:11px;
+	background: #f5f5f5;
+	padding-left: 3px;
+	padding-right: 3px;
+	border-bottom: 0;
+	border-right: 1px solid #D5D6DA;
+}
+
+/* Rich text */
+.rich_wiki_editor {
+	margin-bottom: 8px;
+	padding: 0 8px 8px;
+}
+
+/* Hide tools bar */
+#panelSwitcher {
+	height: 17px;
+	text-align:center;
+	cursor: pointer;
+	z-index: 100;
+	top: 0;
+	left: 50%;
+	margin-left: -80px;
+	width: 80px;
+	position: absolute;
+}
+
+#panelSwitcher .handle {
+	display: block;
+		
+	font-size: 10px;	
+	text-align: center;
+	line-height: 11px;
+	padding: 3px 0 1px 0;
+	color: #a4a4a4;
+		
+	text-shadow: 1px 1px 0 #fff;
+	background: #f5f5f5;
+	border: 1px solid #DEDEDE;
+	border-top: 0;
+		
+	-moz-border-radius: 0 0 2px 2px;
+	-webkit-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+}

@@ -1,0 +1,384 @@
+#macro (formatRepoFileLink $path)
+	$svnUrlTool.getDownloadUrl($path)
+#end
+
+
+#if($canRead)
+
+  <table class="toolbar_off" width="100%"  cellpadding="0" cellspacing="0">
+    <tr>
+    
+      #if($actionName)
+        <td height="100%" style="padding-top:2px;padding-left:5px;">
+        #set($actionUrl = $renderResponse.createActionURL())
+        $actionUrl.setParameter("$actionName","$actionName")
+        #if($canChange)
+          <form  name="actionForm" action="$actionUrl" method="post">
+            <input type="submit" value="$actionTitle" class="actionButtonBig" />
+          </form>    			
+        #else
+          <input type="button" value="$actionTitle" disabled  class="actionButtonBig" />
+        #end
+        </td>      
+      #end
+        <td width="100%">      
+        </td>
+    </tr>
+  </table>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+	#if($canChange_x)
+	<tr>
+		<td>
+			#actionBar()
+				<table cellpadding="0" cellspacing="0" height="100%">
+					<tr>
+			           <td class="pl">
+                            #set($actionURL = $jslink)
+                            #addPortletAction($actionURL)
+                            #addLinkLayout($actionURL "clear")			
+                            #if($currentProjectId)
+                            	#set($actionURL = $actionURL.addQueryData("currentProject","$!currentProjectId"))
+                            #end
+							#set($actionURL = $actionURL.addQueryData("eventSubmit_doReload","eventSubmit_doReload"))
+							#action($actionURL false false "Clear Enumerations Cache")
+        	        	</td>
+						<td width="100%"></td>
+						<td class="systemActions">
+    						#allowCustomize($allowCustomize)
+    						#if($allowCustomize)
+                    			<a href="$jslink.getAction('controls.Customize', $portlet)" title="$localization.getValue('administration.workItems.link.customize')">
+                    				<img src="${clink}images/polarion/control/customize.gif" alt="$localization.getValue('administration.workItems.link.customize')" border="0" align="absmiddle">
+                    			</a>
+							#end
+						</td>
+                		<td class="systemActions" nowrap="nowrap">
+                			#contextHelp("pref_enumerations")
+                		</td>
+					</tr>
+				</table>
+			#actionBarEnd()
+		</td>
+	</tr>
+	#end
+	#if($message)
+		<tr>
+			<td style="padding:10">
+				$!message
+				<br/>
+		</td>
+	</tr>
+	#end
+	<tr>
+		<td style="padding: 10px;">
+			#panel("$configurationsTitle" "$localization.getValue($configurationsTitle)" false true true false)
+       			<table class="list" width="100%" cellpadding="0" cellspacing="0" rules="all">
+					<tr>
+						<th>$localization.getValue("definition.workItemType")</th>
+						<th>$localization.getValue("definition.name")</th>
+						<th>$localization.getValue("definition.scope")</th>
+						<th>$localization.getValue("definition.actions")</th>
+				 	</tr>
+					#set($genericEnumCfgs = false)
+					#set($genericEnumCfgs = $enumConfigs.get(null))
+					#if($genericEnumCfgs)
+						#set($first = true)
+					 	#foreach($enumConfig in $genericEnumCfgs)
+							#if($first)
+						      #set($first = false)
+						      #set($rowClass = "first")
+							#else
+						      #set($first = true)
+						      #set($rowClass = "second")
+							#end
+						 	<tr class="$rowClass" onmouseover="this.name = '$rowClass';selectRow(this)" onmouseout="deselectRow(this)">
+						 		<td>
+						 		#if(!$multi) 
+						 			#if($enumConfig.isCustomFields())
+						 				- $localization.getValue('administration.workItems.allTypes') -
+						 			#else
+						 				- $localization.getValue('administration.workItems.allWorkItems') -
+						 			#end
+						 		#end
+						 		</td>
+						 		<td><a target="_blank" href="#formatRepoFileLink($enumConfig.getFile())">$enumConfig.getFileName()</a></td>
+								#if($enumConfig.isProjectLevel())
+									<td>$localization.getValue('administration.workItems.projectConfiguration')</td>
+								#else
+									<td>$localization.getValue('administration.workItems.globalConfiguration')</td>
+								#end
+								<td>
+									
+									#if($canChange && ($enumConfig.isProjectLevel() || !$currentProjectId))
+										#if($workflow)
+											<a href="javascript:top.navigateFromFrame('page:workitems/workflowdesigner')" >$localization.getValue('definition.edit')</a>	
+										#else
+											#if($enumConfig.isEnum())	
+												<a href="javascript:top.navigateFromFrame('page:workitems/enumdesigner?enumUrl=$enumConfig.getFileName()')" >$localization.getValue('definition.edit')</a>
+											#elseif($enumConfig.isCustomFields())
+												<a href="javascript:top.navigateFromFrame('page:workitems/customfieldsdesigner')" >$localization.getValue('definition.edit')</a>
+											#else
+												<a href="javascript:showInPopUp('$enumConfig.getFileName()')" >$localization.getValue('definition.edit')</a>
+											#end
+										#end
+										&nbsp;&nbsp;
+					        			#set($deleteUrl = $renderResponse.createActionURL())
+        								$deleteUrl.setParameter("doRemove","doRemove")
+        								$deleteUrl.setParameter("enum-file",$enumConfig.getFileName())
+										<a href="$deleteUrl">$localization.getValue('definition.remove')</a>
+										
+									#end								
+								</td>
+					 		</tr>
+					 		#if($canChange && $workflow && !$enumConfig.isProjectLevel() && $currentProjectId && $genericEnumCfgs.size() == 1)
+						 		<tr class="$rowClass" onmouseover="this.name = '$rowClass';selectRow(this)" onmouseout="deselectRow(this)">
+							 		<td></td>
+							 		<td></td>
+									<td>$localization.getValue('administration.workItems.projectConfiguration')</td>
+									<td>
+										#if($canChange)
+											<a href="javascript:top.navigateFromFrame('page:workitems/workflowdesigner')" >$localization.getValue('definition.create')</a>	
+										#end								
+									</td>
+						 		</tr>
+					 		#end
+					 		#if($canChange && !$workflow && !$enumConfig.isProjectLevel() && $currentProjectId && $enumConfig.isEnum())
+						 		<tr class="$rowClass" onmouseover="this.name = '$rowClass';selectRow(this)" onmouseout="deselectRow(this)">
+							 		<td></td>
+							 		<td>$enumConfig.getFileName()</td>
+									<td>$localization.getValue('administration.workItems.projectConfiguration')</td>
+									<td>
+										#if($canChange)
+											<a href="javascript:top.navigateFromFrame('page:workitems/enumdesigner?enumUrl=$enumConfig.getFileName()')" >$localization.getValue('definition.create')</a>	
+										#end								
+									</td>
+						 		</tr>
+					 		#end
+					
+						#end
+						
+					#else
+						#if($workflow && !$currentProjectId)
+							#set($first = true)
+							#if($first)
+						      #set($first = false)
+						      #set($rowClass = "first")
+							#else
+						      #set($first = true)
+						      #set($rowClass = "second")
+							#end
+						 	<tr class="$rowClass" onmouseover="this.name = '$rowClass';selectRow(this)" onmouseout="deselectRow(this)">
+						 		<td>#if(!$multi) - All Work Items - #end</td>
+						 		<td>workflow.xml</td>
+									<td>$localization.getValue('administration.workItems.globalConfiguration')</td>
+								<td>
+									
+									#if($canChange)
+										
+										<a href="javascript:top.navigateFromFrame('page:workitems/workflowdesigner')" >$localization.getValue('definition.create') </a>	
+										
+									#end								
+								</td>
+					 		</tr>
+					 		
+						#end
+					#end
+
+
+					
+				 	#foreach($type in $types)
+					 	#if($multi)
+					 	<tr class="first">
+				 		    <td colspan="4" style="color:#000000;font-family: Arial, Helvetica, sans-serif;font-size: 8pt;font-weight:bold;padding-top:25px;border-top:1px solid #F0F0F0;">
+								<span title="$localization.getValue('definition.id')$localization.getValue('definition.colon') $type.getId()">$type.getName()</span>
+							</td>
+				 		</tr>
+				 		#end
+						#set($enumCfgs = false)
+						#set($enumCfgs = $enumConfigs.get($type))
+						#if($enumCfgs && !$enumCfgs.isEmpty())
+						    #set($first = false)
+    					 	#foreach($enumConfig in $enumCfgs)
+								#if($first)
+							      #set($first = false)
+							      #set($rowClass = "first")
+								#else
+							      #set($first = true)
+							      #set($rowClass = "second")
+								#end
+    						 	<tr class="$rowClass" onmouseover="this.name = '$rowClass';selectRow(this)" onmouseout="this.name = '$rowClass';deselectRow(this)">
+						 		    <td>
+						 		    	#if(!$multi) $type.name #end
+						 		    </td>
+    						 		<td><a target="_blank" href="#formatRepoFileLink($enumConfig.getFile())">$enumConfig.getFileName()</a></td>
+									#if($enumConfig.isProjectLevel())
+										<td>$localization.getValue('administration.workItems.projectConfiguration')</td>
+									#else
+										<td>$localization.getValue('administration.workItems.globalConfiguration')</td>
+									#end
+									<td>
+										#if($canChange && ($enumConfig.isProjectLevel() || !$currentProjectId))
+											#if($workflow)
+											<a href="javascript:top.navigateFromFrame('page:workitems/workflowdesigner?type_id=$type.getId()')" >$localization.getValue('definition.edit')</a>	
+											#else
+												#if($enumConfig.isEnum())	
+													<a href="javascript:top.navigateFromFrame('page:workitems/enumdesigner?type_id=$type.getId()&enumUrl=$enumConfig.getFileName()')" >$localization.getValue('definition.edit')</a>
+												#elseif($enumConfig.isCustomFields())
+													<a href="javascript:top.navigateFromFrame('page:workitems/customfieldsdesigner?type_id=$type.getId()')" >$localization.getValue('definition.edit')</a>
+												#else
+													<a href="javascript:showInPopUp('$enumConfig.getFileName()')" >$localization.getValue('definition.edit')</a>
+												#end
+											#end
+											&nbsp;&nbsp;
+											#set($deleteUrl = $renderResponse.createActionURL())
+	        								$deleteUrl.setParameter("doRemove","doRemove")
+	        								$deleteUrl.setParameter("enum-file",$enumConfig.getFileName())
+											<a href="$deleteUrl">$localization.getValue('definition.remove')</a> 
+											
+										#end							
+									</td>
+    					 		</tr>
+    					 		#if($canChange && $workflow && !$enumConfig.isProjectLevel() && $currentProjectId && $genericEnumCfgs.size() == 1)
+	    					 		<tr class="$rowClass" onmouseover="this.name = '$rowClass';selectRow(this)" onmouseout="this.name = '$rowClass';deselectRow(this)">
+							 		    <td>
+							 		    	#if(!$multi) $type.name #end
+							 		    </td>
+	    						 		<td></td>
+										<TD>$localization.getValue('administration.workItems.projectConfiguration')</td>
+										<td>
+											#if($canChange)
+												<a href="javascript:top.navigateFromFrame('page:workitems/workflowdesigner?type_id=$type.getId()')" >$localization.getValue('definition.create')</a>	
+											#end							
+										</td>
+	    					 		</tr>
+    					 		#end
+    					 		#if($canChange && !$workflow && !$enumConfig.isProjectLevel() && $currentProjectId && $enumConfig.isEnum())
+	    					 		<tr class="$rowClass" onmouseover="this.name = '$rowClass';selectRow(this)" onmouseout="this.name = '$rowClass';deselectRow(this)">
+							 		    <td>
+							 		    	
+							 		    </td>
+	    						 		<td>$enumConfig.getFileName()</td>
+										<TD>$localization.getValue('administration.workItems.projectConfiguration')</td>
+										<td>
+											#if($canChange)
+												<a href="javascript:top.navigateFromFrame('page:workitems/enumdesigner?type_id=$type.getId()&enumUrl=$enumConfig.getFileName()')" >$localization.getValue('definition.create')</a>	
+											#end							
+										</td>
+	    					 		</tr>
+    					 		#end
+							#end
+							
+						#else
+							#if($multi)
+									#if($workflow)
+									 	<tr class="second">
+								 		    <td colspan="3" style="font-style: italic;border-left: 0px solid black; padding-left: 25px">$localization.getValue('administration.workItems.createNewConfiguration')</td>
+							 				<td>
+							 				#if($workflow && $canChange)
+												<a href="javascript:top.navigateFromFrame('page:workitems/workflowdesigner?type_id=$type.getId()')" >$localization.getValue('definition.create')</a>	
+											#end
+											</td>
+							        	</tr>
+							 		#else
+								 		<tr class="second">
+								 		    <td colspan="4" style="font-style: italic;border-left: 0px solid black; padding-left: 25px">- $localization.getValue('administration.workItems.noSpecificConfiguration') -</td>
+								 		</tr>
+							 		#end
+								 		
+					 		#end
+						#end
+					#end
+				</table> 
+	        #endPanel()
+		</td>
+	</tr>
+	#if($canChange)
+        <tr>
+        	<td style="padding: 10px">
+       			#if($currentProjectId) 
+				    #set($title = "$localization.getValue('administration.workItems.uploadNewProject') $localization.getValue($uploadConfigurationTitle)")
+       			#else 
+				    #set($title = "$localization.getValue('administration.workItems.uploadNewGlobal') $localization.getValue($uploadConfigurationTitle)")
+       			#end
+   				#panel("Configuration" $title false true true false)
+					<div style="width: 100%; height: 100%; padding: 5px">
+                    $localization.getValue($uploadDescription)
+        			#set($actionUrl = $renderResponse.createActionURL())
+        			$actionUrl.setParameter("doUpload","doUpload")
+        			<form enctype="multipart/form-data" name="importForm" action="$actionUrl" method="post">
+						<table>
+        					<tr>
+        						<td class="featureLabel"><label for="file" > $localization.getValue('definition.file')$localization.getValue('definition.colon') </label></td>
+        						<td><input id="file" size=100 type="file" name="file" /></td>
+        					</tr>
+							<tr>
+								<td align="left" colspan="2" style="padding-top:10">
+									<input type="submit" name="doUpload" value="$localization.getValue('definition.upload')" class="actionButtonSmall"/>
+								</td>
+							</tr>
+						</table>
+        			</form>
+					</div>
+					</div>
+        		#endPanel()
+        	</td>
+        </tr>
+        #if(!$workflow && $canChange)
+        <tr>
+        	<td  style="padding: 10px"> 
+			#if($configurationsTitle.equals("administration.workItems.customFieldDefinitions"))
+        	<input type="button" onClick="javascript:top.navigateFromFrame('page:workitems/customfieldsdesigner?newConfig=true')" name="" value="$localization.getValue('administration.workItems.createNewConfiguration')" class="actionButtonMega"/>
+			#elseif($configurationsTitle.equals("administration.workItems.enumerations"))
+        	<input type="button" onClick="javascript:top.navigateFromFrame('page:workitems/enumdesigner?newConfig=true')" name="" value="$localization.getValue('administration.workItems.createNewConfiguration')" class="actionButtonMega"/>
+			#else
+			<input type="button" onClick="showInPopUp('newConfig')" name="" value="$localization.getValue('administration.workItems.createNewConfiguration')" class="actionButtonMega"/>
+			#end
+			
+			
+			</td>
+        </tr>
+        #end
+        <tr>
+        	<td id="confContainer" style="padding: 10px">
+        	</td>
+        </tr>
+        	
+	#end
+</table>
+<script>
+function showInPopUp(id){
+    var container = document.getElementById("confContainer");
+    var element = document.getElementById(id);
+    if (container != null && element != null){
+		container.innerHTML = element.innerHTML;
+		if(id != "newConfig"){
+			window.scrollTo(0,3000);
+		}
+	}    
+}
+function pasteDefault(){
+	var area = document.getElementById("newArea");
+	if(area.value.length > 0){
+		if(!confirm("$localization.getValue('administration.workItems.message.yourCurrentContentWillBeReplaced')")){
+			return;
+		}
+	}
+	
+	#if($enums)
+		document.getElementById("newArea").value = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<enumeration>\n<option id=\"\" name=\"\" description=\"\" iconURL=\"\" default=\"\" color=\"\" sortOrder=\"\"/>\n</enumeration>";
+	#elseif($calcFields)
+ 		document.getElementById("newArea").value = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<calculated-fields>\n\n  <calculated-field id=\"\">\n    <sum>\n      <field></field>\n      <childField></childField>\n    </sum>\n  </calculated-field>\n\n</calculated-fields>";
+	#else
+		document.getElementById("newArea").value = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<fields>\n<field id=\"\" type=\"\" name=\"\" description=\"\" />\n</fields>";
+	#end
+	
+}
+
+#if($lastFileName)
+	setTimeout(function (){showInPopUp("$lastFileName");}, 100) ;
+#end
+
+</script>
+#else
+	$localization.getValue('administration.workItems.cannotReadSecurityRestriction')
+#end

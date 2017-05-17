@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20150325125554</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.macros}
+{section:width=100%}
+{column}
+1 Master Specifications 
+Master Specifications are Documents that contain all component specifications of products in a product line, such as feature requirements, test cases, etc.
+
+This space provides pre-defined Documents that you can use to specify requirements and test cases.
+
+1.1.1 OBJECTIVE
+Develop a validated set of requirement Documents that meet the stakeholders’ needs. Connect specifications to Features through the Restrictions editor using the special restrictions syntax. (See User Guide: Managing Variants in Help for more information.)
+
+1.1.1  INPUT
+
+{portallink:/wiki/Features/Feature%20Model | addcontext=yes}Feature Model{portallink} - The Requirements from Master Specifications are constrained to Features: a Requirement item may only be relevant when a specific Feature is included in a Variant.
+
+Add:
+* Applicable statutes, regulations, and policies 
+* Constraints (required legacy system interfaces, hardware/software platform, etc.) 
+* Restrictions to connect Requirements and Test Cases from Master Specifications to Features
+
+1.1.1 OUTPUT
+Requirements and Test Specification Documents that collect information for all product variants.
+
+{pages:space=Master Specifications|query=type:(req_specification generic)|display=list|fields=pagelink}
+
+1.1.1 REVIEW
+{portallink:/wiki/Reports/Items%20By%20Status | addcontext=yes} System Requirements by Status {portallink} - Basic statistics about System Requirements
+
+{portallink:/wiki/Reports/Items%20By%20Category | addcontext=yes} Requirements by Category Report {portallink} - Check number of Requirements by Category
+
+{portallink:/wiki/Reports/Requirements%20Test%20Coverage | addcontext=yes} Requirements Test Coverage  Report{portallink} - Check if Requirements are covered by Test Cases. 
+
+{portallink:/wiki/Reports/Requirements%20Traceability%20Report | addcontext=yes} Requirements Traceability Report{portallink} - Display a Traceability table that shows which Requirements are verified by which Test Cases.
+
+{column}
+{column:width=2}
+{column}
+{column:width=350}
+
+{regiontitle}Create New or Import{regiontitle}
+{style:type=div|class=regiondescription}
+Create a new specification Document, or import a Microsoft Word .docx document and configure what elements should be tracked as Work Items.
+{style}
+
+<a href="javascript:createNewArtifact('$page.space.projectId', 'Master Specifications', true, true, true, true, true, true, true);"/>
+<img src="/polarion/ria/images/wiki/NewDocument.png">
+</a>
+
+{regiontitle}Workflow{regiontitle}
+{table:header=no|border=no}
+{image:requirements_specification_workflow.png|350}
+{table}
+
+{column}
+{section}]]></content>
+</wiki-page>

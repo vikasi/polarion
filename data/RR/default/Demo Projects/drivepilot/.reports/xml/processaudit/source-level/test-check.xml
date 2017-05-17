@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="drivepilot" id="test-check" tag="20130523_1550">
+    <structure-element id="root" provider="root" type="root">
+        <violation-fact-element category="" description="" id="MovePeopleAround:com.polarion.demo" provider="SensorTest" rule="MovePeopleAround" severity="" tag="23-05-13" type="SensorTestViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="package">
+                    <value>com.polarion.demo</value>
+                </property>
+                <property id="source prefix">
+                    <value>src/main/java</value>
+                </property>
+                <property id="not violating authors count">
+                    <value>1</value>
+                </property>
+                <property id="is multi-repository">
+                    <value>false</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="MovePeopleAround:com.polarion.demo.reuse" provider="SensorTest" rule="MovePeopleAround" severity="" tag="23-05-13" type="SensorTestViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="package">
+                    <value>com.polarion.demo.reuse</value>
+                </property>
+                <property id="source prefix">
+                    <value>src/main/java</value>
+                </property>
+                <property id="not violating authors count">
+                    <value>1</value>
+                </property>
+                <property id="is multi-repository">
+                    <value>false</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <value-fact-element id="MovePeopleAround" provider="SensorTest" type="execution">
+            <value/>
+            <properties>
+                <property id="has-source-directories">
+                    <value>true</value>
+                </property>
+                <property id="totalProcessedPackages">
+                    <value>2</value>
+                </property>
+                <property id="violationsCount">
+                    <value>2</value>
+                </property>
+            </properties>
+        </value-fact-element>
+    </structure-element>
+</factbase>

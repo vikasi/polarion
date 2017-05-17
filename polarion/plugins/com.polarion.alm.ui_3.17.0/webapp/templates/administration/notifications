@@ -1,0 +1,163 @@
+1 Notification Events and Targets
+
+{notifications}
+
+1.1 Quick Help
+Polarion can send email notifications to users when changes occur to Builds, Documents, Modules, Plans, Test Runs, Users, or Work Items. 
+The default notification scheme may or may not meet your needs. E.g., you may want to reduce network traffic, or change some event targets to include or exclude recipients. \\
+Advanced notification settings are hidden by default. You can display the advanced settings by pressing the *Show Advanced Settings* button in the editor toolbar.
+
+1.1.1.1 Events
+~~Events~~ occur when things change in the system... a user updates a Work Item, a Document is created, or a Build finishes, for example. 
+Notifications are sent to users in response to events. Info about each Event is displayed when clicking the <img src="/polarion/ria/images/control/preview/help.gif"> 
+button next to the event ID.
+
+1.1.1.1.1 Work Item Related Events
+Work Item related events occur when something about a Work Item changes:  a new Work Item is created, a linked Work Item is updated, or a revision is linked to a Work Item. 
+Some of the Work Item related events support optional attributes that enable you to define a more detailed notification scheme.\\
+Default subject: ~~\$SERVER_PREFIX\$ \$WI_EVENT_NAME\$: \$WI_ID\$: \$WI_TITLE\$ \[Assignee: \$WI_ASSIGNEES\$\] \[by \$EVENT_USER_ID\$\]~~
+
+1.1.1.1.1.1 ~~fields~~ and ~~exceptFields~~ Attributes
+Data field labels: ~~Fields~~, ~~Except Fields~~ \\ 
+Events: ~~workitem-updated~~, ~~linked-workitem-updated~~ and ~~backlinked-workitem-updated~~\\
+*fields*: When the event occurs, notification will be sent only if one or more of the Work Item fields specified in this attribute has changed.\\
+*exceptFields*: When the event occurs, notification will always be sent when any Work Item fields change ~~except~~ those specified in this attribute.
+
+1.1.1.1.1.1 ~~roles~~ Attribute
+Data field label: ~~Role~~ \\
+Events: ~~workitem-linked~~, ~~linked-workitem-updated~~ and ~~backlinked-workitem-updated~~\\
+*roles*: When the event occurs, notification will be sent only if one or more Work Items are linked with the specified link roles (e.g. roles="parent,depends_on"). If the attribute is missing, then notifications are not affected by any link role.
+
+1.1.1.1.1.1 ~~statusFrom~~ and ~~statusTo~~ Attributes
+Data field labels: ~~From Status~~, ~~To Status~~ \\
+Events: ~~workitem-status-changed~~, and ~~workitem-approval-changed~~\\
+These can be used together (logical conjunction) or separately. If any one of the attributes is not defined, then the notification is always sent.\\
+*statusFrom*: When the event occurs, notification will be sent only if the Work Item (resp. Approval) had the specified status before the change.\\
+*statusTo*: When the event occurs, notification will be sent only if the Work Item (resp. Approval) had the specified status after the change.
+
+1.1.1.1.1 Document Related Events
+Document related events occur when a Document is created, updated, deleted, or a comment is added, replied to, or removed from a Document, or the status of a Document changes (if Document workflow is configured). 
+Some of the Document related events support optional attributes that enable you to define a more detailed notification scheme.\\
+
+Default subject: ~~\$SERVER_PREFIX\$ \$DOCUMENT_EVENT_NAME\$: \$DOCUMENT_NAME\$ \[by \$DOCUMENT_BY_NAME\$\]~~ *except for...* \\
+* ~~document-commented~~ - subject is "Document Commented"
+* ~~document-comment-removed~~ - subject is "Document Comment Removed"
+
+1.1.1.1.1.1 ~~statusFrom~~ and ~~statusTo~~ Attributes
+Data field labels: ~~From Status~~, ~~To Status~~ \\
+Events: ~~document-status-changed~~\\
+These can be used together (logical conjunction) or separately. If any one of the attributes is not defined, then the notification is always sent.\\
+*statusFrom*: When the event occurs, notification will be sent only if the Document has the specified status before the change.\\
+*statusTo*: When the event occurs, notification will be sent only if the Document had the specified status after the change.
+
+1.1.1.1.1 Module Related Events
+Modules are containers for structured Work Items. Module related events occur when a Module is created, updated, or deleted.\\
+Default subject: ~~\$SERVER_PREFIX\$ \$MODULE_EVENT_NAME\$: \$MODULE_NAME\$ \[by \$MODULE_BY_NAME\$\]~~ \\
+\\
+Modules are deprecated beginning with version 2011. It is recommended to convert pre-2011 Modules to the new Documents format. 
+
+1.1.1.1.1 User Related Events
+User related events occur when a user account is created, updated, or deleted.\\
+Default subject: ~~\$SERVER_PREFIX\$ \$USER_EVENT_NAME\$: \$USER_NAME\$ \[by \$USER_BY_NAME\$\]~~
+
+1.1.1.1.1 Build Related Events
+The ~~build-finished~~ event occurs when a project build has finished running.\\
+Default subject: ~~\$SERVER_PREFIX\$ \$BUILD_STATUS\$ \$BUILD_PROJECT_NAME\$ / \$BUILD_ARTIFACT_LABEL\$ \$BUILD_STAMP\$ \[by \$BUILD_BY_NAME\$\]~~
+
+1.1.1.1.1 Test Run Related Events
+Test Run related events occur when a Test Run is created, updated, finished, or deleted, or when its status is changed.\\
+Default subject: ~~\$TESTRUN_EVENT_NAME\$: \$TESTRUN_LABEL\$ \[by \$EVENT_USER_ID\$\]~~
+
+1.1.1.1.1 Plan Related Events
+Plan related events occur when a Plan is created, updated, or deleted, and when a Work Item is added to or removed from the Plan, or when a Plan's status changes. Notifications about added or 
+deleted Work Items occurs only if the Plan is in progress. \\
+Default subject: ~~\$PLAN_EVENT_NAME\$: \$PLAN_LABEL\$ \[by \$EVENT_USER_ID\$\]~~
+
+1.1.1.1 Targets
+Targets represent one user or some grouping of users. Users included by a target are sent email notifications at the address specified in their user account when the event for which the target is configured occurs. Events can have multiple targets. If the same user happens to be included in multiple targets for the same event, only one notification is sent to that user.
+
+
+Additional parameters are required for some of the Targets:\\
+* *single-email:* valid e-mail address\\
+* *single-user:* user ID\\
+* *global-role:* global user role\\
+* *project-role:* project user role
+
+1.1.1.1 Advanced Settings
+
+1.1.1.1.1 Priority
+Since there can be several configuration elements (specified by e.g. From Status, To Status, Except Fields, etc.) for one event , it is possible to set priority between these configuration elements.\\
+The events can be divided in several groups: ~~Work Item~~ (fields, modules, comments, attachments, work records), ~~user~~ (watcher, voter, user fields), ~~build~~, and ~~revision~~.\\
+Priorities are valid only inside groups. Therefore, priorities set for e.g. "workitem-watcher-added" and "workitem-updated" are independent. However, if for "workitem-new-comment", and priority will be specified, and target user is in both events, then the notification about Work Item update will be sent if the ~~workitem-update~~ event has higher priority than ~~workitem-commented~~. \\
+The value for Priority can be any positive integer 0 - 32767. You are free to assign values to different elements as you see fit. 
+
+1.1.1.1.1 Subject
+If set, the specified value will replace the default subject line rendered by the Polarion system. See the variables available for particular events below.
+
+1.1.1.1.1.1 General Notifications
+* <tt>\$SERVER_PREFIX\$</tt> - Prefix set in global notification settings
+* <tt>\$EVENT_NAME\$</tt> - General event name
+* <tt>\$EVENT_USER_ID\$</tt> - ID of the user who evoked the event
+* <tt>\$PROJECT\$</tt> - Project name
+
+1.1.1.1.1.1 Work Item Notifications
+* <tt>\$WI_EVENT_NAME\$</tt> - Name of the event triggering the notification, or new status if status has been changed
+* <tt>\$WI_ID\$</tt> - ID of the changed Work Item
+* <tt>\$WI_TITLE\$</tt> - New title of the changed Work Item
+* <tt>\$WI_ASSIGNEES\$</tt> - New assignees of the changed Work Item
+
+1.1.1.1.1.1 Document Notifications
+* <tt>\$DOCUMENT_EVENT_NAME\$</tt> - Name of the Document event triggering the notification
+* <tt>\$DOCUMENT_NAME\$</tt> - Name of the Document that has changed
+* <tt>\$DOCUMENT_BY_NAME\$</tt> - Name of the user who evoked the notification
+
+1.1.1.1.1.1 Module Notifications
+* <tt>\$MODULE_EVENT_NAME\$</tt> - Name of the module event triggering the notification
+* <tt>\$MODULE_NAME\$</tt> - Name of the module that has changed
+* <tt>\$MODULE_BY_NAME\$</tt> - Name of the user who evoked the notification
+
+1.1.1.1.1.1 Build Notifications
+* <tt>\$BUILD_STATUS\$</tt> - Status of a build (e.g. FAILED, ABORTED, OK)
+* <tt>\$BUILD_PROJECT_NAME\$</tt> - Name of the project for which build was started
+* <tt>\$BUILD_ARTIFACT_LABEL\$</tt> - Human-readable build artifact label (short description)
+* <tt>\$BUILD_STAMP\$</tt> - Build time stamp
+* <tt>\$BUILD_BY_NAME\$</tt> - Name of the user who started a build
+
+1.1.1.1.1.1 User Notifications
+* <tt>\$USER_EVENT_NAME\$</tt> - Name of an event (e.g. "User Updated")
+* <tt>\$USER_NAME\$</tt> - Name of the user who has been changed
+* <tt>\$USER_BY_NAME\$</tt> - Name of the user who evoked the notification
+
+1.1.1.1.1.1 Test Run Notifications
+* <tt>\$TESTRUN_EVENT_NAME\$</tt> - Name of an event (e.g. "Test Run Updated", or "Test Run Finished")
+* <tt>\$TESTRUN_STATUS\$</tt> - Status of the Test Run
+* <tt>\$TESTRUN_ID\$</tt> - ID of the Test Run
+* <tt>\$TESTRUN_LABEL\$</tt> - ID of the Test Run followed by Title
+* <tt>\$TESTRUN_GROUP_ID\$</tt> - Group ID of the Test Run
+
+1.1.1.1.1.1 Plan Notifications
+* <tt>\$PLAN_EVENT_NAME\$</tt> - Name of an event (e.g. "Plan Updated", or "Work Item Added")
+* <tt>\$PLAN_STATUS\$</tt> - Status of the Plan
+* <tt>\$PLAN_ID\$</tt> - ID of the Plan
+* <tt>\$PLAN_LABEL\$</tt> - Name the Plan followed by End Date of the Plan, enclosed in parentheses, if End Date is set in the Plan
+
+1.1.1.1.1 Layout
+Layouts control the layout of email notification messages pertaining to new and updated Work Items. You can customize these layouts in the *Notifications &gt; Layouts* topic of Administration. \\
+
+*Example:*\\
+Create a layout in some Sandbox project named <tt>layout1</tt>. Make some changes in the layout (see comments in the XML and Quick Help on the configuration page).\\
+Then in the Events and Targets topic, reference <tt>layout1</tt> in ~~Layout~~ field of the ~~workitem-created~~ event (click ~~Show Advanced Settings~~ to expose the field).\\
+
+1.1.1.1.1 Filter
+All Work Item related events, except those for votes and watches, have an optional attribute: ~~filter~~. If used, then notification is sent only if the changed Work Item meets the condition specified in the ~~filter~~ attribute.\\
+
+The value of ~~filter~~ is actually a sub-string of a query, the first part of which is supplied by the system when the filter is applied during a relevant event. The query begins (behind the scenes) with <tt>*id:"x" AND*</tt>, where "x" is a Work Item ID value. Therefore, the expression you supply in the ~~filter~~ attribute can start with the <tt>NOT</tt> operator. If the ~~filter~~ expression uses the <tt>OR</tt> operator, then it must be surrounded by parentheses. The following examples should make this clearer. 
+
+*Examples:*\\
+(Expression supplied by you in ~~filter~~ is shown in {style:type=span|border=none|color=blue}
+*blue*{style}. Expression prepended by system shown in {style:type=span|border=none|color=#999999}*gray*{style}) \\
+
+* <tt>*filter="{style:type=span|border=none|color=blue}(type:task OR type:defect){style}*"</tt> - which, in effect, amounts to: <tt>*filter="{style:type=span|border=none|color=#999999}id:\[workitemid\] AND {style} {style:type=span|border=none|color=blue}(type:task OR type:defect){style}*"</tt> 
+
+* <tt>*filter="{style:type=span|border=none|color=blue}NOT (type:task OR type:defect){style}*"</tt> - which, in effect, amounts to: <tt>*filter="{style:type=span|border=none|color=#999999}id:\[workitemid\] AND{style} {style:type=span|border=none|color=blue}NOT (type:task OR type:defect){style}*"</tt>\\
+\\

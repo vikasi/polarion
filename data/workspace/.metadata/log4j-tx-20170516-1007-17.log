@@ -1,0 +1,11 @@
+2017-05-16 10:07:26,289 [main | u:p] INFO  TXLOGGER  - Summary for 'Platform startup': transactions: 0, DB: 0.0488 s [60% query (13x), 39% update (126x)] (206x), svn: 0.027 s [85% checkPath (1x)] (3x)
+2017-05-16 10:07:26,485 [main | u:p] INFO  TXLOGGER  - Summary for 'Context recognition': transactions: 0, svn: 0.0776 s [40% info (3x), 36% getDir2 content (2x), 24% getFile content (1x)] (6x)
+2017-05-16 10:07:26,945 [LowLevelDataService-contextInitializer-2 | u:p] INFO  TXLOGGER  - Summary: Total: 0.455 s, transactions: 0
+2017-05-16 10:07:26,945 [LowLevelDataService-contextInitializer-3 | u:p] INFO  TXLOGGER  - Summary: Total: 0.455 s, transactions: 0, svn: 0.0423 s [95% log2 (5x)] (6x)
+2017-05-16 10:07:26,945 [LowLevelDataService-contextInitializer-1 | u:p] INFO  TXLOGGER  - Summary: Total: 0.455 s, transactions: 0, svn: 0.163 s [31% log2 (5x), 30% log (1x), 19% info (2x)] (12x), ObjectMaps: 0.0412 s [97% getAllPrimaryObjects (1x)] (13x)
+2017-05-16 10:07:26,945 [LowLevelDataService-contextInitializer-5 | u:p] INFO  TXLOGGER  - Summary: Total: 0.455 s, transactions: 0, svn: 0.0665 s [97% log2 (5x)] (6x), ObjectMaps: 0.0286 s [100% getAllPrimaryObjects (1x)] (7x)
+2017-05-16 10:07:26,945 [LowLevelDataService-contextInitializer-4 | u:p] INFO  TXLOGGER  - Summary: Total: 0.455 s, transactions: 0, svn: 0.0468 s [96% log2 (5x)] (6x), ObjectMaps: 0.035 s [100% getAllPrimaryObjects (1x)] (7x)
+2017-05-16 10:07:26,946 [main | u:p] INFO  TXLOGGER  - Summary for 'Context initialization': transactions: 0, svn: 0.337 s [64% log2 (21x), 15% log (1x), 9% info (2x)] (32x), ObjectMaps: 0.109 s [98% getAllPrimaryObjects (5x)] (41x)
+2017-05-16 10:07:27,239 [main | u:p] INFO  TXLOGGER  - Summary for 'Revisions processing': transactions: 10, RepositoryConfigService: 0.187 s [100% getReadConfiguration (30x)] (30x), svn: 0.089 s [88% info (11x)] (24x)
+2017-05-16 10:07:27,737 [main | u:p] INFO  TXLOGGER  - Summary for 'Build artifacts recognition': transactions: 30, svn: 0.362 s [82% info (60x)] (103x), RepositoryConfigService: 0.325 s [100% getReadConfiguration (36x)] (36x)
+2017-05-16 10:07:28,338 [main | u:p] INFO  TXLOGGER  - Summary for 'Data indexing': transactions: 0, Lucene: 0.224 s [100% refresh (1x)] (1x), SubterraURITable: 0.0861 s [100% addIfNotExistsDB (1x)] (1x), derivedLinkedRevisionsContributor: 0.0128 s [100% objectsToInv (1x)] (1x)

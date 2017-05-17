@@ -1,0 +1,13 @@
+###
+##  Panels is loaded by AJAX
+###
+
+#set($panel = $request.getParameter("panel"))
+
+#displaypanel($panel)
+
+ 
+	
+
+
+

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+  xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ws="http://ws.polarion.com/types"
+  xmlns:tracker="http://ws.polarion.com/TrackerWebService-types"
+  xmlns:project="http://ws.polarion.com/ProjectWebService-types"
+  xmlns:builder="http://ws.polarion.com/BuilderWebService-types"
+  xmlns:security="http://ws.polarion.com/SecurityWebService-types"
+  xmlns:testing="http://ws.polarion.com/TestManagementWebService-types"
+  xmlns:planning="http://ws.polarion.com/PlanningWebService-types">
+  <globalConfiguration>
+    <parameter name="sendMultiRefs" value="true" />
+    <parameter name="disablePrettyXML" value="true" />
+    <parameter name="adminPassword" value="admin" />
+    <parameter name="dotNetSoapEncFix" value="true" />
+    <parameter name="enableNamespacePrefixOptimization" value="true" />
+    <parameter name="sendXMLDeclaration" value="true" />
+    <parameter name="attachments.implementation"
+      value="org.apache.axis.attachments.AttachmentsImpl" />
+    <parameter name="sendXsiTypes" value="true" />
+  </globalConfiguration>
+  <handler name="SessionHandler"
+    type="java:com.polarion.alm.ws.handlers.SessionHandler">
+    <parameter name="timeout" value="30000" />
+  </handler>
+
+  <handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper" />
+  <chain name="PolarionChain">
+    <handler type="SessionHandler" />
+  </chain>
+
+  <service name="ProjectWebService" provider="java:TransactionAsUserWrapper"
+    style="wrapped" use="literal">
+    <requestFlow>
+      <chain type="PolarionChain" />
+      <handler type="java:com.polarion.alm.ws.handlers.DocumentationHandler">
+        <parameter name="source" value="ProjectWebServiceDoc.xml" />
+      </handler>
+    </requestFlow>
+    <responseFlow>
+      <chain type="PolarionChain" />
+    </responseFlow>
+    <parameter name="allowedMethods" value="*" />
+    <parameter name="wrapped.provider"
+      value="{http://xml.apache.org/axis/wsdd/providers/java}RPC" />
+    <parameter name="typeMappingVersion" value="1.2" />
+    <parameter name="scope" value="Application" />
+    <parameter name="className"
+      value="com.polarion.alm.ws.services.ProjectWebService" />
+    <parameter name="wsdlTargetNamespace" value="http://ws.polarion.com/ProjectWebService" />
+    <namespace>http://ws.polarion.com/ProjectWebService-impl</namespace>
+    <documentation>
+      This service provides functionallity to get information
+      related to projects.
+		</documentation>
+  </service>
+  <service name="TrackerWebService" provider="java:TransactionAsUserWrapper"
+    style="wrapped" use="literal">
+    <requestFlow>
+      <handler type="java:com.polarion.alm.ws.handlers.DocumentationHandler">
+        <parameter name="source" value="TrackerWebServiceDoc.xml" />
+      </handler>
+      <chain type="PolarionChain" />
+    </requestFlow>
+    <responseFlow>
+      <chain type="PolarionChain" />
+    </responseFlow>
+    <parameter name="allowedMethods" value="*" />
+    <parameter name="wrapped.provider"
+      value="{http://xml.apache.org/axis/wsdd/providers/java}RPC" />
+    <parameter name="typeMappingVersion" value="1.2" />
+    <parameter name="scope" value="Application" />
+    <parameter name="className"
+      value="com.polarion.alm.ws.services.TrackerWebService" />
+    <parameter name="wsdlTargetNamespace" value="http://ws.polarion.com/TrackerWebService" />
+    <namespace>http://ws.polarion.com/TrackerWebService-impl</namespace>
+    <parameter name="extraClasses"
+      value="com.polarion.alm.ws.encoding.AdditionalTypeWriter" />
+    <documentation>
+      This service provides tracker related functionallity.
+		</documentation>
+  </service>
+  <service name="SessionWebService" provider="java:AsUserWrapper"
+    style="wrapped" use="literal">
+    <requestFlow>
+      <handler type="SessionHandler" />
+      <handler type="java:com.polarion.alm.ws.handlers.DocumentationHandler">
+        <parameter name="source" value="SessionWebServiceDoc.xml" />
+      </handler>
+    </requestFlow>
+    <responseFlow>
+      <handler type="SessionHandler" />
+    </responseFlow>
+    <parameter name="allowedMethods" value="*" />
+    <parameter name="wrapped.provider"
+      value="{http://xml.apache.org/axis/wsdd/providers/java}RPC" />
+    <parameter name="typeMappingVersion" value="1.2" />
+    <parameter name="scope" value="Application" />
+    <parameter name="className"
+      value="com.polarion.alm.ws.services.SessionWebService" />
+    <parameter name="wsdlTargetNamespace" value="http://ws.polarion.com/SessionWebService" />
+    <namespace>http://ws.polarion.com/SessionWebService-impl</namespace>
+    <documentation>
+      This service provides functionallity that is related to the
+      current session of the webservice.
+		</documentation>
+  </service>
+  <service name="SecurityWebService" provider="java:AsUserWrapper"
+    style="wrapped" use="literal">
+    <requestFlow>
+      <handler type="SessionHandler" />
+      <handler type="java:com.polarion.alm.ws.handlers.DocumentationHandler">
+        <parameter name="source" value="SecurityWebServiceDoc.xml" />
+      </handler>
+    </requestFlow>
+    <responseFlow>
+      <handler type="SessionHandler" />
+    </responseFlow>
+    <parameter name="allowedMethods" value="*" />
+    <parameter name="wrapped.provider"
+      value="{http://xml.apache.org/axis/wsdd/providers/java}RPC" />
+    <parameter name="typeMappingVersion" value="1.2" />
+    <parameter name="scope" value="Application" />
+    <parameter name="className"
+      value="com.polarion.alm.ws.services.SecurityWebService" />
+    <parameter name="wsdlTargetNamespace"
+      value="http://ws.polarion.com/SecurityWebService" />
+    <namespace>http://ws.polarion.com/SecurityWebService-impl</namespace>
+    <documentation>
+      This service provides scurity related information.
+		</documentation>
+  </service>
+  <service name="BuilderWebService" provider="java:TransactionAsUserWrapper"
+    style="wrapped" use="literal">
+    <requestFlow>
+      <handler type="java:com.polarion.alm.ws.handlers.DocumentationHandler">
+        <parameter name="source" value="BuilderWebServiceDoc.xml" />
+      </handler>
+      <chain type="PolarionChain" />
+    </requestFlow>
+    <responseFlow>
+      <chain type="PolarionChain" />
+    </responseFlow>
+    <parameter name="allowedMethods" value="*" />
+    <parameter name="wrapped.provider"
+      value="{http://xml.apache.org/axis/wsdd/providers/java}RPC" />
+    <parameter name="typeMappingVersion" value="1.2" />
+    <parameter name="scope" value="Application" />
+    <parameter name="className"
+      value="com.polarion.alm.ws.services.BuilderWebService" />
+    <parameter name="wsdlTargetNamespace" value="http://ws.polarion.com/BuilderWebService" />
+    <namespace>http://ws.polarion.com/BuilderWebService-impl</namespace>
+    <parameter name="extraClasses"
+      value="com.polarion.alm.ws.encoding.AdditionalTypeWriter" />
+    <documentation>
+      This service provides build related functionality.
+		</documentation>
+  </service>
+  <service name="TestManagementWebService" provider="java:TransactionAsUserWrapper"
+    style="wrapped" use="literal">
+    <requestFlow>
+      <handler type="java:com.polarion.alm.ws.handlers.DocumentationHandler">
+        <parameter name="source" value="TestManagementWebServiceDoc.xml" />
+      </handler>
+      <chain type="PolarionChain" />
+    </requestFlow>
+    <responseFlow>
+      <chain type="PolarionChain" />
+    </responseFlow>
+    <parameter name="allowedMethods" value="*" />
+    <parameter name="wrapped.provider"
+      value="{http://xml.apache.org/axis/wsdd/providers/java}RPC" />
+    <parameter name="typeMappingVersion" value="1.2" />
+    <parameter name="scope" value="Application" />
+    <parameter name="className"
+      value="com.polarion.alm.ws.services.TestManagementWebService" />
+    <parameter name="wsdlTargetNamespace" value="http://ws.polarion.com/TestManagementWebService" />
+    <namespace>http://ws.polarion.com/TestManagementWebService-impl</namespace>
+    <parameter name="extraClasses"
+      value="com.polarion.alm.ws.encoding.AdditionalTypeWriter" />
+    <documentation>
+      This service provides build related functionality.
+		</documentation>
+  </service>
+  <service name="PlanningWebService" provider="java:TransactionAsUserWrapper"
+    style="wrapped" use="literal">
+    <requestFlow>
+      <handler type="java:com.polarion.alm.ws.handlers.DocumentationHandler">
+        <parameter name="source" value="PlanningWebServiceDoc.xml" />
+      </handler>
+      <chain type="PolarionChain" />
+    </requestFlow>
+    <responseFlow>
+      <chain type="PolarionChain" />
+    </responseFlow>
+    <parameter name="allowedMethods" value="*" />
+    <parameter name="wrapped.provider"
+      value="{http://xml.apache.org/axis/wsdd/providers/java}RPC" />
+    <parameter name="typeMappingVersion" value="1.2" />
+    <parameter name="scope" value="Application" />
+    <parameter name="className"
+      value="com.polarion.alm.ws.services.PlanningWebService" />
+    <parameter name="wsdlTargetNamespace" value="http://ws.polarion.com/PlanningWebService" />
+    <namespace>http://ws.polarion.com/PlanningWebService-impl</namespace>
+    <parameter name="extraClasses"
+      value="com.polarion.alm.ws.encoding.AdditionalTypeWriter" />
+    <documentation>
+      This service provides access to Polarion's Plan feature
+		</documentation>
+  </service>
+
+  <transport name="http">
+    <requestFlow>
+      <handler type="URLMapper" />
+      <handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler" />
+    </requestFlow>
+    <parameter name="qs:list"
+      value="org.apache.axis.transport.http.QSListHandler" />
+    <parameter name="qs:wsdl"
+      value="org.apache.axis.transport.http.QSWSDLHandler" />
+    <parameter name="qs.list"
+      value="org.apache.axis.transport.http.QSListHandler" />
+    <parameter name="qs.method"
+      value="org.apache.axis.transport.http.QSMethodHandler" />
+    <parameter name="qs:method"
+      value="org.apache.axis.transport.http.QSMethodHandler" />
+    <parameter name="qs.wsdl"
+      value="org.apache.axis.transport.http.QSWSDLHandler" />
+  </transport>
+  <transport name="local">
+    <responseFlow>
+      <handler type="LocalResponder" />
+    </responseFlow>
+  </transport>
+
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="ws:ShouldNotBeInWSDL" serializer="com.polarion.alm.ws.encoding.AdditionalTypeWriterFactory"
+    type="java:com.polarion.alm.ws.encoding.AdditionalTypeWriter" />
+
+  <!-- Full -->
+  <!-- TODO should be namespace ws -->
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:EnumOption"
+    serializer="com.polarion.alm.ws.encoding.enumerations.EnumTypeSerializerFactory"
+    type="java:com.polarion.platform.persistence.IEnumOption" />
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:PriorityOpt"
+    serializer="com.polarion.alm.ws.encoding.enumerations.EnumSubTypeSerializerFactory"
+    type="java:com.polarion.alm.tracker.model.IPriorityOpt" />
+
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:WorkflowAction"
+    serializer="com.polarion.alm.ws.encoding.workflow.WorkflowActionSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.workflow.WorkflowActionWrapper" />
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:Change" serializer="com.polarion.alm.ws.encoding.change.ChangeSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.change.ChangeWrapper" />
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:FieldDiff"
+    serializer="com.polarion.alm.ws.encoding.change.FieldDiffSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.change.FieldDiffWrapper" />
+
+  <typeMapping
+    deserializer="com.polarion.alm.ws.encoding.customfields.CustomFieldDeserializerFactory"
+    encodingStyle="" qname="tracker:CustomField"
+    serializer="com.polarion.alm.ws.encoding.customfields.CustomFieldSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.customfields.CustomField" />
+
+  <typeMapping deserializer="org.apache.axis.encoding.ser.MapDeserializerFactory"
+    encodingStyle="" qname="ws:Properties"
+    serializer="com.polarion.alm.ws.encoding.PropertiesSerializerFactory"
+    type="java:java.util.Properties" />
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:CustomFieldType" serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.customfields.CustomFieldType" />
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:EnumCustomFieldType" serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.customfields.EnumCustomFieldType" />
+
+  <typeMapping deserializer="com.polarion.alm.ws.encoding.customfields_new.CustomFieldDeserializerFactory" encodingStyle=""
+    qname="tracker:Custom" serializer="com.polarion.alm.ws.encoding.customfields_new.CustomFieldSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.customfields_new.CustomField" />
+    
+  <typeMapping deserializer="com.polarion.alm.ws.encoding.customfields_new.CustomFieldDeserializerFactory" encodingStyle=""
+    qname="security:ProductLicense" serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.license.ProductLicenseWrapper" />
+ 
+  <typeMapping deserializer="com.polarion.alm.ws.encoding.customfields_new.CustomFieldDeserializerFactory" encodingStyle=""
+    qname="security:LicenseInfo" serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.license.LicenseInfo" />
+    
+  <typeMapping deserializer="" encodingStyle=""
+    qname="testing:TestsConfiguration" serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.TestsConfigurationWrapper" />
+    
+  <typeMapping deserializer="org.apache.axis.encoding.ser.MapDeserializerFactory"
+    encodingStyle="" qname="testing:Properties"
+    serializer="com.polarion.alm.ws.encoding.PropertiesSerializerFactory"
+    type="java:java.util.LinkedHashMap" />
+	
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:LanguageDefinition" serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.languages.LanguageDefinitionWrapper" />
+  
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:ContextId"
+    serializer="com.polarion.alm.ws.encoding.contextid.ContextIdSerializerFactory"
+    type="java:com.polarion.subterra.base.data.identification.IContextId" />
+    
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:Activity"
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.activity.ActivityWrapper" />
+     
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:ActivityComment"
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.activity.ActivityCommentWrapper" />  
+    
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:ActivityCustomValue"
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.activity.ActivityCustomValueWrapper" />  
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:ActivityCustomValueEntry"
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.activity.ActivityCustomValueEntry" />  
+    
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:ActivitySource" serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.activity.ActivitySourceWrapper" />
+    
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:Folder"
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.folder.FolderWrapper" />
+    
+  <typeMapping deserializer="" encodingStyle=""
+    qname="tracker:LinkedResource"
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.linkedresources.RtLinkDataWrapper" />
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="testing:ParametersLibrary"
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.parameters.ParametersLibraryWrapper" />
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="testing:ParameterDefinition"
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.polarion.alm.ws.encoding.parameters.ParameterDefinitionWrapper" />
+    
+</deployment>

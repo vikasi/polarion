@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-action="rework" initial-status="draft" prototype="Module">
+    <transitions>
+        <transition action="sendToReview" from="draft" to="inReview"/>
+        <transition action="reject" from="draft" to="rejected"/>
+        <transition action="reject" from="inReview" to="rejected"/>
+        <transition action="reject" from="approved" to="rejected"/>
+        <transition action="rework" from="inReview" to="draft"/>
+        <transition action="newVersion" from="approved" to="draft"/>
+        <transition action="rework" from="rejected" to="draft"/>
+        <transition action="rework" from="reviewed" to="draft"/>
+        <transition action="markReviewed" from="inReview" to="reviewed"/>
+        <transition action="reject" from="reviewed" to="rejected"/>
+        <transition action="markApproved" from="reviewed" to="approved"/>
+    </transitions>
+    <actions>
+        <action id="rework" name="Rework">
+            <functions>
+                <function name="MarkWorkflowSignaturesAsObsolete"/>
+            </functions>
+        </action>
+        <action id="newVersion" name="New Version">
+            <cleared>
+                <field name="version"/>
+            </cleared>
+            <functions>
+                <function name="MarkWorkflowSignaturesAsObsolete"/>
+            </functions>
+        </action>
+        <action id="sendToReview" name="Send to Review">
+            <required>
+                <field name="version"/>
+            </required>
+            <functions>
+                <function name="InvokeAction">
+                    <param name="statusId" value="inReview"/>
+                    <param name="actionId" value="sendToReview"/>
+                    <param name="query" value="status:draft"/>
+                </function>
+                <function name="ResetSignaturesVerdict"/>
+            </functions>
+        </action>
+        <action id="markReviewed" name="Mark Reviewed">
+            <signatures>
+                <signature-policy name="all"/>
+            </signatures>
+            <required>
+                <field name="version"/>
+            </required>
+            <functions>
+                <function name="AddDefaultSigners">
+                    <param name="signedBy.roles" value="project_approver"/>
+                    <param name="signer.role" value="Approver"/>
+                    <param name="target.status.id" value="approved"/>
+                </function>
+                <function name="InvokeAction">
+                    <param name="statusId" value="reviewed"/>
+                    <param name="actionId" value="markReviewed"/>
+                    <param name="query" value="status:inReview"/>
+                </function>
+            </functions>
+        </action>
+        <action id="markApproved" name="Mark Approved">
+            <signatures>
+                <signature-policy name="all"/>
+            </signatures>
+            <required>
+                <field name="version"/>
+            </required>
+            <functions>
+                <function name="InvokeAction">
+                    <param name="statusId" value="approved"/>
+                    <param name="actionId" value="markApproved"/>
+                    <param name="query" value="status:reviewed"/>
+                </function>
+            </functions>
+        </action>
+        <action id="reject" name="Reject">
+            <functions>
+                <function name="MarkWorkflowSignaturesAsObsolete"/>
+            </functions>
+        </action>
+    </actions>
+</workflow>

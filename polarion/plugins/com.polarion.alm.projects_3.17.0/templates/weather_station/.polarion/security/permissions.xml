@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<permissions>
+    <customset id="WorkItem_Defined_Variant" title="Defined Variant">com.polarion.persistence.object.WorkItem(type:variant AND status:defined)</customset>
+    <permission name="com.polarion">
+        <role name="project_admin">
+            <deny permission="@WorkItem_Defined_Variant.key.featureSelection.modify"/>
+        </role>
+        <role name="project_assignable">
+            <deny permission="@WorkItem_Defined_Variant.key.featureSelection.modify"/>
+        </role>
+    </permission>
+</permissions>

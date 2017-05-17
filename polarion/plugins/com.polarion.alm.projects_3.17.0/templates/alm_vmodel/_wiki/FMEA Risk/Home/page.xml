@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20111029214632</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.macros}
+{section:width=100%}
+{column}
+1 FMEA Risk Management
+
+Failure modes and effects analysis (FMEA) is a step-by-step approach for identifying all possible failures (as risk items) in a design, a manufacturing or assembly process, or a product or service.
+
+“Failure modes” means the ways, or modes, in which something might fail. Failures are any errors or defects, especially ones that affect the customer, and can be potential or actual.
+
+“Effects analysis” refers to studying the consequences of those failures.
+
+1.1 Risk Assessment Documents
+* {document:Risk Specification} ([FMEA Worksheet>FMEA Worksheet]) 
+
+1.1 Risk Items by Status
+
+{table:header=no}
+#scoreEntry("Draft" "type:risk AND status:draft" "req_status_draft.gif")
+#scoreEntry("Analysis" "type:risk AND status:analysis" "req_status_awaiting_review.gif")
+#scoreEntry("Actions Pending" "type:risk AND status:action-pending" "status_inprogress.gif")
+#scoreEntry("Actions Taken" "type:risk AND status:action-taken" "req_status_approved.gif")
+#scoreEntry("Rejected" "type:risk AND status:rejected" "req_status_rejected.gif")
+{table}
+
+{column}
+{column:width=2}
+{column}
+{column:width=300}
+
+{regiontitle}FMEA Resources{regiontitle}
+* [FMEA How-To>FMEA How-To]
+* [FMEA Worksheet> FMEA Worksheet]
+
+{regiontitle}Workflow{regiontitle}
+{image:fmea_wf.png}
+
+{column}
+{section}
+]]></content>
+</wiki-page>

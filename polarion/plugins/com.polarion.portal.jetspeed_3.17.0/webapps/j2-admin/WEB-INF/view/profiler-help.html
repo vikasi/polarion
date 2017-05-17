@@ -1,0 +1,147 @@
+<h1>
+Profiler Help
+</h1>
+<h3>NOTE: This help file is in English Only. TODO: add a option to locate by locale to the GenericServletPortlet</h3>
+<h3>NOTE: Please DO NOT TRANSLATE since its still under construction.</h3>
+<p>
+The Profiler locates portal resources given a set of request parameters, properties, and attributes
+The Profiler is invoked during the request processing pipeline.
+It requires that the request context is already populated with the portal request and response,
+and capability and user information. The request context parameters, properties and attributes
+make up the profile criterion which the profiler uses to locate portal resources:
+<ul>
+<li>page
+<li>navigations
+<li>document lists
+</ul>
+ The profiler does not actually locate the document.
+ It creates a Profile Locator, an abstract definition of a resource locator.
+</p>
+<h2>Rules</h2>
+Rules define how a resource locator is created.
+A rule is an ordered sequence of one or more criterion.
+The profiler will apply all criteria for a given rule in fallback order.
+It will start from the lowest fallback number for a criteria, and continue
+trying to locate until it either locates a resource, or until the fallback type of the
+criteria dictates that it either stop or continue to loop.
+<h2>Resolvers</h2>
+Resolvers are Java classes associated with a criterion. 
+A resolver determines what runtime parameters and state to look at when building a profile locator.
+<table>
+<tr>
+<td>
+path
+</td>
+<td>
+<ul>
+<li>Looks at the Request Path of the request.
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+group
+</td>
+<td>
+<ul>
+<li>Looks in HTTP Request Parameter (Standard) for the named parameter. 
+<li>Next looks at current authenticated subject, finding all group principals for the subject.
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+role
+</td>
+<td>
+<ul>
+<li>Looks in HTTP Request Parameter (Standard) for the named parameter. 
+<li>Next looks at current authenticated subject, finding all role principals for the subject.
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+user
+</td>
+<td>
+<ul>
+<li>Looks in HTTP Request Parameter (Standard) for the named parameter. 
+<li>Next looks at current authenticated subject, finding all user principals for the subject.
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+language
+</td>
+<td>
+<ul>
+<li>Looks in HTTP Request Parameter (Standard) for the named parameter. 
+<li>Next looks at the Locale.LanguageCode for the current request.
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+mediatype
+</td>
+<td>
+<ul>
+<li>Looks in HTTP Request Parameter (Standard) for the named parameter.
+<li>Next looks at the Mediatype (Mime Type) for the current request.
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+country
+</td>
+<td>
+<ul>
+<li>Looks in HTTP Request Parameter (Standard) for the named parameter.
+<li>Next looks at the Locale.CountryCode for the current request.
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+hard.coded
+</td>
+<td>
+<ul>
+<li>Applies the value specified in this rule as a constant.
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+path.session
+</td>
+<td>
+<ul>
+<li>Looks in HTTP Request Parameter (Standard) for the named parameter.
+<li>Looks in Portal's Servlet Session for the named attribute.
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+group.user.role
+</td>
+<td>
+<ul>
+<li>todo
+</ul>
+</td>
+</tr>
+
+</tr>
+</table>
+<h2>Fallback Types</h2>
+<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>

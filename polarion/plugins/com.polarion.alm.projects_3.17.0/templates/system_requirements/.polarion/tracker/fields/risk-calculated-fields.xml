@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<calculated-fields>
+    <calculated-field id="rpn">
+        <multiply>
+            <field>occurrenceRating</field>
+            <field>detectionRating</field>
+            <field>severityRating</field>
+        </multiply>
+
+    </calculated-field>
+
+    <calculated-field id="rpnNew">
+        <multiply>
+            <field>occurrenceRatingNew</field>
+            <field>detectionRatingNew</field>
+            <field>severityRatingNew</field>
+        </multiply>
+
+    </calculated-field>
+
+</calculated-fields>

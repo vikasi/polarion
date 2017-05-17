@@ -1,0 +1,44 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.synchronizer;singleton:=true
+Export-Package: com.google.common.base,com.google.common.collect,com.g
+ oogle.common.math,com.google.common.primitives,com.polarion.synchroni
+ zer,com.polarion.synchronizer.configuration,com.polarion.synchronizer
+ .internal; x-friends:="com.polarion.synchronizer.tests,  com.polarion
+ .synchronizer.proxy.jira.test,  com.polarion.synchronizer.proxy.polar
+ ion.tests,  com.polarion.synchronizer.reqif.test",com.polarion.synchr
+ onizer.internal.configuration,com.polarion.synchronizer.internal.hier
+ archy;x-friends:="com.polarion.synchronizer.tests",com.polarion.synch
+ ronizer.internal.mapping;x-friends:="com.polarion.synchronizer.tests"
+ ,com.polarion.synchronizer.mapping,com.polarion.synchronizer.model,co
+ m.polarion.synchronizer.ole,com.polarion.synchronizer.proxy,com.polar
+ ion.synchronizer.proxy.configuration,com.polarion.synchronizer.proxy.
+ doors,com.polarion.synchronizer.proxy.doors.internal;x-friends:="com.
+ polarion.synchronizer.tests",com.polarion.synchronizer.proxy.doors.in
+ ternal.commands;x-friends:="com.polarion.synchronizer.tests",com.pola
+ rion.synchronizer.proxy.doors.internal.dxl;x-friends:="com.polarion.s
+ ynchronizer.tests",com.polarion.synchronizer.proxy.doors.internal.res
+ t;x-friends:="com.polarion.synchronizer.tests",com.polarion.synchroni
+ zer.proxy.doors.xmlmodel;x-friends:="com.polarion.synchronizer.tests"
+ ,com.polarion.synchronizer.proxy.polarion,com.polarion.synchronizer.s
+ pi,com.polarion.synchronizer.spi.translators,com.polaron.synchronizer
+ .macrolink,org.jsoup,org.jsoup.helper,org.jsoup.nodes,org.jsoup.parse
+ r,org.jsoup.safety,org.jsoup.select
+Bundle-Name: Synchronizer
+Bundle-Version: 3.17.0
+Bundle-ClassPath: synchronizer.jar,lib/guava-13.0.1.jar,lib/jsoup-1.8.
+ 3.jar,lib/rtfparserkit-1.6.0.jar
+Require-Bundle: com.polarion.core.util;bundle-version="3.6.0",com.pola
+ rion.platform.jobs;bundle-version="3.6.0",com.polarion.platform.guice
+ ;bundle-version="3.6.0",com.sun.jersey;bundle-version="1.0.0",com.pol
+ arion.alm.projects;bundle-version="3.7.2",com.polarion.platform.persi
+ stence;bundle-version="3.7.2",com.polarion.cluster;bundle-version="3.
+ 7.3",com.polarion.ooxml;bundle-version="3.10.1",com.polarion.portal.t
+ omcat;bundle-version="8.0.30"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Import-Package: com.icl.saxon.om,com.polarion.alm.tracker,com.polarion
+ .alm.tracker.model
+Guice-Modules: com.polarion.synchronizer.internal.SynchronizerModule,c
+ om.polarion.synchronizer.proxy.doors.internal.DoorsProxyModule
+
+

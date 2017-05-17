@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fields>
+    <field id="occurredInVersion" name="Occurred In Version" type="string"/>
+    <field id="targetVersion" name="Target Version" type="enum:majorVersion"/>
+</fields>

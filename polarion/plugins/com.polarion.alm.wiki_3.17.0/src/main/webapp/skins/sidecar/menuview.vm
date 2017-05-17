@@ -1,0 +1,1381 @@
+#set($notrev = true)
+#set ($revis = $request.getParameter("rev"))
+#if ($revis)
+  #if ($revis != "0") 
+    #set($notrev = false) 
+  #end
+#end
+
+#set($WIKI = "_wiki")
+#set($MODULE = "_modules")
+#set($TESTRUN = "_testruns")
+#set($PLAN = "_plans")
+
+#set($spaceType = $doc.getSpace($doc.space))
+#if(!($spaceType == $MODULE) && !($spaceType == $TESTRUN) && !($spaceType == $PLAN)) 
+  #set($spaceType = $WIKI)
+#end
+
+#set($isHomePage = ($spaceType == $WIKI) && ("Home" == "$doc.name"))
+
+## added for backward compatibility:
+#set($isTestRun = ($spaceType == $TESTRUN)) 
+#set($isModule = ($spaceType == $MODULE))
+
+#set($isMyPolarion = false)
+#if($doc.getSpace($doc.space).equals("_users"))
+  #set($isMyPolarion = true)
+#end
+
+#set($isService = (($doc.getName() == "Modules" ) || ($doc.getName() == "WikiOverview" )))
+
+#set($enabledMenuShow = $viewer && $viewer == "view" && $notrev && ($spaceType == $WIKI) && !$isService)
+
+#set($hasdelete = $xwiki.hasPermission("delete"))
+#set($isDocCorrupted = $context.getDoc().isDocCorrupted())
+#set($delmsg = $localization.getValue('definition.delete'))
+#if($context.getMode()==0)## Visible only in a page
+<div id="menuView" class="menubar" #if ($enabledMenuShow || $spaceType == $PLAN && (!$notrev || $request.getParameter("hideMenuView"))) style="display:none" #end>
+<h3 id="xwikimenutitle" class="hidden">$localization.getValue('wiki.label.topMenu')</h3>
+#*<div class="rightmenu"><a href='http://www.xwiki.org/xwiki/bin/view/UserGuide/WebHome' onclick="openURL('http://www.xwiki.org/xwiki/bin/view/UserGuide/WebHome', '_blank'); return false;"><strong>?</strong></a></div>*#
+<div class="leftmenu">
+##<div id="createnewpagewindow" class="com_polarion_reina_web_js_widgets_JSPopupWindow_Css"  style="display:none;width:502px;height:402px;position: absolute;z-index:5065; border:0px solid blue;"></div>
+#template("createscripts.vm")
+
+##
+## Edit menu
+##
+
+#if($hasedit && !$isReadOnly)
+## Check inline editing option
+#if($doc.content.indexOf("includeForm(")!=-1)
+#set($editaction = "inline")
+#else
+#set($editaction = "edit")
+#end
+
+#set($inBaseline = $doc.isInBaseline())
+#set($notrev = $notrev && !$inBaseline)
+
+#set ($isdoc = $doc.isDocumentPage()) 
+
+
+#set ($viewonly = ($isdoc && $notrev))
+#set ($isTemplate = $doc.isTemplate())
+
+#set($tab = $request.getParameter("tab"))
+#if($tab)
+  #set($isCurrent = false)
+#else
+  #set($isCurrent = true)
+#end
+
+
+
+#set($formname = "edit")
+#set($saveaction = "save")
+#set($previewenabled = true)
+#set($xredirect=$!request.getParameter("xredirect"))
+#set($parentPage = $!request.getParameter("parent"))
+#if($parentPage != "")
+	#set($parentUrl = $xwiki.getDocument($parentPage).getURL("view"))
+#end
+
+#set ($canEdit = $request.getParameter("canEdit"))
+
+#if ($canEdit && $canEdit=="1")
+      <script type="text/javascript">
+        setCanEdit();
+      </script>
+#end
+
+<script type="text/javascript">
+var fullSave = false;
+var prev = "$!parentUrl";
+
+function loadPreview(baseurl) {
+   var cnt = (document.getElementById("content").value);
+   cnt = cnt.replace(/[\%]/gi, "%25");
+   cnt = cnt.replace(/[\&]/gi, "%26");
+   cnt = cnt.replace(/[\+]/gi, "%2b");
+
+   var params =  "isSave=" + canEdit() + "&xcontent=" + encodeURI(cnt);
+   var url = baseurl + "?xpage=xpreview";
+   showProgressBar("$localization.getValue('wiki.form.progress.label.processing')");
+   disableEditButtons(true);
+   disablePreviewButtons(true);
+   showRightPanel(false);
+   execAJAX(url, params, loadPreviewCallback, null);
+ }
+
+function disableViewMenu(val){
+   var state ="menubar";
+   if (val) state = "menubardisab";
+   document.getElementById("menuView").className=state;
+   disableEditButtons(val);
+}
+
+var disbaleEditButtonsState = false;
+
+function disableEditButtons(val)
+{
+   var state ="enab";
+   disbaleEditButtonsState = val;
+   if ($('menuPreview'))
+   {
+     if (val) state = "disab";
+     document.getElementById("formaction_save").className=state;
+     if(document.getElementById('formaction_save_only'))		     
+        document.getElementById("formaction_save_only").className=state;
+     document.getElementById("formaction_cancel").className=state;
+     document.getElementById("formaction_preview").className=state;
+
+     document.getElementById("formaction_plain").className=state;
+     document.getElementById("formaction_rich").className=state;
+     
+     disablePreviewButtons(val);
+   }
+ }
+ 
+ function enableEditButtons() {
+ 	disableEditButtons(false);
+ }
+
+ function disablePreviewButtons(val)
+ {
+    var state ="enab";
+    if (val) state = "disab";
+    document.getElementById("formaction_cancel_preview").className=state;
+    document.getElementById("formaction_preview_save").className=state;
+    document.getElementById("formaction_preview_save2").className=state;
+    document.getElementById("previewbutton").className=state;
+ }
+
+ function RestoreSave()
+ {
+   var state ="disab";
+
+   if (canEdit())
+     state="enab";
+   document.getElementById("formaction_save").className=state;
+   if(document.getElementById('formaction_save_only'))		   
+  	  document.getElementById("formaction_save_only").className=state;
+   document.getElementById("formaction_preview_save").className=state;
+   document.getElementById("formaction_preview_save2").className=state;
+ }
+
+ function savedOnly(newRevision)
+ {
+   if(fullSave) {
+   		makeCancel();
+   		return;
+   }
+   hideProgressBar();   
+   var state ="disab";   
+   if (document.getElementById("formaction_save"))
+       document.getElementById("formaction_save").className=state;
+   if(document.getElementById('formaction_save_only'))		   
+       document.getElementById("formaction_save_only").className=state;   
+   document.getElementById("revision").value=newRevision;
+   
+   if(document.getElementById('formaction_cancel'))		   
+       document.getElementById("formaction_cancel").className="enab";   
+   if(document.getElementById('formaction_preview'))		   
+       document.getElementById("formaction_preview").className="enab";   
+   if(document.getElementById('formaction_plain'))		   
+       document.getElementById("formaction_plain").className="enab";   
+   if(document.getElementById('formaction_rich'))		   
+       document.getElementById("formaction_rich").className="enab";  
+       
+   if (document.getElementById("formaction_preview_save"))
+       document.getElementById("formaction_preview_save").className="enab";
+   if(document.getElementById('formaction_preview_save2'))		   
+       document.getElementById("formaction_preview_save2").className="enab";   
+   if(document.getElementById('formaction_cancel_preview'))		   
+       document.getElementById("formaction_cancel_preview").className="enab";   
+   if(document.getElementById('previewbutton'))		   
+       document.getElementById("previewbutton").className="enab";    
+   
+
+   setCantEdit();
+   checkContentModifiedScheduler();
+   
+   if (document.getElementById("formaction_preview_save")){
+   		backToEdit();
+   }
+ }
+
+ function hideProgressBar() {
+   document.getElementById("progressbar").style.visibility="hidden";
+ }
+ 
+ function newModule(projectId,spaceId){
+ 	top.createModule(projectId,spaceId);
+ }
+
+ function createNewArtifact(projectId,spaceId,b1,b2,b3,b4,b5,b6,b7,b8){
+ 	top.createNewArtifact(projectId,spaceId,b1,b2,b3,b4,b5,b6,b7,b8);
+ }
+ 
+ function newPage(projectId,spaceId){
+ 	top.createWikiPage(projectId,spaceId);
+ }
+ 
+ function editModuleProperties(projectId,name){
+ 	top.editModuleProperties(projectId,name);
+ }
+ 
+ function convertToDocument(projectId,name){
+    top.convertToDocument(projectId,name);
+ }
+ 
+ function removeModule(projectId,name){
+ 	top.removeModule(projectId,name);
+ }
+ 
+ function removePlan(uri){
+ 	top.removePlan(uri);
+ }
+ 
+ function removeTestRun(uri){
+ 	top.removeTestRun(uri);
+ }
+ 
+ function showTestRunRecords(uri){
+ 	top.showTestRunRecords(uri);
+ }
+ 
+ function saveTestRunAsTemplate(uri){
+ 	top.saveTestRunAsTemplate(uri);
+ }
+
+ function selectTestCases(){
+ 	top.selectTestCases();
+ }
+ 
+ function showProperties(uri){
+    #if ($spaceType == $TESTRUN) 
+ 	    top.showTestRunProperties(uri);
+    #elseif ($spaceType == $PLAN) 
+        top.showPlanProperties(uri);
+    #end
+ }
+ 
+ function duplicateModule2(projectId,name){
+ 	top.duplicateModule(projectId,name);
+ }
+ 
+ function newSpace(projectId){
+    top.createSpace(projectId);
+ }
+ 
+ function showIndexPage(projectId,spaceId){
+ 	top.showIndexPage(projectId,spaceId);
+ }
+
+ function loadPreviewCallback(e, id) { 
+   var previewEl = document.getElementById("xpreview");
+       previewEl.style.display="block";
+       $('menuPreview').style.display="block";
+
+   var editBlockEl = document.getElementById("viewcontent");
+       editBlockEl.style.display="none";
+       $('menuView').style.display="none";
+      
+     
+       previewEl.innerHTML = e;
+       disablePreviewButtons(false);
+       RestoreSave();
+
+      var all_div = document.getElementsByTagName('div');
+      //find id for WorkItem to evalute the code as it not work when called from AJAX
+      for(var i=0; i<all_div.length; i++ )
+      {
+        var elm = all_div[i];
+        var elm_id = elm.id;
+        if ( elm_id.indexOf('wi_hd_') > -1 || elm_id.indexOf('jsmacro') > -1 )
+        {
+          try{
+          eval(elm.innerHTML);
+          }catch(e){}
+        }
+      }
+      
+      var all_script = document.getElementsByTagName('script');
+      //find id for JS rendered macros to evalute the code as it not work when called from AJAX
+      for(var i=0; i<all_script.length; i++ )
+      {
+        var elm = all_script[i];
+        var elm_id = elm.id;
+        if ( elm_id.indexOf('scriptmacro') > -1 )
+        {
+          try{
+          eval(elm.innerHTML);
+          }catch(e){}
+        }
+      }
+
+      var all_font = document.getElementsByTagName('font');
+      //find id for WorkItem to evalute the code as it not work when called from AJAX
+      for(var i=0; i<all_font.length; i++ )
+      {
+        var elm = all_font[i];
+        var elm_id = elm.id;
+        if ( elm_id.indexOf('wi_hd_') > -1 )
+        {
+          try{
+          eval(elm.innerHTML);
+          }catch(e){}
+        }
+      }
+	  processElements();
+      hideProgressBar();
+      pageResize();
+  }
+
+ function checkDocumentContent(saveOnly) {	 
+  if (document.forms.${formname}.content) {
+    var content = document.forms['edit'].content.value;
+
+    var mceContent = "";
+    try
+    {
+
+      var myIframe = document.getElementById('mce_editor_0');
+      var bd = myIframe.contentWindow.document.getElementById('mceSpanFonts');
+      mceContent = bd.innerHTML;
+      mceContent = replaceMCE(mceContent);
+
+    }catch(ex){}
+
+    if ( (content == null || content == "") && mceContent == "" ) {
+      alert("$localization.getValue('wiki.message.wikiPageCannotBeCompletelyEmpty')");
+      return false ;
+    }
+  }
+  // PBO progress show checkSessionrequest
+  
+  showProgressBarSetText("$localization.getValue('wiki.form.progress.label.saving')");
+  
+  disableEditButtons(true);
+  disablePreviewButtons(true);
+  return true;
+}
+
+function showProgressBar(operation) {	
+//alert("showProgressBar");
+  document.getElementById("progressbar").style.visibility="visible";
+  document.getElementById("progress_operation").innerHTML=operation;
+}
+// PBO set text in progress
+function showProgressBarSetText(operation) {
+	  document.getElementById("progressbar").style.visibility="hidden";
+  document.getElementById("progress_operation").innerHTML=operation;
+}
+
+
+function backToEdit() {
+      disableEditButtons(false);
+      disablePreviewButtons(true);
+  	  var previewEl = document.getElementById("xpreview");
+      previewEl.style.display = "none";
+      previewEl.innerHTML = "";
+      $('menuPreview').style.display="none";
+
+
+  	  var editBlockEl = document.getElementById("viewcontent");
+      editBlockEl.style.display="block";
+      $('menuView').style.display="block";
+      RestoreSave();
+      showRightPanel(true);
+      refreshWikiEditor();
+}
+
+
+function cancelEditSaveOnly(){
+   if (document.getElementById("formaction_save"))
+       document.getElementById("formaction_save").className="enab";
+   if(document.getElementById('formaction_save_only'))		   
+       document.getElementById("formaction_save_only").className="enab";   
+   if(document.getElementById('formaction_cancel'))		   
+       document.getElementById("formaction_cancel").className="enab";   
+   if(document.getElementById('formaction_preview'))		   
+       document.getElementById("formaction_preview").className="enab";   
+   if(document.getElementById('formaction_plain'))		   
+       document.getElementById("formaction_plain").className="enab";   
+   if(document.getElementById('formaction_rich'))		   
+       document.getElementById("formaction_rich").className="enab";
+       
+       
+   if (document.getElementById("formaction_preview_save"))
+       document.getElementById("formaction_preview_save").className="enab";
+   if(document.getElementById('formaction_preview_save2'))		   
+       document.getElementById("formaction_preview_save2").className="enab";   
+   if(document.getElementById('formaction_cancel_preview'))		   
+       document.getElementById("formaction_cancel_preview").className="enab";   
+   if(document.getElementById('previewbutton'))		   
+       document.getElementById("previewbutton").className="enab";   
+
+}
+function cancelEdit(){
+    if (checkDiscardChanges()){
+		disableEditButtons(true);
+	    disablePreviewButtons(true);
+		showProgressBar("$localization.getValue('wiki.form.progress.label.canceling')");
+		document.forms.${formname}.target="working_area";	
+		document.forms.${formname}.saveonly.value="false";
+		if (prev != "" && !$isTemplate){
+			document.forms.${formname}.action = prev;
+		}else{
+			document.forms.${formname}.action = '$doc.getURL("cancel")';
+		}
+		executeCommand(document.getElementById('checkLogin').action, checkCallBack);
+     }
+}
+
+function makeCancel(){
+	document.forms.${formname}.target="working_area";	
+	document.forms.${formname}.saveonly.value="false";
+	if (prev != "" && !$isTemplate){
+		document.forms.${formname}.action = prev;
+	}else{
+		document.forms.${formname}.action = '$doc.getURL("cancel")';
+	}
+	executeCommand(document.getElementById('checkLogin').action, checkCallBack);
+}
+
+
+function getNWords(txt)
+{
+  var c = 0;
+  var i = 0;
+  var res = "";
+  var ch = "";
+  while ((c < 20) && (i < txt.length))
+  {
+    ch = txt.charAt(i);
+    if (ch == ' ') c++;
+    res = res + ch;
+    i++;
+  }
+
+  return res;
+
+}
+
+function getWITitle(txt)
+{
+  var pos1 = txt.indexOf("\n");
+  var pos2 = txt.indexOf(".");
+  if ((pos1 > 0) && (pos2 > 0))
+  {
+    if (pos1 > pos2) 
+      pos = pos2;
+    else
+      pos = pos1;
+  }
+  else
+  {
+    if (pos1 > 0)
+      pos = pos1;
+    else
+      pos = pos2; 
+  }
+//alert(pos);    
+  if ((pos > 2) && (pos < 250))
+  {
+    return txt.substring(0, pos);
+  }
+  else 
+    return getNWords(txt);
+}
+ 
+function workItemCreationCanceled(){
+   disableViewMenu(false);
+   textToSearch = "";
+}  
+
+var urlWI = "";
+var selectedText = ""; 
+var stateSelected = true;
+var textToSearch = "";
+
+function workItemCreated(projectId, id, title, descriptionHtml){
+    showProgressBar("$localization.getValue('wiki.form.progress.label.processing')");
+    var params = "selection=" + textToSearch + "&id=" + id + "&project=" + projectId;
+    var url = urlWI ;
+    location.href = url + "?" + params;
+    textToSearch = "";
+}
+
+function getSelText(){
+       var txt = "";
+       if (window.getSelection)
+       {
+          txt = window.getSelection();
+       }
+       else 
+       if (document.getSelection)
+       {
+          txt = document.getSelection();
+       }
+       else if (document.selection)
+       {
+          txt = document.selection.createRange().text;
+       }
+       else return "";
+//alert(txt.toString());
+       return  txt.toString();
+}
+
+function  checkTextSelection(){
+  selectedText = getSelText();	
+  isSelected = (selectedText != ""); 
+  var cls = "";
+  if (isSelected != stateSelected) 
+  {
+    stateSelected = isSelected;
+    if (stateSelected)
+      cls = "enab"
+    else
+      cls = "disab";
+    if ($('formaction_extract'))
+       $('formaction_extract').className = cls;
+  }
+}
+
+function extractText(baseurl, urlHash){
+       txt = selectedText;
+       hiddeMenuAll();
+       if ((txt == "") || (disbaleEditButtonsState)) return;
+       textToSearch = selectedText; 
+       urlWI = baseurl;
+       disableViewMenu(true);
+       top.createWorkitem(getWITitle(txt), txt, urlHash);
+}
+
+function testExtractPreviewCallback(e, id) { 
+   var previewEl = document.getElementById("xextract");
+       var h = parseInt($('viewcontent').style.height);
+//alert(e);
+       var h1 = Math.round(h / 3);
+       var h2 = h - h1;
+       $('viewcontent').style.height = h1 + "px";
+       previewEl.style.height = h2 + "px";
+       previewEl.style.display = "block";
+
+       var editBlockEl = document.getElementById("viewcontent");
+
+      
+       previewEl.innerHTML = e;
+
+      //find id for WorkItem to evalute the code as it not work when called from AJAX
+   hideProgressBar();
+   selectedText = "";
+}
+
+function editOnClick(url)
+{
+
+    if (!disbaleEditButtonsState) 
+    {
+    
+      disableEditButtons(true); 
+      
+      if (!document.forms.edit)
+      {
+       
+       showProgressBar("$localization.getValue('wiki.form.progress.label.loading')");
+       document.location.href = url;
+       return true;
+      }
+        
+        document.forms.edit.action='$doc.getURL("edit", "editor=wiki&amp;create=1")'; 
+        if (document.forms.edit.onsubmit) 
+          document.forms.edit.onsubmit();
+        showProgressBarSetText("$localization.getValue('wiki.form.progress.label.loading')");
+        
+        executeCommand(document.getElementById('checkLogin').action, checkCallBack);
+     }
+     return false; 
+
+}
+</script>
+
+</script>
+
+#set($param = "")
+
+#if ($sectionNumber != 0)
+   #set($param = "section=$sectionNumber")
+#end
+
+#if((!$editor) || ($editor == ""))
+  #set($editor = $request.getParameter("editor"))
+#end
+
+
+#set ($editMode = true)
+#if ( ($editor != "wiki") && ($editor != "wysiwyg") || (!$editor) )
+  #set ($editMode = false)
+#end
+
+#set($create = $!request.getParameter("create"))
+#if($create != "")
+	#set($createParam = "&amp;create=1")
+#else
+	#set($createParam = "")
+#end
+
+##edit
+
+<table border=0>
+<tr>
+#set ($p = $doc.getParentForPanel())
+##p = $p |
+#set($pr = "")
+#set($pr = $xwiki.getProjectFromMixedSpace($p))
+##pr = $pr |
+#set($canCreateDocument =  $xwiki.canCreateDocument($pr))
+#set($canUseModules =  $xwiki.canUseModules() && !$inBaseline)
+
+#set($canImportModule = $xwiki.canImportModule($pr))
+#set($cannotUseReqIfReason = $xwiki.getCannotUseReqIfReason($pr))
+
+#if(!$isdoc)
+#if ( $doc.getName() =="Modules" )
+<td width=10 >&nbsp;</td>
+<td id="leftmenu_firsttd" style="white-space:nowrap;"></td>
+#end
+#if ( $doc.getName() =="WikiOverview" )
+<td>
+#set($newArtifactDialogConfiguration = $newArtifactDialogConfigurationFactory.create($pr,'_default') )
+#set($newArtifactDialogConfigurationJS = $newArtifactDialogConfiguration.toJavascript )
+	#if ($newArtifactDialogConfiguration.shouldBeShown)
+	<div id="createButt" class="enab" onClick="if(this.className == 'enab'){ $newArtifactDialogConfigurationJS }">
+         #xwikitopmenuentrystartjustimageButton("create_artifact.png" $localization.getValue('wiki.toolbar.menuItem.createNew.tooltip'))
+    </div>
+    #end    
+</td>
+
+#end
+#end
+
+###
+## Edit
+###
+<td>
+   #set($hasmodify=$xwiki.hasPermission("modify")) 	
+	#if($viewonly && !($editMode))
+   		#if(($spaceType == $TESTRUN) || ($spaceType == $PLAN))
+		    <div id="editButt" class= 
+		         #if(!$!rev)
+		            "enab" onClick="if(this.className == 'enab'){ showProperties('$doc.getProject($doc.space)/$doc.name');}" 
+		         #else
+		            "disab" 
+		         #end
+		    >  
+		           #if ($isCurrent)
+		             #xwikitopmenuentrystartimageButton("testRunProperties.png" $localization.getValue('definition.properties'))
+		           #end
+		        </div>
+		 #else
+		    <div id="editButt" class= 
+		         #if($hasmodify && !$doc.isGroupReadOnly() && !($editMode) && !$isDocCorrupted)
+		            "enab" onClick="if(this.className == 'enab'){ window.location = '$doc.getURL('edit', '$languageparams&editor=wiki&create=1')';}" 
+		         #else
+		            "disab" 
+		         #end
+		    >  
+		           #if ($isCurrent)
+		             #xwikitopmenuentrystartimageButton("edit_menu.gif" $localization.getValue('definition.edit'))
+		           #end
+		        </div>
+		 #end   
+	#end   
+#end
+
+
+</td>
+#if($viewonly && $editor)
+#if((!$showactions)||($showactions==1))
+#if($isdoc)
+
+###
+##  Save
+###
+<td>
+  #if (!$editMode)
+   <div name="formaction_save_only" id="formaction_save_only" class="disab" value="_save_">
+  #else
+    #if ($doc.IsEditNow()  || ($canEdit && $canEdit=="1"))
+      <script type="text/javascript">
+        setCanEdit();
+      </script>
+      <div name="formaction_save_only" id="formaction_save_only" value="_save_" class ="enab" onclick="if(this.className == 'enab') return executeSave1(true);" >
+      ##<div name="formaction_save_only" id="formaction_save_only" value="_save_" class ="enab" onclick="if(checkContentLinks()){ if (canEdit()){ document.forms.${formname}.action='$doc.getURL("save", $param)'; if (document.forms.${formname}.onsubmit) document.forms.${formname}.onsubmit();if (checkDocumentContent()) if (updateAttachNameMult2(document.forms['edit'], '$msg.get("doyouwanttoreplace")', '$msg.get("savechanges")'))   window.checkFrame.location.href = "$doc.getURL('view','xpage=checkpage')"; return false;}} else{ alert('$msg.get("LinkForbExpr")')}" >
+    #else
+      <div name="formaction_save_only" id="formaction_save_only" value="_save_" class ="disab" onclick="if(this.className == 'enab') return executeSave2(true);" >
+    #end
+  #end
+  #xwikitopmenuentrystartimageButton("save.gif" $localization.getValue('definition.save'))
+      </div>
+</td>
+<td>
+  #if (!$editMode)
+   <div name="formaction_save" id="formaction_save" class="disab" value="_save_">
+  #else
+    #if ($doc.IsEditNow()  || ($canEdit && $canEdit=="1") )
+      <script type="text/javascript">
+        setCanEdit();
+      </script>
+      <div name="formaction_save"  id="formaction_save" value="_save_" class ="enab" onclick="if(this.className == 'enab') return executeSave1(false);" >
+      ##<div name="formaction_save" id="formaction_save" value="_save_" class ="enab" onclick="if(checkContentLinks()){ if (canEdit()){ document.forms.${formname}.action='$doc.getURL("save", $param)'; if (document.forms.${formname}.onsubmit) document.forms.${formname}.onsubmit();if (checkDocumentContent()) if (updateAttachNameMult2(document.forms['edit'], '$msg.get("doyouwanttoreplace")', '$msg.get("savechanges")'))   window.checkFrame.location.href = "$doc.getURL('view','xpage=checkpage')"; return false;}} else{ alert('$msg.get("LinkForbExpr")')}" >
+    #else
+      <div name="formaction_save"  id="formaction_save" value="_save_" class ="disab" onclick="if(this.className == 'enab') return executeSave2(false);" >
+    #end
+  #end
+  #xwikitopmenuentrystartimageButton("save.gif" $localization.getValue('wiki.toolbar.button.saveAndClose')) 
+      </div>
+</td>
+###
+##  Cancel
+###
+<td>
+  #if (!$editMode)
+    <div id="formaction_cancel" name="formaction_cancel" class="disab" value="_cancel_">
+  #else
+    <div id="formaction_cancel" name="formaction_cancel" class="enab"  value="_cancel_" onclick="if(this.className == 'enab') cancelEdit();">
+  #end
+    #xwikitopmenuentrystartimageButton("cancel.gif" $localization.getValue('definition.cancel'))
+   </div>
+</td>
+#if($viewonly)
+   #set( $SepPic = 'separatorbig.gif' )
+#end
+<td style="background-image: url('$xwiki.getSkinFile($SepPic)'); background-position: center; background-repeat: no-repeat;">
+&nbsp;
+</td>
+<td>
+  #if (!$editMode)
+    <div id="formaction_plain" name="formaction_plain" class="disab" value="_plain_">
+    #xwikitopmenuentrystartformatButton("formaction_plain_button" $localization.getValue('wiki.toolbar.button.wikiMarkup') "wikiSyntaxButton")
+  #else
+    <div id="formaction_plain" name="formaction_plain" class="disabButton"  value="_plain_" onclick="if (this.className != 'disab') switchToPlain();">
+    #xwikitopmenuentrystartformatButton("formaction_plain_button" $localization.getValue('wiki.toolbar.button.wikiMarkup') "wikiSyntaxButtonToggle")
+  #end
+   </div>
+</td>
+<td>
+  #if (!$editMode)
+    <div id="formaction_rich" name="formaction_rich" class="disab" value="_rich_">
+  #else
+    <div id="formaction_rich" name="formaction_rich" class="enabButton"  value="_rich_" onclick="if (this.className != 'disab') executeCommand(document.getElementById('checkLoginSW').action, checkCallBack);">
+  #end
+    #xwikitopmenuentrystartformatButton("formaction_rich_button" $localization.getValue('wiki.toolbar.button.richText') "wikiSyntaxButton")
+   </div>
+</td>
+<script type="text/javascript">
+var wiki_rich_editor_on = false;
+
+function setRichToPlain(){
+	if (wiki_rich_editor_on){
+		setToTextarea(); // defined in GWT in com.polarion.portal.js.wiki.editor.WikiEditor.publishFunctions()
+	}
+}
+function executePreview(){
+	setRichToPlain();
+	executeCommand(document.getElementById('checkLoginP').action, checkCallBack);
+}
+
+function handleErrorMessage(message){
+	handleWikiError(message);
+	cancelEditSaveOnly();
+	hideProgressBar();
+}
+
+function handleErrorException(messageElement, exceptionElement){
+	if(document.all){
+		handleWikiException(messageElement != null ? messageElement.innerText : "$localization.getValue('wiki.message.exceptionOccured')", exceptionElement != null ? exceptionElement.innerText : "Exception occured");
+	}else{
+		handleWikiException(messageElement != null ? messageElement.textContent : "$localization.getValue('wiki.message.exceptionOccured')", exceptionElement != null ? exceptionElement.textContent : "Exception occured");
+	}
+	cancelEditSaveOnly();
+	hideProgressBar();
+}
+
+function handleErrorMessage2(element){
+	if(document.all){
+		handleWikiError(element.innerText);
+	}else{
+		handleWikiError(element.textContent);
+	}
+	cancelEditSaveOnly();
+	hideProgressBar();
+}
+
+function prepareSave(saveOnly){
+	//if(saveOnly){ 
+		//showProgressBar("Saving...");
+		//document.getElementById("progressbar").hide = true;
+		document.forms.${formname}.target="wiki_save_frame";	
+		document.forms.${formname}.saveonly.value="true";
+		fullSave = !saveOnly;
+	//}else{
+	//	document.getElementById("progressbar").hide = false;		
+	//	document.forms.${formname}.target="working_area";	
+	//	document.forms.${formname}.saveonly.value="false";
+	//}
+}
+
+function disableEditingAttachments(){
+	var attTable = document.getElementById("attTable");
+	if (attTable != null) {
+		var children = attTable.getElementsByTagName('a');
+		if (children != null) {
+			for (var i = 0; i < children.length; i++) {
+    			if (children[i].getAttribute('name') == 'buttonD') {
+					children[i].parentNode.removeChild(children[i]);
+   				}
+  			}
+  		}
+	}
+}
+
+function executeSave1(saveOnly){ 
+	if (!canEdit())
+        return;
+
+	setRichToPlain();
+	prepareSave(saveOnly);
+	if(checkContentLinks()){ 
+      	document.forms.${formname}.action='$doc.getURL("save", $param)'; 
+      	if (document.forms.${formname}.onsubmit) 
+      		document.forms.${formname}.onsubmit();
+      	if (checkDocumentContent(saveOnly)) 
+      		if (updateAttachNameMult2(document.forms['edit'], '$localization.getValue("wiki.label.doYouWantToReplaceFileNameWith")', '$localization.getValue("wiki.label.saveChangedFields")'))  
+      			prev = "$doc.getURL("view")";
+      			executeCommand(document.getElementById('checkLogin').action, checkCallBack);
+      	return false;
+
+	} else { 
+		alert('$localization.getValue("wiki.message.wikiUnsupportedLinks")') 
+	}
+}
+
+function executeSave2(saveOnly){
+	if (!canEdit()) {
+       return;
+    }
+    
+	saveWiki(saveOnly); // published in WikiDocumentSaveDialog - calls executeSaveInternal when successful
+	return false;
+}
+
+function executeSaveInternal(saveOnly) {
+	prepareSave(saveOnly);
+	
+	if (checkContentLinks()) { 
+	  	document.forms.${formname}.action='$doc.getURL("save", $param)'; 
+	  	if (document.forms.${formname}.onsubmit) {
+	  		document.forms.${formname}.onsubmit();
+	  	}
+	  	if (checkDocumentContent(saveOnly)) {
+	  		if (updateAttachNameMult2(document.forms['edit'], "$localization.getValue('wiki.label.doYouWantToReplaceFileNameWith')", "$localization.getValue('wiki.label.saveChangedFields')")) {
+	  			prev = "$doc.getURL("view")";
+              	cancelCancelEditFlag=false;
+              	disableEditingAttachments();
+              	executeCommand(document.getElementById('checkLogin').action, checkCallBack);
+			}
+		}
+	  	return false;
+	} else {
+		alert('$localization.getValue("wiki.message.wikiUnsupportedLinks")'); 
+	}
+} 
+
+function switchToPlain(){
+	if (wiki_rich_editor_on){
+		document.getElementById("plain_wiki_editor").style.display = "block";
+		document.getElementById("rich_wiki_editor").style.display = "none";
+		
+		setRichToPlain();
+		
+		wiki_rich_editor_on = false;
+	}
+	if (document == null) {
+		return;
+	}
+	showRightPanel(true);
+	document.getElementById("formaction_plain_button").className = "wikiSyntaxButtonToggle";
+	document.getElementById("formaction_rich_button").className = "wikiSyntaxButton";
+}
+var pageType = "$doc.getDoc().getType()";
+if (pageType == "active"){
+	document.getElementById("formaction_plain_button").style.display = "none";
+	document.getElementById("formaction_rich_button").style.display = "none";
+}
+
+function switchToRich(){
+	if (pageType == "active"){
+		return;
+	}
+	if (!wiki_rich_editor_on){
+		createWikiEditor("rich_wiki_editor", "content", "$doc.getDoc().getProject()", "$doc.getDoc().getSpaceName()", "$doc.getDoc().getName()");
+		// defined in GWT in com.polarion.portal.js.wiki.editor.WikiEditor.publishFunctions()
+
+		var i = 0;
+		var returnValue = -1;
+		var f = function() {
+		    // see com.polarion.portal.js.wiki.editor.WikiEditor.EXIT_OK
+			if ((returnValue = getFromTextarea()) == 1) {
+				document.getElementById("plain_wiki_editor").style.display = "none";
+				document.getElementById("rich_wiki_editor").style.display = "block";
+				updateHeight(); // defined in GWT in com.polarion.portal.js.wiki.editor.WikiEditor.publishFunctions()
+
+				wiki_rich_editor_on = true;
+			} else {
+				// fallback to plaintext editor
+				// see com.polarion.portal.js.wiki.editor.WikiEditor.WINDOW_CONFIRM
+				if (returnValue == 2) {
+					switchToPlain();
+					return;
+				}
+				i++;
+				if (i < 30) {
+					setTimeout(f, 100);
+				}
+			}
+		}
+
+		setTimeout(f, 100);
+	}
+	showRightPanel(false);
+	document.getElementById("formaction_plain_button").className = "wikiSyntaxButton";
+	document.getElementById("formaction_rich_button").className = "wikiSyntaxButtonToggle";
+}
+function checkContentLinks()
+{
+	var content = document.forms['edit'].content.value;
+    
+    var nextPreInd = content.indexOf("{pre}");
+    while(nextPreInd != -1){
+    	var nextPreEndInd = content.indexOf("{/pre}", nextPreInd);
+    	if (nextPreEndInd != -1){
+    		content = content.substring(0, nextPreInd) + content.substring(nextPreEndInd + 6); 	
+    		nextPreInd = content.indexOf("{pre}");	
+    	}else
+    		nextPreInd = content.indexOf("{pre}", nextPreInd + 5);
+    	
+    }
+    
+	var nextLinkInd = content.indexOf('[');
+
+	while( nextLinkInd != -1 )
+	{
+		var nextLinkEndInd = content.indexOf(']',nextLinkInd);
+
+		if(nextLinkEndInd == -1)
+			break;
+
+		var link = content.substring(nextLinkInd + 1, nextLinkEndInd);
+
+
+		if( link.indexOf("{wi:") != -1 )
+			return false;
+
+		if( link.indexOf("{project:") != -1 )
+			return false;
+
+		if( link.indexOf("{table}") != -1 )
+			return false;
+
+		nextLinkInd = content.indexOf('[', nextLinkEndInd);
+	}
+
+	return true;
+
+}
+</script>
+#end
+#end
+#end
+###
+##  Preview
+###
+#if ($editMode)
+  <td>
+     <div name="formaction_preview" id="formaction_preview" value="_preview_"  class ="enab" onclick="if(this.className == 'enab') executePreview();">
+     #xwikitopmenuentrystartimageButton("#" "$localization.getValue('wiki.toolbar.button.preview')&nbsp;")
+     </div>
+  </td>
+#end
+##<td style="background-image: url('$xwiki.getSkinFile($SepPic)'); background-position: center; background-repeat: no-repeat;">
+##&nbsp;
+##</td>
+#if(!$notrev && !$inBaseline)
+
+  #set($wikiViewUrl = $doc.getURL("view"))  
+  #if($isTestRun)
+    #set($currentTestRun = $testRun.getTestManagementService().getTestRun($testRun.getProjectId(), $testRun.getId()))
+    
+    #if(!$currentTestRun.isUnresolveable())
+      #if($currentTestRun.isRichPageTestRun())
+   	    #set($showCurrentClickHandler = "top.showTestRunOverview(true)")
+   	  #else
+   	    #set($showCurrentClickHandler = "document.location.href='$wikiViewUrl'")   
+      #end
+    #else
+      #set($showCurrentClickHandler = "")
+    #end
+    
+  #else
+    #set($showCurrentClickHandler = "document.location.href='$wikiViewUrl'")
+  #end
+  
+  #if($showCurrentClickHandler != "")
+    <td>
+	    <div id="history_back" onclick="$showCurrentClickHandler" style="cursor: pointer;">#xwikitopmenuentrystartimageButton("#" $localization.getValue("form.workitem.button.showcurrent.label"))</div>
+    </td>
+  #end
+#end
+<td>
+  #if($hasedit && !$isReadOnly && !$editor)
+    #if($isdoc)
+      #if ( !$editMode && !$doc.isGroupReadOnly())
+        <div id="actionButt" onclick = "if(this.className == 'enab') startmenu(this);" class="enab">
+      #else
+        <div class="disab" id="actionButt">
+      #end
+
+
+     ###
+     ## Actions
+     ###
+     #xwikitopmenuentrystartimage("operations.png" "#" " ")
+  
+
+     ###
+     ## New Page / New Space
+     ###
+     #set($hascreate = $xwiki.hasPermission("create"))
+     #set($canCreateDocument =  $xwiki.canCreateDocument($doc.projectId()))
+     #if($doc.isDocumentPage() && ($spaceType == $WIKI) && !$inBaseline && !$isMyPolarion)
+		#set($newArtifactDialogConfiguration = $newArtifactDialogConfigurationFactory.create($doc.projectId(), $doc.getDocSpace()) )
+		#set($newArtifactDialogConfigurationJS = $newArtifactDialogConfiguration.toJavascript )
+		
+   	    #if ($newArtifactDialogConfiguration.shouldBeShown)
+       	    #submenuitemimg($newArtifactDialogConfigurationJS $localization.getValue('wiki.toolbar.menuItem.newArtifact') "/polarion/ria/images/actions/create_artifact.png")
+   	    #else
+       	    #submenuitemimgdisabled("javascript:return false;" $localization.getValue('wiki.toolbar.menuItem.newArtifact') "/polarion/ria/images/actions/create_artifact.png")
+   	    #end
+      #end
+
+	  #if($spaceType == $TESTRUN)
+	  	#submenuitemimgPDF("javascript:showTestRunRecords('$doc.getProject($doc.space)/$doc.name')" $localization.getValue('wiki.toolbar.menuItem.testRunRecords') $xwiki.getSkinFile("chart_bar.png"))
+	  #end
+
+      ###
+      ## --------------------- 
+      ###
+      #if (!$isMyPolarion && !($spaceType == $PLAN))
+        #submenuSeparator()
+      #end
+	  #if(($spaceType == $TESTRUN) || ($spaceType == $PLAN))
+	      #if($viewonly && $hasmodify && !$doc.isGroupReadOnly() && !($editMode) && !$isDocCorrupted)
+	        #if($spaceType == $TESTRUN)
+	          #set($linktext = $localization.getValue('wiki.toolbar.menuItem.customizeTestRunPage'))	        
+		  	  #submenuitemimgPDF("javascript:window.location = '$doc.getURL('edit', '$languageparams&editor=wiki&create=1')';" $linktext $xwiki.getSkinFile("edit_menu.gif"))
+		  	#end
+		  #end
+		  #if($spaceType == $TESTRUN)
+	        #if ($notrev && $hasmodify && $xwiki.hasPermission("modifyTestRuns"))
+	        	#if($!testRun.hasManualTestCaseSelection())
+	        		#submenuitemimgPDF("javascript:selectTestCases()" $localization.getValue('wiki.toolbar.menuItem.selectTestCases') "/polarion/ria/images/actions/selectTestCases.png")
+	        	#end
+	        #end
+      
+	        #if ($notrev && $xwiki.hasPermission("createTestRun"))
+		  	  #submenuitemimgPDF("javascript:saveTestRunAsTemplate('$doc.getProject($doc.space)/$doc.name')" $localization.getValue('wiki.toolbar.menuItem.saveTestRunAsTemplate') $xwiki.getSkinFile("saveAsTemplate.png"))
+		    #end
+		  #else ## PLAN
+		    #set($linkOpenInTable = $plansUtil.getOpenInTableUrl($plan)) 
+		    #set($linkPrioritizePlan = $plansUtil.getPrioritizationUrl($plan)) 
+		    #if (!$plan.isTemplate())
+		    	#submenuitemimgPDFtarget("$linkOpenInTable" $localization.getValue('wiki.toolbar.menuItem.openInTable') "/polarion/ria/images/actions/openInTable.png" "_blank")	
+		    	#if (!$inBaseline)	    
+		        	#submenuitemimgPDFtarget("$linkPrioritizePlan" $localization.getValue('wiki.toolbar.menuItem.prioritizePlan') "/polarion/ria/images/actions/prioritizePlan.png" "_top")
+		    	#end
+		    #end
+	      #end
+	  #end
+
+      ###
+      ## Export to PDF
+      ###pdfdialogaction
+      #if($isdoc && !$isDocCorrupted)
+        #if(!$doc.cantPrintAndPDF() && !$doc.getName().equalsIgnoreCase("dashboard"))
+			#submenuitemimgPDF("javascript:handlePDFNew();" $localization.getValue('wiki.toolbar.menuItem.exportToPdf') $xwiki.getSkinFile("pdf.gif"))
+		#else
+		    ##tooltip should be here
+			#submenuitemimgdisabled("#" $localization.getValue('wiki.toolbar.menuItem.exportToPdf') $xwiki.getSkinFile("pdf.gif"))
+		#end
+        ###submenuitemimgPDFdialog($doc.getURL("requesttoopenpdfdialogaction", $docvariant) $msg.get("pdf") $xwiki.getSkinFile("pdf.gif"))
+      #end
+      
+      #if( ($isdoc && !$isDocCorrupted) || $doc.getName().equalsIgnoreCase("dashboard"))
+        #if(!$doc.cantPrintAndPDF() || $doc.getName().equalsIgnoreCase("dashboard") )
+			#submenuitemimgPrint("javascript:handlePrint();" $localization.getValue('wiki.toolbar.menuItem.print') $xwiki.getSkinFile("print.gif"))
+		#else
+		    ##tooltip should be here
+			#submenuitemimgdisabled("#" $localization.getValue('wiki.toolbar.menuItem.print') $xwiki.getSkinFile("print.gif"))
+		#end
+        ###submenuitemimgPDFdialog($doc.getURL("requesttoopenpdfdialogaction", $docvariant) $msg.get("pdf") $xwiki.getSkinFile("print.gif"))
+      #end
+      ###
+      ## Plan customization
+      ###
+      	  #if($spaceType == $PLAN)
+	          #if($viewonly && $hasmodify && !$doc.isGroupReadOnly() && !($editMode) && !$isDocCorrupted)
+	              #set($linktext = $localization.getValue('wiki.toolbar.menuItem.customizePlanPage'))
+		  	      #submenuitemimgPDF("javascript:window.location = '$doc.getURL('edit', '$languageparams&editor=wiki&create=1')';" $linktext $xwiki.getSkinFile("edit_menu.gif"))
+		      #end
+		  #end
+		  
+	  ###
+	  ## Plan conversion to Rich Page
+	  ###
+          #if(($spaceType == $PLAN) || ($spaceType == $TESTRUN) || ($isMyPolarion) || ($isHomePage))        
+              #if($viewonly && !$doc.isGroupReadOnly() && !($editMode) && !$isDocCorrupted)
+                  #set($linktext = $localization.getValue('wiki.toolbar.menuItem.convertToRichPage'))
+                  #if ($spaceType == $PLAN && $hasmodify)
+                  	#submenuitemimgPDF("javascript:handlePlanSwitchToRichPage();" $linktext $xwiki.getSkinFile("upgradeRichPage.png"))
+                  #elseif ($spaceType == $TESTRUN && $hasmodify)
+                  	#submenuitemimgPDF("javascript:handleTestRunSwitchToRichPage();" $linktext $xwiki.getSkinFile("upgradeRichPage.png"))
+                  #elseif ($isMyPolarion && $hasmodify)
+                  	#submenuitemimgPDF("javascript:top.switchUserHomePageWikiToRP();" $linktext $xwiki.getSkinFile("upgradeRichPage.png"))
+                  #elseif ($isHomePage && $xwiki.hasPermission("delete") && $xwiki.hasPermission("createRichPage"))
+                  	#submenuitemimgPDF("javascript:handleSpaceHomePageSwitchToRichPage();" $linktext $xwiki.getSkinFile("upgradeRichPage.png"))
+                  #end                  	
+              #end
+          #end
+	  ###
+	  ## Change Title
+	  ###
+	  #if($spaceType == $WIKI)
+		#if($isHomePage)
+			#set($menuItemTitle = "$localization.getValue('wiki.toolbar.menuItem.changeSpaceTitle')")
+		#else
+			#set($menuItemTitle = "$localization.getValue('wiki.toolbar.menuItem.changeTitle')")
+		#end
+		
+		#if($hasmodify && $notrev)
+			#submenuitemimgPDF("javascript:handleChangeWikiTitle();" $menuItemTitle $xwiki.getSkinFile("textfield_rename.png"))
+        #else
+          #submenuitemimgdisabled("#" $menuItemTitle $xwiki.getSkinFile("textfield_rename.png"))
+        #end
+	  #end
+	  
+      ###
+      ## Delete
+      ###
+      #if($spaceType == $MODULE)	
+        #submenuitemimgPDF("javascript:editModuleProperties('$doc.getProject($doc.space)','$doc.name')" $localization.getValue('wiki.toolbar.menuItem.editModuleProperties') $xwiki.getSkinFile("wikiback2.gif")) 
+        #submenuitemimgPDF("javascript:duplicateModule2('$doc.getProject($doc.space)','$doc.name')" $localization.getValue('wiki.toolbar.menuItem.reuseModule') $xwiki.getSkinFile("duplicate_module.gif")) 
+        #submenuitemimgPDF("javascript:removeModule('$doc.getProject($doc.space)','$doc.name')" $localization.getValue('wiki.toolbar.menuItem.deleteModule') $xwiki.getSkinFile("delete.gif"))
+        #submenuitemimgPDF("javascript:convertToDocument('$doc.getProject($doc.space)','$doc.name')" $localization.getValue('wiki.toolbar.menuItem.convertToDocument') $xwiki.getSkinFile("convertModuleIcon.png"))        
+      #elseif($spaceType == $TESTRUN)
+      	#if($hasdelete && $notrev)
+        	#submenuitemimgPDF("javascript:removeTestRun('$doc.getProject($doc.space)/$doc.name')" $localization.getValue('definition.delete') $xwiki.getSkinFile("delete.gif"))
+        #end
+      #elseif($spaceType == $PLAN)
+      	#if($hasdelete && $notrev)
+        	#submenuitemimgPDF("javascript:removePlan('$doc.getProject($doc.space)/$doc.name')" $localization.getValue('definition.delete') $xwiki.getSkinFile("delete.gif"))
+        #end
+      #else
+        #if($hasdelete && !$isTemplate && $notrev)
+          #submenuitemimgPDF($doc.getURL("delete", $languageparams) $delmsg $xwiki.getSkinFile("delete.gif"))
+        #else
+          #submenuitemimgdisabled("#" $localization.getValue('definition.delete') $xwiki.getSkinFile("delete.gif"))
+        #end
+      #end
+
+      ###
+      ## --------------------- 
+      ###
+      
+    
+
+      #xwikitopmenuentryend()
+    #end
+  #end
+  </td>
+###
+## Extract WI
+###
+#if (!$doc.isGroupReadOnly() && !$inBaseline && !$isMyPolarion)  
+  #if(!$doc.isTemplate() && !$doc.getSpace().endsWith($TESTRUN) && !($spaceType == $PLAN))
+    #if($isdoc)
+      #if($isdoc)
+        #set($extractURL= $doc.getURL("extract"))
+      #end
+
+      <td width=0></td>
+      <td style="white-space:nowrap;">
+         #if (!$editMode && $isCurrent)
+           <div name="formaction_extract" id="formaction_extract" class="disab" value="_extract_" title="$localization.getValue('wiki.toolbar.button.extractWI.tooltip')" style="cursor: pointer;" onClick="if(this.className == 'enab') extractText('$extractURL', '$doc.getUrlHash()');">
+              #xwikitopmenuentrystartimageButtonJS("extract1.gif" $localization.getValue('wiki.toolbar.button.extractWI') "javascript:extractText('$extractURL', '$doc.getUrlHash()')" $localization.getValue('wiki.toolbar.button.extractWI.tooltip'))
+           </div>
+         #end
+      </td>
+    #end
+  #end
+
+#end
+
+#set($param = "")
+#if($request.getParameter("section"))
+    #set($sectionNumbers = $request.getParameter("section"))
+    #set($param = "section=$sectionNumbers")
+#end
+#if ($sectionNumber != 0)
+    #set($param = "section=$sectionNumber")    
+#end
+
+#if($hasedit && !$isReadOnly)
+<td width=100%>
+&nbsp;
+<td>
+
+#if( !$doc.isTemplate() )
+
+<td>
+
+#if($isdoc && !$plan)
+	#if (!$isTemplate)
+		#if ($viewer && ($viewer == "view"))
+			#set($attsize = "$doc.attachmentList.size()")
+			<div class="enab" onclick="showPanel('attachmentPanel')" title="$localization.getValue('wiki.toolbar.button.attachments', $attsize)">			
+			  <table cellspacing="0" cellpadding="0" class="com_polarion_reina_web_js_widgets_JSPopupButton_Button bt-noborder">
+					<tbody>
+						<tr>
+							<td style="width:16px;padding: 0 6px;">
+							 		<span>
+								 		<img src="/polarion/ria/images/control/attachmentsScroll.png" />
+								 </span>	 				  				
+							</td>
+						</tr>
+					</tbody>
+				</table> 
+			</div>
+			
+		#else
+			&nbsp;	
+		#end
+	#else
+			&nbsp;	
+	#end
+</td>
+
+#if(($spaceType == $MODULE) || ($spaceType == $WIKI))
+<td style="padding-right: 20px;">
+	#if ($viewer && ($viewer == "view") && $doc.getSpace($doc.getSpace()) != "_users")
+		#set($backsize = "$doc.getBacklinks().size()")
+		<div class="enab" onclick="showPanel('backlinksPanel')"  title="$localization.getValue('wiki.toolbar.button.backlinks',$backsize)">			
+		  <table cellspacing="0" cellpadding="0" class="com_polarion_reina_web_js_widgets_JSPopupButton_Button bt-noborder">
+				<tbody>
+					<tr>
+						<td style="width:16px;padding: 0 6px;">
+						 		<span>
+							 		<img src="/polarion/ria/images/control/linksScroll.png"/>
+							 </span>	 				  				
+						</td>
+					</tr>
+				</tbody>
+			</table> 
+		</div>
+	#else
+		&nbsp;	
+	#end
+#end
+</td>
+#end
+
+#end
+
+  #if($doc.isDocumentPage() && !$doc.isTemplate() && !$doc.isGroupReadOnly() && !$editMode)
+  <td>
+    <div class="enab" title="$localization.getValue('definition.history')">		
+    #set($historyButtonClass = "com_polarion_reina_web_js_widgets_JSPopupButton_Button")
+  	<table cellspacing="0" cellpadding="0" onmouseover="" onmouseout="" onclick="" class="$historyButtonClass">
+  		<tbody>
+  			<tr>
+  				<td style="padding-left:6px;text-align:right;width:16px;vertical-align:middle;padding-right:6px;">
+  				 		#if ($spaceType == $TESTRUN)
+	  				 		<a onclick="top.publishFromFrame('show_testrun_history', 'true');">
+	  				 	#elseif  ($spaceType == $PLAN)
+	  				 		<a onclick="top.publishFromFrame('show_plan_history', 'true');">
+  						#else			 			
+			 				<a href="#if($odoc)$odoc.getURL($odoc, "history", "show=history", true)#else$doc.getURL("history", "show=history", true) #end" onclick="return changeDiscard('$localization.getValue("wiki.message.discardChanges")');">
+  				 		#end
+							<img id="DOM_932" src="/polarion/ria/images/control/history.png" class="GtwaxwzKSB">
+						</a>
+										  				
+  				</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	</div>  
+  </td>
+  #end
+  #if (!$editMode)
+  <td style="padding: 0 6px;">
+    <img id="refresh_splitter" src="$xwiki.getSkinFile('separatorbig.gif')"/>
+  </td>
+  <td style="padding-right: 4px;">
+  	<div class="enab">			
+	  <table cellspacing="0" cellpadding="0" class="com_polarion_reina_web_js_widgets_JSPopupButton_Button">
+			<tbody>
+				<tr>
+					<td style="width:16px;padding: 0 6px;">
+						 		<img id="refresh_image" src="/polarion/ria/images/actions/refreshBtn.png" onclick="#if (($spaceType == $TESTRUN) || ($spaceType == $PLAN)) refreshWikiWindow(false) #else refreshWikiWindow();#end" title="$localization.getValue('definition.refresh')"/>
+					</td>
+				</tr>
+			</tbody>
+		</table> 
+	</div>
+  </td>
+  	#if(($spaceType == $MODULE) && $notrev)
+  	<td style="padding-right: 4px;">
+  	<div style="width:77px;"></div>
+  	</td>
+  	#end
+  #end
+
+
+</tr>
+</table>
+
+#end
+
+</div>
+
+</div>
+
+#if($enabledMenuShow)
+<div id="panelSwitcher" onclick="showMenubar()">
+	<span class="handle">$localization.getValue('wiki.toolbar.button.expandTools')</span>										
+</div>
+#end
+
+<script>
+	#if ($notrev) 
+		showTrackerSwitch();
+	#else 
+		hideTrackerSwitch();
+	#end
+</script>				
+
+#end
+
+<iframe style="display:none;" name="wiki_save_frame"></iframe>

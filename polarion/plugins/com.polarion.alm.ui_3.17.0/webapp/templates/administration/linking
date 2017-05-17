@@ -1,0 +1,15 @@
+1 Linking
+
+{linking}
+
+1.1 Quick Help
+
+1.1.1.1.1.1 Auto Suspect
+When checked, the "suspect" attribute will automatically be set to ~~true~~  for new links between Work Items. The suspect attribute causes owners of linked Work Items to be notified when some change occurs in the "suspect" Work Item (i.e. the one with the suspect attribute set on it). This alerts owners of impacted items that there has been some change that may possible affect an item they own.
+
+1.1.1.1.1.1 External Linking
+External linking means creating links between Work Items that exist in different repositories. This can only be done in installations where Polarion is configured to support multiple repositories. When checked, the External Linking option enables end users to link Work Items across repositories.
+
+1.1.1.1.1 Link Roles
+#info("Work Item Link roles are configured in Administration &gt; Work Items &gt; Enumerations, *{hyperlink:/administration/workitems/enumerations}*.")
+\\

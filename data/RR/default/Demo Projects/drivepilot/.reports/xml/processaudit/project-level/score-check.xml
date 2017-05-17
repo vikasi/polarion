@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="drivepilot" id="score-check" tag="20130523_1550">
+    <structure-element id="root" provider="root" type="root">
+        <value-fact-element id="Total" provider="Score" type="Total">
+            <value>0.57</value>
+            <value-fact-element id="Release Planning" provider="Score" type="Group">
+                <value>0.0</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Release Planning</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>0.0</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>-1.0</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>-1.0</value>
+                    </property>
+                </properties>
+                <value-fact-element id="CurrentReleasePlanning" provider="Score" type="execution">
+                    <value>0.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isCurrentReleaseExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UserStoriesExistence" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>User story work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="isWorkitemsExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="ReleasePlanExistence" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>User story work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="isCurrentReleaseExist">
+                            <value>false</value>
+                        </property>
+                        <property id="assignedUserStories">
+                            <value>0</value>
+                        </property>
+                        <property id="isUserStoryExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CorrectUserStoriesNumber" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>User story work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="isCurrentReleasePlanExist">
+                            <value>false</value>
+                        </property>
+                        <property id="userStoriesEstimate">
+                            <value>0.0</value>
+                        </property>
+                        <property id="releaseDuration">
+                            <value>0.0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="SplitReleasesToIterations" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current release isn't planned</value>
+                        </property>
+                        <property id="isCurrentReleaseExist">
+                            <value>false</value>
+                        </property>
+                        <property id="iterations">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CorrectlyCreatedUserStories" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>User story work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStoryCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UserStoriesCorrectEsimation" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>User story work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStoriesCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="RightIterationDuration" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current release isn't planned</value>
+                        </property>
+                        <property id="isCurrentReleaseExist">
+                            <value>false</value>
+                        </property>
+                        <property id="violatedIterationCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalIterationCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="SpikeSolution" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>User story work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="violationCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStories">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+            <value-fact-element id="Iteration Planning" provider="Score" type="Group">
+                <value>1.0</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Iteration Planning</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>1.0</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>-1.0</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>-1.0</value>
+                    </property>
+                </properties>
+                <value-fact-element id="CurrentIterationPlanning" provider="Score" type="execution">
+                    <value>1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isCurrentIterationExist">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="TaskExistence" provider="Score" type="execution">
+                    <value>1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isWorkitemsExist">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="IterationPlanningOrganization" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>User story work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="isCurrentIterationExist">
+                            <value>false</value>
+                        </property>
+                        <property id="isUserStoryExist">
+                            <value>false</value>
+                        </property>
+                        <property id="isTaskExist">
+                            <value>false</value>
+                        </property>
+                        <property id="assignedUserStories">
+                            <value>0</value>
+                        </property>
+                        <property id="assignedTasks">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="KeepProjectVelocity" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value> Work item type false doesn't exist in Tracker</value>
+                        </property>
+                        <property id="totalIterationEstimation">
+                            <value>0.0</value>
+                        </property>
+                        <property id="projectVelocity">
+                            <value>0.0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UserStoryToTaskDetalization" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value> Work item type requirement doesn't exist</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStories">
+                            <value>0</value>
+                        </property>
+                        <property id="isIterationExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="TaskCorrectEsimation" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Plan for current iteration isn't defined</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalTasks">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="PlanningFailedAcceptanceTests" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Defect work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="unplannedAcceptanceFailures">
+                            <value>0</value>
+                        </property>
+                        <property id="totalAcceptanceFailures">
+                            <value>0</value>
+                        </property>
+                        <property id="isCurrentIterationExist">
+                            <value>false</value>
+                        </property>
+                        <property id="isAcceptanceTestsExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="PlanningFailedAutomaticTests" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Defect work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="isCurrentIterationExist">
+                            <value>false</value>
+                        </property>
+                        <property id="unplannedAutomaticFailures">
+                            <value>0</value>
+                        </property>
+                        <property id="totalAutomaticFailures">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+            <value-fact-element id="Schedule Control" provider="Score" type="Group">
+                <value>-1.0</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Schedule Control</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>-1.0</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>-1.0</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>-1.0</value>
+                    </property>
+                </properties>
+                <value-fact-element id="ChangeIterationPlan" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Plan for current iteration isn't defined</value>
+                        </property>
+                        <property id="overdueCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalWorkitemsCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="TaskInAdvance" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Current release isn't planned or isn't split to iterations</value>
+                        </property>
+                        <property id="totalIterations">
+                            <value>0</value>
+                        </property>
+                        <property id="advanceScheduledIterations">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UnfinishedUserStories" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>User story work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="totalPassedReleasesCount">
+                            <value>0</value>
+                        </property>
+                        <property id="violatedReleases">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="UnfinishedWorkitems" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value> Work item type false doesn't exist</value>
+                        </property>
+                        <property id="violatedIterations">
+                            <value>0</value>
+                        </property>
+                        <property id="totalPassedIterationsCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="NotChangedTaskUserStoryEstimates" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>User story work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="violationCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalWorkitems">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+            <value-fact-element id="Quality Control" provider="Score" type="Group">
+                <value>0.8</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Quality Control</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>1.0</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>0.6</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>-1.0</value>
+                    </property>
+                </properties>
+                <value-fact-element id="TestsInPlace" provider="Score" type="execution">
+                    <value>1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="totalProjects">
+                            <value>1</value>
+                        </property>
+                        <property id="projectsWithTests">
+                            <value>1</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="AcceptanceTestsExistence" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Acceptance Test work item type doesn't exist in Tracker</value>
+                        </property>
+                        <property id="isWorkitemsExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CreateAcceptanceTest" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value> Work item type testcase doesn't exist</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                        <property id="totalUserStories">
+                            <value>0</value>
+                        </property>
+                        <property id="isReleaseExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="TestSuccessRatio" provider="Score" type="execution">
+                    <value>0.6</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="errorsCount">
+                            <value>1</value>
+                        </property>
+                        <property id="failuresCount">
+                            <value>1</value>
+                        </property>
+                        <property id="testsCount">
+                            <value>5</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+            <value-fact-element id="Process Organization" provider="Score" type="Group">
+                <value>0.5</value>
+                <properties>
+                    <property id="domainName">
+                        <value>Process Organization</value>
+                    </property>
+                    <property id="level-score1">
+                        <value>0.5</value>
+                    </property>
+                    <property id="level-score2">
+                        <value>0.5</value>
+                    </property>
+                    <property id="level-score3">
+                        <value>0.5</value>
+                    </property>
+                </properties>
+                <value-fact-element id="OftenBuilds" provider="Score" type="execution">
+                    <value>0.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isFreshBuilds">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="StaffedProjectTeam" provider="Score" type="rule-precondition-error">
+                    <value>-1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="rule-precondition-error-reason">
+                            <value>Project Customer role doesn't exist</value>
+                        </property>
+                        <property id="totalRequiredRoles">
+                            <value>0</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>0</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CollectiveCodeOwnership" provider="Score" type="execution">
+                    <value>1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>1</value>
+                        </property>
+                        <property id="isSourceCodeExistInRepository">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="MovePeopleAround" provider="Score" type="execution">
+                    <value>0.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="totalProcessedPackages">
+                            <value>2</value>
+                        </property>
+                        <property id="violationsCount">
+                            <value>2</value>
+                        </property>
+                        <property id="hasSourceDirectories">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="OftenIntegration" provider="Score" type="execution">
+                    <value>1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>2</value>
+                        </property>
+                        <property id="hasCodeIntegration">
+                            <value>true</value>
+                        </property>
+                        <property id="hasCodeIntegrationData">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="CodingGuidelinesExistence" provider="Score" type="execution">
+                    <value>0.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="isGuidelinesExist">
+                            <value>false</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+                <value-fact-element id="ChooseSystemMetaphor" provider="Score" type="execution">
+                    <value>1.0</value>
+                    <properties>
+                        <property id="level">
+                            <value>3</value>
+                        </property>
+                        <property id="isMetaphorExist">
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </value-fact-element>
+            </value-fact-element>
+        </value-fact-element>
+    </structure-element>
+</factbase>

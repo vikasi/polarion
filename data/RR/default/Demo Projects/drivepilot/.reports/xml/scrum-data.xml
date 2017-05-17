@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="elibrary" id="scrum-data" tag="2012-10-12">
+    <structure-element id="root" provider="root" type="root">
+        <structure-element id="iter3" provider="scrum-statistics" type="sprint">
+            <value-fact-element id="iter3/teamOne/team-capacity" provider="scrum-statistics" type="teamOne/team-capacity">
+                <value type="java.lang.Float">55.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter3/teamOne/estimated-planned-work" provider="scrum-statistics" type="teamOne/estimated-planned-work">
+                <value type="java.lang.Float">180.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter3/sprint-start" provider="scrum-statistics" type="sprint-start">
+                <value>2012-12-31</value>
+            </value-fact-element>
+            <value-fact-element id="iter3/sprint-end" provider="scrum-statistics" type="sprint-end">
+                <value>2013-01-12</value>
+            </value-fact-element>
+            <value-fact-element id="iter3/teamOne/remaining-planned-work" provider="scrum-statistics" type="teamOne/remaining-planned-work">
+                <value type="java.lang.Float">123.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter3/teamOne/velocity" provider="scrum-statistics" type="teamOne/velocity">
+                <value type="java.lang.Float">47.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter3/teamOne/normalized-velocity" provider="scrum-statistics" type="teamOne/normalized-velocity">
+                <value type="java.lang.Float">3.75</value>
+            </value-fact-element>
+            <value-fact-element id="iter3/teamOne/done-items" provider="scrum-statistics" type="teamOne/done-items">
+                <value type="java.lang.Integer">0</value>
+            </value-fact-element>
+            <value-fact-element id="iter3/teamOne/done-user-stories" provider="scrum-statistics" type="teamOne/done-user-stories">
+                <value type="java.lang.Integer">0</value>
+            </value-fact-element>
+            <value-fact-element id="iter3/remaining-release-work/version2" provider="scrum-statistics" type="remaining-release-work/version2">
+                <value type="java.lang.Float">720.0</value>
+            </value-fact-element>
+            <trend-value-fact-element id="iter3/teamOne-real-progress" provider="scrum-statistics" type="teamOne-real-progress">
+                <trend>
+                    <value tag="2012-12-31" type="java.lang.Float">180.0</value>
+                    <value tag="2013-01-02" type="java.lang.Float">168.4</value>
+                    <value tag="2013-01-03" type="java.lang.Float">151.7</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Completed</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="iter3/teamOne-ideal-progress" provider="scrum-statistics" type="teamOne-ideal-progress">
+                <trend>
+                    <value tag="2012-12-31" type="java.lang.Float">180.0</value>
+                    <value tag="2013-01-02" />
+                    <value tag="2013-01-03" />
+                    <value tag="2013-01-04" />
+                    <value tag="2013-01-08" />
+                    <value tag="2013-01-09" />
+                    <value tag="2013-01-10" />
+                    <value tag="2013-01-11" />
+                    <value tag="2013-01-12" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Ideal Progress</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="iter3/teamOne-real-prediction" provider="scrum-statistics" type="teamOne-real-prediction">
+                <trend>
+                    <value tag="2013-01-03" type="java.lang.Float">151.7</value>
+                    <value tag="2013-01-04" type="java.lang.Float">123.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Current Progress</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+        </structure-element>
+        <structure-element id="iter2" provider="scrum-statistics" type="sprint">
+            <value-fact-element id="iter2/teamOne/team-capacity" provider="scrum-statistics" type="teamOne/team-capacity">
+                <value type="java.lang.Float">60.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter2/teamOne/estimated-planned-work" provider="scrum-statistics" type="teamOne/estimated-planned-work">
+                <value type="java.lang.Float">208.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter2/sprint-start" provider="scrum-statistics" type="sprint-start">
+                <value>2012-12-10</value>
+            </value-fact-element>
+            <value-fact-element id="iter2/sprint-end" provider="scrum-statistics" type="sprint-end">
+                <value>2012-12-21</value>
+            </value-fact-element>
+            <value-fact-element id="iter2/teamOne/remaining-planned-work" provider="scrum-statistics" type="teamOne/remaining-planned-work">
+                <value type="java.lang.Float">0.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter2/teamOne/velocity" provider="scrum-statistics" type="teamOne/velocity">
+                <value type="java.lang.Float">208.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter2/teamOne/normalized-velocity" provider="scrum-statistics" type="teamOne/normalized-velocity">
+                <value type="java.lang.Float">41.7</value>
+            </value-fact-element>
+            <value-fact-element id="iter2/teamOne/done-items" provider="scrum-statistics" type="teamOne/done-items">
+                <value type="java.lang.Integer">4</value>
+            </value-fact-element>
+            <value-fact-element id="iter2/teamOne/done-user-stories" provider="scrum-statistics" type="teamOne/done-user-stories">
+                <value type="java.lang.Integer">3</value>
+            </value-fact-element>
+            <value-fact-element id="iter2/remaining-release-work/version2" provider="scrum-statistics" type="remaining-release-work/version2">
+                <value type="java.lang.Float">720.0</value>
+            </value-fact-element>
+            <trend-value-fact-element id="iter2/teamOne-real-progress" provider="scrum-statistics" type="teamOne-real-progress">
+                <trend>
+                    <value tag="2012-12-10" type="java.lang.Float">208.0</value>
+                    <value tag="2012-12-11" type="java.lang.Float">180.0</value>
+                    <value tag="2012-12-12" type="java.lang.Float">150.0</value>
+                    <value tag="2012-12-13" type="java.lang.Float">135.0</value>
+                    <value tag="2012-12-14" type="java.lang.Float">110.0</value>
+                    <value tag="2012-12-17" type="java.lang.Float">90.0</value>
+                    <value tag="2012-12-18" type="java.lang.Float">60.0</value>
+                    <value tag="2012-12-19" type="java.lang.Float">30.0</value>
+                    <value tag="2012-12-20" type="java.lang.Float">10.0</value>
+                    <value tag="2012-12-21" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Completed</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="iter2/teamOne-ideal-progress" provider="scrum-statistics" type="teamOne-ideal-progress">
+                <trend>
+                    <value tag="2012-12-10" type="java.lang.Float">208.0</value>
+                    <value tag="2012-12-21" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Ideal Progress</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+        </structure-element>
+        <structure-element id="iter1" provider="scrum-statistics" type="sprint">
+            <value-fact-element id="iter1/teamOne/team-capacity" provider="scrum-statistics" type="teamOne/team-capacity">
+                <value type="java.lang.Float">60.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter1/teamOne/estimated-planned-work" provider="scrum-statistics" type="teamOne/estimated-planned-work">
+                <value type="java.lang.Float">206.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter1/sprint-start" provider="scrum-statistics" type="sprint-start">
+                <value>2012-11-26</value>
+            </value-fact-element>
+            <value-fact-element id="iter1/sprint-end" provider="scrum-statistics" type="sprint-end">
+                <value>2012-12-07</value>
+            </value-fact-element>
+            <value-fact-element id="iter1/teamOne/remaining-planned-work" provider="scrum-statistics" type="teamOne/remaining-planned-work">
+                <value type="java.lang.Float">0.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter1/teamOne/velocity" provider="scrum-statistics" type="teamOne/velocity">
+                <value type="java.lang.Float">206.0</value>
+            </value-fact-element>
+            <value-fact-element id="iter1/teamOne/normalized-velocity" provider="scrum-statistics" type="teamOne/normalized-velocity">
+                <value type="java.lang.Float">41.7</value>
+            </value-fact-element>
+            <value-fact-element id="iter1/teamOne/done-items" provider="scrum-statistics" type="teamOne/done-items">
+                <value type="java.lang.Integer">4</value>
+            </value-fact-element>
+            <value-fact-element id="iter1/teamOne/done-user-stories" provider="scrum-statistics" type="teamOne/done-user-stories">
+                <value type="java.lang.Integer">3</value>
+            </value-fact-element>
+            <value-fact-element id="iter1/remaining-release-work/version2" provider="scrum-statistics" type="remaining-release-work/version2">
+                <value type="java.lang.Float">720.0</value>
+            </value-fact-element>
+            <trend-value-fact-element id="iter1/teamOne-real-progress" provider="scrum-statistics" type="teamOne-real-progress">
+                <trend>
+                    <value tag="2012-11-26" type="java.lang.Float">206.0</value>
+                    <value tag="2012-11-27" type="java.lang.Float">180.0</value>
+                    <value tag="2012-11-28" type="java.lang.Float">150.0</value>
+                    <value tag="2012-11-29" type="java.lang.Float">132.0</value>
+                    <value tag="2012-11-30" type="java.lang.Float">110.0</value>
+                    <value tag="2012-12-03" type="java.lang.Float">90.0</value>
+                    <value tag="2012-12-04" type="java.lang.Float">60.0</value>
+                    <value tag="2012-12-05" type="java.lang.Float">30.0</value>
+                    <value tag="2012-12-06" type="java.lang.Float">10.0</value>
+                    <value tag="2012-12-07" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Completed</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="iter1/teamOne-ideal-progress" provider="scrum-statistics" type="teamOne-ideal-progress">
+                <trend>
+                    <value tag="2012-11-26" type="java.lang.Float">206.0</value>
+                    <value tag="2012-12-07" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Ideal Progress</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+        </structure-element>
+        <structure-element id="version2" provider="scrum-statistics" type="release">
+            <value-fact-element id="version2/remaining-release-work" provider="scrum-statistics" type="remaining-release-work">
+                <value type="java.lang.Float">730.0</value>
+            </value-fact-element>
+            <trend-value-fact-element id="version2/release-progress" provider="scrum-statistics" type="release-progress">
+                <trend>
+                    <value tag="2013-01-03 (iter2)" type="java.lang.Float">860.0</value>
+                    <value tag="2013-01-13 (iter3)" type="java.lang.Float">730.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Release Progress</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="version2/release-prediction" provider="scrum-statistics" type="release-prediction">
+                <trend>
+                    <value tag="2013-01-13 (iter3)" type="java.lang.Float">730.0</value>
+                    <value tag="~ + 1"/>
+                    <value tag="~ + 2"/>
+                    <value tag="~ + 3"/>
+                    <value tag="~ + 4"/>
+                    <value tag="~ + 5"/>
+                    <value tag="~ + 6" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Release Prediction (Past Values)</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="version2/release-capacity" provider="scrum-statistics" type="release-capacity">
+                <trend>
+                    <value tag="2013-01-13 (iter3)" type="java.lang.Float">730.0</value>
+                    <value tag="~ + 1"/>
+                    <value tag="~ + 2"/>
+                    <value tag="~ + 3"/>
+                    <value tag="~ + 4"/>
+                    <value tag="~ + 5"/>
+                    <value tag="~ + 6"/>
+                    <value tag="~ + 7"/>
+                    <value tag="~ + 8" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Release Prediction (Current Capacity)</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="version2/release-velocity" provider="scrum-statistics" type="release-velocity">
+                <trend>
+                    <value tag="2013-01-13 (iter3)" type="java.lang.Float">730.0</value>
+                    <value tag="~ + 1"/>
+                    <value tag="~ + 2"/>
+                    <value tag="~ + 3"/>
+                    <value tag="~ + 4"/>
+                    <value tag="~ + 5"/>
+                    <value tag="~ + 6"/>
+                    <value tag="~ + 7" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Release Prediction (Last Sprint Velocity)</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="version2/release-plan" provider="scrum-statistics" type="release-plan">
+                <trend>
+                    <value tag="2013-01-13 (iter3)" type="java.lang.Float">730.0</value>
+                    <value tag="~ + 1"/>
+                    <value tag="~ + 2"/>
+                    <value tag="~ + 3"/>
+                    <value tag="~ + 4"/>
+                    <value tag="~ + 5"/>
+                    <value tag="~ + 6"/>
+                    <value tag="~ + 7"/>
+                    <value tag="~ + 8"/>
+                    <value tag="~ + 9" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Release Plan</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+        </structure-element>
+        <structure-element id="version1" provider="scrum-statistics" type="release">
+            <value-fact-element id="version1/remaining-release-work" provider="scrum-statistics" type="remaining-release-work">
+                <value type="java.lang.Float">0.0</value>
+            </value-fact-element>
+            <trend-value-fact-element id="version1/release-progress" provider="scrum-statistics" type="release-progress">
+                <trend>
+                    <value tag="2012-11-12 (start)" type="java.lang.Float">543.0</value>
+                    <value tag="2012-11-23 (iter0)" type="java.lang.Float">414.0</value>
+                    <value tag="2012-12-07 (iter1)" type="java.lang.Float">208.0</value>
+                    <value tag="2013-12-21 (iter2)" type="java.lang.Float">0.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Release Progress</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+        </structure-element>
+        <value-fact-element id="current-sprint" provider="scrum-statistics" type="current-sprint">
+            <value>iter3</value>
+        </value-fact-element>
+    </structure-element>
+</factbase>

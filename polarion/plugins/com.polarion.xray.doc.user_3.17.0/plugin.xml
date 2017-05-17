@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="com.polarion.xray.doc.user"
+   name="%pluginName"
+   version="3.17.0"
+   provider-name="%providerName">
+
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="toc.xml"
+            primary="true">
+      </toc>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts_xray_web.xml"
+            plugin="com.polarion.xray.web">
+      </contexts>
+   </extension>
+
+</plugin>

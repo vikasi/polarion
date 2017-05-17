@@ -1,0 +1,98 @@
+##template("stylesheets2.vm")
+##<script type="text/javascript" src="$xwiki.getSkinFile("skin.js")"></script>
+##<script type="text/javascript" src="$xwiki.getSkinFile("xwiki.js")"></script>
+
+
+#template("xwikivars.vm")
+#template("layoutvars.vm")
+#template("htmlheaderFr.vm")
+##template("header.vm")
+
+
+#set($rev1= $request.get("rev1"))
+#set($rev2= $request.get("rev2"))
+
+
+#set($origdoc = $xwiki.getDocument($tdoc, $rev1))
+#set($newdoc = $xwiki.getDocument($tdoc, $rev2))
+
+#set ($origContent = $origdoc.getRenderedContent($origdoc.content) )
+#set ($newContent = $newdoc.getRenderedContent($newdoc.content) )
+
+
+##set ($origContent = $origdoc.getRenderedContentRev($rev1) )
+##set ($newContent = $newdoc.getRenderedContentRev($rev2) )
+#set ($res = $xwiki.diffContent($origContent, $newContent))
+
+
+#if ($res)
+#set ($compare = $xwiki.getCompareTable())
+#end
+
+    
+    <link rel="stylesheet" type="text/css" href="${request.contextPath}/skins/sidecar/layout.css" />
+
+    <script type="text/javascript" src="${request.contextPath}/skins/sidecar/ext-base.js"></script>
+    <script type="text/javascript" src="${request.contextPath}/skins/sidecar/ext-all.js"></script>
+    
+	<script type="text/javascript">
+	Example = function(){
+	        return {
+	            init : function(){
+	                var innerLayout = new Ext.BorderLayout(document.body, {
+                north: {
+                    split:true,
+                    initialSize: 400,
+                    titlebar: false,
+                    collapsible: false,
+                    animate: false,
+                    autoScroll:false
+
+                },
+                south: {
+                    split:true,
+                    initialSize: 150,
+                    titlebar: false,
+                    collapsible: false,
+                    animate: false,
+                    autoScroll:false
+                },
+                center: {
+                    titlebar: false,
+                    collapsible: false,
+                    animate: false,
+                    autoScroll:false
+                }
+	                });
+		innerLayout.beginUpdate();
+
+	                innerLayout.add('north', new Ext.ContentPanel('inner1'));
+	                innerLayout.add('south', new Ext.ContentPanel('inner2'));
+	                innerLayout.add('center',new Ext.ContentPanel('inner3'));
+
+	         //       layout.add('center', new Ext.NestedLayoutPanel(innerLayout));
+	       innerLayout.endUpdate();
+	           }
+	     };
+	       
+	}();
+	Ext.EventManager.onDocumentReady(Example.init, Example, true);
+	</script>
+
+
+  <div id="inner1" onResize="pageResize();">
+#template("changescontent.vm")
+  </div>
+  <div id="inner2" onResize="pageResize();">
+#template("changesattachments.vm")
+  </div>
+  <div id="inner3" onResize="pageResize();">
+#template("changescomments.vm")
+
+  </div>
+
+#template("htmlfooter.vm")
+
+<script>
+parent.document.getElementById('contentcontainer').style.visibility = "visible";
+</script>

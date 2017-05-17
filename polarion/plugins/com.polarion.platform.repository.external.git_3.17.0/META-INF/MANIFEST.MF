@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.platform.repository.external.git
+Export-Package: com.polarion.platform.repository.external.git,com.pola
+ rion.platform.repository.external.internal.git;x-friends:="com.polari
+ on.alm.tracker.web.tests,com.siemens.polarion.rt.tests"
+Bundle-Name: Git support for Polarion
+Bundle-Version: 3.17.0
+Bundle-ClassPath: lib/org.eclipse.jgit-3.7.0.201502260915-r.jar,lib/js
+ ch-0.1.51.jar,platform-repository-git.jar
+Require-Bundle: com.polarion.platform.repository,com.polarion.core.uti
+ l,com.polarion.subterra.base,com.siemens.polarion.rt.api;bundle-versi
+ on="3.17.0"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+
+

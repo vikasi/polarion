@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130110200940</created>
+<type>content</type>
+<content><![CDATA[1 Issues Trend
+
+
+#set($baseQ="project.id:$page.project AND type:issue")
+
+#macro (shiftMonths $m)
+#set($cal = $calendarTool.getCalendarInstance())
+$cal.add(2,$m)
+$cal.set(5,1)
+#end
+
+#macro (defineQueryMonth $additionalQuery)
+#set($date = $calendarTool.formatDate($cal.time, "yyyyMMdd"))
+#set($dateUTC = $calendarTool.formatDate($cal.time, "yyyy, MM, dd"))
+$cal.add(2,1)
+#set($datePlusOne = $calendarTool.formatDate($cal.time, "yyyyMMdd"))
+#set($query = "$baseQ AND created:[$date TO $datePlusOne] $additionalQuery")
+#set($queryResolved = "$baseQ AND resolvedOn:[$date TO $datePlusOne] $additionalQuery")
+#end
+
+
+########################################################
+1.1 New vs. Closed Issues Per Month
+
+#if($trackerService.queryWorkItems($baseQ,"id").isEmpty())
+#info("No Issues")
+#else
+
+#shiftMonths(-24)
+#defineQueryMonth("")
+#set($dataXY= "Date.UTC($dateUTC), $trackerService.queryWorkItems($query,'id').size()")
+#set($resolvedDataXY= "Date.UTC($dateUTC), $trackerService.queryWorkItems($queryResolved,'id').size()")
+#foreach($i  in [1..24]) 
+#defineQueryMonth("")
+#set($dataXY= "$!dataXY: Date.UTC($dateUTC), $trackerService.queryWorkItems($query,'id').size()")
+#set($resolvedDataXY= "$!resolvedDataXY: Date.UTC($dateUTC), $trackerService.queryWorkItems($queryResolved,'id').size()")
+#end
+
+#highchartStart("New vs. Closed Issues Per Month" "area" 800 300)
+#set($highchartColors = ["FF0000","00FF00"])
+#addHighchartXYDataSet("New" "$dataXY" ) 
+#addHighchartXYDataSet("Resolved" "$resolvedDataXY" ) 
+#addHighchartAdditionalOptions("options.yAxis.title = '';")
+#addHighchartAdditionalOptions("options.plotOptions = {series: {fillOpacity: 0.3}, area:{ animation:false,marker:{enabled:false}}};")
+#addHighchartAdditionalOptions("options.xAxis.type = 'datetime';")
+#addHighchartAdditionalOptions("options.chart.zoomType= 'x';")
+#highchartEnd()
+
+#end]]></content>
+</wiki-page>

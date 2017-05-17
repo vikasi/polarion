@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.cluster;singleton:=true
+Export-Package: com.polarion.cluster,com.polarion.cluster.coordinator,
+ com.polarion.cluster.coordinator.internal;x-friends:="com.polarion.cl
+ uster.tests,com.polarion.testing.junit,com.polarion.psvn.launcher",co
+ m.polarion.cluster.info,com.polarion.cluster.info.internal; x-friends
+ :="com.polarion.subterra.index,  com.polarion.cluster.tests,  com.pol
+ arion.platform.jobs.tests,  com.polarion.platform.persistence.tests, 
+  com.polarion.testing.junit",com.polarion.cluster.internal;x-friends:
+ ="com.polarion.cluster.tests,com.polarion.psvn.launcher,com.polarion.
+ testing.junit",com.polarion.cluster.jobs,com.polarion.cluster.loadbal
+ ancer,com.polarion.cluster.loadbalancer.internal;x-friends:="com.pola
+ rion.cluster.tests",com.polarion.cluster.locks,com.polarion.cluster.m
+ essages,com.polarion.cluster.messages.internal;x-friends:="com.polari
+ on.alm.builder.tests,com.polarion.cluster.tests",com.polarion.cluster
+ .rpc,com.polarion.cluster.rpc.internal;x-friends:="com.polarion.clust
+ er.tests",com.polarion.cluster.store,com.polarion.cluster.store.inter
+ nal;x-friends:="com.polarion.cluster.tests",com.polarion.cluster.util
+ s
+Bundle-Name: Polarion Service Clustering Core
+Bundle-Version: 3.17.0
+Bundle-ClassPath: polarion-cluster.jar
+Require-Bundle: org.objectweb.jotm,org.eclipse.core.runtime,org.apache
+ .curator,com.polarion.platform,com.polarion.platform.guice
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+Guice-Modules: com.polarion.cluster.internal.GuiceModule
+
+

@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+$pdfdoc.use("XWiki.PDFClass")
+#set($pdfheader = $pdfdoc.display("title","rendered"))
+
+#if($pdfheader=="")
+#set($title = $pdfdoc.display("title", "rendered"))
+#if((!$title)||($title==""))
+
+$escapingTool.escape($!page.getFormattedName())
+
+#else
+$escapingTool.escape($title)
+#end
+#else
+$escapingTool.escape($pdfheader)
+#end
+
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=$xwiki.encoding" />
+<meta name="pdffooter_date" content="$xwiki.getCurrentShortDateString()" />
+</head>
+<body id="body" class="${context.action}body">
+<div class="pdffooter">
+
+
+<a href="$msg.get("pdffooterurl")">$escapingTool.escape($msg.get("pdffooter")) $escapingTool.escape($platformService.getPolarionProductName()) $escapingTool.escape($platformService.getPolarionVersion())</a>
+
+
+</div>
+
+
+
+
+

@@ -1,0 +1,26 @@
+1 Work Item Workflow
+
+#info("The workflow configuration of the Work Item enables you to specify *workflow transitions* from start state to end state and *perform a specific action* for each transition.")
+
+\\
+{configuration:workflow|prototype=WorkItem}
+\\
+1.1 Quick Help
+The table above shows the workflow configurations currently defined for *Work Items*. In general, configurations can be Global or project in their scope. The ~~Scope~~ column indicates the scope of 
+the configuration currently in use. A Work Item workflow configuration can also be specific to one or more Work Item types. \\
+
+There are two simple rules that define the order in which configurations are used:
+* Configuration in the project scope always overrides the Global configuration.
+* Type-specific configuration always overrides the ~~All Types~~ configuration.
+\\
+1.1.1 Process Mapping
+The Work Item workflow configuration can be used to map ~~any~~ process into Polarion to control the steps that artifacts (Work Items) must pass through during processing, ensuring that no steps are 
+skipped or forgotten. \\ 
+
+Before you spend a lot of time customizing Work Item workflows, you might check the project templates that come the Polarion product(s) you have. Project templates are pre-configured with workflows 
+supporting common processes such as V-model and SCRUM. You may find you can use these workflows "out of the box", or that you can use them as a base and just add a few customizations of 
+your own. Either way can save you significant time. \\ 
+
+You might also check the Polarion Extensions Portal ([http://extensions.polarion.com >http://extensions.polarion.com]) for custom [workflow extensions >http://extensions.polarion.com/searches?category=3-workflow] and additional [project templates >http://extensions.polarion.com/searches?category=1-templates].
+
+#info("Note that there is a separate workflow configuration applicable only to Documents and Document types. The configuration topic is: Administration &gt; Documents &amp; Pages &gt; Document Workflow.")

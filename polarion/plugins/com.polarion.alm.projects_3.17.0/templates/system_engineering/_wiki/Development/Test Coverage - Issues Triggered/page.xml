@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130116235519</created>
+<type>content</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+{include-macros:_default.TraceabilityTableMacro}
+{parameter:version|type=enum:@plan[template.id:release]|value=|allow-no-value=true}
+{parameter:status|type=enum:systemRequirement-status|value=approved|allow-no-value=true}
+
+{parameter:unresolvedDefects|type=boolean|value=true}
+#set($rootQuery  = "type:($reqTypes) AND project.id:$page.project")
+#set($unresolvedDefects= $pageParameters.unresolvedDefects )
+#set($version= $!pageParameters.version.id)
+#if($version)
+#set($rootQuery  = "$rootQuery AND targetVersion.KEY:$version")
+#end
+#set($status= $!pageParameters.status.id)
+#if($status)
+#set($rootQuery  = "$rootQuery AND status:$status")
+#end
+#set( $middleRoleQuery = "verifies=")
+#set( $endRoleQuery = "triggered_by=")
+#set( $sortRows = "id")
+#if ($unresolvedDefects) 
+    #set( $defectsQuery  = "type:issue AND project.id:$page.project AND status:open")
+#else
+    #set( $defectsQuery  = "type:issue AND project.id:$page.project")
+#end
+
+1 Test Coverage - Issues Triggered
+
+{parameter-form}
+<table>
+<tr><td>Requirements Version: </td><td>{parameter-editor:version|width=185}</td></tr>
+<tr><td>Requirements Status: </td><td>{parameter-editor:status|width=185} {parameter-form-submit} {parameter-form-save}</td></tr>
+<tr><td colspan=2>{parameter-editor:unresolvedDefects} Show open issues only </td></tr>
+<tr><td colspan=2></td></tr>
+</table>
+{parameter-form}
+
+#TraceabilityTable("$rootQuery"  "type:($testCaseTypes) AND project.id:$page.project" "$defectsQuery"  "description,status")]]></content>
+</wiki-page>

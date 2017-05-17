@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2004 The Apache Software Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<portlet-app id="j2-admin" version="1.0">
+  <portlet id="PortletSelector">
+    <init-param>
+      <description>This parameter sets the template used in view mode.</description>
+      <name>ViewPage</name>
+      <value>/WEB-INF/view/selectors/portlet-selector.vm</value>
+    </init-param>
+    <portlet-name>PortletSelector</portlet-name>
+    <display-name>Portlet Selector</display-name>
+    <description>Select one or more portlets from the customizer</description>
+    <portlet-class>org.apache.jetspeed.portlets.selector.PortletSelector</portlet-class>
+    <expiration-cache>-1</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>EDIT</portlet-mode>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <resource-bundle>org.apache.jetspeed.portlets.site.resources.SiteResources</resource-bundle>
+    <portlet-preferences>
+      <preference>
+        <name>WindowSize</name>
+        <value>100</value>
+      </preference>
+    </portlet-preferences>
+    <portlet-info>
+      <title>Portlet Selector</title>
+      <short-title>Portlets</short-title>
+      <keywords>portlet,selector,customizer,chooser,add</keywords>
+    </portlet-info>
+  </portlet>
+  <portlet id="PortletEntityBrowserPortlet">
+    <init-param>
+      <description>This parameter sets the template used in view mode.</description>
+      <name>ViewPage</name>
+      <value>/WEB-INF/view/pemp/browser_view.vm</value>
+    </init-param>
+    <portlet-name>PortletEntityBrowserPortlet</portlet-name>
+    <display-name>Portlet Entity Browser</display-name>
+    <description>Provides for browsing portlet enitites</description>
+    <portlet-class>org.apache.jetspeed.portlets.entityeditor.PortletEntityBrowserPortlet</portlet-class>
+    <expiration-cache>-1</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Portlet Entity Browser</title>
+      <short-title>Portlet Entity Browser</short-title>
+      <keywords>applications,apps,entity,manager</keywords>
+    </portlet-info>
+  </portlet>
+  <portlet id="PortletEntityEditorPortlet">
+    <init-param>
+      <description>This parameter sets the template used in view mode.</description>
+      <name>ViewPage</name>
+      <value>/WEB-INF/view/pemp/editor_view.vm</value>
+    </init-param>
+    <portlet-name>PortletEntityEditorPortlet</portlet-name>
+    <display-name>Portlet Entity Browser</display-name>
+    <description>Provides for editing of portlet enitites</description>
+    <portlet-class>org.apache.jetspeed.portlets.entityeditor.PortletEntityEditorPortlet</portlet-class>
+    <expiration-cache>-1</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Portlet Entity Editor</title>
+      <short-title>Portlet Entity Editor</short-title>
+      <keywords>applications,apps,entity,manager</keywords>
+    </portlet-info>
+  </portlet>
+  <portlet id="StatisticsPortlet">
+    <init-param>
+      <description>This parameter sets the template used in view mode.</description>
+      <name>ViewPage</name>
+      <value>/WEB-INF/view/statistics/statistics.vm</value>
+    </init-param>
+    <portlet-name>StatisticsPortlet</portlet-name>
+    <display-name>Portal Statistics</display-name>
+    <description>Provides statistics about portal access by page, portlet, user</description>
+    <portlet-class>org.apache.jetspeed.portlets.statistics.StatisticsPortlet</portlet-class>
+    <expiration-cache>-1</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>Portal Statistics</title>
+      <short-title>Statistics</short-title>
+      <keywords>statistics,portlets,pages,access</keywords>
+    </portlet-info>
+  </portlet> 
+</portlet-app>
+

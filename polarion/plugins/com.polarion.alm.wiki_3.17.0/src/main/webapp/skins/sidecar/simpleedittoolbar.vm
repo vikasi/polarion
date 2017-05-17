@@ -1,0 +1,13 @@
+<script type="text/javascript" src="$xwiki.getSkinFile("wikibits.js")"></script>
+<script type="text/javascript">
+document.writeln("<div class='leftmenu rich-toolbar'>");
+addButton('$xwiki.getSkinFile("ed_format_bold.gif")','$localization.getValue("wiki.toolbar.button.bold")','*','*','$localization.getValue("wiki.toolbar.bold.exampleText")');
+addButton('$xwiki.getSkinFile("ed_format_italic.gif")','$localization.getValue("wiki.toolbar.button.italic")','~~','~~','$localization.getValue("wiki.toolbar.italic.exampleText")');
+addButton('$xwiki.getSkinFile("ed_format_underline.gif")','$localization.getValue("wiki.toolbar.button.underline")','__','__','$localization.getValue("wiki.toolbar.underline.exampleText")');
+addButton('$xwiki.getSkinFile("ed_link.gif")','$localization.getValue("wiki.toolbar.button.internalLink")','[',']','$localization.getValue("wiki.toolbar.internalLink.exampleText")');
+addButton('$xwiki.getSkinFile("ed_hr.gif")','$localization.getValue("wiki.toolbar.button.horizontalLine")','\n----\n','','');
+addButton('$xwiki.getSkinFile("ed_image.gif")','$localization.getValue("wiki.toolbar.button.attachedImage")','{image:','}','$localization.getValue("wiki.toolbar.attachedImage.exampleText")');
+
+document.writeln("<" + "/div>");
+
+</script>

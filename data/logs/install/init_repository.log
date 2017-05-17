@@ -1,0 +1,14 @@
+Repository URL: http://localhost:80/repo/
+exists: path=/
+ - true
+exists: path=.polarion
+ - false
+Expanding: C:\Polarion\polarion\install\demo-data.zip into C:\Temp\polarion-repo-data-2705448561748749652.tmp
+Importing data to repository: http://localhost:80/repo/
+Deleting directory C:\Temp\polarion-repo-data-2705448561748749652.tmp
+Creating RR and BIR demo data
+Created dir: C:\Polarion\data\RR
+Created dir: C:\Polarion\data\BIR
+Expanding: C:\Polarion\polarion\install\demo-bir+rr.zip into C:\Polarion\data
+
+Done.

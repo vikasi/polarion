@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130116104345</created>
+<type>content</type>
+<content><![CDATA[{parameter:status|type=enum:systemRequirement-status|value=approved|allow-no-value=true}
+{parameter:version|type=enum:majorVersion|value=|allow-no-value=true}
+
+1 System Requirements to Design Requirements Coverage
+
+{style:type=div|width=600px}
+*Select System Requirements:*
+{parameter-form}
+{table:header=no|border=no} 
+Status:| {parameter-editor:status|width=185} 
+Version:|{parameter-editor:version|width=185} {parameter-form-submit} {parameter-form-save}
+{table}
+{parameter-form}
+{style}
+#set($rQuery = "project.id:$page.project AND type:systemRequirement")
+#set($rLabel="System Requirements")
+#if($pageParameters.status)
+#set($rQuery = "$rQuery AND status:$pageParameters.status.id")
+#set($rLabel= "$rLabel ($pageParameters.status.name)")
+#end
+#if($pageParameters.version)
+#set($rQuery = "$rQuery AND targetVersion.KEY:$pageParameters.version.id")
+#set($rLabel= "$rLabel $pageParameters.version.name")
+#end
+#set($dataService = $trackerService.getDataService()) 
+
+#set($innerSQL = "SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = REQ.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND (TEST.C_TYPE = 'electricalRequirement' OR TEST.C_TYPE = 'softwareRequirement' OR TEST.C_TYPE = 'mechanicalRequirement')")
+#set($sqlCovered="SELECT REQ.C_PK FROM LUCENE_QUERY('WorkItem', '$rQuery', 'id') REQ WHERE EXISTS ($innerSQL)") 
+#set($sqlUncovered="SELECT REQ.C_PK FROM LUCENE_QUERY('WorkItem', '$rQuery', 'id') REQ WHERE NOT EXISTS ($innerSQL)")
+ 
+#set($covered_items = $dataService.sqlSearch($sqlCovered)) 
+#set($covered_result = $covered_items.size()) 
+#set($uncovered_items = $dataService.sqlSearch($sqlUncovered)) 
+#set($uncovered_result = $uncovered_items.size()) 
+ 
+<table><tr><td> 
+#highchartStart("" "Pie2D" 150 150  )
+#set($highchartColors = ["95d55c","d43d3d","b566d4","cfcfcf"])
+#addHighchartPieDataSet("" "'Covered',$covered_result:'Uncovered', $uncovered_result")
+#addHighchartAdditionalOptions("options.plotOptions = {pie:{dataLabels: {enabled:false},borderWidth:0,animation:false}};")
+#addHighchartAdditionalOptions("options.tooltip= {formatter: function(){ return  ''+ this.point.name + ': <b>'+ this.y + '</b>' }};")
+#highchartEnd()
+</td><td style="padding:20px"> 
+There are *$uncovered_result $rLabel* without design items (software/hardware design item). 
+</td> </tr> </table> 
+ 
+1.1 $rLabel without Design Items
+<center>
+{workitems:sqlQuery=$sqlUncovered|fields=id,title,status,targetVersion|width=80%}
+</center>
+
+1.1 $rLabel with Design Items
+Browse the Requirements refined by design items using: 
+{portallink:/wiki/Requirements/System Requirements?link_role=parent,refines&tree_depth=5&tab=tree|addcontext=yes}*Requirements - Design Traceability Tree*{portallink}]]></content>
+</wiki-page>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+  xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ws="http://ws.polarion.com/types"
+  xmlns:rt="http://ws.polarion.com/RtWebService-types">
+  <globalConfiguration>
+    <parameter name="sendMultiRefs" value="true" />
+    <parameter name="disablePrettyXML" value="true" />
+    <parameter name="adminPassword" value="admin" />
+    <parameter name="dotNetSoapEncFix" value="true" />
+    <parameter name="enableNamespacePrefixOptimization" value="true" />
+    <parameter name="sendXMLDeclaration" value="true" />
+    <parameter name="attachments.implementation"
+      value="org.apache.axis.attachments.AttachmentsImpl" />
+    <parameter name="sendXsiTypes" value="true" />
+  </globalConfiguration>
+  <handler name="SessionHandler"
+    type="java:com.polarion.alm.ws.handlers.SessionHandler">
+    <parameter name="timeout" value="30000" />
+  </handler>
+
+  <handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper" />
+  <chain name="PolarionChain">
+    <handler type="SessionHandler" />
+  </chain>
+
+  <service name="SessionWebService" provider="java:AsUserWrapper"
+    style="wrapped" use="literal">
+    <requestFlow>
+      <handler type="SessionHandler" />
+    </requestFlow>
+    <responseFlow>
+      <handler type="SessionHandler" />
+    </responseFlow>
+    <parameter name="allowedMethods" value="*" />
+    <parameter name="wrapped.provider"
+      value="{http://xml.apache.org/axis/wsdd/providers/java}RPC" />
+    <parameter name="typeMappingVersion" value="1.2" />
+    <parameter name="scope" value="Application" />
+    <parameter name="className"
+      value="com.siemens.polarion.rt.communication.ws.services.SessionWebService" />
+    <parameter name="wsdlTargetNamespace" value="http://ws.polarion.com/SessionWebService" />
+    <namespace>http://ws.polarion.com/SessionWebService-impl</namespace>
+    <documentation>
+      This service provides functionallity that is related to the
+      current session of the webservice.
+		</documentation>
+  </service>
+  <service name="RtWebService" provider="java:AsUserWrapper"
+    style="wrapped" use="literal">
+    <requestFlow>
+      <chain type="PolarionChain" />      
+    </requestFlow>
+    <responseFlow>
+      <chain type="PolarionChain" />
+    </responseFlow>
+    <parameter name="allowedMethods" value="*" />
+    <parameter name="wrapped.provider"
+      value="{http://xml.apache.org/axis/wsdd/providers/java}RPC" />
+    <parameter name="typeMappingVersion" value="1.2" />
+    <parameter name="scope" value="Application" />
+    <parameter name="className"
+      value="com.siemens.polarion.rt.communication.ws.services.RtWebService" />
+    <parameter name="wsdlTargetNamespace" value="http://ws.polarion.com/RtWebService" />
+    <namespace>http://ws.polarion.com/RtWebService-impl</namespace>    
+    <documentation>
+      This service provides functionality related to resource traceability.
+		</documentation>
+  </service>
+
+  <transport name="http">
+    <requestFlow>
+      <handler type="URLMapper" />
+      <handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler" />
+    </requestFlow>
+    <parameter name="qs:list"
+      value="org.apache.axis.transport.http.QSListHandler" />
+    <parameter name="qs:wsdl"
+      value="org.apache.axis.transport.http.QSWSDLHandler" />
+    <parameter name="qs.list"
+      value="org.apache.axis.transport.http.QSListHandler" />
+    <parameter name="qs.method"
+      value="org.apache.axis.transport.http.QSMethodHandler" />
+    <parameter name="qs:method"
+      value="org.apache.axis.transport.http.QSMethodHandler" />
+    <parameter name="qs.wsdl"
+      value="org.apache.axis.transport.http.QSWSDLHandler" />
+  </transport>
+  <transport name="local">
+    <responseFlow>
+      <handler type="LocalResponder" />
+    </responseFlow>
+  </transport>
+
+
+  <typeMapping deserializer="" encodingStyle=""
+    qname="ws:ShouldNotBeInWSDL" serializer="com.polarion.alm.ws.encoding.AdditionalTypeWriterFactory"
+    type="java:com.polarion.alm.ws.encoding.AdditionalTypeWriter" />
+
+  <!-- Full -->
+  <!-- TODO should be namespace ws -->
+
+  <typeMapping deserializer="org.apache.axis.encoding.ser.MapDeserializerFactory"
+    encodingStyle="" qname="ws:Properties"
+    serializer="com.polarion.alm.ws.encoding.PropertiesSerializerFactory"
+    type="java:java.util.Properties" />
+  
+  <typeMapping deserializer="" encodingStyle=""
+    qname="rt:RtProjectConfiguration" 
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.siemens.polarion.rt.communication.ws.encoding.RtProjectConfigurationWrapper"/>
+                 
+  <typeMapping deserializer="" encodingStyle=""
+    qname="rt:RtConfiguration" 
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.siemens.polarion.rt.communication.ws.encoding.RtConfigurationWrapper"/>
+                 
+  <typeMapping deserializer="" encodingStyle=""
+    qname="rt:RtCategory" 
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.siemens.polarion.rt.communication.ws.encoding.RtCategoryWrapper"/>
+                   
+  <typeMapping deserializer="" encodingStyle=""
+    qname="rt:RtRepository" 
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.siemens.polarion.rt.communication.ws.encoding.RtRepositoryConfigurationWrapper"/>
+                 
+  <typeMapping deserializer="" encodingStyle=""
+    qname="rt:RtBranch" 
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.siemens.polarion.rt.communication.ws.encoding.RtBranchWrapper"/>
+                 
+  <typeMapping deserializer="" encodingStyle=""
+    qname="rt:RtPath" 
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.siemens.polarion.rt.communication.ws.encoding.RtPathWrapper"/> 
+                              
+  <typeMapping deserializer="" encodingStyle=""
+    qname="rt:RtScheduler" 
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.siemens.polarion.rt.communication.ws.encoding.RtSchedulerWrapper"/>
+                 
+  <typeMapping deserializer="" encodingStyle=""
+    qname="rt:RtFileParser" 
+    serializer="com.polarion.alm.ws.encoding.CustomizableBeanSerializerFactory"
+    type="java:com.siemens.polarion.rt.communication.ws.encoding.RtFileParserWrapper"/>   
+</deployment>

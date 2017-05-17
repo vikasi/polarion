@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Provide-Package: com.polarion.platform.jobs,com.polarion.platform.jobs
+ .internal.cluster;x-friends:="com.polarion.platform.jobs.tests",com.p
+ olarion.platform.jobs.internal.eclipse;x-friends:="com.polarion.platf
+ orm.jobs.tests",com.polarion.platform.jobs.internal.service;x-friends
+ :="com.polarion.platform.jobs.tests",com.polarion.platform.jobs.inter
+ nal.service.scheduler;x-friends:="com.polarion.platform.jobs.tests",c
+ om.polarion.platform.jobs.scheduler,com.polarion.platform.jobs.spi,co
+ m.polarion.platform.jobs.spi.service
+Bundle-SymbolicName: com.polarion.platform.jobs
+Export-Package: com.polarion.platform.jobs.internal.guice
+Bundle-Name: %pluginName
+Bundle-Version: 3.17.0
+Bundle-ClassPath: jobs.jar
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,org.apache.log4j,com.polarion
+ .core.util,com.polarion.platform;reprovide=true,com.polarion.platform
+ .repository;reprovide=true,com.opensymphony.quartz,com.polarion.platf
+ orm.guice;bundle-version="3.5.1",com.polarion.cluster;bundle-version=
+ "3.7.3"
+Bundle-Vendor: %providerName
+Guice-Modules: com.polarion.platform.jobs.internal.guice.JobsModule
+
+

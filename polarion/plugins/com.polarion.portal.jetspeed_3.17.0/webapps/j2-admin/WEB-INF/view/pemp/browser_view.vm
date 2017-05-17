@@ -1,0 +1,107 @@
+#set($locale = $request.locale)
+
+<script language="javascript" src="${request.contextPath}/javascript/ajax.js"></script>
+
+<script language="javascript">
+
+var currentApp;
+var applicationRoot = "${jetspeedContextPath}";
+
+
+function Portlet(portletId, title)
+{
+  this.portletId = portletId;
+  this.title = title;
+  this.asOption = new Option("("+this.portletId+") "+this.title , this.portletId);
+  this.portletEntites = new Array();
+}
+
+function onAppSelected(app)
+{
+  hide("PortletEntityEditor");
+  currentApp = app;
+  var sList = document.getElementById("selectedPortlet");
+
+  //Clear out all old options
+  var optsLen = sList.options.length;
+
+  for(i=0; i<optsLen; i++)
+  {
+     sList.remove(0);
+  }
+  
+  //add in new options
+  new PortletDefinitionLoader("selectedPortlet").load(app);
+  
+  hide("selectEntityBlock,createEntityButton");
+  show("selectPortletBlock");
+}
+
+function onPortletSelected(portlet)
+{
+  hide("PortletEntityEditor");
+  var sList = document.getElementById("selectedEntity"); 
+
+  //Clear out all old options
+  var optsLen = sList.options.length;
+
+  for(i=0; i<optsLen; i++)
+  {
+     sList.remove(0);
+  }
+  
+  //add in new options
+  PortletEntityLoader
+  entityLoader = new PortletEntityLoader("selectedEntity", "selectEntityBlock");
+  entityLoader.load(portlet);
+  
+  show("createEntityButton");
+}
+
+function onEntitySelected(entity)
+{
+  var editButton = document.getElementById("editEntityButton");
+  var entityAccess = new InitEntityEditor("portletEntityId", "selectedPref", "entityIdLabel");
+  entityAccess.load(entity);  
+  show("PortletEntityEditor");
+}
+
+
+</script>
+
+
+#set($createUrl = $renderResponse.createActionURL())
+$!createUrl.setParameter("action", "create")
+
+<form name="appSelection" method="post" action="${createUrl}">
+
+<h2 class="portlet-section-header">Portlet Entity Browser</h2>
+
+<h3 class="portlet-section-subheader">Choose a Portlet Application...</h3>
+
+<select id="portletApp" name="portletApp" style="width:350px;" size="6" onChange="onAppSelected(this.options[this.selectedIndex].value);">
+
+</select>
+
+<div id="selectPortletBlock" style="display:none">
+  <h3 class="portlet-section-subheader">Choose a Portlet...</h3>
+
+  <select class="portlet-form-field-label" id="selectedPortlet" name="selectedPortlet" style="width:350px;" size="6"  onChange="onPortletSelected(this.options[this.selectedIndex].value)">
+  </select>
+  <br />
+  <input type="submit" class="portlet-form-button" id="createEntityButton" name="createEntityButton" style="display:none" value="Create New Portlet Enitity"/>
+</div>
+
+<div id="selectEntityBlock" style="display:none">	
+  <h3 class="portlet-section-subheader">Choose a Portlet Entity to Edit...</h3>
+  <select class="portlet-form-field-label" id="selectedEntity" name="selectedEntity" style="width:350px;" size="6" onChange="onEntitySelected(this.options[this.selectedIndex].value)"></select>
+  <br />
+  <input type="button" class="portlet-form-button" id="editEntityButton" name="editEntityButton" style="display:none" value="Edit Portlet Enitity"/>
+</div>
+
+</form>
+
+<script>
+new PortletAppLoader("portletApp");
+
+</script>

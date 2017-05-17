@@ -1,0 +1,31 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+#template("htmlheader.vm")
+ <div class="main layoutsubsection" style="background-color: #FFFFFF;">
+	#if($link)
+		<p>THIS PAGE HAS NO CONTENT YET. YOU CAN CREATE AND SAVE CONTENT NOW USING THE LINK $pdoc.getRenderedContent($link)</p>	
+	#else
+		$pdoc.getRenderedContent($pdoc.content)
+ 	#end
+</div>
+<script type="text/javascript">
+	var urlTop = new Array();
+	urlTop.push("wiki/bin/view");
+	urlTop.push("wiki/bin/edit");
+	var links = document.getElementsByTagName("a");
+	for (var i = 0; i<links.length; i++){
+		for (var j = 0; j<urlTop.length; j++){
+			var index = links[i].href.indexOf(urlTop[j]);
+			if (index>=0){
+				links[i].target = "_top";
+				links[i].href = "/polarion/#" + links[i].href.substring(index + urlTop[j].length, links[i].href.length).replace("/page/", "/wiki/");
+				break;
+			}else{
+				links[i].href.target = "_blank";
+			}
+		}
+	}
+</script>
+ #template("htmlfooter.vm")

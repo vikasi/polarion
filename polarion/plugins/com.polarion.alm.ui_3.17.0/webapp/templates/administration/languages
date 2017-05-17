@@ -1,0 +1,30 @@
+1 Languages
+
+{newlanguage}
+
+{configuration:languages}
+
+1.1 Languages Quick-Help
+You can optionally configure Polarion to support multiple human language translations of Work Items. When correctly configured, a Title and Description field for one or more 
+additional languages appear in the Work Item form in tracker views, and users can switch languages in Documents to view translated Work Items. \\
+
+Before performing this configuration, you need to define 2 custom fields for each language you want to support: one for the translated Work Item title, and one for the description. 
+The field for the title should be of type ~~string~~. The field for description should be of type ~~Rich Text (multi-line)~~. You need to define this field pair 
+for each Work Item type that needs to support multiple languages, and in each Work Item custom field configuration you need this field pair for each language that 
+must be supported. 
+
+1.1.1 Default Language
+The first item in the table on this page is the configured label for the Document Editor menu item that enables users to switch from a translation to the portal default language. 
+In English versions of the Polarion portal, the value is the English string ~~Default Language~~.
+
+1.1.1 Adding Languages
+*IMPORTANT:* Before adding a Language, be sure you have already defined the necessary custom fields for all Work Item types that will have support for the language. \\ 
+
+To add support for an additional language, click *Add New Language*. You will be prompted to specify a name. Users will see this name in the user interface for references to this 
+language. For example, if the target language is German, you might specify either ~~German~~ or ~~Deutsch~~. \\
+
+On the language configuration page, you specify all the Work Item types that you want to have support for the language. If you select ~~All Types~~ the configuration will apply to 
+new Work Items of all types, but not to existing Work Items of any type. To have it apply to existing items, you will need to add a type-specific configuration.
+
+For complete information on this configuration, including the configuration of supporting custom fields, please see Help: Administrator's Guide: Configuring the Portal: ~~Configuring Languages~~.
+ <a href="/polarion/help/index.jsp?tab=links&contextId=com.polarion.xray.web.languages" target="_blank">Link</a>

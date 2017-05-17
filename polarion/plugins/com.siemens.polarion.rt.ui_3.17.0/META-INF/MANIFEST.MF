@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.siemens.polarion.rt.ui
+Export-Package: com.siemens.polarion.rt.ui.form
+Bundle-Name: Polarion RT UI Plugin
+Bundle-Version: 3.17.0
+Bundle-ClassPath: rtUi.jar
+Require-Bundle: com.polarion.alm.ui;bundle-version="3.17.0",com.polari
+ on.platform.guice,com.polarion.alm.tracker,com.siemens.polarion.rt.co
+ mmunication;bundle-version="3.17.0"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion AG
+Guice-Modules: com.siemens.polarion.rt.ui.form.RtFormExtensionModule
+
+

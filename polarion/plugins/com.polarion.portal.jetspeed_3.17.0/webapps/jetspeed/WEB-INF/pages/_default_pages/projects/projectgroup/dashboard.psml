@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/projects/projectgroup/dashboard.psml" hidden="false" version="">
+    <security-constraints>
+        <security-constraints-ref>users</security-constraints-ref>
+    </security-constraints>
+    <title>Dashboard</title>
+    <short-title>Dashboard</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="polarion"/>
+    <fragment id="projectgroup.fsddashboard" type="layout" name="jetspeed-layouts::Table">
+        <fragment id="project.dashboard.witrenfsdfd" type="portlet" name="webui::trendchart">
+            <title>Work Items Trend</title>
+            <property name="row" value="0"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="style='width:50%;'"/>
+            <preference name="reportPath" >
+				    <value>charts/workitems-trend.xml</value>
+			</preference>
+            <preference name="calculation" >
+				    <value>trackeranalysis-projectgroup</value>
+			</preference>
+            <preference name="items" >
+				    <value>workitems-trend-data:UNRESOLVED-BY-ENTITY/*</value>
+			</preference>
+            <preference name="tags" >
+				    <value>14</value>
+			</preference>
+			<!-- fusion line chart properties follow -->
+            <preference name="yAxisName" >
+				    <value>Unresolved Work Items Count</value>
+			</preference>
+        </fragment>
+         <fragment id="project.dashboard.coveragetrend" type="portlet" name="webui::trendchart">
+            <title>Test Coverage</title>
+            <property name="row" value="0"/>
+            <property name="column" value="1"/>
+            <property name="layoutData" value="style='width:50%;'"/>
+            <preference name="reportPath" >
+				    <value>charts/coverage-trend.xml</value>
+			</preference>
+            <preference name="calculation" >
+				    <value>sourceanalysis-aggregate</value>
+			</preference>
+            <preference name="items" >
+				    <value>source-analysis-trend:entity/Total/tests-score/teststest-coverage</value>
+			</preference>
+			<!-- fusion line chart properties follow -->
+            <preference name="yAxisName" >            
+				    <value>Test Coverage</value>
+			</preference>
+        </fragment>        
+        <fragment id="projectgroup.dashboard.quality-score" type="portlet" name="webui::metric" >
+		    <title>Score board</title>
+            <property name="row" value="1"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="colspan='2' style='width:100%;'"/>
+            <preference name="reportPath" >
+				    <value>html/qualitycentre-portlet-inner.html</value>
+			</preference>
+            <preference name="calculation" >
+				    <value>projectscore</value>
+			</preference>
+		    <preference name="factbases" >
+				    <value>project-quality</value>
+			</preference>						
+        </fragment>
+        <fragment id="overview.projectgroup.top-projects" type="portlet"
+            name="webui::metric" >
+		    <title>Top 5 Projects</title>        
+            <property name="row" value="2"/>
+            <property name="column" value="0"/>
+			<preference name="reportPath" >
+				    <value>html/reusecalculator/top-projects-inner.html/top-projects-inner.html</value>
+			</preference>
+            <preference name="calculation" >
+				    <value>reusecalculation</value>
+			</preference>
+		    <preference name="factbases" >
+				    <value>reusecalculator/integral</value>
+			</preference>									            
+        </fragment>        
+        <fragment id="overview.projectgroup.top-packages" type="portlet"
+            name="webui::metric" >            
+		    <title>Top 5 Packages</title>        
+            <property name="row" value="2"/>
+            <property name="column" value="1"/>
+			<preference name="reportPath" >
+				    <value>html/reusecalculator/top-packages-inner.html/top-packages-inner.html</value>
+			</preference>
+            <preference name="calculation" >
+				    <value>reusecalculator</value>
+			</preference>
+		    <preference name="factbases" >
+				    <value>reusecalculator/integral</value>
+			</preference>									
+		</fragment>
+        <!--<fragment id="projectgroup.dashboard.facts_figures" type="portlet" name="webui::factsfigures" >
+		    <title>Fact and Figures</title>
+            <property name="row" value="2"/>
+            <property name="column" value="0"/>
+            <property name="layoutData" value="colspan='2' style='width:100%;'"/>
+            <preference name="reportPath" >
+				    <value>html/facts_figures_dashboard.html</value>
+			</preference>
+			<preference name="calculation" >
+				    <value>all</value>
+			</preference>
+            <preference name="items" >
+				    <value>				    
+						<items>
+					        <group name="Work Items">
+					            <item
+			                		label="Number of Users"
+			                		factbase="repo-analysis"
+			                		key="NOU"/>
+					            <item
+			                		label="Quality"
+			                		factbase="quality-centre"
+			                		key="Total"/>
+					        </group>
+						</items>
+				    </value>				    
+			</preference>			
+        </fragment> -->
+    </fragment>
+</page>

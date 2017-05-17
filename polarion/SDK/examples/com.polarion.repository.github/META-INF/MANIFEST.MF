@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.repository.github;singleton:=true
+Bundle-Name: Git Hub Testing
+Bundle-Version: 1.0.0
+Bundle-ClassPath: example-servlet.jar
+Require-Bundle: com.polarion.portal.tomcat,
+ com.polarion.alm.tracker,
+ com.polarion.core.util
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion Software
+
+

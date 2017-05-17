@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20061207220023</created>
+<type>content</type>
+<content><![CDATA[{section:width=100%}
+{column}
+1 Testing
+
+Polarion supports testing activities such as test case development, execution, and management. Support is mainly provided through project templates that include pre-configured Work Item types, link roles, and content that support testing and test case management. There are 4 main activities involved in process:
+
+{image:schema.png}
+
+1.1 Test Case Specifications
+The “Test Specification” document describes test cases that need to be executed to verify that the specification has been implemented.
+
+* {document:Testing/Test Specification} - link to the test specification document
+* [Test Case Coverage>Test Case Traceability] - review how well is the specification covered by test cases
+
+1.1 Recent Test Runs 
+{recent-testruns}
+
+{column}
+
+{column:width=2px}
+{column}
+
+{column:width=300px}
+{regiontitle}New Manual Test Run{regiontitle}
+<div style="padding:30px">
+{create-testrun-button:label=Create Test Run|query=type:manual}
+
+<div style="width:227;text-align:center">
+Or *{portallink:/testruns?istemplate=true|addcontext=yes}Manage Test Run Templates{portallink}*
+</div>
+</div>
+
+{regiontitle}Recent Statistics{regiontitle}
+#set($timeQuery = 'AND finishedOn:[$today-7d$ TO $today$]')
+#if($page.getProject().startsWith("elibrary"))#set($timeQuery = '')#end
+#set($failed = $trackerService.dataService.getInstancesCount("TestRun", "project.id:$page.getProject() AND status:failed AND NOT isTemplate:true $timeQuery"))
+#set($passed = $trackerService.dataService.getInstancesCount("TestRun", "project.id:$page.getProject() AND status:passed AND NOT isTemplate:true $timeQuery"))
+#if($passed==0 && $failed==0)No Test Runs finished in last 7 days#else
+<center>
+#highchartStart("" "Pie2D" 200 150  )
+#set($highchartColors = ["95d55c","d43d3d","b566d4","cfcfcf"])
+#addHighchartPieDataSet("" "'Passed in Last 7 days',$passed:'Failed in Last 7 days', $failed")
+#addHighchartAdditionalOptions("options.plotOptions = {pie:{dataLabels: {enabled:false},animation:false}};")
+#addHighchartAdditionalOptions("options.tooltip= {formatter: function(){ return  ''+ this.point.name + ': <b>'+ this.y + '</b>' }};")
+#highchartEnd()
+</center>
+#end
+
+{regiontitle}Activity{regiontitle}
+{activity-stream:query=workitem.type:testcase}
+
+{column}
+{section}
+]]></content>
+</wiki-page>

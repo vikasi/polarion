@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.contexts"?>
+<contexts>
+
+    <!--
+        =============================================================================================================
+        DIALOGS
+        =============================================================================================================
+    -->
+    
+    <context id="portlet_ProjectSelector">
+        <topic label="Accessing Projects" href="ugchProjectGetstart.html#ug_gsproject_accessing" />
+        <topic label="Switching to a Different Server" href="ugchProjectGetstart.html#ug_getstart_projects_switchServer" />
+        <topic label="Create New Project Dialog (reference)" href="refchUserRef.html#uref_new_project_wiz" />
+    </context>
+    
+    <context id="query_builder">
+        <topic label="Using the Query Builder" href="ugchWorkitemsSearch.html#ug_wibasics_browse_search_querybuilder" />
+        <topic label="Searching Work Items" href="ugchWorkitemsSearch.html#ug_wibasics_browse_search_searching" />
+    </context>
+    
+    <context id="revision_picker">
+        <description>Revision Picker: Query for, and select a repository revision</description>
+        <topic label="Revision Picker" href="ugchPolForDevProcessingWI.html#ug_devguide_ops_resolving_reposlnk" />
+    </context>
+    
+    <context id="trc-select_workitem">
+        <description>Work Item Picker: Query for and select a Work Item</description>
+        <topic label="Work Item Picker" href="ugchWorkitems.html#ug_wibasics_linking_indiv"/>
+    </context>
+    <context id="wiPresentation">
+        <topic label="Configure Work Item Presentation" href="refchDocsRef.html#uref_cust_wi_presentation_dlg" />
+    </context>
+    
+    <!--
+        =============================================================================================================
+        WORK ITEM VIEWS
+        =============================================================================================================
+    -->
+    
+    <context id="tree_table">
+        <topic label="Navigation Topics Overview" href="ugchPortalTour.html#ug_topics_wi" />
+        <topic label="Administration: Configuring the Work Items Table" href="agchConfigWorkItems.html#admin_config_wi_table_view" />
+    </context>
+    
+    <context id="trc-road_map">
+        <topic label="Work Items Topic: Road Map View" href="ugchPortalTour.html#ug_tour_work_area_views_roadmap" />
+    </context>
+    
+    <context id="designer_view">
+        <topic label="Work Items Topic: Designer View" href="ugchPortalTour.html#ug_tour_work_area_views_designer" />
+        <!-- TO DO: Link to RM topic on usage -->
+    </context>
+    
+    <context id="tr_matrix">
+        <topic label="Work Items Topic: Matrix View" href="ugchWorkitemsTopic.html#ug_tour_work_area_tabss_matrix" />
+        <topic label="Linking Work Items in the Matrix View" href="ugchWorkitemsLinking.html#ug_wibasics_linking_matrix" />
+    </context>
+    
+    <context id="multi_edit">
+        <topic label="Portal Tour: Multi Edit View" href="ugchPortalTour.html#ug_tour_work_area_views_multiedit" />
+        <topic label="User Guide: Editing Work Items: Using Multi Edit View" href="ugchWorkitemsCreateEdit.html#gs-workitems_editing_multiedit" />
+    </context>
+    
+    <context id="live_plan">
+        <topic label="Work Items Topic: Live Plan View" href="ugchPortalTour.html#ug_tour_work_area_views_liveplan" />
+        <topic label="Polarion for Project Managers: Project Planning" href="ugchProjectMgrs.html#ug_projectmgmt_planning" />
+    </context>
+    
+    <context id="item_preview">
+        <topic label="Editing Work Items" href="ugchWorkitemsCreateEdit.html#ug_wibasics_create_edit_editing" />
+        <topic label="Common Operations with Work Items" href="ugchWorkitemsCommonOps.html" />
+    </context>
+    
+    <context id="portlet_Navigation">
+        <topic label="Navigation Pane" href="ugchPortalTour.html#ug_tour_main_navpanel" />
+    </context>
+    <context id="time_sheet">
+        <topic href="ugchWorkitemsTopic.html#ug_tour_work_area_tabs_timesheet" label="Work Items Topic: Time Sheet View" />
+        <topic href="ugchPolForDevProcessingWI.html#ug_devguide_ops_report_time_timesheet" label="Processing Work Items: Using the Time Sheet View" />
+    </context>
+
+    <!--
+        =============================================================================================================
+        ADMINISTRATION
+        =============================================================================================================
+    -->
+    
+    <!-- Seems to be duplicate - commenting out until we see if it introduces a defect 
+    <context id="pref_enumerations">
+        <topic label="Administration: Configuring Enumerations" href="agchConfigWorkItems.html#admin_config_wi_config_enums" />
+    </context>
+    -->
+    
+    <context id="portlet_XXX_Announcements">
+        <topic label="Administration: Configuring Announcements" href="agchConfigAnnouncements.html" />
+    </context>
+    
+    <context id="projects_administration">
+        <topic label="Administration: Managing Projects" href="agchManageProjects.html" />
+    </context>     
+        
+    <context id="templates">
+        <topic label="User Guide: Creating New Projects from Templates" href="ug_projects_createNew.html#ug_projects_creating_new" />
+        <topic label="Administration: Customizing Project Templates" href="agchManageProjects.html#admin_projects_templates" />
+    </context>
+    
+    <context id="users">
+        <topic label="Administration: Managing Users and Permissions" href="agchUsersPermissions.html" />
+    </context>
+    
+    <context id="roles">
+        <topic label="Administration: Configuring User Roles" href="agchUsersPermissions.html#admin_users_config_roles" />
+    </context>
+    
+    <context id="permissions">
+        <topic label="Administration: Configuring User Permissions" href="agchUsersPermissions.html#admin_users_config_permissions" />
+    </context>
+    
+    <context id="accessmngmt">
+        <topic label="Administration: Repository Access Management" href="agchAdvancedAdmin.html#ag_advAdmin_accessMgmt" />
+    </context>
+    
+    <context id="perms">
+        <topic label="Administration: Configuring User Permissions" href="agchUsersPermissions.html#admin_users_config_permissions" />
+    </context>
+    
+    <context id="project_administration">
+        <topic label="Administration: Project Administration" href="agchManageProjects.html#ag_manage_projs" />
+    </context>  
+    
+    <context id="artifacts">
+        <topic label="Administration: Advanced Build Management: Build Artifacts" href="agchAdvBuildMgmt.html#admin_adv_build_buildArtifacts" />
+    </context>
+    
+    <context id="autocreate">
+        <topic label="Administration: Managing Users and Permissions: Configuring Auto-creation of Users" href="agchUsersPermissions.html#admin_users_ldap_autocr" />
+    </context>
+    
+    <context id="ldap">
+        <topic label="Administration: Managing Users and Permissions: Integrating with LDAP" href="agchUsersPermissions.html#admin_users_ldap_polarion-config" />
+    </context>
+    
+    <context id="timepoints">
+        <topic label="Administration: Configuring Time Points" href="agchConfigWorkItems.html#admin_config_wi_config_timepoints" />
+    </context>
+    
+    <context id="categories">
+        <topic label="Administration: Configuring Categories" href="agchConfigWorkItems.html#admin_config_wi_config_categories" />
+    </context>
+    
+    <context id="historyCreatorIsRunningHelp">
+        <topic label="Administration: System Maintenance: Indexing and Reindex: User Impact" href="agchSystemMaint.html#admin_index_reindex_userImpact" />
+    </context>
+    <context id="connectors">
+        <topic label="Administration: Configuring Connectors" href="agchConfigConnectors.html" />
+    </context>
+    <context id="repositories">
+        <topic label="Configuring Repositories" href="agchConfigRepos.html" />
+    </context>
+    <context id="repository">
+    <topic label="Configuring Repositories" href="agchConfigRepos.html" />
+    </context>
+    <!--
+    <context id="views">
+        <topic label="Configuring Interface Views" href="agConfigInterface.html" />
+    </context>
+    -->
+    
+    <!-- QA - check if next link is the right one: -->
+    <context id="form">
+        <topic label="Administration: Configuring Work Item Form Filters" href="agConfigInterface.html#ag_config_views_form_filters" />
+        <topic label="Administration: Configuring Work Item Form Layout" href="agConfigInterface.html#ag_config_views_form_layouts" />
+    </context>
+    
+    <context id="readonly">
+        <topic label="Administration: Configuring Views: Read-only fields" href="agConfigInterface.html#ag_config_views_readonly" />
+    </context>
+    
+    <context id="formmenus">
+        <topic label="Administration: Configuring Form Menus" href="agchConfigWorkItems.html#admin_config_wi_linking_linkRoles_wiFormMenus" />
+    </context>
+    
+    <context id="queries">
+        <topic label="Administration: Configuring Queries" href="agchConfigWorkItems.html#admin_config_wi_queries" />
+    </context>
+    
+    <context id="enumerations">
+        <topic label="Administration: Configuring Enumerations" href="agchConfigWorkItems.html#admin_config_wi_config_enums" />
+    </context>
+    
+    <context id="customfields">
+        <topic label="Administration: Configuring Custom Fields" href="agchConfigWorkItems.html#admin_config_wi_config_custom_fields" />
+    </context>
+    
+    <context id="calculatedfields">
+        <topic label="Administration: Configuring Calculated Fields" href="agchConfigWorkItems.html#admin_config_wi_calc_fields" />
+    </context>
+    
+    <context id="workflow">
+        <topic label="Administration: Configuring Work Item Workflow" href="agchConfigWorkItems.html#admin_config_wi_workflow" />
+        <topic label="Administration: Configuring Document Workflow" href="agchConfigDocsPages.html#ag_config_doc_typesWorkflows" />
+        <topic label="Administration: Configuring Test Run Workflow" href="agchConfigTestRunWorkflow.html" />
+    </context>
+    
+    <context id="workrecordsdesigner">
+        <topic label="Administration: Configuring Work Records" href="agchConfigWorkItems.html#admin_config_wi_workRecs" />
+    </context>
+    
+    <context id="table">
+        <topic label="Administration: Configuring the Work Item Table Tab" href="agchConfigWorkItems.html#admin_config_wi_table_tab" />
+    </context>
+    
+    <context id="calendar">
+        <topic label="Administration: Configuring the Global Working Calendar" href="agchConfigWorkItems.html#admin_config_wi_wcalendar" />
+    </context>
+    
+    <context id="planning">
+        <topic label="Administration: Configuring Planning" href="agchConfigWorkItems.html#admin_config_wi_planning" />
+    </context>
+    
+    <context id="linking">
+        <topic label="Administration: Configuring Work Item Linking" href="agchConfigWorkItems.html#admin_config_wi_linking" />
+    </context>
+    
+    <context id="autoassignment">
+        <topic label="Administration: Configuring Auto-assignment" href="agchConfigWorkItems.html#admin_config_wi_autoassign" />
+    </context>
+    
+    <context id="voting">
+        <topic label="Administration: Configuring Voting" href="agchConfigWorkItems.html#admin_config_wi_voting" />
+    </context>
+    
+    <context id="shortcuts">
+        <topic label="Administration: Configuring the Portal" href="agchConfigPortal.html" />
+        <topic label="Administration: Configuring Shortcuts and Favorites" href="agchConfigPortal.html#admin_config_portal_shortcuts" />
+    </context>
+    <context id="defaultProjectFavoritesShortcuts">
+        <topic label="Administration: Favorite Shortcuts" href="agchConfigPortal.html#config_portal_shortcutsFavorites" />
+    </context>
+    
+    <context id="views">
+        <topic label="Administration: Configuring Views" href="agConfigInterface.html" />
+    </context>
+    
+    <context id="report_descriptors">
+        <topic label="Administration: Configuring Reports" href="agchConfigReports.html" />
+    </context>
+    
+    <context id="workitem_metrics">
+        <topic label="Administration: Configuring Reports: Work Item Metrics" href="agchConfigReports.html#admin_config_reports_wimetrics" />
+    </context>
+    
+    <context id="workitem_quality_report">
+        <topic label="Administration: Configuring Reports: Work Item Quality" href="agchConfigReports.html#admin_config_reports_wiquality" />
+    </context>
+    
+    <context id="process_quality_report">
+        <topic label="Administration: Configuring Reports: Process Quality" href="agchConfigReports.html#admin_config_reports_processquality" />
+    </context>
+    
+    <context id="reports_config">
+        <topic label="Administration: Configuring Reports" href="agchConfigReports.html#admin_config_reports_sourcecode" />
+    </context>
+    
+    <context id="descriptors">
+        <topic label="Administration: Configuring Building: Build Descriptors" href="agchAdvBuildMgmt.html#admin_adv_build_buildDescrDefs" />
+    </context>
+    
+    <context id="build_workitem_reports">
+        <topic label="Administration: Configuring Building: Work Item Reports" href="agchConfigBuilding.html#admin_config_builds_wiReports" />
+    </context>
+    
+    <context id="export">
+        <topic label="Administration: Configuring PDF Export" href="agConfigPdfExport.html" />
+    </context>
+    
+    <context id="notification_config">
+        <topic label="Administration: Configuring Notifications" href="agchConfigNotification.html#admin_config_notif_settings" />
+    </context>
+    
+    <context id="notification_targets">
+        <topic label="Administration: Configuring Notifications: Targets" href="agchConfigNotification.html#admin_config_notif_targets" />
+    </context>
+    
+    <context id="notification_layouts">
+        <topic label="Administration: Configuring Notifications: E-mail Layout" href="agchConfigNotification.html#admin_config_notif_ex_customLayout" />
+    </context>
+    
+    <context id="announcements">
+        <topic label="Administration: Configuring Announcements" href="agchConfigAnnouncements.html" />
+    </context>
+    
+    <context id="scheduler">
+        <topic label="Administration: Configuring the Job Scheduler" href="agchSystemMaint.html#admin_jobs_new_job" />
+    </context>
+    
+    <context id="index">
+        <topic label="Administration: Index and Re-index" href="agchSystemMaint.html#admin_index_reindex" />
+    </context>
+    
+    <context id="autoassignmentdetail">
+        <topic label="Administration: Configuring Auto-assignment" href="agchConfigWorkItems.html#admin_config_wi_autoassign" />
+    </context>
+    
+    <context id="calculatedfieldsdetail">
+        <topic label="Administration: Configuring Calculated Fields" href="agchConfigWorkItems.html#admin_config_wi_calc_fields" />
+    </context>
+    
+    <context id="customfieldsdesigner">
+        <topic label="Administration: Configuring Custom Fields" href="agchConfigWorkItems.html#admin_config_wi_config_custom_fields" />
+    </context>
+    
+    <context id="enumdesigner">
+        <topic label="Administration: Configuring Enumerations" href="agchConfigWorkItems.html#admin_config_wi_config_enums" />
+    </context>
+    
+    <context id="exporttemplates">
+        <topic label="Administration: Customizing Export Templates" href="agchConfigWorkItems.html#admin_config_wi_config_exportTempl" />
+                                                                          
+    </context>
+    
+    <context id="formfilter">
+        <topic label="Administration: Configuring Work Item Form Filters" href="agConfigInterface.html#ag_config_views_form_filters" />
+        <topic label="See also: Administration: Configuring Work Item Form Layout" href="agConfigInterface.html#ag_config_views_form_layouts" />
+        <topic label="Main topic: Administration: Configuring Views" href="agConfigInterface.html" />
+    </context>
+    
+    <context id="formlayout">
+        <topic label="Administration: Configuring Work Item Form Layout" href="agConfigInterface.html#ag_config_views_form_layouts" />
+        <topic label="See also: Administration: Configuring Work Item Form Filters" href="agConfigInterface.html#ag_config_views_form_filters" />
+        <topic label="Main topic: Administration: Configuring Interface Views" href="agConfigInterface.html" />
+    </context>
+    
+    <context id="formmenus">
+        <topic label="Administration: Configuring Work Item Linking Menus" href="agchConfigWorkItems.html#admin_config_wi_linking_linkRoles_wiFormMenus" />
+        <topic label="Main topic: Administration: Configuring Work Item Linking" href="agchConfigWorkItems.html#admin_config_wi_linking" />
+    </context>
+    
+    <context id="linkedmenu">
+        <topic label="Administration: Configuring Work Item Linking Menus" href="agchConfigWorkItems.html#admin_config_wi_linking_linkRoles_wiFormMenus" />
+        <topic label="Administration Reference: Form Menus Configuration" href="refchAdminRef.html#ref_admin_formMenuConfig" />
+        <topic label="Main topic: Administration: Configuring Work Item Linking" href="agchConfigWorkItems.html#admin_config_wi_linking" />
+    </context>
+    
+    <context id="linkingmenu">
+        <topic label="Administration: Configuring Work Item Linking Menus" href="agchConfigWorkItems.html#admin_config_wi_linking_linkRoles_wiFormMenus" />
+        <topic label="Administration Reference: Form Menus Configuration" href="refchAdminRef.html#ref_admin_formMenuConfig" />
+        <topic label="Main topic: Administration: Configuring Work Item Linking" href="agchConfigWorkItems.html#admin_config_wi_linking" />
+    </context>
+    
+    <context id="readonlyfields">
+        <topic label="Administration: Defining Read-only Fields" href="agConfigInterface.html#ag_config_views_readonly" />
+        <topic label="Main topic: Administration: Configuring Interface Views" href="agConfigInterface.html" />
+    </context>
+       
+    <context id="workflowdesigner">
+        <topic label="Administration: Configuring Workflow (Work Items)" href="agchConfigWorkItems.html#admin_config_wi_workflow" />
+        <topic label="Administration: Configuring Workflow (Documents)" href="agchConfigDocsPages.html#ag_config_doc_workflow" />
+        <topic label="Administration: Configuring Workflow (Test Runs)" href="agchConfigTestRunWorkflow.html#agConfigTestRunWorkflow_usingDesigner" />
+    </context>
+    
+    <context id="topics">
+        <topic label="Administration: Controlling Navigation Topics" href="agConfigInterface.html#ag_config_views_nav_topics" />
+        <topic label="Main topic: Administration: Configuring Interface Views" href="agConfigInterface.html" />
+    </context>
+    
+    <context id="topicconfiguration">
+        <topic label="Administration: Controlling Navigation Topics" href="agConfigInterface.html#ag_config_views_nav_topics" />
+        <topic label="Main topic: Administration: Configuring Interface Views" href="agConfigInterface.html" />
+    </context>
+    
+    <context id="notification_layouts_detail">
+        <topic label="Administration: Customizing Layout of Notification Emails" href="agchConfigNotification.html#admin_config_notif_ex_customLayout" />
+        <topic label="Main topic: Administration: Configuring Notifications" href="agchConfigNotification.html" />
+    </context>
+    
+    <context id="license">
+        <topic label="Administration: Advanced: Managing Polarion Licenses" href="agchAdvancedAdmin.html#ag_advAdmin_licenseMgmt" />
+        <topic label="Admininstration Reference: License Usage Reference" href="agchAdvancedAdmin.html#ag_advAdmin_licenseMgmt"></topic>
+    </context>
+    
+    <context id="license_ref">
+        <topic label="Admininstration Reference: License Usage Reference" href="agchAdvancedAdmin.html#ag_advAdmin_licenseMgmt"></topic>
+    </context>
+    
+    <context id="useraccountvault">
+        <topic label="Administration: Configuring the User Account Vault" href="agchUsersPermissions.html#admin_users_config_vault" />
+    </context>
+    
+    <context id="languages">
+        <topic label="Administration: Configuring Languages" href="agConfigLangs.html" />
+    </context>
+    
+    <!-- TESTING ADMIN: -->
+    <context id="configuration">
+        <topic label="Administration: Configuring Testing" href="agchConfigTesting.html" />
+        <topic label="Administration: Setting the Testing Configuration" href="agchConfigTestingTestConfig.html" />
+    </context>
+    <context id="testexporttemplates">
+        <topic label="Administration: Configuring Testing: Configuring Test Export Templates" href="agchConfigTestExportTmpl.html" />
+    </context>
+    <context id="test_result_enumeration">
+        <topic label="Administration: Configuring Testing: Test Results" href="agchConfigTestingEnums.html#agConfigTesting_ConfigEnums_Results" />
+    </context>
+    <context id="test_run_custom_fields" >
+        <topic label="Administration: Configuring Testing: Test Run Custom Fields" href="agchConfigTestingEnums.html#agConfigTesting_ConfigEnums_CustFields" />
+    </context>
+    <context id="test_run_status_enumeration">
+        <topic label="Administration: Configuring Testing: Test Run Statuses" href="agchConfigTestingEnums.html#agConfigTesting_ConfigEnums_Statuses"/>
+    </context>
+    <context id="test_run_type_enumeration">
+        <topic label="Administration: Configuring Testing: Configuring Types and Enumerations" href="agchConfigTestingEnums.html" />
+    </context>
+    
+    <context id="test_run_workflow">
+        <topic label="Administration: Configuring Test Run Workflow" href="agchConfigTestRunWorkflow.html" />
+    </context>
+    
+    <context id="test_run_signatures">
+        <topic label="Administration: Configuring Test Run Signatures" href="agchConfigTestRunSignatures.html" />
+    </context>
+    
+    <!--
+        =============================================================================================================
+        WIKI TOPICS
+        =============================================================================================================
+    -->
+    
+    <!-- ID for attachments portlet -->
+    <context id="ug_wiki_common_ops_attachments">
+        <topic label="Wiki Page Attachments" href="ugchWiki.html#ug_wiki_common_ops_attachments" />
+    </context>
+    
+    <!-- ID for Comments portlet -->
+    <!-- TO DO Check why this was specified by Dev. There seems to be no such feature -->
+    <context id="ug_wiki_common_ops_update_page_add_comment">
+        <topic label="Wiki Page Comments" href="ugchWiki.html#ug_wiki_common_ops_update_page_add_comment" />
+    </context>
+    
+    <!-- ID for Search portlet -->
+    <context id="ug_wiki_searching">
+        <topic label="Wiki Search" href="ugchWiki.html#ug_wiki_searching" />
+    </context>
+    
+    <!-- ID for Recently Visited portlet - yes, ID is same as previous context -->
+    <context id="ug_wiki_getStart_navSpaces">
+        <topic label="Recently Visited" href="ugchWiki.html#ug_wiki_getStart_navSpaces" />
+    </context>
+    
+    <!-- ID for Backlinks portlet -->
+    <context id="ug_wiki_common_ops_backlinks">
+        <topic label="Wiki Backlinks" href="ugchWiki.html#ug_wiki_getStart" />	
+    </context>
+    
+    <!-- ID for Wiki syntax help portlet  -->
+    <context id="ug_wiki_editing_pages_wiki_editor_syntaxHelp">
+        <topic label="Wiki Syntax Help" href="ugchWiki.html#ug_wiki_editing_pages_wiki_editor_syntaxHelp" />
+    </context>
+    
+    <!-- ID for Wiki Attachments -->
+    <context id="wiki_editor_attachments">
+        <topic label="Wiki Page Attachments" href="ugchWikiTopic.html#ug_wiki_common_ops_attachments" />    
+    </context>
+    
+    <!--
+        =============================================================================================================
+        FEATURE TOPICS
+        =============================================================================================================
+    -->
+    <!-- Insert Screenshot  -->
+    <context id="insertScreenshot">
+        <topic label="Inserting a Screenshot Image" href="ugchWorkitems.html#ug_wibasics_create_edit_editing_images" />
+    </context>
+    <!-- Document Auto-suspect -->
+    <context id="docProperties_autoSuspect">
+        <topic label="Documents: Properties: Auto-suspect" href="ugDocsPropsHist.html#ug_docswiki_docs_docProperties_autoSuspect"/>
+    </context>
+    <!-- Document Properties -->
+    <context id="docProperties_lazyLoad">
+        <topic label="Documents: Properties: On-demand Work Item Loading" href="ugDocsPropsHist.html#ug_docswiki_docs_docProperties_onDemand" />
+        <topic label="Documents: Properties: Reference" href="refchDocsRef.html#uref_doc_sidebar_docProperties" />
+    </context>
+    <!-- Document Outline numbering -->
+    <context id="docs_editing_outlineNum">
+        <topic label="Documents: Editing: Using Outline Numbering" href="ugDocsEditing.html#ug_docswiki_docs_editing_outlineNum"/>
+        <topic label="Documents: Properties: Outline" href="ugDocsPropsHist.html#ug_docswiki_docs_Outline"/>
+    </context>
+    <!-- Word Round-trip Export Template -->
+    <context id="roundtrip_template">
+        <topic href="ugDocsWordRoundtrip.html#ug_docswiki_docs_customTemplate" label="User Guide: Using Round-trip Export Templates" />
+        <topic href="refchUserRef.html#uref_doc_exportTemplFields" label="User Reference: Export Template Fields" />
+    </context>
+    <context id="excel_import">
+        <topic href="ugchWorkitemsImporting.html#ug_wibasics_importing_excel" label="Importing from Excel" />
+        <topic href="ugchWorkitemsExcelRT.html" label="User Guide: Using Excel Round-trip" />
+    </context>
+    <!-- Document-like Editor -->
+    <context id="document_like_editor">
+        <topic href="refchDocsRef.html#uref_documents" label="Document Editor Reference" />
+    </context>
+    <context id="docs_roundtrip_template">
+        <topic href="ugDocsWordRoundtrip.html#ug_docswiki_docs_customTemplate" label="Using Round-trip Export Templates" />
+        <topic href="refchDocsRef.html#uref_doc_exportTemplLoc" label="Round-trip Export Template Locations" />
+    </context>
+    <context id="docProperties_customFields">
+        <topic href="agConfigDocCustomFields.html" label="Configuring Document Custom Fields" />
+    </context>
+    <!-- Baselines -->
+    <context id="baselines_time_machine">
+        <topic href="ugchBaselines.html" label="Baselines Topic" />
+    </context>
+    <!-- CMMI Report -->
+    <context id="cmmi">
+        <topic href="ugchProjectDashbdsReports.html#ug_projectmgmt_reports_cmmi" label="CMMI Report" />
+    </context>
+    <!-- Clipboard Access -->
+    <context id="clipboardAccessRestrictions">
+        <topic href="ugchWorkitemsCommonOps.html#ug_wibasics_commonops_clipboard_browserSettings" label="Browser Settings for Clipboard Access" />
+    </context>
+    <!-- Test Runs -->
+    <context id="testrun">
+        <topic label="Test Runs Topic" href="ugchTestRuns.html" />
+        <topic label="Creating Test Runs" href="ugtopicTestRuns.html#TestMgmt_TestRun_Creating" />
+        <topic label="Customizing Test Run Templates" href="ugtopicTestRuns.html#TestMgmt_TestRun_Templates" />
+    </context>
+    <!-- Test Parameters -->
+    <context id="test_parameters">
+        <topic label="Using Test Parameters and Iterations" href="ugchTestParameters.html"></topic>
+    </context>
+    <context id="test_parameters_library">
+        <topic label="Defining the Test Parameters Library" href="ugchTestParameters.html#ugTestParams_howToSetup_Library" />
+    </context>
+    <!-- Builds -->
+    <context id="builds">
+        <topic label="Builds Topic" href="ugchBuilds.html" />
+    </context>
+    <!-- Plans (table) -->
+    <context id="plans">
+        <topic label="Plans Topic" href="ugchPlansTopic.html" />
+    </context>
+    <!-- Pages -->
+    <context id="page_editor">
+        <topic label="Working With Pages" href="ugchPages.html" />
+    </context>
+</contexts>
+
+
+
+
+
+
+
+
+
+
+
+

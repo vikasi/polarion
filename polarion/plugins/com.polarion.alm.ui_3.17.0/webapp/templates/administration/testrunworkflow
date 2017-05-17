@@ -1,0 +1,21 @@
+1 Test Run Workflow
+
+#info("The workflow configuration for Test Runs enables you to specify *workflow transitions* from start state to end state and *perform some specific action* for each transition.")
+
+\\
+{configuration:workflow|prototype=TestRun}
+\\
+1.1 Quick Help
+
+The table above shows the workflow configurations currently defined for *Test Runs*. In general, configurations can be Global or project in their scope. The ~~Scope~~ column indicates the scope of 
+the configuration currently in use. A Test Run workflow configuration can also be specific to one or more Test Run ~~types~~. \\
+
+There are two simple rules that define the order in which configurations are used:
+* Configuration in the project scope always overrides the Global configuration.
+* Type-specific configuration always overrides the ~~All Types~~ configuration.
+
+1.1.1 Notes
+
+* There is a separate workflow configuration for Work Items and Work Items types. That configuration maps a work process or methodology into Polarion. The configuration topic is: Administration &gt; Work Items &gt; Workflow.
+* There is another separate workflow configuration for Documents, which controls transitions to different statuses of Documents, invoking configured actions. A common use case is enforcing electronic signatures. The configuration topic is: Administration &gt; Documents &amp; Pages &gt; Document Workflow.
+

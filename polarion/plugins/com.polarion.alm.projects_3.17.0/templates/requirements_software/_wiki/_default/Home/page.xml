@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20071209000414</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.macros}
+
+1 Welcome to the ~~{project-property:name}~~ project
+
+{style:type=div|float=left|width=300px}
+{image:company_logo.jpg}
+{style}
+
+{project-property:description}
+
+#clearFloats()
+
+<center>
+#spacePanel("Requirements Specifications>Specification.Home" "/polarion/icons/default/topicIcons/Color_002-map.png" "Here you can find all the resources related to the product specification including product vision, approved requirements specifications etc.")
+#spacePanel("Testing>Testing.Home" "/polarion/icons/default/topicIcons/Color_008-checkmark.png" "Select this space if you need to browse the latest test run executions, or if you are interested how well  the product has been tested.")
+</center>
+]]></content>
+</wiki-page>

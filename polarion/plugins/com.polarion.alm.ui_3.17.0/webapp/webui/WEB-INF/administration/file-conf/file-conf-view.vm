@@ -1,0 +1,173 @@
+##<link href="${clink}css/xray/xray-default.css" type="text/css" rel="stylesheet"/>
+##<link href="${clink}css/xray/xray-table.css" type="text/css" rel="stylesheet"/>
+##<link href="${clink}css/xray/xray-preferences.css" type="text/css" rel="stylesheet"/>
+##<link href="${clink}css/xray/xray-detail.css" type="text/css" rel="stylesheet"/>
+##<script type="text/javascript" src="/webui/WEB-INF/velocity/resize.js"></script>
+
+
+#if($canRead)
+
+##one button in toolbar
+#if($actionName)
+<table class="toolbar_off" width="100%"  cellpadding="0" cellspacing="0">
+			<tr>
+    			<td height="100%" style="padding-top:2px;padding-left:5px;">
+				#set($actionUrl = $renderResponse.createActionURL())
+    			$actionUrl.setParameter("$actionName","$actionName")
+    			#if($canChange)
+	    			<form  name="actionForm" action="$actionUrl" method="post">
+    					<input type="submit" value="$actionTitle" class="actionButtonBig" />
+					</form>    			
+    			#else
+    				<input type="button" value="$actionTitle" disabled  class="actionButtonBig" />
+				#end
+			</tr>
+</table>
+#end
+
+
+<table width="100%"  cellspacing="0" cellpadding="0">
+	#if($message)
+		<tr>
+			<td style="padding:10">
+				$!message
+				<br/>
+		</td>
+	</tr>
+	#end
+	<tr>
+		<td style="padding:10">
+		
+		    #if(!$title)
+		      #set($title = $localization.getValue('definition.configuration'))
+		    #end
+			#panel("configuration_$portlet.getID()" $title $helpContext true true false)
+				<br/>
+				#if($globalFileURL)
+        			$localization.getValue('administration.workItems.projectConfiguration')$localization.getValue('definition.colon') 
+				#end
+				<table>
+					<tr >
+						<td class="featureLabel">
+							$localization.getValue('definition.file')$localization.getValue('definition.colon')
+						</td>
+						<td class="featureValue">
+                    		#if($exists_fileURL)
+                    			#set($svnUrl = $svnUrlTool.getDownloadUrl($fileURLRelative))
+                    			<a  class="conffile" href="$svnUrl" target="_blank">$fileURL
+                    			</a>
+                    		#else
+            					<span  style="notconffile">$fileURL $localization.getValue('definition.openBracket')$localization.getValue('administration.workItems.notAvaliable')$localization.getValue('definition.closeBracket')</span>
+							#end
+						</td>
+					</tr>
+				</table>
+        		#if($globalFileURL)
+        			<br>
+        			$localization.getValue('administration.workItems.globalConfiguration')$localization.getValue('definition.colon')
+    				<table>
+    					<tr >
+    						<td class="featureLabel">
+    							$localization.getValue('definition.file')$localization.getValue('definition.colon')
+    						</td>
+    						<td class="featureValue">
+                    			#if($exists_globalFileURL)
+	                    			#set($svnUrl = $svnUrlTool.getDownloadUrl($globalFileURLRelative))
+                    				<a  class="conffile" href="$svnUrl" target="_blank">$globalFileURL
+                    				</a>
+                    			#else
+            						<span  style="notconffile">$globalFileURL $localization.getValue('definition.openBracket')$localization.getValue('administration.workItems.notAvaliable')$localization.getValue('definition.closeBracket')</span>
+                    			#end
+    						</td>
+    					</tr>
+    				</table>
+        		#end
+				<br/>
+	        #endPanel()
+		</td>
+	</tr>
+	#if($canChange)
+        <tr>
+        	<td style="padding:10">
+    				#if($projectLevel) 
+    					#panel("upload_$portlet.getID()" $localization.getValue('administration.workItems.uploadNewProjectConfiguration') $helpContext true true false)
+        			#else 
+    					#panel("upload_$portlet.getID()" $localization.getValue('administration.workItems.uploadNewGlobalConfiguration') $helpContext true true false)
+    				#end					
+        			<br/>
+        			#set($actionUrl = $renderResponse.createActionURL())
+        			$actionUrl.setParameter("doUpload","doUpload")
+        			<form enctype="multipart/form-data" name="importForm" action="$actionUrl" method="post">
+						<input type="hidden" name="mode" value="upload">
+						<table>
+        					<tr>
+        						<td class="featureLabel"><label for="file"> $localization.getValue('definition.file')$localization.getValue('definition.colon') </label></td>
+        						<td><input id="file" size=100 type="file" name="file"/></td>
+        					</tr>
+							<tr>
+								<td align="left" colspan="2" style="padding-top:10">
+									<input type="submit" name="doUpload" value="$localization.getValue('definition.upload')" class="actionButtonSmall"/>
+								</td>
+							</tr>
+						</table>
+        			</form>
+                #endPanel()
+        	</td>
+        </tr>
+        #if(!$noEdit)
+        <tr>
+        	<td >
+    				#if($projectLevel) 
+    					#panel("upload_$portlet.getID()" $localization.getValue('administration.workItems.editProjectConfiguration') $helpContext true true false)
+        			#else 
+    					#panel("upload_$portlet.getID()" $localization.getValue('administration.workItems.editGlobalConfiguration') $helpContext true true false)
+    				#end					
+        			
+        			#set($actionUrl = $renderResponse.createActionURL())
+        			<form name="editForm" action="$actionUrl" method="post">
+						<input type="hidden" name="mode" value="edit">
+						<table style="width:100%">
+							#if($globalFileURL && !$fileContent && $globalFileContent)
+							<tr>
+								<td align="left" colspan="2" >
+									<input type="button" onclick="pasteGlobal()"  value="$localization.getValue('administration.workItems.pasteGlobalConfiguration')" class="actionButtonMega"/>
+								</td>
+							</tr>
+							#end	
+        					<tr>
+        							<td><textarea id="editArea"  name="editArea" rows="14" style="width:99%;overflow:auto;">$!fileContent</textarea></td>
+        					</tr>
+							<tr>
+								<td align="left" colspan="2">
+									<input type="submit" name="doEdit" value="$localization.getValue('definition.save')" class="actionButtonSmall"/>
+								</td>
+							</tr>
+						</table>
+        			</form>
+                #endPanel()
+        	</td>
+        </tr>	
+        #end		
+        #if($linkRoleURL)	
+		    <tr>
+		    	<td>
+					#panel("upload_$portlet.getID()" $localization.getValue('administration.workItems.linkRoleEnumerations') $helpContext true true false)
+					    <div style="padding:3px">
+					    	#set ($link = "#${linkRoleURL}")
+					  	    $localization.getValue('administration.workItems.toEditWILinkRoleEnumerations',"<b><a href=\"$link\" target=\"_top\">$localization.getValue('administration.workItems.link')</a></b>")
+						</div>
+		            #endPanel()
+		    	</td>
+		    </tr>
+        #end		
+	#end
+</table>
+<script>
+function pasteGlobal(){
+	document.getElementById("editArea").value = "$globalFileContent";
+}
+
+</script>
+#else
+  Cannot read - security restriction.
+#end

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20120216114026</created>
+<type>content</type>
+<content><![CDATA[{parameter:label|type=string|value=Requirements}
+{parameter:query|type=string|value=type:requirement}
+
+#set($dataService = $trackerService.getDataService()) 
+#set($rQuery = "project.id:$page.project AND $pageParameters.query")
+#set($rLabel = "$pageParameters.label")
+ 
+1 $rLabel - Test Case Coverage
+
+#set($sqlCovered="SELECT REQ.C_PK FROM LUCENE_QUERY('WorkItem', '$rQuery', 'id') REQ WHERE EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = REQ.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND TEST.C_TYPE = 'testcase')") 
+
+#set($sqlUncovered="SELECT REQ.C_PK FROM LUCENE_QUERY('WorkItem', '$rQuery', 'id') REQ WHERE NOT EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = REQ.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND TEST.C_TYPE = 'testcase')")
+ 
+#set($covered_items = $dataService.sqlSearch($sqlCovered)) 
+#set($covered_result = $covered_items.size()) 
+#set($uncovered_items = $dataService.sqlSearch($sqlUncovered)) 
+#set($uncovered_result = $uncovered_items.size()) 
+ 
+<table><tr><td> 
+#highchartStart("" "Pie2D" 150 150  )
+#set($highchartColors = ["95d55c","d43d3d","b566d4","cfcfcf"])
+#addHighchartPieDataSet("Coverage" "'Covered',$covered_result:'Uncovered', $uncovered_result")
+#addHighchartAdditionalOptions("options.plotOptions = {pie:{dataLabels: {enabled:false},borderWidth:0,animation:false}};")
+#addHighchartAdditionalOptions("options.tooltip = {formatter: function(){ return  ''+ this.point.name + ':<b>'+ this.y + '</b>' }};")
+#highchartEnd()
+
+</td><td style="padding:20px"> 
+There are *$uncovered_result $rLabel* without verifying test cases. 
+</td> </tr> </table> 
+ 
+1.1 $rLabel without Test Cases
+<center>
+{workitems:sqlQuery=$sqlUncovered|fields=id,title,status|width=80%}
+</center>
+
+1.1 $rLabel with Test Cases
+<center>
+{workitems:sqlQuery=$sqlCovered|fields=id,title,status|width=80%|expand=no}
+</center>
+]]></content>
+</wiki-page>

@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.alm.oslc;singleton:=true
+Export-Package: com.hp.hpl.jena.rdf.model;x-friends:="com.polarion.alm
+ .tracker.web.tests",com.polarion.alm.oslc.configuration,com.polarion.
+ alm.oslc.internal,com.polarion.alm.oslc.internal.configuration,com.po
+ larion.alm.oslc.internal.model,com.polarion.alm.oslc.internal.oauth,c
+ om.polarion.alm.oslc.internal.oauth.provider,com.polarion.alm.oslc.in
+ ternal.rootservices,com.polarion.alm.oslc.provider,javax.ws.rs,javax.
+ ws.rs.core,net.oauth,org.apache.wink.client,org.apache.wink.client.in
+ ternal,org.apache.wink.json4j,org.eclipse.lyo.client.oslc,org.eclipse
+ .lyo.client.oslc.resources,org.eclipse.lyo.oslc4j.core.model,org.ecli
+ pse.lyo.oslc4j.provider.json4j;x-friends:="com.polarion.alm.tracker.w
+ eb.tests",org.eclipse.lyo.server.oauth.core,org.eclipse.lyo.server.oa
+ uth.core.consumer,org.eclipse.lyo.server.oauth.core.token,org.eclipse
+ .lyo.server.oauth.webapp.services
+Bundle-Name: Oslc
+Bundle-Version: 3.17.0
+Bundle-ClassPath: oslc.jar,lib/oauth-consumer-20100527.jar,lib/oauth-2
+ 0100527.jar,lib/jena-core-2.7.1.jar,lib/jena-iri-0.9.2.jar,lib/oslc-q
+ uery-2.1.0.jar,lib/oslc4j-core-2.1.0.jar,lib/oslc4j-wink-2.1.0.jar,li
+ b/wink-client-1.2.1-incubating.jar,lib/wink-client-apache-httpclient-
+ 1.2.1-incubating.jar,lib/oauth-consumer-store-2.1.0.jar,lib/oauth-cor
+ e-2.1.0.jar,lib/oauth-httpclient4-20090617.jar,lib/wink-common-1.2.1-
+ incubating.jar,lib/wink-json4j-1.2.1-incubating.jar,lib/wink-server-1
+ .2.1-incubating.jar,lib/oauth-webapp-2.1.0.jar,lib/oauth-provider-201
+ 00527.jar,lib/taglibs-standard-impl-1.2.5.jar,lib/jsr311-api-1.1.1.ja
+ r,lib/wink-guice-server-1.2.1-incubating.jar,lib/slf4j-api-1.6.4.jar,
+ lib/slf4j-log4j12-1.6.4.jar,lib/oslc-java-client-3.0.0-SNAPSHOT.jar,l
+ ib/oslc4j-json4j-provider-2.1.0-patched.jar,lib/oslc4j-jena-provider-
+ 2.1.0-patched.jar
+Require-Bundle: com.polarion.core.util;bundle-version="3.6.0",com.pola
+ rion.platform.guice;bundle-version="3.6.0",com.polarion.platform.pers
+ istence;bundle-version="3.7.2",com.polarion.portal.tomcat;bundle-vers
+ ion="8.0.30",com.polarion.portal.jetspeed;bundle-version="3.10.1",com
+ .polarion.alm.tracker;bundle-version="3.10.1",com.polarion.cluster;bu
+ ndle-version="3.10.1"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+Guice-Modules: com.polarion.alm.oslc.internal.OslcModule, org.apache.w
+ ink.guice.server.internal.lifecycle.WinkGuiceModule
+
+

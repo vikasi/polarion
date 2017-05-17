@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">mTest</field>
+    <field id="categories">
+        <list>
+            <item>power_supply</item>
+        </list>
+    </field>
+    <field id="created">2015-03-25 12:06:22.873 +0100</field>
+    <field id="initialEstimate">1/2h</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="role">verifies</item>
+                <item id="workItem">WS-57</item>
+            </struct>
+        </list>
+    </field>
+    <field id="previousStatus">draft</field>
+    <field id="priority">50.0</field>
+    <field id="pvRestriction" type="text/x-pvscl">WS-28 AND NOT(WS-29)</field>
+    <field id="remainingEstimate">1/2h</field>
+    <field id="severity">smoke</field>
+    <field id="status">active</field>
+    <field id="testSteps" type="struct:TestSteps">
+        <struct>
+            <item id="keys">
+                <list>
+                    <item>step</item>
+                    <item>description</item>
+                    <item>expectedResult</item>
+                </list>
+            </item>
+            <item id="steps">
+                <list>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Place system connect to the ColumbMeter  in heating chamber set to high temperature limit and let it warm up.&lt;/span&gt;</item>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Measure system temperature using a contactless thermometer. Wait until no further increase  can be seen.&lt;/span&gt;</item>
+                                <item text-type="text/html"/>
+                            </list>
+                        </item>
+                    </struct>
+                    <struct>
+                        <item id="values">
+                            <list>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Get readout of used energy.&lt;/span&gt;</item>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Run in normal operation mode for a period of 24hrs. Run 2 readouts at begin and end of period.&lt;/span&gt;</item>
+                                <item text-type="text/html">&lt;span style="font-size: 9pt;line-height: 1.5;"&gt;Total Energy Consumption in 24h is below 20mWh.&lt;/span&gt;</item>
+                            </list>
+                        </item>
+                    </struct>
+                </list>
+            </item>
+        </struct>
+    </field>
+    <field id="testType" type="enum:testtype">manual</field>
+    <field id="title">Test Energy Consumption</field>
+    <field id="type">testcase</field>
+</work-item>

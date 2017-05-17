@@ -1,0 +1,136 @@
+[groups]
+everyone = aSeller, admin, cUser, jRequirement, mTest, pGUI, rProject, sDeveloper
+admin = admin
+user = aSeller, admin, cUser, jRequirement, mTest, pGUI, rProject, sDeveloper
+drivepilot-project_admin = admin, rProject
+drivepilot-project_approver = admin, rProject
+drivepilot-project_assignable = jRequirement, mTest, pGUI, rProject, sDeveloper
+drivepilot-project_user = aSeller, cUser
+elibrary-project_admin = admin, rProject
+elibrary-project_approver = admin, rProject
+elibrary-project_assignable = jRequirement, mTest, pGUI, rProject, sDeveloper
+elibrary-project_user = aSeller, cUser
+library-project_admin = admin
+library-project_approver =
+library-project_assignable =
+library-project_user =
+
+[/]
+* =
+@user = r
+@admin = rw
+polarion = r
+
+[/.polarion/projects.xml]
+@user = rw
+
+[/.polarion/user-management/users]
+@user = rw
+polarion = rw
+
+[/.polarion/security]
+polarion = rw
+
+[/.polarion/tracker/import_configurations]
+@user = rw
+
+[/.polarion/oslc/configuration.xml]
+* =
+polarion = rw
+@admin = rw
+
+[/Demo Projects/drivepilot]
+* =
+@user = r
+@admin = rw
+polarion = r
+@drivepilot-project_admin = rw
+@drivepilot-project_approver = rw
+@drivepilot-project_assignable = rw
+@drivepilot-project_user = r
+
+[/Demo Projects/drivepilot/.polarion]
+@admin = rw
+@drivepilot-project_admin = rw
+@drivepilot-project_approver = r
+@drivepilot-project_assignable = r
+
+[/Demo Projects/drivepilot/.polarion/pages/spaces]
+@drivepilot-project_assignable = rw
+
+[/Demo Projects/drivepilot/.polarion/planning/plans]
+@drivepilot-project_assignable = rw
+
+[/Demo Projects/drivepilot/.polarion/reqif]
+@drivepilot-project_assignable = rw
+
+[/Demo Projects/drivepilot/.polarion/testing/testruns]
+@drivepilot-project_assignable = rw
+
+[/Demo Projects/drivepilot/.polarion/tracker/baselines]
+@drivepilot-project_assignable = rw
+
+[/Demo Projects/drivepilot/.polarion/tracker/workitems]
+@drivepilot-project_approver = rw
+@drivepilot-project_assignable = rw
+
+[/Demo Projects/elibrary]
+* =
+@user = r
+@admin = rw
+polarion = r
+@elibrary-project_admin = rw
+@elibrary-project_approver = rw
+@elibrary-project_assignable = rw
+@elibrary-project_user = r
+
+[/Demo Projects/elibrary/.polarion]
+@admin = rw
+@elibrary-project_admin = rw
+@elibrary-project_approver = r
+@elibrary-project_assignable = r
+
+[/Demo Projects/elibrary/.polarion/pages/spaces]
+@elibrary-project_assignable = rw
+
+[/Demo Projects/elibrary/.polarion/planning/plans]
+@elibrary-project_assignable = rw
+
+[/Demo Projects/elibrary/.polarion/reqif]
+@elibrary-project_assignable = rw
+
+[/Demo Projects/elibrary/.polarion/testing/testruns]
+@elibrary-project_assignable = rw
+
+[/Demo Projects/elibrary/.polarion/tracker/baselines]
+@elibrary-project_assignable = rw
+
+[/Demo Projects/elibrary/.polarion/tracker/workitems]
+@elibrary-project_approver = rw
+@elibrary-project_assignable = rw
+
+[/Sandbox]
+* =
+@user = rw
+@admin = rw
+polarion = r
+
+[/library]
+* =
+@user = r
+@admin = rw
+polarion = r
+@library-project_admin = rw
+@library-project_approver = rw
+@library-project_assignable = rw
+@library-project_user = r
+
+[/library/.polarion]
+@admin = rw
+@library-project_admin = rw
+@library-project_approver = r
+@library-project_assignable = r
+
+[/library/.polarion/tracker/workitems]
+@library-project_approver = rw
+@library-project_assignable = rw

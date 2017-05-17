@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wiki-page>
+<lastUpdatedBy>admin</lastUpdatedBy>
+<author>admin</author>
+<type>portal</type>
+<created>2007-08-20 23:51</created>
+<lastUpdated>2008-07-31 17:34</lastUpdated>
+<content><![CDATA[
+{section:width=100%}
+{column:width=65%}
+1 Start writing your content here
+
+{hint}
+*GETTING STARTED TIP*\\
+Administrators/Managers of a new Polarion QA installation: you can replace this content, and any content  on this page with your own to make it the wiki portal for your development organization. \\
+ 
+This is a good place to create links to wiki resources that you create which are of general interest to all users of your Polarion QA portal. For example, you might create wiki spaces/pages containing: 
+   * overviews and key contacts of your organization and teams 
+   * documentation of your technical resources and standards 
+   * process guidelines
+   * team or organization unit spaces and/or home pages 
+
+The list of possibilities is endless. Do some thinking and planning, and create a few key wiki pages. Then when you are ready to modify this page, click the ~~Edit~~ button above and use the wiki editor in Wiki Syntax or Rich Text mode to modify the page content. Syntax help is available in the editor.\\
+
+*Once again, welcome... and thanks for using Polarion QA!*
+{hint}
+
+{hint}
+*Polarion Extension Portal*
+\\
+Easily extend the out-of-box functionality of Polarion solutions.
+Custom-configured project templates, connectivity with popular IDEs, information import/export...
+you'll find all of these and more on the *[Polarion Extension Portal|http://extensions.polarion.com]*.
+\\
+\\
+*Tutorial Videos*
+\\
+Your evaluation might be more effective, if you start by watching some
+*<a href="http://www.polarion.com/tutorials" target="videos">Tutorial Videos</a>*.
+{hint}
+{column}
+
+
+
+{column:width=32%}
+{regiontitle}Project Group Overview{regiontitle}
+{style:type=div|class=regiondescription}
+This overview provides some basic information about all projects in the repository, or about a selected Project Group (green folder).
+{style}
+{table:border=no|header=no|bold=1|width=100%}
+Projects: | {projectgroup-property:projectsDeep} project(s)
+Users: | {projectgroup-property:users} project user(s), {users:@all|display=count|group=/} system user(s)
+Files: | {fact:base=repo-analysis|value=NOF}
+Repository URL: | {projectgroup-property:location}
+{table}
+
+{table:border=no|header=no|valign=middle}
+{piechart:data=charts/repo-statistics-Pie3D.xml|width=200|height=200} | {createprojectbutton}
+{table}
+{piechartfooter:data=charts/repo-statistics-Pie3D.xml}
+
+{column}
+{section}
+]]></content>
+</wiki-page>

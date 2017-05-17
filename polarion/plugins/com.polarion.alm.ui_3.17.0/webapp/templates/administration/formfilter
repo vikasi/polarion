@@ -1,0 +1,57 @@
+<a style="cursor:pointer;" onclick="navigateFromFrame('#page:workitems/form')" ><< Return to Form Configuration</a>
+
+1 Form Filter Configuration
+
+*View:* [hatName]
+\\
+*Work Item Type:* [typeName]
+
+{formfilter:[hatId]|type=[typeId]}
+
+1.1 Quick Help
+To show fields in Work Item form when a user activates filtering, add the desired field IDs to the ~~Fields~~ input, separated by ',' (comma).\\
+To omit a field when filtering is applied, use the "-" (minus) prefix. E.g. use "@all,-severity" to display all fields ~~except~~ severity.\\ 
+There is no hierarchical selecting of filters. Either whatever is inside an action or status element is used, or no filter is applicable.
+
+1.1.1.1.1 Available Actions and Statuses
+A list of available actions and statuses is defined in Administration &gt; Work Items &gt; Workflow,  *{hyperlink:/administration/workitems/workflow}*.\\
+Two constants are defined for ~~Action ID~~:
+* ~~_default~~ - this configuration is used when no action-specific configuration exists.
+* ~~_create~~ - this configuration is used when a new Work Item is in process of being created but is not yet saved
+A constant is defined for ~~Status ID~~:
+* ~~_default~~ - this configuration is used when no status-specific configuration exists
+
+*You can use special commands to specify a number of fields. For example:*\\
+~~@all~~ - all fields of the current Work Item can be edited in the form\\
+~~@allCustomFields~~ - all custom fields of the current Work Item\\
+~~@required~~ - all required fields are marked in edited Work Item form with asterisk\\
+
+1.1.1.1.1 Available Fields
+* title
+* type
+* description
+* resolution
+* categories
+* timePoint
+* approvals
+* assignee
+* author
+* comments
+* attachments
+* linkedWorkItems
+* workRecords
+* hyperlinks
+* planningConstraints
+* status
+* severity
+* priority
+* previousStatus
+* dueDate
+* initialEstimate
+* timeSpent
+* remainingEstimate
+* plannedStart
+* plannedEnd
+* linkedRevisions
+#info("A list of available custom fields is defined in Administration &gt; Work Items &gt; Custom Fields, *{hyperlink:/administration/workitems/customfields}*.")
+\\

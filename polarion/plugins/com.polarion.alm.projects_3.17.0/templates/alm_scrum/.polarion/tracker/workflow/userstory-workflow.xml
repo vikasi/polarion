@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-action="rework" initial-status="draft" prototype="WorkItem">
+    <transitions>
+        <transition action="verified" from="implemented" to="verified"/>
+        <transition action="reject" from="reviewed" to="rejected"/>
+        <transition action="reopen" from="implemented" to="changes_needed"/>
+        <transition action="quickly_accept" from="draft" to="accepted"/>
+        <transition action="accept" from="reviewed" to="accepted"/>
+        <transition action="reviewed" from="draft" to="reviewed"/>
+        <transition action="rework" from="reviewed" to="draft"/>
+        <transition action="reject" from="draft" to="rejected"/>
+        <transition action="reject" from="accepted" to="rejected"/>
+        <transition action="rework" from="rejected" to="draft"/>
+        <transition action="rework" from="accepted" to="draft"/>
+        <transition action="start_progress" from="accepted" to="in_progress"/>
+        <transition action="start_progress" from="changes_needed" to="in_progress"/>
+        <transition action="reopen" from="verified" to="changes_needed"/>
+        <transition action="implemented" from="in_progress" to="implemented"/>
+        <transition action="stop_progress" from="in_progress" to="accepted"/>
+        <transition action="implemented" from="changes_needed" to="implemented"/>
+    </transitions>
+    <actions>
+        <action id="rework" name="Rework">
+            <cleared>
+                <field name="resolution"/>
+                <field name="storyPoints"/>
+            </cleared>
+        </action>
+        <action id="reviewed" name="Review"/>
+        <action id="accept" name="Accept">
+            <required>
+                <field name="storyPoints"/>
+            </required>
+        </action>
+        <action id="quickly_accept" name="Quickly Accept">
+            <required>
+                <field name="storyPoints"/>
+            </required>
+        </action>
+        <action id="start_progress" name="Start Progress">
+            <required>
+                <field name="assignee"/>
+                <field name="plannedIn"/>
+            </required>
+        </action>
+        <action id="stop_progress" name="Stop Progress"/>
+        <action id="implemented" name="Mark as Implemented">
+            <required>
+                <field name="resolution"/>
+            </required>
+            <functions>
+                <function name="AddDefaultApprovals">
+                    <param name="approvals.roles" value="project_approver"/>
+                </function>
+            </functions>
+        </action>
+        <action id="verified" name="Mark as Verified">
+            <conditions>
+                <condition name="ApprovalState"/>
+            </conditions>
+        </action>
+        <action id="reopen" name="Reopen">
+            <cleared>
+                <field name="resolution"/>
+            </cleared>
+            <functions>
+                <function name="ResetApprovalsState"/>
+            </functions>
+        </action>
+        <action id="reject" name="Reject">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+    </actions>
+</workflow>

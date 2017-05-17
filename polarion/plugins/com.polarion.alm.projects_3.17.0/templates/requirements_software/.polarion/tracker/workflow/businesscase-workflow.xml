@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-action="rework" initial-status="draft" prototype="WorkItem">
+    <transitions>
+        <transition action="reject" from="inReview" to="rejected"/>
+        <transition action="sendToReview" from="draft" to="inReview"/>
+        <transition action="rework" from="inReview" to="draft"/>
+        <transition action="reject" from="approved" to="rejected"/>
+        <transition action="reject" from="draft" to="rejected"/>
+        <transition action="rework" from="approved" to="draft"/>
+        <transition action="rework" from="rejected" to="draft"/>
+        <transition action="markReviewed" from="inReview" to="reviewed"/>
+        <transition action="rework" from="reviewed" to="draft"/>
+        <transition action="markApproved" from="reviewed" to="approved"/>
+        <transition action="reject" from="reviewed" to="rejected"/>
+        <transition action="markVerified" from="approved" to="verified"/>
+    </transitions>
+    <actions>
+        <action id="rework" name="Rework">
+            <cleared>
+                <field name="resolution"/>
+            </cleared>
+        </action>
+        <action id="sendToReview" name="Send to Review"/>
+        <action id="markReviewed" name="Mark Reviewed"/>
+        <action id="markApproved" name="Mark Approved"/>
+        <action id="markVerified" name="Mark Verified">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+        <action id="reject" name="Reject">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+    </actions>
+</workflow>

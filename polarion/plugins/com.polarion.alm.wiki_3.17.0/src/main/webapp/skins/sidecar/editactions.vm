@@ -1,0 +1,73 @@
+###
+###
+###
+#set($formname = "edit")
+#set($saveaction = "save")
+#set($previewenabled = true)
+#set($xredirect=$!request.getParameter("xredirect"))
+
+<div class="topbuttons">
+
+#if((!$showactions)||($showactions==1))
+<script type="text/javascript">
+function checkDocumentContent() {
+  if (document.forms.${formname}.content) {
+    var content = document.forms['edit'].content.value;
+
+    var mceContent = "";
+    try
+    {
+
+      var myIframe = document.getElementById('mce_editor_0');
+      var bd = myIframe.contentWindow.document.getElementById('mceSpanFonts');
+      mceContent = bd.innerHTML;
+      mceContent = replaceMCE(mceContent);
+
+    }catch(ex){}
+
+    if ( (content == null || content == "") && mceContent == "" ) {
+      alert("$msg.get('wikicontentcannotbeempty')");
+      return false ;
+    }
+  }
+  showProgressBar();
+  return true;
+}
+
+function showProgressBar() {
+  document.getElementById("progressbar").style.visibility="hidden";
+}
+</script>
+#set($param = "")
+
+#if ($sectionNumber != 0)
+   #set($param = "section=$sectionNumber")
+#end
+
+<div style="background-color:#EFEFEF; padding-top:4px; padding-bottom:4px; padding-left: 0px;">
+<table>
+<tr>
+
+
+
+</td>
+<td>
+<div name="formaction" value="_save_" onclick="document.forms.${formname}.action='$doc.getURL("save", $param)'; if (document.forms.${formname}.onsubmit) document.forms.${formname}.onsubmit();if (checkDocumentContent()) if (updateAttachNameMult2(document.forms['edit'], '$msg.get("doyouwanttoreplace")', '$msg.get("savechanges")'))  document.forms.${formname}.submit(); return false;" >
+#xwikitopmenuentrystartimageButton("save.gif" $msg.get("Save"))
+</div>
+
+<td>
+<div name="formaction" value="_cancel_" onclick="showProgressBar(); document.forms.${formname}.action='$doc.getURL("cancel")'; if (document.forms.${formname}.onsubmit) document.forms.${formname}.onsubmit();if (true) document.forms.${formname}.submit(); return false;">
+#xwikitopmenuentrystartimageButton("cancel.gif" $msg.get("Cancel"))
+</div>
+</td>
+
+</td>
+
+
+</tr>
+</table>
+</div>
+#end
+
+</div>

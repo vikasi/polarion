@@ -1,0 +1,19 @@
+<script>
+    if (document.getElementById('progressbar'))
+    {
+        document.getElementById('progressbar').style.visibility = "hidden";
+    }
+</script>
+#template("startpage.vm")
+<div class="main layoutsubsection">
+#xwikimessageboxstart($localization.getValue("definition.error") $localization.getValue("wiki.error.projectDoesntExist"))
+#xwikimessageboxend()
+
+  <div style="text-align: center; border: 0px solid blue;"> 
+  #set($parent2 = $request.getParameter("parent"))
+  <a href="$xwiki.getURL("$!{parent2}")">$localization.getValue("macro.general.backToView")</a>
+  </div>
+
+<div class="clearfloats"></div>
+</div>
+#template("endpage.vm")

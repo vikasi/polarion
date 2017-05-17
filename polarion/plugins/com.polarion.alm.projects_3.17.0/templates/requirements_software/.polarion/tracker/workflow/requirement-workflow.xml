@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-action="rework" initial-status="draft" prototype="WorkItem">
+    <transitions>
+        <transition action="markApproved" from="reviewed" to="approved"/>
+        <transition action="accept" from="approved" to="accepted"/>
+        <transition action="implemented" from="accepted" to="implemented"/>
+        <transition action="verified" from="implemented" to="verified"/>
+        <transition action="reject" from="inReview" to="rejected"/>
+        <transition action="reopen" from="implemented" to="changesNeeded"/>
+        <transition action="accept" from="changesNeeded" to="accepted"/>
+        <transition action="reopen" from="verified" to="implemented"/>
+        <transition action="approveAndAccept" from="inReview" to="accepted"/>
+        <transition action="sendToReview" from="draft" to="inReview"/>
+        <transition action="markReviewed" from="inReview" to="reviewed"/>
+        <transition action="rework" from="inReview" to="draft"/>
+        <transition action="reject" from="approved" to="rejected"/>
+        <transition action="reject" from="accepted" to="rejected"/>
+        <transition action="reject" from="draft" to="rejected"/>
+        <transition action="rework" from="approved" to="draft"/>
+        <transition action="rework" from="accepted" to="draft"/>
+        <transition action="rework" from="rejected" to="draft"/>
+    </transitions>
+    <actions>
+        <action id="rework" name="Rework">
+            <cleared>
+                <field name="targetVersion"/>
+                <field name="initialEstimate"/>
+                <field name="resolution"/>
+            </cleared>
+        </action>
+        <action id="sendToReview" name="Send to Review">
+            <required>
+                <field name="reqtype"/>
+            </required>
+        </action>
+        <action id="markReviewed" name="Mark Reviewed"/>
+        <action id="markApproved" name="Mark Approved"/>
+        <action id="accept" name="Accept">
+            <required>
+                <field name="targetVersion"/>
+                <field name="initialEstimate"/>
+            </required>
+        </action>
+        <action id="approveAndAccept" name="Quickly Mark Approved and Accept">
+            <required>
+                <field name="targetVersion"/>
+                <field name="initialEstimate"/>
+                <field name="reqtype"/>
+            </required>
+        </action>
+        <action id="implemented" name="Mark as Implemented">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+        <action id="verified" name="Mark as Verified"/>
+        <action id="reopen" name="Reopen">
+            <cleared>
+                <field name="resolution"/>
+            </cleared>
+        </action>
+        <action id="reject" name="Reject">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+    </actions>
+</workflow>

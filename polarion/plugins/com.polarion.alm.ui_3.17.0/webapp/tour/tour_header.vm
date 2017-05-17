@@ -1,0 +1,48 @@
+<html>
+<head>
+<link href="/polarion/ria/css/pol_default.css" type="text/css" rel="stylesheet"></link>	
+<link href="$RiaCssLink" type="text/css" rel="stylesheet"></link>
+</head>
+<body>
+<script type="text/javascript">
+#if($closed)
+	window.parent.document.getElementById("tour").style.height="27";
+#else
+	window.parent.document.getElementById("tour").style.height="200";
+#end
+function closeTour(){
+    document.getElementById("tourpanel").style.display="none";
+    document.getElementById("tourminimized").style.display="block";
+}    
+function mouseOutIcon(element){
+ var el = document.getElementById(element);
+ if(el.srcOrig != null){
+ 	el.src = el.srcOrig;
+ }
+}
+function mouseOverIcon( element,icon){
+ var el = document.getElementById(element);
+ if(el.srcOrig==null){
+ 	el.srcOrig = el.src;
+ }
+ el.src=icon;
+}
+</script>
+<!-- style in pol_default.css-->
+<!--         minimized panel       -->
+<div  id="tourminimized" class="tourminimized" style="background-color: #f4ffe2;#if(!$closed)display:none;#end">
+<table width="100%"><tr>
+<td width="100%"><div class="tourtitleminimized" style="font-family:Lucida Grande,helvetica,lucida,verdana,sans-serif;color: rgb(0, 136, 50);font-weight:bold;font-size:14px;">$product Quick Tour</div></td>
+<td ><a href="/polarion/tour?closed=false">
+<img id="openicon" src="/polarion/ria/images/tour/maximize.png" title="Open Tour" border="0" onmouseover="mouseOverIcon('openicon','/polarion/ria/images/tour/maximizeActive.png')" onmouseout="mouseOutIcon('openicon')"/></a>  
+</a></td>
+</tr></table>
+</div>
+<!--         normal panel       -->
+<div id="tourpanel" class="tourpanel" #if($closed)style="display:none;"#end>
+<div style="position:absolute;right:5px;top:5px;">
+<a href="/polarion/tour?closed=true">
+<img id="closeicon" src="/polarion/ria/images/tour/minimize.png" title="Minimize Tour" border="0" onmouseover="mouseOverIcon('closeicon','/polarion/ria/images/tour/minimizeActive.png')" onmouseout="mouseOutIcon('closeicon')"/></a>  
+</div>
+<table><tr><td class="tourtitle">$tour.title ($tour.index/$tours.size())</td></tr></table>
+<div class="tourcontent" >

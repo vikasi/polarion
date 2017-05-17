@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factbase artifact="library" id="test-coverage" tag="20081028_2110">
+<structure-element id="root" provider="root" type="root">
+<value-fact-element id="TestCoverage" provider="CoberturaSensorProvider" type="execution">
+<value/>
+<properties>
+<property id="has-source-directories">
+<value>false</value>
+</property>
+</properties>
+</value-fact-element>
+</structure-element>
+</factbase>

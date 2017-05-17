@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2012-01-30 20:05:30.212 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-52"></h1><p id="polarion_new_0">User requirements describe the tasks that the users must be able to accomplish with the product or system.</p><div id="polarion_wiki macro name=toc"></div><div id="polarion_editor_html_block1" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">#documentPanel(true &quot;approved&quot;)</pre>
+</div><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-53"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-54"></h3><p id="polarion_merged_0">
+  <span style="font-style: italic;">Identify the purpose of this document and its intended audience.<br/>
+    </span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-55"></h3><p id="polarion_merged_1">
+  <span style="font-style: italic;">Provide a short description of the software being specified and its purpose, including relevant benefits, objectives, and goals.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-56"></h3><p id="polarion_merged_2">
+  <span style="font-style: italic;">List any other documents or Web addresses to which this requirements document refers. These may include contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-57"></h3><p id="polarion_merged_3">
+  <span style="font-style: italic;">A short description of how the rest of the document is organized and what can be found in the rest of the document.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-58"></h2><div id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-11"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-59"></h2><p id="polarion_merged_4">
+  <span style="font-style: italic;">Provide a matrix that relates product modules to requirements and vice versa.</span>
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity, status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">requirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

@@ -1,0 +1,87 @@
+###
+###
+###
+
+#set($formname = "preview_page")
+
+#if((!$showactions)||($showactions==1))
+<script type="text/javascript">
+function checkDocumentContent() {
+  return true;
+  if (this.form.content) {
+    var content = this.preview_page.content.value;
+    if (content == null || content == "") {
+      alert("$msg.get('wikicontentcannotbeempty')");
+      return false ;
+    }
+  }
+ 
+  return true;
+}
+</script>
+#set($$editor = $request.getHeader('Referer'))
+#if((!$editor) || ($editor == ""))
+#if(($xwiki.getUserPreference("editor")=="Wysiwyg")&&(!$doc.isAdvancedContent()))
+#set($editor=$tdoc.getURL("edit", "editor=wysiwyg&amp;$docvariant"))
+#else
+#set($editor=$tdoc.getURL("edit", "editor=wiki&amp;$docvariant"))
+#end
+#end
+
+#if ($sectionNumber != 0)
+#set($editparams = "section=$sectionNumber")
+#end
+
+
+<table>
+<tr>
+<td>
+<form id="preview_page3" name="preview_page3"  style="display: inline;" action="$tdoc.getURL("cancel")" method="post">
+<div name="formaction" value="_cancel_" onclick="if (checkDocumentContent()) $('preview_page3').submit();">
+#xwikitopmenuentrystartimageButton("cancel.gif" $msg.get("Cancel"))
+</div>
+</form>
+
+</td>
+<td width=5>&nbsp;</td>
+<td>
+
+
+<form id="preview_page4" name="preview_page4"  style="display: inline;" action="$editor" method="post">
+#foreach($param in $request.getParameterNames())#foreach($value in $request.getParameterValues($param))<input type="hidden" name="$param" value="$xwiki.getFormEncoded($value)"/>#end#end
+<div name="formaction" value="_preview_" onclick="if (checkDocumentContent()) $('preview_page4').submit();">
+#xwikitopmenuentrystartimageButton("#" $msg.get("Back To Edit"))
+</div>
+</form>
+
+
+</td>
+<td width=5>&nbsp;</td>
+<td>
+
+<form id="preview_page1" name="preview_page1"  style="display: inline;" action="$tdoc.getURL("saveandcontinue")" method="post">
+<div name="formaction" value="_saveandcontinue_" onclick="if (checkDocumentContent()) $('preview_page1').submit();">
+<input type="hidden" name="xredirect" value="$request.getHeader("Referer")"/>#foreach($param in $request.getParameterNames())#foreach($value in $request.getParameterValues($param))<input type="hidden" name="$param" value="$xwiki.getFormEncoded($value)"/>#end#end
+#xwikitopmenuentrystartimageButton("save.gif" $msg.get("Save & Continue"))
+</div>
+</form>
+
+</td>
+
+<td width=5>&nbsp;</td>
+<td>
+
+<form id="preview_page2" name="preview_page2"  style="display: inline;" action="$tdoc.getURL("save")" method="post">
+<div name="formaction" value="_save_" onclick="if (checkDocumentContent()) $('preview_page2').submit();">
+#foreach($param in $request.getParameterNames())
+#foreach($value in $request.getParameterValues($param))
+<input type="hidden" name="$param" value="$xwiki.getFormEncoded($value)"/>#end#end
+#xwikitopmenuentrystartimageButton("save.gif" $msg.get("Save & View"))
+</div>
+</form>
+
+</td>
+
+</tr>
+</table>
+#end

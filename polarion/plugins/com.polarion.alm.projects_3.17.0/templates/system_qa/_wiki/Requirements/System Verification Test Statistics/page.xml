@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130108135358</created>
+<type>content</type>
+<content><![CDATA[1 System Verification Test Statistics
+
+{section}
+{column}
+1.1 Execution Statistics
+#set($q = '"') 
+##set($timeQuery = 'AND finishedOn:[$today-7d$ TO $today$]')
+#set($timeQuery = '')
+#set($baseQuery = "project.id:$page.getProject() AND (template.id:${q}System Verification Test${q}) AND NOT isTemplate:true $timeQuery")
+#set($passed = $trackerService.dataService.getInstancesCount("TestRun", "$baseQuery AND status:passed"))
+#set($failed = $trackerService.dataService.getInstancesCount("TestRun", "$baseQuery AND status:failed"))
+#set($other = $trackerService.dataService.getInstancesCount("TestRun", "$baseQuery AND NOT status:(failed passed)"))
+
+#highchartStart("" "Pie2D" 180 180  )
+#set($highchartColors = ["95d55c","d43d3d","cfcfcf"])
+#addHighchartPieDataSet("Results" "'Passed',$passed:'Failed', $failed:'In Progress', $other")
+#addHighchartAdditionalOptions("options.plotOptions = {pie:{dataLabels: {enabled:false},borderWidth:0,animation:false}};")
+#addHighchartAdditionalOptions("options.tooltip= {formatter: function(){ return  ''+ this.point.name + ': <b>'+ this.y + '</b>' }};")
+#highchartEnd()
+{column}
+{column}
+1.1 System Verification Tests
+{style:class=regiondescription}
+You need to plan and execute a System Verification Test using "{testrun-label:System Verification Test}"  Test Run Template.
+{style}
+
+{recent-testruns:
+  query=template.id:"System Verification Test"|top=20}
+{column}
+{section}
+
+1.1 Open Issues triggered by System Test Cases 
+
+Show open issues triggered by System Test Cases 
+#set($bQuery = "project.id:$page.project AND type:issue AND NOT HAS_VALUE:resolution")
+#set($sqlQ="SELECT ISSUE.C_PK FROM LUCENE_QUERY('WorkItem', '$bQuery', 'id') ISSUE WHERE EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_P_WORKITEM = ISSUE.C_PK AND LINK.FK_WORKITEM = TEST.C_PK AND LINK.C_ROLE = 'triggered_by' AND TEST.C_TYPE='systemTestCase') ") 
+
+{workitems:sqlQuery=$sqlQ|fields=id,title,status,targetVersion}
+
+1.1 System Requirements with Failed Test Cases
+
+{parameter:fromDate|type=date|value=2013-01-01}
+{parameter:toDate|type=date|value=2014-01-01}
+
+{parameter-form}
+Show system requirements with associated test cases that have failed from  {parameter-editor:fromDate} to {parameter-editor:toDate} 
+{parameter-form-submit}
+{parameter-form-save}
+{parameter-form}
+
+#set($fromDate = $calendarTool.formatDate($pageParameters.fromDate,"yyyy-MM-dd HH:mm:ss"))
+#set($toDate = $calendarTool.formatDate($pageParameters.toDate,"yyyy-MM-dd HH:mm:ss"))
+
+#set($sqlSysReqWithFailures="SELECT REQUIREMENT.C_PK FROM WORKITEM REQUIREMENT, PROJECT PROJECT WHERE REQUIREMENT.FK_URI_PROJECT = PROJECT.C_URI AND PROJECT.C_ID = '${page.project}' AND REQUIREMENT.C_TYPE = 'systemRequirement' AND EXISTS ( SELECT TESTCASE.C_PK FROM WORKITEM TESTCASE, TESTRUN TESTRUN, STRUCT_WORKITEM_LINKEDWORKITEMS LINK, STRUCT_TESTRUN_RECORDS TESTRECORD WHERE LINK.FK_URI_WORKITEM = REQUIREMENT.C_URI AND LINK.FK_P_WORKITEM = TESTCASE.C_PK AND LINK.C_ROLE = 'verifies' AND TESTCASE.C_TYPE = 'systemTestCase' AND TESTRECORD.FK_URI_TESTCASE = TESTCASE.C_URI AND TESTRECORD.FK_P_TESTRUN = TESTRUN.C_PK AND TESTRECORD.C_RESULT = 'failed' AND TESTRECORD.C_EXECUTED > '$fromDate' AND TESTRECORD.C_EXECUTED < '$toDate')") 
+
+{workitems:sqlQuery=$sqlSysReqWithFailures|fields=id,title,status,targetVersion|width=80%}]]></content>
+</wiki-page>

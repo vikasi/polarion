@@ -1,0 +1,479 @@
+#set($editor = $request.getParameter("editor"))
+#set($show = $!request.getParameter("show"))
+#if($context.getMode()==0)
+##set($pageTitle = "XWiki . ")
+##if(!$title)
+##	#set( $title = $!xwiki.getWebPreference("title"))
+##	#if ( $title != "")
+##		#set($pageTitle = $xwiki.parseContent($title))
+##	#else
+##		#set($pageTitle = $pageTitle.concat($!doc.web).concat(" . ").concat($!doc.displayTitle))
+##	#end
+###else
+##	#set($pageTitle = $title)
+###end
+<head>
+<meta http-equiv="X-UA-Compatible" content="$xwiki.getXUACompatibleValue()">
+<link rel="shortcut icon" href="/polarion/ria/images/favicon.ico" />
+<title>
+	Wiki - $doc.getDoc().getProject()/$xwiki.getSpaceAliasWithProjectName($doc.getDoc().getDocSpace()) #if($editor) (editing in $editor mode) #end $!show
+</title>
+
+<script type="text/javascript">
+function preloadImages(a , b)
+{
+ ##aimg1 = new Image();
+ ##aimg1.src = b+a+"minus.gif";
+ ##aimg2 = new Image();
+ ##aimg2.src = b+a+"plus.gif";
+ ##aimg3 = new Image();
+ ##aimg3.src = b+a+"images/popup_window_title.gif";
+ ##aimg4 = new Image();
+ ##aimg4.src = b+a+"pop_minimize.gif";
+ ##aimg5 = new Image();
+ ##aimg5.src = b+a+"popup_close.gif";
+ ##aimg6 = new Image();
+ ##aimg6.src = b+a+"progress.gif";
+ ##aimg7 = new Image();
+ ##aimg7.src = b+a+"expand_min.gif";
+ ##aimg8 = new Image();
+ ##aimg8.src = b+a+"expand.gif";
+
+}
+
+</script>
+
+<style>
+TEXTAREA {
+	resize:none;
+}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=$xwiki.encoding" />
+
+$!xwiki.getWebPreference("meta")
+#template("stylesheets.vm")
+
+<link href="/polarion/ria/css/gwt.css" rel="stylesheet" type="text/css"/>
+
+<meta http-equiv="imagetoolbar" content="no"/>
+<script type="text/javascript" src="/polarion/ria/javascript/pa/toggle.js$xwiki.getBuildNumberQueryString()"></script>
+<script type="text/javascript" src="/polarion/ria/javascript/pa/selection.js$xwiki.getBuildNumberQueryString()"></script>
+<script type="text/javascript" src="/polarion/ria/javascript/flash_detect.js$xwiki.getBuildNumberQueryString()"></script>
+<script type="text/javascript" src="/polarion/ria/javascript/liveplan.js$xwiki.getBuildNumberQueryString()"></script>
+<script src="/polarion/gwt/com.polarion.WIKI/com.polarion.WIKI.${xwiki.jsTimestamp}.nocache.js" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/rangy/rangy-core.js$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/rangy/rangy-selectionsaverestore.js$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="/polarion/gwt/gwt/polarion/polarion.css$xwiki.getBuildNumberQueryString()" />
+<link href="/polarion/ria/font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<script src="/polarion/ria/javascript/jquery-1.12.4.min.js" type="text/javascript"></script>
+
+<script src="/polarion/ria/javascript/highcharts.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/highcharts-3d.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/highcharts-more.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/data.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/drilldown.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/exporting.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/funnel.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/heatmap.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/no-data-to-display.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+<script src="/polarion/ria/javascript/solid-gauge.js?buildId$xwiki.getBuildNumberQueryString()" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="$xwiki.getSkinFile("skin.js")"></script>
+<script type="text/javascript" src="$xwiki.getSkinFile("rico/prototype.js")"></script>
+<script type="text/javascript" src="$xwiki.getSkinFile("xwiki.js")"></script>
+<script type="text/javascript">
+
+function showRightPanel(status) {
+	var splitPanel = $('panelResize');
+   	var mainPanel = $('panelMain');
+   	var rightPanel = $('panelHelp');
+   	var w = getClientWidth();
+
+   	if (!status)	{
+   		rightPanel.style.display = "none";
+   		splitPanel.style.display = "none";
+    	mainPanel.style.width = "100%";
+   	} else {
+   		rightPanel.style.display = "block";
+   		splitPanel.style.display = "block";
+   	}
+	calcPanelsWidth();
+}
+
+function checkAttach(id, msg)
+{
+
+  var elem = document.getElementById("filepathMult" + id);
+  var res = true;
+  
+  if (elem)
+  {
+  
+    var path = getFileName(elem.value);
+    if (path == "")
+    {
+       alert(msg);
+       return false;
+    }
+    if (validateNameAttach(path, "$localization.getValue('wiki.message.invalidCharInFilename')"))
+    {
+
+      if (isAttachExist(path) > -1)
+      {
+          
+        
+        var elem_exs = document.getElementById("exst_" + id);
+        
+        if (elem_exs)
+        {
+           if (!elem_exs.checked)
+           {
+             res = confirm("$localization.getValue('wiki.message.attachmentAlreadyExists','"+path+"')");
+             if (!res)
+             {
+               elem.value = "";
+               return res;
+             }
+             else
+               elem_exs.checked="true";
+           }
+        }
+      }
+      else
+      {
+        addAttachToList(path);   
+      }
+    }
+    else
+    {
+       elem.value = "";
+       res = false;
+    }
+
+    //textAdded();
+    countNewAttach +=1;
+    attachChange();
+
+  }
+
+  
+  return res;
+}
+
+function checkAttachmentsBeforeSave(id, msg)
+{
+  var id_number = id.substring(id.indexOf("Mult")+4, id.length);
+  var elem = document.getElementById(id);
+
+  if (elem)
+  {
+		var path = getFileName(elem.value);
+		var validate = validateNameAttach(path, "$localization.getValue('wiki.message.invalidCharInFilename')");  
+		if (!validate)
+		{
+  	       //return 1;
+		   elem.value = "";		         
+		   return 0;
+		}
+
+	    if (isAttachExistSaved(path) > -1)
+	    {
+  		    var elem_exs = document.getElementById("exst_" + id_number);
+		    if (elem_exs)
+		    {
+		       if (!elem_exs.checked)
+		       {
+					 
+					 res = confirm("$localization.getValue('wiki.message.attachmentAlreadyExists','"+path+"')");
+					 if (!res)
+					 {
+					   elem.value = "";		         
+					   return 0;
+					 }
+					 else
+					 {
+					   elem_exs.checked="true";
+					   return 2;
+					 }
+  		       }
+	         }
+        }
+        return 2;
+  }
+  
+  return 0;
+
+}
+</script>
+<script type="text/javascript" src="$xwiki.getSkinFile("browserdetect.js")"></script>
+<script type="text/javascript" src="$xwiki.getSkinFile("chwScripts.js")"></script>
+<script type="text/javascript" src="$xwiki.getSkinFile("rico/src/rico.js")" type="text/javascript"></script>
+<script src="$xwiki.getSkinFile("scriptaculous/scriptaculous.js")" type="text/javascript"></script>
+<script src="$xwiki.getSkinFile("scriptaculous/effects.js")" type="text/javascript"></script>
+<script src="$xwiki.getSkinFile("scriptaculous/dragdrop.js")" type="text/javascript"></script>
+#if(($context.action=="inline")||($context.action=="edit") || ($context.action=="admin"))
+<script type="text/javascript">
+ var cancelEditNextOnunload;
+ var cancelCancelEditFlag = true;
+ var  lockEditFlag = false;
+
+ function cancelEditResponse(){
+ }
+
+ function cancelEditUnload(){
+     if (cancelCancelEditFlag) {
+       var surl = '$doc.getExternalURL("cancel", "ajax=1")';
+       var myAjax = new Ajax.Request(
+                 surl,
+                 {
+                     method: 'get',
+                     parameters: "",
+                     asynchronous: true
+                 });
+        cancelCancelEditFlag = false;
+     }
+     if (cancelEditNextOnunload!=null)
+           cancelEditNextOnunload();
+ }
+
+ function lockEdit(){
+    if (lockEditFlag==false) {
+#if($context.action=="inline")
+      var surl = '$doc.getExternalURL("lock")?action=inline&ajax=1&${docvariant.replace('&amp;', '&')}';
+#else
+      var surl = '$doc.getExternalURL("lock")?ajax=1&${docvariant.replace('&amp;', '&')}';
+#end
+      var myAjax = new Ajax.Request(
+                surl,
+                {
+                    method: 'get',
+                    parameters: "",
+                    asynchronous: true
+                });
+       lockEditFlag = false;
+    }
+ }
+
+ function prepareCancelEdit() {
+     cancelEditNextOnunload = document.onunload;
+     document.onunload = cancelEditUnload;
+     lockEdit();
+ }
+ function cancelCancelEdit() {
+     cancelCancelEditFlag = false;
+ }
+ 
+function _wikiOnLoad(){
+ preloadImages('$xwiki.getSkinFile("")', '$xwiki.getBaseURL()');
+ checkModules('$esc.escapeForJavascriptString($xwiki.getRequestURLNotDecoded())');
+ prepareCancelEdit(); 
+ createColorPicker(); 
+ pageResize(); 
+ gotoAnchor();
+}
+
+</script>
+</head>
+<body id="body" onunload="cancelEditUnload()" onload="_wikiOnLoad()" onResize="pageResize();">
+<div id="xwikimaincontainer">
+#template("checksessionFrame.vm")
+
+#else
+<script type="text/javascript">
+function _wikiOnLoad(){
+ preloadImages('$xwiki.getSkinFile("")', '$xwiki.getBaseURL()'); 
+ checkModules('$esc.escapeForJavascriptString($xwiki.getRequestURLNotDecoded())'); 
+ pageResize(); 
+ gotoAnchor();
+}
+</script>
+</head>
+
+<body id="body" onload="_wikiOnLoad()" onResize="pageResize(); ">
+<div id="xwikimaincontainer"> 
+#template("checksessionFrame.vm")
+#end
+#else
+#template("stylesheets2.vm")
+<script type="text/javascript" src="$xwiki.getSkinFile("skin.js")"></script>
+#end
+
+<script>
+
+window.onbeforeunload = function(){
+    if ((window.top == window.self) && areThereUnsavedChanges()){
+    	return msgDiscard;
+    }
+}
+
+//Is called when navigating away from changed Wiki,f.e. preview to another topic
+function checkDiscardChanges() {
+	return !areThereUnsavedChanges() || window.confirm(msgDiscard);
+}
+
+function areThereUnsavedChanges() {
+	var saveButton = document.getElementById('formaction_save');
+	return saveButton != null && saveButton.className == 'enab';
+}
+
+
+////
+//  Global vars
+///
+
+var oldWidth = 0;
+var oldHeight = 0;
+var resizeCount = 0;
+var CONTENT_SIZE_MIN = 782;
+var invalidChars = "\\/()~!@#$%^&?*+|{}[]\'\",;:<>^=.";	
+var wikiDefineNames = new Array($xwiki.getDefineNamesLowerCaseString());
+var viewMin = true;
+////
+//  Text const
+///
+
+var msgMaximize = '$localization.getValue("wiki.toolbar.button.maximize.tooltip")';
+var msgMinimize = '$localization.getValue("wiki.toolbar.button.minimize.tooltip")'; 
+var msgDiscard = '$localization.getValue("wiki.message.discardChanges")';
+
+function getBrowserWidth() {
+	if (document.body){
+		return document.body.offsetWidth;
+	}
+	return 0;
+}
+
+function getBrowserHeight() {
+	if (document.body) {
+		return document.body.offsetHeight;
+	}
+	return 0;
+}
+
+
+function updatePageUrlHash() {
+	var currentUrlHash = "${doc.getUrlHash($pageParameters.getQueryPart($context.action))}";
+	var isDocumentPage = '$!xwiki.isDocumentPage($doc)';
+	try {
+		if ($doc.supportUrlHash() == true ) {
+			//alert("update url to:"+currentUrlHash);
+			parent.pageLoaded(currentUrlHash);
+			//updateWorkAreaTitle();
+		}
+  		parent.testRunRevisionChanged("$!rev", "$!request.getParameter('rev1')", "$!request.getParameter('rev2')");
+	} catch(e){
+		//alert(e);
+	}
+}
+
+
+function pageResize() {
+    var newHeight = getBrowserHeight();
+    var newWidth = getBrowserWidth();
+    var viewContent = $('viewcontent');
+    ### update page urlHash
+    updatePageUrlHash();
+    
+
+    if(oldHeight != newHeight) {
+        oldHeight = newHeight;
+    	
+		#if(!$show || ($show != "current" && $show != "history"))
+			#set($show = "current")
+		#end
+
+		#if($editor && !($editor == ""))
+		    calcPanelsHeighEdit();
+		#else
+		    calcPanelsHeighView();
+		#end
+  	}
+
+    if (oldWidth != newWidth) {
+        oldWidth = newWidth;
+        calcPanelsWidth();
+    }
+    
+    if (document.getElementById('contentViewDiv')) {
+        document.getElementById('contentViewDiv').style.visibility = "visible";
+        document.getElementById('progressbar').style.visibility = "hidden";
+    }
+    if (document.getElementById('contentcontainer')) {
+        document.getElementById('contentcontainer').style.visibility = "visible";
+    }
+
+    mainProgressBarHide();
+    if (document.getElementById('contentcontainercompare')) {
+   		document.getElementById('contentcontainercompare').style.visibility = "visible";
+	}
+	if (resizeCount < 40 && viewContent.style.height <= 1) {
+		resizeCount+=1;
+		setTimeout("pageResizeAgain()", 1500);
+	}
+}
+
+function pageResizeAgain() {
+	oldHeight = 0;
+	oldWidth = 0;
+	pageResize();
+}
+
+function gotoAnchor(){
+	var ind = document.location.href.indexOf("#");
+	if (ind > -1){
+		document.location.href = document.location.href.substring(ind);
+	}
+}
+//Returns panel name from full name f.e Panels.Spaces returns Spaces
+function getPanelName(fullName)
+{
+   i = fullName.indexOf(".");
+   return  fullName.substring(i + 1);
+}
+
+//Add string values style values 
+function addValues(value1, value2)
+{
+  return parseInt(value1) + parseInt(value2);
+}
+
+//Add string values style values  and returns value in pixels
+function addValuesPX(value1, value2)
+{
+  return addValues(value1, value2) + "px";
+}
+
+//Substruct string values style values  
+function subValues(value1, value2)
+{
+  return parseInt(value1) - parseInt(value2);
+}
+
+//Substruct string values style values and returns value in pixels
+function subValuesPX(value1, value2)
+{ 
+ return subValues(value1, value2) + "px";
+}
+
+var globalIsModules = false;
+
+function checkModules(url)
+{
+  if (url.indexOf("/_modules/") > 0)
+  { 
+    $('xwikimaincontainer').className  = "modules";
+    globalIsModules = true;
+//alert('modules');
+  }
+  else
+  {
+    $('xwikimaincontainer').className  = "wiki";
+    globalIsModules = false;
+//alert('wiki');
+  }
+}
+</script>

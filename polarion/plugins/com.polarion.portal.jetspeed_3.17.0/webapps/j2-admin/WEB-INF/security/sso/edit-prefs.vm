@@ -1,0 +1,13 @@
+
+<h2 class="portlet-section-header">Edit Preferences</h2>
+
+<form action="$renderResponse.createActionURL()" method="post">
+<table>
+#foreach ($pref in $prefs)
+#prefField($pref.Key $pref.Value "40")
+#end
+</table>
+<input type="submit" name="Save" value="Save" />
+</form>
+
+

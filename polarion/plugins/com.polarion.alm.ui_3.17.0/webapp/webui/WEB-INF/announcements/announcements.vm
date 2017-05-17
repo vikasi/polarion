@@ -1,0 +1,75 @@
+#if($error)
+	Failed to read announcements: $error
+#elseif($items)
+	<table width="100%" cellpadding="0" cellspacing="0" height="100%">
+		<tr>
+			<td height="100%">
+				<table id="newsTable" class="listAnn" cellpadding="0" cellspacing="0"  height="100%">
+					#foreach($item in $items)
+						<tr>
+							<td nowrap="nowrap" style="background-color:#f7f7f7">
+								<span style="color:#797979">
+								#if($item.getDate())
+									#formatHTML($item.getDate())
+								#end
+								</span>
+								<br>
+								<span style="color:#c7c7c7">
+								    $!item.getAuthorName()
+								</span>
+							</td>
+							<td width="100%">
+                                #if($item.getTitle().trim().length() > 0)
+									<span style="color:#2d557c"><b>#formatHTML($item.getTitle())</b></span><br/>
+                                #end
+                                #if($item.getDescription())
+                                    #if($maxLength < 0)
+										#formatHTML($item.getDescription())
+                                    #else
+										#if($item.getDescription().length() < $maxLength)
+											#formatHTML($item.getDescription())
+										#else
+											#formatHTML($item.getDescription().substring(0, $maxLength))...
+										#end
+									#end
+								#end
+						</tr>
+					#end
+				</table>
+				
+			</td>
+		</tr>
+		<tr>  
+			<td>
+				<table width="100%" cellpadding="0" cellspacing="0" class="com_polarion_alm_reports_web_js_ReportStatusFooter_Css">
+					<tr>
+						<td align="right" nowrap="nowrap">
+							#if($canAddAnnouncement)
+	                            #set($addUrl = $renderResponse.createActionURL())
+					    		$addUrl.setWindowState($STATE_MAX) 	    		
+					    		$addUrl.setParameter("showAddForm","showAddForm") 	    		
+                                <a href="$addUrl" class="linkLikeText">Add New</a>
+							#else
+							  <span class="disabledText"><a class="linkLikeText" title="You cannot do this operation - security restriction."><img src="/polarion/ria/images/actions/miniadd.gif" style="margin-right:3px">Add New</a></span>
+							#end
+						</td>
+						<td style="padding-top:1px;padding-left:6px;">
+							<img src="/polarion/ria/images/backgrounds/portlet_splitter.gif">
+						</td>
+						<td width="100%" style="padding-left:3px">
+							$items.size() Announcements of $totalItems
+						</td>
+						<td style="padding-top:1px;padding-right:3px;">
+							<img src="/polarion/ria/images/backgrounds/portlet_splitter.gif">
+						</td>
+						<td align="left" nowrap="nowrap"  style="padding-right:3px;">
+				    		#set($moreUrl = $renderResponse.createRenderURL())
+				    		$moreUrl.setWindowState($STATE_MAX) 	    		
+                            <a href="$moreUrl" class="linkLikeText"  target="working_area">More</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+#end  

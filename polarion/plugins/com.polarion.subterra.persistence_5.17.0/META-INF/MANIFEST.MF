@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Provide-Package: com.polarion.subterra.persistence,com.polarion.subter
+ ra.persistence.auth,com.polarion.subterra.persistence.context,com.pol
+ arion.subterra.persistence.context.impl,com.polarion.subterra.persist
+ ence.file,com.polarion.subterra.persistence.file.impl,com.polarion.su
+ bterra.persistence.identification,com.polarion.subterra.persistence.i
+ nternal;x-friends:="com.polarion.subterra.persistence.tests",com.pola
+ rion.subterra.persistence.location,com.polarion.subterra.persistence.
+ reference,com.polarion.subterra.persistence.reference.impl,com.polari
+ on.subterra.persistence.richtext,com.polarion.subterra.persistence.ri
+ chtext.impl,com.polarion.subterra.persistence.serialization,com.polar
+ ion.subterra.persistence.spi.serialization;x-friends:="com.polarion.s
+ ubterra.persistence.tests"
+Bundle-SymbolicName: com.polarion.subterra.persistence
+Bundle-Name: %pluginName
+Bundle-Version: 5.17.0
+Bundle-ClassPath: subterra-uniform-persistence.jar
+Bundle-Localization: plugin
+Require-Bundle: com.polarion.subterra.base;reprovide=true,javax.transa
+ ction;reprovide=true,com.polarion.platform
+Bundle-Vendor: %providerName
+
+

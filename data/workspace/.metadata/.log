@@ -1,0 +1,481 @@
+!SESSION 2017-05-15 18:14:40.753 -----------------------------------------------
+eclipse.buildId=M20060118-1600
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -application com.polarion.core.boot.app -appId polarion.serve
+Command-line arguments:  -application com.polarion.core.boot.app -data C:\Polarion\data\workspace -dev file:D:/workdir/.metadata/.plugins/org.eclipse.pde.core/New_configuration/dev.properties -os win32 -ws win32 -arch x86 -appId polarion.serve
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:14:41.646
+!MESSAGE Bundle update@plugins/org.eclipse.update.core.linux_3.1.0.jar [93] was not resolved.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:14:41.646
+!MESSAGE Bundle update@plugins/org.eclipse.core.resources.linux_3.1.0.jar [102] was not resolved.
+!SESSION 2017-05-15 18:16:19.943 -----------------------------------------------
+eclipse.buildId=M20060118-1600
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -application com.polarion.core.boot.app -appId polarion.serve
+Command-line arguments:  -application com.polarion.core.boot.app -data C:\Polarion\data\workspace -dev file:D:/workdir/.metadata/.plugins/org.eclipse.pde.core/New_configuration/dev.properties -os win32 -ws win32 -arch x86 -appId polarion.serve
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.367
+!MESSAGE Bundle update@plugins/com.polarion.synchronizer_3.17.0 [7] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.367
+!MESSAGE Missing required bundle com.sun.jersey_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.367
+!MESSAGE Missing required bundle com.polarion.alm.projects_3.7.2.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.367
+!MESSAGE Missing required bundle com.polarion.platform.persistence_3.7.2.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.368
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_8.0.30.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.368
+!MESSAGE Missing imported package com.icl.saxon.om_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.368
+!MESSAGE Missing imported package com.polarion.alm.tracker_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.368
+!MESSAGE Missing imported package com.polarion.alm.tracker.model_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.368
+!MESSAGE Bundle update@plugins/com.polarion.portal.metrics_3.17.0 [10] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.368
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.368
+!MESSAGE Missing required bundle com.polarion.portal.jetspeed_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.369
+!MESSAGE Missing required bundle com.polarion.alm.builder_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.370
+!MESSAGE Bundle update@plugins/org.polarion.svnwebclient_3.17.0 [11] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.370
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.370
+!MESSAGE Missing required bundle com.polarion.alm.projects_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.370
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.370
+!MESSAGE Bundle update@plugins/com.polarion.scripting.servlet_3.17.0 [13] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.370
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.371
+!MESSAGE Missing required bundle com.polarion.alm.ui_3.6.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.371
+!MESSAGE Missing required bundle com.polarion.scripting_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.371
+!MESSAGE Bundle update@plugins/com.polarion.alm.wiki_3.17.0 [15] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.371
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.371
+!MESSAGE Missing required bundle com.polarion.alm.projects_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.371
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.371
+!MESSAGE Missing required bundle com.polarion.portal.jetspeed_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.372
+!MESSAGE Missing required bundle com.polarion.alm.builder_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.372
+!MESSAGE Missing required bundle com.polarion.alm.ui_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.372
+!MESSAGE Missing required bundle org.polarion.svnwebclient_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.372
+!MESSAGE Missing required bundle com.polarion.alm.qcentre_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.372
+!MESSAGE Missing required bundle com.polarion.platform.sql_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.372
+!MESSAGE Bundle update@plugins/com.polarion.alm.checker_3.17.0 [17] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.372
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.372
+!MESSAGE Bundle update@plugins/org.eclipse.core.resources.win32_3.1.0.jar [20] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.373
+!MESSAGE Missing host org.eclipse.core.resources_[3.1.0,4.0.0).
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.373
+!MESSAGE Bundle update@plugins/com.siemens.polarion.rt.communication_3.17.0 [25] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.373
+!MESSAGE Missing required bundle org.apache.axis_1.4.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.373
+!MESSAGE Missing required bundle com.polarion.platform.persistence_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.375
+!MESSAGE Bundle update@plugins/com.polarion.synchronizer.ui_3.17.0 [26] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.375
+!MESSAGE Missing required bundle com.sun.jersey_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.375
+!MESSAGE Missing required bundle com.polarion.synchronizer_0.4.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.375
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_5.5.24.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.375
+!MESSAGE Missing required bundle com.polarion.alm.projects_3.6.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.375
+!MESSAGE Missing required bundle com.polarion.platform.persistence_3.6.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.375
+!MESSAGE Missing required bundle com.polarion.portal.jetspeed_3.6.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.376
+!MESSAGE Missing required bundle com.polarion.synchronizer.proxy.polarion_3.7.2.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.376
+!MESSAGE Missing imported package com.polarion.synchronizer.proxy.reqif_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.376
+!MESSAGE Missing imported package com.polarion.synchronizer.proxy.configuration_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.376
+!MESSAGE Missing imported package com.polarion.synchronizer.proxy.reqif.internal_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.376
+!MESSAGE Missing imported package com.polarion.synchronizer.proxy.reqif.model_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.376
+!MESSAGE Bundle update@plugins/com.polarion.alm.ws.client_3.17.0 [28] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.376
+!MESSAGE Missing required bundle org.apache.axis_1.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.377
+!MESSAGE Bundle update@plugins/com.polarion.synchronizer.proxy.polarion_3.17.0 [32] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.377
+!MESSAGE Missing required bundle com.polarion.synchronizer_0.4.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.377
+!MESSAGE Missing required bundle com.polarion.alm.tracker_3.6.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.377
+!MESSAGE Missing required bundle com.polarion.alm.ui_3.7.1.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.377
+!MESSAGE Bundle update@plugins/com.polarion.webdav_3.17.0 [33] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.377
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.378
+!MESSAGE Bundle update@plugins/com.polarion.synchronizer.proxy.hpalm_3.17.0 [34] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.378
+!MESSAGE Missing required bundle com.polarion.synchronizer_0.4.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.378
+!MESSAGE Missing required bundle com.sun.jersey_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.378
+!MESSAGE Missing required bundle com.polarion.synchronizer.proxy.polarion_0.9.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.378
+!MESSAGE Missing required bundle com.polarion.alm.tracker_3.10.1.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.378
+!MESSAGE Bundle update@plugins/com.polarion.alm.ws_3.17.0 [36] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.379
+!MESSAGE Missing required bundle org.apache.axis_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.379
+!MESSAGE Missing required bundle com.polarion.alm.tracker_3.4.2.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.379
+!MESSAGE Missing required bundle com.polarion.alm.builder_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.379
+!MESSAGE Missing required bundle com.siemens.polarion.rt.communication_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.380
+!MESSAGE Bundle update@plugins/com.polarion.alm.tracker_3.17.0 [38] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.380
+!MESSAGE Missing required bundle com.polarion.platform.persistence_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.380
+!MESSAGE Missing required bundle com.polarion.alm.projects_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.380
+!MESSAGE Missing required bundle com.polarion.usdp.persistence_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.380
+!MESSAGE Missing required bundle com.polarion.alm.builder_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.380
+!MESSAGE Missing required bundle com.polarion.alm.ws.client_3.4.2.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.380
+!MESSAGE Missing required bundle com.polarion.platform.repository.driver.svn_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.380
+!MESSAGE Bundle update@plugins/org.eclipse.core.filebuffers_3.1.2.jar [39] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.380
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.381
+!MESSAGE Bundle update@plugins/com.siemens.polarion.rt.communication.ws_3.17.0 [45] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.381
+!MESSAGE Missing required bundle com.polarion.alm.ws_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.381
+!MESSAGE Missing required bundle org.apache.axis_1.4.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.381
+!MESSAGE Missing required bundle com.polarion.alm.ws.client_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.381
+!MESSAGE Bundle update@plugins/com.siemens.polarion.rt.parsers.c_3.17.0 [48] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.381
+!MESSAGE Missing required bundle com.siemens.polarion.rt.api_3.17.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.381
+!MESSAGE Bundle update@plugins/org.eclipse.team.core_3.1.1.jar [50] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.381
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.383
+!MESSAGE Bundle update@plugins/com.polarion.synchronizer.proxy.reqif_3.17.0 [51] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.383
+!MESSAGE Missing required bundle com.polarion.synchronizer_1.1.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.383
+!MESSAGE Missing required bundle com.sun.jersey_1.12.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.383
+!MESSAGE Missing required bundle com.polarion.alm.tracker_3.8.1.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.383
+!MESSAGE Bundle update@plugins/com.siemens.polarion.rt.ui_3.17.0 [53] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.383
+!MESSAGE Missing required bundle com.polarion.alm.ui_3.17.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.383
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.383
+!MESSAGE Missing required bundle com.siemens.polarion.rt.communication_3.17.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.384
+!MESSAGE Bundle update@plugins/com.polarion.portal.tomcat_8.0.30 [54] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.384
+!MESSAGE Missing required bundle com.polarion.alm.projects_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.384
+!MESSAGE Bundle update@plugins/com.polarion.platform.repository.external.git_3.17.0 [57] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.384
+!MESSAGE Missing required bundle com.siemens.polarion.rt.api_3.17.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.384
+!MESSAGE Bundle update@plugins/com.polarion.scripting_3.17.0 [60] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.384
+!MESSAGE Missing required bundle com.polarion.alm.builder_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.384
+!MESSAGE Missing required bundle com.polarion.alm.projects_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.384
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.384
+!MESSAGE Missing required bundle com.polarion.alm.wiki_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.385
+!MESSAGE Missing required bundle com.polarion.platform.persistence_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.385
+!MESSAGE Bundle update@plugins/com.polarion.usdp.persistence_3.17.0 [66] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.385
+!MESSAGE Missing required bundle com.polarion.alm.projects_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.385
+!MESSAGE Bundle update@plugins/com.sun.jersey_1.12.0 [67] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.385
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_8.0.30.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Bundle update@plugins/com.polarion.alm.ui_3.17.0 [68] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.portal.jetspeed_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.alm.projects_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.alm.builder_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.alm.qcentre_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.psvn.launcher_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.platform.repository.driver.svn_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.alm.reindexer_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.synchronizer.proxy.reqif_3.7.2.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.synchronizer_3.7.2.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.polarion.alm.oslc_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.siemens.polarion.rt.communication_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.386
+!MESSAGE Missing required bundle com.siemens.polarion.rt.api_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.387
+!MESSAGE Bundle update@plugins/com.polarion.alm.ui.diagrams.mxgraph_3.17.0 [69] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.387
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_5.5.24.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.387
+!MESSAGE Missing required bundle com.polarion.alm.ui_3.6.1.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.387
+!MESSAGE Missing imported package com.polarion.alm.tracker.internal.url_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.388
+!MESSAGE Bundle update@plugins/com.polarion.platform.persistence_3.17.0 [70] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.388
+!MESSAGE Missing imported package com.polarion.platform.repository.driver.svn.internal.external_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.388
+!MESSAGE Bundle update@plugins/org.eclipse.core.resources.compatibility_3.1.0.jar [71] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.388
+!MESSAGE Missing host org.eclipse.core.resources_[3.1.0,4.0.0).
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.389
+!MESSAGE Bundle update@plugins/com.polarion.purevariants_3.17.0 [72] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.389
+!MESSAGE Missing required bundle com.polarion.alm.tracker_3.8.3.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.389
+!MESSAGE Missing required bundle com.polarion.alm.ui_3.8.3.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.389
+!MESSAGE Missing imported package org.apache.ecs.xhtml_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Bundle update@plugins/com.siemens.polarion.rt.api_3.17.0 [74] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Missing required bundle org.eclipse.core.resources_3.1.2.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Bundle update@plugins/com.polarion.psvn.launcher_3.17.0 [76] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Missing required bundle com.polarion.alm.builder_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Missing required bundle com.polarion.platform.sql_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Bundle update@plugins/com.polarion.alm.qcentre_3.17.0 [82] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Missing required bundle com.polarion.alm.builder_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.390
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.391
+!MESSAGE Missing required bundle com.polarion.portal.jetspeed_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.391
+!MESSAGE Bundle update@plugins/org.eclipse.team.cvs.core_3.1.1.jar [84] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.391
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.391
+!MESSAGE Missing required bundle org.eclipse.team.core_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.392
+!MESSAGE Bundle update@plugins/com.polarion.platform.repository.driver.svn_3.17.0 [86] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.392
+!MESSAGE Missing required bundle com.siemens.polarion.rt.api_3.17.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.392
+!MESSAGE Missing imported package com.polarion.platform.repository.driver.svn_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.392
+!MESSAGE Bundle update@plugins/com.polarion.alm.reindexer_3.17.0 [89] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.392
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.392
+!MESSAGE Bundle update@plugins/org.eclipse.ltk.core.refactoring_3.1.0.jar [91] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.392
+!MESSAGE Missing required bundle org.eclipse.core.filebuffers_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.392
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.392
+!MESSAGE Bundle update@plugins/org.eclipse.update.core.linux_3.1.0.jar [92] was not resolved.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Bundle update@plugins/com.polarion.alm.builder_3.17.0 [93] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Missing required bundle com.polarion.alm.projects_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Missing required bundle com.polarion.platform.persistence_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Missing required bundle com.polarion.usdp.persistence_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Bundle update@plugins/org.apache.axis_1.4.0.2015-01-20 [97] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_5.5.24.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Bundle update@plugins/com.polarion.portal.jetspeed_3.17.0 [98] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Missing required bundle com.polarion.alm.builder_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.393
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Bundle update@plugins/com.polarion.synchronizer.proxy.jira_3.17.0 [99] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing required bundle com.polarion.synchronizer_0.4.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing required bundle com.sun.jersey_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing required bundle com.polarion.synchronizer.proxy.polarion_0.9.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing imported package com.polarion.alm.projects.model_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing imported package com.polarion.alm.tracker_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing imported package com.polarion.alm.tracker.model_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing imported package com.polarion.platform.persistence_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing imported package com.polarion.platform.persistence.model_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Bundle update@plugins/com.polarion.platform.sql_3.17.0 [100] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing required bundle com.polarion.platform.persistence_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.396
+!MESSAGE Missing required bundle com.polarion.alm.tracker_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Bundle update@plugins/org.eclipse.core.resources.linux_3.1.0.jar [101] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Missing host org.eclipse.core.resources_[3.1.0,4.0.0).
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Bundle update@plugins/com.siemens.polarion.rt_3.17.0 [102] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Missing required bundle com.polarion.platform.sql_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Missing required bundle com.siemens.polarion.rt.communication_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Missing required bundle com.siemens.polarion.rt.communication.ws_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Missing required bundle com.siemens.polarion.rt.api_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Missing required bundle com.polarion.platform.repository.driver.svn_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.397
+!MESSAGE Missing required bundle org.apache.axis_1.4.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Bundle update@plugins/com.siemens.polarion.rt.collectors.git_3.17.0 [103] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Missing required bundle org.eclipse.core.resources_3.1.2.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Missing required bundle com.siemens.polarion.rt.api_3.17.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Missing required bundle com.polarion.platform.repository.external.git_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Missing required bundle com.siemens.polarion.rt_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Bundle update@plugins/org.eclipse.debug.core_3.1.2.jar [104] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Bundle update@plugins/com.polarion.alm.projects_3.17.0 [107] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Missing required bundle com.polarion.platform.persistence_0.0.0.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Bundle update@plugins/com.polarion.alm.oslc_3.17.0 [109] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.398
+!MESSAGE Missing required bundle com.polarion.platform.persistence_3.7.2.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.399
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_8.0.30.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.399
+!MESSAGE Missing required bundle com.polarion.portal.jetspeed_3.10.1.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.399
+!MESSAGE Missing required bundle com.polarion.alm.tracker_3.10.1.
+
+!ENTRY org.eclipse.osgi 2017-05-15 18:16:20.399
+!MESSAGE Bundle update@SDK/examples/com.polarion.example.servlet/ [111] was not resolved.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.399
+!MESSAGE Missing required bundle com.polarion.portal.tomcat_8.0.30.
+!SUBENTRY 1 org.eclipse.osgi 2017-05-15 18:16:20.399
+!MESSAGE Missing required bundle com.polarion.alm.tracker_3.17.0.

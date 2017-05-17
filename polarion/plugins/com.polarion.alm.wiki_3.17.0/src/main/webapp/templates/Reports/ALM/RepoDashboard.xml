@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wiki-page>
+<lastUpdatedBy>admin</lastUpdatedBy>
+<author>admin</author>
+<type>portal</type>
+<created>2009-07-15 00:00</created>
+<lastUpdated>2009-07-15 00:00</lastUpdated>
+<content><![CDATA[1 Dashboard
+{style:div|class=regiondescription}
+The Dashboard topic provides charts, reports and metrics that show the status of all the projects in a project group, or in the entire Repository (depending on which scope you are currently working in). You can get an up-to-the-minute view of the overall state by clicking the Update links found in most sections of this page, which force a refresh of the data. Keep in mind that server performance could become slower for all users while an update is in progress.
+{style}
+{section:width=100%}
+{column:width=44%}
+1.1 Work Items Trend
+{style:div|class=regiondescription}
+This chart shows the trend of unresolved work items over time.\\
+Vertical axis represents a count of work items. A value is displayed for every project group and project in the scope you are currently working in (Repository or Project Group).
+{style}
+
+{line-chart:report-path=charts/workitems-trend.xml|items=workitems-trend-data:UNRESOLVED-BY-PROJECT/*|tags=14|yAxisName=Unresolved Work Items Count|width=100%|height=300}
+
+{update-report-footer:report-path=charts/workitems-trend.xml|calculation=trackeranalysis-projectgroup}
+{column}
+{column:width=45%}
+1.1 Test Coverage
+{style:div|class=regiondescription}
+If your software project is Java Maven-2 friendly Polarion can easily measure a JUnit Test Coverage. This chart shows a Test Coverage ratio: lines covered / all lines of code for every project group or project in the scope you are currently working in (Repository or Project Group).
+{style}
+
+{line-chart:report-path=charts/coverage-trend.xml|items=CHILDREN/processaudit/project-level/source-check-aggregate-trend:#test-coverage.ratio|tags=14|yAxisName=Test Coverage|append.artifact.label=true|width=100%|height=300}
+
+{update-report-footer:report-path=charts/coverage-trend.xml|calculation=processaudit}
+{column}
+{section}
+
+1.1 Process Score
+{style:div|class=regiondescription}
+This section rolls up some key information from the reports in the Quality topic, and provides links to details in that topic.  In the Repository scope, or a top-level project group, links to projects and sub-groups appear enabling drill-down to additional information. For an individual project group, links to the projects in the group appear, again enabling drill-down to that level of detail. 
+{style}
+{report:report-path=html/qualitycentre-portlet-inner.html|width=100%|height=100%}
+
+{update-report-footer:report-path=html/qualitycentre-portlet-inner.html|calculation=projectscore}
+
+{section:width=100%}
+{column:width=44%}
+1.1 Top 5 Projects
+{style:div|class=regiondescription}
+This table shows the Maven-2 projects (up to 5) having the highest level of code reuse, and some basic statistics on the levels of reuse. Scope is either Repository or a Project Group, depending on which scope you are currently working in. 
+{style}
+{report:report-path=html/reusecalculator/top-projects-inner.html|width=100%|height=100%}
+
+{update-report-footer:report-path=html/reusecalculator/top-projects-inner.html|calculation=reusecalculator}
+{column}
+
+{column:width=45%}
+1.1 Top 5 Packages
+{style:div|class=regiondescription}
+This table shows the most reused Java packages (up to 5), and a count of the number of times each package is reused. Scope is either Repository or a Project Group, depending on which scope you are currently working in. 
+{style}
+{report:report-path=html/reusecalculator/top-packages-inner.html|width=100%|height=100%}
+
+{update-report-footer:report-path=html/reusecalculator/top-packages-inner.html|calculation=reusecalculator}
+{column}
+{section}]]></content>
+</wiki-page>

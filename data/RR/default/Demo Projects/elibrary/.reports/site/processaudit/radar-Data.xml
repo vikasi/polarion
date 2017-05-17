@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<chart anchorRadius="3" baseFont="Verdana" baseFontColor="000000" baseFontSize="11" bgColor="FFFFFF" caption=" " decimalSeparator="." divLineAlpha="100" divLineThickness="1" divlinecolor="AAC6FF" lineAlpha="100" lineColor="acbee3" lineThickness="2" numdivlines="4" outCnvBaseFont="Arial" outCnvBaseFontColor="000000" radarBorderThickness="1" radarFillAlpha="20" radarFillColor="C8DBFF" radarInLineAlpha="20" radarRadius="125" showAnchors="1" showBorder="0" showDivLineValue="0" showLabels="1" showLegend="1" showLimits="0" showValues="0" yAxisMaxValue="100" yAxisMinValue="0">
+    <categories font="Arial" fontColor="000000" fontSize="11" radarBorderColor="000000">
+        <category label="RP - Release Planning"/>
+        <category label="IP - Iteration Planning"/>
+        <category label="SC - Schedule Control"/>
+        <category label="QC - Quality Control"/>
+        <category label="PO - Process Organization"/>
+    </categories>
+    <dataset alpha="100" anchorAlpha="0" color="BFD19C">
+        <set value="100"/>
+        <set value="100"/>
+        <set value="100"/>
+        <set value="100"/>
+        <set value="100"/>
+    </dataset>
+    <dataset alpha="100" anchorAlpha="0" color="F9FD82">
+        <set value="75"/>
+        <set value="75"/>
+        <set value="75"/>
+        <set value="75"/>
+        <set value="75"/>
+    </dataset>
+    <dataset alpha="100" anchorAlpha="0" color="E78A95">
+        <set value="25"/>
+        <set value="25"/>
+        <set value="25"/>
+        <set value="25"/>
+        <set value="25"/>
+    </dataset>
+    <dataset alpha="0" anchorBgColor="000000" anchorBorderColor="000000" anchorRadius="4" anchorSides="8" lineAlpha="100" lineThickness="1">
+        <set value="50"/>
+        <set value="50"/>
+        <set value="67"/>
+        <set value="87"/>
+        <set value="50"/>
+    </dataset>
+</chart>

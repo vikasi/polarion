@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="elibrary" id="plan-check" tag="20130523_1550">
+    <structure-element id="root" provider="root" type="root">
+        <value-fact-element id="UnfinishedUserStories" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="totalPassedReleasesCount">
+                    <value>0</value>
+                </property>
+                <property id="violatedReleases">
+                    <value>0</value>
+                </property>
+                <property id="is-user-story-type-exist">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="PlanningFailedAutomaticTests" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="unplannedAutomaticFailures">
+                    <value>0</value>
+                </property>
+                <property id="totalAutomaticFailures">
+                    <value>0</value>
+                </property>
+                <property id="isCurrentIterationExist">
+                    <value>false</value>
+                </property>
+                <property id="is-defect-type-exist">
+                    <value>true</value>
+                </property>
+                <property id="is-unit-test-field-exist">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="PlanningFailedAcceptanceTests" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="unplannedAcceptanceFailures">
+                    <value>0</value>
+                </property>
+                <property id="totalAcceptanceFailures">
+                    <value>0</value>
+                </property>
+                <property id="isCurrentIterationExist">
+                    <value>false</value>
+                </property>
+                <property id="isAcceptanceTestsExist">
+                    <value>true</value>
+                </property>
+                <property id="is-defect-type-exist">
+                    <value>true</value>
+                </property>
+                <property id="is-test-case-type-exist">
+                    <value>true</value>
+                </property>
+                <property id="is-work-item-relation-exist">
+                    <value>true</value>
+                </property>
+                <property id="work-item-relation-type">
+                    <value>relates_to</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <violation-fact-element category="" description="" id="CurrentIterationPlanning" provider="Plan" rule="CurrentIterationPlanning" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <value-fact-element id="CurrentIterationPlanning" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="isCurrentIterationExist">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <violation-fact-element category="" description="" id="CodingGuidelinesExistence" provider="Plan" rule="CodingGuidelinesExistence" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="file coding url">
+                    <value>http://localhost/repo/Demo%20Projects/elibrary/guidelines.doc</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <value-fact-element id="CodingGuidelinesExistence" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="isGuidelinesExist">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="SpikeSolution" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="violationCount">
+                    <value>0</value>
+                </property>
+                <property id="totalUserStories">
+                    <value>0</value>
+                </property>
+                <property id="is-user-story-type-exist">
+                    <value>true</value>
+                </property>
+                <property id="is-spike-solution-type-exist">
+                    <value>false</value>
+                </property>
+                <property id="is-risk-field-exist">
+                    <value>false</value>
+                </property>
+                <property id="is-work-item-relation-exist">
+                    <value>true</value>
+                </property>
+                <property id="work-item-relation-type">
+                    <value>depends_on</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="ChangeIterationPlan" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="overdueCount">
+                    <value>0</value>
+                </property>
+                <property id="totalWorkitemsCount">
+                    <value>0</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="SplitReleasesToIterations" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="isCurrentReleaseExist">
+                    <value>false</value>
+                </property>
+                <property id="iterations">
+                    <value>0</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="RightIterationDuration" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="isCurrentReleaseExist">
+                    <value>false</value>
+                </property>
+                <property id="violatedIterationCount">
+                    <value>0</value>
+                </property>
+                <property id="totalIterationCount">
+                    <value>0</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="TaskInAdvance" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="totalIterations">
+                    <value>0</value>
+                </property>
+                <property id="advanceScheduledIterations">
+                    <value>0</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="IterationPlanningOrganization" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="isCurrentIterationExist">
+                    <value>false</value>
+                </property>
+                <property id="isUserStoryExist">
+                    <value>true</value>
+                </property>
+                <property id="isTaskExist">
+                    <value>true</value>
+                </property>
+                <property id="assignedUserStories">
+                    <value>0</value>
+                </property>
+                <property id="assignedTasks">
+                    <value>0</value>
+                </property>
+                <property id="is-user-story-type-exist">
+                    <value>true</value>
+                </property>
+                <property id="is-task-type-exist">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="ReleasePlanExistence" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="isCurrentReleaseExist">
+                    <value>false</value>
+                </property>
+                <property id="assignedUserStories">
+                    <value>0</value>
+                </property>
+                <property id="minimal-user-stories-number">
+                    <value>1</value>
+                </property>
+                <property id="isUserStoryExist">
+                    <value>false</value>
+                </property>
+                <property id="is-user-story-type-exist">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="CorrectUserStoriesNumber" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="isCurrentReleasePlanExist">
+                    <value>false</value>
+                </property>
+                <property id="userStoriesEstimate">
+                    <value>0.0</value>
+                </property>
+                <property id="releaseDuration">
+                    <value>0.0</value>
+                </property>
+                <property id="is-user-story-type-exist">
+                    <value>true</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-139" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-139</value>
+                </property>
+                <property id="title">
+                    <value>Maintain the list of favorite books</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-16" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Steve Developer</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-16</value>
+                </property>
+                <property id="title">
+                    <value>Failed: com.polarion.demo.LoginTest.testLogin</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-122" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-122</value>
+                </property>
+                <property id="title">
+                    <value>User likes to search also by any content - so full-text search is needed.</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-131" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-131</value>
+                </property>
+                <property id="title">
+                    <value>EBook -  supported readers</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-132" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-132</value>
+                </property>
+                <property id="title">
+                    <value>Advanced searching should provide an easy way to construct complex search querie...</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-136" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-136</value>
+                </property>
+                <property id="title">
+                    <value>Configure contact information</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-137" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-137</value>
+                </property>
+                <property id="title">
+                    <value>Mark a book as favorite</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-109" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-109</value>
+                </property>
+                <property id="title">
+                    <value>Search for a book by advanced properties</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-80" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Philip GUI</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-80</value>
+                </property>
+                <property id="title">
+                    <value>Comment threads on the Book properties dialog are sorted wrong</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-81" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Steve Developer</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-81</value>
+                </property>
+                <property id="title">
+                    <value>Fulltext searching in comments does not support non latin characters well</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-89" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Steve Developer</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-89</value>
+                </property>
+                <property id="title">
+                    <value>Extend the query panel to allow queries based on advanced fields</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-91" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Philip GUI</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-91</value>
+                </property>
+                <property id="title">
+                    <value>Administration section to manage user defined shortcuts</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-90" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Steve Developer</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-90</value>
+                </property>
+                <property id="title">
+                    <value>Implement an action to mark a book as favorite</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-48" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Steve Developer</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-48</value>
+                </property>
+                <property id="title">
+                    <value>Implement advanced full text search area on search dialog</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-47" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Steve Developer</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-47</value>
+                </property>
+                <property id="title">
+                    <value>Implement API for fulltext search</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-49" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Steve Developer</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-49</value>
+                </property>
+                <property id="title">
+                    <value>Configure the DB to have full text search capabilities</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-58" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Steve Developer</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-58</value>
+                </property>
+                <property id="title">
+                    <value>Implement advanced search panel</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-51" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Steve Developer</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-51</value>
+                </property>
+                <property id="title">
+                    <value>Implement IContactInfoService for remote webservice access</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-53" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Philip GUI</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-53</value>
+                </property>
+                <property id="title">
+                    <value>Implement contact area on user profile dialog</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <violation-fact-element category="" description="" id="UnfinishedWorkitems:Sprint34:EL-52" provider="Plan" rule="UnfinishedWorkitems" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+                <property id="assignee">
+                    <value>Philip GUI</value>
+                </property>
+                <property id="workitemID">
+                    <value>EL-52</value>
+                </property>
+                <property id="title">
+                    <value>Implement: Permissions to set contact info</value>
+                </property>
+                <property id="timePoint">
+                    <value>Sprint34</value>
+                </property>
+                <property id="iteration-name">
+                    <value>Sprint 34</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <value-fact-element id="UnfinishedWorkitems" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="violatedIterations">
+                    <value>1</value>
+                </property>
+                <property id="totalPassedIterationsCount">
+                    <value>3</value>
+                </property>
+                <property id="is-work-item-type-exist">
+                    <value>true</value>
+                </property>
+                <property id="work-item-type">
+                    <value>requirement</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <value-fact-element id="KeepProjectVelocity" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="totalIterationEstimation">
+                    <value>0.0</value>
+                </property>
+                <property id="projectVelocity">
+                    <value>0.0</value>
+                </property>
+                <property id="is-work-item-type-exist">
+                    <value>true</value>
+                </property>
+                <property id="work-item-type">
+                    <value>defect</value>
+                </property>
+            </properties>
+        </value-fact-element>
+        <violation-fact-element category="" description="" id="CurrentReleasePlanning" provider="Plan" rule="CurrentReleasePlanning" severity="" tag="23-05-13" type="PlanViolation">
+            <properties>
+                <property id="author">
+                    <value>Robert Project</value>
+                </property>
+            </properties>
+        </violation-fact-element>
+        <value-fact-element id="CurrentReleasePlanning" provider="Plan" type="execution">
+            <value/>
+            <properties>
+                <property id="isCurrentReleaseExist">
+                    <value>false</value>
+                </property>
+            </properties>
+        </value-fact-element>
+    </structure-element>
+</factbase>

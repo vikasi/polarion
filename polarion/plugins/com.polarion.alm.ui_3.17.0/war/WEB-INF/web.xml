@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app metadata-complete="true">
+	<filter>
+		<filter-name>DoAsFilter</filter-name>
+		<filter-class>com.polarion.portal.tomcat.servlets.DoAsFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>DoAsFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+    <filter>
+            <filter-name>VelocityInstanceFilter</filter-name>
+            <filter-class>com.polarion.alm.server.util.VelocityInstanceFilter</filter-class>
+    </filter>
+    <filter-mapping>
+            <filter-name>VelocityInstanceFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	
+    <filter>
+        <filter-name>ExpiresFilterForGWT</filter-name>
+        <filter-class>com.polarion.alm.ui.server.ExpiresFilterForGWT</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ExpiresFilterForGWT</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  
+  <!-- Servlets -->
+  <servlet>
+		<servlet-name>gwt_servlet</servlet-name>
+		<display-name>GWT Servlet</display-name>
+		<servlet-class>com.polarion.alm.ui.server.GWTServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>1</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>gwt_servlet</servlet-name>
+		<url-pattern>/com.polarion.UI/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gwt_servlet</servlet-name>
+		<url-pattern>/com.polarion.WIKI/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gwt_servlet</servlet-name>
+		<url-pattern>/com.polarion.DEBUG/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gwt_servlet</servlet-name>
+		<url-pattern>/gwt/*</url-pattern>
+	</servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PortalDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.navigation.internal.PortalDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>PortalDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/PortalDataService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PortalDataService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/PortalDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DebugService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.debug.DebugServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DebugService</servlet-name>
+    <url-pattern>/com.polarion.UI/DebugService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>DebugService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/DebugService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PObjectDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.model.PObjectDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>PObjectDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/PObjectDataService</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UserDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.model.UserDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>UserDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/UserDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>WikiDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.wiki.WikiDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>WikiDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/WikiDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>WikiDataService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/WikiDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TestingDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.testing.TestingDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>TestingDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/TestingDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>TestingDataService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/TestingDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PlanningDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.plans.PlanningDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>PlanningDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/PlanningDataService</url-pattern>
+  </servlet-mapping>
+  
+    <servlet-mapping>
+    <servlet-name>PlanningDataService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/PlanningDataService</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>StatusDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.status.StatusDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>StatusDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/StatusDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>StatusDataService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/StatusDataService</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>PlanningMacroService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.plans.PlanningMacroServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>PlanningMacroService</servlet-name>
+    <url-pattern>/com.polarion.UI/PlanningMacroService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>PlanningMacroService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/PlanningMacroService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RepoAMService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.model.RepoAMServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>RepoAMService</servlet-name>
+    <url-pattern>/com.polarion.UI/RepoAMService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>IPermsService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.model.PermsServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>IPermsService</servlet-name>
+    <url-pattern>/com.polarion.UI/IPermsService</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>EnumerationDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.model.EnumerationDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>EnumerationDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/EnumerationDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>WorkItemDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.tracker.WorkItemDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>WorkItemDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/WorkItemDataService</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>WorkItemDataService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/WorkItemDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ActivityDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.tracker.ActivityDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ActivityDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/ActivityDataService</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ActivityDataService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/ActivityDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>WorkflowDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.tracker.WorkflowDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>WorkflowDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/WorkflowDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TrMatrixDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.tracker.TrMatrixDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>TrMatrixDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/TrMatrixDataService</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>ModulesDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.tracker.ModulesDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ModulesDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/ModulesDataService</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DiagramService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.diagrams.internal.DiagramServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DiagramService</servlet-name>
+    <url-pattern>/com.polarion.UI/DiagramService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ImportExportDataService</servlet-name>
+  	<servlet-class>com.polarion.alm.ui.server.tracker.ImportExportDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ImportExportDataService</servlet-name>
+  	<url-pattern>/com.polarion.UI/ImportExportDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>LockingService</servlet-name>
+  	<servlet-class>com.polarion.alm.ui.server.tracker.LockingServiceImpl</servlet-class>
+  </servlet>
+    
+  <servlet-mapping>
+  	<servlet-name>LockingService</servlet-name>
+  	<url-pattern>/com.polarion.UI/LockingService</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>WordImportService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.importer.WordImportServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>WordImportService</servlet-name>
+    <url-pattern>/com.polarion.UI/WordImportService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ExcelImportService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.importer.ExcelImportServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ReqIfService</servlet-name>
+    <servlet-class>com.polarion.alm.server.reqif.ReqIfServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ExcelImportService</servlet-name>
+    <url-pattern>/com.polarion.UI/ExcelImportService</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RoundTripService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.roundtrip.RoundTripServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>RoundTripService</servlet-name>
+    <url-pattern>/com.polarion.UI/RoundTripService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TimePointsDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.tracker.TimePointsDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>TimePointsDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/TimePointsDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>JobsService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.jobs.JobsServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>JobsService</servlet-name>
+    <url-pattern>/com.polarion.UI/JobsService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BuilderService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.builds.BuilderServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>BuilderService</servlet-name>
+    <url-pattern>/com.polarion.UI/BuilderService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ReportsDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.reports.ReportsDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ReportsDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/ReportsDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ReportsDataService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/ReportsDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ProjectsDataService</servlet-name>
+    <servlet-class>com.polarion.alm.ui.server.projects.ProjectsDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ProjectsDataService</servlet-name>
+    <url-pattern>/com.polarion.UI/ProjectsDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>LiveDocDataService</servlet-name>
+  	<servlet-class>com.polarion.alm.ui.server.tracker.LiveDocDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>LiveDocDataService</servlet-name>
+  	<url-pattern>/com.polarion.UI/LiveDocDataService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>BaselinesDataService</servlet-name>
+  	<servlet-class>com.polarion.alm.ui.server.tracker.BaselinesDataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>BaselinesDataService</servlet-name>
+  	<url-pattern>/com.polarion.UI/BaselinesDataService</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>IJSErrorReportingService</servlet-name>
+    <servlet-class>com.polarion.alm.portal.web.server.JSErrorReportingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>IJSErrorReportingService</servlet-name>
+    <url-pattern>/com.polarion.UI/IJSErrorReportingService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>IJSErrorReportingService</servlet-name>
+    <url-pattern>/com.polarion.WIKI/IJSErrorReportingService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BubbleQueryService</servlet-name>
+    <servlet-class>com.polarion.alm.server.services.bubble.BubbleQueryServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>BubbleQueryService</servlet-name>
+    <url-pattern>/com.polarion.UI/BubbleQueryService</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ApprovalsService</servlet-name>
+    <servlet-class>com.polarion.alm.server.services.approvals.ApprovalsServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ApprovalsService</servlet-name>
+    <url-pattern>/com.polarion.UI/ApprovalsService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PrioritizationService</servlet-name>
+    <servlet-class>com.polarion.alm.server.services.prioritization.PrioritizationServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>PrioritizationService</servlet-name>
+    <url-pattern>/com.polarion.UI/PrioritizationService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UniversalService</servlet-name>
+    <servlet-class>com.polarion.alm.server.UniversalServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UniversalService</servlet-name>
+    <url-pattern>/com.polarion.UI/UniversalService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ReqIfService</servlet-name>
+    <url-pattern>/com.polarion.UI/ReqIfService</url-pattern>
+  </servlet-mapping>
+  
+	<listener>
+		<listener-class>com.polarion.alm.server.rp.RichPageContextHandler</listener-class>
+	</listener>
+  
+</web-app>

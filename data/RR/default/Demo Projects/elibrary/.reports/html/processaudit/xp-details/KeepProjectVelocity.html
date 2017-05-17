@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>
+      XP Details
+    </title>
+    <link title="Style" type="text/css" rel="stylesheet" href="../css/default.css"/>
+	 <script type="text/javascript" src="../js/toggle.js"></script>
+	 <script type="text/javascript" src="../js/resize.js"></script>
+	 <script type="text/javascript" src="../js/selection.js"></script>
+  </head>
+  <body>
+		<table class="detailTable" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+			<td width="100%" style="padding-bottom:10px;">
+<table class="xpNavigator" cellspacing="0" cellpadding="0" width="100%">	<tr>	<td width="100%">        <b>Path:</b> <a class="xpNav" href="../index.html">Overview</a>&nbsp;/&nbsp;<a class="xpNav" href="KeepProjectVelocity.html">Violation Item Detail</a>    </td></tr></table>
+			</td>
+		</tr>
+		<tr style="background: #D9E6FF">
+			<td width="100%">
+<table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #C0DAEA;">
+	<tr>
+		<td width="100%" style="padding-left:10px;">
+			<b>IP 2.2 - Take into account project velocity for iteration plan</b>
+		</td>
+		<td class="percent" style="padding: 3px;">
+<table height='26px' width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #efefef;">			<b>N/A</b>		</td>	</tr></table>
+		</td>
+	</tr>
+</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 15px;" width="100%">
+	<b>N/A Reason:</b> Iteration plan doesn't exist for previous or current iterations
+			</td>
+		</tr>
+		<tr>
+			<td width="100%" style="padding-top:15px;">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+<table class="valueListTitle" ondblclick="toggleMinMax('violation_table_div','../images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Violation List</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('violation_table_div','../images/')"><img title="Minimize" id="violation_table_div.img" src="../images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="violation_table_div.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+			<table id="violation_table" class="summarylist" width="100%">
+           	<tbody>
+					<tr>
+						<th width="*%" align="left" style="padding: 0px 5px 0px 5px;">
+							Item
+						</th>
+					</tr>
+				<tr class="first">
+					<td>
+						<img src="../images/NoViolationsList.gif" align="absmiddle" border="0">&nbsp;No items found
+					</td>
+				</tr>
+				</tbody>
+			</table>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%">
+<table class="portletFooter" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+  	<tr>
+    		<td class="br" align="center" width="100%" style="border-right: 0px;">
+       		&nbsp;
+      	</td>
+			<td nowrap="true" style="border-left: 0px;">
+			<a class="noneUnderline" href="..//Overview/XP/XPlist.html#IP 2.2">More</a>
+  		</td>
+		</tr>
+	</tbody>
+</table>
+					</td>
+				</tr>
+			</table>
+			</div>
+		</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+		<tr>
+			<td style="padding-top: 15px;" width="100%">
+<table class="valueListTitle" ondblclick="toggleMinMax('Settings','../images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Settings</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('Settings','../images/')"><img title="Minimize" id="Settings.img" src="../images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+			</td>
+		</tr>
+		<tr>
+			<td width="100%">
+				<div id="Settings.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+				<table id="settings_table" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+<table class="summarylist" cellpadding="0" cellspacing="0" width="100%">
+		<tr class="report">
+			<td width="100%" align="left">
+				<b>Formula</b>
+			</td>
+		</tr>
+		<tr class="first">
+			<td style="padding-bottom: 10px; border-bottom: 0px;">
+				
+                            
+                    score = N/A, if totalIterationEstimation = 0 or projectVelocity = 0,<br>
+                    score = [totalIterationEstimation / projectVelocity * 100] %, if totalIterationEstimation <= projectVelocity,<br>
+                    score = [projectVelocity / totalIterationEstimation * 100] %, if totalIterationEstimation > projectVelocity
+                
+            
+			</td>
+		</tr>
+</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+<table cellpadding="0" cellspacing="0" class="summarylist" width="100%">
+	<tbody>
+		<tr class="report">
+			<td width="100%" align="left">
+				<b>Formula Parameters</b>
+			</td>
+		</tr>
+	</tbody>
+</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+<table cellpadding="0" cellspacing="0" class="summarylist" width="100%">
+	<tbody>
+		<tr class="first">
+			<th style="padding:2px 5px 2px 5px;" align="left" width="20%">
+				Parameter
+			</th>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="*%">
+				Description
+			</th>
+			<th style="padding:2px 5px 2px 5px;" align="left" width="20%">
+				Value
+			</th>
+		</tr>
+<tr class="first">
+	<td>
+		totalIterationEstimation
+	</td>
+	<td>
+		Summary estimation of tasks and defects assigned to current iteration (in days)
+	</td>
+	<td>
+		0.0
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		projectVelocity
+	</td>
+	<td>
+		Summary estimation of resolved tasks and defects assigned to previous iteration (in days)
+	</td>
+	<td>
+		0.0
+	</td>
+</tr>
+	</tbody>
+</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+<table class="summarylist" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr onmouseover="setHandCursor(this)" onclick="javascript:toggleSection('show_settings','settings_table','KeepProjectVelocity','../images/', 'false', 'Show Configuration Details', 'Hide Configuration Details');">
+			<td style="padding-top: 10px; padding-bottom:10px; border-top: 0px; background: #F5F8FF; font-weight: bold;">
+					<span name="showArrow" id="show_settings">
+						<img border="0" align="absmiddle" src="../images/down_arrow.jpg"/>
+						Show Configuration Details
+					</span>
+			</td>
+		</tr>
+	</tbody>
+</table>
+						</td>
+					</tr>
+					<tr id="KeepProjectVelocity_CofParams" style="display:none">
+						<td width="100%">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+			<table class="summarylist" width="100%">
+				<tbody>
+					<tr class="report">
+						<td width="100%" align="left">
+							<b>Rule Implementation</b>
+						</td>
+					</tr>
+					<tr class="first">
+						<td>
+						KeepVelocity
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" class="summarylist" width="100%">
+				<tbody>
+					<tr class="report">
+						<td width="100%" align="left">
+							<b>Configuration Parameters</b>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+		<tr>
+			<td>
+			<table class="summarylist" width="100%">
+           	<tbody>
+					<tr>
+						<th style="padding:2px 5px 2px 5px;" align="left" width="20%">
+							Parameter
+						</th>
+						<th style="padding:2px 5px 2px 5px;" align="left" width="*%">
+							Description
+						</th>
+						<th style="padding:2px 5px 2px 5px;" align="left" width="20%">
+							Default Value
+						</th>
+					</tr>
+<tr class="first">
+	<td>
+		work item type
+	</td>
+	<td>
+		Work Item type that represents a  Task in Tracker
+	</td>
+	<td>
+		task
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		work item type
+	</td>
+	<td>
+		Work Item type that represents a Defect in Tracker
+	</td>
+	<td>
+		defect
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		is resolved
+	</td>
+	<td>
+		Flag which determines whether work item resolved or not
+	</td>
+	<td>
+		true
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		velocity difference threshold
+	</td>
+	<td>
+		Maximal allowed velocity difference threshold (in percents)
+	</td>
+	<td>
+		20
+	</td>
+</tr>
+<tr class="first">
+	<td>
+		release pattern id
+	</td>
+	<td>
+		Pattern for timepoint id to determine whether it is release or not
+	</td>
+	<td>
+		release.*
+	</td>
+</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+						</td>
+					</tr>
+				</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 15px;" width="100%">
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%">
+<table class="valueListTitle" ondblclick="toggleMinMax('preconditions_table_div','../images/')" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td class="pl" width="100%">Preconditions</td>
+			<td class="pl pr0" nowrap="nowrap">
+<a href="javascript:toggleMinMax('preconditions_table_div','../images/')"><img title="Minimize" id="preconditions_table_div.img" src="../images/minimize.gif" alt="Minimize" align="absmiddle" border="0"></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="preconditions_table_div.pane" width="100%" style="height: 100%; width: 100%; display: block;">
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%">
+			<table id="precondition_table" class="summarylist" width="100%">
+           	<tbody>
+					<tr>
+						<th width="100%" align="left" style="padding: 0px 5px 0px 5px;">
+							Item
+						</th>
+						<th align="left" style="padding: 0px 5px 0px 5px;">
+							Score
+						</th>
+					</tr>
+<tr onclick="javascript:document.location.href='CurrentIterationPlanning.html';" onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="precondition_CurrentIterationPlanning" class="second">
+	<td width="100%" class="linkText" nowrap="true" style="border-right: 0px;border-left: 0px;">
+		IP 1.1 - Define iteration
+	</td>
+	<td class="right" align="right">
+<table  width="90px" cellpadding="0" cellspacing="0">	<tr>		<td align="center" width="100%" style="border: 1px solid #C0DAEA; background: #d34949;">			0%		</td>	</tr></table>
+	</td>
+</tr>
+				</tbody>
+			</table>
+					</td>
+				</tr>
+			</table>
+			</div>
+		</td>
+	</tr>
+</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 15px;" width="100%">
+<table style="background: #F0FFE6; border: 7px solid #CBF6AE" width="100%">
+	<tr>
+		<td style="padding-right: 20px; padding-left: 16px;">
+			<img src="../images/howToFix.jpg"/>
+		</td>
+		<td align="left" width="100%" style="line-height: 20px;">
+			<b>How To Fix Violation</b>
+			<br>
+
+            
+                If rule score is N/A, then fulfill precondition - iteration plan existence for previous and current iterations. To ensure that current iteration is planned check that rule <a href="CurrentIterationPlanning.html">IP 1.1 - Define iteration</a> is passed.<br>
+                In order to fix violation current iteration plan should be changed to align total estimation of assigned tasks and defects to the project velocity from previous iteration. Project manager should assign more or unassign some user stories and correspondent tasks from current iteration.<br>
+                Follow step-by-step instructions how to fix violation:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;1. Switch to the <b>Projects</b> perspective<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;2. Select <b>Work Items</b> in the <b>Topics</b> tree<br>
+                In order to assign/unassign work items from iteration make following:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;1. Select work item in list of work items<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;2. Click on the <b>Edit</b> button<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;3. To unassign task/defect from the iteration select empty value in the Timepoint combo-box<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;4. To unassign user story from the iteration select current release in the Timepoint combo-box<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;5. To assign task, defect or user story to the current iteration select it in the Timepoint combo-box<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;6. Click on the <b>Save</b> button
+	                    
+        
+		</td>
+</tr>
+</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 15px; padding-left: 10px;">
+<span style="line-height: 20px;">
+<b>XP Theory</b>
+<br>
+
+            
+                The project velocity (or just velocity) is a measure of how much work is getting done on the project. This measurement is very useful for iteration planning. The rule is simple - plan for the current iteration the same amount of work, which was completed in the previous iteration. It makes project more predictable, because usually development team works with the stable speed. In order to calculate velocity you should summarize estimation for all completed tasks on the previous iteration. For the current iteration you should select tasks with total estimation equal to velocity value. This simple mechanism allows developers to recover and clean up after a difficult iteration and averages out estimates. The project velocity goes up by allowing developers to ask the customers for another story when their work is completed early and no clean up tasks remain.
+            
+        
+	<br><br>
+<b>Instructions</b>
+<br>
+	
+            
+                Before creation of the iteration plan, project manager should calculate project velocity by summarizing estimations for tasks and defects work items, which were completed during previous iteration. Then customers one-by-one select user story to add into the iteration plan. Developers split this user story to tasks, define estimates and add estimates to the total estimation for the iteration. Project manager should care to get total iteration estimation close to the velocity value as possible, but not more then velocity.
+                Precondition for this rule is existence of the iteration plan for current and previous iterations.
+		    
+        
+	<br><br>
+<b>How it works</b>
+<br>
+	
+            
+                This rule is automatically checked. During the check, velocity from previous iteration is compared with total estimation for current iteration. Velocity is calculated as summary of resolved task and defect work items estimates, assigned to previous iteration. Total estimation for current iteration is calculated as summary of task and defect work items estimates, assigned to current iteration. If total estimate for current iteration is more or less previous iteration velocity on more than configured difference threshold, then violation is create assigned to project manager, which is responsible for iteration planning.
+	        
+        
+	<br><br>
+</span>
+<b>Reference</b>
+<br>
+<span style="font-style: italic; color: #A6A6A6;">
+	<a style="color: #A6A6A6;" href="http://www.extremeprogramming.org/rules/velocity.html">http://www.extremeprogramming.org/rules/velocity.html</a>
+</span>
+			</td>
+		</tr>
+    </table>
+  </body>
+</html>

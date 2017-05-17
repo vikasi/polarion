@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20140213172445</created>
+<type>content</type>
+<content><![CDATA[1 Iterations
+
+#set($i=$trackerService.queryWorkItems("project.id:$page.project AND HAS_VALUE:initialEstimate ","id").iterator())
+#if($i.hasNext())
+#set($d  = $i.next().initialEstimate)
+#end
+
+#macro(sprint $s )#set($sprintId = $s.id)#set($stats = $s.getStatistics())<a target="_top" href="/polarion/#/project/$page.space.projectId/plan?id=$sprintId#if($s.revision)&revision=$s.revision#end">$s.name ($s.dueDate)</a>| $!s.status.name | #if($d)$!d.fromHours($!s.capacity)#else $!s.capacity#end| $stats.plannedAsString() | $stats.todoAsString()|  $stats.doneAsString() ($stats.progressAsString()) #end
+
+#set($plans=$trackerService.getPlanningManager().searchPlans("project.id:$page.space.projectId AND NOT isTemplate:true AND template.id:iteration ","startDate",-1))
+
+{table:width=100%}
+Iteration | Status  | Team Capacity | Planned Work | Remaining Work  | Done Work 
+#foreach($t in $plans)
+#if($t.finishedOn)#set($t=$t.getFinishedPlan())#end
+#sprint($t)  &nbsp;
+#end
+{table}
+
+]]></content>
+</wiki-page>

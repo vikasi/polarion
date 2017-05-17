@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">admin</field>
+    <field id="created">2011-02-11 00:01:32.284 +0100</field>
+    <field id="description" text-type="text/html">You can also link defects to user stories, if you use &amp;#39;implements&amp;#39; link role, the defects needs to be fixed before the user story can be marked as &amp;#39;resolved&amp;#39;.&lt;br/&gt;</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="role">implements</item>
+                <item id="workItem">SAMPLE-1</item>
+            </struct>
+        </list>
+    </field>
+    <field id="occurredInVersion" type="string">0.9</field>
+    <field id="priority">50.0</field>
+    <field id="severity">critical</field>
+    <field id="status">open</field>
+    <field id="targetVersion" type="enum:@plan[template.id:release]">Version_1_0</field>
+    <field id="title">Sample defect linked to 'User Story 1'</field>
+    <field id="type">defect</field>
+</work-item>

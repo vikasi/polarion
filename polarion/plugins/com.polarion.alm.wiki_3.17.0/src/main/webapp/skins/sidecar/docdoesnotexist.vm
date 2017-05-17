@@ -1,0 +1,63 @@
+###
+### Document does not exist messge
+###
+###
+#template("menucreate.vm")
+
+<script>
+    if (document.getElementById('progressbar'))
+    {
+        document.getElementById('progressbar').style.visibility = "hidden";
+    }
+</script>
+$response.setStatus(404)
+#template("startpage.vm")
+<div class="main layoutsubsection">
+#if($xwiki.exists("XWiki.DocumentDoesNotExist"))
+    $xwiki.includeForm("XWiki.DocumentDoesNotExist",false)
+#else
+#xwikimessageboxstart($msg.get("notice") $msg.get("thispagedoesnotexist"))
+#if($hasedit)
+
+<b>$msg.get("ifcreatepage")</b><br/>
+$msg.get("continueto")
+<a href="javascript:loadPages();">
+<img src="$xwiki.getSkinFile('CreatePage.PNG')" alt="no image"></img></a>
+<b>$msg.get("createnewpage")</b><br/><br/>
+<b>$msg.get("ifanotherpage")</b><br/>
+
+<form name="search" action="/polarion/wiki/bin/view/Panels/WebSearch">
+<table border=0>
+<tr>
+<td align="left"> 
+
+$msg.get("usesearch")
+
+<input id="globalsearchinput" type="text" name="text" value="$msg.get('Search')" size="12" onfocus="if (this.value == '$msg.get('Search')') value=''; this.select();" onblur="if (this.value == '') value='$msg.get('Search')'; this.blur()"/>
+</td> 
+
+<td align="left"> 
+<div onclick="javascript:document.search.submit()">
+#xwikitopmenuentrystartimageButtonSearch("search.gif" $msg.get("Search"))
+</div>
+</td>
+
+</tr>
+<tr>
+<td colspan=2 height=3></td>
+</tr>
+<tr>
+<td colspan=2  align="left"> 
+
+</td>
+</tr>
+</table>
+</form>
+
+
+#end
+#xwikimessageboxend()
+#end
+<div class="clearfloats"></div>
+</div>
+#template("endpage.vm")

@@ -1,0 +1,19 @@
+Starting the 'Apache2Polarion' service
+[Mon May 15 15:35:55.783025 2017] [mpm_winnt:notice] [pid 3336:tid 640] AH00455: Apache/2.4.25 (Win64) SVN/1.9.4 configured -- resuming normal operations
+[Mon May 15 15:35:55.783025 2017] [mpm_winnt:notice] [pid 3336:tid 640] AH00456: Server built: Dec 17 2016 00:28:36
+[Mon May 15 15:35:55.783025 2017] [core:notice] [pid 3336:tid 640] AH00094: Command line: 'C:\\Polarion\\bundled\\apache\\bin\\httpd.exe -d C:/Polarion/bundled/apache -f C:/Polarion/bundled/apache\\conf\\httpd.conf -d C:/Polarion/bundled/apache\\.'
+[Mon May 15 15:35:55.783025 2017] [mpm_winnt:notice] [pid 3336:tid 640] AH00418: Parent: Created child process 7764
+[Mon May 15 15:35:56.001800 2017] [mpm_winnt:notice] [pid 7764:tid 548] AH00354: Child: Starting 150 worker threads.
+The 'Apache2Polarion' service is running.
+[Mon May 15 15:38:37.910149 2017] [proxy:error] [pid 7764:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Mon May 15 15:38:37.910149 2017] [proxy_ajp:error] [pid 7764:tid 1696] [client 127.0.0.1:60755] AH00896: failed to make connection to backend: 127.0.0.1
+[Mon May 15 15:38:43.825240 2017] [proxy:error] [pid 7764:tid 1692] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Mon May 15 15:38:43.825240 2017] [proxy_ajp:error] [pid 7764:tid 1692] [client 127.0.0.1:60756] AH00896: failed to make connection to backend: 127.0.0.1
+[Mon May 15 17:11:42.102511 2017] [mpm_winnt:notice] [pid 3336:tid 640] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon May 15 17:11:44.114276 2017] [mpm_winnt:notice] [pid 7764:tid 548] AH00364: Child: All worker threads have exited.
+[Mon May 15 17:11:44.176783 2017] [mpm_winnt:notice] [pid 3336:tid 640] AH00430: Parent: Child process 7764 exited successfully.
+[Mon May 15 17:12:42.085332 2017] [mpm_winnt:notice] [pid 3572:tid 624] AH00455: Apache/2.4.25 (Win64) SVN/1.9.4 configured -- resuming normal operations
+[Mon May 15 17:12:42.085332 2017] [mpm_winnt:notice] [pid 3572:tid 624] AH00456: Server built: Dec 17 2016 00:28:36
+[Mon May 15 17:12:42.085332 2017] [core:notice] [pid 3572:tid 624] AH00094: Command line: 'C:\\Polarion\\bundled\\apache\\bin\\httpd.exe -d C:/Polarion/bundled/apache -f C:/Polarion/bundled/apache\\conf\\httpd.conf -d C:/Polarion/bundled/apache\\.'
+[Mon May 15 17:12:42.085332 2017] [mpm_winnt:notice] [pid 3572:tid 624] AH00418: Parent: Created child process 4792
+[Mon May 15 17:12:42.288479 2017] [mpm_winnt:notice] [pid 4792:tid 540] AH00354: Child: Starting 150 worker threads.

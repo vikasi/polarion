@@ -1,0 +1,260 @@
+body,html {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+img {
+	border: none;
+}
+
+form {
+	margin: 0px;
+	padding: 0px;
+}
+
+.cb {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+.less {
+	height: 10px;
+}
+
+#container {
+	position: absolute;
+	top: 40vh;
+	float:left;
+	color: #235b82;
+	margin-top:-10vh;
+}
+
+#box {
+	padding: 40px;
+	background-color: white;
+	z-index: 100;
+	max-height: 460px;
+	width: 470px;
+}
+
+#polarionLogo{
+	float:left;
+}
+
+.logo {
+	width: 100px;
+}
+
+#companyAndContainer {
+	width:550px;
+	height:400px;
+	display: block;
+	margin-left: auto;
+ 	margin-right: auto;
+}
+
+#loginRow{
+	width:600px;
+	height: 100px;
+}
+
+#login {
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 450px;
+	float:right;
+	overflow:hidden;
+}
+
+.loginFailure {
+	display: block;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.registerMessage {
+	display: block;
+	color: #000000;
+	font-weight: bold;
+}
+
+.input {
+	width: 300px;
+	height: 22px;
+	padding: 6px 3px 7px 10px;
+	color: #0E4075;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #bbbbbb;
+	transition: all 0.40s ease-in-out;
+	-webkit-transition: all 0.30s ease-in-out;
+ 	-moz-transition: all 0.30s ease-in-out;	
+	outline: none;
+	border-radius: 3px;
+}
+ 
+input:focus {
+	box-shadow: 0 0 5px rgba(81, 155, 238, 1);
+	-webkit-box-shadow: 0 0 5px rgba(81, 155, 238, 1);
+	-moz-box-shadow: 0 0 5px rgba(81, 155, 238, 1);	
+	border: 1px solid #78b8e5;
+}
+
+#username {
+	padding: 10px 0px;
+}
+
+#username, #password {
+	position: relative;
+}
+
+#username label, #password label {
+	cursor: text;
+	color: #a9a9a9;
+	font-size: 18px;
+	position: absolute;
+	left: 10px;
+	padding: 7px 0px;
+}
+
+#submit {
+	float: right;
+	width: 470px;
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+#submitButton {
+	width: 195px;
+	height: 42px;
+	padding: 0px;
+	border: 1px solid #89adce;
+	color: #00346d;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #d1e4f2 url('/polarion/ria/images/backgrounds/bg_form_btn.gif') repeat-x scroll 0 0;
+	cursor: pointer;
+	border-radius: 4px;	
+}
+
+.remember {
+	text-align: left;
+	font-weight: bold;
+	font-size: 13px;
+	padding-left: 5px;
+	color: #235b82;
+}
+
+#serverName{
+	padding-top:10px;
+	float:left;
+	position:absolute;
+	text-align:center;
+	width:100px;
+	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+}
+
+.changeServer {
+	float: right;
+	padding-right: 13px;
+}
+
+.changeServer a, .changeServer a:visited {
+	font-weight: normal;
+	color: #a9a9a9;
+	text-decoration: underline;
+}
+
+
+#errorMessage{
+	color: #ffffff;
+	overflow: hidden;
+	width: 485px;
+	padding: 25px 0px 25px 65px;
+	background: red url('/polarion/ria/images/login/exmark_login.png') no-repeat 15px 13px;
+	background-size: 40px;
+}
+
+#warning {
+	color: #8B7B33;
+	overflow: hidden;
+	width: 500px;
+	padding: 25px;
+	background: #fadd5a url('/polarion/ria/images/login/info_login.png') no-repeat 15px 13px;
+	background-size: 40px;
+}
+
+#warning a, #warning a:visited {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+#warning ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#warning li {
+	margin-left: 40px;
+}
+
+#warning li + li {
+	padding-bottom: 10px;
+}
+
+#moreinfo {
+	cursor: pointer;
+	padding-left: 3px;
+	text-decoration: underline;
+}
+
+#lessinfo {
+	display: block;
+	text-align: right;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#warningInfo {
+	margin-bottom: 40px;
+}
+
+#account {
+	padding-top: 20px;
+	text-align: center;
+	text-shadow: 1px 1px #000000;
+}
+
+#account a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#prefetch {
+	display: none;
+	width: 1px;
+	height: 1px;
+}
+
+#header{
+	font-weight: bold;
+}
+
+#productName{
+	font-size:20pt;
+	padding-bottom:20px;
+}
+
+#productName  sup{
+	font-size:60%;
+}

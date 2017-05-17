@@ -1,0 +1,12 @@
+1 Read-only Fields
+
+#warning("Making fields read-only should ~~not~~ be considered as a security feature. Administrators should be sure to properly configure user permissions, repository access, and the server environment.")
+
+{newreadonlyfields}
+\\
+{configuration:read-only-fields}
+\\
+1.1 Quick Help
+In each *Interface View* (\"View\") configuration, you can define which fields should be read-only when the entire Work Item form is not in Edit mode. If not specified, many fields can be edited \"in place\" without placing the entire Work Item form into Edit mode. You can perform this configuration for any View in which you want specific fields to always be read-only, or read-only when the Work Item enters a specific workflow status. For example, when a Requirement has the ~~Accepted~~ status, you can make the Description field read-only for anyone using a custom ~~Customer~~ View.
+\\
+The same read-only restrictions provided by the configuration apply in the *Multi Edit* presentation, and to bulk-edited Work Items. In the *Matrix* presentation, only restrictions for linked Work Items are applied, meaning that links cannot be added. In the *Time Sheet* presentation, only restrictions for Work Records, Time Spent and Remaining Estimate are applied, meaning that work records cannot be added or edited.

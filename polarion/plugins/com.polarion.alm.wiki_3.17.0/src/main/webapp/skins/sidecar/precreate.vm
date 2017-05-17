@@ -1,0 +1,11 @@
+<script>
+window.resizeTo(500,360);
+window.moveTo((screen.availWidth-500)/2, (screen.availHeight-360)/2);
+</script>
+#set($tocreate=$request.getParameter("tocreate"))
+##
+## Create panel
+##
+
+$tocreate
+dem

@@ -1,0 +1,9 @@
+#set ( $items = $puser.getUsers($request.getParameterMap()) )
+#set ( $userLink = $puser.getUserLink())
+#set ( $fields = $userLink.getFieldsArray() )
+
+#if ($userLink.getOutputType() == "table")
+	#template("xuserviewtable.vm")
+#else
+	#template("xuserviewlist.vm")
+#end

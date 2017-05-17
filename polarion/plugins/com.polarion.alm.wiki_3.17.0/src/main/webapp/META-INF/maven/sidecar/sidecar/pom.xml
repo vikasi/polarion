@@ -1,0 +1,1100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>polarion</groupId>
+  <artifactId>wiki</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Polarion Sidecar Wiki</name>
+  <url>http://maven.apache.org</url>
+  
+  
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+  <dependency>
+	  <groupId>org.apache.commons.jrcs.diff</groupId>
+	  <artifactId>org.apache.commons.jrcs.diff</artifactId>
+	  <type>jar</type>
+	  <version>SNAPSHOT</version>
+	  <scope>system</scope>
+	  <systemPath>${basedir}/lib/org.apache.commons.jrcs.diff.jar</systemPath>
+	</dependency>
+
+
+<dependency>
+  <groupId>platform-util</groupId>
+  <artifactId>platform-util</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/util.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>platform-hivemind</groupId>
+  <artifactId>platform-hivemind</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/platform-hivemind.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>platform-persistence-hivemind</groupId>
+  <artifactId>platform-persistence-hivemind</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/platform-persistence-hivemind.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>platform-persistence</groupId>
+  <artifactId>platform-persistence</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/platform-persistence.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>platform-repository</groupId>
+  <artifactId>platform-repository</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/platform-repository.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>platform</groupId>
+  <artifactId>platform</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/platform.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>projects</groupId>
+  <artifactId>projects</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/projects.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>subterra-base-acl</groupId>
+  <artifactId>subterra-base-acl</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/subterra-base-acl.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>subterra-base-core</groupId>
+  <artifactId>subterra-base-core</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/subterra-base-core.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>subterra-base-data</groupId>
+  <artifactId>subterra-base-data</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/subterra-base-data.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>tracker</groupId>
+  <artifactId>tracker</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/tracker.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>org.apache.commons.jrcs.rcs</groupId>
+  <artifactId>org.apache.commons.jrcs.rcs</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/org.apache.commons.jrcs.rcs.jar</systemPath>
+</dependency>  
+    
+<dependency>
+  <groupId>runtime</groupId>
+  <artifactId>runtime</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/runtime.jar</systemPath>
+</dependency>  
+    
+<dependency>
+  <groupId>org.eclipse.core.filesystem</groupId>
+  <artifactId>org.eclipse.core.filesystem</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/org.eclipse.core.filesystem_1.0.0.v20060603.jar</systemPath>
+</dependency>   
+    
+<dependency>
+  <groupId>ant-1.6.5</groupId>
+  <artifactId>ant-1.6.5</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/ant-1.6.5.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>javasvn</groupId>
+  <artifactId>javasvn</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/javasvn.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>antlr-2.7.5</groupId>
+  <artifactId>antlr-2.7.5</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/antlr-2.7.5.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>asm-1.5.3</groupId>
+  <artifactId>asm-1.5.3</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/asm-1.5.3.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>asm-util-1.5.3</groupId>
+  <artifactId>asm-util-1.5.3</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/asm-util-1.5.3.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>avalon-framework-4.1.5</groupId>
+  <artifactId>avalon-framework-4.1.5</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/avalon-framework-4.1.5.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>axis-1.4</groupId>
+  <artifactId>axis-1.4</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/axis-1.4.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>batik-all-1.6</groupId>
+  <artifactId>batik-all-1.6</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/batik-all-1.6.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>c3p0-0.8.4.5</groupId>
+  <artifactId>c3p0-0.8.4.5</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/c3p0-0.8.4.5.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>cglib-2.1</groupId>
+  <artifactId>cglib-2.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/cglib-2.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>clover-1.3.9</groupId>
+  <artifactId>clover-1.3.9</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/clover-1.3.9.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-beanutils-1.7.0</groupId>
+  <artifactId>commons-beanutils-1.7.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-beanutils-1.7.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-codec-1.3</groupId>
+  <artifactId>commons-codec-1.3</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-codec-1.3.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-collections-3.2</groupId>
+  <artifactId>commons-collections-3.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-collections-3.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-dbcp-1.2.1</groupId>
+  <artifactId>commons-dbcp-1.2.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-dbcp-1.2.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-digester-1.7</groupId>
+  <artifactId>commons-digester-1.7</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-digester-1.7.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-discovery-0.2</groupId>
+  <artifactId>commons-discovery-0.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-discovery-0.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-fileupload-1.1.1</groupId>
+  <artifactId>commons-fileupload-1.1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-fileupload-1.1.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-httpclient-3.0.1</groupId>
+  <artifactId>commons-httpclient-3.0.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-httpclient-3.0.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-io-1.2</groupId>
+  <artifactId>commons-io-1.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-io-1.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-lang-2.1</groupId>
+  <artifactId>commons-lang-2.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-lang-2.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-logging-1.1</groupId>
+  <artifactId>commons-logging-1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-logging-1.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-logging-adapters-1.1</groupId>
+  <artifactId>commons-logging-adapters-1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-logging-adapters-1.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-logging-api-1.1</groupId>
+  <artifactId>commons-logging-api-1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-logging-api-1.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-net-1.4.1</groupId>
+  <artifactId>commons-net-1.4.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-net-1.4.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>commons-pool-1.1</groupId>
+  <artifactId>commons-pool-1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/commons-pool-1.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>concurrent</groupId>
+  <artifactId>concurrent</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/concurrent.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>derby-10.1.3.1</groupId>
+  <artifactId>derby-10.1.3.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/derby-10.1.3.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>dom4j-1.6.1</groupId>
+  <artifactId>dom4j-1.6.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/dom4j-1.6.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>ecs-1.4.2</groupId>
+  <artifactId>ecs-1.4.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/ecs-1.4.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>ehcache-1.1</groupId>
+  <artifactId>ehcache-1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/ehcache-1.1.jar</systemPath>
+</dependency>
+<!--
+<dependency>
+  <groupId>exo-platform.commons-2.0</groupId>
+  <artifactId>exo-platform.commons-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.commons-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.container-2.0</groupId>
+  <artifactId>exo-platform.container-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.container-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.service.chart.api-2.0</groupId>
+  <artifactId>exo-platform.service.chart.api-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.service.chart.api-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.service.chart.impl-2.0</groupId>
+  <artifactId>exo-platform.service.chart.impl-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.service.chart.impl-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.service.common.api-2.0</groupId>
+  <artifactId>exo-platform.service.common.api-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.service.common.api-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.service.database.api-2.0</groupId>
+  <artifactId>exo-platform.service.database.api-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.service.database.api-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.service.database.impl-2.0</groupId>
+  <artifactId>exo-platform.service.database.impl-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.service.database.impl-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.service.organization.api-2.0</groupId>
+  <artifactId>exo-platform.service.organization.api-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.service.organization.api-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.service.organization.impl-2.0</groupId>
+  <artifactId>exo-platform.service.organization.impl-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.service.organization.impl-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.service.security.api-2.0</groupId>
+  <artifactId>exo-platform.service.security.api-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.service.security.api-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>exo-platform.service.security.impl-2.0</groupId>
+  <artifactId>exo-platform.service.security.impl-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/exo-platform.service.security.impl-2.0.jar</systemPath>
+</dependency>-->
+
+<dependency>
+  <groupId>flickrapi-1.0a7</groupId>
+  <artifactId>flickrapi-1.0a7</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/flickrapi-1.0a7.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>flipper</groupId>
+  <artifactId>flipper</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/flipper.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>fop-0.20.5</groupId>
+  <artifactId>fop-0.20.5</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/fop-0.20.5.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>googleapi-UNKNOWN-xwiki</groupId>
+  <artifactId>googleapi-UNKNOWN-xwiki</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/googleapi-UNKNOWN-xwiki.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>graffito-jcr-mapping-1.0-a1-amelentev-dev</groupId>
+  <artifactId>graffito-jcr-mapping-1.0-a1-amelentev-dev</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/graffito-jcr-mapping-1.0-a1-amelentev-dev.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>groovy-all-1.0-jsr-06</groupId>
+  <artifactId>groovy-all-1.0-jsr-06</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/groovy-all-1.0-jsr-06.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>hibernate-3.1.2</groupId>
+  <artifactId>hibernate-3.1.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/hibernate-3.1.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>hibernate-tools-2.1.3</groupId>
+  <artifactId>hibernate-tools-2.1.3</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/hibernate-tools-2.1.3.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>hsqldb-1.8.0</groupId>
+  <artifactId>hsqldb-1.8.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/hsqldb-1.8.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>ical4j-0.9.19M</groupId>
+  <artifactId>ical4j-0.9.19M</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/ical4j-0.9.19M.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jackrabbit-core-1.1</groupId>
+  <artifactId>jackrabbit-core-1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jackrabbit-core-1.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jaxrpc-1.1</groupId>
+  <artifactId>jaxrpc-1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jaxrpc-1.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jcaptcha-all-1.0-RC3</groupId>
+  <artifactId>jcaptcha-all-1.0-RC3</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jcaptcha-all-1.0-RC3.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jcommon-1.0.5</groupId>
+  <artifactId>jcommon-1.0.5</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jcommon-1.0.5.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jcr-1.0</groupId>
+  <artifactId>jcr-1.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jcr-1.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jdom-1.0</groupId>
+  <artifactId>jdom-1.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jdom-1.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jfreechart-1.0.0-rc1</groupId>
+  <artifactId>jfreechart-1.0.0-rc1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jfreechart-1.0.0-rc1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jgroups-2.2.9.3</groupId>
+  <artifactId>jgroups-2.2.9.3</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jgroups-2.2.9.3.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jimi</groupId>
+  <artifactId>jimi</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jimi.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jta-1.0.1B</groupId>
+  <artifactId>jta-1.0.1B</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jta-1.0.1B.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>jtidy-UNKNOWN</groupId>
+  <artifactId>jtidy-UNKNOWN</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/jtidy-UNKNOWN.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>ldap-UNKNOWN</groupId>
+  <artifactId>ldap-UNKNOWN</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/ldap-UNKNOWN.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>log4j-1.2.13</groupId>
+  <artifactId>log4j-1.2.13</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/log4j-1.2.13.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>lucene-core-2.0.0</groupId>
+  <artifactId>lucene-core-2.0.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/lucene-core-2.0.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>mail-1.4</groupId>
+  <artifactId>mail-1.4</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/mail-1.4.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>mysql-connector-java-3.1.7-bin</groupId>
+  <artifactId>mysql-connector-java-3.1.7-bin</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/mysql-connector-java-3.1.7-bin.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>odmg-3.0</groupId>
+  <artifactId>odmg-3.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/odmg-3.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>org.suigeneris.jrcs.diff-0.3.0-xwiki</groupId>
+  <artifactId>org.suigeneris.jrcs.diff-0.3.0-xwiki</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/org.suigeneris.jrcs.diff-0.3.0-xwiki.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>org.suigeneris.jrcs.rcs-0.3.0-xwiki</groupId>
+  <artifactId>org.suigeneris.jrcs.rcs-0.3.0-xwiki</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/org.suigeneris.jrcs.rcs-0.3.0-xwiki.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>oro-2.0.8</groupId>
+  <artifactId>oro-2.0.8</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/oro-2.0.8.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>oscache-2.3.2-xwiki</groupId>
+  <artifactId>oscache-2.3.2-xwiki</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/oscache-2.3.2-xwiki.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>PDFBox-0.7.2</groupId>
+  <artifactId>PDFBox-0.7.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/PDFBox-0.7.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>picocontainer-1.1</groupId>
+  <artifactId>picocontainer-1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/picocontainer-1.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>poi-3.0-alpha1-20050704</groupId>
+  <artifactId>poi-3.0-alpha1-20050704</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/poi-3.0-alpha1-20050704.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>poi-scratchpad-3.0-alpha1-20050704</groupId>
+  <artifactId>poi-scratchpad-3.0-alpha1-20050704</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/poi-scratchpad-3.0-alpha1-20050704.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>portlet-api-1.0</groupId>
+  <artifactId>portlet-api-1.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/portlet-api-1.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>qname-1.5.2</groupId>
+  <artifactId>qname-1.5.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/qname-1.5.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>radeox-1.0-b2</groupId>
+  <artifactId>radeox-1.0-b2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/radeox-1.0-b2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>rome-0.8</groupId>
+  <artifactId>rome-0.8</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/rome-0.8.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>rome-fetcher-0.7</groupId>
+  <artifactId>rome-fetcher-0.7</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/rome-fetcher-0.7.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>saaj-1.2</groupId>
+  <artifactId>saaj-1.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/saaj-1.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>securityfilter-2.0</groupId>
+  <artifactId>securityfilter-2.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/securityfilter-2.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>serializer-2.7.0</groupId>
+  <artifactId>serializer-2.7.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/serializer-2.7.0.jar</systemPath>
+</dependency>
+
+
+<dependency>
+  <groupId>struts-1.2.9</groupId>
+  <artifactId>struts-1.2.9</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/struts-1.2.9.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>swarmcache</groupId>
+  <artifactId>swarmcache</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/swarmcache.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>velocity-1.4</groupId>
+  <artifactId>velocity-1.4</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/velocity-1.4.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>velocity-tools-1.1</groupId>
+  <artifactId>velocity-tools-1.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/velocity-tools-1.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>ws-commons-java5-1.0.1</groupId>
+  <artifactId>ws-commons-java5-1.0.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/ws-commons-java5-1.0.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>ws-commons-util-1.0.1</groupId>
+  <artifactId>ws-commons-util-1.0.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/ws-commons-util-1.0.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>wsdl4j-1.5.2</groupId>
+  <artifactId>wsdl4j-1.5.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/wsdl4j-1.5.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>xalan-2.7.0</groupId>
+  <artifactId>xalan-2.7.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/xalan-2.7.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>xerces-2.7.1</groupId>
+  <artifactId>xerces-2.7.1</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/xerces-2.7.1.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>xml-apis-2.0.2</groupId>
+  <artifactId>xml-apis-2.0.2</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/xml-apis-2.0.2.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>xmlrpc-client-3.0</groupId>
+  <artifactId>xmlrpc-client-3.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/xmlrpc-client-3.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>xmlrpc-common-3.0</groupId>
+  <artifactId>xmlrpc-common-3.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/xmlrpc-common-3.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>xmlrpc-server-3.0</groupId>
+  <artifactId>xmlrpc-server-3.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/xmlrpc-server-3.0.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>xpp3-1.1.3.4-RC8_min</groupId>
+  <artifactId>xpp3-1.1.3.4-RC8_min</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/xpp3-1.1.3.4-RC8_min.jar</systemPath>
+</dependency>
+
+<dependency>
+  <groupId>xsltc-2.7.0</groupId>
+  <artifactId>xsltc-2.7.0</artifactId>
+  <type>jar</type>
+  <version>SNAPSHOT</version>
+  <scope>system</scope>
+  <systemPath>${basedir}/lib/xsltc-2.7.0.jar</systemPath>
+</dependency>
+		 
+  </dependencies>
+  
+  
+    <build>
+    
+        <sourceDirectory>src/java</sourceDirectory>
+        
+        <testSourceDirectory>test</testSourceDirectory>
+        <testResources>
+            <testResource>
+                <directory>test</directory>
+                <includes>
+                    <include>*.properties</include>
+                </includes>
+            </testResource>
+        </testResources>
+               
+        
+        <plugins>
+         <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>add-source</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>add-source</goal>
+                </goals>
+                <configuration>
+                  <sources>
+                    <source>${basedir}/src/main/java</source>
+                    <!--  <source>${basedir}/src/contrib/standalone</source> -->
+                  </sources>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+                
+    </build>  
+    
+</project>

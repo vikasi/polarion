@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.codehaus.groovy
+Export-Package: groovy.inspect,groovy.inspect.swingui,groovy.io,groovy
+ .lang,groovy.mock,groovy.mock.interceptor,groovy.model,groovy.securit
+ y,groovy.servlet,groovy.sql,groovy.swing,groovy.swing.binding,groovy.
+ swing.factory,groovy.text,groovy.time,groovy.ui,groovy.ui.text,groovy
+ .ui.view,groovy.util,groovy.util.slurpersupport,groovy.xml,groovy.xml
+ .dom,groovy.xml.streamingmarkupsupport,groovyjarjarantlr,groovyjarjar
+ antlr.actions.cpp,groovyjarjarantlr.actions.csharp,groovyjarjarantlr.
+ actions.java,groovyjarjarantlr.actions.python,groovyjarjarantlr.ASdeb
+ ug,groovyjarjarantlr.build,groovyjarjarantlr.collections,groovyjarjar
+ antlr.debug,groovyjarjarantlr.debug.misc,groovyjarjarantlr.preprocess
+ or,groovyjarjarasm.asm,groovyjarjarasm.asm.signature,groovyjarjarasm.
+ asm.tree,groovyjarjarcommonscli,org.codehaus.groovy,org.codehaus.groo
+ vy.ant,org.codehaus.groovy.antlr,org.codehaus.groovy.antlr.java,org.c
+ odehaus.groovy.antlr.parser,org.codehaus.groovy.antlr.treewalker,org.
+ codehaus.groovy.ast,org.codehaus.groovy.ast.expr,org.codehaus.groovy.
+ ast.stmt,org.codehaus.groovy.binding,org.codehaus.groovy.bsf,org.code
+ haus.groovy.classgen,org.codehaus.groovy.control,org.codehaus.groovy.
+ control.io,org.codehaus.groovy.control.messages,org.codehaus.groovy.g
+ roovydoc,org.codehaus.groovy.reflection,org.codehaus.groovy.reflectio
+ n.stdclasses,org.codehaus.groovy.runtime,org.codehaus.groovy.runtime.
+ metaclass,org.codehaus.groovy.runtime.typehandling,org.codehaus.groov
+ y.runtime.wrappers,org.codehaus.groovy.syntax,org.codehaus.groovy.too
+ ls,org.codehaus.groovy.tools.groovydoc,org.codehaus.groovy.tools.java
+ c,org.codehaus.groovy.tools.shell,org.codehaus.groovy.tools.shell.com
+ mands,org.codehaus.groovy.tools.shell.util,org.codehaus.groovy.tools.
+ xml,org.codehaus.groovy.vmplugin,org.codehaus.groovy.vmplugin.v4,org.
+ codehaus.groovy.vmplugin.v5
+Bundle-Name: Groovy Plug-in
+Bundle-Version: 1.5.7.2013-11-27
+Bundle-ClassPath: groovy-all.jar
+Require-Bundle: org.apache.ant
+Bundle-ManifestVersion: 2
+
+

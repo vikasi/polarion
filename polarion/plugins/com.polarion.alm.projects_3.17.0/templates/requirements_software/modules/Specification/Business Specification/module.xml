@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2012-01-26 15:36:09.860 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-2"></h1><p id="polarion_new_0">Business Requirements constitute a specification of what the business wants, the purpose of initializing a specific project, what the needed achievements will be, and the quality measures. This is usually expressed in terms of broad outcomes the business requires, rather than specific functions the system may perform. Specific design elements are usually outside the scope of this document, although design standards may be referenced.</p><div id="polarion_wiki macro name=toc"></div><div id="polarion_editor_html_block1" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">#documentPanel(true &quot;approved&quot;)</pre>
+</div><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-6"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-9"></h3><p id="polarion_merged_2">
+  <span style="font-style: italic;">Identify the purpose of this Business Requirements document and its intended audience.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-13"></h3><p id="polarion_merged_3">
+  <span style="font-style: italic;">Provide a short description of the software being specified and its purpose, including relevant benefits, objectives, and goals.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-14"></h3><p id="polarion_merged_4">
+  <span style="font-style: italic;">List any other documents or Web addresses to which this business requirements document refers. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-18"></h3><p id="polarion_merged_5">
+  <span style="font-style: italic;">A short description of how the rest of the business requirements document is organized and what can be found in the rest of the document.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-19"></h2><p id="polarion_merged_6">
+  <span style="font-style: italic;">The business requirements provide the foundation and reference for all detailed requirements development. You may gather business requirements from the customer or development organization’s senior management, an executive sponsor, a project visionary, product management, the marketing department, or other individuals who have a clear sense of why the project is being undertaken and the ultimate value it will provide, both to the business and to customers.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-20"></h3><p id="polarion_merged_9">This section summarizes the rationale for the new product. Provide a general description of the history or situation that leads to the recognition that this product should be built.</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-21"></h3><p id="polarion_merged_10">
+  <span style="font-style: italic;">Describe the market opportunity that exists or the business problem that is being solved. Describe the market in which a commercial product will be competing or the environment in which an information system will be used. This may include a brief comparative evaluation of existing products and potential solutions, indicating why the proposed product is attractive. Identify the problems that cannot currently be solved without the product, and how the product fits in with market trends or corporate strategic directions.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-22"></h3><p id="polarion_merged_11">
+  <span style="font-style: italic;">Describe the important business objectives of the product in a way that is quantitative and measurable. The value provided to customers is described in section 1.4, so this section should focus on the value provided to the business. This could include estimates of revenue or cost savings, return on investment analysis, or target release dates. Determine how success will be defined and measured on this project, and describe the factors that are likely to have the greatest impact on achieving that success. Include things within the direct control of the organization, as well as external factors. Establish measurable criteria to assess whether the business objectives have been met.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-23"></h3><p id="polarion_merged_12">
+  <span style="font-style: italic;">Describe the needs of typical customers or market segments, including needs that are not yet met by the marketplace or by existing systems. You may wish to describe problems customers currently encounter that the new product will (or will not) address and how the product would be used by customers. Identify the customer hardware and software environment in which the product must operate. Define at a high level any known critical interface or performance requirements. Avoid including any design or implementation details. Present the requirements in a numbered list so that more detailed user or functional requirements can be traced to them.<br/>
+    </span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-24"></h3><p id="polarion_merged_13">Summarize the major business risks associated with developing this product, such as marketplace competition, timing issues, user acceptance, implementation issues, or possible negative impacts on the business. Estimate the severity of the risks and identify any risk mitigation actions that could be taken.</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-25"></h2><p id="polarion_merged_0">
+  <span style="font-style: italic;">This section establishes a long-term vision for the system to be built to address the business objectives. This vision will provide the context for making decisions throughout the course of the product development life cycle. The vision should not include detailed functional requirements or project planning information.</span><span style="font-weight: bold;"><br/>
+    </span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-26"></h3><p id="polarion_merged_8">Write a concise vision statement that summarizes the purpose and intent of the new product and describes what the world will be like when it includes the product. The vision statement should reflect a balanced view that will satisfy the needs of diverse customers as well as those of the developing organization. It may be somewhat idealistic, but it should be grounded in the realities of existing or anticipated customer markets, enterprise architectures, organizational strategic directions, and cost and resource limitations.</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-27"></h3><p id="polarion_merged_14">Include a numbered list of the major features of the new product, emphasizing those features  that distinguish it from previous or competing products. Specific user requirements and functional requirements may be traced back to these features.</p><div id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-10"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-28"></h3><p id="polarion_merged_15">
+  <span style="font-style: italic;">Record any assumptions that were made when conceiving the project and writing this vision and scope document. Note any major dependencies the project must rely upon for success, such as specific technologies, third-party vendors, development partners, or other business relationships.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-29"></h3><p id="polarion_merged_16">
+  <span style="font-style: italic;">The project scope defines the concept and range of the proposed solution. It’s also important to define what will not be included in the product. Clarifying the scope and limitations helps to establish realistic expectations of the many stakeholders. It also provides a reference frame against which proposed features and requirements changes can be evaluated. Proposed requirements that are out of scope for the envisioned product must be rejected, unless they are so beneficial that the scope should be enlarged to accommodate them (with accompanying changes in budget, schedule, and/or resources).</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-30"></h3><p id="polarion_merged_17">
+  <span style="font-style: italic;">Describe the intended major features that will be included in the initial release of the product. Consider the benefits the product is intended to bring to the various customer communities, and generally describe the product features and quality characteristics that will enable it to provide those benefits. Avoid the temptation to include every possible feature that any potential customer category might conceivably want some day. Focus on those features and product characteristics that will provide the most value, at the most acceptable development cost, to the broadest community.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-31"></h3><p id="polarion_merged_18">If a staged evolution of the product is envisioned over time, indicate which major features will be deferred to later releases.</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-32"></h3><p id="polarion_merged_19">
+  <span style="font-style: italic;">Identify any product features or characteristics that a stakeholder might anticipate, but which are not planned to be included in the new product.</span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-33"></h2><p id="polarion_merged_1">
+  <span style="font-style: italic;">This section summarizes some of the business issues around the project, including profiles of major customer categories, assumptions that went into the project concept, and the management priorities for the project.<br/>
+    </span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-34"></h3><p id="polarion_merged_20">
+  <span style="font-style: italic;">Stakeholders are individuals, groups, or organizations that are actively involved in a project, are affected by its outcome, or can influence its outcome. The stakeholder profiles identify the customers for this product and other stakeholders, and states their major interests in the product. Characterize business-level customers, target market segments, and different user classes, to reduce the likelihood of unexpected requirements surfacing later that cannot be accommodated because of schedule or scope constraints. For each stakeholder category, the profile includes the major value or benefits they will receive from the product, their likely attitudes toward the product, major features and characteristics of interest, and any known constraints that must be accommodated.<br/>
+    Examples of stakeholder value include:<br/>
+    </span>
+</p><ul id="polarion_cleaned_1">
+  <li><span style="font-style: italic;">improved productivity</span></li>
+  <li><span style="font-style: italic;">reduced rework</span></li>
+  <li><span style="font-style: italic;">cost savings</span></li>
+  <li><span style="font-style: italic;">streamlined business processes</span></li>
+  <li><span style="font-style: italic;">automation of previously manual tasks</span></li>
+  <li><span style="font-style: italic;">ability to perform entirely new tasks or functions</span></li>
+  <li><span style="font-style: italic;">conformance to current standards or regulations</span></li>
+  <li><span style="font-style: italic;">improved usability or reduced frustration level compared to current applications</span></li>
+</ul><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-35"></h3><p id="polarion_merged_21">
+  <span style="font-style: italic;">Describe the priorities among the project’s requirements, schedule, and budget. The table below may be helpful in identifying the parameters around the project’s key drivers (top priority objectives), constraints to work within, and dimensions that can be balanced against each other to achieve the drivers within the known constraints.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-36"></h3><p id="polarion_merged_22">Describe the environment in which the system will be used and define the major availability, reliability, performance, and integrity requirements. This information will significantly influence the definition of the system’s architecture. Consider questions such as: Are the users widely distributed geographically or located close to each other? How many time zones are they in?When do the users in various locations need to access the system?Where is the data generated and used? How far apart are these locations? Does the data from multiple locations need to be combined?Are specific maximum response times known for accessing data that might be stored remotely?Can the users tolerate service interruptions or is continuous access to the system critical for the operation of their business?What access security controls and data protection requirements are needed?</p><h2 id="polarion_wiki macro name=module-workitem;params=id=SAMPLE-37"></h2><p id="polarion_merged_7">
+  <span style="font-style: italic;">Provide a matrix that relates software modules to software requirements and vice versa.</span>
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Business Case</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity, status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">businesscase</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

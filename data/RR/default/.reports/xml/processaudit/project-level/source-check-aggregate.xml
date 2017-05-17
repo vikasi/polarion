@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factbase artifact="/default/${ProjectGroup}Group" id="processaudit/project-level/source-check-aggregate" tag="2013-05-23">
+    <structure-element id="root" provider="root" type="root">
+        <value-fact-element id="overall-test-coverage" provider="source-check-aggregate" type="overall-test-coverage-group">
+            <value/>
+            <properties>
+                <property id="number-of-valid-lines">
+                    <value>0</value>
+                </property>
+                <property id="number-of-covered-lines">
+                    <value>0</value>
+                </property>
+            </properties>
+        </value-fact-element>
+    </structure-element>
+</factbase>

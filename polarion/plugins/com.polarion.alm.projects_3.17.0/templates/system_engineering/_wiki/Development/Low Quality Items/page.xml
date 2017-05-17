@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130117000947</created>
+<type>content</type>
+<content><![CDATA[{parameter:minIssues|type=string|value=2}
+{parameter-form}
+Min Issues: {parameter-editor:minIssues}
+{parameter-form-submit}
+{parameter-form-save}
+{parameter-form}
+
+1 Low Quality Work Items
+Work Items with more than $pageParameters.minIssues issues linked via a Test Case in the middle.
+
+#set($sqlQ="SELECT WI.C_URI, COUNT(ISSUE.C_URI)  FROM WORKITEM WI, WORKITEM TEST, WORKITEM ISSUE,  STRUCT_WORKITEM_LINKEDWORKITEMS LINKTEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINKISSUE, PROJECT P  WHERE P.C_ID='$page.project' AND WI.FK_URI_PROJECT=P.C_URI AND LINKTEST.C_ROLE = 'verifies' AND LINKTEST.FK_URI_WORKITEM = WI.C_URI AND LINKTEST.FK_URI_P_WORKITEM = TEST.C_URI  AND LINKISSUE.FK_URI_WORKITEM = TEST.C_URI AND LINKISSUE.FK_URI_P_WORKITEM = ISSUE.C_URI AND ISSUE.C_TYPE = 'issue'  GROUP BY WI.C_URI HAVING COUNT(ISSUE.C_URI) >= $pageParameters.minIssues") 
+
+<center>
+{workitems:sqlQuery=$sqlQ|fields=id,title,status}
+</center>]]></content>
+</wiki-page>

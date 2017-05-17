@@ -1,0 +1,28 @@
+<a style="cursor:pointer;" onclick="navigateFromFrame('#page:workitems/calculatedfields')" ><< Return to Calculated Fields</a>
+
+1 Calculated Fields Configuration
+
+*Work Item Type:*&nbsp;&nbsp; [typeName]
+\\
+{calculated-fields-detail:[typeName]|type=[typeId]}
+
+1.1 Quick Help
+Aggregation of the values is always done according to a parent-child hierarchy of linked Work Items defined by link roles having the attribute ~~Parent~~ in Administration &gt; Work Items &gt; Enumerations &gt; workitem-link-role-enum.xml,  *{hyperlink:/administration/workitems/enumerations}*.\\
+Currently *sum*, *multiply*, *average*, *min* and *max* calculations are supported.
+
+1.1.1.1.1 Supported Field Types
+Supported types are: 
+* integer
+* float
+* currency
+* duration
+In case of *currency* or *duration* type a calculated field's type *must be the same* as that of the fields from which it is calculated. \\
+Multiplication of fields with *duration* type is not supported.
+
+1.1.1.1.1 Available Fields
+The following are the IDs of fields whose value can be derived from a calculation (i.e., fields which can be configured as calculated fields).
+* <tt>initialEstimate</tt>
+* <tt>timeSpent</tt>
+* <tt>remainingEstimate</tt>
+#info("A list of available custom fields is defined in Administration &gt; Work Items &gt; Custom Fields, *{hyperlink:/administration/workitems/customfields}*.")
+\\

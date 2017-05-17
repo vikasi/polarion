@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130109121135</created>
+<type>active</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+{section:width=100%}
+{column}
+1 Maintenance
+A common perception of maintenance is that it merely involves fixing defects. However, over 80%, of the maintenance effort typically deals with non-corrective issues. Users often submit problem reports which, in reality, point out needed functionality enhancements, and thus are in effect change requests. 
+
+The Maintenance space contains a default set of pages that report various metrics and statistics about maintenance issues.
+
+1.1 Issues
+* {portallink:/wiki/Reports/Items%20By%20Status?wiType=issue|addcontext=yes}Issues Statistic{portallink} - Various statistics over issues.
+* [Issues Trend>Issues Trend] - Trend charts of issue reported and fixed in last months.
+* [Fix Time>Fix Time] - The graph shows number of issues fixed in NUM weeks after the creation. I.e. items where ResolvedOn-CreatedOn = X weeks
+
+
+1.1 Change Requests
+* {portallink:/wiki/Reports/Items%20By%20Status?wiType=changerequest|addcontext=yes}Change Requests Statistic{portallink} - Various statistics over change requests
+* [Implementation Time>Implementation Time] - The graph shows number of change requests fixed in NUM weeks after the creation. I.e. items where ResolvedOn-CreatedOn = X weeks
+
+{column}
+{column:width=2px}
+{column}
+{column:width=400px}
+{regiontitle}Create New{regiontitle}
+* {portallink:/workitems?form_mode=create&form_field_type=changerequest|addcontext=yes}New Change Request{portallink}
+* {portallink:/workitems?form_mode=create&form_field_type=issue|addcontext=yes}New Issue{portallink}
+
+{regiontitle}Tasks and Activities{regiontitle}
+#getProcessTaskHeading("Maintenance")
+{workitems:linkedWorkItems:${page.project}/$processTaskHeading.id|fields=id,title|sortby=outlineNumber}
+
+{column}
+{section}]]></content>
+</wiki-page>

@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.example.enumerationfactory
+Bundle-Name: Enumeration Factory Example Plug-in
+Bundle-Version: 1.0.0
+Bundle-ClassPath: enumerationFactory.jar
+Require-Bundle: com.polarion.platform.persistence;bundle-version="3.6.
+ 2",com.polarion.alm.tracker;bundle-version="3.6.2",com.polarion.psvn.
+ launcher;bundle-version="3.6.2"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION
+
+

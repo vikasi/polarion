@@ -1,0 +1,21 @@
+#template("startpage.vm")
+#set($doc = $context.getDoc())
+#set($urlyes = $doc.name.concat("?create=1"))
+#set($urlno = $request.getParameter("parent"))
+#if ($urlno)
+    ###set($urlno = $urlno.replace(".", "/"))
+#else
+    ##set($urlno = $xwiki.getRepositoryWikiURL().concat("page/Home"))
+    #set($urlno = "_default/Home")
+#end
+#set($urlyes = $urlyes.concat("&parent=$urlno"))
+#set($spaceName = $doc.getSpaceName())
+<div id="xwikicontent">	
+	#if ($spaceName == "_users" || $spaceName == "_modules" || $spaceName == "_testruns")
+		#xwikimessageboxstart("Sorry, this space name is reserved and can not be used." "")
+		#xwikimessageboxend()	
+	#else
+		#xwikimessagebox( $localization.getValue('macro.general.wikiSpaceNotExists') $localization.getValue('macro.general.createWikiSpace') $urlyes $xwiki.getURL("$urlno") $localization.getValue('definition.yesBig') $localization.getValue('definition.noBig'))
+	#end
+</div>
+#template("endpage.vm")

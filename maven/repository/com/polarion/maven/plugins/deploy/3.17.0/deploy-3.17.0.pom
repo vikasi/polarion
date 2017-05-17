@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.polarion.maven.plugins</groupId>
+  <artifactId>deploy</artifactId>
+  <packaging>maven-plugin</packaging>
+  <version>3.17.0</version>
+  <description>Deploy to RR and BFR goals</description>  
+     <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-project</artifactId>
+      <version>2.0</version>
+    </dependency>    
+    <dependency>
+      <groupId>com.polarion.maven</groupId>
+      <artifactId>maven-builder-plugin</artifactId>
+      <version>3.17.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

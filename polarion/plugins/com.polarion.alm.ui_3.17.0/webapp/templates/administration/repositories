@@ -1,0 +1,43 @@
+1 Repositories
+
+{repositories}
+
+1 Quick Help
+By default, Polarion uses the Subversion (SVN) repository that was bundled with the distribution and installed with the platform for all projects. It is assumed that development code 
+bases are managed in that repository. If you have code bases managed in some other repository(ies), you can use this page to configure the current project to enable 
+linking of Polarion Work Items to revisions in the external repository(ies). \\
+\\
+Polarion supports external *Subversion* and *GIT* repositories. \\
+\\
+The table above shows the repository(ies) currently configured for the project. (If you see ~~No repositories found~~, it means the Default repository is the only one used, and the 
+only one in which Work Items can be linked to revisions). 
+
+1.1 Adding a Repository to the Project Configuration
+The *Add New Repository* button enables you to configure a new external repository to use with the current project, enabling Work Items to be linked to revisions in that repository. 
+You will need to know the URL of a Subversion repository, or the local repository path for a Git repository. Additional embedded help is provided on the configuration page.\\
+\\
+If some external repository(ies) exist in the configuration already, use the *Add Below* button to add another external repository. You can change the order later on (see 
+~~Reordering Configured Repositories~~ below).
+
+1.1 Editing a Configured Repository
+If the project currently has some external repository(ies) configured, all are listed in the table above. If you need to modify any of the properties of a configured repository, 
+click the *Edit* button on the row for the repository and make the desired changes on the configuration page.
+
+1.1 Removing a Repository
+Click the *Remove* button on the row of the external repository you want to remove. Note that if you have explicitly added the Default repository because you have some code base 
+managed there in addition to an external repository, and if you also remove Default from the configuration, the Default repository will still be used for the project, and users 
+will still be able to link Work Items to revisions in the Default repository.
+
+1.1 Reordering Configured Repositories
+If you have more than one repository configured in the table above, you can change the order in which they appear top-to-bottom. This affects the order in which configured repositories 
+appear to end users in the repository selection list in the Linked Revisions section of the Work Item detail form. Repositories will appear in the list in the same order they appear in the 
+table on this page.
+
+1.1 IMPORTANT NOTE ABOUT THE DEFAULT REPOSITORY
+When you configure an external repository, the Default repository is still used to store Polarion Work Items and other artifacts (Documents, pages, etc.), but if you have some code base 
+in the Default repository, users will no longer be able to link Work Items to code revisions in the Default repository. \\
+\\
+To enable users to continue linking to revisions in that repository, and also be able to link to revisions in the configured external repository(ies), you must *explicitly add* 
+the Default repository to the Repositories Configuration in addition to the configured external repository(ies). To do this:
+1. In the table above, click *Add Below*. You will go to the configuration page for adding another repository.
+1. On the configuration page, accept default selection in the Provider list, which is ~~Default~~, and click *Save*.

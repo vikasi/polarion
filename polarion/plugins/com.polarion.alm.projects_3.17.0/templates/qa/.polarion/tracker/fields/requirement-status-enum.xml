@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option color="#F9FF4D" iconURL="/polarion/icons/default/enums/req_status_draft.gif" id="draft" name="Draft" sortOrder="1"/>
+    <option color="#F9FF4D" iconURL="/polarion/icons/default/enums/req_status_awaiting_review.gif" id="inReview" name="In Review" sortOrder="2"/>
+    <option color="lightblue" iconURL="/polarion/icons/default/enums/req_status_reviewed.gif" id="reviewed" name="Reviewed" sortOrder="3"/>
+    <option color="#F9FF4D" iconURL="/polarion/icons/default/enums/req_status_approved.gif" id="approved" name="Approved" sortOrder="4"/>
+    <option color="#F9FF4D" iconURL="/polarion/icons/default/enums/req_status_accepted.gif" id="accepted" name="Accepted" sortOrder="5"/>
+    <option color="#FFB321" iconURL="/polarion/icons/default/enums/req_status_implemented.gif" id="implemented" name="Implemented" sortOrder="6"/>
+    <option color="lightgreen" iconURL="/polarion/icons/default/enums/req_status_verified.gif" id="verified" name="Verified" sortOrder="7"/>
+    <option color="#A30000" iconURL="/polarion/icons/default/enums/req_status_changes_needed.gif" id="changesNeeded" name="Change Implemenation" sortOrder="8"/>
+    <option color="#A30000" iconURL="/polarion/icons/default/enums/req_status_rejected.gif" id="rejected" name="Rejected" sortOrder="9"/>
+</enumeration>

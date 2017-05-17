@@ -1,0 +1,27 @@
+###
+### Delete page confirm messge
+###
+###
+#set($space = $request.getParameter("space"))
+#set($redir = $request.getParameter("pagesDel"))
+
+#if($redir == "1")
+#set ($redirecturl = $doc.getURL("view", "space=$space" ) )
+$response.sendRedirect($redirecturl)
+#end
+
+#set($mess = $localization.getValue("wiki.label.thisActionIsNotReversibleSpace") )
+#set($mess = $mess.concat("<br/>") )
+#set($mess = $mess.concat($localization.getValue("wiki.label.someAttachmentsWillAlsoBeDeleted")) )
+#set($mess = $mess.concat("<br/>") )
+#set($mess = $mess.concat($localization.getValue("wiki.label.deleteOperationWillCauseSomeBrokenBacklinks")) )
+
+#template("startpage.vm")
+<div class="main layoutsubsection">
+#if($message)
+<div id="xwikimessage">$message</div>
+#end
+#xwikimessagebox($localization.getValue("definition.delete") $mess $doc.getURL("deletespace", "confirm=1&amp;space=$space") $doc.getURL("view", "space=$space" ) $localization.getValue("definition.yes") $localization.getValue("definition.no"))
+</div>
+<div class="clearfloats"></div>
+#template("endpage.vm")

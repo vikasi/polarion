@@ -1,0 +1,32 @@
+1 Planning
+
+{planning}
+
+1.1 Quick Help
+1.1.1.1.1.1 Default "Remaining Estimate" Value
+Sets a default time estimate value for Work Items for which the ~~Remaining Estimate~~ field is not filled so that such items will be reflected in project plans.
+
+1.1.1.1.1.1 Query for Planned Work Items 
+Query syntax that retrieves Work Items that should be planned.
+
+1.1.1.1.1.1 Roles for Dependency Relationships
+Specifies which configured link roles signify a dependency relationship between Work Items linked with the role. Thus, if Work Item "A" is linked with Work Item "B" using one of these link roles, then "A" would be planned after "B".
+
+1.1.1.1.1.1 Roles for Parent Relationships
+Specifies which configured link roles signify a parent relationship.
+
+#info("Link roles are configured in Administration &gt; Work Items &gt; Enumerations, *{hyperlink:/administration/workitems/enumerations}*.")
+
+1.1.1.1.1.1 Hours Per Work Day
+The number of working hours in a work day as defined in the system property ~~com.polarion.durationHoursPerDay~~. (The default value is 8. There are 5 working days per week.) 
+
+#info("System properties are set in file <tt>polarion.properties</tt>. Windows: <tt>%POLARION_HOME%\\\\polarion\\\\configuration\\\\polarion.properties</tt>. Linux: <tt>/opt/polarion/etc/polarion.properties</tt>")
+
+1.1.1.1.1.1 Enable Work Item Splitting
+If checked, then when Polarion searches for a time slot for a Work Item in the project plan, it may decide to split the Work Item in two or more pieces, thereby making use of time periods before the Work Item is fixed or postponed by a planning constraint, so that the resulting plan is more optimal in terms of priorities.
+
+1.1.1.1.1.1 Enable Due Date Planning
+If this option is set to true, Work Items having values set in the Due Date or Time Point fields are given preference in the planning order. That is, they will be planned before Work Items having no value specified in these fields, with exceptions for any values specified in Planning Constraints).
+
+#warning("This is a *global* option. You cannot override it in a project configuration.")
+\\

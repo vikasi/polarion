@@ -1,0 +1,23 @@
+/* display grid headings with a green background */
+
+tr.ricoLG_hdg .ricoLG_cell, tr.ricoLG_hdg th, tr.ricoLG_hdg td {  /* td/th required for IE */
+  border-right: 1px solid #BED8E8;
+  background-color: #E6EFF9;
+  font-size: 11px;
+  font-family: Verdana;
+  color: #000;
+  height: 19px;
+  //height: 22px;
+  text-align:left;
+}
+
+a.ricoSort,a.ricoSort:hover,a.ricoSort:link,a.ricoSort:visited {
+  font-family: Verdana;
+  color: #000;
+  font-weight: normal;
+  text-decoration: none;
+  border:0px;
+  background:inherit;
+}
+
+div.ricoLG_selection { background-color: #cedebd; }

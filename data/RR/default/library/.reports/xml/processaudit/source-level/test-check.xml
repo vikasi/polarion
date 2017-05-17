@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factbase artifact="library" id="test-check" tag="20081028_2110">
+<structure-element id="root" provider="root" type="root">
+<value-fact-element id="MovePeopleAround" provider="SensorTest" type="execution">
+<value/>
+<properties>
+<property id="has-source-directories">
+<value>false</value>
+</property>
+</properties>
+</value-fact-element>
+<value-fact-element id="indirectly-tested" provider="SensorTest" type="execution">
+<value/>
+<properties>
+<property id="has-source-directories">
+<value>false</value>
+</property>
+</properties>
+</value-fact-element>
+<value-fact-element id="test-first" provider="SensorTest" type="execution">
+<value/>
+<properties>
+<property id="has-source-directories">
+<value>false</value>
+</property>
+</properties>
+</value-fact-element>
+</structure-element>
+</factbase>

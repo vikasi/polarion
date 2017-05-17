@@ -1,0 +1,109 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.alm.tracker;singleton:=true
+Require-Bundle: com.polarion.platform.persistence;visibility:=reexport
+ ,com.polarion.alm.projects;visibility:=reexport,com.polarion.subterra
+ .persistence.document,com.polarion.subterra.persistence,com.polarion.
+ usdp.persistence,com.polarion.subterra.index,com.polarion.platform.jo
+ bs,com.polarion.alm.builder,org.objectweb.jotm;bundle-version="1.4.3"
+ ,com.polarion.fop,com.polarion.ooxml;bundle-version="3.5.0",com.polar
+ ion.alm.ws.client;bundle-version="3.4.2";visibility:=reexport,com.pol
+ arion.platform.repository.driver.svn,com.polarion.platform.guice;bund
+ le-version="3.5.1",org.eclipse.core.runtime;bundle-version="3.1.2",co
+ m.polarion.cluster
+Bundle-ManifestVersion: 2
+Bundle-Vendor: POLARION SOFTWARE
+Import-Package: org.osgi.framework
+Guice-Modules: com.polarion.alm.tracker.internal.guice.ActivityModule,
+ com.polarion.alm.tracker.internal.guice.TrackerModule
+Export-Package: com.polarion.alm.tracker,com.polarion.alm.tracker.acti
+ vity,com.polarion.alm.tracker.calendar,com.polarion.alm.tracker.expor
+ ter,com.polarion.alm.tracker.importer,com.polarion.alm.tracker.import
+ er.conditions,com.polarion.alm.tracker.importer.conditions.internal;x
+ -friends:="com.polarion.alm.tracker.tests",com.polarion.alm.tracker.i
+ mporter.docanalysis,com.polarion.alm.tracker.importer.docanalysis.con
+ figuration,com.polarion.alm.tracker.importer.docanalysis.rules,com.po
+ larion.alm.tracker.importer.excel,com.polarion.alm.tracker.internal; 
+ x-friends:="com.polarion.alm.tracker.tests,  com.polarion.alm.tracker
+ .web.tests,  com.polarion.alm.ui,  com.polarion.alm.wiki,  com.polari
+ on.alm.ws.tests,  com.polarion.alm.ws,  com.polarion.synchronizer.pro
+ xy.polarion,  com.polarion.psvn.launcher,  com.polarion.platform.pers
+ istence.tests,  com.polarion.purevariants,  com.polarion.platform.sql
+ ",com.polarion.alm.tracker.internal.activity;x-friends:="com.polarion
+ .alm.tracker.tests,com.polarion.alm.tracker.web.tests,com.polarion.al
+ m.ui",com.polarion.alm.tracker.internal.autoassignment_old;x-friends:
+ ="com.polarion.alm.tracker.tests",com.polarion.alm.tracker.internal.b
+ aseline;x-friends:="com.polarion.alm.tracker.tests",com.polarion.alm.
+ tracker.internal.buildreports,com.polarion.alm.tracker.internal.calen
+ dar;x-friends:="com.polarion.alm.tracker.tests,com.polarion.alm.ui",c
+ om.polarion.alm.tracker.internal.diagrams;x-friends:="com.polarion.al
+ m.tracker.tests",com.polarion.alm.tracker.internal.diff;x-friends:="c
+ om.polarion.alm.tracker.tests,com.polarion.alm.ui",com.polarion.alm.t
+ racker.internal.exporter,com.polarion.alm.tracker.internal.exporters;
+ x-friends:="com.polarion.alm.tracker.tests",com.polarion.alm.tracker.
+ internal.guice,com.polarion.alm.tracker.internal.importer; x-friends:
+ ="com.polarion.alm.tracker.tests,  com.polarion.alm.wiki,  com.polari
+ on.platform.persistence.tests,  com.polarion.alm.ui",com.polarion.alm
+ .tracker.internal.importer.docanalysis;x-friends:="com.polarion.alm.t
+ racker.tests",com.polarion.alm.tracker.internal.importer.docanalysis.
+ configuration;x-friends:="com.polarion.alm.tracker.tests",com.polario
+ n.alm.tracker.internal.importer.docanalysis.rules;x-friends:="com.pol
+ arion.alm.tracker.tests",com.polarion.alm.tracker.internal.importers;
+ x-friends:="com.polarion.alm.tracker.tests",com.polarion.alm.tracker.
+ internal.importers.excel;x-friends:="com.polarion.alm.tracker.tests,c
+ om.polarion.alm.ui",com.polarion.alm.tracker.internal.importers.word,
+ com.polarion.alm.tracker.internal.model; x-friends:="com.polarion.alm
+ .tracker.tests,  com.polarion.alm.ui,  com.polarion.alm.tracker.web.t
+ ests,  com.polarion.platform.persistence.tests,  com.polarion.testing
+ .junit,  com.polarion.alm.ws,  com.polarion.alm.wiki,  com.polarion.s
+ ynchronizer.proxy.reqif",com.polarion.alm.tracker.internal.model.comm
+ ents;x-friends:="com.polarion.alm.tracker.tests",com.polarion.alm.tra
+ cker.internal.model.parameters;x-friends:="com.polarion.alm.tracker.t
+ ests,com.polarion.alm.ui",com.polarion.alm.tracker.internal.model.sig
+ natures; x-friends:="com.polarion.alm.tracker.tests,  com.polarion.al
+ m.ui,  com.polarion.alm.tracker.web.tests,  com.polarion.platform.per
+ sistence.tests,  com.polarion.alm.ws.tests",com.polarion.alm.tracker.
+ internal.modules;x-friends:="com.polarion.alm.ui",com.polarion.alm.tr
+ acker.internal.oslc,com.polarion.alm.tracker.internal.permissions,com
+ .polarion.alm.tracker.internal.persistence;x-friends:="com.polarion.a
+ lm.tracker.tests,com.polarion.alm.ui",com.polarion.alm.tracker.intern
+ al.planning;x-friends:="com.polarion.alm.tracker.tests",com.polarion.
+ alm.tracker.internal.postcommit,com.polarion.alm.tracker.internal.que
+ ries;x-friends:="com.polarion.alm.tracker.tests,com.polarion.alm.ui",
+ com.polarion.alm.tracker.internal.roundtrip,com.polarion.alm.tracker.
+ internal.roundtrip.excel;x-friends:="com.polarion.alm.tracker.tests",
+ com.polarion.alm.tracker.internal.roundtrip.excel.exporter;x-friends:
+ ="com.polarion.alm.tracker.tests",com.polarion.alm.tracker.internal.r
+ oundtrip.excel.importer;x-friends:="com.polarion.alm.tracker.tests,co
+ m.polarion.alm.ui",com.polarion.alm.tracker.internal.roundtrip.utils;
+ x-friends:="com.polarion.alm.tracker.tests,com.polarion.alm.ui",com.p
+ olarion.alm.tracker.internal.roundtrip.wml;x-friends:="com.polarion.a
+ lm.tracker.tests,com.polarion.platform.persistence.tests",com.polario
+ n.alm.tracker.internal.testing; x-friends:="com.polarion.alm.tracker.
+ tests,  com.polarion.alm.tracker.web.tests,  com.polarion.alm.ui,  co
+ m.polarion.alm.ws",com.polarion.alm.tracker.internal.url,com.polarion
+ .alm.tracker.internal.variantmanagement,com.polarion.alm.tracker.inte
+ rnal.workflow;x-friends:="com.polarion.alm.tracker.tests,com.polarion
+ .alm.ui",com.polarion.alm.tracker.internal.workflow.config; x-friends
+ :="com.polarion.alm.tracker.tests,  com.polarion.alm.ui,  com.polario
+ n.platform.persistence.tests,  com.polarion.alm.ws.tests",com.polario
+ n.alm.tracker.internal.workitems,com.polarion.alm.tracker.internal.wo
+ rkreport;x-friends:="com.polarion.alm.tracker.tests",com.polarion.alm
+ .tracker.internal.workreport.grouping;x-friends:="com.polarion.alm.tr
+ acker.tests",com.polarion.alm.tracker.model,com.polarion.alm.tracker.
+ model.parameters,com.polarion.alm.tracker.model.signatures,com.polari
+ on.alm.tracker.roundtrip,com.polarion.alm.tracker.spi.index,com.polar
+ ion.alm.tracker.spi.model,com.polarion.alm.tracker.spi.variantmanagem
+ ent,com.polarion.alm.tracker.spi.workflow.conditions,com.polarion.alm
+ .tracker.spi.workflow.functions,com.polarion.alm.tracker.spi.workflow
+ .signatures,com.polarion.alm.tracker.spi.workflow.validators,com.pola
+ rion.alm.tracker.variantmanagement,com.polarion.alm.tracker.workflow,
+ com.polarion.alm.tracker.workflow.config,com.polarion.alm.tracker.wor
+ kreport,org.apache.cxf.common.xmlschema
+Bundle-Name: Tracker Plug-in
+Bundle-Version: 3.17.0
+Bundle-ClassPath: tracker.jar,lib/xalan-2.7.0.jar,lib/serializer-2.7.0
+ .jar,lib/tika-app-1.11.jar
+Eclipse-AutoStart: true
+Bundle-Activator: com.polarion.alm.tracker.internal.Activator
+
+

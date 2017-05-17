@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20120105112713</created>
+<type>content</type>
+<content><![CDATA[{section:width=1600px}
+{column:width=1600px}
+1 FMEA Worksheet
+
+* {portallink:/wiki/Risks/Risk Specification?query=type:risk&tab=table|addcontext=yes}Table to be Exported to Excel FMEA Worksheet{portallink} 
+* {portallink:/wiki/Risks/Risk Specification|addcontext=yes}Open Risk Specification Document{portallink}
+
+{document-workitems:Risks/Risk Specification|query=type:(risk systemRequirement softwareRequirement mechanicalRequirement electricalRequirement)|fields=id,title,status as image,description,severityRating,causes,occurrenceRating,controls,detectionRating,rpn,recommendedActions,severityRatingNew,occurrenceRatingNew,detectionRatingNew,takenActions|display=table}
+
+{column}
+{section}]]></content>
+</wiki-page>

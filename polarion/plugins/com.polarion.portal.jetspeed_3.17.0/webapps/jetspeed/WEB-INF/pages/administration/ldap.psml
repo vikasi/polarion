@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/ldap.psml" hidden="false">
+    <title>LDAP Synchronization</title>
+    <short-title>LDAP Synchronization</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_ldap_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_ldap_portlet" type="portlet" name="webui::LDAPConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/user-management/ldap-config.xml</value>
+		  </preference>
+		  </fragment>
+    </fragment>
+</page>

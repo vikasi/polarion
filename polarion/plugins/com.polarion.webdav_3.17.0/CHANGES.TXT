@@ -1,0 +1,9 @@
+Polarion changes to the original version from Eclipse.org CVS (tag  R3_0_1)
+
+  - fixed connection pooling in HttpClient
+___________________
+2004-09-29 dobisekm
+
+  - fixed response closing in getContent when error occures 
+___________________
+2004-09-27 dobisekm

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/package_reuse.psml" hidden="false">
+    <title>Report Descriptors</title>
+    <short-title>Report Descriptors</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_package_reuse_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_package_reuse_portlet" type="portlet" name="webui::FileConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/reports/package_reuse.xml</value>
+		  </preference>
+		  </fragment>
+    </fragment>
+</page>

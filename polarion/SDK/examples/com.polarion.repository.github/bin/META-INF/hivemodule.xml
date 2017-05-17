@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="com.polarion.platform.repository.external.github" version="1.0.0">
+	<service-point id="githubExternalRepositoryProvider" interface="com.polarion.platform.repository.external.IExternalRepositoryProvider">
+		<invoke-factory>
+			<construct class="com.polarion.platform.repository.external.github.GitHubExternalRepositoryProvider"/>
+		</invoke-factory>
+	</service-point>
+	
+	<contribution configuration-id="com.polarion.platform.repository.externalRepositoryProviders">
+		<provider id="github" service="githubExternalRepositoryProvider"/>
+	</contribution>
+	
+</module>

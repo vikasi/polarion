@@ -1,0 +1,428 @@
+#*
+ ------------------------------------------------------
+ This file is automatically processed by Velocity,
+ you can use velocity syntax and constants.
+ Constants: $isWiki (true when wiki page is exported, otherwise it's false)
+ See PDFExporter for more information
+
+ Example:
+ 
+	.polarion-CellStyle {
+		#if ($isWiki)
+			height: 30px;
+		#else
+			height: 20px;
+		#end
+	}
+	
+ Note: some styles are copied from wiki.css (but we cannot
+ reuse whole wiki.css stylesheet because there are definitions
+ of headings that are completely different for PDF export)
+       - styles for tables, code and hint macros and etc.
+ ------------------------------------------------------
+*#
+
+## BEGINNING OF DEFAULT STYLES THAT ARE SPECIFIC FOR DOCUMENT OR WIKI EXPORT, we use isWiki constant for specific parts
+
+body {
+	#if ($isWiki)
+		line-height: 150% !important;
+	#else
+		line-height: 180% !important;
+	#end
+    font-family: Arial !important;
+    font-size: 10pt !important;
+    cursor: text;
+}
+
+p {
+	line-height: 150% !important;
+    margin: 0px !important;
+}
+                
+a,a:link,a:visited { 
+	color: #0277BB;
+	text-decoration:none !important;
+}
+
+table {
+	font-family: Arial !important;
+	font-size: 12px !important;
+    border-collapse: collapse !important;
+   	empty-cells: show;
+}
+
+## Dedicated styles for pdf4ml tables which creates TOC in generated document to avoid regressions related TOC and table styling
+.ptoc-table td {
+	line-height: 100% !important;
+	border: none !important;
+	padding: 0 0 10px 0;
+	margin: 0;
+}
+
+## Note: in wiki we have heading-1 for title and title class in document (so let's handle that)
+#if ($isWiki)
+.heading-1 {
+#else
+.title {
+#end
+	font-family: Arial !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    margin-bottom: 18px !important;
+    border-bottom: 1px solid lightGrey !important;
+    color: black !important;
+    padding-bottom: 5px !important;
+    margin-top: 0px !important;
+    padding-left: 0px !important;
+    background-color: white !important;
+}
+
+#if (!$isWiki)
+H1 {
+	font-size: 17px !important;
+    padding-left: 0px !important;
+    color: black !important;
+    background-color: white !important;
+	padding-top: 25px !important;
+	margin-bottom: 0px !important;
+}
+#end
+             
+            
+H2, .heading-1-1 {
+	font-family: Arial !important;
+	#if ($isWiki)
+		font-size: 17px !important;
+	#else
+		font-size: 14px !important;
+	#end
+	font-weight: bold !important;
+    margin-bottom: 0px !important;
+    padding-left: 0px !important;
+    color: black !important;
+    background-color: white !important;
+    padding-bottom: 1px !important;
+	margin-top: 15px !important;
+}
+
+H3, .heading-1-1-1 {
+	font-family: Arial !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+    padding-left: 0px !important;
+    color: black !important;
+    background-color: white !important;
+    padding-bottom: 1px !important;
+    margin-bottom: 1px !important;
+	margin-top: 10px !important;
+}
+
+H4, .heading-1-1-1-1 {
+	font-family: Arial !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    padding-left: 0px !important;
+    color: black !important;
+    background-color: white !important;
+    padding-bottom: 1px !important;
+    margin-bottom: 1px !important;
+}
+
+H5, .heading-1-1-1-1-1 {
+	font-family: Arial !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    padding-left: 0px !important;
+    color: black !important;
+    background-color: white !important;
+    padding-bottom: 1px !important;
+    margin-bottom: 1px !important;
+}
+
+H6, .heading-1-1-1-1-1-1 {
+	font-family: Arial !important;
+    font-size: 12px !important;
+   	font-weight: bold !important;
+    padding-left: 0px !important;
+    color: black !important;
+    background-color: white !important;
+    padding-bottom: 1px !important;
+   	margin-bottom: 1px !important;
+}
+
+pd4ml-page-break + pd4ml-page-break + H1, pd4ml-page-break + pd4ml-page-break + H2,
+pd4ml-page-break + pd4ml-page-break + H3, pd4ml-page-break + pd4ml-page-break + H4,
+pd4ml-page-break + pd4ml-page-break + H5, pd4ml-page-break + pd4ml-page-break + H6, 
+pd4ml-page-break + pd4ml-page-break + .heading-7, pd4ml-page-break + pd4ml-page-break + .heading-8,
+pd4ml-page-break + pd4ml-page-break + .heading-9, pd4ml-page-break + pd4ml-page-break + .heading-10,
+pd4ml-page-break + pd4ml-page-break + .heading-11, pd4ml-page-break + pd4ml-page-break + .heading-12,
+pd4ml-page-break + pd4ml-page-break + .heading-13, pd4ml-page-break + pd4ml-page-break + .heading-14,
+pd4ml-page-break + pd4ml-page-break + .heading-15, pd4ml-page-break + pd4ml-page-break + .heading-17,
+pd4ml-page-break + pd4ml-page-break + .heading-17, pd4ml-page-break + pd4ml-page-break + .heading-18,
+pd4ml-page-break + pd4ml-page-break + .heading-19, pd4ml-page-break + pd4ml-page-break + .heading-20,
+pd4ml-page-break + pd4ml-page-break + .heading-21, pd4ml-page-break + pd4ml-page-break + .heading-22,
+pd4ml-page-break + pd4ml-page-break + .heading-23, pd4ml-page-break + pd4ml-page-break + .heading-24,
+pd4ml-page-break + pd4ml-page-break + .heading-25, pd4ml-page-break + pd4ml-page-break + .heading-26,
+pd4ml-page-break + pd4ml-page-break + .heading-27, pd4ml-page-break + pd4ml-page-break + .heading-28,
+pd4ml-page-break + pd4ml-page-break + .heading-29, pd4ml-page-break + pd4ml-page-break + .heading-30 {
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+}	
+
+## END OF DEFAULT STYLES THAT ARE SPECIFIC FOR DOCUMENT OR WIKI EXPORT
+
+## BEGINNING OF COPY'N'PASTE STYLES from wiki.css (lists, tables, code, hint, polarion-Document-workitem...)
+
+p {
+	padding-top: 10px !important;
+	}
+	
+ul {
+	margin: 1em 0 !important;
+	padding: 0px 0px 0px 40px !important;
+	list-style-type: disc !important;
+}
+
+ul ul,ol ul {
+	margin: 0 !important;
+	padding: 0px 0px 0px 40px !important;
+	list-style-type: disc !important;
+}
+
+ol {
+	margin: 1em 0 !important;
+	padding: 0px 0px 0px 40px !important;
+}
+
+ol ol,ul ol {
+	margin: 0 !important;
+	padding: 0px 0px 0px 40px !important;
+}
+
+.polarion-Document-table {
+	margin: auto !important;
+	margin-top: 10px !important;
+	empty-cells: show !important;
+	font-size: 100% !important;
+	text-align: left !important;
+	border-collapse: collapse !important;
+	border: 1px solid #CCCCCC !important;
+}
+
+.polarion-Document-table th {
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+	font-weight: bold !important;
+	border: 1px solid #CCCCCC !important;
+	background-color: #F0F0F0 !important;
+	text-align: left !important;
+}
+
+.polarion-Document-table td {
+	font-size: 12px !important;
+}
+
+.MsoTableGrid, .MsoTableGrid td {
+	margin: auto !important;
+	font-size: 100% !important;
+	border: 1px solid #CCCCCC !important;
+}
+
+.MsoTableGrid tr td {
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+}
+.MsoTableGrid td {
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+}
+
+.polarion-Document-workitem {
+	margin-top: 8px !important;
+	line-height: 130% !important;
+}
+
+.polarion-Document-workitem ul{
+	margin-top: 5px !important;
+}
+
+.polarion-WorkItemsMacro-table {
+	font-size: 12px !important;
+}
+
+.hint {
+	font-style: italic;
+	color: gray;
+	margin: 10px;
+	padding: 10px;
+	border: 1px dotted #DDDDDD;
+}
+
+.regiondescription {
+	font-size: 12px;
+	color: gray;
+	line-height: 17px;
+}
+
+div.regiondescription {
+	margin: 0 15px 20px 15px;
+}
+
+.regiontitle {
+	border-bottom: 4px solid #E1F0FF;
+	color: #0E4A90;
+	font-family: Arial, helvetica, sans-serif;
+	font-size: 23px;
+	font-weight: bold;
+	line-height: 42px;
+	margin: 8px 0 10px;
+	padding: 0;
+}
+
+/* special formatting of a wiki table */
+.wiki-table {
+	margin: auto;
+	empty-cells: show;
+	width: 80%;
+	font-size: 100%;
+	text-align: left;
+	/*border: 1px solid #5b5b5b;
+  border-width: 1px;
+  border-style: outset;*/
+	border-collapse: collapse;
+	border: 1px solid #CCCCCC;
+}
+
+.wiki-table td {
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	line-height: 18px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.wiki-table th,.accordionTabContentBox .wiki-table th {
+	font-weight: bold;
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+	background-color: #F0F0F0;
+	text-align: left;
+	vertical-align: top;
+}
+
+.wiki-table .table-odd {
+	
+}
+
+.wiki-table .table-even {
+	
+}
+
+.wiki-table-no-border {
+	margin: auto;
+	empty-cells: show;
+	width: 80%;
+	font-size: 100%;
+	border-collapse: collapse;
+	border-style: none;
+	line-height: 18px;
+}
+
+.wiki-table-no-border td { /*border: 1px solid #5b5b5b;
+  border-width: 1px;
+  border-style: inset;
+  padding: 2px;*/
+	padding: 2px;
+	border-style: none;
+	line-height: 18px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.wiki-table-no-border th { /*border: 1px solid;
+  border-width: 1px;
+  border-style: inset;*/
+	font-weight: bold;
+	/*padding: 2px;
+  background-color:#EEEEEE;*/
+	border-style: none;
+	padding: 2px;
+	background-color: #F0F0F0;
+	text-align: left;
+	vertical-align: top;
+}
+
+.polarion-wiki-table {
+	margin: auto;
+	empty-cells: show;
+	width: 80%;
+	font-size: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #CCCCCC;
+}
+
+.polarion-wiki-table-td {
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	line-height: 18px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.polarion-wiki-table-th {
+	font-weight: bold;
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+	background-color: #F0F0F0;
+	text-align: left;
+	vertical-align: top;
+}
+
+.polarion-wiki-table-noborder {
+	margin: auto;
+	empty-cells: show;
+	width: 80%;
+	font-size: 100%;
+	text-align: left;
+	border-style: none;
+}
+
+.polarion-wiki-table-noborder-td {
+	padding: 5px;
+	border-style: none;
+	line-height: 18px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.polarion-wiki-table-noborder-th {
+	font-weight: bold;
+	border-style: none;
+	padding: 5px;
+	background-color: #F0F0F0;
+	text-align: left;
+	vertical-align: top;
+}
+
+.code {
+	border: 1px dashed #3c78b5;
+	white-space: pre;
+	width: 98%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin: 10px 0px 10px 10px;
+	padding: 10px 0px 0px 0px;
+	background-color: #ffffff;
+	font-family: courier, courier new, monospace;
+	font-size: 13px;
+	line-height: 1.3;
+}
+
+.quote {
+	font-style: italic;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}

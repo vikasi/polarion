@@ -1,0 +1,184 @@
+###     
+### Main "view" template
+###
+### General wrapper for view actions
+###
+#if ($request.getParameter("raw").equals("1"))
+	#template("code.vm")
+#else
+	#template("startpage.vm")
+
+#set($doctype = $doc.getType())
+#if ($doc.getDoc().getSpace() == "Panels")
+  #set($doctype = "service")
+#end
+#set($isSearchPage = ($context.getDoc().getName() == "WebSearch"))
+
+#set($exists = $doc.getDocument().exists(null))
+#set($isTestRun = ($doc.getSpace($doc.space) == "_testruns"))
+
+#template("progressbar.vm")
+<script>
+document.getElementById("progress_operation").innerHTML="$localization.getValue('wiki.form.progress.label.loading')";
+document.getElementById('progressbar').style.visibility = "visible";
+</script>
+#template("descrpwi.vm")
+#if ($request.getParameter("extwarn"))
+	#template("extractorwarn.vm")
+#end
+#if ($xwiki.hasPermission("read") || $isSearchPage)
+   <div id="createnewpagewindow" class="com_polarion_reina_web_js_widgets_JSPopupWindow_Css" style="line-height: 0em; display: none; width:502px; top:0px; left:0px; height: 402px; position: absolute; z-index:5075; border: 0px solid blue;"></div> 
+   <script>
+/*
+     new Draggable('createnewpagewindow', {
+     onStart:function(){
+       $('createnewpagewindow').style.border = '1px solid red';
+     },
+     onEnd:function(){
+       $('createnewpagewindow').style.border = '';
+     }});    	
+*/
+   </script>	
+<div class="layoutsection" id="contentViewDiv" name="contentViewDiv" style="visibility: hidden;">
+<input type="hidden" name="ViewMode" id="ViewMode" value="view"/>
+##
+## Spaces column
+##
+
+	#if((!$viewer) || ($viewer == ""))
+		#set($viewer = $request.getParameter("viewer"))
+	#end
+
+	#if((!$viewer) || ($viewer == ""))
+		#set($viewer = "view")
+	#end
+
+     <div id='panelView' style="position:absolute; width:100%; height:99.5%; border: 0px solid red; z-index: 1;top:0;">  
+      	     <div id="panelMain" style="display: block; position: absolute; left: 0px; top: 0px; width: 100%; height:400px; background: #fff; overflow-x: hidden; overflow-y: hidden; z-index: 1">
+		#if($viewer == "view")
+			#set($show = $!request.getParameter("show"))
+                        
+		 	#if(!$show || ($show != "current" && $show != "history"))
+		 	     #set($show = "current")   
+			#end
+
+			##It`s safe to show menu for test run always, because in case of removed testrun another template is used.
+            #if($exists || $isTestRun)
+			     #template("menuview.vm")
+			#end
+
+			#if (($show == "current") && $doc.isDocumentPage())
+                           #set($selMethod = "checkTextSelection();")
+                        #else
+                           #set($selMethod = "")
+                        #end
+
+	                <div id="viewcontent" style="position: relative; width: 100% !important ; height: 1px; border: 0px solid magenta; overflow-y: auto; overflow-x: auto; z-index: 1;" onmouseover="try{hiddeMenuAll();$selMethod}catch(e){}" onLoad="pageResize()">
+			
+			
+			#if($exists && !(($doc.getName() == "Modules" ) || ($doc.getName() == "WikiOverview" )))
+				<div class="status">
+			   		#set($dateFormat = "yyyy-MM-dd")
+			   		#set($timeFormat = "HH:mm")
+			   		<span title="$xwiki.getLocalUserName($tdoc.creator)">$localization.getValue("form.modules.label.createdOn", "$!xwiki.formatDate($tdoc.creationDate, $dateFormat) $!xwiki.formatDate($tdoc.creationDate, $timeFormat)")</span>$localization.getValue("definition.commaSpace")<span title="$xwiki.getLocalUserName($tdoc.author)">$localization.getValue("form.modules.label.updatedOn","$!xwiki.formatDate($tdoc.date, $dateFormat) $!xwiki.formatDate($tdoc.date, $timeFormat)")</span>
+                </div>	
+            #else
+            	<div class="status">&nbsp;</div>
+	        #end
+	                <div style="clear: both;">
+			##
+			##
+			## Extra data: comments, attachments ...  
+			##
+	
+				#if( (!$showSearch) || ($showSearch != "no"))
+					#if($show == "current")
+
+						#template("contentview.vm")
+
+						#if( $doc.isDocumentPage() )
+
+			                    	  #if (!$hide_comments)
+			                    	    #if( !$doc.isTemplate() && $doc.getGroup() == "")
+                                            #gap()
+			                    	        <div id="attachmentPanel" style="display: none;">
+ 							  					#largepanelheader($localization.getValue('wiki.form.label.attachments'))
+							   						#template("attachmentsinline.vm")
+							  
+                                                #gap()
+											</div>
+						    			#end
+                                        
+                                         <div id="backlinksPanel" style="display: none;">
+										    #largepanelheader($localization.getValue("wiki.form.label.backlinks"))
+										      #template("backlinks.vm")
+										    										    
+										    #gap()    
+										  </div>
+  
+                                        ##displayTemplatePage("Panels.Backlinks" $localization.getValue("wiki.form.label.backlinks") "backlinksPanel")
+
+                                        #displayTemplatePage("Panels.RecentlyVisited" $localization.getValue('wiki.form.label.recentlyVisited') "recentlyVisitedPanel")
+										
+										
+										<div id="pageParametersData">										
+											 #foreach ($mapEntry in $pageParameters.entrySet())
+												#set($value = $pageParameters.getConfiguration($mapEntry.key).getValueString())
+												#if($value)
+													<input type="hidden" name="$mapEntry.key" value="$esc.escapeForHtmlTag($value)"/>
+												#end
+                                            #end
+                                        </div>
+											
+										
+
+						  #end
+						#end
+					#end
+				#end
+			</div>
+			</div>
+			##
+                        ##Extract preview
+                        ##    
+                        <div id="xextract" style="display: none; position: relative; width: 100%; height: 10px; border: 1px solid magenta; overflow-y: auto; overflow-x: hidden; z-index: 1;" >
+                        </div>  
+			<div class="clearfloats"></div>
+		#else
+		        <div id="viewcontent" style="margin-top: 28px; width: 100%">
+				<h4 id="xwikiviewerstitles">$msg.get("chooseviewer")</h4>
+				#template("viewmodes.vm")
+				<div id="othercontent" class="main layoutsubsection" style="border: 0px solid yellow;">
+					#template("${viewer}.vm")
+					<div class="clearfloats"></div>
+				</div>
+		        </div>
+		#end
+
+	     </div>
+
+             ##		
+             ##Split panel
+             ##
+             <div id="panelResize" style="position: absolute; display: none; top: 0px; left:0px; top: 400px; height: 5px; widtht: 99%; z-index: 3; margin-left: -2px; border: 1px solid green; cursor: row-resize;">
+                <div id="resizer" style="top: 0px; left: 200px; position:absolute;">
+                </div>
+             </div>
+
+       
+      </div>     
+      ##
+      ## Tab bar
+      ##
+      <div id="panelTab" style="position:absolute; left: 4px; width:99%; height: 26px; top: -36px; z-index: 2; ">		
+   	   
+      </div>
+
+   </div>  
+
+#else
+   #template("accessdenied.vm")
+#end
+   #template("endpage.vm")
+#end
+

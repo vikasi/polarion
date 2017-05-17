@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.siemens.polarion.rt.communication;singleton:=
+ true
+Export-Package: com.fasterxml.jackson.annotation,com.fasterxml.jackson
+ .core,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.filt
+ er,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,co
+ m.fasterxml.jackson.core.json,com.fasterxml.jackson.core.sym,com.fast
+ erxml.jackson.core.type,com.fasterxml.jackson.core.util,com.fasterxml
+ .jackson.databind;uses:="org.apache.http.client",com.fasterxml.jackso
+ n.databind.annotation,com.fasterxml.jackson.databind.cfg,com.fasterxm
+ l.jackson.databind.deser,com.fasterxml.jackson.databind.deser.impl,co
+ m.fasterxml.jackson.databind.deser.std,com.fasterxml.jackson.databind
+ .exc,com.fasterxml.jackson.databind.ext,com.fasterxml.jackson.databin
+ d.introspect,com.fasterxml.jackson.databind.jsonFormatVisitors,com.fa
+ sterxml.jackson.databind.jsonschema,com.fasterxml.jackson.databind.js
+ ontype,com.fasterxml.jackson.databind.jsontype.impl,com.fasterxml.jac
+ kson.databind.module,com.fasterxml.jackson.databind.node,com.fasterxm
+ l.jackson.databind.ser,com.fasterxml.jackson.databind.ser.impl,com.fa
+ sterxml.jackson.databind.ser.std,com.fasterxml.jackson.databind.type;
+ uses:="org.apache.http.client",com.fasterxml.jackson.databind.util,co
+ m.siemens.polarion.rt.communication,com.siemens.polarion.rt.communica
+ tion.authentication,com.siemens.polarion.rt.communication.connection;
+ uses:="org.apache.http.client",com.siemens.polarion.rt.communication.
+ connection.links,com.siemens.polarion.rt.communication.connection.lin
+ ks.impl;x-friends:="com.siemens.polarion.rt.tests,com.siemens.polario
+ n.rt.performance.jobs",com.siemens.polarion.rt.communication.impl;x-f
+ riends:="com.siemens.polarion.rt.tests,com.siemens.polarion.rt.perfor
+ mance.jobs"
+Bundle-Name: Polarion RT Communication Plugin
+Bundle-Version: 3.17.0
+Bundle-ClassPath: rtCommunication.jar,lib/jackson-annotations-2.6.0.ja
+ r,lib/jackson-core-2.6.3.jar,lib/jackson-databind-2.6.3.jar
+Require-Bundle: com.polarion.platform,com.polarion.platform.repository
+ ,org.apache.axis;bundle-version="1.4.0",com.polarion.platform.persist
+ ence
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion AG
+
+

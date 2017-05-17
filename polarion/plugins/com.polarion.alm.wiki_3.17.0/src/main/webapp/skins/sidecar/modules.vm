@@ -1,0 +1,68 @@
+{section:width=100%}
+{column:width=65%}
+1 ~~{project-property:name}~~ Modules
+
+#if(!$xwiki.canUseModules())
+We are sorry, but you are not allowed see this page. 
+#else	
+From this page you can create, access and manage Modules for the {project-property:name} project, 
+and export module content to several file formats. 
+Use the ~~Create New Module~~ button to create a new Module. 
+To export content from existing Modules, use the ~~Export~~ button.
+
+
+1.1 The {project-property:name} project contains the following modules:
+{modules}
+
+*Tips:*
+* Click on the name of any Module to go to its Home page
+* Click on <img alt=\"wi_multi_edit\" src='/polarion/ria/images/details/wi_multi_edit.gif' title='Edit Work Items'/>  to access the Module's work items in the tracker's ~~Designer~~ view.
+* Click on <img alt=\"minus\" src='/polarion/ria/images/actions/delete.gif' title='Delete' />  to delete a module. 
+* Click on <img alt=\"duplicate_module\" src='/polarion/ria/images/actions/duplicate_module.gif' title='Reuse' /> to create a new module based on the selected Module, optionally linking the new one to the selected Module.
+	
+{column}
+{column: width=32%}
+{regiontitle}Recently Modified Work Items{regiontitle}	
+{style:class=regiondescription}Listing of and links to up to 10 of the most recently modified workitems in 
+the ~~{project-property:name}~~ project grouped by the modules.
+{style}
+
+{recently-modified-workitems:project=@current|groupby=module}
+
+{column}
+{section}
+
+<style>
+#leftmenu_firsttd{
+margin-top:-10px;
+}
+#modules_toolbar{
+display:none
+}
+
+#Attachments{
+display:none;
+}
+</style>
+
+
+##toolbar
+<div id="modules_toolbar">
+<table style="margin-top:-10px;" >
+<tr>
+<td>
+#xwikitopmenuentrystartimageButtonJS("/polarion/ria/images/actions/new_module.png" $localization.getValue("form.modules.button.newModule") "top.createModule('{project-property:id}');" $localization.getValue("form.modules.tooltip.createNewModule"))
+</td>
+<td>
+#xwikitopmenuentrystartimageButtonJS("/polarion/ria/images/actions/export_module.gif" $localization.getValue("form.modules.button.export") "top.exportModules();" $localization.getValue("form.modules.tooltip.exportModules"))
+</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+var fe = document.getElementById("leftmenu_firsttd");
+var mt = document.getElementById("modules_toolbar");
+fe.innerHTML=mt.innerHTML;
+mt.innerHTML="";
+</script>
+#end

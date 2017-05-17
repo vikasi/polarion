@@ -1,0 +1,18 @@
+
+#set ($hide_comments = "1")
+#set ($comparator = "1")
+#set($showactions = 0)
+
+#if($request.get("type"))
+#set($type= $request.get("type"))
+#else
+#set($type = "html")
+#end
+
+#if ($tdoc.realLanguage!="")
+#set($lang = "&language=${tdoc.realLanguage}")
+#else
+#set($lang = "")
+#end
+#template("changesdoc.vm")
+<br /><br />

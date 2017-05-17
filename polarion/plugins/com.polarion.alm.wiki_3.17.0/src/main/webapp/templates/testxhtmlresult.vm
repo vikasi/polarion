@@ -1,0 +1,15 @@
+#template("startpage.vm")
+<h1>XHTML Validation Results</h1>
+#if ($errors.size() > 0)
+	<h2>Errors($errors.size())</h2>:
+	#foreach($error in $errors)
+	<p style="font-weight: bold; margin-top: 10px">$error.loc.getLocationPath()</p>
+	<div style="border: 1px solid red">
+		<p>$error.desc<p>
+		<p><textarea readonly rows="3" style="width: 100%">$error.line</textarea><p>
+	</div>
+	#end
+#else
+	<h2>No error</h2>
+#end
+#template("endpage.vm")

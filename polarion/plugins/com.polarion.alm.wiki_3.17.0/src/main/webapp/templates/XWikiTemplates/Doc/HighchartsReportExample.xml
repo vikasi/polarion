@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20131111174448</created>
+<type>content</type>
+<content><![CDATA[
+{code:xml}
+{
+	chart: {type: 'spline'}, 
+	colors: ['#F08080','#FFA500','#6B8E23'], 
+	title: {text: 'Sales'},
+	plotOptions: {
+		series: {
+			fillOpacity: 0.3
+		}, 
+		area:{
+			marker:{
+				enabled : false
+			}
+		}
+	},
+	xAxis: {
+		categories: ['1995','2000','2005', '2010'],
+		labels: {
+			rotation: -20, y: 10, 
+			style: {
+				fontSize: '9px'
+			}
+		}
+	}, 
+	yAxis: {
+		title: {
+			text: 'Count'
+		}
+	}, 
+	tooltip: {
+		shared: true,
+		shadow: false
+	},
+	series: [
+		{name: 'apple', data: [10,20,40,27]},
+		{name: 'orange', data: [20,15,30,22]},
+		{name: 'kiwi', data: [30,20,25,33]}
+	]
+};
+options.credits = {enabled: true, text: 'Polarion.com', href: 'http://www.polarion.com'};				
+options.exporting = {enabled: false};				
+{code}
+]]></content>
+</wiki-page>

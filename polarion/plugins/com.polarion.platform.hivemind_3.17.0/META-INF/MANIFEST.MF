@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Provide-Package: com.polarion.platform.hivemind
+Bundle-SymbolicName: com.polarion.platform.hivemind
+Bundle-Name: Hivemind Plarform Implementation Plug-in
+Bundle-Version: 3.17.0
+Bundle-Localization: plugin
+Bundle-ClassPath: platform-hivemind.jar
+Require-Bundle: org.apache.hivemind,org.eclipse.core.runtime,com.polar
+ ion.platform
+Bundle-Vendor: Polarion Software
+
+

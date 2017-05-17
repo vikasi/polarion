@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130801174428</created>
+<type>content</type>
+<content><![CDATA[#set($h = '#')
+#set($d = '$') 
+#set($dataService = $trackerService.dataService)
+
+1 Wiki Fusion Charts Help
+
+{toc}
+
+#macro(exampleSingle $type)
+#chartStart("Caption" "$type" 400 300  "decimalPrecision='0'")
+#addSet("Critical" $dataService.getInstancesCount("WorkItem", "severity:critical"))
+#addSet("Blocker" $dataService.getInstancesCount("WorkItem", "severity:blocker"))
+#addSet("Major" $dataService.getInstancesCount("WorkItem", "severity:major"))
+#chartEnd()
+
+To render such chart on your wiki page copy following fragment to your page:
+<div class="code"><pre>
+${h}chartStart("Caption" "$type" 400 300  "decimalPrecision='0'")
+${h}addSet("Critical" ${d}trackerService.dataService.getInstancesCount("WorkItem", "severity:critical"))
+${h}addSet("Blocker" ${d}trackerService.dataService.getInstancesCount("WorkItem", "severity:blocker"))
+${h}addSet("Major" ${d}trackerService.dataService.getInstancesCount("WorkItem", "severity:major"))
+${h}chartEnd()
+</pre></div>
+
+#end
+
+#macro(exampleMulti $typeMulti)
+
+#chartStart("Caption" "$typeMulti" 500 300 "xaxisname='Project' yaxisname='Number of items' subcaption='Subcaption'" )
+#addCategories("elibrary:demo:tika")
+#addDataSet("Test" "30.5:100:89.8")
+#addDataSet("Blocker" "30:40:50")
+#addDataSet("Critical" "10:20:30")
+#chartEnd()
+
+To render such chart on your wiki page copy following fragment to your page:
+<div class="code"><pre>
+${h}chartStart("Caption" "$typeMulti" 500 300 "xaxisname='Project' yaxisname='Number of items' subcaption='Subcaption'" )
+${h}addCategories("elibrary:demo:tika")
+${h}addDataSet("Test" "30.5:100:89.8")
+${h}addDataSet("Blocker" "30:40:50")
+${h}addDataSet("Critical" "10:20:30")
+${h}chartEnd()
+
+</pre></div>
+
+#end
+
+1.1  Single Series
+1.1.1 Area
+#exampleSingle("Area2D")
+1.1.1 Bar
+#exampleSingle("Bar2D")
+1.1.1 Column 2D
+#exampleSingle("Column2D")
+1.1.1 Column 3D
+#exampleSingle("Column3D")
+1.1.1 Pie 2D
+#exampleSingle("Pie2D")
+1.1.1 Pie 3D
+#exampleSingle("Pie3D")
+1.1.1 Line
+#exampleSingle("Line")
+1.1.1 Doughnut 2D
+#exampleSingle("Doughnut2D")
+1.1.1 Funnel
+#exampleSingle("Funnel")
+1.1  Multi Series
+1.1.1 Area
+#exampleMulti("MSArea2D")
+1.1.1 Bar
+#exampleMulti("MSBar2D")
+1.1.1 Column 2D
+#exampleMulti("MSColumn2D")
+1.1.1 Column 3D
+#exampleMulti("MSColumn3D")
+1.1.1 Line
+#exampleMulti("MSLine")
+1.1.1 Stacked Bar
+#exampleMulti("StackedBar2D")
+1.1.1 Stacked Area 2D
+#exampleMulti("StackedArea2D")
+1.1.1 Stacked Column 2D
+#exampleMulti("StackedColumn2D")
+1.1.1 Stacked Column 3D
+#exampleMulti("StackedColumn3D")
+]]></content>
+</wiki-page>

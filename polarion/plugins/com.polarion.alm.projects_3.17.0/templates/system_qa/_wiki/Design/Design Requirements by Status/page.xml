@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130103140957</created>
+<type>content</type>
+<content><![CDATA[{include-macros:_default.ProjectMacros}
+1 Design Items By Status
+
+{section}
+{column}
+1.1 Software Requirements
+{table:header=no}
+#ScoreBoard($page.project "softwareRequirement" "")
+{table}
+{column}
+{column}
+1.1 Mechanical Requirements
+{table:header=no}
+#ScoreBoard($page.project "mechanicalRequirement" "")
+{table}
+{column}
+{column}
+1.1 Electrical Requirements
+{table:header=no}
+#ScoreBoard($page.project "electricalRequirement" "")
+{table}
+{column}
+{section}]]></content>
+</wiki-page>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.polarion.example.velocitycontext
+Bundle-Name: Velocity Context Example
+Bundle-Version: 1.0.0
+Bundle-ClassPath: example-velocitycontext.jar
+Require-Bundle: com.polarion.alm.ui,com.polarion.core.util,com.polario
+ n.platform.repository,com.polarion.platform
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Polarion Software
+
+

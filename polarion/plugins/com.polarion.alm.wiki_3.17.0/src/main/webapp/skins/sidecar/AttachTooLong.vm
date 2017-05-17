@@ -1,0 +1,28 @@
+###
+### 
+###
+###
+#template("startpage.vm")
+<div class="main layoutsubsection">
+#xwikimessageboxstart($msg.get("notice") $msg.get("fileuploadislarge",["$attLimit"]))
+<b><div style="text-align: center"> 
+
+#set( $url = $xwiki.getRequestURL() )
+
+<br/>
+
+  <div style="text-align: center; border: 0px solid blue;#if($from_save_only)display:none;#end""> 
+  #set( $url = $xwiki.getRequestURL() )
+  <a href="javascript: document.getElementById('saved_content').submit()">back to edit</a>
+  </div>
+
+#xwikimessageboxend()
+</div></b>
+<div class="clearfloats"></div>
+</div>
+
+   <form id="saved_content"  style="visibility: hidden" method="post" action="$xwiki.getActionURL($url,'edit')">
+   	<textarea name="content">$request.getParameter("content")</textarea>
+   </form>
+
+#template("endpage.vm")

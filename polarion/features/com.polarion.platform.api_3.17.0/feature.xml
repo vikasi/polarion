@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.polarion.platform.api"
+      label="%featureName"
+      version="3.17.0"
+      provider-name="%providerName">
+   <install-handler/>
+
+   <requires>
+      <import plugin="org.apache.ant"/>
+   </requires>
+
+   <plugin
+         id="com.polarion.alm.projects"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.tracker"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.core.util"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.platform"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.platform.hivemind"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.platform.persistence"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.platform.repository"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.platform.repository.driver.svn"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.subterra.base"
+         download-size="0"
+         install-size="0"
+         version="5.17.0"/>
+
+   <plugin
+         id="com.polarion.subterra.index"
+         download-size="0"
+         install-size="0"
+         version="5.17.0"/>
+
+   <plugin
+         id="com.polarion.subterra.persistence"
+         download-size="0"
+         install-size="0"
+         version="5.17.0"/>
+
+   <plugin
+         id="com.polarion.subterra.persistence.document"
+         download-size="0"
+         install-size="0"
+         version="5.17.0"/>
+
+   <plugin
+         id="com.polarion.usdp.persistence"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="javax.transaction"
+         download-size="0"
+         install-size="0"
+         version="1.0.1.2014-10-06"/>
+
+   <plugin
+         id="org.apache.hivemind"
+         download-size="0"
+         install-size="0"
+         version="1.1.1.2014-03-06"/>
+
+   <plugin
+         id="org.apache.log4j"
+         download-size="0"
+         install-size="0"
+         version="1.2.17.2015-05-04"/>
+
+   <plugin
+         id="org.objectweb.jotm"
+         download-size="0"
+         install-size="0"
+         version="1.4.3.2014-10-06"/>
+
+   <plugin
+         id="com.polarion.core.boot"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.builder"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.platform.jobs"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.portal.jetspeed"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.portal.tomcat"
+         download-size="0"
+         install-size="0"
+         version="8.0.30"/>
+
+   <plugin
+         id="com.polarion.psvn.launcher"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.portal.metrics"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.qcentre"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.qcentre"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.opensymphony.quartz"
+         download-size="0"
+         install-size="0"
+         version="1.4.2.2014-10-06"/>
+
+   <plugin
+         id="org.polarion.svnwebclient"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="net.sf.ehcache"
+         download-size="0"
+         install-size="0"
+         version="2.6.3.2015-05-27"/>
+
+   <plugin
+         id="com.polarion.psvn.translations.en"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="org.polarion.svncommons"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.ws"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.webdav"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.checker"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.reindexer"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.platform.monitoring"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.wiki"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="net.n3.nanoxml"
+         download-size="0"
+         install-size="0"
+         version="2.2.3.2013-04-22"/>
+
+   <plugin
+         id="org.codehaus.groovy"
+         download-size="0"
+         install-size="0"
+         version="1.5.7.2013-11-27"/>
+
+   <plugin
+         id="com.polarion.fop"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.ui"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.ooxml"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.ws.client"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="org.apache.axis"
+         download-size="0"
+         install-size="0"
+         version="1.4.0.2015-01-20"/>
+
+   <plugin
+         id="net.htmlparser.jericho"
+         download-size="0"
+         install-size="0"
+         version="3.1.0.2010-09-07"/>
+
+   <plugin
+         id="com.polarion.platform.repository.external.git"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="org.apache.poi"
+         download-size="0"
+         install-size="0"
+         version="3.7.0.2015-05-04"/>
+
+   <plugin
+         id="com.polarion.platform.guice"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.platform.sql"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="net.java.dev.jna"
+         download-size="0"
+         install-size="0"
+         version="4.1.0.v06022015_1911"
+         unpack="false"/>
+
+   <plugin
+         id="org.tmatesoft.sqljet"
+         download-size="0"
+         install-size="0"
+         version="1.1.10.r1317_v20140121_0107"
+         unpack="false"/>
+
+   <plugin
+         id="com.polarion.alm.ui.diagrams.mxgraph"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.synchronizer"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.sun.jersey"
+         download-size="0"
+         install-size="0"
+         version="1.12.0"/>
+
+   <plugin
+         id="com.polarion.synchronizer.proxy.hpalm"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.synchronizer.proxy.jira"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.synchronizer.proxy.polarion"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.synchronizer.proxy.reqif"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.synchronizer.ui"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.cluster"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="org.apache.curator"
+         download-size="0"
+         install-size="0"
+         version="2.4.0.2015-05-05"/>
+
+   <plugin
+         id="com.polarion.alm.install"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.scripting"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.scripting.servlet"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.purevariants"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.polarion.alm.oslc"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.siemens.polarion.rt"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.siemens.polarion.rt.ui"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="org.tmatesoft.svnkit"
+         download-size="0"
+         install-size="0"
+         version="1.8.14.r10627"/>
+
+   <plugin
+         id="com.trilead.ssh2"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.build221_175"
+         unpack="false"/>
+
+   <plugin
+         id="com.siemens.polarion.rt.communication"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.siemens.polarion.rt.communication.ws"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.siemens.polarion.rt.parsers.c"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.siemens.polarion.rt.collectors.git"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+
+   <plugin
+         id="com.siemens.polarion.rt.api"
+         download-size="0"
+         install-size="0"
+         version="3.17.0"/>
+</feature>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2013-01-09 22:56:36.895 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-130"></h1><p id="polarion_merged_2">
+  <span style="font-style: italic;"><span style="font-weight: bold;">NOTE TO AUTHOR: </span> Highlighted, italicized text throughout this template is provided solely as background information to assist you in creating this document.  Please delete all such text, as well as the instructions in each section, prior to submitting this document.  <span style="font-weight: bold;">ONLY YOUR PROJECT-SPECIFIC INFORMATION SHOULD APPEAR IN THE FINAL VERSION OF THIS DOCUMENT.</span></span>
+</p><div id="polarion_wiki macro name=toc"></div><div id="polarion_editor_html_block1" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">#documentPanel(true &quot;approved&quot;)</pre>
+</div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-131"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-132"></h3><p id="polarion_new_2">
+  <span style="font-style: italic;">INFO: This document describes the HW design of the system being developed. Components described in this document have been identified as needed to implement requirements from System Requirements Specification. Together, these documents provide the design specification needed to implement the system.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-133"></h3><p id="polarion_new_3">
+  <span style="font-style: italic;">TO DO: Describe the scope of this document as it relates to the project.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-134"></h3><p id="polarion_new_4">
+  <span style="font-style: italic;">TO DO: List any other documents or Web addresses to which this document refers. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location. </span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-144"></h2><p id="polarion_new_16">
+  <span style="font-style: italic;">In this section, we take a closer look at what each component does in a more systematic way.</span>
+</p><div id="polarion_wiki macro name=module-workitem;params=id=TMPLT-464"></div><div id="polarion_wiki macro name=module-workitem;params=id=TMPLT-465|layout=1"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=TMPLT-359"></h2><p id="polarion_merged_1">
+  <span style="font-size: 10pt;line-height: 1.5;">Browse the Requirements refined by design items using </span><span style="font-weight: bold;"><span class="polarion-rte-link" data-type="polarion" id="fake" data-custom-label="Requirements - Design Traceability Tree" data-url="/wiki/Requirements/System Requirements/?link_role=parent,refines&amp;tree_depth=5&amp;tab=tree"></span></span>
+</p><p id="polarion_1"></p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Mechanical Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">mechanicalRequirement</item>
+            </struct>
+            <struct>
+                <item id="label">Electrical Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">electricalRequirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

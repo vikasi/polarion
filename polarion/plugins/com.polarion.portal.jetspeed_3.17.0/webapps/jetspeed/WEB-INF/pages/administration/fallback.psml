@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/fallback.psml" hidden="true">
+    <title>Fallback</title>
+    <short-title>Fallback</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="fallback_page" type="layout" name="jetspeed-layouts::VelocityOneColumn"/>
+</page>

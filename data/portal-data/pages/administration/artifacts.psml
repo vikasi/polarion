@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/artifacts.psml" hidden="false">
+    <title>artifacts</title>
+    <short-title>artifacts</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_artifacts_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_artifacts_portlet" type="portlet" name="webui::BuildArtifactsConfigurationPortlet">
+          <preference name="confFile" readOnly="false">
+		    <value>.polarion/builder/artifacts.xml</value>
+		  </preference>
+          <preference name="linkDefault" readOnly="false">
+		    <value>false</value>
+		  </preference>
+		  </fragment>
+    </fragment>
+</page>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page id="/administration/customfields.psml" hidden="false">
+    <title>customfields</title>
+    <short-title>customfields</short-title>
+    <defaults layout-decorator="polarion-clean" portlet-decorator="clear"/>
+    <fragment id="administration_customfields_page" type="layout" name="jetspeed-layouts::VelocityOneColumn">
+        <fragment id="_administration_customfields_portlet" type="portlet" name="webui::TypeFileConfigurationPortlet">
+          <preference name="confFolder" readOnly="false">
+		    <value>.polarion/tracker/fields</value>
+		  </preference>
+		  <preference name="confMatch" readOnly="false">
+		    <value>.*custom-fields\.xml</value>
+		  </preference>
+		  <preference name="notMatchMessage" readOnly="false">
+		    <value>The filename must be either custom-fields.xml or [WI_TYPE]-custom-fields.xml.</value>
+		  </preference>
+		  <preference name="configurationsTitle" readOnly="false">
+		    <value>administration.workItems.customFieldDefinitions</value>
+		  </preference>
+		  <preference name="uploadConfigurationTitle" readOnly="false">
+		    <value>administration.workItems.customFieldDefinition</value>
+		  </preference>
+		  <preference name="uploadDescription" readOnly="false">
+		    <value>administration.workItems.filenameMustBeEitherOr</value>
+		  </preference>		  		 
+		</fragment>
+    </fragment>
+</page>

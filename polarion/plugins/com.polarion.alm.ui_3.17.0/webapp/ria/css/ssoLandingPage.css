@@ -1,0 +1,57 @@
+body {
+	font-family: Arial, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin:0px;
+}
+
+#companyAndContainer {
+	width:530px;
+	height:510px;
+	right:0px;
+	display: block;
+	margin-left: auto;
+ 	margin-right: auto;
+	direction:ltr;
+}
+
+#message {
+	overflow: hidden;
+	width: 500px;
+	display: block;
+	padding: 25px 0px 25px 65px;
+}
+
+#messageText {
+	margin-left: 10px;
+	min-height: 14px;
+}
+
+.messageError {
+	color: #FFFFFF;
+	overflow: hidden;
+	background: red url('/polarion/ria/images/login/exmark_login.png') no-repeat 15px 13px;
+	background-size: 40px;
+}
+.messageError a {
+	color: #FFFFFF;
+}
+
+.messageWarning {
+	color: #8B7B33;
+	overflow: hidden;
+	background: #fadd5a url('/polarion/ria/images/login/info_login.png') no-repeat 15px 13px;
+	background-size: 40px;
+}
+.messageWarning a {
+	color: #8B7B33;
+}
+
+.messageInfo {
+	color: #FFFFFF;
+	overflow: hidden;
+	background: #24C526 url('/polarion/ria/images/login/exmark_login.png') no-repeat 15px 13px;
+	background-size: 40px;
+}
+.messageInfo a {
+	color: #FFFFFF;
+}

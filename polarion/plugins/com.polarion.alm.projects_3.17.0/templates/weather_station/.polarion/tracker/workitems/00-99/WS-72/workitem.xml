@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="assignee">cUser</field>
+    <field id="author">rProject</field>
+    <field id="created">2015-03-25 15:09:38.109 +0100</field>
+    <field id="description" text-type="text/html"><![CDATA[<span style="font-size: 10pt;line-height: 1.5;"> 
+  <table id="polarion_wiki macro name=table;params=header=no|border=no|width=778px" class="polarion-Document-table" style="width: 778px;margin-left: 0px;margin-right: auto;border: none;empty-cells: show;border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="vertical-align: top;width: 221px;padding: 2px;"><img src="workitemimg:1-pro_variant.png"/></td>
+        <td style="vertical-align: top;width: 549px;padding: 2px;"> <span style="font-size: 10pt;line-height: 1.5;">Product - Wanted Poster Nematic SmartWeatherStation Pro:</span><br/>
+          
+          <ul>
+            <li>Radio interface (868MHz)</li>
+            <li>Standard protocol</li>
+            <li>WLAN, USB, SIM</li>
+            <li>Temperature, time, forecast, flexible (depending on attached sensors)</li>
+            <li>High-value casing</li>
+            <li>Color display touchscreen</li>
+            <li>Battery and line-operated power supply</li>
+            <li>Higher price level</li>
+            <li>In-door setting up</li>
+          </ul>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  </span>]]></field>
+    <field id="featureSelection" type="struct:FeatureSelection">
+        <struct>
+            <item id="selections">
+                <list>
+                    <struct>
+                        <item id="feature">WS-8</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-19</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-16</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-33</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-15</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-18</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-35</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-29</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-11</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-28</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-6</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-14</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-7</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-30</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-20</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-32</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-22</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-17</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                    <struct>
+                        <item id="feature">WS-21</item>
+                        <item id="selectionType">included</item>
+                    </struct>
+                </list>
+            </item>
+        </struct>
+    </field>
+    <field id="previousStatus">inReview</field>
+    <field id="priority">50.0</field>
+    <field id="severity">should_have</field>
+    <field id="status">defined</field>
+    <field id="title">SmartWeatherSensor Pro</field>
+    <field id="type">variant</field>
+</work-item>
