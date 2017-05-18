@@ -14,6 +14,7 @@
             <trend-value-fact-element id="RESOLVED-UNRESOLVED.RESOLVED" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLVED-UNRESOLVED.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">44.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">41.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -30,6 +31,7 @@
                     <value tag="2017-05-12" type="java.lang.Double">62.0</value>
                     <value tag="2017-05-14" type="java.lang.Double">89.0</value>
                     <value tag="2017-05-15" type="java.lang.Double">103.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">107.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -60,6 +62,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-ASSIGNEE._unassigned" provider="WorkItemsAnalysis" tag="2008-10-28" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">83.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">82.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -73,6 +76,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-ASSIGNEE.pGUI" provider="WorkItemsAnalysis" tag="2008-10-28" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">5.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">7.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -86,6 +90,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-ASSIGNEE.rProject" provider="WorkItemsAnalysis" tag="2008-10-28" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -99,6 +104,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-ASSIGNEE.sDeveloper" provider="WorkItemsAnalysis" tag="2008-10-28" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">12.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">18.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -112,6 +118,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-ASSIGNEE.aSeller" provider="WorkItemsAnalysis" tag="2009-08-12" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -138,6 +145,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-ASSIGNEE.jRequirement" provider="WorkItemsAnalysis" tag="2009-08-12" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">3.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">3.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -151,6 +159,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-ASSIGNEE.mTest" provider="WorkItemsAnalysis" tag="2009-08-12" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">3.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">3.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -164,6 +173,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-ASSIGNEE.admin" provider="WorkItemsAnalysis" tag="2009-08-12" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -190,6 +200,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-ASSIGNEE.cUser" provider="WorkItemsAnalysis" tag="2012-03-21" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -220,6 +231,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-CATEGORY._uncategorized" provider="WorkItemsAnalysis" tag="2008-10-28" type="UNRESOLVED-BY-CATEGORY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">85.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">88.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -246,6 +258,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-CATEGORY.UI" provider="WorkItemsAnalysis" tag="2008-10-28" type="UNRESOLVED-BY-CATEGORY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">11.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">10.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -272,6 +285,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-CATEGORY.Persistence" provider="WorkItemsAnalysis" tag="2009-08-12" type="UNRESOLVED-BY-CATEGORY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">1.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">1.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -285,6 +299,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-CATEGORY.Searching" provider="WorkItemsAnalysis" tag="2009-08-12" type="UNRESOLVED-BY-CATEGORY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">6.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">8.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -315,6 +330,7 @@
             <trend-value-fact-element id="UNRESOLVED-BY-TIMEPOINT._unscheduled" provider="WorkItemsAnalysis" tag="2008-10-28" type="UNRESOLVED-BY-TIMEPOINT.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">83.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">107.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -560,6 +576,7 @@
             <trend-value-fact-element id="MAI/target" provider="WorkItemsAnalysis" tag="2008-10-28" type="MAI/target">
                 <trend>
                     <value tag="2017-05-15" type="data-instance">/default/${User}sDeveloper</value>
+                    <value tag="2017-05-18" type="data-instance">/default/${User}sDeveloper</value>
                 </trend>
             </trend-value-fact-element>
         </value-fact-element>
@@ -576,6 +593,7 @@
             <trend-value-fact-element id="MEI/target" provider="WorkItemsAnalysis" tag="2008-10-28" type="MEI/target">
                 <trend>
                     <value tag="2017-05-15" type="data-instance">/default/${User}admin</value>
+                    <value tag="2017-05-18" type="data-instance">/default/${User}admin</value>
                 </trend>
             </trend-value-fact-element>
         </value-fact-element>
@@ -592,6 +610,7 @@
             <trend-value-fact-element id="MSI/target" provider="WorkItemsAnalysis" tag="2008-10-28" type="MSI/target">
                 <trend>
                     <value tag="2017-05-15" type="data-instance">/default/${User}sDeveloper</value>
+                    <value tag="2017-05-18" type="data-instance">/default/${User}sDeveloper</value>
                 </trend>
             </trend-value-fact-element>
         </value-fact-element>
@@ -623,11 +642,13 @@
             <trend-value-fact-element id="ESTIMATE-ACCURACY.pos" provider="WorkItemsAnalysis" tag="2008-10-28" type="ESTIMATE-ACCURACY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.9776476849387973</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.9769484083424808</value>
                 </trend>
             </trend-value-fact-element>
             <trend-value-fact-element id="ESTIMATE-ACCURACY.neg" provider="WorkItemsAnalysis" tag="2008-10-28" type="ESTIMATE-ACCURACY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.02235231506120272</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.023051591657519244</value>
                 </trend>
             </trend-value-fact-element>
         </value-fact-element>
@@ -659,11 +680,13 @@
             <trend-value-fact-element id="PROJECT-PLAN-ACCURACY.pos" provider="WorkItemsAnalysis" tag="2008-10-28" type="PROJECT-PLAN-ACCURACY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.9776476849387973</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.9769484083424808</value>
                 </trend>
             </trend-value-fact-element>
             <trend-value-fact-element id="PROJECT-PLAN-ACCURACY.neg" provider="WorkItemsAnalysis" tag="2008-10-28" type="PROJECT-PLAN-ACCURACY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.02235231506120272</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.023051591657519244</value>
                 </trend>
             </trend-value-fact-element>
         </value-fact-element>
@@ -695,6 +718,7 @@
             <trend-value-fact-element id="PLANNING-COVERAGE.planned" provider="WorkItemsAnalysis" tag="2008-10-28" type="PLANNING-COVERAGE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">67.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">58.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -708,6 +732,7 @@
             <trend-value-fact-element id="PLANNING-COVERAGE.not-planned" provider="WorkItemsAnalysis" tag="2008-10-28" type="PLANNING-COVERAGE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">80.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">90.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -740,6 +765,7 @@
             <trend-value-fact-element id="RESOLVED-RATIO.resolved" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLVED-RATIO.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">44.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">41.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -753,6 +779,7 @@
             <trend-value-fact-element id="RESOLVED-RATIO.not-resolved" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLVED-RATIO.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">103.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">107.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -785,6 +812,7 @@
             <trend-value-fact-element id="ASSIGNMENT-RATIO.assigned" provider="WorkItemsAnalysis" tag="2008-10-28" type="ASSIGNMENT-RATIO.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">20.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">25.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -798,6 +826,7 @@
             <trend-value-fact-element id="ASSIGNMENT-RATIO.not-assigned" provider="WorkItemsAnalysis" tag="2008-10-28" type="ASSIGNMENT-RATIO.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">83.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">82.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -830,6 +859,7 @@
             <trend-value-fact-element id="PLANNING-RATIO.planned" provider="WorkItemsAnalysis" tag="2008-10-28" type="PLANNING-RATIO.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">20.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">9.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -843,6 +873,7 @@
             <trend-value-fact-element id="PLANNING-RATIO.not-planned" provider="WorkItemsAnalysis" tag="2008-10-28" type="PLANNING-RATIO.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">83.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">98.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -870,6 +901,7 @@
             <trend-value-fact-element id="SEVERITY.trivial" provider="WorkItemsAnalysis" tag="2008-10-28" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -883,6 +915,7 @@
             <trend-value-fact-element id="SEVERITY.minor" provider="WorkItemsAnalysis" tag="2008-10-28" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -896,6 +929,7 @@
             <trend-value-fact-element id="SEVERITY.normal" provider="WorkItemsAnalysis" tag="2008-10-28" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">31.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">32.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -909,6 +943,7 @@
             <trend-value-fact-element id="SEVERITY.major" provider="WorkItemsAnalysis" tag="2008-10-28" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">5.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">4.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -922,6 +957,7 @@
             <trend-value-fact-element id="SEVERITY.critical" provider="WorkItemsAnalysis" tag="2008-10-28" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">4.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">5.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -935,6 +971,7 @@
             <trend-value-fact-element id="SEVERITY.blocker" provider="WorkItemsAnalysis" tag="2008-10-28" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">1.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">1.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -961,6 +998,7 @@
             <trend-value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" tag="2009-07-29" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">17.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">10.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -974,6 +1012,7 @@
             <trend-value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" tag="2009-07-29" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">18.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">25.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -987,6 +1026,7 @@
             <trend-value-fact-element id="SEVERITY.must_have" provider="WorkItemsAnalysis" tag="2009-07-29" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">8.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">8.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1000,6 +1040,7 @@
             <trend-value-fact-element id="SEVERITY.will_not_have" provider="WorkItemsAnalysis" tag="2012-03-21" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1013,6 +1054,7 @@
             <trend-value-fact-element id="SEVERITY.detailed" provider="WorkItemsAnalysis" tag="2012-03-21" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1026,6 +1068,7 @@
             <trend-value-fact-element id="SEVERITY.basic" provider="WorkItemsAnalysis" tag="2012-03-21" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">12.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">12.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1039,6 +1082,7 @@
             <trend-value-fact-element id="SEVERITY.smoke" provider="WorkItemsAnalysis" tag="2012-03-21" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">6.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">6.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1052,6 +1096,7 @@
             <trend-value-fact-element id="SEVERITY.transition" provider="WorkItemsAnalysis" tag="2012-03-21" type="SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1079,6 +1124,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.trivial" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1092,6 +1138,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.minor" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1105,6 +1152,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.normal" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">12.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">10.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1118,6 +1166,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.major" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">4.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">3.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1131,6 +1180,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.critical" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">3.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">3.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1144,6 +1194,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.blocker" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1157,6 +1208,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" tag="2009-07-29" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1170,6 +1222,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" tag="2009-07-29" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">10.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">21.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1183,6 +1236,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" tag="2009-07-29" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">11.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">7.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1209,6 +1263,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" tag="2012-03-21" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1222,6 +1277,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.detailed" provider="WorkItemsAnalysis" tag="2012-03-21" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1235,6 +1291,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" tag="2012-03-21" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">12.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">12.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1248,6 +1305,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.smoke" provider="WorkItemsAnalysis" tag="2012-03-21" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">6.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">6.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1261,6 +1319,7 @@
             <trend-value-fact-element id="OPEN-BY-SEVERITY.transition" provider="WorkItemsAnalysis" tag="2012-03-21" type="OPEN-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1288,6 +1347,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.trivial" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1301,6 +1361,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.minor" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1314,6 +1375,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.normal" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">19.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">22.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1327,6 +1389,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.major" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">1.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">1.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1340,6 +1403,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.critical" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">1.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">2.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1353,6 +1417,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.blocker" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">1.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">1.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1379,6 +1444,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" tag="2009-07-29" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">6.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">3.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1392,6 +1458,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" tag="2009-07-29" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">8.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">4.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1405,6 +1472,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" tag="2009-07-29" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">8.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">8.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1418,6 +1486,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" tag="2012-03-21" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1431,6 +1500,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.detailed" provider="WorkItemsAnalysis" tag="2012-03-21" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1444,6 +1514,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.basic" provider="WorkItemsAnalysis" tag="2012-03-21" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1457,6 +1528,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.smoke" provider="WorkItemsAnalysis" tag="2012-03-21" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1470,6 +1542,7 @@
             <trend-value-fact-element id="RESOLVED-BY-SEVERITY.transition" provider="WorkItemsAnalysis" tag="2012-03-21" type="RESOLVED-BY-SEVERITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1497,6 +1570,7 @@
             <trend-value-fact-element id="PRIORITY.lowest" provider="WorkItemsAnalysis" tag="2008-10-28" type="PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">1.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1510,6 +1584,7 @@
             <trend-value-fact-element id="PRIORITY.low" provider="WorkItemsAnalysis" tag="2008-10-28" type="PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">5.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1523,6 +1598,7 @@
             <trend-value-fact-element id="PRIORITY.medium" provider="WorkItemsAnalysis" tag="2008-10-28" type="PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">102.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">85.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1536,6 +1612,7 @@
             <trend-value-fact-element id="PRIORITY.high" provider="WorkItemsAnalysis" tag="2008-10-28" type="PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">10.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1549,6 +1626,7 @@
             <trend-value-fact-element id="PRIORITY.highest" provider="WorkItemsAnalysis" tag="2008-10-28" type="PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">2.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1576,6 +1654,7 @@
             <trend-value-fact-element id="OPEN-BY-PRIORITY.lowest" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">1.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1589,6 +1668,7 @@
             <trend-value-fact-element id="OPEN-BY-PRIORITY.low" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">4.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1602,6 +1682,7 @@
             <trend-value-fact-element id="OPEN-BY-PRIORITY.medium" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">58.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">57.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1615,6 +1696,7 @@
             <trend-value-fact-element id="OPEN-BY-PRIORITY.high" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1628,6 +1710,7 @@
             <trend-value-fact-element id="OPEN-BY-PRIORITY.highest" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN-BY-PRIORITY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1681,6 +1764,7 @@
             <trend-value-fact-element id="RESOLUTION.duplicate" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1694,6 +1778,7 @@
             <trend-value-fact-element id="RESOLUTION.incomplete" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1707,6 +1792,7 @@
             <trend-value-fact-element id="RESOLUTION.cannotreproduce" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1720,6 +1806,7 @@
             <trend-value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1733,6 +1820,7 @@
             <trend-value-fact-element id="RESOLUTION.later" provider="WorkItemsAnalysis" tag="2008-10-28" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1772,6 +1860,7 @@
             <trend-value-fact-element id="RESOLUTION.obsolete" provider="WorkItemsAnalysis" tag="2009-08-12" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1798,6 +1887,7 @@
             <trend-value-fact-element id="RESOLUTION.done" provider="WorkItemsAnalysis" tag="2012-03-21" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">36.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">41.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1811,6 +1901,7 @@
             <trend-value-fact-element id="RESOLUTION.wontdo" provider="WorkItemsAnalysis" tag="2012-03-21" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1824,6 +1915,7 @@
             <trend-value-fact-element id="RESOLUTION.inactive" provider="WorkItemsAnalysis" tag="2012-03-21" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1837,6 +1929,7 @@
             <trend-value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" tag="2012-03-21" type="RESOLUTION.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1864,6 +1957,7 @@
             <trend-value-fact-element id="STATUS.open" provider="WorkItemsAnalysis" tag="2008-10-28" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">62.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">59.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1877,6 +1971,7 @@
             <trend-value-fact-element id="STATUS.accepted" provider="WorkItemsAnalysis" tag="2008-10-28" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">13.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">4.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1890,6 +1985,7 @@
             <trend-value-fact-element id="STATUS.inprogress" provider="WorkItemsAnalysis" tag="2008-10-28" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">3.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">3.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1903,6 +1999,7 @@
             <trend-value-fact-element id="STATUS.reopened" provider="WorkItemsAnalysis" tag="2008-10-28" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">1.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">1.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1942,6 +2039,7 @@
             <trend-value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" tag="2009-07-29" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">5.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">2.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1968,6 +2066,7 @@
             <trend-value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" tag="2009-07-29" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">8.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -1994,6 +2093,7 @@
             <trend-value-fact-element id="STATUS.implemented" provider="WorkItemsAnalysis" tag="2009-07-29" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">3.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">1.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2007,6 +2107,7 @@
             <trend-value-fact-element id="STATUS.verified" provider="WorkItemsAnalysis" tag="2009-07-29" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">19.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">22.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2020,6 +2121,7 @@
             <trend-value-fact-element id="STATUS.changes_needed" provider="WorkItemsAnalysis" tag="2009-07-29" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">1.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2033,6 +2135,7 @@
             <trend-value-fact-element id="STATUS.rejected" provider="WorkItemsAnalysis" tag="2009-07-29" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2046,6 +2149,7 @@
             <trend-value-fact-element id="STATUS.active" provider="WorkItemsAnalysis" tag="2009-08-12" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">17.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">17.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2059,6 +2163,7 @@
             <trend-value-fact-element id="STATUS.inactive" provider="WorkItemsAnalysis" tag="2009-08-12" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2137,6 +2242,7 @@
             <trend-value-fact-element id="STATUS.verified-done" provider="WorkItemsAnalysis" tag="2012-03-21" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">13.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">16.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2163,6 +2269,7 @@
             <trend-value-fact-element id="STATUS.verified-rejected" provider="WorkItemsAnalysis" tag="2012-03-21" type="STATUS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2170,6 +2277,32 @@
                     </property>
                     <property id="query">
                         <value>(project.id:elibrary) AND (status:verified-rejected)</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="STATUS.done" provider="WorkItemsAnalysis" tag="2017-05-18" type="STATUS.ITEM">
+                <trend>
+                    <value tag="2017-05-18" type="java.lang.Double">10.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Done</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (status:done)</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="STATUS.in_progress" provider="WorkItemsAnalysis" tag="2017-05-18" type="STATUS.ITEM">
+                <trend>
+                    <value tag="2017-05-18" type="java.lang.Double">4.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>In Progress</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (status:in_progress)</value>
                     </property>
                 </properties>
             </trend-value-fact-element>
@@ -2195,6 +2328,7 @@
             <trend-value-fact-element id="SUSPECT-RATIO.not-suspect" provider="WorkItemsAnalysis" tag="2008-10-28" type="SUSPECT-RATIO.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">102.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">107.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2208,6 +2342,7 @@
             <trend-value-fact-element id="SUSPECT-RATIO.suspect" provider="WorkItemsAnalysis" tag="2008-10-28" type="SUSPECT-RATIO.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">1.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2244,6 +2379,7 @@
             <trend-value-fact-element id="TRACEABILITY-REQUIREMENTS-COMMITS.traceable" provider="WorkItemsAnalysis" tag="2008-10-28" type="TRACEABILITY-REQUIREMENTS-COMMITS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">-84.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">-90.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2254,6 +2390,7 @@
             <trend-value-fact-element id="TRACEABILITY-REQUIREMENTS-COMMITS.untraceable" provider="WorkItemsAnalysis" tag="2008-10-28" type="TRACEABILITY-REQUIREMENTS-COMMITS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">128.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">131.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2289,6 +2426,7 @@
             <trend-value-fact-element id="TRACEABILITY-COMMITS-REQUIREMENTS.traceable" provider="WorkItemsAnalysis" tag="2008-10-28" type="TRACEABILITY-COMMITS-REQUIREMENTS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">1.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2299,6 +2437,7 @@
             <trend-value-fact-element id="TRACEABILITY-COMMITS-REQUIREMENTS.untraceable" provider="WorkItemsAnalysis" tag="2008-10-28" type="TRACEABILITY-COMMITS-REQUIREMENTS.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">1.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">2.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2336,6 +2475,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.changerequest" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2349,6 +2489,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.task" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">29.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">30.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2362,6 +2503,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.defect" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">12.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">12.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2375,6 +2517,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.userstory" provider="WorkItemsAnalysis" tag="2009-07-29" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">25.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">25.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2388,6 +2531,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.testcase" provider="WorkItemsAnalysis" tag="2009-08-12" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">18.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">18.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2401,6 +2545,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.requirement" provider="WorkItemsAnalysis" tag="2009-08-12" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">16.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">16.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2427,6 +2572,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.testing" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2440,6 +2586,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.documentation" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2453,6 +2600,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.implementation" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2466,6 +2614,7 @@
             <trend-value-fact-element id="ITEMS-BY-TYPE.analysis" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2519,6 +2668,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.changerequest" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2532,6 +2682,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.task" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">10.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">10.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2545,6 +2696,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.defect" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">9.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">6.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2558,6 +2710,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.userstory" provider="WorkItemsAnalysis" tag="2009-07-29" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">11.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">10.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2571,6 +2724,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.requirement" provider="WorkItemsAnalysis" tag="2009-08-12" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">8.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">16.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2584,6 +2738,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.testcase" provider="WorkItemsAnalysis" tag="2009-08-12" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">18.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">18.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2610,6 +2765,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.testing" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2623,6 +2779,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.documentation" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2636,6 +2793,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.implementation" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2649,6 +2807,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.analysis" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2702,6 +2861,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.changerequest" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2715,6 +2875,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.task" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">10.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">10.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2728,6 +2889,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.defect" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">7.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">6.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2741,6 +2903,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.userstory" provider="WorkItemsAnalysis" tag="2009-07-29" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">6.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2754,6 +2917,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.testcase" provider="WorkItemsAnalysis" tag="2009-08-12" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2767,6 +2931,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.requirement" provider="WorkItemsAnalysis" tag="2009-08-12" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">3.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">3.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2793,6 +2958,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.testing" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2806,6 +2972,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.documentation" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2819,6 +2986,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.implementation" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2832,6 +3000,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.analysis" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2885,6 +3054,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.changerequest" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2898,6 +3068,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.task" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">10.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2911,6 +3082,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.defect" provider="WorkItemsAnalysis" tag="2008-10-28" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">3.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2924,6 +3096,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.userstory" provider="WorkItemsAnalysis" tag="2009-07-29" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">7.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">9.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2937,6 +3110,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.requirement" provider="WorkItemsAnalysis" tag="2009-08-12" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2950,6 +3124,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.testcase" provider="WorkItemsAnalysis" tag="2009-08-12" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2976,6 +3151,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.testing" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -2989,6 +3165,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.documentation" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -3002,6 +3179,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.implementation" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -3015,6 +3193,7 @@
             <trend-value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.analysis" provider="WorkItemsAnalysis" tag="2012-03-21" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">0.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">0.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -3067,6 +3246,7 @@
             <trend-value-fact-element id="WORKITEMS-PLANNING-ACCURACY.correct" provider="WorkItemsAnalysis" tag="2009-07-29" type="WORKITEMS-PLANNING-ACCURACY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">63.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">54.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -3077,6 +3257,7 @@
             <trend-value-fact-element id="WORKITEMS-PLANNING-ACCURACY.incorrect" provider="WorkItemsAnalysis" tag="2009-07-29" type="WORKITEMS-PLANNING-ACCURACY.ITEM">
                 <trend>
                     <value tag="2017-05-15" type="java.lang.Double">4.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">4.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -3088,6 +3269,7 @@
         <trend-value-fact-element id="PLANNING-ACCURACY" provider="WorkItemsAnalysis" tag="2008-10-28" type="PLANNING-ACCURACY">
             <trend>
                 <value tag="2017-05-15">--</value>
+                <value tag="2017-05-18">--</value>
             </trend>
             <properties>
                 <property id="trendable">
@@ -3108,6 +3290,7 @@
         <trend-value-fact-element id="ALL" provider="WorkItemsAnalysis" tag="2008-10-28" type="ALL">
             <trend>
                 <value tag="2017-05-15" type="java.lang.Double">147.0</value>
+                <value tag="2017-05-18" type="java.lang.Double">148.0</value>
             </trend>
             <properties>
                 <property id="label">
@@ -3124,6 +3307,7 @@
         <trend-value-fact-element id="OPEN" provider="WorkItemsAnalysis" tag="2008-10-28" type="OPEN">
             <trend>
                 <value tag="2017-05-15" type="java.lang.Double">13.0</value>
+                <value tag="2017-05-18" type="java.lang.Double">6.0</value>
             </trend>
             <properties>
                 <property id="label">
@@ -3140,6 +3324,7 @@
         <trend-value-fact-element id="NEW" provider="WorkItemsAnalysis" tag="2008-10-28" type="NEW">
             <trend>
                 <value tag="2017-05-15" type="java.lang.Double">83.0</value>
+                <value tag="2017-05-18" type="java.lang.Double">82.0</value>
             </trend>
             <properties>
                 <property id="label">
@@ -3256,6 +3441,38 @@
                 <value tag="2017-05-15" type="java.lang.Double">0.0</value>
             </trend>
             <properties>
+                <property id="trendable">
+                    <value>true</value>
+                </property>
+            </properties>
+        </trend-value-fact-element>
+        <trend-value-fact-element id="UNRESOLVED-VERSION-1" provider="WorkItemsAnalysis" tag="2017-05-18" type="UNRESOLVED-VERSION-1">
+            <trend>
+                <value tag="2017-05-18" type="java.lang.Double">6.0</value>
+            </trend>
+            <properties>
+                <property id="label">
+                    <value>Unresolved Work Items Planned for Version 1.0</value>
+                </property>
+                <property id="query">
+                    <value>targetVersion.KEY:Version_1_0 AND NOT HAS_VALUE:resolution</value>
+                </property>
+                <property id="trendable">
+                    <value>true</value>
+                </property>
+            </properties>
+        </trend-value-fact-element>
+        <trend-value-fact-element id="NOT-VERIFIED-REQUIREMENTS-VERSION-1" provider="WorkItemsAnalysis" tag="2017-05-18" type="NOT-VERIFIED-REQUIREMENTS-VERSION-1">
+            <trend>
+                <value tag="2017-05-18" type="java.lang.Double">0.0</value>
+            </trend>
+            <properties>
+                <property id="label">
+                    <value>Not Verified Requirements Planned for Version 1.0</value>
+                </property>
+                <property id="query">
+                    <value>targetVersion.KEY:Version_1_0 AND type:requirement AND status:implemented</value>
+                </property>
                 <property id="trendable">
                     <value>true</value>
                 </property>

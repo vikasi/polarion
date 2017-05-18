@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.polarion.maven</groupId>
+  <artifactId>qcentre</artifactId>
+  <version>3.17.0</version>
+  <dependencies>
+    <dependency>
+      <groupId>com.polarion.maven</groupId>
+      <artifactId>plugins-shared</artifactId>
+      <version>3.17.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.polarion.maven</groupId>
+      <artifactId>maven-builder-plugin</artifactId>
+      <version>3.17.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

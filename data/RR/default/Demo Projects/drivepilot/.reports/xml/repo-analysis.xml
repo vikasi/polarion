@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<factbase artifact="drivepilot" id="repo-analysis" tag="2013-05-23">
+<factbase artifact="drivepilot" id="repo-analysis" tag="2017-05-18">
     <structure-element id="root" provider="root" type="root">
         <properties>
             <property id="label">
@@ -15,7 +15,7 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NOF" provider="repo-statistics" type="NOF">
-            <value type="java.lang.Integer">482</value>
+            <value type="java.lang.Integer">431</value>
             <properties>
                 <property id="label">
                     <value>Number of Files</value>
@@ -31,7 +31,7 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NODD" provider="repo-statistics" type="NODD">
-            <value type="java.lang.Integer">1</value>
+            <value type="java.lang.Integer">32</value>
             <properties>
                 <property id="label">
                     <value>Number of Developers for Last Day</value>
@@ -39,7 +39,7 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NODW" provider="repo-statistics" type="NODW">
-            <value type="java.lang.Integer">1</value>
+            <value type="java.lang.Integer">34</value>
             <properties>
                 <property id="label">
                     <value>Number of Developers for Last Week</value>
@@ -47,7 +47,7 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NODM" provider="repo-statistics" type="NODM">
-            <value type="java.lang.Integer">1</value>
+            <value type="java.lang.Integer">34</value>
             <properties>
                 <property id="label">
                     <value>Number of Developers for Last Month</value>
@@ -55,7 +55,7 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NOC" provider="repo-statistics" type="NOC">
-            <value type="java.lang.Integer">1</value>
+            <value type="java.lang.Integer">34</value>
             <properties>
                 <property id="label">
                     <value>Number of Changes</value>
@@ -63,7 +63,7 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NOCD" provider="repo-statistics" type="NOCD">
-            <value type="java.lang.Integer">1</value>
+            <value type="java.lang.Integer">32</value>
             <properties>
                 <property id="label">
                     <value>Number of Changes for Last Day</value>
@@ -71,7 +71,7 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NOCW" provider="repo-statistics" type="NOCW">
-            <value type="java.lang.Integer">1</value>
+            <value type="java.lang.Integer">34</value>
             <properties>
                 <property id="label">
                     <value>Number of Changes for Last Week</value>
@@ -79,7 +79,7 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NOCM" provider="repo-statistics" type="NOCM">
-            <value type="java.lang.Integer">1</value>
+            <value type="java.lang.Integer">34</value>
             <properties>
                 <property id="label">
                     <value>Number of Changes for Last Month</value>
@@ -94,7 +94,7 @@
                 </property>
             </properties>
             <value-fact-element id="NOC_BY_DEVELOPERS/NOC:admin" provider="repo-statistics" type="NOC_BY_DEVELOPERS.ITEM">
-                <value type="java.lang.Integer">1</value>
+                <value type="java.lang.Integer">34</value>
                 <properties>
                     <property id="label">
                         <value>Number of Changes by admin</value>
@@ -103,7 +103,7 @@
             </value-fact-element>
         </value-fact-element>
         <value-fact-element id="MAD" provider="repo-statistics" type="MAD">
-            <value type="java.lang.Integer">1</value>
+            <value type="java.lang.Integer">34</value>
             <properties>
                 <property id="label">
                     <value>Most Active Developer</value>
@@ -119,7 +119,7 @@
             </value-fact-element>
         </value-fact-element>
         <value-fact-element id="LAT" provider="repo-statistics" type="LAT">
-            <value type="java.util.Date">Thu May 23 15:21:33 CEST 2013</value>
+            <value type="java.util.Date">Wed May 17 18:43:44 IST 2017</value>
             <properties>
                 <property id="label">
                     <value>Last Activity Time</value>

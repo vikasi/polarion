@@ -1,0 +1,1404 @@
+2017-05-18 00:00:00,361 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  root  - Job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" has id 17ac81a8-927abe2a-3c28181b-83aa7ed9
+2017-05-18 00:00:00,366 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  root  - Job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" runs as user "polarion"
+2017-05-18 00:00:00,382 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  root  - State of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" changed to ACTIVATING
+2017-05-18 00:00:00,399 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  root  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" has id 17ac81c9-927abe2a-3c28181b-1bf7cfe0
+2017-05-18 00:00:00,407 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  root  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" runs as user "polarion"
+2017-05-18 00:00:00,414 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  root  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to ACTIVATING
+2017-05-18 00:00:00,421 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  root  - Aggregation is enabled - only artificial artifacts will be built
+2017-05-18 00:00:00,430 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  root  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to WAITING
+2017-05-18 00:00:00,434 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  root  - State of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" changed to WAITING
+2017-05-18 00:00:00,444 [Worker-1 | u:p] INFO  root  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to RUNNING
+2017-05-18 00:00:00,449 [Worker-1 | u:p] INFO  root  - State of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" changed to RUNNING
+2017-05-18 00:00:00,561 [Worker-1 | u:p | job: build.deploy] INFO  root  - Deploying artifact _root.default:_artificial:null and its children to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default
+2017-05-18 00:00:00,569 [Worker-1 | u:p | job: build.deploy] INFO  root  - Deploying artifact _root.default:_artificial:null to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default\_artificial\null
+2017-05-18 00:00:00,576 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading resources for _root.default:_artificial:null
+2017-05-18 00:00:00,584 [Worker-1 | u:p | job: build.deploy] INFO  root  - Making directory C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default\_artificial\null
+2017-05-18 00:00:00,632 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading shared configuration from /.polarion/maven to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default\_artificial\null\.config
+2017-05-18 00:00:02,120 [Worker-1 | u:p | job: build.deploy] INFO  root  - Deploying artifact _root.default.Demo_Projects:_artificial:null to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default.Demo_Projects\_artificial\null
+2017-05-18 00:00:02,126 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading resources for _root.default.Demo_Projects:_artificial:null
+2017-05-18 00:00:02,131 [Worker-1 | u:p | job: build.deploy] INFO  root  - Making directory C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default.Demo_Projects\_artificial\null
+2017-05-18 00:00:02,148 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading shared configuration from /.polarion/maven to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default.Demo_Projects\_artificial\null\.config
+2017-05-18 00:00:03,107 [Worker-1 | u:p | job: build.deploy] INFO  root  - Deploying artifact _root.default.Demo_Projects.elibrary:_artificial:null to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\elibrary\_root.default.Demo_Projects.elibrary\_artificial\null
+2017-05-18 00:00:03,113 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading resources for _root.default.Demo_Projects.elibrary:_artificial:null
+2017-05-18 00:00:03,119 [Worker-1 | u:p | job: build.deploy] INFO  root  - Making directory C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\elibrary\_root.default.Demo_Projects.elibrary\_artificial\null
+2017-05-18 00:00:03,141 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading shared configuration from /.polarion/maven to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\elibrary\_root.default.Demo_Projects.elibrary\_artificial\null\.config
+2017-05-18 00:00:04,113 [Worker-1 | u:p | job: build.deploy] INFO  root  - Creating or finding POM file for _root.default.Demo_Projects.elibrary:_artificial:null in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\elibrary\_root.default.Demo_Projects.elibrary\_artificial\null
+2017-05-18 00:00:04,137 [Worker-1 | u:p | job: build.deploy] INFO  root  - POM file created or found in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\elibrary\_root.default.Demo_Projects.elibrary\_artificial\null\pom.xml
+2017-05-18 00:00:04,142 [Worker-1 | u:p | job: build.deploy] INFO  root  - Altering C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\elibrary\_root.default.Demo_Projects.elibrary\_artificial\null\pom.xml for calculation
+2017-05-18 00:00:04,150 [Worker-1 | u:p | job: build.deploy] INFO  root  - Deploying artifact _root.default.Demo_Projects.drivepilot:_artificial:null to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\drivepilot\_root.default.Demo_Projects.drivepilot\_artificial\null
+2017-05-18 00:00:04,156 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading resources for _root.default.Demo_Projects.drivepilot:_artificial:null
+2017-05-18 00:00:04,162 [Worker-1 | u:p | job: build.deploy] INFO  root  - Making directory C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\drivepilot\_root.default.Demo_Projects.drivepilot\_artificial\null
+2017-05-18 00:00:04,185 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading shared configuration from /.polarion/maven to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\drivepilot\_root.default.Demo_Projects.drivepilot\_artificial\null\.config
+2017-05-18 00:00:05,107 [Worker-1 | u:p | job: build.deploy] INFO  root  - Creating or finding POM file for _root.default.Demo_Projects.drivepilot:_artificial:null in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\drivepilot\_root.default.Demo_Projects.drivepilot\_artificial\null
+2017-05-18 00:00:05,114 [Worker-1 | u:p | job: build.deploy] INFO  root  - POM file created or found in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\drivepilot\_root.default.Demo_Projects.drivepilot\_artificial\null\pom.xml
+2017-05-18 00:00:05,120 [Worker-1 | u:p | job: build.deploy] INFO  root  - Altering C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\drivepilot\_root.default.Demo_Projects.drivepilot\_artificial\null\pom.xml for calculation
+2017-05-18 00:00:05,129 [Worker-1 | u:p | job: build.deploy] INFO  root  - Creating or finding POM file for _root.default.Demo_Projects:_artificial:null in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default.Demo_Projects\_artificial\null
+2017-05-18 00:00:05,137 [Worker-1 | u:p | job: build.deploy] INFO  root  - POM file created or found in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default.Demo_Projects\_artificial\null\pom.xml
+2017-05-18 00:00:05,143 [Worker-1 | u:p | job: build.deploy] INFO  root  - Altering C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default.Demo_Projects\_artificial\null\pom.xml for calculation
+2017-05-18 00:00:05,151 [Worker-1 | u:p | job: build.deploy] INFO  root  - Deploying artifact _root.default.library:_artificial:null to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\library\_root.default.library\_artificial\null
+2017-05-18 00:00:05,157 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading resources for _root.default.library:_artificial:null
+2017-05-18 00:00:05,164 [Worker-1 | u:p | job: build.deploy] INFO  root  - Making directory C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\library\_root.default.library\_artificial\null
+2017-05-18 00:00:05,182 [Worker-1 | u:p | job: build.deploy] INFO  root  - Downloading shared configuration from /.polarion/maven to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\library\_root.default.library\_artificial\null\.config
+2017-05-18 00:00:06,106 [Worker-1 | u:p | job: build.deploy] INFO  root  - Creating or finding POM file for _root.default.library:_artificial:null in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\library\_root.default.library\_artificial\null
+2017-05-18 00:00:06,113 [Worker-1 | u:p | job: build.deploy] INFO  root  - POM file created or found in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\library\_root.default.library\_artificial\null\pom.xml
+2017-05-18 00:00:06,119 [Worker-1 | u:p | job: build.deploy] INFO  root  - Altering C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\library\_root.default.library\_artificial\null\pom.xml for calculation
+2017-05-18 00:00:06,127 [Worker-1 | u:p | job: build.deploy] INFO  root  - Creating or finding POM file for _root.default:_artificial:null in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default\_artificial\null
+2017-05-18 00:00:06,134 [Worker-1 | u:p | job: build.deploy] INFO  root  - POM file created or found in C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default\_artificial\null\pom.xml
+2017-05-18 00:00:06,140 [Worker-1 | u:p | job: build.deploy] INFO  root  - Altering C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default\_artificial\null\pom.xml for calculation
+2017-05-18 00:00:06,148 [Worker-1 | u:p] INFO  root  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to FINISHED
+2017-05-18 00:00:06,154 [Worker-1 | u:p] INFO  root  - Status of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" is OK
+2017-05-18 00:00:06,163 [Worker-1 | u:p | job: build.build] INFO  root  - Build properties:
+
+build-config-shared.local.repository=true
+maven.compiler.failOnError=false
+polarion.build.calc.support.0=17ac984f-927abe2a-3c28181b-dce9666c
+polarion.build.calc.support.1=17ac984f-927abe2a-3c28181b-d59915d8
+polarion.build.calc.support.2=http://localhost
+polarion.build.calc.support.3=c:\Polarion\polarion/configuration/polarion.properties
+polarion.build.calc.support.4=C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0000
+polarion.build.calc.support.5=
+polarion.build.calc.support.file=C:\Temp\CalcSupport4056077588087053540.properties
+polarion.build.default.deploy.repository.id=polarion-shared
+polarion.build.default.deploy.repository.url=file://c:\Polarion\polarion/../data/shared-maven-repo
+polarion.build.id=20170518-0000_calc_17ac80a6-927abe2a-3c28181b-19f872b0
+polarion.build.maven.check.plugin.updates=false
+polarion.build.maven.extra.jvm.options=-Xmx640m
+polarion.build.maven.location.maven2=c:\Polarion\polarion/../maven/distribution
+polarion.build.maven.plugin.registry.name=calculations-plugin-registry.xml
+polarion.files.repository=c:\Polarion\polarion\..\data\BIR
+polarion.reports.repository=c:\Polarion\polarion\..\data\RR
+
+2017-05-18 00:00:06,171 [Worker-1 | u:p | job: build.build] INFO  root  - Using external Maven named 'maven2'
+2017-05-18 00:00:06,181 [Worker-1 | u:p | job: build.build] INFO  root  - Maven execution settings:
+
+recursive is true
+offline is false
+usePluginRegistry is true
+updateSnapshots is false
+reactorActive is false
+globalChecksumPolicy is null
+pluginUpdateOverride is false
+activeProfiles is []
+inactiveProfiles is []
+reactorFailureBehaviour is null
+
+2017-05-18 00:00:06,187 [Worker-1 | u:p | job: build.build] INFO  root  - Used settings file: c:\Polarion\polarion\..\maven\settings.xml
+2017-05-18 00:00:06,193 [Worker-1 | u:p | job: build.build] INFO  root  - Executing C:\Polarion\bundled\java\bin\javaw.exe
+  -- args [-Xmx640m, -Xbootclasspath/a:C:\Polarion\bundled\java\lib\tools.jar, -Dmaven.home=c:\Polarion\polarion\..\maven\distribution, -Dorg.apache.maven.user-plugin-registry=c:\Polarion\polarion\..\maven\calculations-plugin-registry.xml, -Dclassworlds.conf=c:\Polarion\polarion\..\maven\distribution\bin\m2.conf, -classpath, c:\Polarion\polarion\..\maven\distribution\boot\classworlds-1.1.jar, org.codehaus.classworlds.Launcher, --settings, c:\Polarion\polarion\..\maven\settings.xml, --batch-mode, --no-plugin-updates, --file, C:\Polarion\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default\_artificial\null\pom.xml, --errors, -Dbuild-config-shared.local.repository=true, -Dpolarion.build.id=20170518-0000_calc_17ac80a6-927abe2a-3c28181b-19f872b0, -Dpolarion.files.repository=c:\Polarion\polarion\..\data\BIR, -Dpolarion.build.maven.extra.jvm.options=-Xmx640m, -Dpolarion.build.maven.plugin.registry.name=calculations-plugin-registry.xml, -Dpolarion.build.maven.location.maven2=c:\Polarion\polarion/../maven/distribution, -Dpolarion.build.calc.support.5=, -Dpolarion.build.calc.support.4=C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0000, -Dpolarion.build.calc.support.3=c:\Polarion\polarion/configuration/polarion.properties, -Dpolarion.build.calc.support.2=http://localhost, -Dpolarion.build.calc.support.1=17ac984f-927abe2a-3c28181b-d59915d8, -Dpolarion.build.calc.support.0=17ac984f-927abe2a-3c28181b-dce9666c, -Dpolarion.build.default.deploy.repository.url=file://c:\Polarion\polarion/../data/shared-maven-repo, -Dmaven.compiler.failOnError=false, -Dpolarion.build.default.deploy.repository.id=polarion-shared, -Dpolarion.build.calc.support.file=C:\Temp\CalcSupport4056077588087053540.properties, -Dpolarion.build.maven.check.plugin.updates=false, -Dpolarion.reports.repository=c:\Polarion\polarion\..\data\RR, com.polarion.maven.plugins.qcentre:trackeranalysis:calculate, com.polarion.maven.plugins.qcentre:trackeranalysis:report, com.polarion.maven.plugins.qcentre:projectscore:calculate, com.polarion.maven.plugins.qcentre:projectscore:report, com.polarion.maven.plugins.qcentre:projectscore:aggregate, com.polarion.maven.plugins.qcentre:projectscore:reportAggregated]
+  -- env null
+  -- dir C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default\_agg\_root\_root.default\_artificial\null
+2017-05-18 00:00:06,740 [Thread-58] INFO  root  - + Error stacktraces are turned on.
+2017-05-18 00:00:06,789 [Thread-58] INFO  root  - Scanning for projects...
+2017-05-18 00:00:06,795 [Thread-58] INFO  root  - Reactor build order:
+2017-05-18 00:00:06,800 [Thread-58] INFO  root  - _root.default.Demo_Projects.elibrary:_artificial:null
+2017-05-18 00:00:06,804 [Thread-58] INFO  root  - _root.default.Demo_Projects.drivepilot:_artificial:null
+2017-05-18 00:00:06,808 [Thread-58] INFO  root  - _root.default.Demo_Projects:_artificial:null
+2017-05-18 00:00:06,813 [Thread-58] INFO  root  - _root.default.library:_artificial:null
+2017-05-18 00:00:06,819 [Thread-58] INFO  root  - _root.default:_artificial:null
+2017-05-18 00:00:06,840 [Thread-58] INFO  root  - artifact com.polarion.maven.plugins.qcentre:trackeranalysis: checking for updates from polarion-shared
+2017-05-18 00:00:06,848 [Thread-58] INFO  root  - artifact com.polarion.maven.plugins.qcentre:trackeranalysis: checking for updates from polarion-bundled
+2017-05-18 00:00:07,771 [Thread-58] INFO  root  - artifact com.polarion.maven.plugins.qcentre:trackeranalysis: checking for updates from central
+2017-05-18 00:00:07,800 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/plugins/qcentre/trackeranalysis/3.17.0/trackeranalysis-3.17.0.pom
+1K downloaded
+2017-05-18 00:00:07,805 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/maven/plugins/qcentre/trackeranalysis/3.17.0/trackeranalysis-3.17.0.jar
+2017-05-18 00:00:07,809 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.maven.plugins.qcentre:trackeranalysis:maven-plugin:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:07,876 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/plugins/qcentre/trackeranalysis/3.17.0/trackeranalysis-3.17.0.jar
+147K downloaded
+2017-05-18 00:00:07,881 [Thread-58] INFO  root  - artifact com.polarion.maven.plugins.qcentre:projectscore: checking for updates from polarion-shared
+2017-05-18 00:00:07,885 [Thread-58] INFO  root  - artifact com.polarion.maven.plugins.qcentre:projectscore: checking for updates from polarion-bundled
+2017-05-18 00:00:08,622 [Thread-58] INFO  root  - artifact com.polarion.maven.plugins.qcentre:projectscore: checking for updates from central
+2017-05-18 00:00:08,641 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/plugins/qcentre/projectscore/3.17.0/projectscore-3.17.0.pom
+1K downloaded
+2017-05-18 00:00:08,645 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/maven/plugins/qcentre/projectscore/3.17.0/projectscore-3.17.0.jar
+2017-05-18 00:00:08,650 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.maven.plugins.qcentre:projectscore:maven-plugin:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,678 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/plugins/qcentre/projectscore/3.17.0/projectscore-3.17.0.jar
+28K downloaded
+2017-05-18 00:00:08,685 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:08,690 [Thread-58] INFO  root  - Building _root.default.Demo_Projects.elibrary:_artificial:null
+2017-05-18 00:00:08,694 [Thread-58] INFO  root  - task-segment: [com.polarion.maven.plugins.qcentre:trackeranalysis:calculate, com.polarion.maven.plugins.qcentre:trackeranalysis:report, com.polarion.maven.plugins.qcentre:projectscore:calculate, com.polarion.maven.plugins.qcentre:projectscore:report, com.polarion.maven.plugins.qcentre:projectscore:aggregate, com.polarion.maven.plugins.qcentre:projectscore:reportAggregated]
+2017-05-18 00:00:08,698 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:08,703 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-plugin-api/2.0/maven-plugin-api-2.0.pom
+2017-05-18 00:00:08,708 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-plugin-api:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,712 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-plugin-api/2.0/maven-plugin-api-2.0.pom
+601b downloaded
+2017-05-18 00:00:08,716 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven/2.0/maven-2.0.pom
+2017-05-18 00:00:08,721 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,727 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven/2.0/maven-2.0.pom
+8K downloaded
+2017-05-18 00:00:08,731 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-project/2.0/maven-project-2.0.pom
+2017-05-18 00:00:08,736 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-project:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,761 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-project/2.0/maven-project-2.0.pom
+1K downloaded
+2017-05-18 00:00:08,765 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-profile/2.0/maven-profile-2.0.pom
+2017-05-18 00:00:08,769 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-profile:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,794 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-profile/2.0/maven-profile-2.0.pom
+1K downloaded
+2017-05-18 00:00:08,798 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-model/2.0/maven-model-2.0.pom
+2017-05-18 00:00:08,802 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-model:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,825 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-model/2.0/maven-model-2.0.pom
+2K downloaded
+2017-05-18 00:00:08,831 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.pom
+2017-05-18 00:00:08,836 [Thread-58] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:pom:1.0.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,856 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.pom
+6K downloaded
+2017-05-18 00:00:08,860 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-container-default/1.0-alpha-8/plexus-container-default-1.0-alpha-8.pom
+2017-05-18 00:00:08,864 [Thread-58] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-container-default:pom:1.0-alpha-8' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,878 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-8/plexus-container-default-1.0-alpha-8.pom
+7K downloaded
+2017-05-18 00:00:08,883 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/junit/junit/3.8.1/junit-3.8.1.pom
+2017-05-18 00:00:08,889 [Thread-58] INFO  root  - Unable to find resource 'junit:junit:pom:3.8.1' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,906 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/junit/junit/3.8.1/junit-3.8.1.pom
+998b downloaded
+2017-05-18 00:00:08,910 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.pom
+2017-05-18 00:00:08,915 [Thread-58] INFO  root  - Unable to find resource 'classworlds:classworlds:pom:1.1-alpha-2' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,932 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.pom
+3K downloaded
+2017-05-18 00:00:08,937 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-artifact-manager/2.0/maven-artifact-manager-2.0.pom
+2017-05-18 00:00:08,941 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-artifact-manager:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,961 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-artifact-manager/2.0/maven-artifact-manager-2.0.pom
+1K downloaded
+2017-05-18 00:00:08,967 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-repository-metadata/2.0/maven-repository-metadata-2.0.pom
+2017-05-18 00:00:08,971 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-repository-metadata:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,982 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-repository-metadata/2.0/maven-repository-metadata-2.0.pom
+1K downloaded
+2017-05-18 00:00:08,987 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-artifact/2.0/maven-artifact-2.0.pom
+2017-05-18 00:00:08,991 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-artifact:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:08,997 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-artifact/2.0/maven-artifact-2.0.pom
+723b downloaded
+2017-05-18 00:00:09,002 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-provider-api/1.0-alpha-5/wagon-provider-api-1.0-alpha-5.pom
+2017-05-18 00:00:09,007 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-provider-api:pom:1.0-alpha-5' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,022 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/wagon/wagon-provider-api/1.0-alpha-5/wagon-provider-api-1.0-alpha-5.pom
+4K downloaded
+2017-05-18 00:00:09,027 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-core/2.0/maven-core-2.0.pom
+2017-05-18 00:00:09,031 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-core:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,050 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-core/2.0/maven-core-2.0.pom
+5K downloaded
+2017-05-18 00:00:09,055 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-settings/2.0/maven-settings-2.0.pom
+2017-05-18 00:00:09,059 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-settings:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,075 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-settings/2.0/maven-settings-2.0.pom
+1K downloaded
+2017-05-18 00:00:09,080 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-file/1.0-alpha-5/wagon-file-1.0-alpha-5.pom
+2017-05-18 00:00:09,084 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-file:pom:1.0-alpha-5' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,095 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/wagon/wagon-file/1.0-alpha-5/wagon-file-1.0-alpha-5.pom
+5K downloaded
+2017-05-18 00:00:09,100 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-plugin-parameter-documenter/2.0/maven-plugin-parameter-documenter-2.0.pom
+2017-05-18 00:00:09,105 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-plugin-parameter-documenter:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,122 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-plugin-parameter-documenter/2.0/maven-plugin-parameter-documenter-2.0.pom
+1K downloaded
+2017-05-18 00:00:09,128 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-http-lightweight/1.0-alpha-5/wagon-http-lightweight-1.0-alpha-5.pom
+2017-05-18 00:00:09,133 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-http-lightweight:pom:1.0-alpha-5' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,143 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/wagon/wagon-http-lightweight/1.0-alpha-5/wagon-http-lightweight-1.0-alpha-5.pom
+5K downloaded
+2017-05-18 00:00:09,149 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/reporting/maven-reporting-api/2.0/maven-reporting-api-2.0.pom
+2017-05-18 00:00:09,155 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven.reporting:maven-reporting-api:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,161 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/reporting/maven-reporting-api/2.0/maven-reporting-api-2.0.pom
+1K downloaded
+2017-05-18 00:00:09,167 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/reporting/maven-reporting/2.0/maven-reporting-2.0.pom
+2017-05-18 00:00:09,173 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven.reporting:maven-reporting:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,179 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/reporting/maven-reporting/2.0/maven-reporting-2.0.pom
+504b downloaded
+2017-05-18 00:00:09,184 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/doxia/doxia-sink-api/1.0-alpha-4/doxia-sink-api-1.0-alpha-4.pom
+2017-05-18 00:00:09,189 [Thread-58] INFO  root  - Unable to find resource 'doxia:doxia-sink-api:pom:1.0-alpha-4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,198 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/doxia/doxia-sink-api/1.0-alpha-4/doxia-sink-api-1.0-alpha-4.pom
+1K downloaded
+2017-05-18 00:00:09,203 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-error-diagnostics/2.0/maven-error-diagnostics-2.0.pom
+2017-05-18 00:00:09,208 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-error-diagnostics:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,223 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-error-diagnostics/2.0/maven-error-diagnostics-2.0.pom
+812b downloaded
+2017-05-18 00:00:09,228 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-plugin-registry/2.0/maven-plugin-registry-2.0.pom
+2017-05-18 00:00:09,232 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-plugin-registry:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,247 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-plugin-registry/2.0/maven-plugin-registry-2.0.pom
+1K downloaded
+2017-05-18 00:00:09,253 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-cli/commons-cli/1.0/commons-cli-1.0.pom
+2017-05-18 00:00:09,258 [Thread-58] INFO  root  - Unable to find resource 'commons-cli:commons-cli:pom:1.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,273 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-cli/commons-cli/1.0/commons-cli-1.0.pom
+2K downloaded
+2017-05-18 00:00:09,278 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-plugin-descriptor/2.0/maven-plugin-descriptor-2.0.pom
+2017-05-18 00:00:09,283 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-plugin-descriptor:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,303 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-plugin-descriptor/2.0/maven-plugin-descriptor-2.0.pom
+1K downloaded
+2017-05-18 00:00:09,308 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.pom
+2017-05-18 00:00:09,312 [Thread-58] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-interactivity-api:pom:1.0-alpha-4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,327 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.pom
+6K downloaded
+2017-05-18 00:00:09,332 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/maven-monitor/2.0/maven-monitor-2.0.pom
+2017-05-18 00:00:09,337 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven:maven-monitor:pom:2.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,342 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/maven-monitor/2.0/maven-monitor-2.0.pom
+400b downloaded
+2017-05-18 00:00:09,346 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/maven/wagon/wagon-ssh/1.0-alpha-5/wagon-ssh-1.0-alpha-5.pom
+2017-05-18 00:00:09,351 [Thread-58] INFO  root  - Unable to find resource 'org.apache.maven.wagon:wagon-ssh:pom:1.0-alpha-5' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,358 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/maven/wagon/wagon-ssh/1.0-alpha-5/wagon-ssh-1.0-alpha-5.pom
+6K downloaded
+2017-05-18 00:00:09,363 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/jcraft/jsch/0.1.23/jsch-0.1.23.pom
+2017-05-18 00:00:09,369 [Thread-58] INFO  root  - Unable to find resource 'com.jcraft:jsch:pom:0.1.23' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,374 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/jcraft/jsch/0.1.23/jsch-0.1.23.pom
+485b downloaded
+2017-05-18 00:00:09,378 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/maven/plugins-shared/3.17.0/plugins-shared-3.17.0.pom
+2017-05-18 00:00:09,383 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.maven:plugins-shared:pom:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,389 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/plugins-shared/3.17.0/plugins-shared-3.17.0.pom
+964b downloaded
+2017-05-18 00:00:09,393 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/log4j/log4j/1.2.7/log4j-1.2.7.pom
+2017-05-18 00:00:09,398 [Thread-58] INFO  root  - Unable to find resource 'log4j:log4j:pom:1.2.7' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,403 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/log4j/log4j/1.2.7/log4j-1.2.7.pom
+144b downloaded
+2017-05-18 00:00:09,408 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-math/commons-math/1.2/commons-math-1.2.pom
+2017-05-18 00:00:09,413 [Thread-58] INFO  root  - Unable to find resource 'commons-math:commons-math:pom:1.2' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,418 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-math/commons-math/1.2/commons-math-1.2.pom
+13K downloaded
+2017-05-18 00:00:09,422 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/commons/commons-parent/7/commons-parent-7.pom
+2017-05-18 00:00:09,427 [Thread-58] INFO  root  - Unable to find resource 'org.apache.commons:commons-parent:pom:7' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,435 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/commons/commons-parent/7/commons-parent-7.pom
+17K downloaded
+2017-05-18 00:00:09,441 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/apache/4/apache-4.pom
+2017-05-18 00:00:09,446 [Thread-58] INFO  root  - Unable to find resource 'org.apache:apache:pom:4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:09,458 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/apache/4/apache-4.pom
+4K downloaded
+2017-05-18 00:00:09,463 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-io/commons-io/1.4/commons-io-1.4.pom
+2017-05-18 00:00:09,468 [Thread-58] INFO  root  - Unable to find resource 'commons-io:commons-io:pom:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,432 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-io/commons-io/1.4/commons-io-1.4.pom
+12K downloaded
+2017-05-18 00:00:10,438 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-logging/commons-logging/1.0.3/commons-logging-1.0.3.pom
+2017-05-18 00:00:10,442 [Thread-58] INFO  root  - Unable to find resource 'commons-logging:commons-logging:pom:1.0.3' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,457 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-logging/commons-logging/1.0.3/commons-logging-1.0.3.pom
+866b downloaded
+2017-05-18 00:00:10,462 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/maven/maven-builder-plugin/3.17.0/maven-builder-plugin-3.17.0.pom
+2017-05-18 00:00:10,466 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.maven:maven-builder-plugin:pom:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,477 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/maven-builder-plugin/3.17.0/maven-builder-plugin-3.17.0.pom
+2K downloaded
+2017-05-18 00:00:10,482 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-archiver/1.0-alpha-3/plexus-archiver-1.0-alpha-3.pom
+2017-05-18 00:00:10,486 [Thread-58] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-archiver:pom:1.0-alpha-3' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,502 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/codehaus/plexus/plexus-archiver/1.0-alpha-3/plexus-archiver-1.0-alpha-3.pom
+6K downloaded
+2017-05-18 00:00:10,507 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/alm/ws-client/3.17.0/ws-client-3.17.0.pom
+2017-05-18 00:00:10,511 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.alm:ws-client:pom:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,523 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/alm/ws-client/3.17.0/ws-client-3.17.0.pom
+2K downloaded
+2017-05-18 00:00:10,528 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.pom
+2017-05-18 00:00:10,533 [Thread-58] INFO  root  - Unable to find resource 'commons-logging:commons-logging:pom:1.0.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,544 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.pom
+5K downloaded
+2017-05-18 00:00:10,550 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/axis/axis/1.4/axis-1.4.pom
+2017-05-18 00:00:10,554 [Thread-58] INFO  root  - Unable to find resource 'axis:axis:pom:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,564 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/axis/axis/1.4/axis-1.4.pom
+2K downloaded
+2017-05-18 00:00:10,569 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/axis/axis-jaxrpc/1.4/axis-jaxrpc-1.4.pom
+2017-05-18 00:00:10,574 [Thread-58] INFO  root  - Unable to find resource 'axis:axis-jaxrpc:pom:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,579 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/axis/axis-jaxrpc/1.4/axis-jaxrpc-1.4.pom
+280b downloaded
+2017-05-18 00:00:10,583 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/axis/axis-jaxrpc/1.4/axis-jaxrpc-1.4.pom
+2017-05-18 00:00:10,588 [Thread-58] INFO  root  - Unable to find resource 'org.apache.axis:axis-jaxrpc:pom:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,593 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/axis/axis-jaxrpc/1.4/axis-jaxrpc-1.4.pom
+350b downloaded
+2017-05-18 00:00:10,598 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/axis/axis-saaj/1.4/axis-saaj-1.4.pom
+2017-05-18 00:00:10,603 [Thread-58] INFO  root  - Unable to find resource 'axis:axis-saaj:pom:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,609 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/axis/axis-saaj/1.4/axis-saaj-1.4.pom
+278b downloaded
+2017-05-18 00:00:10,614 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/axis/axis-saaj/1.4/axis-saaj-1.4.pom
+2017-05-18 00:00:10,619 [Thread-58] INFO  root  - Unable to find resource 'org.apache.axis:axis-saaj:pom:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,626 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/axis/axis-saaj/1.4/axis-saaj-1.4.pom
+348b downloaded
+2017-05-18 00:00:10,631 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/axis/axis-wsdl4j/1.5.1/axis-wsdl4j-1.5.1.pom
+2017-05-18 00:00:10,636 [Thread-58] INFO  root  - Unable to find resource 'axis:axis-wsdl4j:pom:1.5.1' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,641 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/axis/axis-wsdl4j/1.5.1/axis-wsdl4j-1.5.1.pom
+149b downloaded
+2017-05-18 00:00:10,646 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-discovery/commons-discovery/0.2/commons-discovery-0.2.pom
+2017-05-18 00:00:10,652 [Thread-58] INFO  root  - Unable to find resource 'commons-discovery:commons-discovery:pom:0.2' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,658 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-discovery/commons-discovery/0.2/commons-discovery-0.2.pom
+1K downloaded
+2017-05-18 00:00:10,663 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.pom
+2017-05-18 00:00:10,668 [Thread-58] INFO  root  - Unable to find resource 'commons-httpclient:commons-httpclient:pom:3.1' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,674 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.pom
+7K downloaded
+2017-05-18 00:00:10,679 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-codec/commons-codec/1.2/commons-codec-1.2.pom
+2017-05-18 00:00:10,685 [Thread-58] INFO  root  - Unable to find resource 'commons-codec:commons-codec:pom:1.2' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,690 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.pom
+3K downloaded
+2017-05-18 00:00:10,695 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/maven/qcentre/3.17.0/qcentre-3.17.0.pom
+2017-05-18 00:00:10,700 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.maven:qcentre:pom:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,705 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/qcentre/3.17.0/qcentre-3.17.0.pom
+956b downloaded
+2017-05-18 00:00:10,710 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/velocity/velocity/1.4/velocity-1.4.pom
+2017-05-18 00:00:10,715 [Thread-58] INFO  root  - Unable to find resource 'velocity:velocity:pom:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,728 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/velocity/velocity/1.4/velocity-1.4.pom
+2K downloaded
+2017-05-18 00:00:10,733 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/velocity/velocity-dep/1.4/velocity-dep-1.4.pom
+2017-05-18 00:00:10,738 [Thread-58] INFO  root  - Unable to find resource 'velocity:velocity-dep:pom:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,756 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/velocity/velocity-dep/1.4/velocity-dep-1.4.pom
+1K downloaded
+2017-05-18 00:00:10,762 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.pom
+2017-05-18 00:00:10,766 [Thread-58] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:pom:1.1' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,776 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.pom
+767b downloaded
+2017-05-18 00:00:10,781 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/codehaus/plexus/plexus/1.0.4/plexus-1.0.4.pom
+2017-05-18 00:00:10,786 [Thread-58] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus:pom:1.0.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,797 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/codehaus/plexus/plexus/1.0.4/plexus-1.0.4.pom
+5K downloaded
+2017-05-18 00:00:10,802 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar
+2017-05-18 00:00:10,807 [Thread-58] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-utils:jar:1.1' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:10,841 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar
+164K downloaded
+2017-05-18 00:00:10,847 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/maven/plugins-shared/3.17.0/plugins-shared-3.17.0.jar
+2017-05-18 00:00:10,852 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.maven:plugins-shared:jar:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:11,072 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/plugins-shared/3.17.0/plugins-shared-3.17.0.jar
+8015K downloaded
+2017-05-18 00:00:11,077 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/log4j/log4j/1.2.7/log4j-1.2.7.jar
+2017-05-18 00:00:11,083 [Thread-58] INFO  root  - Unable to find resource 'log4j:log4j:jar:1.2.7' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:11,106 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/log4j/log4j/1.2.7/log4j-1.2.7.jar
+342K downloaded
+2017-05-18 00:00:11,111 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-math/commons-math/1.2/commons-math-1.2.jar
+2017-05-18 00:00:11,116 [Thread-58] INFO  root  - Unable to find resource 'commons-math:commons-math:jar:1.2' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:11,147 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-math/commons-math/1.2/commons-math-1.2.jar
+330K downloaded
+2017-05-18 00:00:11,153 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-io/commons-io/1.4/commons-io-1.4.jar
+2017-05-18 00:00:11,157 [Thread-58] INFO  root  - Unable to find resource 'commons-io:commons-io:jar:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:11,166 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-io/commons-io/1.4/commons-io-1.4.jar
+106K downloaded
+2017-05-18 00:00:11,171 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-logging/commons-logging/1.0.3/commons-logging-1.0.3.jar
+2017-05-18 00:00:11,176 [Thread-58] INFO  root  - Unable to find resource 'commons-logging:commons-logging:jar:1.0.3' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:11,181 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-logging/commons-logging/1.0.3/commons-logging-1.0.3.jar
+30K downloaded
+2017-05-18 00:00:11,186 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/maven/maven-builder-plugin/3.17.0/maven-builder-plugin-3.17.0.jar
+2017-05-18 00:00:11,191 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.maven:maven-builder-plugin:jar:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:11,196 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/maven-builder-plugin/3.17.0/maven-builder-plugin-3.17.0.jar
+30K downloaded
+2017-05-18 00:00:11,233 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/codehaus/plexus/plexus-archiver/1.0-alpha-3/plexus-archiver-1.0-alpha-3.jar
+2017-05-18 00:00:11,237 [Thread-58] INFO  root  - Unable to find resource 'org.codehaus.plexus:plexus-archiver:jar:1.0-alpha-3' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:11,280 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/codehaus/plexus/plexus-archiver/1.0-alpha-3/plexus-archiver-1.0-alpha-3.jar
+127K downloaded
+2017-05-18 00:00:11,285 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/alm/ws-client/3.17.0/ws-client-3.17.0.jar
+2017-05-18 00:00:11,290 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.alm:ws-client:jar:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:11,342 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/alm/ws-client/3.17.0/ws-client-3.17.0.jar
+1082K downloaded
+2017-05-18 00:00:11,347 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/axis/axis/1.4/axis-1.4.jar
+2017-05-18 00:00:11,352 [Thread-58] INFO  root  - Unable to find resource 'axis:axis:jar:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:11,392 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/axis/axis/1.4/axis-1.4.jar
+1562K downloaded
+2017-05-18 00:00:12,321 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/axis/axis-jaxrpc/1.4/axis-jaxrpc-1.4.jar
+2017-05-18 00:00:12,326 [Thread-58] INFO  root  - Unable to find resource 'org.apache.axis:axis-jaxrpc:jar:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:12,331 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/axis/axis-jaxrpc/1.4/axis-jaxrpc-1.4.jar
+30K downloaded
+2017-05-18 00:00:12,336 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/org/apache/axis/axis-saaj/1.4/axis-saaj-1.4.jar
+2017-05-18 00:00:12,341 [Thread-58] INFO  root  - Unable to find resource 'org.apache.axis:axis-saaj:jar:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:12,346 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/org/apache/axis/axis-saaj/1.4/axis-saaj-1.4.jar
+18K downloaded
+2017-05-18 00:00:12,352 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/axis/axis-wsdl4j/1.5.1/axis-wsdl4j-1.5.1.jar
+2017-05-18 00:00:12,358 [Thread-58] INFO  root  - Unable to find resource 'axis:axis-wsdl4j:jar:1.5.1' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:12,364 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/axis/axis-wsdl4j/1.5.1/axis-wsdl4j-1.5.1.jar
+123K downloaded
+2017-05-18 00:00:12,370 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-discovery/commons-discovery/0.2/commons-discovery-0.2.jar
+2017-05-18 00:00:12,376 [Thread-58] INFO  root  - Unable to find resource 'commons-discovery:commons-discovery:jar:0.2' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:12,381 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-discovery/commons-discovery/0.2/commons-discovery-0.2.jar
+69K downloaded
+2017-05-18 00:00:12,386 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar
+2017-05-18 00:00:12,391 [Thread-58] INFO  root  - Unable to find resource 'commons-httpclient:commons-httpclient:jar:3.1' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:12,396 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar
+297K downloaded
+2017-05-18 00:00:12,401 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/commons-codec/commons-codec/1.2/commons-codec-1.2.jar
+2017-05-18 00:00:12,406 [Thread-58] INFO  root  - Unable to find resource 'commons-codec:commons-codec:jar:1.2' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:12,411 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar
+29K downloaded
+2017-05-18 00:00:12,416 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/com/polarion/maven/qcentre/3.17.0/qcentre-3.17.0.jar
+2017-05-18 00:00:12,421 [Thread-58] INFO  root  - Unable to find resource 'com.polarion.maven:qcentre:jar:3.17.0' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:12,426 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/com/polarion/maven/qcentre/3.17.0/qcentre-3.17.0.jar
+91K downloaded
+2017-05-18 00:00:12,431 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/velocity/velocity/1.4/velocity-1.4.jar
+2017-05-18 00:00:12,436 [Thread-58] INFO  root  - Unable to find resource 'velocity:velocity:jar:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:12,441 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/velocity/velocity/1.4/velocity-1.4.jar
+352K downloaded
+2017-05-18 00:00:12,445 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/data/shared-maven-repo/velocity/velocity-dep/1.4/velocity-dep-1.4.jar
+2017-05-18 00:00:12,450 [Thread-58] INFO  root  - Unable to find resource 'velocity:velocity-dep:jar:1.4' in repository polarion-shared (file:///C:/Polarion/data/shared-maven-repo)
+2017-05-18 00:00:12,456 [Thread-58] INFO  root  - Downloading: file:///C:/Polarion/maven/repository/velocity/velocity-dep/1.4/velocity-dep-1.4.jar
+505K downloaded
+2017-05-18 00:00:12,461 [Thread-58] INFO  root  - [trackeranalysis:calculate]
+2017-05-18 00:00:13,138 [Thread-58] INFO  root  - trackeranalysis:calculate execute on:_root.default.Demo_Projects.elibrary._artificial
+Project id for artifact _root.default.Demo_Projects.elibrary:_artificial is elibrary
+2017-05-18 00:00:13,745 [Thread-58] INFO  root  - runGauge:RESOLVED-UNRESOLVED
+2017-05-18 00:00:13,752 [Thread-58] INFO  root  - runGauge:RESOLVED-UNRESOLVED finished  [ TIME 0.605 s. ]
+2017-05-18 00:00:13,834 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-ASSIGNEE
+2017-05-18 00:00:13,840 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-ASSIGNEE finished  [ TIME 0.089 s. ]
+2017-05-18 00:00:13,867 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-CATEGORY
+2017-05-18 00:00:13,875 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-CATEGORY finished  [ TIME 0.0337 s. ]
+2017-05-18 00:00:13,887 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-TIMEPOINT
+2017-05-18 00:00:13,894 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-TIMEPOINT finished  [ TIME 0.0197 s. ]
+2017-05-18 00:00:13,962 [Thread-58] INFO  root  - runGauge:MAI
+2017-05-18 00:00:13,971 [Thread-58] INFO  root  - runGauge:MAI finished  [ TIME 0.0749 s. ]
+2017-05-18 00:00:14,011 [Thread-58] INFO  root  - runGauge:MEI
+2017-05-18 00:00:14,019 [Thread-58] INFO  root  - runGauge:MEI finished  [ TIME 0.0485 s. ]
+2017-05-18 00:00:14,042 [Thread-58] INFO  root  - runGauge:MSI
+2017-05-18 00:00:14,048 [Thread-58] INFO  root  - runGauge:MSI finished  [ TIME 0.0308 s. ]
+2017-05-18 00:00:14,208 [Thread-58] INFO  root  - runGauge:ESTIMATE-ACCURACY
+0 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.EstimateAccuracyGauge  - starting fresh calculation for 58 work items
+2017-05-18 00:00:14,215 [Thread-58] INFO  root  - runGauge:ESTIMATE-ACCURACY finished  [ TIME 0.166 s. ]
+2017-05-18 00:00:14,222 [Thread-58] INFO  root  - runGauge:PROJECT-PLAN-ACCURACY
+2017-05-18 00:00:14,229 [Thread-58] INFO  root  - runGauge:PROJECT-PLAN-ACCURACY finished  [ TIME 0.0000612 s. ]
+2017-05-18 00:00:14,236 [Thread-58] INFO  root  - runGauge:PLANNING-ACCURACY
+2017-05-18 00:00:14,243 [Thread-58] INFO  root  - runGauge:PLANNING-ACCURACY finished  [ TIME 0.0122 s. ]
+2017-05-18 00:00:14,250 [Thread-58] INFO  root  - runGauge:PLANNING-COVERAGE
+2017-05-18 00:00:14,256 [Thread-58] INFO  root  - runGauge:PLANNING-COVERAGE finished  [ TIME 0.0103 s. ]
+2017-05-18 00:00:15,034 [Thread-58] INFO  root  - runGauge:WORKITEMS-PLANNING-ACCURACY
+2017-05-18 00:00:15,043 [Thread-58] INFO  root  - runGauge:WORKITEMS-PLANNING-ACCURACY finished  [ TIME 0.804 s. ]
+2017-05-18 00:00:15,053 [Thread-58] INFO  root  - runGauge:RESOLVED-RATIO
+2017-05-18 00:00:15,061 [Thread-58] INFO  root  - runGauge:RESOLVED-RATIO finished  [ TIME 0.000689 s. ]
+2017-05-18 00:00:15,068 [Thread-58] INFO  root  - runGauge:ASSIGNMENT-RATIO
+2017-05-18 00:00:15,075 [Thread-58] INFO  root  - runGauge:ASSIGNMENT-RATIO finished  [ TIME 0.0137 s. ]
+2017-05-18 00:00:15,082 [Thread-58] INFO  root  - runGauge:PLANNING-RATIO
+2017-05-18 00:00:15,089 [Thread-58] INFO  root  - runGauge:PLANNING-RATIO finished  [ TIME 0.0156 s. ]
+2017-05-18 00:00:15,106 [Thread-58] INFO  root  - runGauge:SEVERITY
+2017-05-18 00:00:15,117 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:15,125 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:elibrary) AND (severity:trivial)
+2017-05-18 00:00:15,134 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:elibrary) AND (severity:trivial)
+2017-05-18 00:00:15,142 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:elibrary) AND (severity:will_not_have)
+2017-05-18 00:00:15,150 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:elibrary) AND (severity:detailed)
+2017-05-18 00:00:15,158 [Thread-58] INFO  root  - distribution query: Minor = (project.id:elibrary) AND (severity:minor)
+2017-05-18 00:00:15,166 [Thread-58] INFO  root  - distribution query: Minor = (project.id:elibrary) AND (severity:minor)
+2017-05-18 00:00:15,173 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:elibrary) AND (severity:nice_to_have)
+2017-05-18 00:00:15,180 [Thread-58] INFO  root  - distribution query: Basic = (project.id:elibrary) AND (severity:basic)
+2017-05-18 00:00:15,187 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:elibrary) AND (severity:will_not_have)
+2017-05-18 00:00:15,200 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:elibrary) AND (severity:will_not_have)
+2017-05-18 00:00:15,206 [Thread-58] INFO  root  - distribution query: Normal = (project.id:elibrary) AND (severity:normal)
+2017-05-18 00:00:15,215 [Thread-58] INFO  root  - distribution query: Normal = (project.id:elibrary) AND (severity:normal)
+2017-05-18 00:00:15,222 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:elibrary) AND (severity:smoke)
+2017-05-18 00:00:15,229 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:elibrary) AND (severity:nice_to_have)
+2017-05-18 00:00:15,236 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:elibrary) AND (severity:nice_to_have)
+2017-05-18 00:00:15,241 [Thread-58] INFO  root  - distribution query: Major = (project.id:elibrary) AND (severity:major)
+2017-05-18 00:00:15,247 [Thread-58] INFO  root  - distribution query: Major = (project.id:elibrary) AND (severity:major)
+2017-05-18 00:00:15,252 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:elibrary) AND (severity:should_have)
+2017-05-18 00:00:15,257 [Thread-58] INFO  root  - distribution query: Transition = (project.id:elibrary) AND (severity:transition)
+2017-05-18 00:00:15,262 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:elibrary) AND (severity:should_have)
+2017-05-18 00:00:15,267 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:elibrary) AND (severity:should_have)
+2017-05-18 00:00:15,272 [Thread-58] INFO  root  - distribution query: Critical = (project.id:elibrary) AND (severity:critical)
+2017-05-18 00:00:15,279 [Thread-58] INFO  root  - distribution query: Critical = (project.id:elibrary) AND (severity:critical)
+2017-05-18 00:00:15,286 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:elibrary) AND (severity:must_have)
+2017-05-18 00:00:15,293 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:elibrary) AND (severity:must_have)
+2017-05-18 00:00:15,301 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:elibrary) AND (severity:blocker)
+2017-05-18 00:00:15,309 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:elibrary) AND (severity:blocker)
+2017-05-18 00:00:15,318 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:elibrary) AND (severity:must_have)
+2017-05-18 00:00:15,326 [Thread-58] INFO  root  - runGauge:SEVERITY finished  [ TIME 0.105 s. ]
+2017-05-18 00:00:15,334 [Thread-58] INFO  root  - runGauge:OPEN-BY-SEVERITY
+2017-05-18 00:00:15,341 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:15,349 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:elibrary) AND (severity:trivial AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,357 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:elibrary) AND (severity:trivial AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,365 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:elibrary) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,380 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:elibrary) AND (severity:detailed AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,396 [Thread-58] INFO  root  - distribution query: Minor = (project.id:elibrary) AND (severity:minor AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,404 [Thread-58] INFO  root  - distribution query: Minor = (project.id:elibrary) AND (severity:minor AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,411 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,418 [Thread-58] INFO  root  - distribution query: Basic = (project.id:elibrary) AND (severity:basic AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,423 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:elibrary) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,428 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:elibrary) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,433 [Thread-58] INFO  root  - distribution query: Normal = (project.id:elibrary) AND (severity:normal AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,437 [Thread-58] INFO  root  - distribution query: Normal = (project.id:elibrary) AND (severity:normal AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,442 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:elibrary) AND (severity:smoke AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,447 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,452 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,457 [Thread-58] INFO  root  - distribution query: Major = (project.id:elibrary) AND (severity:major AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,462 [Thread-58] INFO  root  - distribution query: Major = (project.id:elibrary) AND (severity:major AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,467 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,471 [Thread-58] INFO  root  - distribution query: Transition = (project.id:elibrary) AND (severity:transition AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,476 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,481 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,486 [Thread-58] INFO  root  - distribution query: Critical = (project.id:elibrary) AND (severity:critical AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,491 [Thread-58] INFO  root  - distribution query: Critical = (project.id:elibrary) AND (severity:critical AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,495 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:elibrary) AND (severity:must_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,501 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:elibrary) AND (severity:must_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,506 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:elibrary) AND (severity:blocker AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,510 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:elibrary) AND (severity:blocker AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,515 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:elibrary) AND (severity:must_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,520 [Thread-58] INFO  root  - runGauge:OPEN-BY-SEVERITY finished  [ TIME 0.0629 s. ]
+2017-05-18 00:00:15,525 [Thread-58] INFO  root  - runGauge:RESOLVED-BY-SEVERITY
+2017-05-18 00:00:15,529 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:15,534 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:elibrary) AND (severity:trivial AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,539 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:elibrary) AND (severity:trivial AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,546 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:elibrary) AND (severity:will_not_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,553 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:elibrary) AND (severity:detailed AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,559 [Thread-58] INFO  root  - distribution query: Minor = (project.id:elibrary) AND (severity:minor AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,565 [Thread-58] INFO  root  - distribution query: Minor = (project.id:elibrary) AND (severity:minor AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,572 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,579 [Thread-58] INFO  root  - distribution query: Basic = (project.id:elibrary) AND (severity:basic AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,586 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:elibrary) AND (severity:will_not_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,593 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:elibrary) AND (severity:will_not_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,600 [Thread-58] INFO  root  - distribution query: Normal = (project.id:elibrary) AND (severity:normal AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,608 [Thread-58] INFO  root  - distribution query: Normal = (project.id:elibrary) AND (severity:normal AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,615 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:elibrary) AND (severity:smoke AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,623 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,630 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,637 [Thread-58] INFO  root  - distribution query: Major = (project.id:elibrary) AND (severity:major AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,644 [Thread-58] INFO  root  - distribution query: Major = (project.id:elibrary) AND (severity:major AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,650 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,656 [Thread-58] INFO  root  - distribution query: Transition = (project.id:elibrary) AND (severity:transition AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,662 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,668 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,675 [Thread-58] INFO  root  - distribution query: Critical = (project.id:elibrary) AND (severity:critical AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,682 [Thread-58] INFO  root  - distribution query: Critical = (project.id:elibrary) AND (severity:critical AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,689 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,696 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,702 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:elibrary) AND (severity:blocker AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,709 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:elibrary) AND (severity:blocker AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,715 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:15,722 [Thread-58] INFO  root  - runGauge:RESOLVED-BY-SEVERITY finished  [ TIME 0.0976 s. ]
+2017-05-18 00:00:15,732 [Thread-58] INFO  root  - runGauge:PRIORITY
+2017-05-18 00:00:15,742 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:15,751 [Thread-58] INFO  root  - distribution query: Lowest = (project.id:elibrary) AND (priority:lowest)
+2017-05-18 00:00:15,760 [Thread-58] INFO  root  - distribution query: Low = (project.id:elibrary) AND (priority:low)
+2017-05-18 00:00:15,770 [Thread-58] INFO  root  - distribution query: Medium = (project.id:elibrary) AND (priority:medium)
+2017-05-18 00:00:15,777 [Thread-58] INFO  root  - distribution query: High = (project.id:elibrary) AND (priority:high)
+2017-05-18 00:00:15,788 [Thread-58] INFO  root  - distribution query: Highest = (project.id:elibrary) AND (priority:highest)
+2017-05-18 00:00:15,797 [Thread-58] INFO  root  - runGauge:PRIORITY finished  [ TIME 0.0358 s. ]
+2017-05-18 00:00:15,804 [Thread-58] INFO  root  - runGauge:OPEN-BY-PRIORITY
+2017-05-18 00:00:15,812 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:15,821 [Thread-58] INFO  root  - distribution query: Lowest = (project.id:elibrary) AND (priority:lowest AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,850 [Thread-58] INFO  root  - distribution query: Low = (project.id:elibrary) AND (priority:low AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,863 [Thread-58] INFO  root  - distribution query: Medium = (project.id:elibrary) AND (priority:medium AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,880 [Thread-58] INFO  root  - distribution query: High = (project.id:elibrary) AND (priority:high AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,892 [Thread-58] INFO  root  - distribution query: Highest = (project.id:elibrary) AND (priority:highest AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:15,904 [Thread-58] INFO  root  - runGauge:OPEN-BY-PRIORITY finished  [ TIME 0.0326 s. ]
+2017-05-18 00:00:15,913 [Thread-58] INFO  root  - runGauge:RESOLUTION
+2017-05-18 00:00:15,923 [Thread-58] INFO  root  - reverse order: false
+2017-05-18 00:00:15,934 [Thread-58] INFO  root  - distribution query: Done = (project.id:elibrary) AND (resolution:done)
+2017-05-18 00:00:15,945 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:elibrary) AND (resolution:invalid)
+2017-05-18 00:00:15,953 [Thread-58] INFO  root  - distribution query: Won't Do = (project.id:elibrary) AND (resolution:wontdo)
+2017-05-18 00:00:15,961 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:elibrary) AND (resolution:inactive)
+2017-05-18 00:00:15,969 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:elibrary) AND (resolution:duplicate)
+2017-05-18 00:00:15,977 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:elibrary) AND (resolution:invalid)
+2017-05-18 00:00:15,984 [Thread-58] INFO  root  - distribution query: Other = (project.id:elibrary) AND (resolution:other)
+2017-05-18 00:00:15,991 [Thread-58] INFO  root  - distribution query: Incomplete = (project.id:elibrary) AND (resolution:incomplete)
+2017-05-18 00:00:15,998 [Thread-58] INFO  root  - distribution query: Cannot Reproduce = (project.id:elibrary) AND (resolution:cannotreproduce)
+2017-05-18 00:00:16,005 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:elibrary) AND (resolution:invalid)
+2017-05-18 00:00:16,043 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:elibrary) AND (resolution:duplicate)
+2017-05-18 00:00:16,053 [Thread-58] INFO  root  - distribution query: Later = (project.id:elibrary) AND (resolution:later)
+2017-05-18 00:00:16,060 [Thread-58] INFO  root  - distribution query: Obsolete = (project.id:elibrary) AND (resolution:obsolete)
+2017-05-18 00:00:16,067 [Thread-58] INFO  root  - distribution query: Later = (project.id:elibrary) AND (resolution:later)
+2017-05-18 00:00:16,074 [Thread-58] INFO  root  - runGauge:RESOLUTION finished  [ TIME 0.171 s. ]
+2017-05-18 00:00:16,081 [Thread-58] INFO  root  - runGauge:STATUS
+2017-05-18 00:00:16,088 [Thread-58] INFO  root  - reverse order: false
+2017-05-18 00:00:16,094 [Thread-58] INFO  root  - distribution query: Open = (project.id:elibrary) AND (status:open)
+2017-05-18 00:00:16,101 [Thread-58] INFO  root  - distribution query: Draft = (project.id:elibrary) AND (status:draft)
+2017-05-18 00:00:16,107 [Thread-58] INFO  root  - distribution query: Draft = (project.id:elibrary) AND (status:draft)
+2017-05-18 00:00:16,115 [Thread-58] INFO  root  - distribution query: Draft = (project.id:elibrary) AND (status:draft)
+2017-05-18 00:00:16,122 [Thread-58] INFO  root  - distribution query: In Progress = (project.id:elibrary) AND (status:inprogress)
+2017-05-18 00:00:16,133 [Thread-58] INFO  root  - distribution query: Active = (project.id:elibrary) AND (status:active)
+2017-05-18 00:00:16,140 [Thread-58] INFO  root  - distribution query: Reopened = (project.id:elibrary) AND (status:reopened)
+2017-05-18 00:00:16,148 [Thread-58] INFO  root  - distribution query: Reviewed = (project.id:elibrary) AND (status:reviewed)
+2017-05-18 00:00:16,155 [Thread-58] INFO  root  - distribution query: Reviewed = (project.id:elibrary) AND (status:reviewed)
+2017-05-18 00:00:16,162 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:elibrary) AND (status:inactive)
+2017-05-18 00:00:16,170 [Thread-58] INFO  root  - distribution query: Done = (project.id:elibrary) AND (status:done)
+2017-05-18 00:00:16,179 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:elibrary) AND (status:rejected)
+2017-05-18 00:00:16,187 [Thread-58] INFO  root  - distribution query: Accepted = (project.id:elibrary) AND (status:accepted)
+2017-05-18 00:00:16,195 [Thread-58] INFO  root  - distribution query: Verified as Done = (project.id:elibrary) AND (status:verified-done)
+2017-05-18 00:00:16,202 [Thread-58] INFO  root  - distribution query: In Progress = (project.id:elibrary) AND (status:in_progress)
+2017-05-18 00:00:16,210 [Thread-58] INFO  root  - distribution query: Verified as Rejected = (project.id:elibrary) AND (status:verified-rejected)
+2017-05-18 00:00:16,218 [Thread-58] INFO  root  - distribution query: Change Implemenation = (project.id:elibrary) AND (status:changes_needed)
+2017-05-18 00:00:16,226 [Thread-58] INFO  root  - distribution query: Verified = (project.id:elibrary) AND (status:verified)
+2017-05-18 00:00:16,235 [Thread-58] INFO  root  - distribution query: Implemented = (project.id:elibrary) AND (status:implemented)
+2017-05-18 00:00:16,243 [Thread-58] INFO  root  - distribution query: Verified = (project.id:elibrary) AND (status:verified)
+2017-05-18 00:00:16,251 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:elibrary) AND (status:rejected)
+2017-05-18 00:00:16,258 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:elibrary) AND (status:rejected)
+2017-05-18 00:00:16,266 [Thread-58] INFO  root  - runGauge:STATUS finished  [ TIME 0.0755 s. ]
+2017-05-18 00:00:16,275 [Thread-58] INFO  root  - runGauge:ALL
+2017-05-18 00:00:16,285 [Thread-58] INFO  root  - runGauge:ALL finished  [ TIME 0.00408 s. ]
+2017-05-18 00:00:16,294 [Thread-58] INFO  root  - runGauge:OPEN
+2017-05-18 00:00:16,304 [Thread-58] INFO  root  - runGauge:OPEN finished  [ TIME 0.00558 s. ]
+2017-05-18 00:00:16,314 [Thread-58] INFO  root  - runGauge:UNRESOLVED-VERSION-1
+2017-05-18 00:00:16,325 [Thread-58] INFO  root  - runGauge:UNRESOLVED-VERSION-1 finished  [ TIME 0.00326 s. ]
+2017-05-18 00:00:16,335 [Thread-58] INFO  root  - runGauge:NOT-VERIFIED-REQUIREMENTS-VERSION-1
+2017-05-18 00:00:16,342 [Thread-58] INFO  root  - runGauge:NOT-VERIFIED-REQUIREMENTS-VERSION-1 finished  [ TIME 0.00328 s. ]
+2017-05-18 00:00:16,349 [Thread-58] INFO  root  - runGauge:NEW
+2017-05-18 00:00:16,358 [Thread-58] INFO  root  - runGauge:NEW finished  [ TIME 0.00543 s. ]
+2017-05-18 00:00:16,379 [Thread-58] INFO  root  - runGauge:SUSPECT-RATIO
+2017-05-18 00:00:16,388 [Thread-58] INFO  root  - runGauge:SUSPECT-RATIO finished  [ TIME 0.00786 s. ]
+2017-05-18 00:00:16,719 [Thread-58] INFO  root  - runGauge:TRACEABILITY-REQUIREMENTS-COMMITS
+1624 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.ItemsTraceabilityGaugeCreator  - Found 41 input work items in /Demo Projects/elibrary
+1627 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.ItemsTraceabilityGaugeCreator  - Found 0 covered work items
+2577 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.ItemsTraceabilityGaugeCreator  - 131 work items are not traceable
+2017-05-18 00:00:16,726 [Thread-58] INFO  root  - runGauge:TRACEABILITY-REQUIREMENTS-COMMITS finished  [ TIME 1.04 s. ]
+2017-05-18 00:00:16,743 [Thread-58] INFO  root  - runGauge:TRACEABILITY-COMMITS-REQUIREMENTS
+2661 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.RevisionsHelper  - getProjectRevisions: repoPath: Location[repository default, path /Demo Projects/elibrary]
+2666 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.CommitsTraceabilityGaugeCreator  - Found 2 non-internal revisions of /Demo Projects/elibrary
+2680 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.CommitsTraceabilityGaugeCreator  - Processing 2 revisions, total linked work items 0
+2680 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.CommitsTraceabilityGaugeCreator  - 2 revisions are not traceable
+2017-05-18 00:00:16,751 [Thread-58] INFO  root  - runGauge:TRACEABILITY-COMMITS-REQUIREMENTS finished  [ TIME 0.0243 s. ]
+2017-05-18 00:00:16,780 [Thread-58] INFO  root  - runGauge:ITEMS-BY-TYPE
+2017-05-18 00:00:16,787 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:16,795 [Thread-58] INFO  root  - distribution query: User Story = (project.id:elibrary) AND (type:userstory)
+2017-05-18 00:00:16,802 [Thread-58] INFO  root  - distribution query: Change Request = (project.id:elibrary) AND (type:changerequest)
+2017-05-18 00:00:16,825 [Thread-58] INFO  root  - distribution query: Test Case = (project.id:elibrary) AND (type:testcase)
+2017-05-18 00:00:16,833 [Thread-58] INFO  root  - distribution query: Testing = (project.id:elibrary) AND (type:testing)
+2017-05-18 00:00:16,840 [Thread-58] INFO  root  - distribution query: Task = (project.id:elibrary) AND (type:task)
+2017-05-18 00:00:16,847 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:elibrary) AND (type:documentation)
+2017-05-18 00:00:16,854 [Thread-58] INFO  root  - distribution query: Requirement = (project.id:elibrary) AND (type:requirement)
+2017-05-18 00:00:16,861 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:elibrary) AND (type:implementation)
+2017-05-18 00:00:16,869 [Thread-58] INFO  root  - distribution query: Defect = (project.id:elibrary) AND (type:defect)
+2017-05-18 00:00:16,876 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:elibrary) AND (type:analysis)
+2017-05-18 00:00:16,883 [Thread-58] INFO  root  - runGauge:ITEMS-BY-TYPE finished  [ TIME 0.0676 s. ]
+2017-05-18 00:00:16,892 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-BY-TYPE
+2017-05-18 00:00:16,901 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:16,911 [Thread-58] INFO  root  - distribution query: User Story = (project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,923 [Thread-58] INFO  root  - distribution query: Change Request = (project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,935 [Thread-58] INFO  root  - distribution query: Test Case = (project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,942 [Thread-58] INFO  root  - distribution query: Testing = (project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,950 [Thread-58] INFO  root  - distribution query: Task = (project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,957 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,965 [Thread-58] INFO  root  - distribution query: Requirement = (project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,974 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,983 [Thread-58] INFO  root  - distribution query: Defect = (project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,990 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:16,995 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-BY-TYPE finished  [ TIME 0.0302 s. ]
+2017-05-18 00:00:17,001 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE
+2017-05-18 00:00:17,007 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:17,014 [Thread-58] INFO  root  - distribution query: User Story = (project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,021 [Thread-58] INFO  root  - distribution query: Change Request = (project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,028 [Thread-58] INFO  root  - distribution query: Test Case = (project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,035 [Thread-58] INFO  root  - distribution query: Testing = (project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,042 [Thread-58] INFO  root  - distribution query: Task = (project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,049 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,056 [Thread-58] INFO  root  - distribution query: Requirement = (project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,063 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,070 [Thread-58] INFO  root  - distribution query: Defect = (project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,077 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:17,084 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE finished  [ TIME 0.0431 s. ]
+2017-05-18 00:00:17,091 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE
+2017-05-18 00:00:17,098 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:17,105 [Thread-58] INFO  root  - distribution query: User Story = (project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,112 [Thread-58] INFO  root  - distribution query: Change Request = (project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,120 [Thread-58] INFO  root  - distribution query: Test Case = (project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,127 [Thread-58] INFO  root  - distribution query: Testing = (project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,133 [Thread-58] INFO  root  - distribution query: Task = (project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,140 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,147 [Thread-58] INFO  root  - distribution query: Requirement = (project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,153 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,159 [Thread-58] INFO  root  - distribution query: Defect = (project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,166 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:17,259 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE finished  [ TIME 0.0618 s. ]
+2017-05-18 00:00:17,268 [Thread-58] INFO  root  - trackeranalysis:calculate finished  [ TIME 5.44 s. ]
+2017-05-18 00:00:17,276 [Thread-58] INFO  root  - [trackeranalysis:report]
+2017-05-18 00:00:17,345 [Thread-58] INFO  root  - trackeranalysis:report execute for:_root.default.Demo_Projects.elibrary._artificial
+Project id for artifact _root.default.Demo_Projects.elibrary:_artificial is elibrary
+2017-05-18 00:00:17,420 [Thread-58] INFO  root  - trackeranalysis:report finished  [ TIME 0.0837 s. ]
+2017-05-18 00:00:17,432 [Thread-58] INFO  root  - [projectscore:calculate]
+2017-05-18 00:00:17,662 [Thread-58] INFO  root  - projectscore:calculate execute on:_root.default.Demo_Projects.elibrary._artificial
+2017-05-18 00:00:17,668 [Thread-58] INFO  root  - projectscore:calculate finished  [ TIME 0.231 s. ]
+2017-05-18 00:00:17,673 [Thread-58] INFO  root  - [projectscore:report]
+2017-05-18 00:00:18,635 [Thread-58] INFO  root  - projectscore:report execute on:_root.default.Demo_Projects.elibrary._artificial
+Project id for artifact _root.default.Demo_Projects.elibrary:_artificial is elibrary
+2017-05-18 00:00:18,641 [Thread-58] INFO  root  - projectscore:report finished  [ TIME 0.972 s. ]
+2017-05-18 00:00:18,647 [Thread-58] INFO  root  - [projectscore:aggregate]
+2017-05-18 00:00:18,655 [Thread-58] INFO  root  - projectscore:aggregate execute on:_root.default.Demo_Projects.elibrary._artificial
+2017-05-18 00:00:18,661 [Thread-58] INFO  root  - projectscore:aggregate does nothing on project level
+2017-05-18 00:00:18,667 [Thread-58] INFO  root  - [projectscore:reportAggregated]
+2017-05-18 00:00:18,674 [Thread-58] INFO  root  - projectscore:reportAggregated execute on:_root.default.Demo_Projects.elibrary._artificial
+2017-05-18 00:00:18,680 [Thread-58] INFO  root  - projectscore:reportAggregated does nothing on project level
+2017-05-18 00:00:18,685 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:18,690 [Thread-58] INFO  root  - Building _root.default.Demo_Projects.drivepilot:_artificial:null
+2017-05-18 00:00:18,695 [Thread-58] INFO  root  - task-segment: [com.polarion.maven.plugins.qcentre:trackeranalysis:calculate, com.polarion.maven.plugins.qcentre:trackeranalysis:report, com.polarion.maven.plugins.qcentre:projectscore:calculate, com.polarion.maven.plugins.qcentre:projectscore:report, com.polarion.maven.plugins.qcentre:projectscore:aggregate, com.polarion.maven.plugins.qcentre:projectscore:reportAggregated]
+2017-05-18 00:00:18,701 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:18,706 [Thread-58] INFO  root  - [trackeranalysis:calculate]
+2017-05-18 00:00:18,960 [Thread-58] INFO  root  - trackeranalysis:calculate execute on:_root.default.Demo_Projects.drivepilot._artificial
+Project id for artifact _root.default.Demo_Projects.drivepilot:_artificial is drivepilot
+2017-05-18 00:00:18,973 [Thread-58] INFO  root  - runGauge:RESOLVED-UNRESOLVED
+2017-05-18 00:00:18,979 [Thread-58] INFO  root  - runGauge:RESOLVED-UNRESOLVED finished  [ TIME 0.0123 s. ]
+2017-05-18 00:00:19,005 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-ASSIGNEE
+2017-05-18 00:00:19,013 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-ASSIGNEE finished  [ TIME 0.0317 s. ]
+2017-05-18 00:00:19,024 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-CATEGORY
+2017-05-18 00:00:19,031 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-CATEGORY finished  [ TIME 0.019 s. ]
+2017-05-18 00:00:19,048 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-TIMEPOINT
+2017-05-18 00:00:19,055 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-TIMEPOINT finished  [ TIME 0.0241 s. ]
+2017-05-18 00:00:19,066 [Thread-58] INFO  root  - runGauge:MAI
+2017-05-18 00:00:19,073 [Thread-58] INFO  root  - runGauge:MAI finished  [ TIME 0.0184 s. ]
+2017-05-18 00:00:19,085 [Thread-58] INFO  root  - runGauge:MEI
+2017-05-18 00:00:19,091 [Thread-58] INFO  root  - runGauge:MEI finished  [ TIME 0.0188 s. ]
+2017-05-18 00:00:19,109 [Thread-58] INFO  root  - runGauge:MSI
+2017-05-18 00:00:19,115 [Thread-58] INFO  root  - runGauge:MSI finished  [ TIME 0.0238 s. ]
+2017-05-18 00:00:19,128 [Thread-58] INFO  root  - runGauge:ESTIMATE-ACCURACY
+5054 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.EstimateAccuracyGauge  - starting fresh calculation for 29 work items
+2017-05-18 00:00:19,134 [Thread-58] INFO  root  - runGauge:ESTIMATE-ACCURACY finished  [ TIME 0.0187 s. ]
+2017-05-18 00:00:19,140 [Thread-58] INFO  root  - runGauge:PROJECT-PLAN-ACCURACY
+2017-05-18 00:00:19,145 [Thread-58] INFO  root  - runGauge:PROJECT-PLAN-ACCURACY finished  [ TIME 0.0000202 s. ]
+2017-05-18 00:00:19,150 [Thread-58] INFO  root  - runGauge:PLANNING-ACCURACY
+2017-05-18 00:00:19,155 [Thread-58] INFO  root  - runGauge:PLANNING-ACCURACY finished  [ TIME 0.00516 s. ]
+2017-05-18 00:00:19,160 [Thread-58] INFO  root  - runGauge:PLANNING-COVERAGE
+2017-05-18 00:00:19,165 [Thread-58] INFO  root  - runGauge:PLANNING-COVERAGE finished  [ TIME 0.00606 s. ]
+2017-05-18 00:00:19,903 [Thread-58] INFO  root  - runGauge:WORKITEMS-PLANNING-ACCURACY
+2017-05-18 00:00:19,911 [Thread-58] INFO  root  - runGauge:WORKITEMS-PLANNING-ACCURACY finished  [ TIME 0.764 s. ]
+2017-05-18 00:00:19,918 [Thread-58] INFO  root  - runGauge:RESOLVED-RATIO
+2017-05-18 00:00:19,926 [Thread-58] INFO  root  - runGauge:RESOLVED-RATIO finished  [ TIME 0.0000782 s. ]
+2017-05-18 00:00:19,933 [Thread-58] INFO  root  - runGauge:ASSIGNMENT-RATIO
+2017-05-18 00:00:19,941 [Thread-58] INFO  root  - runGauge:ASSIGNMENT-RATIO finished  [ TIME 0.00791 s. ]
+2017-05-18 00:00:19,950 [Thread-58] INFO  root  - runGauge:PLANNING-RATIO
+2017-05-18 00:00:19,958 [Thread-58] INFO  root  - runGauge:PLANNING-RATIO finished  [ TIME 0.00963 s. ]
+2017-05-18 00:00:19,966 [Thread-58] INFO  root  - runGauge:SEVERITY
+2017-05-18 00:00:19,974 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:19,982 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:drivepilot) AND (severity:trivial)
+2017-05-18 00:00:19,989 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:drivepilot) AND (severity:trivial)
+2017-05-18 00:00:19,996 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have)
+2017-05-18 00:00:20,003 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed)
+2017-05-18 00:00:20,008 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed)
+2017-05-18 00:00:20,014 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed)
+2017-05-18 00:00:20,020 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed)
+2017-05-18 00:00:20,025 [Thread-58] INFO  root  - distribution query: Minor = (project.id:drivepilot) AND (severity:minor)
+2017-05-18 00:00:20,031 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed)
+2017-05-18 00:00:20,036 [Thread-58] INFO  root  - distribution query: Minor = (project.id:drivepilot) AND (severity:minor)
+2017-05-18 00:00:20,042 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have)
+2017-05-18 00:00:20,047 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic)
+2017-05-18 00:00:20,053 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have)
+2017-05-18 00:00:20,058 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have)
+2017-05-18 00:00:20,064 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic)
+2017-05-18 00:00:20,069 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have)
+2017-05-18 00:00:20,075 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic)
+2017-05-18 00:00:20,080 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have)
+2017-05-18 00:00:20,086 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic)
+2017-05-18 00:00:20,091 [Thread-58] INFO  root  - distribution query: Normal = (project.id:drivepilot) AND (severity:normal)
+2017-05-18 00:00:20,097 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic)
+2017-05-18 00:00:20,103 [Thread-58] INFO  root  - distribution query: Normal = (project.id:drivepilot) AND (severity:normal)
+2017-05-18 00:00:20,108 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke)
+2017-05-18 00:00:20,114 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have)
+2017-05-18 00:00:20,119 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have)
+2017-05-18 00:00:20,124 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke)
+2017-05-18 00:00:20,129 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have)
+2017-05-18 00:00:20,134 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke)
+2017-05-18 00:00:20,139 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have)
+2017-05-18 00:00:20,144 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke)
+2017-05-18 00:00:20,149 [Thread-58] INFO  root  - distribution query: Major = (project.id:drivepilot) AND (severity:major)
+2017-05-18 00:00:20,154 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke)
+2017-05-18 00:00:20,159 [Thread-58] INFO  root  - distribution query: Major = (project.id:drivepilot) AND (severity:major)
+2017-05-18 00:00:20,164 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have)
+2017-05-18 00:00:20,169 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition)
+2017-05-18 00:00:20,174 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have)
+2017-05-18 00:00:20,179 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have)
+2017-05-18 00:00:20,184 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition)
+2017-05-18 00:00:20,189 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have)
+2017-05-18 00:00:20,194 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition)
+2017-05-18 00:00:20,199 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have)
+2017-05-18 00:00:20,204 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition)
+2017-05-18 00:00:20,209 [Thread-58] INFO  root  - distribution query: Critical = (project.id:drivepilot) AND (severity:critical)
+2017-05-18 00:00:20,214 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition)
+2017-05-18 00:00:20,219 [Thread-58] INFO  root  - distribution query: Critical = (project.id:drivepilot) AND (severity:critical)
+2017-05-18 00:00:20,226 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have)
+2017-05-18 00:00:20,232 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have)
+2017-05-18 00:00:20,238 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have)
+2017-05-18 00:00:20,245 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have)
+2017-05-18 00:00:20,252 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:drivepilot) AND (severity:blocker)
+2017-05-18 00:00:20,257 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:drivepilot) AND (severity:blocker)
+2017-05-18 00:00:20,263 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have)
+2017-05-18 00:00:20,268 [Thread-58] INFO  root  - runGauge:SEVERITY finished  [ TIME 0.0693 s. ]
+2017-05-18 00:00:20,273 [Thread-58] INFO  root  - runGauge:OPEN-BY-SEVERITY
+2017-05-18 00:00:20,278 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:20,283 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:drivepilot) AND (severity:trivial AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,289 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:drivepilot) AND (severity:trivial AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,294 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,299 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,304 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,309 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,314 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,319 [Thread-58] INFO  root  - distribution query: Minor = (project.id:drivepilot) AND (severity:minor AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,324 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,329 [Thread-58] INFO  root  - distribution query: Minor = (project.id:drivepilot) AND (severity:minor AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,334 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,340 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,345 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,350 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,355 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,360 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,365 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,370 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,375 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,381 [Thread-58] INFO  root  - distribution query: Normal = (project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,386 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,391 [Thread-58] INFO  root  - distribution query: Normal = (project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,396 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,401 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,406 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,411 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,416 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,421 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,425 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,430 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,435 [Thread-58] INFO  root  - distribution query: Major = (project.id:drivepilot) AND (severity:major AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,440 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,445 [Thread-58] INFO  root  - distribution query: Major = (project.id:drivepilot) AND (severity:major AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,450 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,455 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,460 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,465 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,470 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,474 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,479 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,484 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,489 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,494 [Thread-58] INFO  root  - distribution query: Critical = (project.id:drivepilot) AND (severity:critical AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,499 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,504 [Thread-58] INFO  root  - distribution query: Critical = (project.id:drivepilot) AND (severity:critical AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,509 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,514 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,519 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,524 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,529 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:drivepilot) AND (severity:blocker AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,533 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:drivepilot) AND (severity:blocker AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,538 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,543 [Thread-58] INFO  root  - runGauge:OPEN-BY-SEVERITY finished  [ TIME 0.256 s. ]
+2017-05-18 00:00:20,548 [Thread-58] INFO  root  - runGauge:RESOLVED-BY-SEVERITY
+2017-05-18 00:00:20,553 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:20,558 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:drivepilot) AND (severity:trivial AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,563 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:drivepilot) AND (severity:trivial AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,568 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,574 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,579 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,584 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,589 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,594 [Thread-58] INFO  root  - distribution query: Minor = (project.id:drivepilot) AND (severity:minor AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,599 [Thread-58] INFO  root  - distribution query: Detailed = (project.id:drivepilot) AND (severity:detailed AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,605 [Thread-58] INFO  root  - distribution query: Minor = (project.id:drivepilot) AND (severity:minor AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,611 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,617 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,623 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,630 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,636 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,644 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,651 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,658 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,665 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,674 [Thread-58] INFO  root  - distribution query: Normal = (project.id:drivepilot) AND (severity:normal AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,680 [Thread-58] INFO  root  - distribution query: Basic = (project.id:drivepilot) AND (severity:basic AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,687 [Thread-58] INFO  root  - distribution query: Normal = (project.id:drivepilot) AND (severity:normal AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,693 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,698 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,703 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,708 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,714 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,719 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,724 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,729 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,734 [Thread-58] INFO  root  - distribution query: Major = (project.id:drivepilot) AND (severity:major AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,739 [Thread-58] INFO  root  - distribution query: Smoke = (project.id:drivepilot) AND (severity:smoke AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,743 [Thread-58] INFO  root  - distribution query: Major = (project.id:drivepilot) AND (severity:major AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,748 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,754 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,759 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,764 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,769 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,774 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,779 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,784 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,789 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,794 [Thread-58] INFO  root  - distribution query: Critical = (project.id:drivepilot) AND (severity:critical AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,799 [Thread-58] INFO  root  - distribution query: Transition = (project.id:drivepilot) AND (severity:transition AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,805 [Thread-58] INFO  root  - distribution query: Critical = (project.id:drivepilot) AND (severity:critical AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,811 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,817 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,823 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,830 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,836 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:drivepilot) AND (severity:blocker AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,841 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:drivepilot) AND (severity:blocker AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,847 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:20,852 [Thread-58] INFO  root  - runGauge:RESOLVED-BY-SEVERITY finished  [ TIME 0.384 s. ]
+2017-05-18 00:00:20,857 [Thread-58] INFO  root  - runGauge:PRIORITY
+2017-05-18 00:00:20,862 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:20,867 [Thread-58] INFO  root  - distribution query: Lowest = (project.id:drivepilot) AND (priority:lowest)
+2017-05-18 00:00:20,872 [Thread-58] INFO  root  - distribution query: Low = (project.id:drivepilot) AND (priority:low)
+2017-05-18 00:00:20,876 [Thread-58] INFO  root  - distribution query: Medium = (project.id:drivepilot) AND (priority:medium)
+2017-05-18 00:00:20,881 [Thread-58] INFO  root  - distribution query: High = (project.id:drivepilot) AND (priority:high)
+2017-05-18 00:00:20,886 [Thread-58] INFO  root  - distribution query: Highest = (project.id:drivepilot) AND (priority:highest)
+2017-05-18 00:00:20,891 [Thread-58] INFO  root  - runGauge:PRIORITY finished  [ TIME 0.0203 s. ]
+2017-05-18 00:00:20,896 [Thread-58] INFO  root  - runGauge:OPEN-BY-PRIORITY
+2017-05-18 00:00:20,901 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:20,906 [Thread-58] INFO  root  - distribution query: Lowest = (project.id:drivepilot) AND (priority:lowest AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,911 [Thread-58] INFO  root  - distribution query: Low = (project.id:drivepilot) AND (priority:low AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,916 [Thread-58] INFO  root  - distribution query: Medium = (project.id:drivepilot) AND (priority:medium AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,921 [Thread-58] INFO  root  - distribution query: High = (project.id:drivepilot) AND (priority:high AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,926 [Thread-58] INFO  root  - distribution query: Highest = (project.id:drivepilot) AND (priority:highest AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:20,931 [Thread-58] INFO  root  - runGauge:OPEN-BY-PRIORITY finished  [ TIME 0.0138 s. ]
+2017-05-18 00:00:20,936 [Thread-58] INFO  root  - runGauge:RESOLUTION
+2017-05-18 00:00:20,941 [Thread-58] INFO  root  - reverse order: false
+2017-05-18 00:00:20,946 [Thread-58] INFO  root  - distribution query: Done = (project.id:drivepilot) AND (resolution:done)
+2017-05-18 00:00:20,951 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:20,956 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:20,961 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:20,966 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:20,971 [Thread-58] INFO  root  - distribution query: Done = (project.id:drivepilot) AND (resolution:done)
+2017-05-18 00:00:20,976 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:20,981 [Thread-58] INFO  root  - distribution query: Won't Do = (project.id:drivepilot) AND (resolution:wontdo)
+2017-05-18 00:00:20,986 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (resolution:inactive)
+2017-05-18 00:00:20,991 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (resolution:inactive)
+2017-05-18 00:00:20,995 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (resolution:inactive)
+2017-05-18 00:00:21,000 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (resolution:inactive)
+2017-05-18 00:00:21,005 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (resolution:inactive)
+2017-05-18 00:00:21,010 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:drivepilot) AND (resolution:duplicate)
+2017-05-18 00:00:21,015 [Thread-58] INFO  root  - distribution query: Other = (project.id:drivepilot) AND (resolution:other)
+2017-05-18 00:00:21,020 [Thread-58] INFO  root  - distribution query: Other = (project.id:drivepilot) AND (resolution:other)
+2017-05-18 00:00:21,025 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:21,030 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:21,035 [Thread-58] INFO  root  - distribution query: Other = (project.id:drivepilot) AND (resolution:other)
+2017-05-18 00:00:21,040 [Thread-58] INFO  root  - distribution query: Other = (project.id:drivepilot) AND (resolution:other)
+2017-05-18 00:00:21,045 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:drivepilot) AND (resolution:duplicate)
+2017-05-18 00:00:21,051 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:21,058 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:21,064 [Thread-58] INFO  root  - distribution query: Other = (project.id:drivepilot) AND (resolution:other)
+2017-05-18 00:00:21,071 [Thread-58] INFO  root  - distribution query: Incomplete = (project.id:drivepilot) AND (resolution:incomplete)
+2017-05-18 00:00:21,079 [Thread-58] INFO  root  - distribution query: Cannot Reproduce = (project.id:drivepilot) AND (resolution:cannotreproduce)
+2017-05-18 00:00:21,086 [Thread-58] INFO  root  - distribution query: Cannot Reproduce = (project.id:drivepilot) AND (resolution:cannotreproduce)
+2017-05-18 00:00:21,093 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:21,099 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:drivepilot) AND (resolution:duplicate)
+2017-05-18 00:00:21,106 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:drivepilot) AND (resolution:duplicate)
+2017-05-18 00:00:21,112 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:drivepilot) AND (resolution:invalid)
+2017-05-18 00:00:21,118 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:drivepilot) AND (resolution:duplicate)
+2017-05-18 00:00:21,124 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:drivepilot) AND (resolution:duplicate)
+2017-05-18 00:00:21,132 [Thread-58] INFO  root  - distribution query: Later = (project.id:drivepilot) AND (resolution:later)
+2017-05-18 00:00:21,140 [Thread-58] INFO  root  - distribution query: Obsolete = (project.id:drivepilot) AND (resolution:obsolete)
+2017-05-18 00:00:21,147 [Thread-58] INFO  root  - distribution query: Obsolete = (project.id:drivepilot) AND (resolution:obsolete)
+2017-05-18 00:00:21,155 [Thread-58] INFO  root  - distribution query: Later = (project.id:drivepilot) AND (resolution:later)
+2017-05-18 00:00:21,161 [Thread-58] INFO  root  - distribution query: Obsolete = (project.id:drivepilot) AND (resolution:obsolete)
+2017-05-18 00:00:21,168 [Thread-58] INFO  root  - distribution query: Obsolete = (project.id:drivepilot) AND (resolution:obsolete)
+2017-05-18 00:00:21,175 [Thread-58] INFO  root  - distribution query: Later = (project.id:drivepilot) AND (resolution:later)
+2017-05-18 00:00:21,181 [Thread-58] INFO  root  - distribution query: Later = (project.id:drivepilot) AND (resolution:later)
+2017-05-18 00:00:21,188 [Thread-58] INFO  root  - distribution query: Later = (project.id:drivepilot) AND (resolution:later)
+2017-05-18 00:00:21,196 [Thread-58] INFO  root  - distribution query: Later = (project.id:drivepilot) AND (resolution:later)
+2017-05-18 00:00:21,204 [Thread-58] INFO  root  - runGauge:RESOLUTION finished  [ TIME 0.154 s. ]
+2017-05-18 00:00:21,211 [Thread-58] INFO  root  - runGauge:STATUS
+2017-05-18 00:00:21,217 [Thread-58] INFO  root  - reverse order: false
+2017-05-18 00:00:21,223 [Thread-58] INFO  root  - distribution query: Open = (project.id:drivepilot) AND (status:open)
+2017-05-18 00:00:21,230 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,236 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,242 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,250 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,257 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,263 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,270 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,277 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,282 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,289 [Thread-58] INFO  root  - distribution query: Draft = (project.id:drivepilot) AND (status:draft)
+2017-05-18 00:00:21,295 [Thread-58] INFO  root  - distribution query: In Progress = (project.id:drivepilot) AND (status:inprogress)
+2017-05-18 00:00:21,301 [Thread-58] INFO  root  - distribution query: Active = (project.id:drivepilot) AND (status:active)
+2017-05-18 00:00:21,308 [Thread-58] INFO  root  - distribution query: Active = (project.id:drivepilot) AND (status:active)
+2017-05-18 00:00:21,315 [Thread-58] INFO  root  - distribution query: In Review = (project.id:drivepilot) AND (status:inReview)
+2017-05-18 00:00:21,321 [Thread-58] INFO  root  - distribution query: In Review = (project.id:drivepilot) AND (status:inReview)
+2017-05-18 00:00:21,328 [Thread-58] INFO  root  - distribution query: Active = (project.id:drivepilot) AND (status:active)
+2017-05-18 00:00:21,335 [Thread-58] INFO  root  - distribution query: Active = (project.id:drivepilot) AND (status:active)
+2017-05-18 00:00:21,343 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:drivepilot) AND (status:analysis)
+2017-05-18 00:00:21,353 [Thread-58] INFO  root  - distribution query: In Review = (project.id:drivepilot) AND (status:inReview)
+2017-05-18 00:00:21,361 [Thread-58] INFO  root  - distribution query: Active = (project.id:drivepilot) AND (status:active)
+2017-05-18 00:00:21,369 [Thread-58] INFO  root  - distribution query: In Review = (project.id:drivepilot) AND (status:inReview)
+2017-05-18 00:00:21,377 [Thread-58] INFO  root  - distribution query: Reopened = (project.id:drivepilot) AND (status:reopened)
+2017-05-18 00:00:21,385 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (status:inactive)
+2017-05-18 00:00:21,393 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (status:inactive)
+2017-05-18 00:00:21,401 [Thread-58] INFO  root  - distribution query: Reviewed = (project.id:drivepilot) AND (status:reviewed)
+2017-05-18 00:00:21,408 [Thread-58] INFO  root  - distribution query: Reviewed = (project.id:drivepilot) AND (status:reviewed)
+2017-05-18 00:00:21,416 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (status:inactive)
+2017-05-18 00:00:21,423 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (status:inactive)
+2017-05-18 00:00:21,431 [Thread-58] INFO  root  - distribution query: Actions Pending = (project.id:drivepilot) AND (status:action-pending)
+2017-05-18 00:00:21,440 [Thread-58] INFO  root  - distribution query: Reviewed = (project.id:drivepilot) AND (status:reviewed)
+2017-05-18 00:00:21,447 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:drivepilot) AND (status:inactive)
+2017-05-18 00:00:21,454 [Thread-58] INFO  root  - distribution query: Reviewed = (project.id:drivepilot) AND (status:reviewed)
+2017-05-18 00:00:21,462 [Thread-58] INFO  root  - distribution query: Done = (project.id:drivepilot) AND (status:done)
+2017-05-18 00:00:21,469 [Thread-58] INFO  root  - distribution query: Approved = (project.id:drivepilot) AND (status:approved)
+2017-05-18 00:00:21,476 [Thread-58] INFO  root  - distribution query: Approved = (project.id:drivepilot) AND (status:approved)
+2017-05-18 00:00:21,482 [Thread-58] INFO  root  - distribution query: Actions Taken = (project.id:drivepilot) AND (status:action-taken)
+2017-05-18 00:00:21,488 [Thread-58] INFO  root  - distribution query: Approved = (project.id:drivepilot) AND (status:approved)
+2017-05-18 00:00:21,495 [Thread-58] INFO  root  - distribution query: Approved = (project.id:drivepilot) AND (status:approved)
+2017-05-18 00:00:21,503 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:drivepilot) AND (status:rejected)
+2017-05-18 00:00:21,510 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:drivepilot) AND (status:rejected)
+2017-05-18 00:00:21,516 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:drivepilot) AND (status:rejected)
+2017-05-18 00:00:21,523 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:drivepilot) AND (status:rejected)
+2017-05-18 00:00:21,529 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:drivepilot) AND (status:rejected)
+2017-05-18 00:00:21,537 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:drivepilot) AND (status:rejected)
+2017-05-18 00:00:21,542 [Thread-58] INFO  root  - distribution query: Verified as Done = (project.id:drivepilot) AND (status:verified-done)
+2017-05-18 00:00:21,548 [Thread-58] INFO  root  - distribution query: Completed = (project.id:drivepilot) AND (status:completed)
+2017-05-18 00:00:21,555 [Thread-58] INFO  root  - distribution query: Verified as Rejected = (project.id:drivepilot) AND (status:verified-rejected)
+2017-05-18 00:00:21,561 [Thread-58] INFO  root  - runGauge:STATUS finished  [ TIME 0.265 s. ]
+2017-05-18 00:00:21,568 [Thread-58] INFO  root  - runGauge:ALL
+2017-05-18 00:00:21,575 [Thread-58] INFO  root  - runGauge:ALL finished  [ TIME 0.00367 s. ]
+2017-05-18 00:00:21,581 [Thread-58] INFO  root  - runGauge:OPEN
+2017-05-18 00:00:21,588 [Thread-58] INFO  root  - runGauge:OPEN finished  [ TIME 0.00396 s. ]
+2017-05-18 00:00:21,595 [Thread-58] INFO  root  - runGauge:UNRESOLVED-VERSION-1
+2017-05-18 00:00:21,601 [Thread-58] INFO  root  - runGauge:UNRESOLVED-VERSION-1 finished  [ TIME 0.00251 s. ]
+2017-05-18 00:00:21,607 [Thread-58] INFO  root  - runGauge:NOT-VERIFIED-REQUIREMENTS-VERSION-1
+2017-05-18 00:00:21,613 [Thread-58] INFO  root  - runGauge:NOT-VERIFIED-REQUIREMENTS-VERSION-1 finished  [ TIME 0.0022 s. ]
+2017-05-18 00:00:21,619 [Thread-58] INFO  root  - runGauge:NEW
+2017-05-18 00:00:21,625 [Thread-58] INFO  root  - runGauge:NEW finished  [ TIME 0.00579 s. ]
+2017-05-18 00:00:21,633 [Thread-58] INFO  root  - runGauge:SUSPECT-RATIO
+2017-05-18 00:00:21,640 [Thread-58] INFO  root  - runGauge:SUSPECT-RATIO finished  [ TIME 0.00532 s. ]
+2017-05-18 00:00:21,943 [Thread-58] INFO  root  - runGauge:TRACEABILITY-REQUIREMENTS-COMMITS
+7053 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.ItemsTraceabilityGaugeCreator  - Found 20 input work items in /Demo Projects/drivepilot
+7053 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.ItemsTraceabilityGaugeCreator  - Found 0 covered work items
+7878 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.ItemsTraceabilityGaugeCreator  - 194 work items are not traceable
+2017-05-18 00:00:21,948 [Thread-58] INFO  root  - runGauge:TRACEABILITY-REQUIREMENTS-COMMITS finished  [ TIME 0.833 s. ]
+2017-05-18 00:00:23,126 [Thread-58] INFO  root  - runGauge:TRACEABILITY-COMMITS-REQUIREMENTS
+7884 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.RevisionsHelper  - getProjectRevisions: repoPath: Location[repository default, path /Demo Projects/drivepilot]
+7892 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.RevisionsHelper  - getProjectRevisions: log 2 - 57
+9057 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.RevisionsHelper  - found 3 non-internal revisions
+9057 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.CommitsTraceabilityGaugeCreator  - Found 3 non-internal revisions of /Demo Projects/drivepilot
+9064 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.CommitsTraceabilityGaugeCreator  - Processing 3 revisions, total linked work items 0
+9064 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.CommitsTraceabilityGaugeCreator  - 3 revisions are not traceable
+2017-05-18 00:00:23,131 [Thread-58] INFO  root  - runGauge:TRACEABILITY-COMMITS-REQUIREMENTS finished  [ TIME 1.18 s. ]
+2017-05-18 00:00:23,154 [Thread-58] INFO  root  - runGauge:ITEMS-BY-TYPE
+2017-05-18 00:00:23,161 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:23,169 [Thread-58] INFO  root  - distribution query: Unit Test Case = (project.id:drivepilot) AND (type:unitTestCase)
+2017-05-18 00:00:23,177 [Thread-58] INFO  root  - distribution query: Issue = (project.id:drivepilot) AND (type:issue)
+2017-05-18 00:00:23,183 [Thread-58] INFO  root  - distribution query: Task = (project.id:drivepilot) AND (type:task)
+2017-05-18 00:00:23,190 [Thread-58] INFO  root  - distribution query: Work Package = (project.id:drivepilot) AND (type:workPackage)
+2017-05-18 00:00:23,197 [Thread-58] INFO  root  - distribution query: Change Request = (project.id:drivepilot) AND (type:changerequest)
+2017-05-18 00:00:23,204 [Thread-58] INFO  root  - distribution query: Risk = (project.id:drivepilot) AND (type:risk)
+2017-05-18 00:00:23,211 [Thread-58] INFO  root  - distribution query: Electrical Test Case = (project.id:drivepilot) AND (type:electricalTestCase)
+2017-05-18 00:00:23,217 [Thread-58] INFO  root  - distribution query: Electrical Requirement = (project.id:drivepilot) AND (type:electricalRequirement)
+2017-05-18 00:00:23,223 [Thread-58] INFO  root  - distribution query: Mechanical Test Case = (project.id:drivepilot) AND (type:mechanicalTestCase)
+2017-05-18 00:00:23,230 [Thread-58] INFO  root  - distribution query: Mechanical Requirement = (project.id:drivepilot) AND (type:mechanicalRequirement)
+2017-05-18 00:00:23,236 [Thread-58] INFO  root  - distribution query: Software Test Case = (project.id:drivepilot) AND (type:softwareTestCase)
+2017-05-18 00:00:23,242 [Thread-58] INFO  root  - distribution query: Software Requirement = (project.id:drivepilot) AND (type:softwareRequirement)
+2017-05-18 00:00:23,249 [Thread-58] INFO  root  - distribution query: System Test Case = (project.id:drivepilot) AND (type:systemTestCase)
+2017-05-18 00:00:23,256 [Thread-58] INFO  root  - distribution query: Testing = (project.id:drivepilot) AND (type:testing)
+2017-05-18 00:00:23,262 [Thread-58] INFO  root  - distribution query: System Requirement = (project.id:drivepilot) AND (type:systemRequirement)
+2017-05-18 00:00:23,268 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:drivepilot) AND (type:documentation)
+2017-05-18 00:00:23,274 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:drivepilot) AND (type:implementation)
+2017-05-18 00:00:23,279 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:drivepilot) AND (type:analysis)
+2017-05-18 00:00:23,284 [Thread-58] INFO  root  - runGauge:ITEMS-BY-TYPE finished  [ TIME 0.0698 s. ]
+2017-05-18 00:00:23,289 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-BY-TYPE
+2017-05-18 00:00:23,294 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:23,299 [Thread-58] INFO  root  - distribution query: Unit Test Case = (project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,304 [Thread-58] INFO  root  - distribution query: Issue = (project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,309 [Thread-58] INFO  root  - distribution query: Task = (project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,314 [Thread-58] INFO  root  - distribution query: Work Package = (project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,319 [Thread-58] INFO  root  - distribution query: Change Request = (project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,324 [Thread-58] INFO  root  - distribution query: Risk = (project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,329 [Thread-58] INFO  root  - distribution query: Electrical Test Case = (project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,334 [Thread-58] INFO  root  - distribution query: Electrical Requirement = (project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,339 [Thread-58] INFO  root  - distribution query: Mechanical Test Case = (project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,344 [Thread-58] INFO  root  - distribution query: Mechanical Requirement = (project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,349 [Thread-58] INFO  root  - distribution query: Software Test Case = (project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,354 [Thread-58] INFO  root  - distribution query: Software Requirement = (project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,359 [Thread-58] INFO  root  - distribution query: System Test Case = (project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,364 [Thread-58] INFO  root  - distribution query: Testing = (project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,369 [Thread-58] INFO  root  - distribution query: System Requirement = (project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,374 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,380 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,386 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:23,392 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-BY-TYPE finished  [ TIME 0.0388 s. ]
+2017-05-18 00:00:23,399 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE
+2017-05-18 00:00:23,405 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:23,412 [Thread-58] INFO  root  - distribution query: Unit Test Case = (project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,418 [Thread-58] INFO  root  - distribution query: Issue = (project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,424 [Thread-58] INFO  root  - distribution query: Task = (project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,430 [Thread-58] INFO  root  - distribution query: Work Package = (project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,436 [Thread-58] INFO  root  - distribution query: Change Request = (project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,442 [Thread-58] INFO  root  - distribution query: Risk = (project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,450 [Thread-58] INFO  root  - distribution query: Electrical Test Case = (project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,458 [Thread-58] INFO  root  - distribution query: Electrical Requirement = (project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,466 [Thread-58] INFO  root  - distribution query: Mechanical Test Case = (project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,474 [Thread-58] INFO  root  - distribution query: Mechanical Requirement = (project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,483 [Thread-58] INFO  root  - distribution query: Software Test Case = (project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,491 [Thread-58] INFO  root  - distribution query: Software Requirement = (project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,499 [Thread-58] INFO  root  - distribution query: System Test Case = (project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,507 [Thread-58] INFO  root  - distribution query: Testing = (project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,515 [Thread-58] INFO  root  - distribution query: System Requirement = (project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,524 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,532 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,538 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:23,546 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE finished  [ TIME 0.0356 s. ]
+2017-05-18 00:00:23,552 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE
+2017-05-18 00:00:23,559 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:23,567 [Thread-58] INFO  root  - distribution query: Unit Test Case = (project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,574 [Thread-58] INFO  root  - distribution query: Issue = (project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,581 [Thread-58] INFO  root  - distribution query: Task = (project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,588 [Thread-58] INFO  root  - distribution query: Work Package = (project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,594 [Thread-58] INFO  root  - distribution query: Change Request = (project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,600 [Thread-58] INFO  root  - distribution query: Risk = (project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,607 [Thread-58] INFO  root  - distribution query: Electrical Test Case = (project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,614 [Thread-58] INFO  root  - distribution query: Electrical Requirement = (project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,621 [Thread-58] INFO  root  - distribution query: Mechanical Test Case = (project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,628 [Thread-58] INFO  root  - distribution query: Mechanical Requirement = (project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,635 [Thread-58] INFO  root  - distribution query: Software Test Case = (project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,641 [Thread-58] INFO  root  - distribution query: Software Requirement = (project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,648 [Thread-58] INFO  root  - distribution query: System Test Case = (project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,654 [Thread-58] INFO  root  - distribution query: Testing = (project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,661 [Thread-58] INFO  root  - distribution query: System Requirement = (project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,668 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,675 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,681 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:23,764 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE finished  [ TIME 0.17 s. ]
+2017-05-18 00:00:23,772 [Thread-58] INFO  root  - trackeranalysis:calculate finished  [ TIME 5.11 s. ]
+2017-05-18 00:00:23,780 [Thread-58] INFO  root  - [trackeranalysis:report]
+2017-05-18 00:00:23,810 [Thread-58] INFO  root  - trackeranalysis:report execute for:_root.default.Demo_Projects.drivepilot._artificial
+Project id for artifact _root.default.Demo_Projects.drivepilot:_artificial is drivepilot
+2017-05-18 00:00:23,817 [Thread-58] INFO  root  - trackeranalysis:report finished  [ TIME 0.0452 s. ]
+2017-05-18 00:00:23,823 [Thread-58] INFO  root  - [projectscore:calculate]
+2017-05-18 00:00:23,876 [Thread-58] INFO  root  - projectscore:calculate execute on:_root.default.Demo_Projects.drivepilot._artificial
+2017-05-18 00:00:23,882 [Thread-58] INFO  root  - projectscore:calculate finished  [ TIME 0.0655 s. ]
+2017-05-18 00:00:23,888 [Thread-58] INFO  root  - [projectscore:report]
+2017-05-18 00:00:23,935 [Thread-58] INFO  root  - projectscore:report execute on:_root.default.Demo_Projects.drivepilot._artificial
+Project id for artifact _root.default.Demo_Projects.drivepilot:_artificial is drivepilot
+2017-05-18 00:00:23,942 [Thread-58] INFO  root  - projectscore:report finished  [ TIME 0.0589 s. ]
+2017-05-18 00:00:23,949 [Thread-58] INFO  root  - [projectscore:aggregate]
+2017-05-18 00:00:23,957 [Thread-58] INFO  root  - projectscore:aggregate execute on:_root.default.Demo_Projects.drivepilot._artificial
+2017-05-18 00:00:23,964 [Thread-58] INFO  root  - projectscore:aggregate does nothing on project level
+2017-05-18 00:00:23,970 [Thread-58] INFO  root  - [projectscore:reportAggregated]
+2017-05-18 00:00:23,977 [Thread-58] INFO  root  - projectscore:reportAggregated execute on:_root.default.Demo_Projects.drivepilot._artificial
+2017-05-18 00:00:23,984 [Thread-58] INFO  root  - projectscore:reportAggregated does nothing on project level
+2017-05-18 00:00:23,990 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:23,996 [Thread-58] INFO  root  - Building _root.default.Demo_Projects:_artificial:null
+2017-05-18 00:00:24,001 [Thread-58] INFO  root  - task-segment: [com.polarion.maven.plugins.qcentre:trackeranalysis:calculate, com.polarion.maven.plugins.qcentre:trackeranalysis:report, com.polarion.maven.plugins.qcentre:projectscore:calculate, com.polarion.maven.plugins.qcentre:projectscore:report, com.polarion.maven.plugins.qcentre:projectscore:aggregate, com.polarion.maven.plugins.qcentre:projectscore:reportAggregated]
+2017-05-18 00:00:24,007 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:24,012 [Thread-58] INFO  root  - [trackeranalysis:calculate]
+2017-05-18 00:00:24,017 [Thread-58] INFO  root  - trackeranalysis:calculate execute on:_root.default.Demo_Projects._artificial
+2017-05-18 00:00:24,022 [Thread-58] INFO  root  - trackeranalysis:calculate does nothing on project group and requires project artifical artifact not real build artifact
+2017-05-18 00:00:24,027 [Thread-58] INFO  root  - [trackeranalysis:report]
+2017-05-18 00:00:24,033 [Thread-58] INFO  root  - trackeranalysis:report execute for:_root.default.Demo_Projects._artificial
+2017-05-18 00:00:24,038 [Thread-58] INFO  root  - trackeranalysis:report does nothing on project group and requires project artifical artifact not real build artifact
+2017-05-18 00:00:24,043 [Thread-58] INFO  root  - [projectscore:calculate]
+2017-05-18 00:00:24,049 [Thread-58] INFO  root  - projectscore:calculate execute on:_root.default.Demo_Projects._artificial
+2017-05-18 00:00:24,054 [Thread-58] INFO  root  - projectscore:calculate does nothing on project group and requires project artifical artifact not real build artifact
+2017-05-18 00:00:24,059 [Thread-58] INFO  root  - [projectscore:report]
+2017-05-18 00:00:24,064 [Thread-58] INFO  root  - projectscore:report execute on:_root.default.Demo_Projects._artificial
+2017-05-18 00:00:24,069 [Thread-58] INFO  root  - projectscore:report does nothing on project group and requires project artifical artifact not real build artifact
+2017-05-18 00:00:24,074 [Thread-58] INFO  root  - [projectscore:aggregate]
+2017-05-18 00:00:24,135 [Thread-58] INFO  root  - projectscore:aggregate execute on:_root.default.Demo_Projects._artificial
+2017-05-18 00:00:24,141 [Thread-58] INFO  root  - projectscore:aggregate finished  [ TIME 0.154 s. ]
+2017-05-18 00:00:25,067 [Thread-58] INFO  root  - [projectscore:reportAggregated]
+2017-05-18 00:00:25,072 [Thread-58] INFO  root  - projectscore:reportAggregated execute on:_root.default.Demo_Projects._artificial
+2017-05-18 00:00:25,078 [Thread-58] INFO  root  - projectscore:reportAggregated finished  [ TIME 0.0468 s. ]
+2017-05-18 00:00:25,083 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:25,088 [Thread-58] INFO  root  - Building _root.default.library:_artificial:null
+2017-05-18 00:00:25,093 [Thread-58] INFO  root  - task-segment: [com.polarion.maven.plugins.qcentre:trackeranalysis:calculate, com.polarion.maven.plugins.qcentre:trackeranalysis:report, com.polarion.maven.plugins.qcentre:projectscore:calculate, com.polarion.maven.plugins.qcentre:projectscore:report, com.polarion.maven.plugins.qcentre:projectscore:aggregate, com.polarion.maven.plugins.qcentre:projectscore:reportAggregated]
+2017-05-18 00:00:25,098 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:25,103 [Thread-58] INFO  root  - [trackeranalysis:calculate]
+2017-05-18 00:00:25,108 [Thread-58] INFO  root  - trackeranalysis:calculate execute on:_root.default.library._artificial
+Project id for artifact _root.default.library:_artificial is library
+2017-05-18 00:00:25,114 [Thread-58] INFO  root  - runGauge:RESOLVED-UNRESOLVED
+2017-05-18 00:00:25,122 [Thread-58] INFO  root  - runGauge:RESOLVED-UNRESOLVED finished  [ TIME 0.009 s. ]
+2017-05-18 00:00:25,130 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-ASSIGNEE
+2017-05-18 00:00:25,139 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-ASSIGNEE finished  [ TIME 0.00571 s. ]
+2017-05-18 00:00:25,148 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-CATEGORY
+2017-05-18 00:00:25,157 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-CATEGORY finished  [ TIME 0.00472 s. ]
+2017-05-18 00:00:25,165 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-TIMEPOINT
+2017-05-18 00:00:25,173 [Thread-58] INFO  root  - runGauge:UNRESOLVED-BY-TIMEPOINT finished  [ TIME 0.00445 s. ]
+2017-05-18 00:00:25,180 [Thread-58] INFO  root  - runGauge:MAI
+2017-05-18 00:00:25,189 [Thread-58] INFO  root  - runGauge:MAI finished  [ TIME 0.0794 s. ]
+2017-05-18 00:00:25,197 [Thread-58] INFO  root  - runGauge:MEI
+2017-05-18 00:00:25,205 [Thread-58] INFO  root  - runGauge:MEI finished  [ TIME 0.0134 s. ]
+2017-05-18 00:00:25,213 [Thread-58] INFO  root  - runGauge:MSI
+2017-05-18 00:00:25,222 [Thread-58] INFO  root  - runGauge:MSI finished  [ TIME 0.0137 s. ]
+2017-05-18 00:00:25,229 [Thread-58] INFO  root  - runGauge:ESTIMATE-ACCURACY
+10381 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.EstimateAccuracyGauge  - starting fresh calculation for 0 work items
+2017-05-18 00:00:25,238 [Thread-58] INFO  root  - runGauge:ESTIMATE-ACCURACY finished  [ TIME 0.00391 s. ]
+2017-05-18 00:00:25,245 [Thread-58] INFO  root  - runGauge:PROJECT-PLAN-ACCURACY
+2017-05-18 00:00:25,255 [Thread-58] INFO  root  - runGauge:PROJECT-PLAN-ACCURACY finished  [ TIME 0.0000159 s. ]
+2017-05-18 00:00:25,264 [Thread-58] INFO  root  - runGauge:PLANNING-ACCURACY
+2017-05-18 00:00:25,272 [Thread-58] INFO  root  - runGauge:PLANNING-ACCURACY finished  [ TIME 0.00376 s. ]
+2017-05-18 00:00:25,281 [Thread-58] INFO  root  - runGauge:PLANNING-COVERAGE
+2017-05-18 00:00:25,289 [Thread-58] INFO  root  - runGauge:PLANNING-COVERAGE finished  [ TIME 0.00401 s. ]
+2017-05-18 00:00:25,297 [Thread-58] INFO  root  - runGauge:WORKITEMS-PLANNING-ACCURACY
+2017-05-18 00:00:25,306 [Thread-58] INFO  root  - runGauge:WORKITEMS-PLANNING-ACCURACY finished  [ TIME 0.753 s. ]
+2017-05-18 00:00:25,315 [Thread-58] INFO  root  - runGauge:RESOLVED-RATIO
+2017-05-18 00:00:25,324 [Thread-58] INFO  root  - runGauge:RESOLVED-RATIO finished  [ TIME 0.0000836 s. ]
+2017-05-18 00:00:25,332 [Thread-58] INFO  root  - runGauge:ASSIGNMENT-RATIO
+2017-05-18 00:00:25,338 [Thread-58] INFO  root  - runGauge:ASSIGNMENT-RATIO finished  [ TIME 0.00751 s. ]
+2017-05-18 00:00:25,346 [Thread-58] INFO  root  - runGauge:PLANNING-RATIO
+2017-05-18 00:00:25,356 [Thread-58] INFO  root  - runGauge:PLANNING-RATIO finished  [ TIME 0.0108 s. ]
+2017-05-18 00:00:25,364 [Thread-58] INFO  root  - runGauge:SEVERITY
+2017-05-18 00:00:25,373 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:25,380 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:library) AND (severity:trivial)
+2017-05-18 00:00:25,387 [Thread-58] INFO  root  - distribution query: Minor = (project.id:library) AND (severity:minor)
+2017-05-18 00:00:25,393 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:library) AND (severity:will_not_have)
+2017-05-18 00:00:25,398 [Thread-58] INFO  root  - distribution query: Normal = (project.id:library) AND (severity:normal)
+2017-05-18 00:00:25,404 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:library) AND (severity:nice_to_have)
+2017-05-18 00:00:25,409 [Thread-58] INFO  root  - distribution query: Major = (project.id:library) AND (severity:major)
+2017-05-18 00:00:25,415 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:library) AND (severity:should_have)
+2017-05-18 00:00:25,420 [Thread-58] INFO  root  - distribution query: Critical = (project.id:library) AND (severity:critical)
+2017-05-18 00:00:25,425 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:library) AND (severity:must_have)
+2017-05-18 00:00:25,430 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:library) AND (severity:blocker)
+2017-05-18 00:00:25,435 [Thread-58] INFO  root  - runGauge:SEVERITY finished  [ TIME 0.0318 s. ]
+2017-05-18 00:00:25,440 [Thread-58] INFO  root  - runGauge:OPEN-BY-SEVERITY
+2017-05-18 00:00:25,445 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:25,450 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:library) AND (severity:trivial AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,455 [Thread-58] INFO  root  - distribution query: Minor = (project.id:library) AND (severity:minor AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,460 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:library) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,466 [Thread-58] INFO  root  - distribution query: Normal = (project.id:library) AND (severity:normal AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,471 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:library) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,477 [Thread-58] INFO  root  - distribution query: Major = (project.id:library) AND (severity:major AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,483 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:library) AND (severity:should_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,490 [Thread-58] INFO  root  - distribution query: Critical = (project.id:library) AND (severity:critical AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,498 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:library) AND (severity:must_have AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,505 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:library) AND (severity:blocker AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,511 [Thread-58] INFO  root  - runGauge:OPEN-BY-SEVERITY finished  [ TIME 0.026 s. ]
+2017-05-18 00:00:25,518 [Thread-58] INFO  root  - runGauge:RESOLVED-BY-SEVERITY
+2017-05-18 00:00:25,527 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:25,534 [Thread-58] INFO  root  - distribution query: Trivial = (project.id:library) AND (severity:trivial AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,541 [Thread-58] INFO  root  - distribution query: Minor = (project.id:library) AND (severity:minor AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,548 [Thread-58] INFO  root  - distribution query: Will not Have = (project.id:library) AND (severity:will_not_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,553 [Thread-58] INFO  root  - distribution query: Normal = (project.id:library) AND (severity:normal AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,559 [Thread-58] INFO  root  - distribution query: Nice to Have = (project.id:library) AND (severity:nice_to_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,565 [Thread-58] INFO  root  - distribution query: Major = (project.id:library) AND (severity:major AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,571 [Thread-58] INFO  root  - distribution query: Should Have = (project.id:library) AND (severity:should_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,577 [Thread-58] INFO  root  - distribution query: Critical = (project.id:library) AND (severity:critical AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,582 [Thread-58] INFO  root  - distribution query: Must Have = (project.id:library) AND (severity:must_have AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,588 [Thread-58] INFO  root  - distribution query: Blocker = (project.id:library) AND (severity:blocker AND HAS_VALUE:resolution)
+2017-05-18 00:00:25,593 [Thread-58] INFO  root  - runGauge:RESOLVED-BY-SEVERITY finished  [ TIME 0.0242 s. ]
+2017-05-18 00:00:25,598 [Thread-58] INFO  root  - runGauge:PRIORITY
+2017-05-18 00:00:25,603 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:25,608 [Thread-58] INFO  root  - distribution query: Lowest = (project.id:library) AND (priority:lowest)
+2017-05-18 00:00:25,613 [Thread-58] INFO  root  - distribution query: Low = (project.id:library) AND (priority:low)
+2017-05-18 00:00:25,618 [Thread-58] INFO  root  - distribution query: Medium = (project.id:library) AND (priority:medium)
+2017-05-18 00:00:25,623 [Thread-58] INFO  root  - distribution query: High = (project.id:library) AND (priority:high)
+2017-05-18 00:00:25,628 [Thread-58] INFO  root  - distribution query: Highest = (project.id:library) AND (priority:highest)
+2017-05-18 00:00:25,635 [Thread-58] INFO  root  - runGauge:PRIORITY finished  [ TIME 0.0193 s. ]
+2017-05-18 00:00:25,640 [Thread-58] INFO  root  - runGauge:OPEN-BY-PRIORITY
+2017-05-18 00:00:25,645 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:25,650 [Thread-58] INFO  root  - distribution query: Lowest = (project.id:library) AND (priority:lowest AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,655 [Thread-58] INFO  root  - distribution query: Low = (project.id:library) AND (priority:low AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,660 [Thread-58] INFO  root  - distribution query: Medium = (project.id:library) AND (priority:medium AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,665 [Thread-58] INFO  root  - distribution query: High = (project.id:library) AND (priority:high AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,670 [Thread-58] INFO  root  - distribution query: Highest = (project.id:library) AND (priority:highest AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:25,675 [Thread-58] INFO  root  - runGauge:OPEN-BY-PRIORITY finished  [ TIME 0.0128 s. ]
+2017-05-18 00:00:25,680 [Thread-58] INFO  root  - runGauge:RESOLUTION
+2017-05-18 00:00:25,685 [Thread-58] INFO  root  - reverse order: false
+2017-05-18 00:00:25,690 [Thread-58] INFO  root  - distribution query: Done = (project.id:library) AND (resolution:done)
+2017-05-18 00:00:25,695 [Thread-58] INFO  root  - distribution query: Implemented = (project.id:library) AND (resolution:implemented)
+2017-05-18 00:00:25,700 [Thread-58] INFO  root  - distribution query: Won't Fix = (project.id:library) AND (resolution:wontfix)
+2017-05-18 00:00:25,705 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:library) AND (resolution:duplicate)
+2017-05-18 00:00:25,710 [Thread-58] INFO  root  - distribution query: Duplicate = (project.id:library) AND (resolution:duplicate)
+2017-05-18 00:00:25,715 [Thread-58] INFO  root  - distribution query: Incomplete = (project.id:library) AND (resolution:incomplete)
+2017-05-18 00:00:25,720 [Thread-58] INFO  root  - distribution query: Cannot Reproduce = (project.id:library) AND (resolution:cannotreproduce)
+2017-05-18 00:00:25,725 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:library) AND (resolution:invalid)
+2017-05-18 00:00:25,730 [Thread-58] INFO  root  - distribution query: Invalid = (project.id:library) AND (resolution:invalid)
+2017-05-18 00:00:25,735 [Thread-58] INFO  root  - distribution query: Later = (project.id:library) AND (resolution:later)
+2017-05-18 00:00:25,740 [Thread-58] INFO  root  - distribution query: Later = (project.id:library) AND (resolution:later)
+2017-05-18 00:00:25,746 [Thread-58] INFO  root  - runGauge:RESOLUTION finished  [ TIME 0.0261 s. ]
+2017-05-18 00:00:25,753 [Thread-58] INFO  root  - runGauge:STATUS
+2017-05-18 00:00:25,760 [Thread-58] INFO  root  - reverse order: false
+2017-05-18 00:00:25,766 [Thread-58] INFO  root  - distribution query: Open = (project.id:library) AND (status:open)
+2017-05-18 00:00:25,773 [Thread-58] INFO  root  - distribution query: Draft = (project.id:library) AND (status:draft)
+2017-05-18 00:00:25,780 [Thread-58] INFO  root  - distribution query: Draft = (project.id:library) AND (status:draft)
+2017-05-18 00:00:25,787 [Thread-58] INFO  root  - distribution query: In Progress = (project.id:library) AND (status:inprogress)
+2017-05-18 00:00:25,793 [Thread-58] INFO  root  - distribution query: In Review = (project.id:library) AND (status:inReview)
+2017-05-18 00:00:25,800 [Thread-58] INFO  root  - distribution query: Active = (project.id:library) AND (status:active)
+2017-05-18 00:00:25,807 [Thread-58] INFO  root  - distribution query: Reopened = (project.id:library) AND (status:reopened)
+2017-05-18 00:00:25,812 [Thread-58] INFO  root  - distribution query: Approved = (project.id:library) AND (status:approved)
+2017-05-18 00:00:25,818 [Thread-58] INFO  root  - distribution query: Inactive = (project.id:library) AND (status:inactive)
+2017-05-18 00:00:25,823 [Thread-58] INFO  root  - distribution query: Done = (project.id:library) AND (status:done)
+2017-05-18 00:00:25,829 [Thread-58] INFO  root  - distribution query: Accepted = (project.id:library) AND (status:accepted)
+2017-05-18 00:00:25,835 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:library) AND (status:rejected)
+2017-05-18 00:00:25,840 [Thread-58] INFO  root  - distribution query: Implemented = (project.id:library) AND (status:implemented)
+2017-05-18 00:00:25,845 [Thread-58] INFO  root  - distribution query: Verified as Done = (project.id:library) AND (status:verified-done)
+2017-05-18 00:00:25,850 [Thread-58] INFO  root  - distribution query: Verified = (project.id:library) AND (status:verified)
+2017-05-18 00:00:25,856 [Thread-58] INFO  root  - distribution query: Verified as Rejected = (project.id:library) AND (status:verified-rejected)
+2017-05-18 00:00:25,861 [Thread-58] INFO  root  - distribution query: Change Implemenation = (project.id:library) AND (status:changesNeeded)
+2017-05-18 00:00:25,866 [Thread-58] INFO  root  - distribution query: Rejected = (project.id:library) AND (status:rejected)
+2017-05-18 00:00:25,871 [Thread-58] INFO  root  - runGauge:STATUS finished  [ TIME 0.141 s. ]
+2017-05-18 00:00:25,876 [Thread-58] INFO  root  - runGauge:ALL
+2017-05-18 00:00:25,881 [Thread-58] INFO  root  - runGauge:ALL finished  [ TIME 0.00339 s. ]
+2017-05-18 00:00:25,886 [Thread-58] INFO  root  - runGauge:OPEN
+2017-05-18 00:00:25,891 [Thread-58] INFO  root  - runGauge:OPEN finished  [ TIME 0.0033 s. ]
+2017-05-18 00:00:25,897 [Thread-58] INFO  root  - runGauge:UNRESOLVED-VERSION-1
+2017-05-18 00:00:25,902 [Thread-58] INFO  root  - runGauge:UNRESOLVED-VERSION-1 finished  [ TIME 0.00202 s. ]
+2017-05-18 00:00:25,907 [Thread-58] INFO  root  - runGauge:NOT-VERIFIED-REQUIREMENTS-VERSION-1
+2017-05-18 00:00:25,912 [Thread-58] INFO  root  - runGauge:NOT-VERIFIED-REQUIREMENTS-VERSION-1 finished  [ TIME 0.00207 s. ]
+2017-05-18 00:00:25,917 [Thread-58] INFO  root  - runGauge:NEW
+2017-05-18 00:00:25,922 [Thread-58] INFO  root  - runGauge:NEW finished  [ TIME 0.00557 s. ]
+2017-05-18 00:00:25,927 [Thread-58] INFO  root  - runGauge:SUSPECT-RATIO
+2017-05-18 00:00:25,932 [Thread-58] INFO  root  - runGauge:SUSPECT-RATIO finished  [ TIME 0.00595 s. ]
+2017-05-18 00:00:25,938 [Thread-58] INFO  root  - runGauge:TRACEABILITY-REQUIREMENTS-COMMITS
+11470 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.ItemsTraceabilityGaugeCreator  - Found 0 input work items in /library
+11470 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.ItemsTraceabilityGaugeCreator  - Found 0 covered work items
+11470 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.ItemsTraceabilityGaugeCreator  - 0 work items are not traceable
+2017-05-18 00:00:25,944 [Thread-58] INFO  root  - runGauge:TRACEABILITY-REQUIREMENTS-COMMITS finished  [ TIME 0.00503 s. ]
+2017-05-18 00:00:25,950 [Thread-58] INFO  root  - runGauge:TRACEABILITY-COMMITS-REQUIREMENTS
+11473 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.RevisionsHelper  - getProjectRevisions: repoPath: Location[repository default, path /library]
+11476 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.CommitsTraceabilityGaugeCreator  - Found 1 non-internal revisions of /library
+11481 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.CommitsTraceabilityGaugeCreator  - Processing 1 revisions, total linked work items 0
+11481 [main] INFO com.polarion.maven.plugins.qcentre.trackeranalysis.gauges.CommitsTraceabilityGaugeCreator  - 1 revisions are not traceable
+2017-05-18 00:00:25,956 [Thread-58] INFO  root  - runGauge:TRACEABILITY-COMMITS-REQUIREMENTS finished  [ TIME 0.0106 s. ]
+2017-05-18 00:00:25,961 [Thread-58] INFO  root  - runGauge:ITEMS-BY-TYPE
+2017-05-18 00:00:25,967 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:25,973 [Thread-58] INFO  root  - distribution query: Testing = (project.id:library) AND (type:testing)
+2017-05-18 00:00:25,979 [Thread-58] INFO  root  - distribution query: Test Case = (project.id:library) AND (type:testcase)
+2017-05-18 00:00:25,986 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:library) AND (type:documentation)
+2017-05-18 00:00:25,992 [Thread-58] INFO  root  - distribution query: Task = (project.id:library) AND (type:task)
+2017-05-18 00:00:25,997 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:library) AND (type:implementation)
+2017-05-18 00:00:26,003 [Thread-58] INFO  root  - distribution query: Requirement = (project.id:library) AND (type:requirement)
+2017-05-18 00:00:26,009 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:library) AND (type:analysis)
+2017-05-18 00:00:26,015 [Thread-58] INFO  root  - runGauge:ITEMS-BY-TYPE finished  [ TIME 0.0304 s. ]
+2017-05-18 00:00:26,020 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-BY-TYPE
+2017-05-18 00:00:26,026 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:26,031 [Thread-58] INFO  root  - distribution query: Testing = (project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:26,037 [Thread-58] INFO  root  - distribution query: Test Case = (project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:26,042 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:library) AND (type:documentation AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:26,047 [Thread-58] INFO  root  - distribution query: Task = (project.id:library) AND (type:task AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:26,052 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:26,058 [Thread-58] INFO  root  - distribution query: Requirement = (project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:26,063 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution)
+2017-05-18 00:00:26,068 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-BY-TYPE finished  [ TIME 0.181 s. ]
+2017-05-18 00:00:26,075 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE
+2017-05-18 00:00:26,081 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:26,088 [Thread-58] INFO  root  - distribution query: Testing = (project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:26,094 [Thread-58] INFO  root  - distribution query: Test Case = (project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:26,100 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:library) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:26,106 [Thread-58] INFO  root  - distribution query: Task = (project.id:library) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:26,112 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:26,118 [Thread-58] INFO  root  - distribution query: Requirement = (project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:26,124 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)
+2017-05-18 00:00:26,130 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE finished  [ TIME 0.0147 s. ]
+2017-05-18 00:00:26,136 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE
+2017-05-18 00:00:26,141 [Thread-58] INFO  root  - reverse order: true
+2017-05-18 00:00:26,146 [Thread-58] INFO  root  - distribution query: Testing = (project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:26,151 [Thread-58] INFO  root  - distribution query: Test Case = (project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:26,156 [Thread-58] INFO  root  - distribution query: Documentation = (project.id:library) AND (type:documentation AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:26,162 [Thread-58] INFO  root  - distribution query: Task = (project.id:library) AND (type:task AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:26,169 [Thread-58] INFO  root  - distribution query: Implementation = (project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:26,177 [Thread-58] INFO  root  - distribution query: Requirement = (project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:26,184 [Thread-58] INFO  root  - distribution query: Analysis = (project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND PLAN:(*))
+2017-05-18 00:00:26,189 [Thread-58] INFO  root  - runGauge:ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE finished  [ TIME 0.0245 s. ]
+2017-05-18 00:00:26,195 [Thread-58] INFO  root  - trackeranalysis:calculate finished  [ TIME 1.76 s. ]
+2017-05-18 00:00:26,201 [Thread-58] INFO  root  - [trackeranalysis:report]
+2017-05-18 00:00:26,207 [Thread-58] INFO  root  - trackeranalysis:report execute for:_root.default.library._artificial
+Project id for artifact _root.default.library:_artificial is library
+2017-05-18 00:00:26,214 [Thread-58] INFO  root  - trackeranalysis:report finished  [ TIME 0.027 s. ]
+2017-05-18 00:00:26,221 [Thread-58] INFO  root  - [projectscore:calculate]
+2017-05-18 00:00:26,230 [Thread-58] INFO  root  - projectscore:calculate execute on:_root.default.library._artificial
+2017-05-18 00:00:26,237 [Thread-58] INFO  root  - projectscore:calculate finished  [ TIME 0.0418 s. ]
+2017-05-18 00:00:26,244 [Thread-58] INFO  root  - [projectscore:report]
+2017-05-18 00:00:26,250 [Thread-58] INFO  root  - projectscore:report execute on:_root.default.library._artificial
+Project id for artifact _root.default.library:_artificial is library
+2017-05-18 00:00:26,257 [Thread-58] INFO  root  - projectscore:report finished  [ TIME 0.0486 s. ]
+2017-05-18 00:00:26,264 [Thread-58] INFO  root  - [projectscore:aggregate]
+2017-05-18 00:00:26,277 [Thread-58] INFO  root  - projectscore:aggregate execute on:_root.default.library._artificial
+2017-05-18 00:00:26,283 [Thread-58] INFO  root  - projectscore:aggregate does nothing on project level
+2017-05-18 00:00:26,288 [Thread-58] INFO  root  - [projectscore:reportAggregated]
+2017-05-18 00:00:26,293 [Thread-58] INFO  root  - projectscore:reportAggregated execute on:_root.default.library._artificial
+2017-05-18 00:00:26,305 [Thread-58] INFO  root  - projectscore:reportAggregated does nothing on project level
+2017-05-18 00:00:26,311 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:26,318 [Thread-58] INFO  root  - Building _root.default:_artificial:null
+2017-05-18 00:00:26,324 [Thread-58] INFO  root  - task-segment: [com.polarion.maven.plugins.qcentre:trackeranalysis:calculate, com.polarion.maven.plugins.qcentre:trackeranalysis:report, com.polarion.maven.plugins.qcentre:projectscore:calculate, com.polarion.maven.plugins.qcentre:projectscore:report, com.polarion.maven.plugins.qcentre:projectscore:aggregate, com.polarion.maven.plugins.qcentre:projectscore:reportAggregated]
+2017-05-18 00:00:26,331 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:26,337 [Thread-58] INFO  root  - [trackeranalysis:calculate]
+2017-05-18 00:00:26,344 [Thread-58] INFO  root  - trackeranalysis:calculate execute on:_root.default._artificial
+2017-05-18 00:00:26,350 [Thread-58] INFO  root  - trackeranalysis:calculate does nothing on project group and requires project artifical artifact not real build artifact
+2017-05-18 00:00:26,357 [Thread-58] INFO  root  - [trackeranalysis:report]
+2017-05-18 00:00:26,363 [Thread-58] INFO  root  - trackeranalysis:report execute for:_root.default._artificial
+2017-05-18 00:00:26,369 [Thread-58] INFO  root  - trackeranalysis:report does nothing on project group and requires project artifical artifact not real build artifact
+2017-05-18 00:00:26,376 [Thread-58] INFO  root  - [projectscore:calculate]
+2017-05-18 00:00:26,384 [Thread-58] INFO  root  - projectscore:calculate execute on:_root.default._artificial
+2017-05-18 00:00:26,390 [Thread-58] INFO  root  - projectscore:calculate does nothing on project group and requires project artifical artifact not real build artifact
+2017-05-18 00:00:26,396 [Thread-58] INFO  root  - [projectscore:report]
+2017-05-18 00:00:26,401 [Thread-58] INFO  root  - projectscore:report execute on:_root.default._artificial
+2017-05-18 00:00:26,407 [Thread-58] INFO  root  - projectscore:report does nothing on project group and requires project artifical artifact not real build artifact
+2017-05-18 00:00:26,412 [Thread-58] INFO  root  - [projectscore:aggregate]
+2017-05-18 00:00:26,417 [Thread-58] INFO  root  - projectscore:aggregate execute on:_root.default._artificial
+2017-05-18 00:00:26,422 [Thread-58] INFO  root  - projectscore:aggregate finished  [ TIME 0.101 s. ]
+2017-05-18 00:00:26,427 [Thread-58] INFO  root  - [projectscore:reportAggregated]
+2017-05-18 00:00:26,432 [Thread-58] INFO  root  - projectscore:reportAggregated execute on:_root.default._artificial
+2017-05-18 00:00:26,438 [Thread-58] INFO  root  - projectscore:reportAggregated finished  [ TIME 0.0551 s. ]
+2017-05-18 00:00:26,443 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:26,448 [Thread-58] INFO  root  - Reactor Summary:
+2017-05-18 00:00:26,453 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:26,458 [Thread-58] INFO  root  - _root.default.Demo_Projects.elibrary:_artificial:null . SUCCESS [9.979s]
+2017-05-18 00:00:26,463 [Thread-58] INFO  root  - _root.default.Demo_Projects.drivepilot:_artificial:null  SUCCESS [5.297s]
+2017-05-18 00:00:26,468 [Thread-58] INFO  root  - _root.default.Demo_Projects:_artificial:null .......... SUCCESS [0.228s]
+2017-05-18 00:00:26,473 [Thread-58] INFO  root  - _root.default.library:_artificial:null ................ SUCCESS [1.899s]
+2017-05-18 00:00:26,478 [Thread-58] INFO  root  - _root.default:_artificial:null ........................ SUCCESS [0.180s]
+2017-05-18 00:00:26,483 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:26,487 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:26,492 [Thread-58] INFO  root  - BUILD SUCCESSFUL
+2017-05-18 00:00:26,497 [Thread-58] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:26,502 [Thread-58] INFO  root  - Total time: 19 seconds
+2017-05-18 00:00:26,507 [Thread-58] INFO  root  - Finished at: Thu May 18 00:00:26 IST 2017
+2017-05-18 00:00:26,512 [Thread-58] INFO  root  - Final Memory: 20M/280M
+2017-05-18 00:00:26,517 [Worker-1 | u:p | job: build.build] INFO  root  - ------------------------------------------------------------------------
+2017-05-18 00:00:26,522 [Worker-1 | u:p | job: build.build] INFO  root  - Maven returned exit code 0
+2017-05-18 00:00:29,356 [Worker-1 | u:p] INFO  root  - State of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" changed to FINISHED
+2017-05-18 00:00:29,361 [Worker-1 | u:p] INFO  root  - Status of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" is OK

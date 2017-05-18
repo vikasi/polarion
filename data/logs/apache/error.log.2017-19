@@ -72,3 +72,37 @@ The 'Apache2Polarion' service is running.
 [Wed May 17 16:28:24.649452 2017] [proxy_ajp:error] [pid 4792:tid 1616] [client ::1:61837] AH00896: failed to make connection to backend: 127.0.0.1, referer: http://localhost/polarion/
 [Wed May 17 16:28:24.715628 2017] [proxy:error] [pid 4792:tid 1628] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
 [Wed May 17 16:28:24.715628 2017] [proxy_ajp:error] [pid 4792:tid 1628] [client ::1:61839] AH00896: failed to make connection to backend: 127.0.0.1, referer: http://localhost/polarion/
+[Wed May 17 17:41:43.954454 2017] [proxy_ajp:error] [pid 4792:tid 1572] (OS 10054)An existing connection was forcibly closed by the remote host.  : AH01030: ajp_ilink_receive() can't receive header
+[Wed May 17 17:41:43.954454 2017] [proxy_ajp:error] [pid 4792:tid 1572] [client ::1:62627] AH00992: ajp_read_header: ajp_ilink_receive failed, referer: http://localhost/polarion/
+[Wed May 17 17:41:43.954454 2017] [proxy_ajp:error] [pid 4792:tid 1572] (120006)APR does not understand this error code: [client ::1:62627] AH00878: read response failed from 127.0.0.1:8889 (127.0.0.1), referer: http://localhost/polarion/
+[Wed May 17 17:41:43.962978 2017] [proxy_ajp:error] [pid 4792:tid 1564] (OS 10054)An existing connection was forcibly closed by the remote host.  : AH01030: ajp_ilink_receive() can't receive header
+[Wed May 17 17:41:43.962978 2017] [proxy_ajp:error] [pid 4792:tid 1564] [client ::1:62630] AH00992: ajp_read_header: ajp_ilink_receive failed, referer: http://localhost/polarion/
+[Wed May 17 17:41:43.962978 2017] [proxy_ajp:error] [pid 4792:tid 1564] (120006)APR does not understand this error code: [client ::1:62630] AH00878: read response failed from 127.0.0.1:8889 (127.0.0.1), referer: http://localhost/polarion/
+[Wed May 17 17:41:43.962978 2017] [proxy_ajp:error] [pid 4792:tid 1696] (OS 10054)An existing connection was forcibly closed by the remote host.  : AH01030: ajp_ilink_receive() can't receive header
+[Wed May 17 17:41:43.962978 2017] [proxy_ajp:error] [pid 4792:tid 1696] [client ::1:62628] AH00992: ajp_read_header: ajp_ilink_receive failed, referer: http://localhost/polarion/
+[Wed May 17 17:41:43.962978 2017] [proxy_ajp:error] [pid 4792:tid 1696] (120006)APR does not understand this error code: [client ::1:62628] AH00878: read response failed from 127.0.0.1:8889 (127.0.0.1), referer: http://localhost/polarion/
+[Wed May 17 17:41:43.963479 2017] [proxy_ajp:error] [pid 4792:tid 1640] (OS 10054)An existing connection was forcibly closed by the remote host.  : AH01030: ajp_ilink_receive() can't receive header
+[Wed May 17 17:41:43.963479 2017] [proxy_ajp:error] [pid 4792:tid 1640] [client ::1:62629] AH00992: ajp_read_header: ajp_ilink_receive failed, referer: http://localhost/polarion/
+[Wed May 17 17:41:43.963479 2017] [proxy_ajp:error] [pid 4792:tid 1640] (120006)APR does not understand this error code: [client ::1:62629] AH00878: read response failed from 127.0.0.1:8889 (127.0.0.1), referer: http://localhost/polarion/
+[Wed May 17 17:41:43.963479 2017] [proxy_ajp:error] [pid 4792:tid 1604] (OS 10054)An existing connection was forcibly closed by the remote host.  : AH01030: ajp_ilink_receive() can't receive header
+[Wed May 17 17:41:43.963479 2017] [proxy_ajp:error] [pid 4792:tid 1604] [client ::1:62631] AH00992: ajp_read_header: ajp_ilink_receive failed, referer: http://localhost/polarion/
+[Wed May 17 17:41:43.963479 2017] [proxy_ajp:error] [pid 4792:tid 1604] (120006)APR does not understand this error code: [client ::1:62631] AH00878: read response failed from 127.0.0.1:8889 (127.0.0.1), referer: http://localhost/polarion/
+[Wed May 17 17:41:43.963980 2017] [proxy_ajp:error] [pid 4792:tid 1636] (OS 10054)An existing connection was forcibly closed by the remote host.  : AH01030: ajp_ilink_receive() can't receive header
+[Wed May 17 17:41:43.963980 2017] [proxy_ajp:error] [pid 4792:tid 1636] [client ::1:62632] AH00992: ajp_read_header: ajp_ilink_receive failed, referer: http://localhost/polarion/
+[Wed May 17 17:41:43.963980 2017] [proxy_ajp:error] [pid 4792:tid 1636] (120006)APR does not understand this error code: [client ::1:62632] AH00878: read response failed from 127.0.0.1:8889 (127.0.0.1), referer: http://localhost/polarion/
+[Wed May 17 17:41:44.966207 2017] [proxy:error] [pid 4792:tid 1604] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Wed May 17 17:41:44.966207 2017] [proxy_ajp:error] [pid 4792:tid 1604] [client ::1:62633] AH00896: failed to make connection to backend: 127.0.0.1, referer: http://localhost/polarion/
+[Wed May 17 17:41:44.971221 2017] [proxy:error] [pid 4792:tid 1640] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Wed May 17 17:41:44.971221 2017] [proxy_ajp:error] [pid 4792:tid 1640] [client ::1:62637] AH00896: failed to make connection to backend: 127.0.0.1, referer: http://localhost/polarion/
+[Wed May 17 17:41:44.973727 2017] [proxy:error] [pid 4792:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Wed May 17 17:41:44.973727 2017] [proxy_ajp:error] [pid 4792:tid 1696] [client ::1:62639] AH00896: failed to make connection to backend: 127.0.0.1, referer: http://localhost/polarion/
+[Wed May 17 17:41:45.066485 2017] [proxy:error] [pid 4792:tid 1636] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Wed May 17 17:41:45.066485 2017] [proxy_ajp:error] [pid 4792:tid 1636] [client ::1:62635] AH00896: failed to make connection to backend: 127.0.0.1, referer: http://localhost/polarion/
+[Wed May 17 18:31:32.162388 2017] [mpm_winnt:notice] [pid 3572:tid 624] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed May 17 18:31:34.174195 2017] [mpm_winnt:notice] [pid 4792:tid 540] AH00364: Child: All worker threads have exited.
+[Wed May 17 18:31:34.236702 2017] [mpm_winnt:notice] [pid 3572:tid 624] AH00430: Parent: Child process 4792 exited successfully.
+[Wed May 17 18:32:53.014669 2017] [mpm_winnt:notice] [pid 2828:tid 636] AH00455: Apache/2.4.25 (Win64) SVN/1.9.4 configured -- resuming normal operations
+[Wed May 17 18:32:53.014669 2017] [mpm_winnt:notice] [pid 2828:tid 636] AH00456: Server built: Dec 17 2016 00:28:36
+[Wed May 17 18:32:53.014669 2017] [core:notice] [pid 2828:tid 636] AH00094: Command line: 'C:\\Polarion\\bundled\\apache\\bin\\httpd.exe -d C:/Polarion/bundled/apache -f C:/Polarion/bundled/apache\\conf\\httpd.conf -d C:/Polarion/bundled/apache\\.'
+[Wed May 17 18:32:53.014669 2017] [mpm_winnt:notice] [pid 2828:tid 636] AH00418: Parent: Created child process 4740
+[Wed May 17 18:32:53.233442 2017] [mpm_winnt:notice] [pid 4740:tid 524] AH00354: Child: Starting 150 worker threads.

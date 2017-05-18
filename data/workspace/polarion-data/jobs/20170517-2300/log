@@ -1,0 +1,114 @@
+2017-05-17 23:00:00,026 [DefaultQuartzScheduler_Worker-8] INFO  root  - Job "Index Checker" has id 177591d9-927abe2a-3c28181b-f501d686
+2017-05-17 23:00:00,029 [DefaultQuartzScheduler_Worker-8] INFO  root  - State of job "Index Checker" changed to UNSCHEDULED
+2017-05-17 23:00:00,032 [DefaultQuartzScheduler_Worker-8] INFO  root  - Working directory of root job "Index Checker" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2300
+2017-05-17 23:00:00,034 [DefaultQuartzScheduler_Worker-8] INFO  root  - Job "Index Checker" runs as user "polarion"
+2017-05-17 23:00:00,035 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  root  - State of job "Index Checker" changed to ACTIVATING
+2017-05-17 23:00:00,038 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  root  - State of job "Index Checker" changed to WAITING
+2017-05-17 23:00:00,041 [Worker-0 | u:p] INFO  root  - State of job "Index Checker" changed to RUNNING
+2017-05-17 23:00:00,062 [Worker-0 | u:p | job: checker] INFO  root  - Starting checkers in context: Context[name= default, nature= ContextNature[Repository], location = Location[repository default, path /], id: ContextId[cluster default, context [global]]]
+2017-05-17 23:00:00,071 [Worker-0 | u:p | job: checker] INFO  root  - Starting checker: index
+2017-05-17 23:00:00,074 [Worker-0 | u:p | job: checker] INFO  root  - Checking project: library
+2017-05-17 23:00:00,076 [Worker-0 | u:p | job: checker] INFO  root  - [xml storage]
+2017-05-17 23:00:00,087 [Worker-0 | u:p | job: checker] INFO  root  - traversing xml storage: Location[repository default, path /library/.polarion/tracker/workitems]
+2017-05-17 23:00:00,101 [Worker-0 | u:p | job: checker] INFO  root  - xml storage: 0 work items
+2017-05-17 23:00:00,104 [Worker-0 | u:p | job: checker] INFO  root  - [livedoc storage]
+2017-05-17 23:00:00,131 [Worker-0 | u:p | job: checker] INFO  root  - [modules/documents storage]
+2017-05-17 23:00:00,139 [Worker-0 | u:p | job: checker] INFO  root  - traversing modules/documents storage: Location[repository default, path /library/modules]
+2017-05-17 23:00:00,542 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Business Requirements/workitems]
+2017-05-17 23:00:00,545 [Worker-0 | u:p | job: checker] INFO  root  -  - 25 work items
+2017-05-17 23:00:00,745 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Software Test Procedure Specification/workitems]
+2017-05-17 23:00:00,748 [Worker-0 | u:p | job: checker] INFO  root  -  - 17 work items
+2017-05-17 23:00:00,991 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Software Design Description/workitems]
+2017-05-17 23:00:00,993 [Worker-0 | u:p | job: checker] INFO  root  -  - 21 work items
+2017-05-17 23:00:01,371 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/System Requirements Specification/workitems]
+2017-05-17 23:00:01,374 [Worker-0 | u:p | job: checker] INFO  root  -  - 39 work items
+2017-05-17 23:00:01,512 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Test Specification/workitems]
+2017-05-17 23:00:01,514 [Worker-0 | u:p | job: checker] INFO  root  -  - 10 work items
+2017-05-17 23:00:01,629 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/User Requirements/workitems]
+2017-05-17 23:00:01,632 [Worker-0 | u:p | job: checker] INFO  root  -  - 9 work items
+2017-05-17 23:00:01,966 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Software Project Management Plan/workitems]
+2017-05-17 23:00:01,968 [Worker-0 | u:p | job: checker] INFO  root  -  - 39 work items
+2017-05-17 23:00:02,091 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Software Test Design Specification/workitems]
+2017-05-17 23:00:02,093 [Worker-0 | u:p | job: checker] INFO  root  -  - 10 work items
+2017-05-17 23:00:02,265 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Test Plan/workitems]
+2017-05-17 23:00:02,267 [Worker-0 | u:p | job: checker] INFO  root  -  - 17 work items
+2017-05-17 23:00:02,375 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Software Test Case Specification/workitems]
+2017-05-17 23:00:02,377 [Worker-0 | u:p | job: checker] INFO  root  -  - 8 work items
+2017-05-17 23:00:02,624 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Software Requirements Specification/workitems]
+2017-05-17 23:00:02,627 [Worker-0 | u:p | job: checker] INFO  root  -  - 28 work items
+2017-05-17 23:00:02,907 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Functional Requirements/workitems]
+2017-05-17 23:00:02,909 [Worker-0 | u:p | job: checker] INFO  root  -  - 29 work items
+2017-05-17 23:00:03,095 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /library/modules/_default/Software Test Plan/workitems]
+2017-05-17 23:00:03,097 [Worker-0 | u:p | job: checker] INFO  root  -  - 19 work items
+2017-05-17 23:00:03,100 [Worker-0 | u:p | job: checker] INFO  root  - Checking project: elibrary
+2017-05-17 23:00:03,103 [Worker-0 | u:p | job: checker] INFO  root  - [xml storage]
+2017-05-17 23:00:03,111 [Worker-0 | u:p | job: checker] INFO  root  - traversing xml storage: Location[repository default, path /Demo Projects/elibrary/.polarion/tracker/workitems]
+2017-05-17 23:00:03,176 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/elibrary/.polarion/tracker/workitems/100-199]
+2017-05-17 23:00:03,179 [Worker-0 | u:p | job: checker] INFO  root  -  - 1 work items
+2017-05-17 23:00:03,631 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/elibrary/.polarion/tracker/workitems/00-99]
+2017-05-17 23:00:03,633 [Worker-0 | u:p | job: checker] INFO  root  -  - 51 work items
+2017-05-17 23:00:03,637 [Worker-0 | u:p | job: checker] INFO  root  - xml storage: 52 work items
+2017-05-17 23:00:03,639 [Worker-0 | u:p | job: checker] INFO  root  - [livedoc storage]
+2017-05-17 23:00:03,646 [Worker-0 | u:p | job: checker] INFO  root  - [modules/documents storage]
+2017-05-17 23:00:03,653 [Worker-0 | u:p | job: checker] INFO  root  - traversing modules/documents storage: Location[repository default, path /Demo Projects/elibrary/modules]
+2017-05-17 23:00:03,884 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/elibrary/modules/Testing/Test Specification/workitems]
+2017-05-17 23:00:03,887 [Worker-0 | u:p | job: checker] INFO  root  -  - 16 work items
+2017-05-17 23:00:04,051 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/elibrary/modules/Specification/Administration Specification/workitems]
+2017-05-17 23:00:04,053 [Worker-0 | u:p | job: checker] INFO  root  -  - 9 work items
+2017-05-17 23:00:04,526 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/elibrary/modules/Specification/Product Specification/workitems]
+2017-05-17 23:00:04,529 [Worker-0 | u:p | job: checker] INFO  root  -  - 49 work items
+2017-05-17 23:00:04,757 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/elibrary/modules/Specification/Catalog Specification/workitems]
+2017-05-17 23:00:04,759 [Worker-0 | u:p | job: checker] INFO  root  -  - 22 work items
+2017-05-17 23:00:04,762 [Worker-0 | u:p | job: checker] INFO  root  - Checking project: drivepilot
+2017-05-17 23:00:04,765 [Worker-0 | u:p | job: checker] INFO  root  - [xml storage]
+2017-05-17 23:00:04,775 [Worker-0 | u:p | job: checker] INFO  root  - traversing xml storage: Location[repository default, path /Demo Projects/drivepilot/.polarion/tracker/workitems]
+2017-05-17 23:00:04,890 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/.polarion/tracker/workitems/300-399]
+2017-05-17 23:00:04,892 [Worker-0 | u:p | job: checker] INFO  root  -  - 3 work items
+2017-05-17 23:00:05,159 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/.polarion/tracker/workitems/400-499]
+2017-05-17 23:00:05,161 [Worker-0 | u:p | job: checker] INFO  root  -  - 24 work items
+2017-05-17 23:00:05,254 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/.polarion/tracker/workitems/00-99]
+2017-05-17 23:00:05,256 [Worker-0 | u:p | job: checker] INFO  root  -  - 6 work items
+2017-05-17 23:00:05,259 [Worker-0 | u:p | job: checker] INFO  root  - xml storage: 33 work items
+2017-05-17 23:00:05,261 [Worker-0 | u:p | job: checker] INFO  root  - [livedoc storage]
+2017-05-17 23:00:05,268 [Worker-0 | u:p | job: checker] INFO  root  - [modules/documents storage]
+2017-05-17 23:00:05,275 [Worker-0 | u:p | job: checker] INFO  root  - traversing modules/documents storage: Location[repository default, path /Demo Projects/drivepilot/modules]
+2017-05-17 23:00:06,077 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Requirements/System Requirements/workitems]
+2017-05-17 23:00:06,080 [Worker-0 | u:p | job: checker] INFO  root  -  - 72 work items
+2017-05-17 23:00:06,242 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Requirements/System Test Specification/workitems]
+2017-05-17 23:00:06,245 [Worker-0 | u:p | job: checker] INFO  root  -  - 13 work items
+2017-05-17 23:00:06,391 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Requirements/System Validation and Verification Plan/workitems]
+2017-05-17 23:00:06,394 [Worker-0 | u:p | job: checker] INFO  root  -  - 11 work items
+2017-05-17 23:00:06,783 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/_default/Process Description/workitems]
+2017-05-17 23:00:06,786 [Worker-0 | u:p | job: checker] INFO  root  -  - 30 work items
+2017-05-17 23:00:06,924 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Risks/Risk Specification/workitems]
+2017-05-17 23:00:06,927 [Worker-0 | u:p | job: checker] INFO  root  -  - 7 work items
+2017-05-17 23:00:07,298 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Concept/Feasibility Study/workitems]
+2017-05-17 23:00:07,301 [Worker-0 | u:p | job: checker] INFO  root  -  - 36 work items
+2017-05-17 23:00:07,667 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Concept/Project Scope/workitems]
+2017-05-17 23:00:07,670 [Worker-0 | u:p | job: checker] INFO  root  -  - 37 work items
+2017-05-17 23:00:08,104 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Design/Electro-Mechanical Design Specification/workitems]
+2017-05-17 23:00:08,107 [Worker-0 | u:p | job: checker] INFO  root  -  - 23 work items
+2017-05-17 23:00:08,292 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Design/Electro-Mechanical Verification Test Plan/workitems]
+2017-05-17 23:00:08,295 [Worker-0 | u:p | job: checker] INFO  root  -  - 16 work items
+2017-05-17 23:00:08,424 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Design/Electro-Mechanical Test Specification/workitems]
+2017-05-17 23:00:08,427 [Worker-0 | u:p | job: checker] INFO  root  -  - 9 work items
+2017-05-17 23:00:08,716 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Design/Software Design Specification/workitems]
+2017-05-17 23:00:08,718 [Worker-0 | u:p | job: checker] INFO  root  -  - 18 work items
+2017-05-17 23:00:08,902 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Design/Software Verification Test Plan/workitems]
+2017-05-17 23:00:08,905 [Worker-0 | u:p | job: checker] INFO  root  -  - 16 work items
+2017-05-17 23:00:09,035 [Worker-0 | u:p | job: checker] INFO  root  - processing workitems: Location[repository default, path /Demo Projects/drivepilot/modules/Design/Software Test Specification/workitems]
+2017-05-17 23:00:09,038 [Worker-0 | u:p | job: checker] INFO  root  -  - 9 work items
+2017-05-17 23:00:09,042 [Worker-0 | u:p | job: checker] INFO  root  - Starting checker: persistence
+2017-05-17 23:00:09,044 [Worker-0 | u:p | job: checker] INFO  root  - Checking project: library
+2017-05-17 23:00:09,048 [Worker-0 | u:p | job: checker] INFO  root  -  - processing 271 work items
+2017-05-17 23:00:22,868 [Worker-0 | u:p | job: checker] INFO  root  - Checking project: elibrary
+2017-05-17 23:00:22,872 [Worker-0 | u:p | job: checker] INFO  root  -  - processing 148 work items
+2017-05-17 23:00:30,546 [Worker-0 | u:p | job: checker] INFO  root  - Checking project: drivepilot
+2017-05-17 23:00:30,550 [Worker-0 | u:p | job: checker] INFO  root  -  - processing 330 work items
+2017-05-17 23:00:48,894 [Worker-0 | u:p | job: checker] INFO  root  - FINISHED with 0 Errors, 0 Warnings, 0 Information.
+Checker: Index Holes Checker
+Checker: Persistence Checker
+
+2017-05-17 23:00:48,897 [Worker-0 | u:p] INFO  root  - State of job "Index Checker" changed to FINISHED
+2017-05-17 23:00:48,899 [Worker-0 | u:p] INFO  root  - Status of job "Index Checker" is OK:
+0 Errors, 0 Warnings, 0 Information.

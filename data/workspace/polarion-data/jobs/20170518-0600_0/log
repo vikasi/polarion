@@ -1,0 +1,71 @@
+2017-05-18 06:00:00,048 [DefaultQuartzScheduler_Worker-3] INFO  root  - Job "Cleanup of Temporary Files" has id 18f6176f-927abe2a-3c28181b-ec19b84e
+2017-05-18 06:00:00,052 [DefaultQuartzScheduler_Worker-3] INFO  root  - State of job "Cleanup of Temporary Files" changed to UNSCHEDULED
+2017-05-18 06:00:00,055 [DefaultQuartzScheduler_Worker-3] INFO  root  - Working directory of root job "Cleanup of Temporary Files" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0600_0
+2017-05-18 06:00:00,057 [DefaultQuartzScheduler_Worker-3] INFO  root  - Job "Cleanup of Temporary Files" runs as user "polarion"
+2017-05-18 06:00:00,059 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  root  - State of job "Cleanup of Temporary Files" changed to ACTIVATING
+2017-05-18 06:00:00,062 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  root  - Will delete folders from C:\Polarion\polarion\..\data\workspace\polarion-data\jobs which are older than 24 hours
+2017-05-18 06:00:00,071 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  root  - State of job "Cleanup of Temporary Files" changed to WAITING
+2017-05-18 06:00:00,075 [Worker-0 | u:p] INFO  root  - State of job "Cleanup of Temporary Files" changed to RUNNING
+2017-05-18 06:00:00,110 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Found 60 folders to be deleted
+2017-05-18 06:00:00,113 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1539
+2017-05-18 06:00:00,117 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1539_0
+2017-05-18 06:00:00,121 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1600
+2017-05-18 06:00:00,125 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1600_0
+2017-05-18 06:00:00,129 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1700
+2017-05-18 06:00:00,133 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1700_0
+2017-05-18 06:00:00,137 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1716
+2017-05-18 06:00:00,140 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1716_0
+2017-05-18 06:00:00,144 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1800
+2017-05-18 06:00:00,148 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1800_0
+2017-05-18 06:00:00,152 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1815
+2017-05-18 06:00:00,155 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1815_0
+2017-05-18 06:00:00,159 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1818
+2017-05-18 06:00:00,163 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1818_0
+2017-05-18 06:00:00,167 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1824
+2017-05-18 06:00:00,171 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1824_0
+2017-05-18 06:00:00,174 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1841
+2017-05-18 06:00:00,179 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1841_0
+2017-05-18 06:00:00,183 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1848
+2017-05-18 06:00:00,187 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1848_0
+2017-05-18 06:00:00,190 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1900
+2017-05-18 06:00:00,194 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170515-1900_0
+2017-05-18 06:00:00,198 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1033
+2017-05-18 06:00:00,202 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1033_0
+2017-05-18 06:00:00,206 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1038
+2017-05-18 06:00:00,210 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1038_0
+2017-05-18 06:00:00,214 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1100
+2017-05-18 06:00:00,218 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1100_0
+2017-05-18 06:00:00,221 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1237
+2017-05-18 06:00:00,225 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1237_0
+2017-05-18 06:00:00,229 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1240
+2017-05-18 06:00:00,233 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1240_0
+2017-05-18 06:00:00,237 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1241
+2017-05-18 06:00:00,241 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1241_0
+2017-05-18 06:00:00,245 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1243
+2017-05-18 06:00:00,248 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1243_0
+2017-05-18 06:00:00,252 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1245
+2017-05-18 06:00:00,256 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1245_0
+2017-05-18 06:00:00,260 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1259
+2017-05-18 06:00:00,264 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1259_0
+2017-05-18 06:00:00,268 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1300
+2017-05-18 06:00:00,271 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1300_0
+2017-05-18 06:00:00,275 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1300_1
+2017-05-18 06:00:00,279 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1300_2
+2017-05-18 06:00:00,283 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1400
+2017-05-18 06:00:00,287 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1400_0
+2017-05-18 06:00:00,291 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1422
+2017-05-18 06:00:00,295 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1422_0
+2017-05-18 06:00:00,298 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1426
+2017-05-18 06:00:00,302 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1426_0
+2017-05-18 06:00:00,306 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1441
+2017-05-18 06:00:00,310 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1441_0
+2017-05-18 06:00:00,314 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1500
+2017-05-18 06:00:00,318 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1500_0
+2017-05-18 06:00:00,322 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1507
+2017-05-18 06:00:00,326 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1507_0
+2017-05-18 06:00:00,330 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1600
+2017-05-18 06:00:00,335 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1600_0
+2017-05-18 06:00:00,339 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1700
+2017-05-18 06:00:00,342 [Worker-0 | u:p | job: jobs.cleanup] INFO  root  - Deleting folder C:\Polarion\data\workspace\polarion-data\jobs\20170516-1700_0
+2017-05-18 06:00:00,346 [Worker-0 | u:p] INFO  root  - State of job "Cleanup of Temporary Files" changed to FINISHED
+2017-05-18 06:00:00,348 [Worker-0 | u:p] INFO  root  - Status of job "Cleanup of Temporary Files" is OK

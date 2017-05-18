@@ -1,0 +1,9 @@
+2017-05-18 12:43:45,192 [Thread-34] INFO  root  - Job "Attachment Indexer" has id 1a67bc8c-927abe2a-26cdd4af-36c7c41f
+2017-05-18 12:43:45,206 [Thread-34] INFO  root  - State of job "Attachment Indexer" changed to UNSCHEDULED
+2017-05-18 12:43:45,209 [Thread-34] INFO  root  - Working directory of root job "Attachment Indexer" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-1243
+2017-05-18 12:43:45,211 [Thread-34] INFO  root  - Job "Attachment Indexer" runs as user "polarion"
+2017-05-18 12:43:45,214 [Thread-34 | u:p] INFO  root  - State of job "Attachment Indexer" changed to ACTIVATING
+2017-05-18 12:43:45,217 [Thread-34 | u:p] INFO  root  - State of job "Attachment Indexer" changed to WAITING
+2017-05-18 12:43:45,264 [Worker-0 | u:p] INFO  root  - State of job "Attachment Indexer" changed to RUNNING
+2017-05-18 12:43:45,671 [Worker-0 | u:p] INFO  root  - State of job "Attachment Indexer" changed to FINISHED
+2017-05-18 12:43:45,673 [Worker-0 | u:p] INFO  root  - Status of job "Attachment Indexer" is OK

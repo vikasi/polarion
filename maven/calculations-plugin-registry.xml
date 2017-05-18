@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><pluginRegistry>
+<?xml version="1.0" encoding="UTF-8"?>
+<pluginRegistry>
   <plugins>
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
@@ -40,7 +41,7 @@
       <artifactId>maven-project-info-reports-plugin</artifactId>
       <useVersion>2.0.1</useVersion>
       <rejectedVersions>
-         <rejectedVersion>2.2</rejectedVersion>
+        <rejectedVersion>2.2</rejectedVersion>
       </rejectedVersions>
     </plugin>
     <plugin>
@@ -73,7 +74,7 @@
       <artifactId>maven-checkstyle-plugin</artifactId>
       <useVersion>2.1</useVersion>
       <rejectedVersions>
-         <rejectedVersion>2.2-20070312.011940-5</rejectedVersion>
+        <rejectedVersion>2.2-20070312.011940-5</rejectedVersion>
       </rejectedVersions>
     </plugin>
     <plugin>
@@ -87,13 +88,13 @@
       <useVersion>1.1</useVersion>
     </plugin>
     <plugin>
-	  <groupId>org.apache.maven.plugins</groupId>
-	  <artifactId>maven-plugin-plugin</artifactId>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-plugin-plugin</artifactId>
       <useVersion>2.3</useVersion>
     </plugin>
     <plugin>
-	  <groupId>org.codehaus.mojo</groupId>
-	  <artifactId>build-helper-maven-plugin</artifactId>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>build-helper-maven-plugin</artifactId>
       <useVersion>1.0</useVersion>
     </plugin>
     <plugin>
@@ -105,6 +106,26 @@
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-javadoc-plugin</artifactId>
       <useVersion>2.3</useVersion>
+    </plugin>
+    <plugin>
+      <groupId>com.polarion.maven.plugins.qcentre</groupId>
+      <artifactId>trackeranalysis</artifactId>
+      <useVersion>3.17.0</useVersion>
+    </plugin>
+    <plugin>
+      <groupId>com.polarion.maven.plugins.qcentre</groupId>
+      <artifactId>projectscore</artifactId>
+      <useVersion>3.17.0</useVersion>
+    </plugin>
+    <plugin>
+      <groupId>com.polarion.maven.plugins</groupId>
+      <artifactId>repoanalysis</artifactId>
+      <useVersion>3.17.0</useVersion>
+    </plugin>
+    <plugin>
+      <groupId>com.polarion.maven</groupId>
+      <artifactId>maven-livecmmi-plugin</artifactId>
+      <useVersion>3.17.0</useVersion>
     </plugin>
   </plugins>
 </pluginRegistry>

@@ -1,0 +1,58 @@
+2017-05-17 14:29:08,276 [main] INFO  com.polarion.platform.startup  - ****************************************************************
+2017-05-17 14:29:08,276 [main] INFO  com.polarion.platform.startup  -                 Polarion starting, please wait!                 
+2017-05-17 14:29:08,276 [main] INFO  com.polarion.platform.startup  - ****************************************************************
+2017-05-17 14:29:08,276 [main] INFO  com.polarion.platform.startup  - Server start mode: normal
+2017-05-17 14:29:08,276 [main] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-17 14:29:08,276 [main] INFO  com.polarion.platform.startup  - Platform startup (Phase: 1/9)
+2017-05-17 14:29:17,045 [main] INFO  com.polarion.platform.startup  - Opening historical database...
+2017-05-17 14:29:17,264 [main] INFO  com.polarion.platform.startup  - Opening of historical database finished [ TIME 0.219 s. ]
+2017-05-17 14:29:17,264 [main] INFO  com.polarion.platform.startup  - Opening head database...
+2017-05-17 14:29:17,330 [main] INFO  com.polarion.platform.startup  - Opening of head database finished [ TIME 0.0662 s. ]
+2017-05-17 14:29:17,492 [main | u:p] INFO  com.polarion.platform.startup  -  -- Polarion startup estimation:  [ TIME 49 s. ]
+2017-05-17 14:29:17,576 [main | u:p] INFO  com.polarion.platform.startup  - Platform startup ... took  [ TIME 9.31 s. ]
+2017-05-17 14:29:17,688 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-17 14:29:17,688 [main | u:p] INFO  com.polarion.platform.startup  - Context recognition (Phase: 2/9)
+2017-05-17 14:29:17,717 [main | u:p] INFO  com.polarion.platform.startup  - Context recognition ... took  [ TIME 0.14 s. ]
+2017-05-17 14:29:17,718 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-17 14:29:17,718 [main | u:p] INFO  com.polarion.platform.startup  - Context initialization (Phase: 3/9)
+2017-05-17 14:29:17,720 [LowLevelDataService-contextInitializer-4 | u:p | context: library] INFO  com.polarion.platform.startup  -  -- Initializing context: library (2/6)
+2017-05-17 14:29:17,720 [LowLevelDataService-contextInitializer-1 | u:p | context: [GLOBAL]] INFO  com.polarion.platform.startup  -  -- Initializing context: [GLOBAL] (3/6)
+2017-05-17 14:29:17,720 [LowLevelDataService-contextInitializer-3 | u:p | context: --Demo Projects] INFO  com.polarion.platform.startup  -  -- Initializing context: --Demo Projects (1/6)
+2017-05-17 14:29:17,720 [LowLevelDataService-contextInitializer-2 | u:p | cluster: default] INFO  com.polarion.platform.startup  -  -- Initializing cluster: default (4/6)
+2017-05-17 14:29:17,720 [LowLevelDataService-contextInitializer-5 | u:p | context: elibrary] INFO  com.polarion.platform.startup  -  -- Initializing context: elibrary (5/6)
+2017-05-17 14:29:17,724 [LowLevelDataService-contextInitializer-1 | u:p | context: drivepilot] INFO  com.polarion.platform.startup  -  -- Initializing context: drivepilot (6/6)
+2017-05-17 14:29:18,144 [main | u:p] INFO  com.polarion.platform.startup  - Context initialization ... took  [ TIME 0.43 s. ]
+2017-05-17 14:29:18,150 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-17 14:29:18,150 [main | u:p] INFO  com.polarion.platform.startup  - Revisions processing (Phase: 4/9)
+2017-05-17 14:29:18,418 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing new revisions from repository default in context ContextId[context [global]]
+2017-05-17 14:29:18,425 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing new revisions from repository GitRepository in context ContextId[cluster default, context [global]]
+2017-05-17 14:29:18,466 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing new revisions from repository GitRepository in context ContextId[cluster default, context drivepilot]
+2017-05-17 14:29:18,476 [main | u:p] INFO  com.polarion.platform.startup  - Revisions processing ... took  [ TIME 0.33 s. ]
+2017-05-17 14:29:18,517 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-17 14:29:18,517 [main | u:p] INFO  com.polarion.platform.startup  - Build artifacts recognition (Phase: 5/9)
+2017-05-17 14:29:18,524 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: [GLOBAL] (1/6)
+2017-05-17 14:29:18,650 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from cluster: default (2/6)
+2017-05-17 14:29:18,709 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: --Demo Projects (3/6)
+2017-05-17 14:29:18,761 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: library (4/6)
+2017-05-17 14:29:18,912 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: elibrary (5/6)
+2017-05-17 14:29:19,090 [main | u:p] INFO  com.polarion.platform.startup  -  -- Processing build artifacts from context: drivepilot (6/6)
+2017-05-17 14:29:19,090 [main | u:p] INFO  com.polarion.platform.startup  - Build artifacts recognition ... took  [ TIME 0.61 s. ]
+2017-05-17 14:29:19,090 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-17 14:29:19,090 [main | u:p] INFO  com.polarion.platform.startup  - BIR inspection (Phase: 6/9)
+2017-05-17 14:29:19,117 [main | u:p] INFO  com.polarion.platform.startup  - BIR inspection ... took  [ TIME 0.03 s. ]
+2017-05-17 14:29:19,137 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-17 14:29:19,137 [main | u:p] INFO  com.polarion.platform.startup  - Data indexing (Phase: 7/9)
+2017-05-17 14:29:19,275 [main | u:p] INFO  com.polarion.platform.startup  -  -- Refreshing 7 objects in index: BuildArtifact
+2017-05-17 14:29:19,287 [main | u:p] INFO  com.polarion.platform.startup  -  -- -- 7 from 7 objects were refreshed (100%)
+2017-05-17 14:29:19,591 [main | u:p] INFO  com.polarion.platform.startup  -  -- Refreshing 1 objects in index: Revision
+2017-05-17 14:29:19,592 [main | u:p] INFO  com.polarion.platform.startup  -  -- -- 1 from 1 objects were refreshed (100%)
+2017-05-17 14:29:19,654 [main | u:p] INFO  com.polarion.platform.startup  - Data indexing ... took  [ TIME 0.54 s. ]
+2017-05-17 14:29:19,654 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-17 14:29:19,654 [main | u:p] INFO  com.polarion.platform.startup  - Fields recalculation (Phase: 8/9)
+2017-05-17 14:29:19,667 [main | u:p] INFO  com.polarion.platform.startup  - Fields recalculation ... took  [ TIME 0.01 s. ]
+2017-05-17 14:29:19,667 [main | u:p] INFO  com.polarion.platform.startup  - ------------------------------
+2017-05-17 14:29:19,667 [main | u:p] INFO  com.polarion.platform.startup  - Polarion startup (Phase: 9/9)
+2017-05-17 14:29:51,980 [main] INFO  com.polarion.platform.startup  - Polarion startup ... took  [ TIME 32.31 s. ]
+2017-05-17 14:29:51,981 [main] INFO  com.polarion.platform.startup  - ****************************************************************
+2017-05-17 14:29:51,981 [main] INFO  com.polarion.platform.startup  -                  Polarion started:  [ TIME 43.7 s. ]
+2017-05-17 14:29:51,981 [main] INFO  com.polarion.platform.startup  - ****************************************************************

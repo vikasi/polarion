@@ -1,0 +1,80 @@
+2017-05-17 11:10:27,426 [Repository Polling Timer | u:p] ERROR com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule  - Polling failed for external repository: GitRepository /default/
+com.polarion.platform.service.repository.RepositoryException: org.eclipse.jgit.api.errors.NoHeadException: Pull on repository without HEAD currently not supported
+	at com.polarion.platform.repository.external.internal.git.GitExternalRepositoryProvider$GitRepository.poll(GitExternalRepositoryProvider.java:215)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4$1$1.run(RevisionsPersistenceModule.java:438)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.polarion.platform.internal.security.SubjectNDC.doAs(SubjectNDC.java:58)
+	at com.polarion.platform.internal.security.SecurityService.doAsUser(SecurityService.java:477)
+	at com.polarion.platform.internal.security.SecurityService.doAsSystemUser(SecurityService.java:467)
+	at $ISecurityService_15c14ca9505.doAsSystemUser($ISecurityService_15c14ca9505.java)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4$1.visit(RevisionsPersistenceModule.java:433)
+	at com.polarion.platform.repository.external.internal.ExternalRepositoryProviderRegistry.visitRepositories(ExternalRepositoryProviderRegistry.java:264)
+	at $IExternalRepositoryProviderRegistry_15c14ca95be.visitRepositories($IExternalRepositoryProviderRegistry_15c14ca95be.java)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4.run(RevisionsPersistenceModule.java:430)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Caused by: org.eclipse.jgit.api.errors.NoHeadException: Pull on repository without HEAD currently not supported
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:191)
+	at com.polarion.platform.repository.external.internal.git.GitExternalRepositoryProvider$GitRepository.poll(GitExternalRepositoryProvider.java:180)
+	... 13 more
+2017-05-17 11:10:32,421 [Repository Polling Timer | u:p] ERROR com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule  - Polling failed for external repository: GitRepository /default/
+com.polarion.platform.service.repository.RepositoryException: org.eclipse.jgit.api.errors.NoHeadException: Pull on repository without HEAD currently not supported
+	at com.polarion.platform.repository.external.internal.git.GitExternalRepositoryProvider$GitRepository.poll(GitExternalRepositoryProvider.java:215)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4$1$1.run(RevisionsPersistenceModule.java:438)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.polarion.platform.internal.security.SubjectNDC.doAs(SubjectNDC.java:58)
+	at com.polarion.platform.internal.security.SecurityService.doAsUser(SecurityService.java:477)
+	at com.polarion.platform.internal.security.SecurityService.doAsSystemUser(SecurityService.java:467)
+	at $ISecurityService_15c14ca9505.doAsSystemUser($ISecurityService_15c14ca9505.java)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4$1.visit(RevisionsPersistenceModule.java:433)
+	at com.polarion.platform.repository.external.internal.ExternalRepositoryProviderRegistry.visitRepositories(ExternalRepositoryProviderRegistry.java:264)
+	at $IExternalRepositoryProviderRegistry_15c14ca95be.visitRepositories($IExternalRepositoryProviderRegistry_15c14ca95be.java)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4.run(RevisionsPersistenceModule.java:430)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Caused by: org.eclipse.jgit.api.errors.NoHeadException: Pull on repository without HEAD currently not supported
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:191)
+	at com.polarion.platform.repository.external.internal.git.GitExternalRepositoryProvider$GitRepository.poll(GitExternalRepositoryProvider.java:180)
+	... 13 more
+2017-05-17 11:10:37,422 [Repository Polling Timer | u:p] ERROR com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule  - Polling failed for external repository: GitRepository /default/
+com.polarion.platform.service.repository.RepositoryException: org.eclipse.jgit.api.errors.NoHeadException: Pull on repository without HEAD currently not supported
+	at com.polarion.platform.repository.external.internal.git.GitExternalRepositoryProvider$GitRepository.poll(GitExternalRepositoryProvider.java:215)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4$1$1.run(RevisionsPersistenceModule.java:438)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.polarion.platform.internal.security.SubjectNDC.doAs(SubjectNDC.java:58)
+	at com.polarion.platform.internal.security.SecurityService.doAsUser(SecurityService.java:477)
+	at com.polarion.platform.internal.security.SecurityService.doAsSystemUser(SecurityService.java:467)
+	at $ISecurityService_15c14ca9505.doAsSystemUser($ISecurityService_15c14ca9505.java)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4$1.visit(RevisionsPersistenceModule.java:433)
+	at com.polarion.platform.repository.external.internal.ExternalRepositoryProviderRegistry.visitRepositories(ExternalRepositoryProviderRegistry.java:264)
+	at $IExternalRepositoryProviderRegistry_15c14ca95be.visitRepositories($IExternalRepositoryProviderRegistry_15c14ca95be.java)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4.run(RevisionsPersistenceModule.java:430)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Caused by: org.eclipse.jgit.api.errors.NoHeadException: Pull on repository without HEAD currently not supported
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:191)
+	at com.polarion.platform.repository.external.internal.git.GitExternalRepositoryProvider$GitRepository.poll(GitExternalRepositoryProvider.java:180)
+	... 13 more
+2017-05-17 11:10:42,422 [Repository Polling Timer | u:p] ERROR com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule  - Polling failed for external repository: GitRepository /default/
+com.polarion.platform.service.repository.RepositoryException: org.eclipse.jgit.api.errors.NoHeadException: Pull on repository without HEAD currently not supported
+	at com.polarion.platform.repository.external.internal.git.GitExternalRepositoryProvider$GitRepository.poll(GitExternalRepositoryProvider.java:215)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4$1$1.run(RevisionsPersistenceModule.java:438)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.polarion.platform.internal.security.SubjectNDC.doAs(SubjectNDC.java:58)
+	at com.polarion.platform.internal.security.SecurityService.doAsUser(SecurityService.java:477)
+	at com.polarion.platform.internal.security.SecurityService.doAsSystemUser(SecurityService.java:467)
+	at $ISecurityService_15c14ca9505.doAsSystemUser($ISecurityService_15c14ca9505.java)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4$1.visit(RevisionsPersistenceModule.java:433)
+	at com.polarion.platform.repository.external.internal.ExternalRepositoryProviderRegistry.visitRepositories(ExternalRepositoryProviderRegistry.java:264)
+	at $IExternalRepositoryProviderRegistry_15c14ca95be.visitRepositories($IExternalRepositoryProviderRegistry_15c14ca95be.java)
+	at com.polarion.platform.persistence.internal.pe.RevisionsPersistenceModule$4.run(RevisionsPersistenceModule.java:430)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Caused by: org.eclipse.jgit.api.errors.NoHeadException: Pull on repository without HEAD currently not supported
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:191)
+	at com.polarion.platform.repository.external.internal.git.GitExternalRepositoryProvider$GitRepository.poll(GitExternalRepositoryProvider.java:180)
+	... 13 more

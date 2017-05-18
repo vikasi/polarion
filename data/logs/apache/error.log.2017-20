@@ -1,0 +1,28 @@
+[Thu May 18 12:38:44.606265 2017] [mpm_winnt:notice] [pid 2828:tid 636] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu May 18 12:38:46.614903 2017] [mpm_winnt:notice] [pid 4740:tid 524] AH00364: Child: All worker threads have exited.
+[Thu May 18 12:38:46.677410 2017] [mpm_winnt:notice] [pid 2828:tid 636] AH00430: Parent: Child process 4740 exited successfully.
+[Thu May 18 12:39:56.818771 2017] [mpm_winnt:notice] [pid 2892:tid 612] AH00455: Apache/2.4.25 (Win64) SVN/1.9.4 configured -- resuming normal operations
+[Thu May 18 12:39:56.818771 2017] [mpm_winnt:notice] [pid 2892:tid 612] AH00456: Server built: Dec 17 2016 00:28:36
+[Thu May 18 12:39:56.818771 2017] [core:notice] [pid 2892:tid 612] AH00094: Command line: 'C:\\Polarion\\bundled\\apache\\bin\\httpd.exe -d C:/Polarion/bundled/apache -f C:/Polarion/bundled/apache\\conf\\httpd.conf -d C:/Polarion/bundled/apache\\.'
+[Thu May 18 12:39:56.818771 2017] [mpm_winnt:notice] [pid 2892:tid 612] AH00418: Parent: Created child process 4692
+[Thu May 18 12:39:57.037545 2017] [mpm_winnt:notice] [pid 4692:tid 548] AH00354: Child: Starting 150 worker threads.
+[Thu May 18 12:41:41.221476 2017] [proxy:error] [pid 4692:tid 1700] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:41:41.221476 2017] [proxy_ajp:error] [pid 4692:tid 1700] [client ::1:59442] AH00896: failed to make connection to backend: 127.0.0.1
+[Thu May 18 12:41:49.183932 2017] [proxy:error] [pid 4692:tid 1700] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:41:49.183932 2017] [proxy_ajp:error] [pid 4692:tid 1700] [client ::1:59450] AH00896: failed to make connection to backend: 127.0.0.1
+[Thu May 18 12:41:51.817505 2017] [proxy:error] [pid 4692:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:41:51.817505 2017] [proxy_ajp:error] [pid 4692:tid 1696] [client ::1:59451] AH00896: failed to make connection to backend: 127.0.0.1
+[Thu May 18 12:41:55.816701 2017] [proxy:error] [pid 4692:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:41:55.816701 2017] [proxy_ajp:error] [pid 4692:tid 1696] [client ::1:59479] AH00896: failed to make connection to backend: 127.0.0.1
+[Thu May 18 12:41:57.851293 2017] [proxy:error] [pid 4692:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:41:57.851293 2017] [proxy_ajp:error] [pid 4692:tid 1696] [client ::1:59486] AH00896: failed to make connection to backend: 127.0.0.1
+[Thu May 18 12:41:59.765573 2017] [proxy:error] [pid 4692:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:41:59.765573 2017] [proxy_ajp:error] [pid 4692:tid 1696] [client ::1:59491] AH00896: failed to make connection to backend: 127.0.0.1
+[Thu May 18 12:42:08.682016 2017] [proxy:error] [pid 4692:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:42:08.682016 2017] [proxy_ajp:error] [pid 4692:tid 1696] [client ::1:59500] AH00896: failed to make connection to backend: 127.0.0.1
+[Thu May 18 12:42:11.069862 2017] [proxy:error] [pid 4692:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:42:11.069862 2017] [proxy_ajp:error] [pid 4692:tid 1696] [client ::1:59506] AH00896: failed to make connection to backend: 127.0.0.1
+[Thu May 18 12:42:14.502139 2017] [proxy:error] [pid 4692:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:42:14.502139 2017] [proxy_ajp:error] [pid 4692:tid 1696] [client ::1:59508] AH00896: failed to make connection to backend: 127.0.0.1
+[Thu May 18 12:42:22.011814 2017] [proxy:error] [pid 4692:tid 1696] (OS 10061)No connection could be made because the target machine actively refused it.  : AH00957: AJP: attempt to connect to 127.0.0.1:8889 (127.0.0.1) failed
+[Thu May 18 12:42:22.011814 2017] [proxy_ajp:error] [pid 4692:tid 1696] [client ::1:59510] AH00896: failed to make connection to backend: 127.0.0.1

@@ -1,0 +1,463 @@
+2017-05-17 18:35:56,391 [main | u:p] INFO  com.polarion.platform.jobs.internal.service.scheduler.JobSchedulerService  - Updating local scheduler state: start
+2017-05-17 18:35:56,411 [main | u:p | u:p] INFO  com.polarion.platform.jobs.internal.service.scheduler.JobSchedulerService  - 16 scheduled job(s) configured
+2017-05-17 18:36:43,302 [Thread-34] INFO  com.polarion.platform.jobs.info  - Job "Attachment Indexer" has id 16848785-927abe2a-3c28181b-ee9b12f6
+2017-05-17 18:36:43,304 [Thread-34] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to UNSCHEDULED
+2017-05-17 18:36:43,307 [Thread-34] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Attachment Indexer" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-1836
+2017-05-17 18:36:43,310 [Thread-34] INFO  com.polarion.platform.jobs.info  - Job "Attachment Indexer" runs as user "polarion"
+2017-05-17 18:36:43,312 [Thread-34 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to ACTIVATING
+2017-05-17 18:36:43,315 [Thread-34 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to WAITING
+2017-05-17 18:36:43,344 [Thread-34] INFO  com.polarion.platform.jobs.info  - Job "DB History Creator" has id 168487f6-927abe2a-3c28181b-25bc04c2
+2017-05-17 18:36:43,346 [Thread-34] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to UNSCHEDULED
+2017-05-17 18:36:43,353 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to RUNNING
+2017-05-17 18:36:43,354 [Thread-34] INFO  com.polarion.platform.jobs.info  - Working directory of root job "DB History Creator" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-1836_0
+2017-05-17 18:36:43,356 [Thread-34] INFO  com.polarion.platform.jobs.info  - Job "DB History Creator" runs as user "polarion"
+2017-05-17 18:36:43,358 [Thread-34 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to ACTIVATING
+2017-05-17 18:36:43,360 [Thread-34 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to WAITING
+2017-05-17 18:36:43,365 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to RUNNING
+2017-05-17 18:36:43,386 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Attachment Indexer" changed to FINISHED
+2017-05-17 18:36:43,389 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Attachment Indexer" is OK
+2017-05-17 18:36:48,125 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "DB History Creator" changed to FINISHED
+2017-05-17 18:36:48,127 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "DB History Creator" is OK
+2017-05-17 19:00:00,021 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 1699d7d1-927abe2a-3c28181b-c5cfbeed
+2017-05-17 19:00:00,023 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-17 19:00:00,026 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-1900
+2017-05-17 19:00:00,028 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-17 19:00:00,030 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-17 19:00:00,033 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-17 19:00:00,036 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-17 19:00:01,120 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 1699dc1b-927abe2a-3c28181b-27e74ab0
+2017-05-17 19:00:01,122 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-17 19:00:01,125 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-1900_0
+2017-05-17 19:00:01,128 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-17 19:00:01,130 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-17 19:00:01,134 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-17 19:00:01,138 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-17 19:00:02,884 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-17 19:00:02,887 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-17 19:00:02,924 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-17 19:00:02,926 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-17 20:00:00,021 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 16d0c651-927abe2a-3c28181b-79165e25
+2017-05-17 20:00:00,023 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-17 20:00:00,025 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2000
+2017-05-17 20:00:00,027 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-17 20:00:00,029 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-17 20:00:00,032 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-17 20:00:00,035 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-17 20:00:00,134 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 16d0c6c2-927abe2a-3c28181b-532287a0
+2017-05-17 20:00:00,136 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-17 20:00:00,140 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2000_0
+2017-05-17 20:00:00,142 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-17 20:00:00,145 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-17 20:00:00,149 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-17 20:00:00,153 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-17 20:00:00,793 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-17 20:00:00,795 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-17 20:00:00,821 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-17 20:00:00,823 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-17 21:00:00,018 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 1707b4ce-927abe2a-3c28181b-ac055110
+2017-05-17 21:00:00,020 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-17 21:00:00,022 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2100
+2017-05-17 21:00:00,024 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-17 21:00:00,026 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-17 21:00:00,029 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-17 21:00:00,032 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-17 21:00:00,111 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 1707b52b-927abe2a-3c28181b-772d57d2
+2017-05-17 21:00:00,114 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-17 21:00:00,117 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2100_0
+2017-05-17 21:00:00,120 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-17 21:00:00,122 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-17 21:00:00,126 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-17 21:00:00,130 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-17 21:00:00,764 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-17 21:00:00,766 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-17 21:00:00,795 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-17 21:00:00,797 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-17 22:00:00,014 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 173ea34a-927abe2a-3c28181b-a9a7b868
+2017-05-17 22:00:00,016 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-17 22:00:00,018 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2200
+2017-05-17 22:00:00,020 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-17 22:00:00,022 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-17 22:00:00,024 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-17 22:00:00,027 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-17 22:00:00,113 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 173ea3ad-927abe2a-3c28181b-caaeb843
+2017-05-17 22:00:00,115 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-17 22:00:00,117 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2200_0
+2017-05-17 22:00:00,119 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-17 22:00:00,121 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-17 22:00:00,124 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-17 22:00:00,127 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-17 22:00:00,725 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-17 22:00:00,728 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-17 22:00:00,761 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-17 22:00:00,764 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-17 23:00:00,029 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Index Checker" has id 177591d9-927abe2a-3c28181b-f501d686
+2017-05-17 23:00:00,031 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - State of job "Index Checker" changed to UNSCHEDULED
+2017-05-17 23:00:00,034 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Index Checker" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2300
+2017-05-17 23:00:00,035 [DefaultQuartzScheduler_Worker-8] INFO  com.polarion.platform.jobs.info  - Job "Index Checker" runs as user "polarion"
+2017-05-17 23:00:00,037 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Index Checker" changed to ACTIVATING
+2017-05-17 23:00:00,040 [DefaultQuartzScheduler_Worker-8 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Index Checker" changed to WAITING
+2017-05-17 23:00:00,043 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Index Checker" changed to RUNNING
+2017-05-17 23:00:00,045 [DefaultQuartzScheduler_Worker-6] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 177591e9-927abe2a-3c28181b-0c855b97
+2017-05-17 23:00:00,046 [DefaultQuartzScheduler_Worker-6] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-17 23:00:00,049 [DefaultQuartzScheduler_Worker-6] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2300_0
+2017-05-17 23:00:00,051 [DefaultQuartzScheduler_Worker-6] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-17 23:00:00,053 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-17 23:00:00,056 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-17 23:00:00,059 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-17 23:00:00,155 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 17759255-927abe2a-3c28181b-02f4a4d5
+2017-05-17 23:00:00,157 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-17 23:00:00,160 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170517-2300_1
+2017-05-17 23:00:00,162 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-17 23:00:00,165 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-17 23:00:00,167 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-17 23:00:00,172 [Worker-2 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-17 23:00:00,824 [Worker-2 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-17 23:00:00,826 [Worker-2 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-17 23:00:00,852 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-17 23:00:00,854 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-17 23:00:48,899 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Index Checker" changed to FINISHED
+2017-05-17 23:00:48,901 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Index Checker" is OK:
+0 Errors, 0 Warnings, 0 Information.
+2017-05-18 00:00:00,037 [DefaultQuartzScheduler_Worker-6] INFO  com.polarion.platform.jobs.info  - Job "Work Item Analysis" has id 17ac8061-927abe2a-3c28181b-3bd439b8
+2017-05-18 00:00:00,038 [DefaultQuartzScheduler_Worker-6] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis" changed to UNSCHEDULED
+2017-05-18 00:00:00,041 [DefaultQuartzScheduler_Worker-6] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Work Item Analysis" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0000
+2017-05-18 00:00:00,043 [DefaultQuartzScheduler_Worker-6] INFO  com.polarion.platform.jobs.info  - Job "Work Item Analysis" runs as user "polarion"
+2017-05-18 00:00:00,044 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis" changed to ACTIVATING
+2017-05-18 00:00:00,360 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" changed to UNSCHEDULED
+2017-05-18 00:00:00,366 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" has id 17ac81a8-927abe2a-3c28181b-83aa7ed9
+2017-05-18 00:00:00,370 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" runs as user "polarion"
+2017-05-18 00:00:00,387 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" changed to ACTIVATING
+2017-05-18 00:00:00,393 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to UNSCHEDULED
+2017-05-18 00:00:00,404 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" has id 17ac81c9-927abe2a-3c28181b-1bf7cfe0
+2017-05-18 00:00:00,411 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" runs as user "polarion"
+2017-05-18 00:00:00,419 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to ACTIVATING
+2017-05-18 00:00:00,433 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to WAITING
+2017-05-18 00:00:00,437 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" changed to WAITING
+2017-05-18 00:00:00,439 [DefaultQuartzScheduler_Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis" changed to WAITING
+2017-05-18 00:00:00,446 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 17ac81f9-927abe2a-3c28181b-9419e209
+2017-05-18 00:00:00,448 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 00:00:00,449 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to RUNNING
+2017-05-18 00:00:00,451 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0000_0
+2017-05-18 00:00:00,452 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 00:00:00,453 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" changed to RUNNING
+2017-05-18 00:00:00,455 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 00:00:00,455 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis" changed to RUNNING
+2017-05-18 00:00:00,457 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 00:00:00,461 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 00:00:00,547 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 17ac825d-927abe2a-3c28181b-424bf025
+2017-05-18 00:00:00,549 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 00:00:00,552 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0000_1
+2017-05-18 00:00:00,554 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 00:00:00,557 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 00:00:00,560 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 00:00:00,565 [Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 00:00:01,210 [Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 00:00:01,212 [Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 00:00:01,245 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 00:00:01,248 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 00:00:06,152 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to FINISHED
+2017-05-18 00:00:06,158 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" is OK
+2017-05-18 00:00:29,361 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" changed to FINISHED
+2017-05-18 00:00:29,366 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "(INTERNAL) Trackeranalysis calculation of _root.default:_artificial" is OK
+2017-05-18 00:00:29,369 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis" changed to FINISHED
+2017-05-18 00:00:29,371 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Work Item Analysis" is OK
+2017-05-18 00:50:00,022 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Work Item Analysis - Project Groups" has id 17da4712-927abe2a-3c28181b-0e865f9d
+2017-05-18 00:50:00,024 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis - Project Groups" changed to UNSCHEDULED
+2017-05-18 00:50:00,026 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Work Item Analysis - Project Groups" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0050
+2017-05-18 00:50:00,028 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Work Item Analysis - Project Groups" runs as user "polarion"
+2017-05-18 00:50:00,030 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis - Project Groups" changed to ACTIVATING
+2017-05-18 00:50:00,970 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis-projectgroup calculation of _root.default:_artificial" changed to UNSCHEDULED
+2017-05-18 00:50:00,977 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - Job "(INTERNAL) Trackeranalysis-projectgroup calculation of _root.default:_artificial" has id 17da4ac9-927abe2a-3c28181b-4c90f684
+2017-05-18 00:50:00,980 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - Job "(INTERNAL) Trackeranalysis-projectgroup calculation of _root.default:_artificial" runs as user "polarion"
+2017-05-18 00:50:00,986 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis-projectgroup calculation of _root.default:_artificial" changed to ACTIVATING
+2017-05-18 00:50:00,987 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to UNSCHEDULED
+2017-05-18 00:50:00,995 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" has id 17da4adb-927abe2a-3c28181b-f70a0cb5
+2017-05-18 00:50:01,000 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" runs as user "polarion"
+2017-05-18 00:50:01,005 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to ACTIVATING
+2017-05-18 00:50:01,019 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to WAITING
+2017-05-18 00:50:01,022 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis-projectgroup calculation of _root.default:_artificial" changed to WAITING
+2017-05-18 00:50:01,024 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis - Project Groups" changed to WAITING
+2017-05-18 00:50:01,034 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to RUNNING
+2017-05-18 00:50:01,038 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis-projectgroup calculation of _root.default:_artificial" changed to RUNNING
+2017-05-18 00:50:01,040 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis - Project Groups" changed to RUNNING
+2017-05-18 00:50:16,148 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to FINISHED
+2017-05-18 00:50:16,153 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" is OK
+2017-05-18 00:50:19,376 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Trackeranalysis-projectgroup calculation of _root.default:_artificial" changed to FINISHED
+2017-05-18 00:50:19,380 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "(INTERNAL) Trackeranalysis-projectgroup calculation of _root.default:_artificial" is OK
+2017-05-18 00:50:19,383 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Work Item Analysis - Project Groups" changed to FINISHED
+2017-05-18 00:50:19,385 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Work Item Analysis - Project Groups" is OK
+2017-05-18 01:00:00,020 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 17e36ed0-927abe2a-3c28181b-4deb08c6
+2017-05-18 01:00:00,021 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 01:00:00,024 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0100
+2017-05-18 01:00:00,026 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 01:00:00,027 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 01:00:00,030 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 01:00:00,033 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 01:00:00,035 [DefaultQuartzScheduler_Worker-4] INFO  com.polarion.platform.jobs.info  - Job "Repository Analysis" has id 17e36edf-927abe2a-3c28181b-5808cd8f
+2017-05-18 01:00:00,037 [DefaultQuartzScheduler_Worker-4] INFO  com.polarion.platform.jobs.info  - State of job "Repository Analysis" changed to UNSCHEDULED
+2017-05-18 01:00:00,039 [DefaultQuartzScheduler_Worker-4] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Repository Analysis" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0100_0
+2017-05-18 01:00:00,041 [DefaultQuartzScheduler_Worker-4] INFO  com.polarion.platform.jobs.info  - Job "Repository Analysis" runs as user "polarion"
+2017-05-18 01:00:00,043 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Repository Analysis" changed to ACTIVATING
+2017-05-18 01:00:00,938 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Repoanalysis calculation of _root.default:_artificial" changed to UNSCHEDULED
+2017-05-18 01:00:00,944 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - Job "(INTERNAL) Repoanalysis calculation of _root.default:_artificial" has id 17e3726a-927abe2a-3c28181b-c4825f14
+2017-05-18 01:00:00,948 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - Job "(INTERNAL) Repoanalysis calculation of _root.default:_artificial" runs as user "polarion"
+2017-05-18 01:00:00,953 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Repoanalysis calculation of _root.default:_artificial" changed to ACTIVATING
+2017-05-18 01:00:00,954 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to UNSCHEDULED
+2017-05-18 01:00:00,962 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" has id 17e3727a-927abe2a-3c28181b-f3ba3233
+2017-05-18 01:00:00,967 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" runs as user "polarion"
+2017-05-18 01:00:00,972 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to ACTIVATING
+2017-05-18 01:00:01,861 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to WAITING
+2017-05-18 01:00:01,865 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Repoanalysis calculation of _root.default:_artificial" changed to WAITING
+2017-05-18 01:00:01,866 [DefaultQuartzScheduler_Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Repository Analysis" changed to WAITING
+2017-05-18 01:00:01,872 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 17e3760b-927abe2a-3c28181b-79de09f0
+2017-05-18 01:00:01,874 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 01:00:01,875 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to RUNNING
+2017-05-18 01:00:01,876 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0100_1
+2017-05-18 01:00:01,878 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 01:00:01,879 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Repoanalysis calculation of _root.default:_artificial" changed to RUNNING
+2017-05-18 01:00:01,880 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 01:00:01,881 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Repository Analysis" changed to RUNNING
+2017-05-18 01:00:01,882 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 01:00:01,886 [Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 01:00:03,420 [Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 01:00:03,422 [Worker-4 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 01:00:03,448 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 01:00:03,450 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 01:00:18,148 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to FINISHED
+2017-05-18 01:00:18,153 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" is OK
+2017-05-18 01:00:28,567 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Repoanalysis calculation of _root.default:_artificial" changed to FINISHED
+2017-05-18 01:00:28,571 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "(INTERNAL) Repoanalysis calculation of _root.default:_artificial" is OK
+2017-05-18 01:00:28,573 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Repository Analysis" changed to FINISHED
+2017-05-18 01:00:28,576 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Repository Analysis" is OK
+2017-05-18 02:00:00,022 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 181a5d52-927abe2a-3c28181b-58ca5b8f
+2017-05-18 02:00:00,023 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 02:00:00,026 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0200
+2017-05-18 02:00:00,028 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 02:00:00,029 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 02:00:00,032 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 02:00:00,035 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 02:00:00,108 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 181a5da8-927abe2a-3c28181b-952e0868
+2017-05-18 02:00:00,109 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 02:00:00,112 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0200_0
+2017-05-18 02:00:00,114 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 02:00:00,115 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 02:00:00,118 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 02:00:00,121 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 02:00:00,662 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 02:00:00,664 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 02:00:00,688 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 02:00:00,690 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 03:00:00,018 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 18514bce-927abe2a-3c28181b-88e58243
+2017-05-18 03:00:00,020 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 03:00:00,022 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0300
+2017-05-18 03:00:00,024 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 03:00:00,027 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 03:00:00,029 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 03:00:00,033 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 03:00:00,948 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 18514f70-927abe2a-3c28181b-4b024a32
+2017-05-18 03:00:00,976 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 03:00:00,979 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0300_0
+2017-05-18 03:00:00,980 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 03:00:01,027 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 03:00:01,029 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 03:00:01,032 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 03:00:01,849 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 03:00:01,851 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 03:00:01,875 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 03:00:01,877 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 04:00:00,020 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 18883a50-927abe2a-3c28181b-26fd1041
+2017-05-18 04:00:00,022 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 04:00:00,024 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0400
+2017-05-18 04:00:00,026 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 04:00:00,028 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 04:00:00,030 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 04:00:00,033 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 04:00:00,035 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Job "Live CMMI" has id 18883a60-927abe2a-3c28181b-b8833918
+2017-05-18 04:00:00,038 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - State of job "Live CMMI" changed to UNSCHEDULED
+2017-05-18 04:00:00,041 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live CMMI" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0400_0
+2017-05-18 04:00:00,043 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Job "Live CMMI" runs as user "polarion"
+2017-05-18 04:00:00,045 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live CMMI" changed to ACTIVATING
+2017-05-18 04:00:00,080 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Cmmi-analysis calculation of _root.default:_artificial" changed to UNSCHEDULED
+2017-05-18 04:00:00,088 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Job "(INTERNAL) Cmmi-analysis calculation of _root.default:_artificial" has id 18883a90-927abe2a-3c28181b-c061607e
+2017-05-18 04:00:00,093 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Job "(INTERNAL) Cmmi-analysis calculation of _root.default:_artificial" runs as user "polarion"
+2017-05-18 04:00:00,103 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Cmmi-analysis calculation of _root.default:_artificial" changed to ACTIVATING
+2017-05-18 04:00:00,104 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to UNSCHEDULED
+2017-05-18 04:00:00,112 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" has id 18883aa8-927abe2a-3c28181b-438428ec
+2017-05-18 04:00:00,118 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" runs as user "polarion"
+2017-05-18 04:00:00,124 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to ACTIVATING
+2017-05-18 04:00:00,138 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to WAITING
+2017-05-18 04:00:00,142 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Cmmi-analysis calculation of _root.default:_artificial" changed to WAITING
+2017-05-18 04:00:00,144 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live CMMI" changed to WAITING
+2017-05-18 04:00:00,149 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 18883ad1-927abe2a-3c28181b-7bd53fbd
+2017-05-18 04:00:00,151 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 04:00:00,152 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to RUNNING
+2017-05-18 04:00:00,154 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0400_1
+2017-05-18 04:00:00,155 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 04:00:00,156 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Cmmi-analysis calculation of _root.default:_artificial" changed to RUNNING
+2017-05-18 04:00:00,158 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 04:00:00,158 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live CMMI" changed to RUNNING
+2017-05-18 04:00:00,160 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 04:00:00,165 [Worker-5 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 04:00:00,751 [Worker-5 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 04:00:00,753 [Worker-5 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 04:00:00,789 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 04:00:00,791 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 04:00:15,148 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" changed to FINISHED
+2017-05-18 04:00:15,154 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Deploy _root.default:_artificial to C:\Polarion\polarion\..\data\workspace\polarion-data\deploymentSpaces\_default" is OK
+2017-05-18 04:00:20,020 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "(INTERNAL) Cmmi-analysis calculation of _root.default:_artificial" changed to FINISHED
+2017-05-18 04:00:20,024 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "(INTERNAL) Cmmi-analysis calculation of _root.default:_artificial" is OK
+2017-05-18 04:00:20,027 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live CMMI" changed to FINISHED
+2017-05-18 04:00:20,029 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live CMMI" is OK
+2017-05-18 05:00:00,020 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 18bf28d0-927abe2a-3c28181b-17c25451
+2017-05-18 05:00:00,022 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 05:00:00,024 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0500
+2017-05-18 05:00:00,026 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 05:00:00,028 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 05:00:00,030 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 05:00:00,034 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 05:00:00,089 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 18bf2916-927abe2a-3c28181b-7dd261e3
+2017-05-18 05:00:00,091 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 05:00:00,094 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0500_0
+2017-05-18 05:00:00,095 [Worker-0 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 05:00:00,097 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 05:00:00,100 [Worker-0 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 05:00:00,103 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 05:00:00,663 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 05:00:00,665 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 05:00:00,688 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 05:00:00,690 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 06:00:00,022 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 18f61752-927abe2a-3c28181b-4b94eae9
+2017-05-18 06:00:00,024 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 06:00:00,026 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0600
+2017-05-18 06:00:00,028 [DefaultQuartzScheduler_Worker-1] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 06:00:00,030 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 06:00:00,032 [DefaultQuartzScheduler_Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 06:00:00,036 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 06:00:00,052 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Cleanup of Temporary Files" has id 18f6176f-927abe2a-3c28181b-ec19b84e
+2017-05-18 06:00:00,054 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - State of job "Cleanup of Temporary Files" changed to UNSCHEDULED
+2017-05-18 06:00:00,057 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Cleanup of Temporary Files" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0600_0
+2017-05-18 06:00:00,059 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Cleanup of Temporary Files" runs as user "polarion"
+2017-05-18 06:00:00,061 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Cleanup of Temporary Files" changed to ACTIVATING
+2017-05-18 06:00:00,073 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Cleanup of Temporary Files" changed to WAITING
+2017-05-18 06:00:00,078 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Cleanup of Temporary Files" changed to RUNNING
+2017-05-18 06:00:00,103 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 18f617a3-927abe2a-3c28181b-38e74eb9
+2017-05-18 06:00:00,104 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 06:00:00,107 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0600_1
+2017-05-18 06:00:00,109 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 06:00:00,111 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 06:00:00,113 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 06:00:00,117 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 06:00:00,348 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Cleanup of Temporary Files" changed to FINISHED
+2017-05-18 06:00:00,351 [Worker-0 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Cleanup of Temporary Files" is OK
+2017-05-18 06:00:00,708 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 06:00:00,710 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 06:00:00,740 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 06:00:00,742 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 07:00:00,023 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 192d05d3-927abe2a-3c28181b-782e042a
+2017-05-18 07:00:00,025 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 07:00:00,027 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0700
+2017-05-18 07:00:00,029 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 07:00:00,031 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 07:00:00,033 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 07:00:00,037 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 07:00:00,097 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 192d061e-927abe2a-3c28181b-f4ed58c8
+2017-05-18 07:00:00,099 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 07:00:00,101 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0700_0
+2017-05-18 07:00:00,103 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 07:00:00,105 [Worker-6 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 07:00:00,107 [Worker-6 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 07:00:00,110 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 07:00:01,544 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 07:00:01,546 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 07:00:01,569 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 07:00:01,571 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 08:00:00,019 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 1963f44f-927abe2a-3c28181b-35b65d90
+2017-05-18 08:00:00,020 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 08:00:00,023 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0800
+2017-05-18 08:00:00,025 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 08:00:00,026 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 08:00:00,029 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 08:00:00,032 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 08:00:00,938 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 1963f7e6-927abe2a-3c28181b-b304d68c
+2017-05-18 08:00:00,939 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 08:00:00,942 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0800_0
+2017-05-18 08:00:00,944 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 08:00:00,946 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 08:00:00,948 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 08:00:00,951 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 08:00:01,527 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 08:00:01,529 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 08:00:01,553 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 08:00:01,555 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 09:00:00,019 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 199ae2cf-927abe2a-3c28181b-e8f26605
+2017-05-18 09:00:00,020 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 09:00:00,023 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0900
+2017-05-18 09:00:00,025 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 09:00:00,027 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 09:00:00,029 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 09:00:00,032 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 09:00:00,097 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 199ae31e-927abe2a-3c28181b-6a809936
+2017-05-18 09:00:00,099 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 09:00:00,101 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0900_0
+2017-05-18 09:00:00,103 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 09:00:00,105 [Worker-6 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 09:00:00,107 [Worker-6 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 09:00:00,111 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 09:00:00,679 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 09:00:00,681 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 09:00:00,704 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 09:00:00,706 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 10:00:00,016 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 19d1d14c-927abe2a-3c28181b-faa6f336
+2017-05-18 10:00:00,017 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 10:00:00,020 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-1000
+2017-05-18 10:00:00,022 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 10:00:00,023 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 10:00:00,026 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 10:00:00,029 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 10:00:00,089 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 19d1d195-927abe2a-3c28181b-9473d03e
+2017-05-18 10:00:00,090 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 10:00:00,093 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-1000_0
+2017-05-18 10:00:00,095 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 10:00:00,097 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 10:00:00,099 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 10:00:00,102 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 10:00:00,695 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 10:00:00,698 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 10:00:00,724 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 10:00:00,726 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 11:00:00,014 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 1a08bfca-927abe2a-3c28181b-47815384
+2017-05-18 11:00:00,016 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 11:00:00,018 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-1100
+2017-05-18 11:00:00,020 [DefaultQuartzScheduler_Worker-3] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 11:00:00,022 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 11:00:00,024 [DefaultQuartzScheduler_Worker-3 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 11:00:00,028 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 11:00:00,083 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 1a08c00f-927abe2a-3c28181b-bf302de5
+2017-05-18 11:00:00,086 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 11:00:00,089 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-1100_0
+2017-05-18 11:00:00,092 [Worker-6 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 11:00:00,094 [Worker-6 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 11:00:00,098 [Worker-6 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 11:00:00,103 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 11:00:00,770 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 11:00:00,772 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 11:00:00,795 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 11:00:00,798 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK
+2017-05-18 12:00:00,031 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" has id 1a3fae5f-927abe2a-3c28181b-26a943fb
+2017-05-18 12:00:00,031 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to UNSCHEDULED
+2017-05-18 12:00:00,031 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-1200
+2017-05-18 12:00:00,031 [DefaultQuartzScheduler_Worker-9] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update" runs as user "polarion"
+2017-05-18 12:00:00,031 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to ACTIVATING
+2017-05-18 12:00:00,047 [DefaultQuartzScheduler_Worker-9 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to WAITING
+2017-05-18 12:00:00,047 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to RUNNING
+2017-05-18 12:00:00,115 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" has id 1a3faeb3-927abe2a-3c28181b-62fc3278
+2017-05-18 12:00:00,115 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 12:00:00,115 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-1200_0
+2017-05-18 12:00:00,115 [Worker-1 | u:p | job: update.plan] INFO  com.polarion.platform.jobs.info  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 12:00:00,115 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 12:00:00,131 [Worker-1 | u:p | job: update.plan | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 12:00:00,131 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 12:00:00,879 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 12:00:00,879 [Worker-6 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update - Index Refresh" is OK
+2017-05-18 12:00:00,910 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - State of job "Live Plan Chart Update" changed to FINISHED
+2017-05-18 12:00:00,910 [Worker-1 | u:p] INFO  com.polarion.platform.jobs.info  - Status of job "Live Plan Chart Update" is OK

@@ -1,0 +1,12 @@
+2017-05-18 09:00:00,094 [Worker-6 | u:p | job: update.plan] INFO  root  - Job "Live Plan Chart Update - Index Refresh" has id 199ae31e-927abe2a-3c28181b-6a809936
+2017-05-18 09:00:00,097 [Worker-6 | u:p | job: update.plan] INFO  root  - State of job "Live Plan Chart Update - Index Refresh" changed to UNSCHEDULED
+2017-05-18 09:00:00,099 [Worker-6 | u:p | job: update.plan] INFO  root  - Working directory of root job "Live Plan Chart Update - Index Refresh" is C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0900_0
+2017-05-18 09:00:00,101 [Worker-6 | u:p | job: update.plan] INFO  root  - Job "Live Plan Chart Update - Index Refresh" runs as user "polarion"
+2017-05-18 09:00:00,103 [Worker-6 | u:p | job: update.plan | u:p] INFO  root  - State of job "Live Plan Chart Update - Index Refresh" changed to ACTIVATING
+2017-05-18 09:00:00,105 [Worker-6 | u:p | job: update.plan | u:p] INFO  root  - State of job "Live Plan Chart Update - Index Refresh" changed to WAITING
+2017-05-18 09:00:00,108 [Worker-1 | u:p] INFO  root  - State of job "Live Plan Chart Update - Index Refresh" changed to RUNNING
+2017-05-18 09:00:00,134 [Worker-1 | u:p | job: update.plan.refresh.index] INFO  root  -  -- index refreshing started
+2017-05-18 09:00:00,145 [Worker-1 | u:p | job: update.plan.refresh.index] INFO  root  -  -- refreshing 15 work items in index
+2017-05-18 09:00:00,674 [Worker-1 | u:p | job: update.plan.refresh.index] INFO  root  -  -- index refreshing finished  [ TIME 0.54 s. ]
+2017-05-18 09:00:00,677 [Worker-1 | u:p] INFO  root  - State of job "Live Plan Chart Update - Index Refresh" changed to FINISHED
+2017-05-18 09:00:00,679 [Worker-1 | u:p] INFO  root  - Status of job "Live Plan Chart Update - Index Refresh" is OK

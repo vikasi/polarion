@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<factbase artifact="/default/${ProjectGroup}Group" id="repo-analysis" tag="2013-05-23">
+<factbase artifact="/default/${ProjectGroup}Group" id="repo-analysis" tag="2017-05-18">
     <structure-element id="root" provider="root" type="root">
         <properties>
             <property id="label">
@@ -45,7 +45,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="library/NODD" provider="repo-statistics" type="NODD">
-                <value type="java.lang.Integer">1</value>
+                <value type="java.lang.Integer">0</value>
                 <properties>
                     <property id="label">
                         <value>Number of Developers for Last Day</value>
@@ -77,7 +77,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="library/NOCD" provider="repo-statistics" type="NOCD">
-                <value type="java.lang.Integer">1</value>
+                <value type="java.lang.Integer">0</value>
                 <properties>
                     <property id="label">
                         <value>Number of Changes for Last Day</value>
@@ -117,7 +117,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="library/LAT" provider="repo-statistics" type="LAT">
-                <value type="java.util.Date">Thu May 23 15:21:33 CEST 2013</value>
+                <value type="java.util.Date">Mon May 15 15:37:56 IST 2017</value>
                 <properties>
                     <property id="label">
                         <value>Last Activity Time</value>
@@ -126,7 +126,7 @@
             </value-fact-element>
         </structure-element>
         <value-fact-element id="NOF" provider="repo-statistics" type="NOF">
-            <value type="java.lang.Long">931</value>
+            <value type="java.lang.Long">852</value>
             <properties>
                 <property id="label">
                     <value>Number of Files</value>
@@ -148,7 +148,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="/default/--Demo Projects${ProjectGroup}Group/NOF" provider="repo-statistics" type="NOF">
-                <value type="java.lang.Long">645</value>
+                <value type="java.lang.Long">566</value>
                 <properties>
                     <property id="label">
                         <value>Number of Files</value>

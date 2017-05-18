@@ -1,0 +1,44 @@
+Thu May 18 04:00:18 IST 2017  [debug] AvalonLogSystem initialized using logfile 'C:\Polarion\polarion\..\data\workspace\polarion-data\jobs\20170518-0400_0\velocity.log'
+Thu May 18 04:00:18 IST 2017   [info] ************************************************************** 
+Thu May 18 04:00:18 IST 2017   [info] Starting Jakarta Velocity v1.4
+Thu May 18 04:00:18 IST 2017   [info] RuntimeInstance initializing.
+Thu May 18 04:00:18 IST 2017   [info] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+Thu May 18 04:00:18 IST 2017   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Thu May 18 04:00:18 IST 2017   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Thu May 18 04:00:18 IST 2017   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Thu May 18 04:00:18 IST 2017   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Thu May 18 04:00:18 IST 2017   [info] FileResourceLoader : initialization starting.
+Thu May 18 04:00:18 IST 2017   [info] FileResourceLoader : adding path '.'
+Thu May 18 04:00:18 IST 2017   [info] FileResourceLoader : initialization complete.
+Thu May 18 04:00:18 IST 2017   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Thu May 18 04:00:18 IST 2017   [info] Default ResourceManager initialization complete.
+Thu May 18 04:00:18 IST 2017   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Thu May 18 04:00:18 IST 2017   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Thu May 18 04:00:18 IST 2017   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Thu May 18 04:00:18 IST 2017   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Thu May 18 04:00:18 IST 2017   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Thu May 18 04:00:18 IST 2017   [info] Created: 20 parsers.
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : initialization starting.
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Thu May 18 04:00:18 IST 2017  [error] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro :  VM library template macro registration complete.
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : messages on  : VM system will output logging messages
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : initialization complete.
+Thu May 18 04:00:18 IST 2017   [info] Velocity successfully started.
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : added new VM : #contextHelp( context ) : source = LiveCMMI
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : added new VM : #panel( id title helpContext resizable expanded bodyAtts ) : source = LiveCMMI
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : added new VM : #endPanel( ) : source = LiveCMMI
+Thu May 18 04:00:18 IST 2017   [info] Velocimacro : added new VM : #colorFromPercentage( percentage ) : source = LiveCMMI
+Thu May 18 04:00:18 IST 2017   [warn] Velocimacro : VM addition rejected : contextHelp : inline not allowed to replace existing VM
+Thu May 18 04:00:18 IST 2017   [warn] Velocimacro : VM addition rejected : panel : inline not allowed to replace existing VM
+Thu May 18 04:00:18 IST 2017   [warn] Velocimacro : VM addition rejected : endPanel : inline not allowed to replace existing VM
+Thu May 18 04:00:18 IST 2017   [warn] Velocimacro : VM addition rejected : colorFromPercentage : inline not allowed to replace existing VM
+Thu May 18 04:00:19 IST 2017   [warn] Velocimacro : VM addition rejected : contextHelp : inline not allowed to replace existing VM
+Thu May 18 04:00:19 IST 2017   [warn] Velocimacro : VM addition rejected : panel : inline not allowed to replace existing VM
+Thu May 18 04:00:19 IST 2017   [warn] Velocimacro : VM addition rejected : endPanel : inline not allowed to replace existing VM
+Thu May 18 04:00:19 IST 2017   [warn] Velocimacro : VM addition rejected : colorFromPercentage : inline not allowed to replace existing VM

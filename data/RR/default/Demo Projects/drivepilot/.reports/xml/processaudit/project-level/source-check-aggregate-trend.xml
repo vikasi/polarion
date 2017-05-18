@@ -4,6 +4,7 @@
         <trend-value-fact-element id="test-coverage.number-of-covered-lines" provider="source-check-aggregate" type="test-coverage.number-of-covered-lines">
             <trend>
                 <value tag="2017-05-15" type="java.lang.Integer">0</value>
+                <value tag="2013-05-23" type="java.lang.Integer">0</value>
             </trend>
             <properties>
                 <property id="label">
@@ -14,6 +15,7 @@
         <trend-value-fact-element id="test-coverage.number-of-valid-lines" provider="source-check-aggregate" type="test-coverage.number-of-valid-lines">
             <trend>
                 <value tag="2017-05-15" type="java.lang.Integer">0</value>
+                <value tag="2013-05-23" type="java.lang.Integer">0</value>
             </trend>
             <properties>
                 <property id="label">
@@ -37,6 +39,7 @@
                 <value tag="2017-05-13" type="java.lang.Double">53.0</value>
                 <value tag="2017-05-14" type="java.lang.Double">55.0</value>
                 <value tag="2017-05-15" type="java.lang.Double">NaN</value>
+                <value tag="2013-05-23" type="java.lang.Double">NaN</value>
             </trend>
             <properties>
                 <property id="label">
@@ -47,6 +50,7 @@
         <trend-value-fact-element id="test-sucess-ratio.testsCount" provider="source-check-aggregate" type="test-sucess-ratio.testsCount">
             <trend>
                 <value tag="2017-05-15" type="java.lang.Integer">5</value>
+                <value tag="2013-05-23" type="java.lang.Integer">5</value>
             </trend>
             <properties>
                 <property id="label">
@@ -57,6 +61,7 @@
         <trend-value-fact-element id="test-sucess-ratio.errorsCount" provider="source-check-aggregate" type="test-sucess-ratio.errorsCount">
             <trend>
                 <value tag="2017-05-15" type="java.lang.Integer">1</value>
+                <value tag="2013-05-23" type="java.lang.Integer">1</value>
             </trend>
             <properties>
                 <property id="label">
@@ -67,6 +72,7 @@
         <trend-value-fact-element id="test-sucess-ratio.failuresCount" provider="source-check-aggregate" type="test-sucess-ratio.failuresCount">
             <trend>
                 <value tag="2017-05-15" type="java.lang.Integer">1</value>
+                <value tag="2013-05-23" type="java.lang.Integer">1</value>
             </trend>
             <properties>
                 <property id="label">
@@ -77,6 +83,7 @@
         <trend-value-fact-element id="test-sucess-ratio.ratio" provider="source-check-aggregate" type="test-sucess-ratio.ratio">
             <trend>
                 <value tag="2017-05-15" type="java.lang.Double">60.0</value>
+                <value tag="2013-05-23" type="java.lang.Double">60.0</value>
             </trend>
             <properties>
                 <property id="label">

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.polarion.maven</groupId>
+  <artifactId>plugins-shared</artifactId>
+  <version>3.17.0</version>
+  <name>Shared Polarion API</name>
+  <description>Polarion API provided by system during out-of-process building</description>
+  <dependencies>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.7</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-math</groupId>
+      <artifactId>commons-math</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.3</version>
+    </dependency>
+  </dependencies>
+</project>

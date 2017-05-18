@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-audit>
+    
+    <!-- 
+         Parameter tag has following attributes:
+        - id            parameter identificator. Required. Rule parameters may refer to common parameters by this id. May be re-defined by rule parameters.
+        - value         parameter value
+        - description   short parameter description
+        - refid         reference to common parameter. May be used by  rule parameters.
+        - name          parameter name, maybe re-defined by rule parameter.
+        - displayName   human readable parameter value presentation, while reference to it.
+        - polarion-id   polarion identifier, which can be used to get human readable parameter value from Polarion        
+    -->    
+    
+    <!-- Common configuration section, where common parameters are described. -->
+    
+    <common-configuration>
+        <!-- release pattern -->
+        <parameter displayName="special identifier, which starts from Release" id="release-pattern-id" name="release pattern id" value="release.*" description="Pattern for timepoint id to determine whether it is release or not"/>    
+    
+        <!-- Work Item types -->
+        <parameter displayName="Defect"         polarion-id="work-item-type" id="work-item-type-defect"         name="Work Item type" value="defect"        description="Work Item type that represents a Defect in Tracker"/>
+        <parameter displayName="Test Case"      polarion-id="work-item-type" id="work-item-type-testcase"       name="Work Item type" value="testcase"      description="Work Item type that represents a Acceptance Test in Tracker"/>
+        <parameter displayName="Requirement"    polarion-id="work-item-type" id="work-item-type-user-story"     name="Work Item type" value="requirement"   description="Work Item type that represents a User Story in Tracker"/>
+        <parameter displayName="Task"           polarion-id="work-item-type" id="work-item-type-task"           name="Work Item type" value="task"          description="Work Item type that represents a  Task in Tracker"/>
+        <parameter displayName="Spike Solution" polarion-id="work-item-type" id="work-item-type-spike-solution" name="Work Item type" value="spikesolution" description="Work Item type that represents a  Spike Solution in Tracker"/>        
+        
+        <!-- Work Item relations -->        
+        <parameter displayName="depends on" polarion-id="work-item-relation" id="work-item-relation-depends-on" name="relation" value="depends_on" description="Work Item depends on relation id in Tracker"/>        
+        <parameter displayName="implements" polarion-id="work-item-relation" id="work-item-relation-implements" name="relation" value="implements" description="Work Item implements relation id in Tracker"/>              
+        <parameter displayName="relates to" polarion-id="work-item-relation" id="work-item-relation-relates-to" name="relation" value="relates_to" description="Work Item relates to relation id in Tracker"/>
+                
+        <!-- user roles -->    
+        <parameter displayName="project_developer identifier" id="developer-role" name="project role" value="project_assignable" description="Project developer role id"/>
+        <parameter displayName="project_customer identifier" id="customer-role" name="project role" value="project_customer" description="Project customer role id"/>
+        <parameter displayName="project_admin identifier" id="admin-role" name="project role" value="project_admin" description="Project maneger role"/>       
+        
+        <!-- custom fields -->
+        <parameter displayName="Risk" id="risk-type" name="risk field" value="risk" description="Risk field id"/>
+        <parameter displayName="High" id="risk-high-value" name="risk high value" value="high" description="Risk field high value"/>
+        <parameter displayName="Unit Test" id="unit-test-field" name="unit test field" value="unitTest" description="Custom Unit Test field id"/>
+        <parameter displayName="Initial Estimate" id="initial-estimate" name="initial estimate" value="initialEstimate" description="Work Item Initial Estimate feild id"/>
+        
+        <!-- 
+        <parameter displayName="Daily Meeting" id="work-item-type-standup-meeting" name="Work Item type" value="standupmeeting" description="Work Item id of the Standup Meeting in Tracker"/>
+        <parameter displayName="Failed Test" id="work-item-type-failed-test" name="Work Item type" value="failedtest" description="Work Item id of the Failed Test in Tracker"/>            
+        <parameter displayName="CRC Card" id="work-item-type-crc-card" name="Work Item type" value="crccard" description="Work Item id of the CRC Card in Tracker"/>    
+        
+        <parameter displayName="traceable" id="work-item-relation-traceable" name="relation" value="traceable" description="Work Item traceable relation id in Tracker"/>                
+        -->        
+    </common-configuration>
+    
+    <rule rule-id="UnfinishedUserStories" instance-id="ReleasesUnfinishedUserStories">
+        <skip>false</skip>                               
+        <parameters>
+            <parameter refid="work-item-type-user-story"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="release-pattern-id"/>     
+        </parameters>                  
+    </rule>     
+    
+    <rule rule-id="PlanningFailedAutomaticTests" instance-id="FailedAutomaticTests">
+        <skip>false</skip>                               
+        <parameters>
+            <parameter id="work-item-type" refid="work-item-type-defect"/>
+            <parameter refid="unit-test-field"/>                                                    
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="release-pattern-id"/>
+        </parameters>                  
+    </rule> 
+    
+    <rule rule-id="PlanningFailedAcceptanceTests" instance-id="FailedAcceptanceTests">
+        <skip>false</skip>                               
+        <parameters>
+            <parameter id="work-item-from" refid="work-item-type-defect" name="Work Item from"/>                        
+            <parameter id="work-item-to" refid="work-item-type-testcase" name="Work Item to"/>
+            <parameter id="relation" refid="work-item-relation-relates-to"/>                                              
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="release-pattern-id"/>
+        </parameters>                  
+    </rule> 
+
+    <rule rule-id="StaffedProjectTeam" instance-id="ProjectTeam">
+        <skip>false</skip>                               
+        <parameters>
+            <parameter refid="developer-role"/>
+            <parameter refid="customer-role"/>
+            <parameter refid="admin-role"/>
+        </parameters>                  
+    </rule> 
+
+    <rule rule-id="CurrentIterationPlanning" instance-id="IterationPlanning">
+        <skip>false</skip>           
+        <parameters>
+            <parameter refid="release-pattern-id"/>                              
+        </parameters>
+    </rule>  
+        
+    <rule rule-id="AcceptanceTestsExistence" instance-id="WorkitemExistence">
+        <skip>false</skip>                               
+        <parameters>
+            <parameter id="work-item-type" refid="work-item-type-testcase"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+        </parameters>                  
+    </rule>     
+    
+    <rule rule-id="UserStoriesExistence" instance-id="WorkitemExistence">
+        <skip>false</skip>                               
+        <parameters>
+            <parameter id="work-item-type" refid="work-item-type-user-story"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+        </parameters>                  
+    </rule> 
+
+    <rule rule-id="TaskExistence" instance-id="WorkitemExistence">
+        <skip>false</skip>                               
+        <parameters>
+            <parameter id="work-item-type" refid="work-item-type-task"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+        </parameters>                  
+    </rule>
+        
+    <rule rule-id="OftenBuilds" instance-id="RegularBuilds">
+        <skip>false</skip>                               
+       <parameters>
+            <parameter id="period-in-days" name="period in days" value="1" description="Period during which to check commits occurrence (in days)"/>            
+        </parameters>                  
+    </rule> 
+
+    
+    <rule rule-id="TaskCorrectEsimation" instance-id="TaskCorrectEsimation">
+        <skip>false</skip>
+        
+        <parameters>
+            <parameter refid="work-item-type-task"/>            
+            <parameter id="minimum-hours" name="minimum hours" value="1" description="Minimal estimation bound in hours"/>
+            <parameter id="maximum-hours" name="maximum hours" value="24" description="Maximal estimation bound in hours"/>                        
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>                        
+            <parameter refid="release-pattern-id"/>
+            <parameter refid="initial-estimate"/>
+        </parameters>                                  
+    </rule> 
+    
+    
+    <rule rule-id="UserStoriesCorrectEsimation" instance-id="UserStoriesCorrectEsimation">
+        <skip>false</skip>
+        
+        <parameters>
+            <parameter id="work-item-type" refid="work-item-type-user-story"/>            
+            <parameter id="minimum-days" name="minimum days" value="5" description="Minimal estimation bound in days"/>            
+            <parameter id="maximum-days" name="maximum days" value="15" description="Maximal estimation bound in days"/>            
+            <parameter refid="risk-type"/>             
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="developer-role"/>
+            <parameter refid="initial-estimate"/>
+        </parameters>                                  
+    </rule> 
+      
+    <rule rule-id="NotChangedTaskUserStoryEstimates" instance-id="UnmodifiedTaskUserStoryEstimates">
+        <skip>false</skip>
+   
+        <parameters>  
+            <parameter refid="work-item-type-user-story"/>
+            <parameter refid="work-item-type-task"/>            
+            <parameter refid="release-pattern-id"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="initial-estimate"/>
+        </parameters>                                  
+    </rule>        
+
+    <rule rule-id="ChooseSystemMetaphor" instance-id="SystemMetaphor">
+        <skip>false</skip>
+                      
+    </rule>         
+       
+    <rule rule-id="CreateAcceptanceTest" instance-id="UserStoryToAcceptanceTestRelation">
+        <skip>false</skip>
+        <parameters>        
+            <parameter id="work-item-from" refid="work-item-type-testcase" name="Work Item from"/>
+            <parameter id="work-item-to" refid="work-item-type-user-story" name="Work Item to"/>            
+            <parameter id="relation" refid="work-item-relation-relates-to"/>
+            <parameter id="is-resolved" name="is resolved" value="true" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                
+    </rule>     
+    
+    <rule rule-id="UserStoryToTaskDetalization" instance-id="UserStoryToTaskRelation">
+        <skip>false</skip>
+        <parameters>  
+            <parameter id="work-item-from" refid="work-item-type-task" name="Work Item from"/>          
+            <parameter id="work-item-to" refid="work-item-type-user-story" name="Work Item to"/>            
+            <parameter id="relation" refid="work-item-relation-implements"/>            
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>                                    
+            <parameter refid="release-pattern-id"/>
+        </parameters>    
+    </rule>      
+      
+    <rule rule-id="CorrectlyCreatedUserStories" instance-id="CorrectUserStories">
+        <skip>false</skip>
+       
+        <parameters>
+            <parameter refid="work-item-type-user-story"/>            
+            <parameter id="minimal-characters" name="Minimal characters" value="20" description="Minimal allowed characters number in user story description"/>
+            <parameter id="maximal-characters" name="Maximal characters" value="300" description="Maximal allowed characters number in user story description"/>                        
+            <parameter refid="customer-role"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+        </parameters>
+    </rule>                                                             
+
+    <rule rule-id="CodingGuidelinesExistence" instance-id="CodingGuidelines">
+        <skip>false</skip>
+        
+        <parameters>
+            <parameter id="coding-file-path" name="coding file path" value="guidelines.doc" description="Path to the document with guidelines, relative to the project root"/>
+        </parameters>                                       
+    </rule>           
+    
+    <rule rule-id="MovePeopleAround" instance-id="MovePeople">
+        <skip>false</skip>
+        
+        <parameters>
+            <parameter id="minimal-percent" name="minimal percent" value="20" description="Minimal allowed percent for author commits per package"/>
+            <parameter id="minimal-authors-count" name="minimal authors count" value="2" description="Minimal allowed authors count per package which commit percentage is more than configured minimal percent"/>
+        </parameters>                                       
+    </rule>       
+        
+    <rule rule-id="OftenIntegration" instance-id="ContinuousIntegration">
+        <skip>false</skip>
+        
+        <parameters>
+            <parameter id="period-in-days" name="period in days" value="1" description="Period during which to check commits occurrence (in days)"/>
+        </parameters>                                  
+    </rule>          
+    
+    <rule rule-id="CollectiveCodeOwnership" instance-id="CodeOwnership">
+        <skip>false</skip>
+                                 
+    </rule>     
+    
+    <rule rule-id="SpikeSolution" instance-id="SpikeSolution">
+        <skip>false</skip>
+
+        <parameters>   
+            <parameter id="work-item-from" refid="work-item-type-user-story" name="Work Item from"/>         
+            <parameter id="work-item-to" refid="work-item-type-spike-solution" name="work to"/>
+            <parameter refid="risk-type"/>
+            <parameter refid="risk-high-value"/>                       
+            <parameter id="relation" refid="work-item-relation-depends-on"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                  
+    </rule>     
+                
+    <rule rule-id="ChangeIterationPlan" instance-id="ChangeTimepointPlan">
+        <skip>false</skip>
+      
+        <parameters>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                  
+    </rule>         
+          
+    <rule rule-id="SplitReleasesToIterations" instance-id="SplitReleases">
+        <skip>false</skip> 
+        <parameters>
+            <parameter refid="release-pattern-id"/>         
+        </parameters>
+    </rule>         
+       
+    <rule rule-id="RightIterationDuration" instance-id="ConsistentIterationDuration">
+        <skip>false</skip>        
+        <parameters>
+            <parameter id="minimal-duration" name="minimal duration" value="5" description="Minimal duration of the iteration (in days)"/>            
+            <parameter id="maximal-duration" name="maximal duration" value="15" description="Maximal duration of the iteration (in days)"/>
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                  
+    </rule>
+            
+    <rule rule-id="TaskInAdvance" instance-id="EarlyPlanning">
+        <skip>false</skip>
+          
+        <parameters>            
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="release-pattern-id"/>
+            <parameter id="work-item-release-exclude" refid="work-item-type-user-story" name="Work Item release exclude"/>
+        </parameters>                                  
+    </rule>         
+    
+    <rule rule-id="IterationPlanningOrganization" instance-id="SpecificWorkitemsCreatedOnTimepoints">
+        <skip>false</skip>
+          
+        <parameters>
+            <parameter refid="work-item-type-user-story"/>
+            <parameter refid="work-item-type-task"/>
+            <parameter refid="release-pattern-id"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+        </parameters>                                  
+    </rule>   
+    
+    <rule rule-id="ReleasePlanExistence" instance-id="ReleasePlanExistence">
+        <skip>false</skip>
+         
+        <parameters>  
+            <parameter id="work-item-type" refid="work-item-type-user-story"/>
+            <parameter id="minimal-user-stories-number" name="minimal user stories number" value="1" description="Minimal allowed User Stories number"/>            
+            <parameter refid="release-pattern-id"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+        </parameters>                                  
+    </rule>    
+   
+    <rule rule-id="CorrectUserStoriesNumber" instance-id="EnoughUserStoriesNumber">
+        <skip>false</skip>
+         
+        <parameters>  
+            <parameter refid="work-item-type-user-story"/>
+            <parameter id="minimal-allowed-time" name="minimal allowed time" value="20" description="Maximal allowed difference between release duration and User Stories estimations (in percents)"/>            
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                  
+    </rule>   
+     
+    <rule rule-id="UnfinishedWorkitems" instance-id="UnfinishedWorkitems">
+        <skip>false</skip>
+
+        <parameters>      
+            <parameter id="work-item-exclude" refid="work-item-type-user-story" name="Work Item exclude"/>        
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                  
+    </rule>      
+    
+       
+    <rule rule-id="KeepProjectVelocity" instance-id="KeepVelocity">
+        <skip>false</skip>
+       
+        <parameters>        
+            <parameter id="work-item-type" refid="work-item-type-task"/>
+            <parameter id="work-item-type" refid="work-item-type-defect"/>            
+            <parameter id="is-resolved" name="is resolved" value="true" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter id="velocity-difference-threshold" name="velocity difference threshold" value="20" description="Maximal allowed velocity difference threshold (in percents)"/>
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                  
+    </rule>         
+           
+    <rule rule-id="CurrentReleasePlanning" instance-id="ReleasePlanning">
+        <skip>false</skip>                                         
+        <parameters>
+            <parameter refid="release-pattern-id"/>
+        </parameters>
+    </rule>                 
+    
+    <rule rule-id="TestSuccessRatio" instance-id="TestRatio">
+        <skip>false</skip>        
+    </rule>    
+    
+    <rule rule-id="TestsInPlace" instance-id="TestsExistence">
+        <skip>false</skip>        
+    </rule> 
+    
+<!--
+    <rule rule-id="NotChangedUserStoryEstimates" instance-id="UnmodifiedUserStoriesEstimates">
+        <skip>false</skip>
+   
+        <parameters>    
+            <parameter refid="work-item-type-user-story"/>            
+            <parameter id="distance" name="distance" value="2" description="Distance (in iterations) between re-estimations during which user story estimate hasn't to be modified"/>            
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                  
+    </rule>     
+    
+    <rule rule-id="FailedTestToTaskDetalization" instance-id="WorkitemTraceability">
+        <skip>false</skip>
+        <parameters>
+            <parameter id="work-item-from" refid="work-item-type-failed-test" name="Work Item from"/>             
+            <parameter id="work-item-to" refid="work-item-type-task" name="Work Item to"/>            
+            <parameter id="relation" refid="work-item-relation-traceable"/>
+            <parameter id="is-resolved" name="is resolved" value="false" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter id="maximum-not-traceable-time" name="maximum not traceable time" value="2" description="Maximum allowed time during which failed test may not be detalized to task"/>           
+        </parameters>    
+    </rule>             
+                                                                                             
+    <rule rule-id="BugWithCreatedTests" instance-id="WorkitemAcceptanceTests">
+        <skip>false</skip>
+        <parameters>
+            <parameter id="work-item-type" refid="work-item-type-defect"/>
+            <parameter id="is-resolved" name="is resolved" value="true" description="Flag which determines whether Work Item resolved or not"/>            
+        </parameters>                                  
+    </rule>          
+
+    <rule rule-id="FailedAcceptanceTests" instance-id="PassedAcceptanceTests">
+        <skip>false</skip>                                                 
+    </rule> 
+
+    <rule rule-id="VelocityChange" instance-id="VelocityTrack">
+        <skip>false</skip>
+         
+        <parameters>
+            <parameter id="work-item-type" refid="work-item-type-task"/>
+            <parameter id="work-item-type" refid="work-item-type-crc-card"/>            
+            <parameter id="is-resolved" name="is resolved" value="true" description="Flag which determines whether Work Item resolved or not"/>            
+            <parameter id="velocity-difference-threshold" name="velocity difference threshold" value="20" description="Maximal allowed difference between project velocity (in percents)"/>            
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                 
+    </rule>  
+
+    <rule rule-id="IterationAssignedUserStories" instance-id="TimepointAssignedWorkitems">
+        <skip>false</skip>
+         
+        <parameters>  
+            <parameter id="work-item-type" refid="work-item-type-user-story"/>
+            <parameter id="minimal-user-stories-number" name="minimal user stories number" value="1" description="Minimal allowed User Stories number"/>
+            <parameter refid="release-pattern-id"/>
+        </parameters>                                  
+    </rule>       
+
+    <rule instance-id="CheckStyle" rule-id="CheckStyle">    
+        <skip>false</skip>
+        <parameters>
+            <parameter id="checkstyle-file-path" name="checkstyle file path" value="target/checkstyle-result.xml" description="Path to checkstyle xml report relative to project base directory"/>
+        </parameters>
+    </rule>
+            
+    <rule instance-id="CPD" rule-id="CPD">
+        <skip>false</skip>
+        <parameters>   
+            <parameter id="cpd-file-path" name="cpd file path" value="target/cpd.xml" description="Path to cpd xml report relative to project base directory"/>            
+        </parameters>        
+    </rule>    
+      
+    
+    <rule instance-id="PMD" rule-id="PMD">
+        <skip>false</skip>
+        <parameters>  
+            <parameter id="pmd-file-path" name="pmd file path" value="target/pmd.xml" description="Path to pmd xml report relative to project base directory"/> 
+        </parameters>        
+    </rule>     
+    
+-->     
+           
+</process-audit>

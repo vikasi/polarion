@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<factbase artifact="drivepilot" id="workitems-data" tag="2013-05-23">
+<factbase artifact="drivepilot" id="workitems-data" tag="2017-05-18">
     <structure-element id="root" provider="root" type="root">
         <properties>
             <property id="scope">
                 <value>project/drivepilot</value>
             </property>
             <property id="revision">
-                <value>1</value>
+                <value>57</value>
             </property>
         </properties>
         <value-fact-element id="RESOLVED-UNRESOLVED" provider="WorkItemsAnalysis" type="RESOLVED-UNRESOLVED">
@@ -62,7 +62,7 @@
                 </property>
             </properties>
             <value-fact-element id="UNRESOLVED-BY-ASSIGNEE._unassigned" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
-                <value type="java.lang.Double">310.0</value>
+                <value type="java.lang.Double">305.0</value>
                 <properties>
                     <property id="label">
                         <value>Unassigned</value>
@@ -117,7 +117,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-ASSIGNEE.pGUI" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Philip GUI</value>
@@ -128,7 +128,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-ASSIGNEE.rProject" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Robert Project</value>
@@ -139,7 +139,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-ASSIGNEE.sDeveloper" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">3.0</value>
                 <properties>
                     <property id="label">
                         <value>Steve Developer</value>
@@ -178,7 +178,7 @@
                 </property>
             </properties>
             <value-fact-element id="UNRESOLVED-BY-CATEGORY._uncategorized" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-CATEGORY.ITEM">
-                <value type="java.lang.Double">292.0</value>
+                <value type="java.lang.Double">272.0</value>
                 <properties>
                     <property id="label">
                         <value>Uncategorized</value>
@@ -200,7 +200,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-CATEGORY.Core" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-CATEGORY.ITEM">
-                <value type="java.lang.Double">3.0</value>
+                <value type="java.lang.Double">14.0</value>
                 <properties>
                     <property id="label">
                         <value>Core</value>
@@ -211,7 +211,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-CATEGORY.Interface" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-CATEGORY.ITEM">
-                <value type="java.lang.Double">8.0</value>
+                <value type="java.lang.Double">17.0</value>
                 <properties>
                     <property id="label">
                         <value>Interface</value>
@@ -239,7 +239,7 @@
                 </property>
             </properties>
             <value-fact-element id="UNRESOLVED-BY-TIMEPOINT._unscheduled" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-TIMEPOINT.ITEM">
-                <value type="java.lang.Double">307.0</value>
+                <value type="java.lang.Double">310.0</value>
                 <properties>
                     <property id="label">
                         <value>Unscheduled</value>
@@ -283,7 +283,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-TIMEPOINT.iter3" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-TIMEPOINT.ITEM">
-                <value type="java.lang.Double">3.0</value>
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
                         <value>Iteration 3</value>
@@ -306,7 +306,7 @@
             </value-fact-element>
         </value-fact-element>
         <value-fact-element id="MAI" provider="WorkItemsAnalysis" type="MAI">
-            <value type="java.lang.Double">8.0</value>
+            <value type="java.lang.Double">11.0</value>
             <properties>
                 <property id="label">
                     <value>Most Assigned to Individual</value>
@@ -316,11 +316,11 @@
                 </property>
             </properties>
             <value-fact-element id="MAI/target" provider="WorkItemsAnalysis" type="MAI/target">
-                <value type="data-instance">/default/${User}pGUI</value>
+                <value type="data-instance">/default/${User}sDeveloper</value>
             </value-fact-element>
         </value-fact-element>
         <value-fact-element id="MEI" provider="WorkItemsAnalysis" type="MEI">
-            <value type="java.lang.Double">330.0</value>
+            <value type="java.lang.Double">327.0</value>
             <properties>
                 <property id="label">
                     <value>Most Entered by Individual</value>
@@ -357,7 +357,7 @@
                     <value>Estimate Accuracy</value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">0.7927710843373494</value>
+                    <value type="java.lang.Double">0.9001203369434416</value>
                 </property>
                 <property id="score-category">
                     <value>Planning</value>
@@ -370,7 +370,7 @@
                 </property>
             </properties>
             <value-fact-element id="ESTIMATE-ACCURACY.pos" provider="WorkItemsAnalysis" type="ESTIMATE-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.7927710843373494</value>
+                <value type="java.lang.Double">0.9001203369434416</value>
                 <properties>
                     <property id="label">
                         <value>Accurate</value>
@@ -378,7 +378,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="ESTIMATE-ACCURACY.neg" provider="WorkItemsAnalysis" type="ESTIMATE-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.20722891566265056</value>
+                <value type="java.lang.Double">0.09987966305655838</value>
                 <properties>
                     <property id="label">
                         <value>Inaccurate</value>
@@ -396,7 +396,7 @@
                     <value>Project Plan Accuracy</value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">0.8329113924050633</value>
+                    <value type="java.lang.Double">0.9651612903225807</value>
                 </property>
                 <property id="score-category">
                     <value>Planning</value>
@@ -409,7 +409,7 @@
                 </property>
             </properties>
             <value-fact-element id="PROJECT-PLAN-ACCURACY.pos" provider="WorkItemsAnalysis" type="PROJECT-PLAN-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.8329113924050633</value>
+                <value type="java.lang.Double">0.9651612903225807</value>
                 <properties>
                     <property id="label">
                         <value>Accurate</value>
@@ -417,7 +417,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PROJECT-PLAN-ACCURACY.neg" provider="WorkItemsAnalysis" type="PROJECT-PLAN-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.1670886075949367</value>
+                <value type="java.lang.Double">0.03483870967741931</value>
                 <properties>
                     <property id="label">
                         <value>Inaccurate</value>
@@ -426,11 +426,8 @@
             </value-fact-element>
         </value-fact-element>
         <value-fact-element id="PLANNING-ACCURACY" provider="WorkItemsAnalysis" type="PLANNING-ACCURACY">
-            <value/>
+            <value>--</value>
             <properties>
-                <property id="kind">
-                    <value>distribution</value>
-                </property>
                 <property id="label">
                     <value>Planning Accuracy</value>
                 </property>
@@ -438,28 +435,6 @@
                     <value>true</value>
                 </property>
             </properties>
-            <value-fact-element id="PLANNING-ACCURACY.pos" provider="WorkItemsAnalysis" type="PLANNING-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Unresolved Work Items before Due Date</value>
-                    </property>
-                    <property id="query">
-                        <value>NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id AND NOT timePoint.time:[19700000 TO 20130523]</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="PLANNING-ACCURACY.neg" provider="WorkItemsAnalysis" type="PLANNING-ACCURACY.ITEM">
-                <value type="java.lang.Double">1.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Unresolved Overdue Work Items</value>
-                    </property>
-                    <property id="query">
-                        <value>NOT HAS_VALUE:reslution AND timePoint.time:[19700000 TO 20130523]</value>
-                    </property>
-                </properties>
-            </value-fact-element>
         </value-fact-element>
         <value-fact-element id="PLANNING-COVERAGE" provider="WorkItemsAnalysis" type="PLANNING-COVERAGE">
             <value/>
@@ -471,7 +446,7 @@
                     <value>Estimated vs. Not Estimated Work Items</value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">0.06363636363636363</value>
+                    <value type="java.lang.Double">0.08787878787878788</value>
                 </property>
                 <property id="score-category">
                     <value>Planning</value>
@@ -484,7 +459,7 @@
                 </property>
             </properties>
             <value-fact-element id="PLANNING-COVERAGE.planned" provider="WorkItemsAnalysis" type="PLANNING-COVERAGE.ITEM">
-                <value type="java.lang.Double">21.0</value>
+                <value type="java.lang.Double">29.0</value>
                 <properties>
                     <property id="label">
                         <value>Estimated</value>
@@ -495,7 +470,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PLANNING-COVERAGE.not-planned" provider="WorkItemsAnalysis" type="PLANNING-COVERAGE.ITEM">
-                <value type="java.lang.Double">309.0</value>
+                <value type="java.lang.Double">301.0</value>
                 <properties>
                     <property id="label">
                         <value>Not Estimated</value>
@@ -519,7 +494,7 @@
                     <value>Rate of in time vs. underestimated Work Items (by in time it is meant that initial estimate &gt;= time spent + remaining estimate); only Work Items having filled initial estimate and at least one of time spent and remaining estimate are taken into account</value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">0.0</value>
+                    <value type="java.lang.Double">0.4827586206896552</value>
                 </property>
                 <property id="score-category">
                     <value>Planning</value>
@@ -532,7 +507,7 @@
                 </property>
             </properties>
             <value-fact-element id="WORKITEMS-PLANNING-ACCURACY.correct" provider="WorkItemsAnalysis" type="WORKITEMS-PLANNING-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">14.0</value>
                 <properties>
                     <property id="label">
                         <value>In Time</value>
@@ -540,7 +515,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="WORKITEMS-PLANNING-ACCURACY.incorrect" provider="WorkItemsAnalysis" type="WORKITEMS-PLANNING-ACCURACY.ITEM">
-                <value type="java.lang.Double">21.0</value>
+                <value type="java.lang.Double">15.0</value>
                 <properties>
                     <property id="label">
                         <value>Underestimated</value>
@@ -608,7 +583,7 @@
                 </property>
             </properties>
             <value-fact-element id="ASSIGNMENT-RATIO.assigned" provider="WorkItemsAnalysis" type="ASSIGNMENT-RATIO.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">5.0</value>
                 <properties>
                     <property id="label">
                         <value>Assigned</value>
@@ -619,7 +594,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="ASSIGNMENT-RATIO.not-assigned" provider="WorkItemsAnalysis" type="ASSIGNMENT-RATIO.ITEM">
-                <value type="java.lang.Double">310.0</value>
+                <value type="java.lang.Double">305.0</value>
                 <properties>
                     <property id="label">
                         <value>Unassigned</value>
@@ -641,7 +616,7 @@
                 </property>
                 <property id="description">
                     <value><![CDATA[
-            Rate of unresolved Work Items that have time point set.
+            Rate of unresolved Work Items that are assigned to a plan.
             ]]></value>
                 </property>
                 <property id="trendable">
@@ -649,24 +624,24 @@
                 </property>
             </properties>
             <value-fact-element id="PLANNING-RATIO.planned" provider="WorkItemsAnalysis" type="PLANNING-RATIO.ITEM">
-                <value type="java.lang.Double">3.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Scheduled</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id</value>
+                        <value>(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND PLAN:(*)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="PLANNING-RATIO.not-planned" provider="WorkItemsAnalysis" type="PLANNING-RATIO.ITEM">
-                <value type="java.lang.Double">307.0</value>
+                <value type="java.lang.Double">304.0</value>
                 <properties>
                     <property id="label">
                         <value>Unscheduled</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:timePoint.id</value>
+                        <value>(project.id:drivepilot) AND NOT HAS_VALUE:resolution AND NOT PLAN:(*)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -772,17 +747,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.minor" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Minor</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:minor)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="SEVERITY.detailed" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -794,8 +758,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+            <value-fact-element id="SEVERITY.minor" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Minor</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:minor)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
@@ -806,7 +781,40 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.basic" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
+                <value type="java.lang.Double">12.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Basic</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:basic)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Will not Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:will_not_have)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Will not Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:will_not_have)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="SEVERITY.basic" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">12.0</value>
                 <properties>
                     <property id="label">
                         <value>Basic</value>
@@ -828,7 +836,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.basic" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
+                <value type="java.lang.Double">12.0</value>
                 <properties>
                     <property id="label">
                         <value>Basic</value>
@@ -838,19 +846,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.basic" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
+            <value-fact-element id="SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Basic</value>
+                        <value>Will not Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:basic)</value>
+                        <value>(project.id:drivepilot) AND (severity:will_not_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.basic" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
+                <value type="java.lang.Double">12.0</value>
                 <properties>
                     <property id="label">
                         <value>Basic</value>
@@ -861,18 +869,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.normal" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">50.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Normal</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:normal)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="SEVERITY.normal" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">50.0</value>
+                <value type="java.lang.Double">49.0</value>
                 <properties>
                     <property id="label">
                         <value>Normal</value>
@@ -883,7 +880,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.basic" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
+                <value type="java.lang.Double">12.0</value>
                 <properties>
                     <property id="label">
                         <value>Basic</value>
@@ -893,36 +890,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+            <value-fact-element id="SEVERITY.normal" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">49.0</value>
                 <properties>
                     <property id="label">
-                        <value>Will not Have</value>
+                        <value>Normal</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Will not Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Will not Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have)</value>
+                        <value>(project.id:drivepilot) AND (severity:normal)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -938,7 +913,18 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
@@ -959,6 +945,17 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="SEVERITY.smoke" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -967,6 +964,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:smoke)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -992,17 +1000,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.major" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Major</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:major)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="SEVERITY.smoke" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -1014,41 +1011,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+            <value-fact-element id="SEVERITY.major" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Nice to Have</value>
+                        <value>Major</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Nice to Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Nice to Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have)</value>
+                        <value>(project.id:drivepilot) AND (severity:major)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">68.0</value>
+                <value type="java.lang.Double">58.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -1070,7 +1045,18 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">68.0</value>
+                <value type="java.lang.Double">58.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Should Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:should_have)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">58.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -1091,6 +1077,17 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">58.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Should Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:should_have)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="SEVERITY.transition" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -1099,6 +1096,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:transition)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">58.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Should Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:should_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1124,17 +1132,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.critical" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Critical</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:critical)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="SEVERITY.transition" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -1146,36 +1143,47 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">68.0</value>
+            <value-fact-element id="SEVERITY.critical" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Critical</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:should_have)</value>
+                        <value>(project.id:drivepilot) AND (severity:critical)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">68.0</value>
+            <value-fact-element id="SEVERITY.must_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">17.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Must Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:should_have)</value>
+                        <value>(project.id:drivepilot) AND (severity:must_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">68.0</value>
+            <value-fact-element id="SEVERITY.must_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">17.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Must Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:should_have)</value>
+                        <value>(project.id:drivepilot) AND (severity:must_have)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="SEVERITY.must_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">17.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Must Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:must_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1209,39 +1217,6 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:blocker)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="SEVERITY.must_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">17.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Must Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:must_have)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="SEVERITY.must_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">17.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Must Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:must_have)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="SEVERITY.must_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">17.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Must Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:must_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1358,17 +1333,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.minor" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Minor</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:minor AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.detailed" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -1380,146 +1344,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+            <value-fact-element id="OPEN-BY-SEVERITY.minor" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Nice to Have</value>
+                        <value>Minor</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Basic</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Will not Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Basic</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Basic</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Basic</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">35.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Normal</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">35.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Normal</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Basic</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Will not Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Will not Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Will not Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.smoke" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Smoke</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:minor AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1534,14 +1366,124 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.smoke" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">12.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Basic</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Smoke</value>
+                        <value>Will not Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Will not Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">12.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Basic</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Will not Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">12.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Basic</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Will not Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">12.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Basic</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">34.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Normal</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">12.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Basic</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:basic AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">34.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Normal</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:normal AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1553,6 +1495,72 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.smoke" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Smoke</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.smoke" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Smoke</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:smoke AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1578,17 +1586,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.major" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Major</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:major AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.smoke" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -1600,41 +1597,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+            <value-fact-element id="OPEN-BY-SEVERITY.major" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Nice to Have</value>
+                        <value>Major</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Nice to Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Nice to Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:major AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">65.0</value>
+                <value type="java.lang.Double">56.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -1656,7 +1631,18 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">65.0</value>
+                <value type="java.lang.Double">56.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Should Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">56.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -1677,6 +1663,17 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">56.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Should Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.transition" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -1685,6 +1682,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:transition AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">56.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Should Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1710,17 +1718,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.critical" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Critical</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:critical AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.transition" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -1732,36 +1729,47 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">65.0</value>
+            <value-fact-element id="OPEN-BY-SEVERITY.critical" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Critical</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:critical AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">65.0</value>
+            <value-fact-element id="OPEN-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">16.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Must Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">65.0</value>
+            <value-fact-element id="OPEN-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">16.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Must Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:should_have AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="OPEN-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">16.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Must Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1795,39 +1803,6 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:blocker AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">16.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Must Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">16.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Must Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">16.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Must Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:must_have AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1944,17 +1919,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.minor" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Minor</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:minor AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.detailed" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -1966,14 +1930,58 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+            <value-fact-element id="RESOLVED-BY-SEVERITY.minor" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Minor</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:minor AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Basic</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:basic AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Will not Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Will not Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2010,14 +2018,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+            <value-fact-element id="RESOLVED-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Basic</value>
+                        <value>Will not Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:basic AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2043,17 +2051,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">15.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Normal</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:normal AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.basic" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2065,36 +2062,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">15.0</value>
                 <properties>
                     <property id="label">
-                        <value>Will not Have</value>
+                        <value>Normal</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Will not Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Will not Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:will_not_have AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:normal AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2110,7 +2085,18 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
@@ -2131,6 +2117,17 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.smoke" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2139,6 +2136,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:smoke AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Nice to Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2164,17 +2172,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.major" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Major</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:major AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.smoke" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2186,41 +2183,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+            <value-fact-element id="RESOLVED-BY-SEVERITY.major" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Nice to Have</value>
+                        <value>Major</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Nice to Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Nice to Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:nice_to_have AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:major AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">3.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -2242,7 +2217,18 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">3.0</value>
+                <value type="java.lang.Double">2.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Should Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -2263,6 +2249,17 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">2.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Should Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.transition" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2271,6 +2268,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:transition AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">2.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Should Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2296,17 +2304,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.critical" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Critical</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:critical AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.transition" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2318,36 +2315,47 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">3.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.critical" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Critical</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:critical AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">3.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Must Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">3.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Must Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:should_have AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Must Have</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2381,39 +2389,6 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (severity:blocker AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Must Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Must Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Must Have</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (severity:must_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2454,7 +2429,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PRIORITY.low" provider="WorkItemsAnalysis" type="PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Low</value>
@@ -2465,7 +2440,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PRIORITY.medium" provider="WorkItemsAnalysis" type="PRIORITY.ITEM">
-                <value type="java.lang.Double">140.0</value>
+                <value type="java.lang.Double">138.0</value>
                 <properties>
                     <property id="label">
                         <value>Medium</value>
@@ -2476,7 +2451,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PRIORITY.high" provider="WorkItemsAnalysis" type="PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>High</value>
@@ -2523,7 +2498,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-PRIORITY.low" provider="WorkItemsAnalysis" type="OPEN-BY-PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Low</value>
@@ -2534,7 +2509,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-PRIORITY.medium" provider="WorkItemsAnalysis" type="OPEN-BY-PRIORITY.ITEM">
-                <value type="java.lang.Double">122.0</value>
+                <value type="java.lang.Double">121.0</value>
                 <properties>
                     <property id="label">
                         <value>Medium</value>
@@ -2545,7 +2520,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-PRIORITY.high" provider="WorkItemsAnalysis" type="OPEN-BY-PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>High</value>
@@ -2591,6 +2566,50 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Invalid</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Invalid</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Invalid</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Invalid</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="RESOLUTION.done" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
                 <value type="java.lang.Double">20.0</value>
                 <properties>
@@ -2599,50 +2618,6 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (resolution:done)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Invalid</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Invalid</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Invalid</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Invalid</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2734,6 +2709,72 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Other</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:other)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Other</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:other)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Invalid</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Invalid</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Other</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:other)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Other</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:other)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="RESOLUTION.duplicate" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2767,17 +2808,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Invalid</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2786,61 +2816,6 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (resolution:other)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Other</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:other)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Other</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:other)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Other</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:other)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.other" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Other</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:other)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Invalid</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:invalid)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2888,6 +2863,28 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="RESOLUTION.duplicate" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Duplicate</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:duplicate)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.duplicate" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Duplicate</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:duplicate)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2921,25 +2918,36 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLUTION.duplicate" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+            <value-fact-element id="RESOLUTION.later" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Duplicate</value>
+                        <value>Later</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:duplicate)</value>
+                        <value>(project.id:drivepilot) AND (resolution:later)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLUTION.duplicate" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+            <value-fact-element id="RESOLUTION.obsolete" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Duplicate</value>
+                        <value>Obsolete</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:duplicate)</value>
+                        <value>(project.id:drivepilot) AND (resolution:obsolete)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.obsolete" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Obsolete</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:obsolete)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2954,14 +2962,25 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLUTION.later" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+            <value-fact-element id="RESOLUTION.obsolete" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Later</value>
+                        <value>Obsolete</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (resolution:later)</value>
+                        <value>(project.id:drivepilot) AND (resolution:obsolete)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.obsolete" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Obsolete</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (resolution:obsolete)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -3024,7 +3043,7 @@
                 </property>
             </properties>
             <value-fact-element id="STATUS.open" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">230.0</value>
+                <value type="java.lang.Double">228.0</value>
                 <properties>
                     <property id="label">
                         <value>Open</value>
@@ -3035,7 +3054,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3046,7 +3065,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3057,7 +3076,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3068,7 +3087,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3079,7 +3098,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3090,7 +3109,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3101,7 +3120,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3112,7 +3131,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3123,7 +3142,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3134,7 +3153,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -3145,13 +3164,79 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.inprogress" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">1.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>In Progress</value>
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (status:inprogress)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.active" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">7.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Active</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:active)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.active" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">7.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Active</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:active)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.inReview" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>In Review</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:inReview)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.inReview" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>In Review</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:inReview)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.active" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">7.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Active</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:active)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.active" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">7.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Active</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:active)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -3166,36 +3251,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">26.0</value>
+            <value-fact-element id="STATUS.inReview" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Reviewed</value>
+                        <value>In Review</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (status:reviewed)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">26.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Reviewed</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:reviewed)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">26.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Reviewed</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:reviewed)</value>
+                        <value>(project.id:drivepilot) AND (status:inReview)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -3210,58 +3273,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="STATUS.active" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">7.0</value>
+            <value-fact-element id="STATUS.inReview" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Active</value>
+                        <value>In Review</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (status:active)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.active" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">7.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Active</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:active)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.active" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">7.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Active</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:active)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.active" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">7.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Active</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:active)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">26.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Reviewed</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:reviewed)</value>
+                        <value>(project.id:drivepilot) AND (status:inReview)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -3276,6 +3295,72 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="STATUS.inactive" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Inactive</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:inactive)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.inactive" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Inactive</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:inactive)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Reviewed</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:reviewed)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Reviewed</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:reviewed)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.inactive" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Inactive</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:inactive)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.inactive" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Inactive</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:inactive)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="STATUS.action-pending" provider="WorkItemsAnalysis" type="STATUS.ITEM">
                 <value type="java.lang.Double">1.0</value>
                 <properties>
@@ -3287,36 +3372,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">38.0</value>
+            <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Approved</value>
+                        <value>Reviewed</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (status:approved)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">38.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Approved</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:approved)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">38.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Approved</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:approved)</value>
+                        <value>(project.id:drivepilot) AND (status:reviewed)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -3331,58 +3394,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="STATUS.inactive" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+            <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Inactive</value>
+                        <value>Reviewed</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (status:inactive)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.inactive" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Inactive</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:inactive)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.inactive" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Inactive</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:inactive)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.inactive" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Inactive</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:inactive)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">38.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Approved</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (status:approved)</value>
+                        <value>(project.id:drivepilot) AND (status:reviewed)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -3397,6 +3416,28 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">64.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Approved</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:approved)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">64.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Approved</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:approved)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="STATUS.action-taken" provider="WorkItemsAnalysis" type="STATUS.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -3405,6 +3446,28 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (status:action-taken)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">64.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Approved</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:approved)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">64.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Approved</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (status:approved)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -3523,41 +3586,41 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="OPEN" provider="WorkItemsAnalysis" type="OPEN">
-            <value type="java.lang.Double">0.0</value>
+            <value type="java.lang.Double">3.0</value>
             <properties>
                 <property id="label">
                     <value>Open Work Items</value>
                 </property>
                 <property id="query">
-                    <value>HAS_VALUE:assignee.id AND HAS_VALUE:timePoint.id AND NOT HAS_VALUE:resolution</value>
+                    <value>HAS_VALUE:assignee.id AND PLAN:(*) AND NOT HAS_VALUE:resolution</value>
                 </property>
                 <property id="trendable">
                     <value>true</value>
                 </property>
             </properties>
         </value-fact-element>
-        <value-fact-element id="UNRESOLVED-RELEASE-1" provider="WorkItemsAnalysis" type="UNRESOLVED-RELEASE-1">
-            <value type="java.lang.Double">0.0</value>
+        <value-fact-element id="UNRESOLVED-VERSION-1" provider="WorkItemsAnalysis" type="UNRESOLVED-VERSION-1">
+            <value type="java.lang.Double">51.0</value>
             <properties>
                 <property id="label">
-                    <value>Unresolved Work Items Planned for Release 1.0</value>
+                    <value>Unresolved Work Items Planned for Version 1.0</value>
                 </property>
                 <property id="query">
-                    <value>targetRelease.KEY:version1.0 AND NOT HAS_VALUE:resolution</value>
+                    <value>targetVersion.KEY:Version_1_0 AND NOT HAS_VALUE:resolution</value>
                 </property>
                 <property id="trendable">
                     <value>true</value>
                 </property>
             </properties>
         </value-fact-element>
-        <value-fact-element id="NOT-VERIFIED-REQUIREMENTS-RELEASE-1" provider="WorkItemsAnalysis" type="NOT-VERIFIED-REQUIREMENTS-RELEASE-1">
+        <value-fact-element id="NOT-VERIFIED-REQUIREMENTS-VERSION-1" provider="WorkItemsAnalysis" type="NOT-VERIFIED-REQUIREMENTS-VERSION-1">
             <value type="java.lang.Double">0.0</value>
             <properties>
                 <property id="label">
-                    <value>Not Verified Requirements Planned for Release 1.0</value>
+                    <value>Not Verified Requirements Planned for Version 1.0</value>
                 </property>
                 <property id="query">
-                    <value>targetRelease.KEY:version1.0 AND type:requirement AND status:implemented</value>
+                    <value>targetVersion.KEY:Version_1_0 AND type:requirement AND status:implemented</value>
                 </property>
                 <property id="trendable">
                     <value>true</value>
@@ -3565,13 +3628,13 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NEW" provider="WorkItemsAnalysis" type="NEW">
-            <value type="java.lang.Double">310.0</value>
+            <value type="java.lang.Double">305.0</value>
             <properties>
                 <property id="label">
                     <value>New Work Items</value>
                 </property>
                 <property id="query">
-                    <value>NOT HAS_VALUE:resolution AND (NOT HAS_VALUE:assignee.id OR (NOT HAS_VALUE:timePoint.id))</value>
+                    <value>NOT HAS_VALUE:resolution AND (NOT HAS_VALUE:assignee.id OR (NOT PLAN:(*)))</value>
                 </property>
                 <property id="trendable">
                     <value>true</value>
@@ -3634,7 +3697,7 @@
             ]]></value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">-8.75</value>
+                    <value type="java.lang.Double">-8.7</value>
                 </property>
                 <property id="score-category">
                     <value>Traceability</value>
@@ -3644,7 +3707,7 @@
                 </property>
             </properties>
             <value-fact-element id="TRACEABILITY-REQUIREMENTS-COMMITS.traceable" provider="WorkItemsAnalysis" type="TRACEABILITY-REQUIREMENTS-COMMITS.ITEM">
-                <value type="java.lang.Double">-175.0</value>
+                <value type="java.lang.Double">-174.0</value>
                 <properties>
                     <property id="label">
                         <value>Traceable Work Items</value>
@@ -3652,7 +3715,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="TRACEABILITY-REQUIREMENTS-COMMITS.untraceable" provider="WorkItemsAnalysis" type="TRACEABILITY-REQUIREMENTS-COMMITS.ITEM">
-                <value type="java.lang.Double">195.0</value>
+                <value type="java.lang.Double">194.0</value>
                 <properties>
                     <property id="label">
                         <value>Untraceable Work Items</value>
@@ -3693,7 +3756,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="TRACEABILITY-COMMITS-REQUIREMENTS.untraceable" provider="WorkItemsAnalysis" type="TRACEABILITY-COMMITS-REQUIREMENTS.ITEM">
-                <value type="java.lang.Double">1.0</value>
+                <value type="java.lang.Double">3.0</value>
                 <properties>
                     <property id="label">
                         <value>Untraceable Commits</value>
@@ -3715,7 +3778,7 @@
                 </property>
             </properties>
             <value-fact-element id="ITEMS-BY-TYPE.unitTestCase" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
-                <value type="java.lang.Double">4.0</value>
+                <value type="java.lang.Double">5.0</value>
                 <properties>
                     <property id="label">
                         <value>Unit Test Case</value>
@@ -3726,7 +3789,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="ITEMS-BY-TYPE.issue" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">4.0</value>
                 <properties>
                     <property id="label">
                         <value>Issue</value>
@@ -3868,17 +3931,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Documentation</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (type:documentation)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="ITEMS-BY-TYPE.systemRequirement" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
                 <value type="java.lang.Double">48.0</value>
                 <properties>
@@ -3887,6 +3939,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (type:systemRequirement)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="ITEMS-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Documentation</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (type:documentation)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -3927,7 +3990,7 @@
                 </property>
             </properties>
             <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.unitTestCase" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">4.0</value>
+                <value type="java.lang.Double">5.0</value>
                 <properties>
                     <property id="label">
                         <value>Unit Test Case</value>
@@ -3938,7 +4001,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.issue" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">4.0</value>
+                <value type="java.lang.Double">3.0</value>
                 <properties>
                     <property id="label">
                         <value>Issue</value>
@@ -4080,17 +4143,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Documentation</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.systemRequirement" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <value type="java.lang.Double">48.0</value>
                 <properties>
@@ -4099,6 +4151,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Documentation</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4150,7 +4213,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.issue" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Issue</value>
@@ -4161,7 +4224,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.task" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Task</value>
@@ -4172,7 +4235,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.workPackage" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Work Package</value>
@@ -4292,17 +4355,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Documentation</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.systemRequirement" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -4311,6 +4363,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Documentation</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4357,7 +4420,7 @@
                         <value>Unit Test Case</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:unitTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4368,7 +4431,7 @@
                         <value>Issue</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:issue AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4379,18 +4442,18 @@
                         <value>Task</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:task AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.workPackage" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">2.0</value>
+                <value type="java.lang.Double">5.0</value>
                 <properties>
                     <property id="label">
                         <value>Work Package</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:workPackage AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4401,7 +4464,7 @@
                         <value>Change Request</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:changerequest AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4412,7 +4475,7 @@
                         <value>Risk</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:risk AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4423,7 +4486,7 @@
                         <value>Electrical Test Case</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:electricalTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4434,7 +4497,7 @@
                         <value>Electrical Requirement</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:electricalRequirement AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4445,7 +4508,7 @@
                         <value>Mechanical Test Case</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:mechanicalTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4456,7 +4519,7 @@
                         <value>Mechanical Requirement</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:mechanicalRequirement AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4467,7 +4530,7 @@
                         <value>Software Test Case</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:softwareTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4478,7 +4541,7 @@
                         <value>Software Requirement</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:softwareRequirement AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4489,7 +4552,7 @@
                         <value>System Test Case</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:systemTestCase AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4500,18 +4563,7 @@
                         <value>Testing</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Documentation</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:testing AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4522,7 +4574,18 @@
                         <value>System Requirement</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:systemRequirement AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Documentation</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:drivepilot) AND (type:documentation AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4533,7 +4596,7 @@
                         <value>Implementation</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:implementation AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -4544,55 +4607,15 @@
                         <value>Analysis</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:drivepilot) AND (type:analysis AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
         </value-fact-element>
-        <value-fact-element id="TOTAL-RUN-COUNT" provider="WorkItemsAnalysis" type="TOTAL-RUN-COUNT">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </value-fact-element>
-        <value-fact-element id="TOTAL-FAILED-COUNT" provider="WorkItemsAnalysis" type="TOTAL-FAILED-COUNT">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </value-fact-element>
-        <value-fact-element id="TOTAL-PASSED-COUNT" provider="WorkItemsAnalysis" type="TOTAL-PASSED-COUNT">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </value-fact-element>
-        <value-fact-element id="TOTAL-BLOCKED-COUNT" provider="WorkItemsAnalysis" type="TOTAL-BLOCKED-COUNT">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </value-fact-element>
-        <value-fact-element id="TOTAL-PASS-RATIO" provider="WorkItemsAnalysis" type="TOTAL-PASS-RATIO">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </value-fact-element>
         <value-fact-element id="Total" provider="WorkItemsAnalysis" type="Total">
-            <value type="java.lang.Double">-4.163835144952653</value>
+            <value type="java.lang.Double">-4.045510120520691</value>
             <value-fact-element id="Planning" provider="WorkItemsAnalysis" type="Planning-SCORE&#9;">
-                <value type="java.lang.Double">0.4223297100946941</value>
+                <value type="java.lang.Double">0.6089797589586163</value>
                 <properties>
                     <property id="url">
                         <value>/polarion/#/project/drivepilot/quality/workitems_quality?target=Planning</value>
@@ -4603,7 +4626,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="Traceability" provider="WorkItemsAnalysis" type="Traceability-SCORE&#9;">
-                <value type="java.lang.Double">-8.75</value>
+                <value type="java.lang.Double">-8.7</value>
                 <properties>
                     <property id="url">
                         <value>/polarion/#/project/drivepilot/quality/workitems_quality?target=Traceability</value>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<factbase artifact="elibrary" id="workitems-data" tag="2013-05-23">
+<factbase artifact="elibrary" id="workitems-data" tag="2017-05-18">
     <structure-element id="root" provider="root" type="root">
         <properties>
             <property id="scope">
                 <value>project/elibrary</value>
             </property>
             <property id="revision">
-                <value>1</value>
+                <value>57</value>
             </property>
         </properties>
         <value-fact-element id="RESOLVED-UNRESOLVED" provider="WorkItemsAnalysis" type="RESOLVED-UNRESOLVED">
@@ -23,7 +23,7 @@
                 </property>
             </properties>
             <value-fact-element id="RESOLVED-UNRESOLVED.RESOLVED" provider="WorkItemsAnalysis" type="RESOLVED-UNRESOLVED.ITEM">
-                <value type="java.lang.Double">44.0</value>
+                <value type="java.lang.Double">41.0</value>
                 <properties>
                     <property id="label">
                         <value>Resolved</value>
@@ -34,7 +34,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-UNRESOLVED.UNRESOLVED" provider="WorkItemsAnalysis" type="RESOLVED-UNRESOLVED.ITEM">
-                <value type="java.lang.Double">103.0</value>
+                <value type="java.lang.Double">107.0</value>
                 <properties>
                     <property id="label">
                         <value>Unresolved</value>
@@ -62,7 +62,7 @@
                 </property>
             </properties>
             <value-fact-element id="UNRESOLVED-BY-ASSIGNEE._unassigned" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
-                <value type="java.lang.Double">83.0</value>
+                <value type="java.lang.Double">82.0</value>
                 <properties>
                     <property id="label">
                         <value>Unassigned</value>
@@ -117,7 +117,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-ASSIGNEE.pGUI" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">7.0</value>
                 <properties>
                     <property id="label">
                         <value>Philip GUI</value>
@@ -139,7 +139,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-ASSIGNEE.sDeveloper" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-ASSIGNEE.ITEM">
-                <value type="java.lang.Double">12.0</value>
+                <value type="java.lang.Double">18.0</value>
                 <properties>
                     <property id="label">
                         <value>Steve Developer</value>
@@ -178,7 +178,7 @@
                 </property>
             </properties>
             <value-fact-element id="UNRESOLVED-BY-CATEGORY._uncategorized" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-CATEGORY.ITEM">
-                <value type="java.lang.Double">85.0</value>
+                <value type="java.lang.Double">88.0</value>
                 <properties>
                     <property id="label">
                         <value>Uncategorized</value>
@@ -200,7 +200,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-CATEGORY.Searching" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-CATEGORY.ITEM">
-                <value type="java.lang.Double">6.0</value>
+                <value type="java.lang.Double">8.0</value>
                 <properties>
                     <property id="label">
                         <value>Searching</value>
@@ -211,7 +211,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="UNRESOLVED-BY-CATEGORY.UI" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-CATEGORY.ITEM">
-                <value type="java.lang.Double">11.0</value>
+                <value type="java.lang.Double">10.0</value>
                 <properties>
                     <property id="label">
                         <value>UI</value>
@@ -239,7 +239,7 @@
                 </property>
             </properties>
             <value-fact-element id="UNRESOLVED-BY-TIMEPOINT._unscheduled" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-TIMEPOINT.ITEM">
-                <value type="java.lang.Double">83.0</value>
+                <value type="java.lang.Double">107.0</value>
                 <properties>
                     <property id="label">
                         <value>Unscheduled</value>
@@ -249,53 +249,9 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="UNRESOLVED-BY-TIMEPOINT.version0.9" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-TIMEPOINT.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Version 0.9</value>
-                    </property>
-                    <property id="query">
-                        <value>((project.id:elibrary) AND (timePoint.id:version0.9)) AND ((NOT HAS_VALUE:resolution))</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="UNRESOLVED-BY-TIMEPOINT.Sprint33" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-TIMEPOINT.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Sprint 33</value>
-                    </property>
-                    <property id="query">
-                        <value>((project.id:elibrary) AND (timePoint.id:Sprint33)) AND ((NOT HAS_VALUE:resolution))</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="UNRESOLVED-BY-TIMEPOINT.Sprint34" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-TIMEPOINT.ITEM">
-                <value type="java.lang.Double">20.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Sprint 34</value>
-                    </property>
-                    <property id="query">
-                        <value>((project.id:elibrary) AND (timePoint.id:Sprint34)) AND ((NOT HAS_VALUE:resolution))</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="UNRESOLVED-BY-TIMEPOINT.version1.0" provider="WorkItemsAnalysis" type="UNRESOLVED-BY-TIMEPOINT.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Version 1.0</value>
-                    </property>
-                    <property id="query">
-                        <value>((project.id:elibrary) AND (timePoint.id:version1.0)) AND ((NOT HAS_VALUE:resolution))</value>
-                    </property>
-                </properties>
-            </value-fact-element>
         </value-fact-element>
         <value-fact-element id="MAI" provider="WorkItemsAnalysis" type="MAI">
-            <value type="java.lang.Double">26.0</value>
+            <value type="java.lang.Double">39.0</value>
             <properties>
                 <property id="label">
                     <value>Most Assigned to Individual</value>
@@ -309,7 +265,7 @@
             </value-fact-element>
         </value-fact-element>
         <value-fact-element id="MEI" provider="WorkItemsAnalysis" type="MEI">
-            <value type="java.lang.Double">141.0</value>
+            <value type="java.lang.Double">139.0</value>
             <properties>
                 <property id="label">
                     <value>Most Entered by Individual</value>
@@ -323,7 +279,7 @@
             </value-fact-element>
         </value-fact-element>
         <value-fact-element id="MSI" provider="WorkItemsAnalysis" type="MSI">
-            <value type="java.lang.Double">14.0</value>
+            <value type="java.lang.Double">21.0</value>
             <properties>
                 <property id="label">
                     <value>Most Solved by Individual</value>
@@ -346,7 +302,7 @@
                     <value>Estimate Accuracy</value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">0.9776476849387973</value>
+                    <value type="java.lang.Double">0.9769484083424808</value>
                 </property>
                 <property id="score-category">
                     <value>Planning</value>
@@ -359,7 +315,7 @@
                 </property>
             </properties>
             <value-fact-element id="ESTIMATE-ACCURACY.pos" provider="WorkItemsAnalysis" type="ESTIMATE-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.9776476849387973</value>
+                <value type="java.lang.Double">0.9769484083424808</value>
                 <properties>
                     <property id="label">
                         <value>Accurate</value>
@@ -367,7 +323,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="ESTIMATE-ACCURACY.neg" provider="WorkItemsAnalysis" type="ESTIMATE-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.02235231506120272</value>
+                <value type="java.lang.Double">0.023051591657519244</value>
                 <properties>
                     <property id="label">
                         <value>Inaccurate</value>
@@ -385,7 +341,7 @@
                     <value>Project Plan Accuracy</value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">0.9776476849387973</value>
+                    <value type="java.lang.Double">0.9769484083424808</value>
                 </property>
                 <property id="score-category">
                     <value>Planning</value>
@@ -398,7 +354,7 @@
                 </property>
             </properties>
             <value-fact-element id="PROJECT-PLAN-ACCURACY.pos" provider="WorkItemsAnalysis" type="PROJECT-PLAN-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.9776476849387973</value>
+                <value type="java.lang.Double">0.9769484083424808</value>
                 <properties>
                     <property id="label">
                         <value>Accurate</value>
@@ -406,7 +362,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PROJECT-PLAN-ACCURACY.neg" provider="WorkItemsAnalysis" type="PROJECT-PLAN-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.02235231506120272</value>
+                <value type="java.lang.Double">0.023051591657519244</value>
                 <properties>
                     <property id="label">
                         <value>Inaccurate</value>
@@ -415,11 +371,8 @@
             </value-fact-element>
         </value-fact-element>
         <value-fact-element id="PLANNING-ACCURACY" provider="WorkItemsAnalysis" type="PLANNING-ACCURACY">
-            <value/>
+            <value>--</value>
             <properties>
-                <property id="kind">
-                    <value>distribution</value>
-                </property>
                 <property id="label">
                     <value>Planning Accuracy</value>
                 </property>
@@ -427,28 +380,6 @@
                     <value>true</value>
                 </property>
             </properties>
-            <value-fact-element id="PLANNING-ACCURACY.pos" provider="WorkItemsAnalysis" type="PLANNING-ACCURACY.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Unresolved Work Items before Due Date</value>
-                    </property>
-                    <property id="query">
-                        <value>NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id AND NOT timePoint.time:[19700000 TO 20130523]</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="PLANNING-ACCURACY.neg" provider="WorkItemsAnalysis" type="PLANNING-ACCURACY.ITEM">
-                <value type="java.lang.Double">1.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Unresolved Overdue Work Items</value>
-                    </property>
-                    <property id="query">
-                        <value>NOT HAS_VALUE:reslution AND timePoint.time:[19700000 TO 20130523]</value>
-                    </property>
-                </properties>
-            </value-fact-element>
         </value-fact-element>
         <value-fact-element id="PLANNING-COVERAGE" provider="WorkItemsAnalysis" type="PLANNING-COVERAGE">
             <value/>
@@ -460,7 +391,7 @@
                     <value>Estimated vs. Not Estimated Work Items</value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">0.4557823129251701</value>
+                    <value type="java.lang.Double">0.3918918918918919</value>
                 </property>
                 <property id="score-category">
                     <value>Planning</value>
@@ -473,7 +404,7 @@
                 </property>
             </properties>
             <value-fact-element id="PLANNING-COVERAGE.planned" provider="WorkItemsAnalysis" type="PLANNING-COVERAGE.ITEM">
-                <value type="java.lang.Double">67.0</value>
+                <value type="java.lang.Double">58.0</value>
                 <properties>
                     <property id="label">
                         <value>Estimated</value>
@@ -484,7 +415,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PLANNING-COVERAGE.not-planned" provider="WorkItemsAnalysis" type="PLANNING-COVERAGE.ITEM">
-                <value type="java.lang.Double">80.0</value>
+                <value type="java.lang.Double">90.0</value>
                 <properties>
                     <property id="label">
                         <value>Not Estimated</value>
@@ -508,7 +439,7 @@
                     <value>Rate of in time vs. underestimated Work Items (by in time it is meant that initial estimate &gt;= time spent + remaining estimate); only Work Items having filled initial estimate and at least one of time spent and remaining estimate are taken into account</value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">0.9402985074626866</value>
+                    <value type="java.lang.Double">0.9310344827586207</value>
                 </property>
                 <property id="score-category">
                     <value>Planning</value>
@@ -521,7 +452,7 @@
                 </property>
             </properties>
             <value-fact-element id="WORKITEMS-PLANNING-ACCURACY.correct" provider="WorkItemsAnalysis" type="WORKITEMS-PLANNING-ACCURACY.ITEM">
-                <value type="java.lang.Double">63.0</value>
+                <value type="java.lang.Double">54.0</value>
                 <properties>
                     <property id="label">
                         <value>In Time</value>
@@ -556,7 +487,7 @@
                 </property>
             </properties>
             <value-fact-element id="RESOLVED-RATIO.resolved" provider="WorkItemsAnalysis" type="RESOLVED-RATIO.ITEM">
-                <value type="java.lang.Double">44.0</value>
+                <value type="java.lang.Double">41.0</value>
                 <properties>
                     <property id="label">
                         <value>Resolved</value>
@@ -567,7 +498,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-RATIO.not-resolved" provider="WorkItemsAnalysis" type="RESOLVED-RATIO.ITEM">
-                <value type="java.lang.Double">103.0</value>
+                <value type="java.lang.Double">107.0</value>
                 <properties>
                     <property id="label">
                         <value>Unresolved</value>
@@ -597,7 +528,7 @@
                 </property>
             </properties>
             <value-fact-element id="ASSIGNMENT-RATIO.assigned" provider="WorkItemsAnalysis" type="ASSIGNMENT-RATIO.ITEM">
-                <value type="java.lang.Double">20.0</value>
+                <value type="java.lang.Double">25.0</value>
                 <properties>
                     <property id="label">
                         <value>Assigned</value>
@@ -608,7 +539,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="ASSIGNMENT-RATIO.not-assigned" provider="WorkItemsAnalysis" type="ASSIGNMENT-RATIO.ITEM">
-                <value type="java.lang.Double">83.0</value>
+                <value type="java.lang.Double">82.0</value>
                 <properties>
                     <property id="label">
                         <value>Unassigned</value>
@@ -630,7 +561,7 @@
                 </property>
                 <property id="description">
                     <value><![CDATA[
-            Rate of unresolved Work Items that have time point set.
+            Rate of unresolved Work Items that are assigned to a plan.
             ]]></value>
                 </property>
                 <property id="trendable">
@@ -638,24 +569,24 @@
                 </property>
             </properties>
             <value-fact-element id="PLANNING-RATIO.planned" provider="WorkItemsAnalysis" type="PLANNING-RATIO.ITEM">
-                <value type="java.lang.Double">20.0</value>
+                <value type="java.lang.Double">9.0</value>
                 <properties>
                     <property id="label">
                         <value>Scheduled</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id</value>
+                        <value>(project.id:elibrary) AND NOT HAS_VALUE:resolution AND PLAN:(*)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="PLANNING-RATIO.not-planned" provider="WorkItemsAnalysis" type="PLANNING-RATIO.ITEM">
-                <value type="java.lang.Double">83.0</value>
+                <value type="java.lang.Double">98.0</value>
                 <properties>
                     <property id="label">
                         <value>Unscheduled</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:timePoint.id</value>
+                        <value>(project.id:elibrary) AND NOT HAS_VALUE:resolution AND NOT PLAN:(*)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -740,7 +671,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">17.0</value>
+                <value type="java.lang.Double">10.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
@@ -761,14 +692,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.normal" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">31.0</value>
+            <value-fact-element id="SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Normal</value>
+                        <value>Will not Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:normal)</value>
+                        <value>(project.id:elibrary) AND (severity:will_not_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -784,7 +715,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.normal" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">31.0</value>
+                <value type="java.lang.Double">32.0</value>
                 <properties>
                     <property id="label">
                         <value>Normal</value>
@@ -794,14 +725,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+            <value-fact-element id="SEVERITY.normal" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">32.0</value>
                 <properties>
                     <property id="label">
-                        <value>Will not Have</value>
+                        <value>Normal</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:will_not_have)</value>
+                        <value>(project.id:elibrary) AND (severity:normal)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -816,19 +747,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.major" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">5.0</value>
+            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">10.0</value>
                 <properties>
                     <property id="label">
-                        <value>Major</value>
+                        <value>Nice to Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:major)</value>
+                        <value>(project.id:elibrary) AND (severity:nice_to_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">17.0</value>
+                <value type="java.lang.Double">10.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
@@ -839,7 +770,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.major" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">4.0</value>
                 <properties>
                     <property id="label">
                         <value>Major</value>
@@ -849,19 +780,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">17.0</value>
+            <value-fact-element id="SEVERITY.major" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">4.0</value>
                 <properties>
                     <property id="label">
-                        <value>Nice to Have</value>
+                        <value>Major</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:nice_to_have)</value>
+                        <value>(project.id:elibrary) AND (severity:major)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">18.0</value>
+                <value type="java.lang.Double">25.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -882,19 +813,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.critical" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">4.0</value>
+            <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">25.0</value>
                 <properties>
                     <property id="label">
-                        <value>Critical</value>
+                        <value>Should Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:critical)</value>
+                        <value>(project.id:elibrary) AND (severity:should_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">18.0</value>
+                <value type="java.lang.Double">25.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -905,7 +836,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SEVERITY.critical" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">4.0</value>
+                <value type="java.lang.Double">5.0</value>
                 <properties>
                     <property id="label">
                         <value>Critical</value>
@@ -915,25 +846,25 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.should_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">18.0</value>
+            <value-fact-element id="SEVERITY.critical" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">5.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Critical</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:should_have)</value>
+                        <value>(project.id:elibrary) AND (severity:critical)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.blocker" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
+            <value-fact-element id="SEVERITY.must_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">8.0</value>
                 <properties>
                     <property id="label">
-                        <value>Blocker</value>
+                        <value>Must Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:blocker)</value>
+                        <value>(project.id:elibrary) AND (severity:must_have)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -959,14 +890,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="SEVERITY.must_have" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
-                <value type="java.lang.Double">8.0</value>
+            <value-fact-element id="SEVERITY.blocker" provider="WorkItemsAnalysis" type="SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
-                        <value>Must Have</value>
+                        <value>Blocker</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:must_have)</value>
+                        <value>(project.id:elibrary) AND (severity:blocker)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1062,7 +993,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
+                <value type="java.lang.Double">7.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
@@ -1083,14 +1014,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">12.0</value>
+            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Normal</value>
+                        <value>Will not Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:normal AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1106,7 +1037,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">12.0</value>
+                <value type="java.lang.Double">10.0</value>
                 <properties>
                     <property id="label">
                         <value>Normal</value>
@@ -1116,14 +1047,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+            <value-fact-element id="OPEN-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">10.0</value>
                 <properties>
                     <property id="label">
-                        <value>Will not Have</value>
+                        <value>Normal</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:will_not_have AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:normal AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1138,19 +1069,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.major" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">4.0</value>
+            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">7.0</value>
                 <properties>
                     <property id="label">
-                        <value>Major</value>
+                        <value>Nice to Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:major AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
+                <value type="java.lang.Double">7.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
@@ -1161,7 +1092,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.major" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">4.0</value>
+                <value type="java.lang.Double">3.0</value>
                 <properties>
                     <property id="label">
                         <value>Major</value>
@@ -1171,19 +1102,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">11.0</value>
+            <value-fact-element id="OPEN-BY-SEVERITY.major" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">3.0</value>
                 <properties>
                     <property id="label">
-                        <value>Nice to Have</value>
+                        <value>Major</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:nice_to_have AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:major AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">10.0</value>
+                <value type="java.lang.Double">21.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -1204,19 +1135,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.critical" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">3.0</value>
+            <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">21.0</value>
                 <properties>
                     <property id="label">
-                        <value>Critical</value>
+                        <value>Should Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:critical AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">10.0</value>
+                <value type="java.lang.Double">21.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -1237,25 +1168,25 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">10.0</value>
+            <value-fact-element id="OPEN-BY-SEVERITY.critical" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">3.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Critical</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:should_have AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:critical AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.blocker" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+            <value-fact-element id="OPEN-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Blocker</value>
+                        <value>Must Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:blocker AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:must_have AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1281,14 +1212,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="OPEN-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
+            <value-fact-element id="OPEN-BY-SEVERITY.blocker" provider="WorkItemsAnalysis" type="OPEN-BY-SEVERITY.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Must Have</value>
+                        <value>Blocker</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:must_have AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:blocker AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1384,7 +1315,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">6.0</value>
+                <value type="java.lang.Double">3.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
@@ -1405,14 +1336,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">19.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Normal</value>
+                        <value>Will not Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:normal AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:will_not_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1428,7 +1359,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">19.0</value>
+                <value type="java.lang.Double">22.0</value>
                 <properties>
                     <property id="label">
                         <value>Normal</value>
@@ -1438,14 +1369,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.will_not_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.normal" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">22.0</value>
                 <properties>
                     <property id="label">
-                        <value>Will not Have</value>
+                        <value>Normal</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:will_not_have AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:normal AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1460,19 +1391,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.major" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">3.0</value>
                 <properties>
                     <property id="label">
-                        <value>Major</value>
+                        <value>Nice to Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:major AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">6.0</value>
+                <value type="java.lang.Double">3.0</value>
                 <properties>
                     <property id="label">
                         <value>Nice to Have</value>
@@ -1493,19 +1424,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.nice_to_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">6.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.major" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
-                        <value>Nice to Have</value>
+                        <value>Major</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:nice_to_have AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:major AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">8.0</value>
+                <value type="java.lang.Double">4.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -1526,19 +1457,19 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.critical" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">4.0</value>
                 <properties>
                     <property id="label">
-                        <value>Critical</value>
+                        <value>Should Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:critical AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">8.0</value>
+                <value type="java.lang.Double">4.0</value>
                 <properties>
                     <property id="label">
                         <value>Should Have</value>
@@ -1549,7 +1480,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="RESOLVED-BY-SEVERITY.critical" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Critical</value>
@@ -1559,25 +1490,25 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.should_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">8.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.critical" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
-                        <value>Should Have</value>
+                        <value>Critical</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:should_have AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:critical AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.blocker" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">1.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">8.0</value>
                 <properties>
                     <property id="label">
-                        <value>Blocker</value>
+                        <value>Must Have</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:blocker AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1603,14 +1534,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLVED-BY-SEVERITY.must_have" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
-                <value type="java.lang.Double">8.0</value>
+            <value-fact-element id="RESOLVED-BY-SEVERITY.blocker" provider="WorkItemsAnalysis" type="RESOLVED-BY-SEVERITY.ITEM">
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
-                        <value>Must Have</value>
+                        <value>Blocker</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (severity:must_have AND HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (severity:blocker AND HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1640,7 +1571,7 @@
                 </property>
             </properties>
             <value-fact-element id="PRIORITY.lowest" provider="WorkItemsAnalysis" type="PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Lowest</value>
@@ -1651,7 +1582,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PRIORITY.low" provider="WorkItemsAnalysis" type="PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">5.0</value>
                 <properties>
                     <property id="label">
                         <value>Low</value>
@@ -1662,7 +1593,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PRIORITY.medium" provider="WorkItemsAnalysis" type="PRIORITY.ITEM">
-                <value type="java.lang.Double">102.0</value>
+                <value type="java.lang.Double">85.0</value>
                 <properties>
                     <property id="label">
                         <value>Medium</value>
@@ -1673,7 +1604,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PRIORITY.high" provider="WorkItemsAnalysis" type="PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">10.0</value>
                 <properties>
                     <property id="label">
                         <value>High</value>
@@ -1684,7 +1615,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="PRIORITY.highest" provider="WorkItemsAnalysis" type="PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Highest</value>
@@ -1709,7 +1640,7 @@
                 </property>
             </properties>
             <value-fact-element id="OPEN-BY-PRIORITY.lowest" provider="WorkItemsAnalysis" type="OPEN-BY-PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Lowest</value>
@@ -1720,7 +1651,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-PRIORITY.low" provider="WorkItemsAnalysis" type="OPEN-BY-PRIORITY.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">4.0</value>
                 <properties>
                     <property id="label">
                         <value>Low</value>
@@ -1731,7 +1662,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="OPEN-BY-PRIORITY.medium" provider="WorkItemsAnalysis" type="OPEN-BY-PRIORITY.ITEM">
-                <value type="java.lang.Double">58.0</value>
+                <value type="java.lang.Double">57.0</value>
                 <properties>
                     <property id="label">
                         <value>Medium</value>
@@ -1778,24 +1709,13 @@
                 </property>
             </properties>
             <value-fact-element id="RESOLUTION.done" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">36.0</value>
+                <value type="java.lang.Double">41.0</value>
                 <properties>
                     <property id="label">
                         <value>Done</value>
                     </property>
                     <property id="query">
                         <value>(project.id:elibrary) AND (resolution:done)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="RESOLUTION.implemented" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
-                <value type="java.lang.Double">8.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Implemented</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (resolution:implemented)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1843,14 +1763,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLUTION.duplicate" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Duplicate</value>
+                        <value>Invalid</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (resolution:duplicate)</value>
+                        <value>(project.id:elibrary) AND (resolution:invalid)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1898,14 +1818,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="RESOLUTION.invalid" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+            <value-fact-element id="RESOLUTION.duplicate" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Invalid</value>
+                        <value>Duplicate</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (resolution:invalid)</value>
+                        <value>(project.id:elibrary) AND (resolution:duplicate)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1917,6 +1837,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:elibrary) AND (resolution:later)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="RESOLUTION.obsolete" provider="WorkItemsAnalysis" type="RESOLUTION.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Obsolete</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (resolution:obsolete)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -1946,7 +1877,7 @@
                 </property>
             </properties>
             <value-fact-element id="STATUS.open" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">62.0</value>
+                <value type="java.lang.Double">59.0</value>
                 <properties>
                     <property id="label">
                         <value>Open</value>
@@ -1957,7 +1888,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -1968,7 +1899,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -1979,7 +1910,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.draft" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">5.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Draft</value>
@@ -2023,7 +1954,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">8.0</value>
                 <properties>
                     <property id="label">
                         <value>Reviewed</value>
@@ -2034,7 +1965,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.reviewed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">8.0</value>
                 <properties>
                     <property id="label">
                         <value>Reviewed</value>
@@ -2055,36 +1986,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="STATUS.resolved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">9.0</value>
+            <value-fact-element id="STATUS.done" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">10.0</value>
                 <properties>
                     <property id="label">
-                        <value>Resolved</value>
+                        <value>Done</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (status:resolved)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">2.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Approved</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (status:approved)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.approved" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">2.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Approved</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (status:approved)</value>
+                        <value>(project.id:elibrary) AND (status:done)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2100,18 +2009,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.accepted" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">13.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Accepted</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (status:accepted)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.accepted" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">13.0</value>
+                <value type="java.lang.Double">4.0</value>
                 <properties>
                     <property id="label">
                         <value>Accepted</value>
@@ -2122,7 +2020,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="STATUS.verified-done" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">13.0</value>
+                <value type="java.lang.Double">16.0</value>
                 <properties>
                     <property id="label">
                         <value>Verified as Done</value>
@@ -2132,25 +2030,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="STATUS.implemented" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">3.0</value>
+            <value-fact-element id="STATUS.in_progress" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">4.0</value>
                 <properties>
                     <property id="label">
-                        <value>Implemented</value>
+                        <value>In Progress</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (status:implemented)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.implemented" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">3.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Implemented</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (status:implemented)</value>
+                        <value>(project.id:elibrary) AND (status:in_progress)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2165,30 +2052,8 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="STATUS.verified" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">19.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Verified</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (status:verified)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="STATUS.verified" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">19.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Verified</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (status:verified)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="STATUS.changes_needed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">1.0</value>
                 <properties>
                     <property id="label">
                         <value>Change Implemenation</value>
@@ -2198,14 +2063,36 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="STATUS.changes_needed" provider="WorkItemsAnalysis" type="STATUS.ITEM">
-                <value type="java.lang.Double">0.0</value>
+            <value-fact-element id="STATUS.verified" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">22.0</value>
                 <properties>
                     <property id="label">
-                        <value>Change Implemenation</value>
+                        <value>Verified</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (status:changes_needed)</value>
+                        <value>(project.id:elibrary) AND (status:verified)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.implemented" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">1.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Implemented</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (status:implemented)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="STATUS.verified" provider="WorkItemsAnalysis" type="STATUS.ITEM">
+                <value type="java.lang.Double">22.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Verified</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (status:verified)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2233,7 +2120,7 @@
             </value-fact-element>
         </value-fact-element>
         <value-fact-element id="ALL" provider="WorkItemsAnalysis" type="ALL">
-            <value type="java.lang.Double">147.0</value>
+            <value type="java.lang.Double">148.0</value>
             <properties>
                 <property id="label">
                     <value>All Work Items</value>
@@ -2247,41 +2134,41 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="OPEN" provider="WorkItemsAnalysis" type="OPEN">
-            <value type="java.lang.Double">13.0</value>
+            <value type="java.lang.Double">6.0</value>
             <properties>
                 <property id="label">
                     <value>Open Work Items</value>
                 </property>
                 <property id="query">
-                    <value>HAS_VALUE:assignee.id AND HAS_VALUE:timePoint.id AND NOT HAS_VALUE:resolution</value>
+                    <value>HAS_VALUE:assignee.id AND PLAN:(*) AND NOT HAS_VALUE:resolution</value>
                 </property>
                 <property id="trendable">
                     <value>true</value>
                 </property>
             </properties>
         </value-fact-element>
-        <value-fact-element id="UNRESOLVED-RELEASE-1" provider="WorkItemsAnalysis" type="UNRESOLVED-RELEASE-1">
-            <value type="java.lang.Double">26.0</value>
+        <value-fact-element id="UNRESOLVED-VERSION-1" provider="WorkItemsAnalysis" type="UNRESOLVED-VERSION-1">
+            <value type="java.lang.Double">6.0</value>
             <properties>
                 <property id="label">
-                    <value>Unresolved Work Items Planned for Release 1.0</value>
+                    <value>Unresolved Work Items Planned for Version 1.0</value>
                 </property>
                 <property id="query">
-                    <value>targetRelease.KEY:version1.0 AND NOT HAS_VALUE:resolution</value>
+                    <value>targetVersion.KEY:Version_1_0 AND NOT HAS_VALUE:resolution</value>
                 </property>
                 <property id="trendable">
                     <value>true</value>
                 </property>
             </properties>
         </value-fact-element>
-        <value-fact-element id="NOT-VERIFIED-REQUIREMENTS-RELEASE-1" provider="WorkItemsAnalysis" type="NOT-VERIFIED-REQUIREMENTS-RELEASE-1">
+        <value-fact-element id="NOT-VERIFIED-REQUIREMENTS-VERSION-1" provider="WorkItemsAnalysis" type="NOT-VERIFIED-REQUIREMENTS-VERSION-1">
             <value type="java.lang.Double">0.0</value>
             <properties>
                 <property id="label">
-                    <value>Not Verified Requirements Planned for Release 1.0</value>
+                    <value>Not Verified Requirements Planned for Version 1.0</value>
                 </property>
                 <property id="query">
-                    <value>targetRelease.KEY:version1.0 AND type:requirement AND status:implemented</value>
+                    <value>targetVersion.KEY:Version_1_0 AND type:requirement AND status:implemented</value>
                 </property>
                 <property id="trendable">
                     <value>true</value>
@@ -2289,13 +2176,13 @@
             </properties>
         </value-fact-element>
         <value-fact-element id="NEW" provider="WorkItemsAnalysis" type="NEW">
-            <value type="java.lang.Double">83.0</value>
+            <value type="java.lang.Double">82.0</value>
             <properties>
                 <property id="label">
                     <value>New Work Items</value>
                 </property>
                 <property id="query">
-                    <value>NOT HAS_VALUE:resolution AND (NOT HAS_VALUE:assignee.id OR (NOT HAS_VALUE:timePoint.id))</value>
+                    <value>NOT HAS_VALUE:resolution AND (NOT HAS_VALUE:assignee.id OR (NOT PLAN:(*)))</value>
                 </property>
                 <property id="trendable">
                     <value>true</value>
@@ -2321,7 +2208,7 @@
                 </property>
             </properties>
             <value-fact-element id="SUSPECT-RATIO.not-suspect" provider="WorkItemsAnalysis" type="SUSPECT-RATIO.ITEM">
-                <value type="java.lang.Double">102.0</value>
+                <value type="java.lang.Double">107.0</value>
                 <properties>
                     <property id="label">
                         <value>Not suspect</value>
@@ -2332,7 +2219,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="SUSPECT-RATIO.suspect" provider="WorkItemsAnalysis" type="SUSPECT-RATIO.ITEM">
-                <value type="java.lang.Double">1.0</value>
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
                         <value>Suspect</value>
@@ -2358,7 +2245,7 @@
             ]]></value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">-1.9090909090909092</value>
+                    <value type="java.lang.Double">-2.1951219512195124</value>
                 </property>
                 <property id="score-category">
                     <value>Traceability</value>
@@ -2368,7 +2255,7 @@
                 </property>
             </properties>
             <value-fact-element id="TRACEABILITY-REQUIREMENTS-COMMITS.traceable" provider="WorkItemsAnalysis" type="TRACEABILITY-REQUIREMENTS-COMMITS.ITEM">
-                <value type="java.lang.Double">-84.0</value>
+                <value type="java.lang.Double">-90.0</value>
                 <properties>
                     <property id="label">
                         <value>Traceable Work Items</value>
@@ -2376,7 +2263,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="TRACEABILITY-REQUIREMENTS-COMMITS.untraceable" provider="WorkItemsAnalysis" type="TRACEABILITY-REQUIREMENTS-COMMITS.ITEM">
-                <value type="java.lang.Double">128.0</value>
+                <value type="java.lang.Double">131.0</value>
                 <properties>
                     <property id="label">
                         <value>Untraceable Work Items</value>
@@ -2399,7 +2286,7 @@
             ]]></value>
                 </property>
                 <property id="score">
-                    <value type="java.lang.Double">0.5</value>
+                    <value type="java.lang.Double">0.0</value>
                 </property>
                 <property id="score-category">
                     <value>Traceability</value>
@@ -2409,7 +2296,7 @@
                 </property>
             </properties>
             <value-fact-element id="TRACEABILITY-COMMITS-REQUIREMENTS.traceable" provider="WorkItemsAnalysis" type="TRACEABILITY-COMMITS-REQUIREMENTS.ITEM">
-                <value type="java.lang.Double">1.0</value>
+                <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
                         <value>Traceable Commits</value>
@@ -2417,7 +2304,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="TRACEABILITY-COMMITS-REQUIREMENTS.untraceable" provider="WorkItemsAnalysis" type="TRACEABILITY-COMMITS-REQUIREMENTS.ITEM">
-                <value type="java.lang.Double">1.0</value>
+                <value type="java.lang.Double">2.0</value>
                 <properties>
                     <property id="label">
                         <value>Untraceable Commits</value>
@@ -2482,19 +2369,8 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Documentation</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (type:documentation)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="ITEMS-BY-TYPE.task" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
-                <value type="java.lang.Double">29.0</value>
+                <value type="java.lang.Double">30.0</value>
                 <properties>
                     <property id="label">
                         <value>Task</value>
@@ -2504,14 +2380,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-BY-TYPE.implementation" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
+            <value-fact-element id="ITEMS-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Implementation</value>
+                        <value>Documentation</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:implementation)</value>
+                        <value>(project.id:elibrary) AND (type:documentation)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2526,14 +2402,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-BY-TYPE.analysis" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
+            <value-fact-element id="ITEMS-BY-TYPE.implementation" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Analysis</value>
+                        <value>Implementation</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:analysis)</value>
+                        <value>(project.id:elibrary) AND (type:implementation)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2545,6 +2421,17 @@
                     </property>
                     <property id="query">
                         <value>(project.id:elibrary) AND (type:defect)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="ITEMS-BY-TYPE.analysis" provider="WorkItemsAnalysis" type="ITEMS-BY-TYPE.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Analysis</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (type:analysis)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2563,7 +2450,7 @@
                 </property>
             </properties>
             <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.userstory" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">11.0</value>
+                <value type="java.lang.Double">10.0</value>
                 <properties>
                     <property id="label">
                         <value>User Story</value>
@@ -2606,6 +2493,17 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.task" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">10.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Task</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2617,14 +2515,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.task" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">10.0</value>
+            <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.requirement" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">16.0</value>
                 <properties>
                     <property id="label">
-                        <value>Task</value>
+                        <value>Requirement</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2639,14 +2537,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.requirement" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">8.0</value>
+            <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.defect" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
-                        <value>Requirement</value>
+                        <value>Defect</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution)</value>
+                        <value>(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2658,17 +2556,6 @@
                     </property>
                     <property id="query">
                         <value>(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-BY-TYPE.defect" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">9.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Defect</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2687,7 +2574,7 @@
                 </property>
             </properties>
             <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.userstory" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
+                <value type="java.lang.Double">6.0</value>
                 <properties>
                     <property id="label">
                         <value>User Story</value>
@@ -2730,17 +2617,6 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Documentation</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.task" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <value type="java.lang.Double">10.0</value>
                 <properties>
@@ -2752,14 +2628,14 @@
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.implementation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
+            <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.documentation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
                     <property id="label">
-                        <value>Implementation</value>
+                        <value>Documentation</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
+                        <value>(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2774,6 +2650,28 @@
                     </property>
                 </properties>
             </value-fact-element>
+            <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.implementation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Implementation</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.defect" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">6.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Defect</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
+                    </property>
+                </properties>
+            </value-fact-element>
             <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.analysis" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
                 <value type="java.lang.Double">0.0</value>
                 <properties>
@@ -2782,17 +2680,6 @@
                     </property>
                     <property id="query">
                         <value>(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.defect" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">7.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Defect</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2811,13 +2698,13 @@
                 </property>
             </properties>
             <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.userstory" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">7.0</value>
+                <value type="java.lang.Double">9.0</value>
                 <properties>
                     <property id="label">
                         <value>User Story</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:elibrary) AND (type:userstory AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2828,7 +2715,7 @@
                         <value>Change Request</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:elibrary) AND (type:changerequest AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2839,7 +2726,7 @@
                         <value>Test Case</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:elibrary) AND (type:testcase AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2850,7 +2737,18 @@
                         <value>Testing</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:elibrary) AND (type:testing AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.task" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Task</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2861,29 +2759,7 @@
                         <value>Documentation</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.task" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">10.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Task</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.implementation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">0.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Implementation</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:elibrary) AND (type:documentation AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2894,7 +2770,29 @@
                         <value>Requirement</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:elibrary) AND (type:requirement AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.implementation" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Implementation</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (type:implementation AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
+                    </property>
+                </properties>
+            </value-fact-element>
+            <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.defect" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
+                <value type="java.lang.Double">0.0</value>
+                <properties>
+                    <property id="label">
+                        <value>Defect</value>
+                    </property>
+                    <property id="query">
+                        <value>(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
@@ -2905,66 +2803,15 @@
                         <value>Analysis</value>
                     </property>
                     <property id="query">
-                        <value>(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
+                        <value>(project.id:elibrary) AND (type:analysis AND NOT HAS_VALUE:resolution AND PLAN:(*))</value>
                     </property>
                 </properties>
             </value-fact-element>
-            <value-fact-element id="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.defect" provider="WorkItemsAnalysis" type="ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.ITEM">
-                <value type="java.lang.Double">3.0</value>
-                <properties>
-                    <property id="label">
-                        <value>Defect</value>
-                    </property>
-                    <property id="query">
-                        <value>(project.id:elibrary) AND (type:defect AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)</value>
-                    </property>
-                </properties>
-            </value-fact-element>
-        </value-fact-element>
-        <value-fact-element id="TOTAL-RUN-COUNT" provider="WorkItemsAnalysis" type="TOTAL-RUN-COUNT">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </value-fact-element>
-        <value-fact-element id="TOTAL-FAILED-COUNT" provider="WorkItemsAnalysis" type="TOTAL-FAILED-COUNT">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </value-fact-element>
-        <value-fact-element id="TOTAL-PASSED-COUNT" provider="WorkItemsAnalysis" type="TOTAL-PASSED-COUNT">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </value-fact-element>
-        <value-fact-element id="TOTAL-BLOCKED-COUNT" provider="WorkItemsAnalysis" type="TOTAL-BLOCKED-COUNT">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </value-fact-element>
-        <value-fact-element id="TOTAL-PASS-RATIO" provider="WorkItemsAnalysis" type="TOTAL-PASS-RATIO">
-            <value type="java.lang.Double">0.0</value>
-            <properties>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
         </value-fact-element>
         <value-fact-element id="Total" provider="WorkItemsAnalysis" type="Total">
-            <value type="java.lang.Double">-0.28562343076227314</value>
+            <value type="java.lang.Double">-0.6879580766928219</value>
             <value-fact-element id="Planning" provider="WorkItemsAnalysis" type="Planning-SCORE&#9;">
-                <value type="java.lang.Double">0.8378440475663629</value>
+                <value type="java.lang.Double">0.8192057978338685</value>
                 <properties>
                     <property id="url">
                         <value>/polarion/#/project/elibrary/quality/workitems_quality?target=Planning</value>
@@ -2975,7 +2822,7 @@
                 </properties>
             </value-fact-element>
             <value-fact-element id="Traceability" provider="WorkItemsAnalysis" type="Traceability-SCORE&#9;">
-                <value type="java.lang.Double">-1.4090909090909092</value>
+                <value type="java.lang.Double">-2.1951219512195124</value>
                 <properties>
                     <property id="url">
                         <value>/polarion/#/project/elibrary/quality/workitems_quality?target=Traceability</value>

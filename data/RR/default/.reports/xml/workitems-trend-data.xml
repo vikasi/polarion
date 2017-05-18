@@ -27,6 +27,7 @@
                     <value tag="2017-05-13" type="java.lang.Double">41.0</value>
                     <value tag="2017-05-14" type="java.lang.Double">52.0</value>
                     <value tag="2017-05-15" type="java.lang.Double">64.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">61.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -53,6 +54,7 @@
                     <value tag="2017-05-13" type="java.lang.Double">662.0</value>
                     <value tag="2017-05-14" type="java.lang.Double">662.0</value>
                     <value tag="2017-05-15" type="java.lang.Double">684.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">688.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -77,32 +79,6 @@
                     <value>true</value>
                 </property>
             </properties>
-            <trend-value-fact-element id="UNRESOLVED-BY-PROJECT.library" provider="WorkItemsAnalysis" tag="2009-07-29" type="UNRESOLVED-BY-PROJECT.ITEM">
-                <trend>
-                    <value tag="2017-05-02" type="java.lang.Double">220.0</value>
-                    <value tag="2017-05-03" type="java.lang.Double">218.0</value>
-                    <value tag="2017-05-04" type="java.lang.Double">217.0</value>
-                    <value tag="2017-05-05" type="java.lang.Double">216.0</value>
-                    <value tag="2017-05-06" type="java.lang.Double">218.0</value>
-                    <value tag="2017-05-07" type="java.lang.Double">215.0</value>
-                    <value tag="2017-05-08" type="java.lang.Double">215.0</value>
-                    <value tag="2017-05-09" type="java.lang.Double">214.0</value>
-                    <value tag="2017-05-10" type="java.lang.Double">221.0</value>
-                    <value tag="2017-05-11" type="java.lang.Double">225.0</value>
-                    <value tag="2017-05-12" type="java.lang.Double">230.0</value>
-                    <value tag="2017-05-13" type="java.lang.Double">248.0</value>
-                    <value tag="2017-05-14" type="java.lang.Double">255.0</value>
-                    <value tag="2017-05-15" type="java.lang.Double">271.0</value>
-                </trend>
-                <properties>
-                    <property id="label">
-                        <value>Module Library</value>
-                    </property>
-                    <property id="query">
-                        <value>((project.id:library) AND (resolution:######NULL)) AND (resolution:######NULL)</value>
-                    </property>
-                </properties>
-            </trend-value-fact-element>
             <trend-value-fact-element id="UNRESOLVED-BY-PROJECT.elibrary" provider="WorkItemsAnalysis" tag="2009-07-29" type="UNRESOLVED-BY-PROJECT.ITEM">
                 <trend>
                     <value tag="2017-05-02" type="java.lang.Double">120.0</value>
@@ -119,6 +95,7 @@
                     <value tag="2017-05-13" type="java.lang.Double">108.0</value>
                     <value tag="2017-05-14" type="java.lang.Double">108.0</value>
                     <value tag="2017-05-15" type="java.lang.Double">106.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">107.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -145,6 +122,7 @@
                     <value tag="2017-05-13" type="java.lang.Double">335.0</value>
                     <value tag="2017-05-14" type="java.lang.Double">328.0</value>
                     <value tag="2017-05-15" type="java.lang.Double">310.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">310.0</value>
                 </trend>
                 <properties>
                     <property id="label">
@@ -152,6 +130,19 @@
                     </property>
                     <property id="query">
                         <value>((project.id:drivepilot) AND NOT HAS_VALUE:resolution) AND ((NOT HAS_VALUE:resolution))</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="UNRESOLVED-BY-PROJECT.library" provider="WorkItemsAnalysis" tag="2017-05-18" type="UNRESOLVED-BY-PROJECT.ITEM">
+                <trend>
+                    <value tag="2017-05-18" type="java.lang.Double">271.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Document Library</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:library) AND NOT HAS_VALUE:resolution) AND ((NOT HAS_VALUE:resolution))</value>
                     </property>
                 </properties>
             </trend-value-fact-element>
@@ -169,86 +160,88 @@
                     <value>true</value>
                 </property>
             </properties>
-            <trend-value-fact-element id="UNRESOLVED-BY-ENTITY.Demo Projects" provider="WorkItemsAnalysis" tag="2007-08-20" type="UNRESOLVED-BY-ENTITY.ITEM">
+            <trend-value-fact-element id="ALL" provider="WorkItemsAnalysis" tag="2009-07-29" type="ALL">
                 <trend>
-                    <value tag="2017-05-02" type="java.lang.Double">260.0</value>
-                    <value tag="2017-05-03" type="java.lang.Double">258.0</value>
-                    <value tag="2017-05-04" type="java.lang.Double">257.0</value>
-                    <value tag="2017-05-05" type="java.lang.Double">256.0</value>
-                    <value tag="2017-05-06" type="java.lang.Double">258.0</value>
-                    <value tag="2017-05-07" type="java.lang.Double">255.0</value>
-                    <value tag="2017-05-08" type="java.lang.Double">261.0</value>
-                    <value tag="2017-05-09" type="java.lang.Double">280.0</value>
-                    <value tag="2017-05-10" type="java.lang.Double">291.0</value>
-                    <value tag="2017-05-11" type="java.lang.Double">308.0</value>
-                    <value tag="2017-05-12" type="java.lang.Double">319.0</value>
-                    <value tag="2017-05-13" type="java.lang.Double">328.0</value>
-                    <value tag="2017-05-14" type="java.lang.Double">348.0</value>
-                    <value tag="2017-05-15" type="java.lang.Double">413.0</value>
+                    <value tag="2017-05-02" type="java.lang.Double">560.0</value>
+                    <value tag="2017-05-03" type="java.lang.Double">558.0</value>
+                    <value tag="2017-05-04" type="java.lang.Double">557.0</value>
+                    <value tag="2017-05-05" type="java.lang.Double">556.0</value>
+                    <value tag="2017-05-06" type="java.lang.Double">558.0</value>
+                    <value tag="2017-05-07" type="java.lang.Double">555.0</value>
+                    <value tag="2017-05-08" type="java.lang.Double">561.0</value>
+                    <value tag="2017-05-09" type="java.lang.Double">580.0</value>
+                    <value tag="2017-05-10" type="java.lang.Double">591.0</value>
+                    <value tag="2017-05-11" type="java.lang.Double">608.0</value>
+                    <value tag="2017-05-12" type="java.lang.Double">619.0</value>
+                    <value tag="2017-05-13" type="java.lang.Double">628.0</value>
+                    <value tag="2017-05-14" type="java.lang.Double">648.0</value>
+                    <value tag="2017-05-15" type="java.lang.Double">748.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">749.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>All Workitems</value>
+                    </property>
+                    <property id="query">
+                        <value>ALL:ALL_VALUE</value>
+                    </property>
+                    <property id="trendable">
+                        <value>true</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="UNRESOLVED-BY-ENTITY.elibrary" provider="WorkItemsAnalysis" tag="2017-05-18" type="UNRESOLVED-BY-ENTITY.ITEM">
+                <trend>
+                    <value tag="2017-05-18" type="java.lang.Double">107.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>E-Library</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:elibrary) AND NOT HAS_VALUE:resolution) AND ((NOT HAS_VALUE:resolution))</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="UNRESOLVED-BY-ENTITY.drivepilot" provider="WorkItemsAnalysis" tag="2017-05-18" type="UNRESOLVED-BY-ENTITY.ITEM">
+                <trend>
+                    <value tag="2017-05-18" type="java.lang.Double">310.0</value>
+                </trend>
+                <properties>
+                    <property id="label">
+                        <value>Drive Pilot</value>
+                    </property>
+                    <property id="query">
+                        <value>((project.id:drivepilot) AND NOT HAS_VALUE:resolution) AND ((NOT HAS_VALUE:resolution))</value>
+                    </property>
+                </properties>
+            </trend-value-fact-element>
+            <trend-value-fact-element id="UNRESOLVED-BY-ENTITY.Demo Projects" provider="WorkItemsAnalysis" tag="2017-05-18" type="UNRESOLVED-BY-ENTITY.ITEM">
+                <trend>
+                    <value tag="2017-05-18" type="java.lang.Double">417.0</value>
                 </trend>
                 <properties>
                     <property id="label">
                         <value>Demo Projects</value>
                     </property>
                     <property id="query">
-                        <value>project.id:elibrary AND resolution:######NULL</value>
+                        <value>((project.id:elibrary OR project.id:drivepilot)) AND NOT HAS_VALUE:resolution</value>
                     </property>
                 </properties>
             </trend-value-fact-element>
-            <trend-value-fact-element id="UNRESOLVED-BY-ENTITY.library" provider="WorkItemsAnalysis" tag="2009-07-29" type="UNRESOLVED-BY-ENTITY.ITEM">
+            <trend-value-fact-element id="UNRESOLVED-BY-ENTITY.library" provider="WorkItemsAnalysis" tag="2017-05-18" type="UNRESOLVED-BY-ENTITY.ITEM">
                 <trend>
-                    <value tag="2017-05-02" type="java.lang.Double">75.0</value>
-                    <value tag="2017-05-03" type="java.lang.Double">90.0</value>
-                    <value tag="2017-05-04" type="java.lang.Double">103.0</value>
-                    <value tag="2017-05-05" type="java.lang.Double">116.0</value>
-                    <value tag="2017-05-06" type="java.lang.Double">142.0</value>
-                    <value tag="2017-05-07" type="java.lang.Double">151.0</value>
-                    <value tag="2017-05-08" type="java.lang.Double">148.0</value>
-                    <value tag="2017-05-09" type="java.lang.Double">175.0</value>
-                    <value tag="2017-05-10" type="java.lang.Double">182.0</value>
-                    <value tag="2017-05-11" type="java.lang.Double">197.0</value>
-                    <value tag="2017-05-12" type="java.lang.Double">216.0</value>
-                    <value tag="2017-05-14" type="java.lang.Double">235.0</value>
-                    <value tag="2017-05-15" type="java.lang.Double">271.0</value>
+                    <value tag="2017-05-18" type="java.lang.Double">271.0</value>
                 </trend>
                 <properties>
                     <property id="label">
-                        <value>Module Library</value>
+                        <value>Document Library</value>
                     </property>
                     <property id="query">
-                        <value>((project.id:library) AND (resolution:######NULL)) AND (resolution:######NULL)</value>
+                        <value>((project.id:library) AND NOT HAS_VALUE:resolution) AND ((NOT HAS_VALUE:resolution))</value>
                     </property>
                 </properties>
             </trend-value-fact-element>
         </value-fact-element>
-        <trend-value-fact-element id="ALL" provider="WorkItemsAnalysis" tag="2009-07-29" type="ALL">
-            <trend>
-                <value tag="2017-05-02" type="java.lang.Double">560.0</value>
-                <value tag="2017-05-03" type="java.lang.Double">558.0</value>
-                <value tag="2017-05-04" type="java.lang.Double">557.0</value>
-                <value tag="2017-05-05" type="java.lang.Double">556.0</value>
-                <value tag="2017-05-06" type="java.lang.Double">558.0</value>
-                <value tag="2017-05-07" type="java.lang.Double">555.0</value>
-                <value tag="2017-05-08" type="java.lang.Double">561.0</value>
-                <value tag="2017-05-09" type="java.lang.Double">580.0</value>
-                <value tag="2017-05-10" type="java.lang.Double">591.0</value>
-                <value tag="2017-05-11" type="java.lang.Double">608.0</value>
-                <value tag="2017-05-12" type="java.lang.Double">619.0</value>
-                <value tag="2017-05-13" type="java.lang.Double">628.0</value>
-                <value tag="2017-05-14" type="java.lang.Double">648.0</value>
-                <value tag="2017-05-15" type="java.lang.Double">748.0</value>
-            </trend>
-            <properties>
-                <property id="label">
-                    <value>All Workitems</value>
-                </property>
-                <property id="query">
-                    <value>ALL:ALL_VALUE</value>
-                </property>
-                <property id="trendable">
-                    <value>true</value>
-                </property>
-            </properties>
-        </trend-value-fact-element>
     </structure-element>
 </factbase>

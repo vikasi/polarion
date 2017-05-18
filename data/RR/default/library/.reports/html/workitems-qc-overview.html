@@ -172,7 +172,7 @@ Value
 		 <div class="distribution_bar_middlediv">
 		    <table cellspacing="0" cellpadding="0" width="100%" class="distribution_bar_table">
 		    <tr>
-<td title="Unscheduled" class="distribution_bar_td" style="width:100%;background:#FF0000;"><a target='_top' href='/polarion/#/project/library/workitems/?query=(project.id:library) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:timePoint.id&personal=all&resolution=all'><a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND NOT HAS_VALUE:resolution AND NOT HAS_VALUE:timePoint.id&personal=all&resolution=all' target='_top'> 271</a></a></td></tr></table></div></div>
+<td title="Unscheduled" class="distribution_bar_td" style="width:100%;background:#FF0000;"><a target='_top' href='/polarion/#/project/library/workitems/?query=(project.id:library) AND NOT HAS_VALUE:resolution AND NOT PLAN:(*)&personal=all&resolution=all'><a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND NOT HAS_VALUE:resolution AND NOT PLAN:(*)&personal=all&resolution=all' target='_top'> 271</a></a></td></tr></table></div></div>
 	</td>
 </tr>
 <tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Metrics.Quality Audit.SUSPECT-RATIO" class="first">
@@ -292,20 +292,20 @@ Value
    <td class="right">
    </td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.testcase" class="second">
-	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase)&personal=all&resolution=all" target="_top">Test Case</a>
-	</td>
-	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase)&personal=all&resolution=all' target='_top'> 2</a>
-	</td>
-</tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.testing" class="first">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.testing" class="second">
 	<td class="left">
 &nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing)&personal=all&resolution=all" target="_top">Testing</a>
 	</td>
 	<td class="right" align="right">
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.testcase" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase)&personal=all&resolution=all" target="_top">Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase)&personal=all&resolution=all' target='_top'> 2</a>
 	</td>
 </tr>
 <tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.documentation" class="second">
@@ -316,15 +316,7 @@ Value
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:documentation)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.implementation" class="first">
-	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation)&personal=all&resolution=all" target="_top">Implementation</a>
-	</td>
-	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation)&personal=all&resolution=all' target='_top'> 0</a>
-	</td>
-</tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.task" class="second">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.task" class="first">
 	<td class="left">
 &nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task)&personal=all&resolution=all" target="_top">Task</a>
 	</td>
@@ -332,20 +324,28 @@ Value
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task)&personal=all&resolution=all' target='_top'> 13</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.analysis" class="first">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.implementation" class="second">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis)&personal=all&resolution=all" target="_top">Analysis</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation)&personal=all&resolution=all" target="_top">Implementation</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.requirement" class="second">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.requirement" class="first">
 	<td class="left">
 &nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement)&personal=all&resolution=all" target="_top">Requirement</a>
 	</td>
 	<td class="right" align="right">
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement)&personal=all&resolution=all' target='_top'> 30</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.All.ITEMS-BY-TYPE.analysis" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
 <tr class="report" id="Statistics.Totals">
@@ -356,20 +356,20 @@ Value
    <td class="right">
    </td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.testcase" class="first">
-	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Test Case</a>
-	</td>
-	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 2</a>
-	</td>
-</tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.testing" class="second">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.testing" class="first">
 	<td class="left">
 &nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Testing</a>
 	</td>
 	<td class="right" align="right">
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.testcase" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 2</a>
 	</td>
 </tr>
 <tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.documentation" class="first">
@@ -380,15 +380,7 @@ Value
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:documentation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.implementation" class="second">
-	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Implementation</a>
-	</td>
-	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
-	</td>
-</tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.task" class="first">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.task" class="second">
 	<td class="left">
 &nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Task</a>
 	</td>
@@ -396,20 +388,28 @@ Value
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 13</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.analysis" class="second">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.implementation" class="first">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Analysis</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Implementation</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.requirement" class="first">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.requirement" class="second">
 	<td class="left">
 &nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Requirement</a>
 	</td>
 	<td class="right" align="right">
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 30</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Unresolved.ITEMS-UNRESOLVED-BY-TYPE.analysis" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
 <tr class="report" id="Statistics.Totals">
@@ -420,20 +420,20 @@ Value
    <td class="right">
    </td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.testcase" class="second">
-	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Test Case</a>
-	</td>
-	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
-	</td>
-</tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.testing" class="first">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.testing" class="second">
 	<td class="left">
 &nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Testing</a>
 	</td>
 	<td class="right" align="right">
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.testcase" class="first">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Test Case</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
 <tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.documentation" class="second">
@@ -444,15 +444,7 @@ Value
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.implementation" class="first">
-	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Implementation</a>
-	</td>
-	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
-	</td>
-</tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.task" class="second">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.task" class="first">
 	<td class="left">
 &nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Task</a>
 	</td>
@@ -460,20 +452,28 @@ Value
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.analysis" class="first">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.implementation" class="second">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Analysis</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Implementation</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.requirement" class="second">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.requirement" class="first">
 	<td class="left">
 &nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Requirement</a>
 	</td>
 	<td class="right" align="right">
 <a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
+	</td>
+</tr>
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Assigned (Unresolved).ITEMS-UNRESOLVED-ASSIGNED-BY-TYPE.analysis" class="second">
+	<td class="left">
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all" target="_top">Analysis</a>
+	</td>
+	<td class="right" align="right">
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:assignee.id)&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
 <tr class="report" id="Statistics.Totals">
@@ -484,60 +484,60 @@ Value
    <td class="right">
    </td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.testcase" class="first">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.testing" class="first">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Test Case</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all" target="_top">Testing</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.testing" class="second">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.testcase" class="second">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Testing</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all" target="_top">Test Case</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testing AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:testcase AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
 <tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.documentation" class="first">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Documentation</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:documentation AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all" target="_top">Documentation</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:documentation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:documentation AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.implementation" class="second">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.task" class="second">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Implementation</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all" target="_top">Task</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.task" class="first">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.implementation" class="first">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Task</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all" target="_top">Implementation</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:task AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:implementation AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.analysis" class="second">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.requirement" class="second">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Analysis</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all" target="_top">Requirement</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
-<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.requirement" class="first">
+<tr  onmouseover="selectRow(this)" onmouseout="deselectRow(this)" id="Statistics.Totals.Scheduled (Unresolved).ITEMS-UNRESOLVED-SCHEDULED-BY-TYPE.analysis" class="first">
 	<td class="left">
-&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all" target="_top">Requirement</a>
+&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;<a href="/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all" target="_top">Analysis</a>
 	</td>
 	<td class="right" align="right">
-<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:requirement AND NOT HAS_VALUE:resolution AND HAS_VALUE:timePoint.id)&personal=all&resolution=all' target='_top'> 0</a>
+<a href='/polarion/#/project/library/workitems/?query=(project.id:library) AND (type:analysis AND NOT HAS_VALUE:resolution AND PLAN:(*))&personal=all&resolution=all' target='_top'> 0</a>
 	</td>
 </tr>
 <tr class="report" id="Statistics">
