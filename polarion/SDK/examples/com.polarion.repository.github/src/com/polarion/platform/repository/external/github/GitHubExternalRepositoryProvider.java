@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2004-2011 Polarion Software
- * All rights reserved 1.
+ * All rights reserved.
  * Email: dev@polarion.com
  *
  *
